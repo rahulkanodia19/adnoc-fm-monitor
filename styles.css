@@ -1,0 +1,180 @@
+/* Custom scrollbar for light theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f0f4f8;
+}
+::-webkit-scrollbar-thumb {
+  background: #bcccdc;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9fb3c8;
+}
+
+/* Smooth expand/collapse animation */
+.detail-row {
+  overflow: hidden;
+  transition: max-height 0.35s ease-out, opacity 0.25s ease-out;
+}
+
+.detail-row.collapsed {
+  max-height: 0;
+  opacity: 0;
+}
+
+.detail-row.expanded {
+  max-height: 3000px;
+  opacity: 1;
+}
+
+/* Table row hover glow effect */
+.data-row {
+  transition: all 0.15s ease;
+}
+.data-row:hover {
+  box-shadow: inset 3px 0 0 0 #f59e0b;
+  background-color: rgba(16, 42, 67, 0.04);
+}
+
+/* Pulsing dot for critical statuses */
+@keyframes statusPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.status-pulse {
+  animation: statusPulse 2s ease-in-out infinite;
+}
+
+/* Tab active indicator transition */
+.tab-btn {
+  transition: all 0.2s ease;
+  position: relative;
+}
+.tab-btn:hover {
+  background-color: rgba(16, 42, 67, 0.04);
+}
+.tab-btn.active {
+  background-color: rgba(16, 42, 67, 0.06);
+}
+
+/* Source link styling */
+a.source-link {
+  text-decoration: none;
+  transition: color 0.15s, text-decoration 0.15s;
+}
+a.source-link:hover {
+  text-decoration: underline;
+}
+
+/* Timeline styling */
+.timeline-line {
+  position: relative;
+}
+.timeline-line::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 24px;
+  bottom: 0;
+  width: 2px;
+  background: #d9e2ec;
+}
+.timeline-line:last-child::before {
+  display: none;
+}
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #9fb3c8;
+  background: #d9e2ec;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+/* Chevron rotation */
+.chevron-icon {
+  transition: transform 0.2s ease;
+}
+.chevron-icon.rotated {
+  transform: rotate(180deg);
+}
+
+/* Stat card hover */
+.stat-card {
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.stat-card:hover {
+  transform: translateY(-2px);
+  border-color: #9fb3c8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Detail panel border accent */
+.detail-panel {
+  border-left: 4px solid #f59e0b;
+}
+
+/* Sync button spin animation */
+@keyframes syncSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.sync-spinning {
+  animation: syncSpin 1s linear infinite;
+}
+
+/* Executive summary cards */
+.exec-card {
+  transition: all 0.2s ease;
+}
+.exec-card:hover {
+  border-color: #9fb3c8;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Risk meter bar animation */
+@keyframes fillBar {
+  from { width: 0; }
+}
+.risk-bar-fill {
+  animation: fillBar 0.8s ease-out forwards;
+}
+
+/* NEW item pulse animation */
+@keyframes newPulse {
+  0%, 100% { background-color: rgba(14, 165, 233, 0.03); }
+  50% { background-color: rgba(14, 165, 233, 0.08); }
+}
+.new-row {
+  animation: newPulse 3s ease-in-out 2;
+}
+
+/* Responsive table cards for mobile */
+@media (max-width: 640px) {
+  .stat-card {
+    padding: 0.75rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    color: #1a1a1a;
+  }
+  header, nav, footer {
+    display: none;
+  }
+  .detail-row.collapsed {
+    max-height: none;
+    opacity: 1;
+  }
+  .data-row:hover {
+    box-shadow: none;
+  }
+}
