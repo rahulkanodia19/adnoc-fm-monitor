@@ -84,12 +84,9 @@ Now ENHANCE it with premium data from the authenticated browser.
 
 You have access to a Chrome browser via chrome-devtools MCP tools.
 The browser is logged into premium data platforms. Use it to:
-1. Navigate to kpler.com — check tanker/LNG flow dashboards for latest Gulf/Hormuz data
-2. Navigate to rystadenergy.com — check production analytics and supply disruption reports
-3. Navigate to spglobal.com/commodityinsights — check latest Platts assessments and market analysis
-4. Navigate to bloomberg.com — check energy news and terminal data
-5. Navigate to argusmedia.com — check crude/LNG pricing reports
-6. Navigate to icis.com — check petrochemical and LNG spot data
+1. Navigate to terminal.kpler.com — check tanker/LNG flow dashboards for latest Gulf/Hormuz data
+2. Navigate to portal.rystadenergy.com/home — check production analytics and supply disruption reports
+3. Navigate to connect.spglobal.com — check latest Platts assessments, market analysis, and CERA reports
 
 Compare what you find with the existing data in data.js. Add any NEW information, update any changed statuses, and enhance source citations with premium data references.
 Do NOT remove or downgrade any existing data — only add and enhance.
