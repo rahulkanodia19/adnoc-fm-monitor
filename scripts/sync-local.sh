@@ -14,7 +14,7 @@
 set -e
 
 # Chrome paths (Windows via Git Bash / WSL)
-CHROME_PATH="${CHROME_PATH:-/mnt/c/Program Files/Google/Chrome/Application/chrome.exe}"
+CHROME_PATH="${CHROME_PATH:-/c/Program Files/Google/Chrome/Application/chrome.exe}"
 CHROME_DATA_DIR="${CHROME_DATA_DIR:-C:/ChromeProfiles/ClaudeSync}"
 DEBUG_PORT=9222
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
