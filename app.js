@@ -26,6 +26,8 @@ const STATUS_COLORS = {
   struck:     { dot: 'bg-red-600',     text: 'text-red-700',     bg: 'bg-red-50',      border: 'border-red-200',     pulse: true  },
   suspended:  { dot: 'bg-violet-500',  text: 'text-violet-700',  bg: 'bg-violet-50',   border: 'border-violet-200',  pulse: false },
   operational:{ dot: 'bg-emerald-500', text: 'text-emerald-700', bg: 'bg-emerald-50',  border: 'border-emerald-200', pulse: false },
+  restarted:  { dot: 'bg-emerald-500', text: 'text-emerald-700', bg: 'bg-emerald-50',  border: 'border-emerald-200', pulse: false },
+  fm_declared:{ dot: 'bg-red-600',     text: 'text-red-700',     bg: 'bg-red-50',      border: 'border-red-200',     pulse: true  },
 };
 
 const IMPACT_COLORS = {
@@ -94,89 +96,6 @@ function sortByDateDesc(arr) {
   return [...arr].sort((a, b) => new Date(b.date) - new Date(a.date));
 }
 
-// ---------- Sync Button ----------
-
-let syncInProgress = false;
-let lastSyncTime = 0;
-
-async function syncData() {
-  const btn = document.getElementById('sync-btn');
-  const icon = document.getElementById('sync-icon');
-  if (!btn || !icon || syncInProgress) return;
-
-  // Rate limit: 60s between syncs
-  const now = Date.now();
-  if (now - lastSyncTime < 60000 && lastSyncTime > 0) {
-    const remaining = Math.ceil((60000 - (now - lastSyncTime)) / 1000);
-    btn.title = `Please wait ${remaining}s before syncing again`;
-    return;
-  }
-
-  syncInProgress = true;
-  icon.classList.add('sync-spinning');
-  btn.classList.add('opacity-70');
-  btn.disabled = true;
-
-  try {
-    const resp = await fetch('/api/sync', { method: 'POST' });
-    if (!resp.ok) throw new Error(`Sync failed: ${resp.status}`);
-    const data = await resp.json();
-
-    // Merge updated data if available
-    if (data.countryStatus && Array.isArray(data.countryStatus)) {
-      COUNTRY_STATUS_DATA.length = 0;
-      data.countryStatus.forEach(c => COUNTRY_STATUS_DATA.push(c));
-    }
-    if (data.fmDeclarations && Array.isArray(data.fmDeclarations)) {
-      FM_DECLARATIONS_DATA.length = 0;
-      data.fmDeclarations.forEach(d => FM_DECLARATIONS_DATA.push(d));
-    }
-    if (data.shutdowns && Array.isArray(data.shutdowns)) {
-      SHUTDOWNS_NO_FM_DATA.length = 0;
-      data.shutdowns.forEach(s => SHUTDOWNS_NO_FM_DATA.push(s));
-    }
-
-    lastSyncTime = Date.now();
-
-    // Flash green on success
-    btn.classList.add('border-emerald-400', 'text-emerald-600');
-    setTimeout(() => {
-      btn.classList.remove('border-emerald-400', 'text-emerald-600');
-    }, 2000);
-  } catch (err) {
-    console.error('Sync error:', err);
-    // Flash red on failure
-    btn.classList.add('border-red-400', 'text-red-600');
-    setTimeout(() => {
-      btn.classList.remove('border-red-400', 'text-red-600');
-    }, 2000);
-  }
-
-  // Update timestamp
-  const lastUpdatedEl = document.getElementById('last-updated');
-  if (lastUpdatedEl) {
-    lastUpdatedEl.textContent = new Date().toLocaleDateString('en-GB', {
-      day: '2-digit', month: 'short', year: 'numeric',
-      hour: '2-digit', minute: '2-digit', timeZoneName: 'short'
-    });
-  }
-
-  // Re-render everything
-  renderExecSummary();
-  renderCountryMatrix();
-  renderFMDeclarations();
-  renderShutdowns();
-
-  const activeTab = document.querySelector('.tab-btn.active');
-  if (activeTab) updateStats(activeTab.dataset.tab);
-
-  // Stop animation
-  icon.classList.remove('sync-spinning');
-  btn.classList.remove('opacity-70');
-  btn.disabled = false;
-  syncInProgress = false;
-}
-
 // ---------- Expand/Collapse ----------
 
 let expandedRowId = null;
@@ -220,189 +139,143 @@ function toggleExpand(id) {
 
 // ---------- Executive Summary ----------
 
+function formatNum(n) {
+  if (n === 0) return '0';
+  if (n >= 1000) return n.toLocaleString('en-US', { maximumFractionDigits: 0 });
+  if (Number.isInteger(n)) return n.toString();
+  return n.toFixed(1);
+}
+
+function renderProductionTable(title, unit, rows, type) {
+  const isCapacity = (type === 'capacity');
+  const headers = isCapacity
+    ? '<th class="px-3 py-2.5 text-right">Capacity</th><th class="px-3 py-2.5 text-right">Affected</th><th class="px-3 py-2.5 text-right">Available</th>'
+    : '<th class="px-3 py-2.5 text-right">Pre-War</th><th class="px-3 py-2.5 text-right">Now</th><th class="px-3 py-2.5 text-right">Change</th>';
+
+  let totalA = 0, totalB = 0, totalC = 0;
+
+  const rowsHtml = rows.map((r, i) => {
+    let a, b, c;
+    if (isCapacity) {
+      a = r.capacity; b = r.affected; c = r.available;
+    } else {
+      a = r.preWar; b = r.current; c = r.current - r.preWar;
+    }
+    totalA += a; totalB += b;
+    if (isCapacity) totalC += c; else totalC += c;
+
+    const changeClass = (!isCapacity && c < 0) ? 'text-red-600 font-semibold' : (c > 0 ? 'text-emerald-600 font-semibold' : 'text-navy-500');
+    const changeStr = isCapacity ? formatNum(c) : (c <= 0 ? formatNum(c) : '+' + formatNum(c));
+    const rowBg = i % 2 === 1 ? 'bg-navy-50/50' : '';
+
+    return `<tr class="${rowBg}">
+      <td class="px-3 py-2 text-sm">${r.country}</td>
+      <td class="px-3 py-2 text-sm text-right tabular-nums text-navy-900 font-medium">${formatNum(a)}</td>
+      <td class="px-3 py-2 text-sm text-right tabular-nums ${isCapacity ? 'text-red-600' : ''} font-medium">${formatNum(b)}</td>
+      <td class="px-3 py-2 text-sm text-right tabular-nums ${changeClass}">${changeStr}</td>
+      <td class="px-3 py-2 text-xs text-navy-500 max-w-[180px] truncate" title="${r.notes || ''}">${r.notes || ''}</td>
+    </tr>`;
+  }).join('');
+
+  const totalChangeClass = (!isCapacity && totalC < 0) ? 'text-red-600 font-bold' : 'text-navy-900 font-bold';
+  const totalChangeStr = isCapacity ? formatNum(totalC) : (totalC <= 0 ? formatNum(Math.round(totalC * 10) / 10) : '+' + formatNum(totalC));
+
+  return `
+    <div class="bg-white rounded-xl border border-navy-200 overflow-hidden">
+      <div class="px-4 py-3 border-b border-navy-200 bg-navy-50">
+        <h3 class="text-sm font-bold text-navy-900">${title}</h3>
+        <span class="text-xs text-navy-500">${unit}</span>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left production-table">
+          <thead>
+            <tr class="border-b border-navy-200 bg-navy-100/50">
+              <th class="px-3 py-2.5 text-xs text-navy-600 font-semibold uppercase tracking-wider">Country</th>
+              ${headers}
+              <th class="px-3 py-2.5 text-xs text-navy-600 font-semibold uppercase tracking-wider">Notes</th>
+            </tr>
+          </thead>
+          <tbody>${rowsHtml}</tbody>
+          <tfoot>
+            <tr class="border-t-2 border-navy-300 bg-navy-100/70">
+              <td class="px-3 py-2.5 text-sm font-bold text-navy-900">TOTAL</td>
+              <td class="px-3 py-2.5 text-sm text-right tabular-nums font-bold text-navy-900">${formatNum(Math.round(totalA * 10) / 10)}</td>
+              <td class="px-3 py-2.5 text-sm text-right tabular-nums font-bold ${isCapacity ? 'text-red-600' : 'text-navy-900'}">${formatNum(Math.round(totalB * 10) / 10)}</td>
+              <td class="px-3 py-2.5 text-sm text-right tabular-nums ${totalChangeClass}">${totalChangeStr}</td>
+              <td class="px-3 py-2.5"></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  `;
+}
+
 function renderExecSummary() {
   const container = document.getElementById('exec-summary-content');
   if (!container) return;
 
-  const totalCountries = COUNTRY_STATUS_DATA.length;
-  const criticalCountries = COUNTRY_STATUS_DATA.filter(c => ['critical', 'conflict'].includes(c.status)).length;
-  const totalFM = FM_DECLARATIONS_DATA.length;
-  const activeFM = FM_DECLARATIONS_DATA.filter(d => d.status === 'active').length;
-  const totalShutdowns = SHUTDOWNS_NO_FM_DATA.length;
-
-  let infraShutdown = 0;
-  let infraPartial = 0;
-  let infraOperational = 0;
-  COUNTRY_STATUS_DATA.forEach(c => {
-    c.infrastructure.forEach(inf => {
-      if (inf.status === 'shutdown') infraShutdown++;
-      else if (inf.status === 'partial') infraPartial++;
-      else infraOperational++;
-    });
-  });
-
-  // Latest events
-  const allEvents = [];
-  COUNTRY_STATUS_DATA.forEach(c => {
-    c.events.forEach(e => allEvents.push({ ...e, country: c.country, flag: c.flag }));
-  });
-  allEvents.sort((a, b) => new Date(b.date) - new Date(a.date));
-  const latestEvents = allEvents.slice(0, 4);
-
-  // Country cards with metrics
-  const countryCards = COUNTRY_STATUS_DATA.map(c => {
-    const shutCount = c.infrastructure.filter(i => i.status === 'shutdown').length;
-    const partialCount = c.infrastructure.filter(i => i.status === 'partial').length;
-    const totalInfra = c.infrastructure.length;
-    const newBadge = c.isNew ? renderNewBadge() : '';
-    const headline = c.metrics ? c.metrics.headline : c.oilGasImpact.summary;
-    return `
-      <div class="bg-white rounded-lg p-4 border border-navy-200 exec-card ${c.isNew ? 'border-l-4 border-l-sky-400' : ''}">
-        <div class="flex items-center justify-between mb-2">
-          <div class="flex items-center gap-2">
-            <span class="font-semibold text-navy-900 text-sm">${c.country}</span>
-            ${newBadge}
-          </div>
-          ${renderStatusBadge(c.status, c.statusLabel)}
-        </div>
-        <p class="text-sm font-bold text-navy-800 mb-1">${headline}</p>
-        <p class="text-xs text-navy-500 mb-3">${c.oilGasImpact.summary}</p>
-        <div class="flex items-center gap-1 text-xs">
-          <span class="text-navy-500">Infrastructure:</span>
-          ${shutCount > 0 ? `<span class="text-red-600 font-medium">${shutCount} down</span>` : ''}
-          ${shutCount > 0 && partialCount > 0 ? '<span class="text-navy-300">/</span>' : ''}
-          ${partialCount > 0 ? `<span class="text-amber-600 font-medium">${partialCount} partial</span>` : ''}
-          ${shutCount === 0 && partialCount === 0 ? `<span class="text-emerald-600 font-medium">${totalInfra} operational</span>` : ''}
-        </div>
-      </div>
-    `;
-  }).join('');
-
-  // Latest FM declarations (last 5)
-  const latestFMs = sortByDateDesc(FM_DECLARATIONS_DATA).slice(0, 3);
-  const fmListHtml = latestFMs.map(fm => `
-    <div class="flex items-start gap-3 py-3 border-b border-navy-100 last:border-0">
-      <div class="w-8 h-8 rounded-full bg-red-50 border border-red-200 flex items-center justify-center flex-shrink-0 mt-0.5">
-        <svg class="w-4 h-4 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
-        </svg>
-      </div>
-      <div class="flex-1 min-w-0">
-        <div class="flex items-center gap-2 flex-wrap">
-          <span class="text-sm font-semibold text-navy-900">${fm.company}</span>
-          <span class="text-xs text-navy-500">${fm.country}</span>
-          <span class="text-xs text-navy-400">${formatDate(fm.date)}</span>
-        </div>
-        ${fm.details && fm.details.volumeAffected ? `<p class="text-xs font-semibold text-amber-600 mt-0.5">${fm.details.volumeAffected}</p>` : ''}
-        <p class="text-xs text-navy-600 mt-0.5 line-clamp-1">${fm.summary}</p>
-      </div>
-    </div>
-  `).join('');
-
-  // Timeline
-  const renderTimelineEvent = (evt) => {
-    const newBadge = evt.isNew ? renderNewBadge() : '';
-    const bgClass = evt.isNew ? 'bg-sky-50 rounded-lg px-2 py-1 -mx-2' : '';
-    return `
-      <div class="timeline-line flex gap-3 pb-4">
-        <div class="timeline-dot mt-1"></div>
-        <div class="flex-1 min-w-0 ${bgClass}">
-          <div class="flex items-center gap-2 flex-wrap">
-            <span class="text-xs font-medium text-amber-600">${formatDate(evt.date)}</span>
-            <span class="text-xs text-navy-400">${evt.country}</span>
-            ${newBadge}
-          </div>
-          <div class="text-sm text-navy-900 font-medium mt-0.5">${evt.title}</div>
-          <div class="text-xs text-navy-600 mt-0.5">${evt.description}</div>
-        </div>
-      </div>
-    `;
+  // Build production data arrays
+  const oilData = [], gasData = [], refiningData = [], lngData = [];
+  const prodNotes = {
+    'Qatar': 'Ras Laffan offline; all downstream halted',
+    'Kuwait': 'KPC FM declared; tankers blocked',
+    'Saudi Arabia': 'Offshore fields shut; rerouting to Yanbu',
+    'UAE': 'Offshore offline; Fujairah halted',
+    'Iraq': 'Basra 3.3M→900k; FM on foreign fields',
+    'Bahrain': 'Abu Safa shut; Sitra FM declared',
+    'Oman': 'Outside Hormuz; production intact',
+    'Israel': 'Leviathan+Karish shut; Tamar domestic',
+    'Iran': 'South Pars struck; fields ~30% shut-in'
+  };
+  const refNotes = {
+    'Saudi Arabia': 'Ras Tanura shut then reopened',
+    'Iran': 'Tehran Refinery destroyed; BA curtailed',
+    'Kuwait': 'Ahmadi + Abdullah hit by drones',
+    'UAE': 'Ruwais full complex shut',
+    'Bahrain': 'Sitra FM; fully offline',
+    'Iraq': 'No strikes; domestic runs only',
+    'Israel': 'Haifa damaged but mostly online',
+    'Qatar': 'Laffan 1+2 offline with Ras Laffan',
+    'Oman': 'Outside Hormuz; operational'
   };
 
+  COUNTRY_STATUS_DATA.forEach(c => {
+    if (!c.production) return;
+    const p = c.production;
+    if (p.oil && p.oil.preWar > 0) {
+      oilData.push({ country: c.country, flag: c.flag, preWar: p.oil.preWar, current: p.oil.current, notes: prodNotes[c.country] || '' });
+    }
+    if (p.gas && p.gas.preWar > 0) {
+      gasData.push({ country: c.country, flag: c.flag, preWar: p.gas.preWar, current: p.gas.current, notes: prodNotes[c.country] || '' });
+    }
+    if (p.refining && p.refining.capacity > 0) {
+      refiningData.push({ country: c.country, flag: c.flag, capacity: p.refining.capacity, affected: p.refining.affected, available: p.refining.available, notes: refNotes[c.country] || '' });
+    }
+    if (p.lng && p.lng.preWar > 0) {
+      lngData.push({ country: c.country, flag: c.flag, preWar: p.lng.preWar, current: p.lng.current, notes: '' });
+    }
+  });
+
+  oilData.sort((a, b) => b.preWar - a.preWar);
+  gasData.sort((a, b) => b.preWar - a.preWar);
+  refiningData.sort((a, b) => b.capacity - a.capacity);
+  lngData.sort((a, b) => b.preWar - a.preWar);
+
   container.innerHTML = `
-    <!-- Key Metrics Row -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
-      <div class="stat-card bg-white rounded-xl p-4 border border-navy-200">
-        <div class="flex items-center gap-2 mb-1">
-          <div class="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center">
-            <svg class="w-4 h-4 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
-            </svg>
-          </div>
-        </div>
-        <div class="text-3xl font-extrabold text-red-600">${criticalCountries}</div>
-        <div class="text-xs text-navy-500 mt-0.5">Critical Countries</div>
-      </div>
-      <div class="stat-card bg-white rounded-xl p-4 border border-navy-200">
-        <div class="flex items-center gap-2 mb-1">
-          <div class="w-8 h-8 rounded-lg bg-amber-50 flex items-center justify-center">
-            <svg class="w-4 h-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
-            </svg>
-          </div>
-        </div>
-        <div class="text-3xl font-extrabold text-amber-600">${totalFM}</div>
-        <div class="text-xs text-navy-500 mt-0.5">FM Declarations</div>
-      </div>
-      <div class="stat-card bg-white rounded-xl p-4 border border-navy-200">
-        <div class="flex items-center gap-2 mb-1">
-          <div class="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center">
-            <svg class="w-4 h-4 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1012.728 0M12 3v9" />
-            </svg>
-          </div>
-        </div>
-        <div class="text-3xl font-extrabold text-orange-600">${totalShutdowns}</div>
-        <div class="text-xs text-navy-500 mt-0.5">Shutdowns (No FM)</div>
-      </div>
-      <div class="stat-card bg-white rounded-xl p-4 border border-navy-200">
-        <div class="flex items-center gap-2 mb-1">
-          <div class="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center">
-            <svg class="w-4 h-4 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21" />
-            </svg>
-          </div>
-        </div>
-        <div class="text-3xl font-extrabold text-red-600">${infraShutdown}</div>
-        <div class="text-xs text-navy-500 mt-0.5">Facilities Offline</div>
-      </div>
+    <div class="mb-5">
+      <h2 class="text-lg font-bold text-navy-900">Regional Production Impact Assessment</h2>
+      <p class="text-sm text-navy-500">Gulf Escalation: 28 Feb - 23 Mar 2026 | Sources: IEA, OPEC, Bloomberg, Reuters, Argus</p>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
-      <!-- Situation Overview -->
-      <div class="lg:col-span-2 bg-white rounded-xl border border-navy-200 p-5">
-        <h3 class="text-sm font-semibold text-amber-600 uppercase tracking-wider mb-4 flex items-center gap-2">
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
-          </svg>
-          Regional Status Overview
-        </h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-          ${countryCards}
-        </div>
-      </div>
-
-      <!-- Latest FM Declarations -->
-      <div class="bg-white rounded-xl border border-navy-200 p-5">
-        <h3 class="text-sm font-semibold text-amber-600 uppercase tracking-wider mb-3 flex items-center gap-2">
-          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
-          </svg>
-          Latest FM Declarations
-        </h3>
-        <div>${fmListHtml}</div>
-      </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
+      ${renderProductionTable('Crude Oil Production', 'kb/d', oilData, 'production')}
+      ${renderProductionTable('Refining Capacity', 'kb/d', refiningData, 'capacity')}
     </div>
 
-    <!-- Event Timeline -->
-    <div class="bg-white rounded-xl border border-navy-200 p-5">
-      <h3 class="text-sm font-semibold text-amber-600 uppercase tracking-wider mb-4 flex items-center gap-2">
-        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-        Event Timeline (Latest)
-      </h3>
-      <div>${latestEvents.map(renderTimelineEvent).join('')}</div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+      ${renderProductionTable('Gas Production', 'Bcf/d', gasData, 'production')}
+      ${renderProductionTable('LNG Production', 'Mtpa', lngData, 'production')}
     </div>
   `;
 }
@@ -472,6 +345,57 @@ function renderCountryDetailPanel(country) {
                 <p class="text-sm text-navy-700 leading-relaxed">${country.oilGasImpact.details}</p>
               </div>
             </div>
+            ${country.production ? `<div>
+              <h4 class="text-sm font-semibold text-amber-600 uppercase tracking-wider mb-3 flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                </svg>
+                Production Data
+              </h4>
+              <div class="overflow-x-auto bg-white rounded-lg border border-navy-200">
+                <table class="w-full text-left production-table">
+                  <thead>
+                    <tr class="border-b border-navy-200">
+                      <th class="px-3 py-2 text-xs text-navy-500 font-semibold uppercase">Commodity</th>
+                      <th class="px-3 py-2 text-xs text-navy-500 font-semibold uppercase text-right">Pre-War</th>
+                      <th class="px-3 py-2 text-xs text-navy-500 font-semibold uppercase text-right">Current</th>
+                      <th class="px-3 py-2 text-xs text-navy-500 font-semibold uppercase text-right">Change</th>
+                      <th class="px-3 py-2 text-xs text-navy-500 font-semibold uppercase text-right">% Disrupted</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${country.production.oil && country.production.oil.preWar > 0 ? `<tr class="border-b border-navy-100">
+                      <td class="px-3 py-2 text-sm text-navy-900 font-medium">Crude Oil</td>
+                      <td class="px-3 py-2 text-sm text-right tabular-nums">${formatNum(country.production.oil.preWar)} ${country.production.oil.unit}</td>
+                      <td class="px-3 py-2 text-sm text-right tabular-nums font-medium">${formatNum(country.production.oil.current)} ${country.production.oil.unit}</td>
+                      <td class="px-3 py-2 text-sm text-right tabular-nums text-red-600 font-semibold">${formatNum(country.production.oil.current - country.production.oil.preWar)}</td>
+                      <td class="px-3 py-2 text-sm text-right tabular-nums text-red-600">${((country.production.oil.preWar - country.production.oil.current) / country.production.oil.preWar * 100).toFixed(1)}%</td>
+                    </tr>` : ''}
+                    ${country.production.gas && country.production.gas.preWar > 0 ? `<tr class="border-b border-navy-100">
+                      <td class="px-3 py-2 text-sm text-navy-900 font-medium">Gas</td>
+                      <td class="px-3 py-2 text-sm text-right tabular-nums">${formatNum(country.production.gas.preWar)} ${country.production.gas.unit}</td>
+                      <td class="px-3 py-2 text-sm text-right tabular-nums font-medium">${formatNum(country.production.gas.current)} ${country.production.gas.unit}</td>
+                      <td class="px-3 py-2 text-sm text-right tabular-nums text-red-600 font-semibold">${formatNum(country.production.gas.current - country.production.gas.preWar)}</td>
+                      <td class="px-3 py-2 text-sm text-right tabular-nums text-red-600">${((country.production.gas.preWar - country.production.gas.current) / country.production.gas.preWar * 100).toFixed(1)}%</td>
+                    </tr>` : ''}
+                    ${country.production.refining ? `<tr class="border-b border-navy-100">
+                      <td class="px-3 py-2 text-sm text-navy-900 font-medium">Refining</td>
+                      <td class="px-3 py-2 text-sm text-right tabular-nums">${formatNum(country.production.refining.capacity)} ${country.production.refining.unit}</td>
+                      <td class="px-3 py-2 text-sm text-right tabular-nums font-medium">${formatNum(country.production.refining.available)} ${country.production.refining.unit}</td>
+                      <td class="px-3 py-2 text-sm text-right tabular-nums text-red-600 font-semibold">-${formatNum(country.production.refining.affected)}</td>
+                      <td class="px-3 py-2 text-sm text-right tabular-nums text-red-600">${(country.production.refining.affected / country.production.refining.capacity * 100).toFixed(1)}%</td>
+                    </tr>` : ''}
+                    ${country.production.lng ? `<tr>
+                      <td class="px-3 py-2 text-sm text-navy-900 font-medium">LNG</td>
+                      <td class="px-3 py-2 text-sm text-right tabular-nums">${formatNum(country.production.lng.preWar)} ${country.production.lng.unit}</td>
+                      <td class="px-3 py-2 text-sm text-right tabular-nums font-medium">${formatNum(country.production.lng.current)} ${country.production.lng.unit}</td>
+                      <td class="px-3 py-2 text-sm text-right tabular-nums text-red-600 font-semibold">${formatNum(country.production.lng.current - country.production.lng.preWar)}</td>
+                      <td class="px-3 py-2 text-sm text-right tabular-nums text-red-600">${country.production.lng.preWar > 0 ? ((country.production.lng.preWar - country.production.lng.current) / country.production.lng.preWar * 100).toFixed(1) + '%' : 'N/A'}</td>
+                    </tr>` : ''}
+                  </tbody>
+                </table>
+              </div>
+            </div>` : ''}
             <div>
               <h4 class="text-sm font-semibold text-amber-600 uppercase tracking-wider mb-3 flex items-center gap-2">
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -691,7 +615,6 @@ function renderShutdowns() {
       </td>
       <td class="px-5 py-3.5">
         <span class="text-navy-600 text-sm">${item.country}</span>
-        </div>
       </td>
       <td class="px-5 py-3.5 text-navy-700 text-sm font-medium">${formatDate(item.date)}</td>
       <td class="px-5 py-3.5">${renderStatusBadge(item.status, item.statusLabel)}</td>
@@ -751,14 +674,27 @@ function updateStats(activeTab) {
     arr.filter(d => d.isNew && (!filterFn || filterFn(d))).length;
 
   switch (activeTab) {
-    case 'exec-summary':
+    case 'exec-summary': {
+      let oilOffline = 0, gasOffline = 0, refAffected = 0, impactedCount = 0;
+      COUNTRY_STATUS_DATA.forEach(c => {
+        if (!c.production) return;
+        const p = c.production;
+        const oilLoss = p.oil ? p.oil.preWar - p.oil.current : 0;
+        const gasLoss = p.gas ? p.gas.preWar - p.gas.current : 0;
+        const refLoss = p.refining ? p.refining.affected : 0;
+        oilOffline += oilLoss;
+        gasOffline += gasLoss;
+        refAffected += refLoss;
+        if (oilLoss > 0 || gasLoss > 0 || refLoss > 0) impactedCount++;
+      });
       stats = [
-        { label: 'Countries Monitored', value: COUNTRY_STATUS_DATA.length, color: 'text-blue-600', change: 0 },
-        { label: 'Critical / Conflict', value: COUNTRY_STATUS_DATA.filter(c => ['critical', 'conflict'].includes(c.status)).length, color: 'text-red-600', change: countNew(COUNTRY_STATUS_DATA, c => ['critical', 'conflict'].includes(c.status)) },
-        { label: 'Active FM Declarations', value: FM_DECLARATIONS_DATA.filter(d => d.status === 'active').length, color: 'text-amber-600', change: countNew(FM_DECLARATIONS_DATA, d => d.status === 'active') },
-        { label: 'Active Shutdowns', value: SHUTDOWNS_NO_FM_DATA.filter(d => ['shutdown', 'struck', 'ongoing', 'halted', 'suspended'].includes(d.status)).length, color: 'text-orange-600', change: countNew(SHUTDOWNS_NO_FM_DATA, d => ['shutdown', 'struck', 'ongoing', 'halted', 'suspended'].includes(d.status)) },
+        { label: 'Oil Offline (kb/d)', value: formatNum(Math.round(oilOffline)), color: 'text-red-600', change: 0 },
+        { label: 'Gas Offline (Bcf/d)', value: formatNum(Math.round(gasOffline * 10) / 10), color: 'text-amber-600', change: 0 },
+        { label: 'Refining Affected (kb/d)', value: formatNum(Math.round(refAffected)), color: 'text-orange-600', change: 0 },
+        { label: 'Countries Impacted', value: impactedCount, color: 'text-blue-600', change: 0 },
       ];
       break;
+    }
     case 'country-matrix':
       stats = [
         { label: 'Countries Monitored', value: COUNTRY_STATUS_DATA.length, color: 'text-blue-600', change: 0 },
@@ -783,6 +719,10 @@ function updateStats(activeTab) {
         { label: 'Operational', value: SHUTDOWNS_NO_FM_DATA.filter(d => ['operational', 'resumed'].includes(d.status)).length, color: 'text-emerald-600', change: countNew(SHUTDOWNS_NO_FM_DATA, d => ['operational', 'resumed'].includes(d.status)) },
       ];
       break;
+    case 'import-flows':
+      // Stats handled by import-flows.js — hide the default stats bar
+      container.innerHTML = '';
+      return;
   }
 
   container.innerHTML = stats.map(s => {
@@ -798,6 +738,74 @@ function updateStats(activeTab) {
   }).join('');
 }
 
+// ---------- Data Verification ----------
+
+function verifyData() {
+  const results = [];
+  const pass = (msg) => results.push({ status: 'PASS', msg });
+  const fail = (msg) => results.push({ status: 'FAIL', msg });
+
+  // 1. Check all 9 countries exist
+  const expectedCountries = ['qatar', 'kuwait', 'saudi_arabia', 'uae', 'iraq', 'bahrain', 'oman', 'israel', 'iran'];
+  const countryIds = COUNTRY_STATUS_DATA.map(c => c.id);
+  expectedCountries.forEach(id => {
+    if (countryIds.includes(id)) pass(`Country "${id}" exists`);
+    else fail(`Country "${id}" MISSING`);
+  });
+  if (COUNTRY_STATUS_DATA.length === 9) pass('9 countries total');
+  else fail(`Expected 9 countries, found ${COUNTRY_STATUS_DATA.length}`);
+
+  // 2. Validate production objects
+  COUNTRY_STATUS_DATA.forEach(c => {
+    if (!c.production) { fail(`${c.country}: missing production object`); return; }
+    const p = c.production;
+    if (!p.oil) fail(`${c.country}: missing oil production`);
+    if (!p.gas) fail(`${c.country}: missing gas production`);
+    if (!p.refining) fail(`${c.country}: missing refining data`);
+    else {
+      const diff = Math.abs(p.refining.capacity - p.refining.affected - p.refining.available);
+      if (diff <= p.refining.capacity * 0.05) pass(`${c.country}: refining math OK (cap-aff=avail within 5%)`);
+      else fail(`${c.country}: refining math WRONG: ${p.refining.capacity} - ${p.refining.affected} != ${p.refining.available} (diff=${diff})`);
+    }
+    if (p.oil && p.oil.current > p.oil.preWar) fail(`${c.country}: oil current > preWar`);
+    if (p.gas && p.gas.current > p.gas.preWar) fail(`${c.country}: gas current > preWar`);
+    pass(`${c.country}: production object valid`);
+  });
+
+  // 3. Cross-check key production numbers
+  const checks = [
+    { id: 'saudi_arabia', field: 'oil', prop: 'preWar', expected: 10400 },
+    { id: 'qatar', field: 'lng', prop: 'current', expected: 0 },
+    { id: 'iran', field: 'gas', prop: 'preWar', expected: 25.8 },
+    { id: 'uae', field: 'oil', prop: 'preWar', expected: 3400 },
+    { id: 'iraq', field: 'oil', prop: 'current', expected: 1200 },
+  ];
+  checks.forEach(({ id, field, prop, expected }) => {
+    const c = COUNTRY_STATUS_DATA.find(x => x.id === id);
+    if (!c || !c.production || !c.production[field]) { fail(`${id}.${field}: not found`); return; }
+    const val = c.production[field][prop];
+    const tolerance = Math.abs(expected) * 0.05 + 1;
+    if (Math.abs(val - expected) <= tolerance) pass(`${id}.${field}.${prop} = ${val} (expected ~${expected})`);
+    else fail(`${id}.${field}.${prop} = ${val}, expected ~${expected}`);
+  });
+
+  // 4. Validate infrastructure arrays
+  COUNTRY_STATUS_DATA.forEach(c => {
+    if (c.infrastructure && c.infrastructure.length > 0) pass(`${c.country}: ${c.infrastructure.length} infrastructure entries`);
+    else fail(`${c.country}: empty or missing infrastructure`);
+  });
+
+  // Summary
+  const passes = results.filter(r => r.status === 'PASS').length;
+  const fails = results.filter(r => r.status === 'FAIL').length;
+  console.log(`\n===== DATA VERIFICATION =====`);
+  console.log(`Total: ${results.length} checks | PASS: ${passes} | FAIL: ${fails}\n`);
+  results.forEach(r => console.log(`  [${r.status}] ${r.msg}`));
+  if (fails === 0) console.log('\n  ALL CHECKS PASSED');
+  else console.log(`\n  ${fails} CHECK(S) FAILED`);
+  return { passes, fails, results };
+}
+
 // ---------- Initialization ----------
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -807,6 +815,23 @@ document.addEventListener('DOMContentLoaded', () => {
       day: '2-digit', month: 'short', year: 'numeric',
       hour: '2-digit', minute: '2-digit', timeZoneName: 'short'
     });
+  }
+
+  // Freshness indicator: warn if data is more than 26 hours old
+  if (typeof LAST_UPDATED !== 'undefined') {
+    const lastUpdate = new Date(LAST_UPDATED);
+    const ageHours = (Date.now() - lastUpdate.getTime()) / (1000 * 60 * 60);
+    const syncStatusEl = document.getElementById('sync-status');
+    const syncStatusText = document.getElementById('sync-status-text');
+    const syncStatusIcon = document.getElementById('sync-status-icon');
+    if (syncStatusEl && ageHours > 26) {
+      syncStatusEl.classList.remove('bg-emerald-50', 'text-emerald-700', 'border-emerald-300');
+      syncStatusEl.classList.add('bg-amber-50', 'text-amber-700', 'border-amber-300');
+      if (syncStatusText) syncStatusText.textContent = 'Data may be stale';
+      if (syncStatusIcon) {
+        syncStatusIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />';
+      }
+    }
   }
 
   renderExecSummary();

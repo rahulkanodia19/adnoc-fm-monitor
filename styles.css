@@ -154,11 +154,27 @@ a.source-link:hover {
   animation: newPulse 3s ease-in-out 2;
 }
 
+/* Import Flows control buttons */
+#import-flows-content [data-control] {
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
 /* Responsive table cards for mobile */
 @media (max-width: 640px) {
   .stat-card {
     padding: 0.75rem;
   }
+}
+
+/* Production table styles */
+.production-table tbody tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+.production-table .total-row {
+  font-weight: 700;
+  background: #f0f4f8;
+  border-top: 2px solid #bcccdc;
 }
 
 /* Print styles */
