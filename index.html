@@ -95,6 +95,22 @@
         </svg>
         Import Flows
       </button>
+      <button data-tab="export-flows"
+        class="tab-btn px-5 py-3.5 text-sm font-medium border-b-2 border-transparent text-navy-500 hover:text-navy-700 whitespace-nowrap transition-all">
+        <svg class="w-4 h-4 inline-block mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0H21M3.375 14.25V3.375c0-.621.504-1.125 1.125-1.125h9.75c.621 0 1.125.504 1.125 1.125v3.026M12 3v7.5M12 17.625l3.375-3.375M12 17.625L8.625 14.25" />
+        </svg>
+        Export Flows
+      </button>
+      <!-- DISABLED: Shipping tab (re-enable when AIS data quality is ready)
+      <button data-tab="shipping"
+        class="tab-btn px-5 py-3.5 text-sm font-medium border-b-2 border-transparent text-navy-500 hover:text-navy-700 whitespace-nowrap transition-all">
+        <svg class="w-4 h-4 inline-block mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+        </svg>
+        Shipping
+      </button>
+      -->
       <button data-tab="fm-declarations"
         class="tab-btn px-5 py-3.5 text-sm font-medium border-b-2 border-transparent text-navy-500 hover:text-navy-700 whitespace-nowrap transition-all">
         <svg class="w-4 h-4 inline-block mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -151,6 +167,17 @@
     <div data-panel="import-flows" class="hidden">
       <div id="import-flows-content"></div>
     </div>
+
+    <!-- Panel: Export Flows Dashboard -->
+    <div data-panel="export-flows" class="hidden">
+      <div id="export-flows-content"></div>
+    </div>
+
+    <!-- DISABLED: Shipping panel (re-enable when AIS data quality is ready)
+    <div data-panel="shipping" class="hidden">
+      <div id="shipping-content"></div>
+    </div>
+    -->
 
     <!-- Panel 3: FM Declarations -->
     <div data-panel="fm-declarations" class="hidden">
@@ -235,11 +262,25 @@
     <span class="border-emerald-300 border-amber-300"></span>
     <span class="lg:col-span-2 lg:grid-cols-3"></span>
     <span class="text-right tabular-nums border-t-2 border-navy-300 bg-navy-100/70 bg-navy-100/50 bg-navy-50/50 max-w-[180px]"></span>
+    <span class="self-stretch flex-col"></span>
+    <span class="border-l-sky-400 border-l-violet-400 border-l-amber-400 border-l-emerald-400 border-l-red-400 border-l-navy-300"></span>
+    <span class="shadow-inner hover:bg-navy-100 bg-navy-50/30 hover:bg-sky-50/50"></span>
+    <span class="from-sky-400 via-amber-400 to-sky-400 h-1"></span>
+    <!-- Shipping tab safelist -->
+    <span class="lg:w-[70%] lg:w-[30%] h-[400px] lg:h-[500px]"></span>
+    <span class="font-mono tracking-widest text-4xl text-cyan-400 text-teal-600"></span>
+    <span class="bg-navy-800/50 border-navy-700 text-amber-400 text-navy-300 text-navy-200"></span>
+    <span class="hover:bg-amber-500/10 hover:bg-navy-50/50"></span>
+    <span class="w-32 h-4 rounded-l-full rounded-full"></span>
+    <span class="bg-blue-500 text-blue-700 border-blue-200 bg-blue-50"></span>
   </div>
 
   <script src="data.js"></script>
   <script src="import-data.js"></script>
+  <script src="export-data.js"></script>
   <script src="app.js"></script>
   <script src="import-flows.js"></script>
+  <script src="export-flows.js"></script>
+  <!-- DISABLED: <script src="shipping.js"></script> -->
 </body>
 </html>

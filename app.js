@@ -720,7 +720,9 @@ function updateStats(activeTab) {
       ];
       break;
     case 'import-flows':
-      // Stats handled by import-flows.js — hide the default stats bar
+    case 'export-flows':
+    // case 'shipping': // DISABLED
+      // Stats handled by respective JS modules — hide the default stats bar
       container.innerHTML = '';
       return;
   }

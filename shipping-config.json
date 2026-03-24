@@ -1,0 +1,16 @@
+{
+  "adnocVesselPatterns": [
+    "GHANTOUT", "AL SAMHA", "UMM AL LULU", "AL BAZM", "AL REEM",
+    "AL SADR", "MUBARAZ", "AL MIRFA", "DELMA", "AL DAFRA", "ARZANAH",
+    "ABU DHABI", "AL RUWAIS", "DAS", "ZIRKU", "AL YASAT", "JASH"
+  ],
+  "boundingBoxes": {
+    "inside": { "latMin": 24.0, "latMax": 27.5, "lonMin": 54.0, "lonMax": 58.0 },
+    "wider":  { "latMin": 23.0, "latMax": 28.0, "lonMin": 51.0, "lonMax": 60.0 }
+  },
+  "marineTraffic": {
+    "iframeUrl": "https://www.marinetraffic.com/en/ais/embed/zoom:7/cenx:55.8/ceny:26.3/maptype:4/shownames:0/mmsi:0/shipid:0",
+    "fullMapUrl": "https://www.marinetraffic.com/en/ais/home/centerx:55.8/centery:26.3/zoom:7"
+  },
+  "draftThreshold": 0.6
+}

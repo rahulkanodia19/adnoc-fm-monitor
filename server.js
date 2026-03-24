@@ -5,11 +5,16 @@
 // Usage: node server.js
 // ============================================================
 
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// DISABLED: Shipping API route (re-enable when AIS data quality is ready)
+// app.get('/api/shipping', async (req, res) => { ... });
 
 app.use(express.static(path.join(__dirname)));
 

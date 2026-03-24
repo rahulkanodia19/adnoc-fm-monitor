@@ -160,6 +160,37 @@ a.source-link:hover {
   transition: all 0.15s ease;
 }
 
+/* Export Flows control buttons */
+#export-flows-content [data-control] {
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+/* Chart card hover lift */
+.chart-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.chart-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Fade-in animation for flow content */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.flow-fade-in {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+/* Control button focus ring */
+#import-flows-content [data-control]:focus,
+#export-flows-content [data-control]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.4);
+}
+
 /* Responsive table cards for mobile */
 @media (max-width: 640px) {
   .stat-card {
@@ -175,6 +206,56 @@ a.source-link:hover {
   font-weight: 700;
   background: #f0f4f8;
   border-top: 2px solid #bcccdc;
+}
+
+/* Shipping tab: vessel class bar chart animation */
+.vessel-bar {
+  transition: width 0.6s ease-out;
+}
+
+/* Shipping tab: iframe container with fallback */
+.iframe-container {
+  position: relative;
+  background: #102a43;
+}
+.iframe-container iframe {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.iframe-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #102a43;
+  color: #9fb3c8;
+  font-size: 0.875rem;
+  z-index: 0;
+}
+
+/* Shipping tab: vessel desk card hover */
+.vessel-card {
+  transition: all 0.15s ease;
+}
+.vessel-card:hover {
+  box-shadow: inset 3px 0 0 0 #f59e0b;
+  background-color: rgba(16, 42, 67, 0.04);
+}
+
+/* Shipping tab: alert banner pulse */
+@keyframes alertPulse {
+  0%, 100% { border-color: rgba(245, 158, 11, 0.3); }
+  50% { border-color: rgba(245, 158, 11, 0.7); }
+}
+.alert-pulse {
+  animation: alertPulse 3s ease-in-out 2;
+}
+
+/* Shipping tab: toggle button transitions */
+.shipping-toggle {
+  transition: all 0.15s ease;
 }
 
 /* Print styles */

@@ -1,0 +1,200 @@
+{
+  "lastUpdated": "2026-03-24T10:00:00Z",
+  "fleetFocus": {
+    "alert": {
+      "type": "NAMED VESSEL EXIT",
+      "message": "ABU DHABI-III and AL RUWAIS have left Hormuz and are no longer counted in the ADNOC in-strait vessel list."
+    },
+    "adnocVessels": { "count": 11, "change": -2 },
+    "vesselsInside": {
+      "count": 756,
+      "change": -7,
+      "ballast": 366,
+      "laden": 390,
+      "deltaB": -7,
+      "deltaL": 0
+    },
+    "vesselsOutside": {
+      "count": 444,
+      "change": 8,
+      "ballast": 286,
+      "laden": 158,
+      "deltaB": 8,
+      "deltaL": 2
+    }
+  },
+  "routeMonitor": {
+    "iframeUrl": "https://www.marinetraffic.com/en/ais/embed/zoom:8/cenx:56.5/ceny:26.5/maptype:4/shownames:0/mmsi:0/shipid:0",
+    "fullMapUrl": "https://www.marinetraffic.com/en/ais/home/centerx:56.5/centery:26.5/zoom:8",
+    "source": "MarineTraffic AIS Embed",
+    "transitedIn": {
+      "change": -7,
+      "currentTotal": 756,
+      "previousTotal": 763,
+      "description": "Inside total now 756 vs 763 previously."
+    },
+    "transitedOut": {
+      "change": 8,
+      "currentTotal": 444,
+      "previousTotal": 436,
+      "description": "Outside total now 444 vs 436 previously."
+    }
+  },
+  "vesselMatrix": {
+    "totalVessels": 1200,
+    "classes": [
+      {
+        "name": "Bulk Carrier",
+        "inside": { "total": 206, "ballast": 113, "laden": 93 },
+        "outside": { "total": 95, "ballast": 48, "laden": 47 }
+      },
+      {
+        "name": "Chemical/Products Tanker",
+        "inside": { "total": 137, "ballast": 78, "laden": 59 },
+        "outside": { "total": 99, "ballast": 64, "laden": 35 }
+      },
+      {
+        "name": "Products Tanker",
+        "inside": { "total": 96, "ballast": 52, "laden": 44 },
+        "outside": { "total": 108, "ballast": 67, "laden": 41 }
+      },
+      {
+        "name": "Crude Oil Tanker",
+        "inside": { "total": 106, "ballast": 29, "laden": 77 },
+        "outside": { "total": 71, "ballast": 67, "laden": 4 }
+      },
+      {
+        "name": "Container Ship (Fully Cellular)",
+        "inside": { "total": 122, "ballast": 55, "laden": 67 },
+        "outside": { "total": 23, "ballast": 7, "laden": 16 }
+      },
+      {
+        "name": "LPG Tanker",
+        "inside": { "total": 41, "ballast": 21, "laden": 20 },
+        "outside": { "total": 32, "ballast": 21, "laden": 11 }
+      },
+      {
+        "name": "Crude/Oil Products Tanker",
+        "inside": { "total": 28, "ballast": 9, "laden": 19 },
+        "outside": { "total": 15, "ballast": 11, "laden": 4 }
+      },
+      {
+        "name": "LNG Tanker",
+        "inside": { "total": 20, "ballast": 9, "laden": 11 },
+        "outside": { "total": 1, "ballast": 1, "laden": 0 }
+      }
+    ]
+  },
+  "trackedVessels": [
+    {
+      "name": "GHANTOUT",
+      "class": "BULK CARRIER",
+      "subclass": "SMALL HANDY",
+      "port": "Port Rashid",
+      "destination": null,
+      "cargo": "BALLAST",
+      "navStatus": "MOORED",
+      "status": "green"
+    },
+    {
+      "name": "AL SAMHA",
+      "class": "CHEMICAL/PRODUCTS TANKER",
+      "subclass": "GENERAL TANKER",
+      "port": "Ruwais",
+      "destination": null,
+      "cargo": "LADEN",
+      "navStatus": "MOORED",
+      "status": "green"
+    },
+    {
+      "name": "UMM AL LULU-I",
+      "class": "CHEMICAL/PRODUCTS TANKER",
+      "subclass": "GENERAL TANKER",
+      "port": "Musaffah",
+      "destination": null,
+      "cargo": "BALLAST",
+      "navStatus": "MOORED",
+      "status": "green"
+    },
+    {
+      "name": "AL BAZM-II",
+      "class": "CONTAINER SHIP (FULLY CELLULAR)",
+      "subclass": "SMALL HANDY",
+      "port": "Ruwais",
+      "destination": null,
+      "cargo": "BALLAST",
+      "navStatus": "UNDER WAY",
+      "status": "green"
+    },
+    {
+      "name": "AL REEM I",
+      "class": "CONTAINER SHIP (FULLY CELLULAR)",
+      "subclass": "LARGE HANDY",
+      "port": "Ruwais",
+      "destination": null,
+      "cargo": "LADEN",
+      "navStatus": "UNDER WAY",
+      "status": "orange"
+    },
+    {
+      "name": "AL SADR - I",
+      "class": "CONTAINER SHIP (FULLY CELLULAR)",
+      "subclass": "SMALL HANDY",
+      "port": "Ruwais",
+      "destination": null,
+      "cargo": "LADEN",
+      "navStatus": "MOORED",
+      "status": "green"
+    },
+    {
+      "name": "MUBARAZ",
+      "class": "LPG TANKER",
+      "subclass": "SMALL GAS CARRIER",
+      "port": "Jebel Ali",
+      "destination": null,
+      "cargo": "LADEN",
+      "navStatus": "ANCHORED",
+      "status": "red"
+    },
+    {
+      "name": "AL MIRFA",
+      "class": "CRUDE OIL TANKER",
+      "subclass": "AFRAMAX",
+      "port": "Fujairah",
+      "destination": "Ruwais",
+      "cargo": "LADEN",
+      "navStatus": "UNDER WAY",
+      "status": "green"
+    },
+    {
+      "name": "DELMA",
+      "class": "PRODUCTS TANKER",
+      "subclass": "MR TANKER",
+      "port": "Ruwais",
+      "destination": null,
+      "cargo": "BALLAST",
+      "navStatus": "MOORED",
+      "status": "green"
+    },
+    {
+      "name": "AL DAFRA",
+      "class": "BULK CARRIER",
+      "subclass": "HANDYMAX",
+      "port": "Khalifa Port",
+      "destination": null,
+      "cargo": "LADEN",
+      "navStatus": "MOORED",
+      "status": "green"
+    },
+    {
+      "name": "ARZANAH",
+      "class": "CRUDE OIL TANKER",
+      "subclass": "VLCC",
+      "port": "Das Island",
+      "destination": "Fujairah",
+      "cargo": "LADEN",
+      "navStatus": "UNDER WAY",
+      "status": "orange"
+    }
+  ]
+}
