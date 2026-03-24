@@ -149,8 +149,8 @@ function formatNum(n) {
 function renderProductionTable(title, unit, rows, type) {
   const isCapacity = (type === 'capacity');
   const headers = isCapacity
-    ? '<th class="px-3 py-2.5 text-right">Capacity</th><th class="px-3 py-2.5 text-right">Affected</th><th class="px-3 py-2.5 text-right">Available</th>'
-    : '<th class="px-3 py-2.5 text-right">Pre-War</th><th class="px-3 py-2.5 text-right">Now</th><th class="px-3 py-2.5 text-right">Change</th>';
+    ? '<th class="px-2 py-2 sm:px-3 sm:py-2.5 text-right">Capacity</th><th class="px-2 py-2 sm:px-3 sm:py-2.5 text-right">Affected</th><th class="px-2 py-2 sm:px-3 sm:py-2.5 text-right">Available</th>'
+    : '<th class="px-2 py-2 sm:px-3 sm:py-2.5 text-right">Pre-War</th><th class="px-2 py-2 sm:px-3 sm:py-2.5 text-right">Now</th><th class="px-2 py-2 sm:px-3 sm:py-2.5 text-right">Change</th>';
 
   let totalA = 0, totalB = 0, totalC = 0;
 
@@ -169,11 +169,11 @@ function renderProductionTable(title, unit, rows, type) {
     const rowBg = i % 2 === 1 ? 'bg-navy-50/50' : '';
 
     return `<tr class="${rowBg}">
-      <td class="px-3 py-2 text-sm">${r.country}</td>
-      <td class="px-3 py-2 text-sm text-right tabular-nums text-navy-900 font-medium">${formatNum(a)}</td>
-      <td class="px-3 py-2 text-sm text-right tabular-nums ${isCapacity ? 'text-red-600' : ''} font-medium">${formatNum(b)}</td>
-      <td class="px-3 py-2 text-sm text-right tabular-nums ${changeClass}">${changeStr}</td>
-      <td class="px-3 py-2 text-xs text-navy-500 max-w-[180px] truncate" title="${r.notes || ''}">${r.notes || ''}</td>
+      <td class="px-2 py-1.5 sm:px-3 sm:py-2 text-sm">${r.country}</td>
+      <td class="px-2 py-1.5 sm:px-3 sm:py-2 text-sm text-right tabular-nums text-navy-900 font-medium">${formatNum(a)}</td>
+      <td class="px-2 py-1.5 sm:px-3 sm:py-2 text-sm text-right tabular-nums ${isCapacity ? 'text-red-600' : ''} font-medium">${formatNum(b)}</td>
+      <td class="px-2 py-1.5 sm:px-3 sm:py-2 text-sm text-right tabular-nums ${changeClass}">${changeStr}</td>
+      <td class="px-2 py-1.5 sm:px-3 sm:py-2 text-xs text-navy-500 max-w-[180px] truncate hidden sm:table-cell" title="${r.notes || ''}">${r.notes || ''}</td>
     </tr>`;
   }).join('');
 
@@ -190,19 +190,19 @@ function renderProductionTable(title, unit, rows, type) {
         <table class="w-full text-left production-table">
           <thead>
             <tr class="border-b border-navy-200 bg-navy-100/50">
-              <th class="px-3 py-2.5 text-xs text-navy-600 font-semibold uppercase tracking-wider">Country</th>
+              <th class="px-2 py-2 sm:px-3 sm:py-2.5 text-xs text-navy-600 font-semibold uppercase tracking-wider">Country</th>
               ${headers}
-              <th class="px-3 py-2.5 text-xs text-navy-600 font-semibold uppercase tracking-wider">Notes</th>
+              <th class="px-2 py-2 sm:px-3 sm:py-2.5 text-xs text-navy-600 font-semibold uppercase tracking-wider hidden sm:table-cell">Notes</th>
             </tr>
           </thead>
           <tbody>${rowsHtml}</tbody>
           <tfoot>
             <tr class="border-t-2 border-navy-300 bg-navy-100/70">
-              <td class="px-3 py-2.5 text-sm font-bold text-navy-900">TOTAL</td>
-              <td class="px-3 py-2.5 text-sm text-right tabular-nums font-bold text-navy-900">${formatNum(Math.round(totalA * 10) / 10)}</td>
-              <td class="px-3 py-2.5 text-sm text-right tabular-nums font-bold ${isCapacity ? 'text-red-600' : 'text-navy-900'}">${formatNum(Math.round(totalB * 10) / 10)}</td>
-              <td class="px-3 py-2.5 text-sm text-right tabular-nums ${totalChangeClass}">${totalChangeStr}</td>
-              <td class="px-3 py-2.5"></td>
+              <td class="px-2 py-1.5 sm:px-3 sm:py-2.5 text-sm font-bold text-navy-900">TOTAL</td>
+              <td class="px-2 py-1.5 sm:px-3 sm:py-2.5 text-sm text-right tabular-nums font-bold text-navy-900">${formatNum(Math.round(totalA * 10) / 10)}</td>
+              <td class="px-2 py-1.5 sm:px-3 sm:py-2.5 text-sm text-right tabular-nums font-bold ${isCapacity ? 'text-red-600' : 'text-navy-900'}">${formatNum(Math.round(totalB * 10) / 10)}</td>
+              <td class="px-2 py-1.5 sm:px-3 sm:py-2.5 text-sm text-right tabular-nums ${totalChangeClass}">${totalChangeStr}</td>
+              <td class="px-2 py-1.5 sm:px-3 sm:py-2.5 hidden sm:table-cell"></td>
             </tr>
           </tfoot>
         </table>
@@ -317,8 +317,8 @@ function renderCountryDetailPanel(country) {
 
   return `
     <div class="detail-row collapsed">
-      <div class="detail-panel bg-navy-50 p-6">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div class="detail-panel bg-navy-50 p-3 sm:p-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8">
           <div>
             <h4 class="text-sm font-semibold text-amber-600 uppercase tracking-wider mb-4 flex items-center gap-2">
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -461,19 +461,19 @@ function renderCountryMatrix() {
 
     return `
     <tr class="data-row cursor-pointer ${newRowClass}" onclick="toggleExpand('${country.id}')">
-      <td class="px-5 py-3.5">
+      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5">
         <div class="flex items-center gap-2.5">
           <span class="font-semibold text-navy-900">${country.country}</span>
           ${newBadge}
         </div>
       </td>
-      <td class="px-5 py-3.5">${renderStatusBadge(country.status, country.statusLabel)}</td>
-      <td class="px-5 py-3.5 max-w-lg">
+      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5">${renderStatusBadge(country.status, country.statusLabel)}</td>
+      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5 max-w-lg hidden md:table-cell">
         <ul class="space-y-1">
           ${eventsList}
         </ul>
       </td>
-      <td class="px-5 py-3.5">
+      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5">
         <div>
           <div class="flex items-center gap-2 mb-1">
             ${renderImpactBadge(country.oilGasImpact.severity)}
@@ -483,11 +483,11 @@ function renderCountryMatrix() {
           <span class="text-navy-500 text-xs">${country.oilGasImpact.summary}</span>
         </div>
       </td>
-      <td class="px-5 py-3.5 text-navy-600 text-sm hidden lg:table-cell">
+      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5 text-navy-600 text-sm hidden lg:table-cell">
         <span class="font-medium">${country.infrastructure.length}</span> facilities
       </td>
-      <td class="px-5 py-3.5">${renderSourcesBadge(country.sources)}</td>
-      <td class="px-5 py-3.5">
+      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5 hidden sm:table-cell">${renderSourcesBadge(country.sources)}</td>
+      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5">
         <svg id="chevron-${country.id}" class="w-5 h-5 text-navy-400 chevron-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
         </svg>
@@ -505,8 +505,8 @@ function renderCountryMatrix() {
 function renderFMDetailPanel(item) {
   return `
     <div class="detail-row collapsed">
-      <div class="detail-panel bg-navy-50 p-6">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="detail-panel bg-navy-50 p-3 sm:p-6">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
           <div class="lg:col-span-2">
             <h4 class="text-sm font-semibold text-amber-600 uppercase tracking-wider mb-4 flex items-center gap-2">
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -516,24 +516,24 @@ function renderFMDetailPanel(item) {
             </h4>
             <div class="bg-white rounded-lg border border-navy-200 overflow-hidden">
               <div class="grid grid-cols-1 sm:grid-cols-2">
-                <div class="p-4 border-b sm:border-r border-navy-100">
+                <div class="p-3 sm:p-4 border-b sm:border-r border-navy-100">
                   <span class="text-xs text-navy-500 uppercase tracking-wider font-medium block mb-1">Volume Affected</span>
                   <p class="text-sm text-navy-900 font-medium leading-relaxed">${item.details.volumeAffected}</p>
                 </div>
-                <div class="p-4 border-b border-navy-100">
+                <div class="p-3 sm:p-4 border-b border-navy-100">
                   <span class="text-xs text-navy-500 uppercase tracking-wider font-medium block mb-1">Commodity</span>
                   <p class="text-sm text-navy-900 font-medium">${item.details.commodity}</p>
                 </div>
-                <div class="p-4 border-b sm:border-b-0 sm:border-r border-navy-100">
+                <div class="p-3 sm:p-4 border-b sm:border-b-0 sm:border-r border-navy-100">
                   <span class="text-xs text-navy-500 uppercase tracking-wider font-medium block mb-1">Duration</span>
                   <p class="text-sm text-navy-900 font-medium">${item.details.duration}</p>
                 </div>
-                <div class="p-4">
+                <div class="p-3 sm:p-4">
                   <span class="text-xs text-navy-500 uppercase tracking-wider font-medium block mb-1">Financial Impact</span>
                   <p class="text-sm text-navy-900 font-medium">${item.details.financialImpact || 'Not disclosed'}</p>
                 </div>
               </div>
-              <div class="p-4 border-t border-navy-100 bg-navy-50">
+              <div class="p-3 sm:p-4 border-t border-navy-100 bg-navy-50">
                 <span class="text-xs text-navy-500 uppercase tracking-wider font-medium block mb-1">Reason</span>
                 <p class="text-sm text-navy-700 leading-relaxed">${item.details.reason}</p>
               </div>
@@ -568,21 +568,21 @@ function renderFMDeclarations() {
 
     return `
     <tr class="data-row cursor-pointer ${newRowClass}" onclick="toggleExpand('${item.id}')">
-      <td class="px-5 py-3.5">
+      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5">
         <span class="font-semibold text-navy-900">${item.company}</span>
         ${newBadge}
       </td>
-      <td class="px-5 py-3.5">
+      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5 hidden sm:table-cell">
         <span class="text-navy-600 text-sm">${item.country}</span>
       </td>
-      <td class="px-5 py-3.5 text-navy-700 text-sm font-medium">${formatDate(item.date)}</td>
-      <td class="px-5 py-3.5">${renderStatusBadge(item.status, item.statusLabel)}</td>
-      <td class="px-5 py-3.5 text-sm max-w-sm">
+      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5 text-navy-700 text-sm font-medium">${formatDate(item.date)}</td>
+      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5">${renderStatusBadge(item.status, item.statusLabel)}</td>
+      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5 text-sm max-w-sm hidden md:table-cell">
         ${item.details && item.details.volumeAffected ? `<p class="text-amber-600 font-semibold text-xs mb-0.5">${item.details.volumeAffected}</p>` : ''}
         <span class="text-navy-600 line-clamp-2">${item.summary}</span>
       </td>
-      <td class="px-5 py-3.5">${renderSourcesBadge(item.sources)}</td>
-      <td class="px-5 py-3.5">
+      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5 hidden sm:table-cell">${renderSourcesBadge(item.sources)}</td>
+      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5">
         <svg id="chevron-${item.id}" class="w-5 h-5 text-navy-400 chevron-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
         </svg>
@@ -609,21 +609,21 @@ function renderShutdowns() {
 
     return `
     <tr class="data-row cursor-pointer ${newRowClass}" onclick="toggleExpand('${item.id}')">
-      <td class="px-5 py-3.5">
+      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5">
         <span class="font-semibold text-navy-900">${item.company}</span>
         ${newBadge}
       </td>
-      <td class="px-5 py-3.5">
+      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5 hidden sm:table-cell">
         <span class="text-navy-600 text-sm">${item.country}</span>
       </td>
-      <td class="px-5 py-3.5 text-navy-700 text-sm font-medium">${formatDate(item.date)}</td>
-      <td class="px-5 py-3.5">${renderStatusBadge(item.status, item.statusLabel)}</td>
-      <td class="px-5 py-3.5 text-sm max-w-sm">
+      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5 text-navy-700 text-sm font-medium">${formatDate(item.date)}</td>
+      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5">${renderStatusBadge(item.status, item.statusLabel)}</td>
+      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5 text-sm max-w-sm hidden md:table-cell">
         ${item.details && item.details.volumeAffected ? `<p class="text-amber-600 font-semibold text-xs mb-0.5">${item.details.volumeAffected}</p>` : ''}
         <span class="text-navy-600 line-clamp-2">${item.summary}</span>
       </td>
-      <td class="px-5 py-3.5">${renderSourcesBadge(item.sources)}</td>
-      <td class="px-5 py-3.5">
+      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5 hidden sm:table-cell">${renderSourcesBadge(item.sources)}</td>
+      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5">
         <svg id="chevron-${item.id}" class="w-5 h-5 text-navy-400 chevron-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
         </svg>
@@ -731,8 +731,8 @@ function updateStats(activeTab) {
     const changeColor = s.change > 0 ? 'text-emerald-600' : 'text-navy-400';
     const changeText = s.change > 0 ? `↑ +${s.change} from yesterday` : '— No change';
     return `
-      <div class="stat-card bg-white rounded-xl p-4 border border-navy-200">
-        <div class="text-3xl font-extrabold ${s.color}">${s.value}</div>
+      <div class="stat-card bg-white rounded-xl p-3 sm:p-4 border border-navy-200">
+        <div class="text-2xl sm:text-3xl font-extrabold ${s.color}">${s.value}</div>
         <div class="text-sm text-navy-500 mt-1">${s.label}</div>
         <div class="text-xs mt-1.5 ${changeColor}">${changeText}</div>
       </div>

@@ -49,18 +49,18 @@
           </svg>
         </div>
         <div>
-          <h1 class="text-lg font-bold text-navy-900 leading-tight tracking-tight">ADNOC Geopolitics Monitor</h1>
+          <h1 class="text-base sm:text-lg font-bold text-navy-900 leading-tight tracking-tight">ADNOC Geopolitics Monitor</h1>
           <p class="text-xs text-navy-500 hidden sm:block">Oil & Gas Sector Intelligence Dashboard</p>
         </div>
       </div>
-      <div class="flex items-center gap-3">
-        <div id="sync-status" class="flex items-center gap-2 bg-emerald-50 text-emerald-700 px-3 py-1.5 rounded-lg text-sm font-medium border border-emerald-300">
+      <div class="flex items-center gap-1.5 sm:gap-3">
+        <div id="sync-status" class="flex items-center gap-2 bg-emerald-50 text-emerald-700 px-2 py-1 sm:px-3 sm:py-1.5 rounded-lg text-xs sm:text-sm font-medium border border-emerald-300">
           <svg id="sync-status-icon" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           <span id="sync-status-text" class="hidden sm:inline">Auto-synced daily</span>
         </div>
-        <div class="flex items-center gap-2 bg-navy-100 px-3 py-1.5 rounded-lg text-sm text-navy-600 border border-navy-200">
+        <div class="hidden sm:flex items-center gap-2 bg-navy-100 px-3 py-1.5 rounded-lg text-sm text-navy-600 border border-navy-200">
           <svg class="w-4 h-4 text-navy-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
@@ -75,32 +75,32 @@
   <nav class="bg-white border-b border-navy-200">
     <div class="max-w-[1440px] mx-auto px-4 sm:px-6 flex overflow-x-auto">
       <button data-tab="exec-summary"
-        class="tab-btn active px-5 py-3.5 text-sm font-medium border-b-2 border-amber-500 text-navy-900 whitespace-nowrap transition-all">
-        <svg class="w-4 h-4 inline-block mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        class="tab-btn active px-3 py-3 text-xs sm:px-5 sm:py-3.5 sm:text-sm font-medium border-b-2 border-amber-500 text-navy-900 whitespace-nowrap transition-all">
+        <svg class="w-4 h-4 hidden sm:inline-block mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
         </svg>
-        Executive Summary
+        <span class="sm:hidden">Summary</span><span class="hidden sm:inline">Executive Summary</span>
       </button>
       <button data-tab="country-matrix"
-        class="tab-btn px-5 py-3.5 text-sm font-medium border-b-2 border-transparent text-navy-500 hover:text-navy-700 whitespace-nowrap transition-all">
-        <svg class="w-4 h-4 inline-block mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        class="tab-btn px-3 py-3 text-xs sm:px-5 sm:py-3.5 sm:text-sm font-medium border-b-2 border-transparent text-navy-500 hover:text-navy-700 whitespace-nowrap transition-all">
+        <svg class="w-4 h-4 hidden sm:inline-block mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
         </svg>
-        Country Status
+        <span class="sm:hidden">Countries</span><span class="hidden sm:inline">Country Status</span>
       </button>
       <button data-tab="import-flows"
-        class="tab-btn px-5 py-3.5 text-sm font-medium border-b-2 border-transparent text-navy-500 hover:text-navy-700 whitespace-nowrap transition-all">
-        <svg class="w-4 h-4 inline-block mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        class="tab-btn px-3 py-3 text-xs sm:px-5 sm:py-3.5 sm:text-sm font-medium border-b-2 border-transparent text-navy-500 hover:text-navy-700 whitespace-nowrap transition-all">
+        <svg class="w-4 h-4 hidden sm:inline-block mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0H21M3.375 14.25V3.375c0-.621.504-1.125 1.125-1.125h9.75c.621 0 1.125.504 1.125 1.125v3.026M12 21v-7.5M12 6.375l3.375 3.375M12 6.375L8.625 9.75" />
         </svg>
-        Import Flows
+        <span class="sm:hidden">Imports</span><span class="hidden sm:inline">Import Flows</span>
       </button>
       <button data-tab="export-flows"
-        class="tab-btn px-5 py-3.5 text-sm font-medium border-b-2 border-transparent text-navy-500 hover:text-navy-700 whitespace-nowrap transition-all">
-        <svg class="w-4 h-4 inline-block mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        class="tab-btn px-3 py-3 text-xs sm:px-5 sm:py-3.5 sm:text-sm font-medium border-b-2 border-transparent text-navy-500 hover:text-navy-700 whitespace-nowrap transition-all">
+        <svg class="w-4 h-4 hidden sm:inline-block mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0H21M3.375 14.25V3.375c0-.621.504-1.125 1.125-1.125h9.75c.621 0 1.125.504 1.125 1.125v3.026M12 3v7.5M12 17.625l3.375-3.375M12 17.625L8.625 14.25" />
         </svg>
-        Export Flows
+        <span class="sm:hidden">Exports</span><span class="hidden sm:inline">Export Flows</span>
       </button>
       <!-- DISABLED: Shipping tab (re-enable when AIS data quality is ready)
       <button data-tab="shipping"
@@ -112,18 +112,18 @@
       </button>
       -->
       <button data-tab="fm-declarations"
-        class="tab-btn px-5 py-3.5 text-sm font-medium border-b-2 border-transparent text-navy-500 hover:text-navy-700 whitespace-nowrap transition-all">
-        <svg class="w-4 h-4 inline-block mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        class="tab-btn px-3 py-3 text-xs sm:px-5 sm:py-3.5 sm:text-sm font-medium border-b-2 border-transparent text-navy-500 hover:text-navy-700 whitespace-nowrap transition-all">
+        <svg class="w-4 h-4 hidden sm:inline-block mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
         </svg>
-        FM Declarations
+        <span class="sm:hidden">FM</span><span class="hidden sm:inline">FM Declarations</span>
       </button>
       <button data-tab="shutdowns"
-        class="tab-btn px-5 py-3.5 text-sm font-medium border-b-2 border-transparent text-navy-500 hover:text-navy-700 whitespace-nowrap transition-all">
-        <svg class="w-4 h-4 inline-block mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        class="tab-btn px-3 py-3 text-xs sm:px-5 sm:py-3.5 sm:text-sm font-medium border-b-2 border-transparent text-navy-500 hover:text-navy-700 whitespace-nowrap transition-all">
+        <svg class="w-4 h-4 hidden sm:inline-block mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1012.728 0M12 3v9" />
         </svg>
-        Shutdowns (No FM)
+        <span class="sm:hidden">Shutdowns</span><span class="hidden sm:inline">Shutdowns (No FM)</span>
       </button>
     </div>
   </nav>
@@ -145,16 +145,16 @@
     <!-- Panel 1: Country Status Matrix -->
     <div data-panel="country-matrix" class="hidden">
       <div class="overflow-x-auto rounded-xl border border-navy-200 shadow-sm bg-white">
-        <table class="w-full text-left min-w-[900px]">
+        <table class="w-full text-left min-w-[400px] lg:min-w-[900px]">
           <thead class="bg-navy-100 text-navy-600 text-xs uppercase tracking-wider">
             <tr>
-              <th class="px-5 py-3.5 font-semibold">Country</th>
-              <th class="px-5 py-3.5 font-semibold">Status</th>
-              <th class="px-5 py-3.5 font-semibold">Key Events</th>
-              <th class="px-5 py-3.5 font-semibold">Oil & Gas Impact</th>
-              <th class="px-5 py-3.5 font-semibold hidden lg:table-cell">Infrastructure</th>
-              <th class="px-5 py-3.5 font-semibold">Sources</th>
-              <th class="px-5 py-3.5 w-10"></th>
+              <th class="px-3 py-2.5 sm:px-5 sm:py-3.5 font-semibold">Country</th>
+              <th class="px-3 py-2.5 sm:px-5 sm:py-3.5 font-semibold">Status</th>
+              <th class="px-3 py-2.5 sm:px-5 sm:py-3.5 font-semibold hidden md:table-cell">Key Events</th>
+              <th class="px-3 py-2.5 sm:px-5 sm:py-3.5 font-semibold">Oil & Gas Impact</th>
+              <th class="px-3 py-2.5 sm:px-5 sm:py-3.5 font-semibold hidden lg:table-cell">Infrastructure</th>
+              <th class="px-3 py-2.5 sm:px-5 sm:py-3.5 font-semibold hidden sm:table-cell">Sources</th>
+              <th class="px-3 py-2.5 sm:px-5 sm:py-3.5 w-10"></th>
             </tr>
           </thead>
           <tbody id="country-matrix-body" class="divide-y divide-navy-200">
@@ -182,16 +182,16 @@
     <!-- Panel 3: FM Declarations -->
     <div data-panel="fm-declarations" class="hidden">
       <div class="overflow-x-auto rounded-xl border border-navy-200 shadow-sm bg-white">
-        <table class="w-full text-left min-w-[900px]">
+        <table class="w-full text-left min-w-[360px] lg:min-w-[900px]">
           <thead class="bg-navy-100 text-navy-600 text-xs uppercase tracking-wider">
             <tr>
-              <th class="px-5 py-3.5 font-semibold">Company</th>
-              <th class="px-5 py-3.5 font-semibold">Country</th>
-              <th class="px-5 py-3.5 font-semibold">Date</th>
-              <th class="px-5 py-3.5 font-semibold">Status</th>
-              <th class="px-5 py-3.5 font-semibold">Details</th>
-              <th class="px-5 py-3.5 font-semibold">Sources</th>
-              <th class="px-5 py-3.5 w-10"></th>
+              <th class="px-3 py-2.5 sm:px-5 sm:py-3.5 font-semibold">Company</th>
+              <th class="px-3 py-2.5 sm:px-5 sm:py-3.5 font-semibold hidden sm:table-cell">Country</th>
+              <th class="px-3 py-2.5 sm:px-5 sm:py-3.5 font-semibold">Date</th>
+              <th class="px-3 py-2.5 sm:px-5 sm:py-3.5 font-semibold">Status</th>
+              <th class="px-3 py-2.5 sm:px-5 sm:py-3.5 font-semibold hidden md:table-cell">Details</th>
+              <th class="px-3 py-2.5 sm:px-5 sm:py-3.5 font-semibold hidden sm:table-cell">Sources</th>
+              <th class="px-3 py-2.5 sm:px-5 sm:py-3.5 w-10"></th>
             </tr>
           </thead>
           <tbody id="fm-declarations-body" class="divide-y divide-navy-200">
@@ -203,16 +203,16 @@
     <!-- Panel 3: Shutdowns (No FM) -->
     <div data-panel="shutdowns" class="hidden">
       <div class="overflow-x-auto rounded-xl border border-navy-200 shadow-sm bg-white">
-        <table class="w-full text-left min-w-[900px]">
+        <table class="w-full text-left min-w-[360px] lg:min-w-[900px]">
           <thead class="bg-navy-100 text-navy-600 text-xs uppercase tracking-wider">
             <tr>
-              <th class="px-5 py-3.5 font-semibold">Company</th>
-              <th class="px-5 py-3.5 font-semibold">Country</th>
-              <th class="px-5 py-3.5 font-semibold">Date</th>
-              <th class="px-5 py-3.5 font-semibold">Status</th>
-              <th class="px-5 py-3.5 font-semibold">Details</th>
-              <th class="px-5 py-3.5 font-semibold">Sources</th>
-              <th class="px-5 py-3.5 w-10"></th>
+              <th class="px-3 py-2.5 sm:px-5 sm:py-3.5 font-semibold">Company</th>
+              <th class="px-3 py-2.5 sm:px-5 sm:py-3.5 font-semibold hidden sm:table-cell">Country</th>
+              <th class="px-3 py-2.5 sm:px-5 sm:py-3.5 font-semibold">Date</th>
+              <th class="px-3 py-2.5 sm:px-5 sm:py-3.5 font-semibold">Status</th>
+              <th class="px-3 py-2.5 sm:px-5 sm:py-3.5 font-semibold hidden md:table-cell">Details</th>
+              <th class="px-3 py-2.5 sm:px-5 sm:py-3.5 font-semibold hidden sm:table-cell">Sources</th>
+              <th class="px-3 py-2.5 sm:px-5 sm:py-3.5 w-10"></th>
             </tr>
           </thead>
           <tbody id="shutdowns-body" class="divide-y divide-navy-200">
@@ -273,6 +273,13 @@
     <span class="hover:bg-amber-500/10 hover:bg-navy-50/50"></span>
     <span class="w-32 h-4 rounded-l-full rounded-full"></span>
     <span class="bg-blue-500 text-blue-700 border-blue-200 bg-blue-50"></span>
+    <!-- Responsive safelist -->
+    <span class="text-2xl sm:text-3xl px-2 py-1 sm:px-3 sm:py-1.5 text-xs sm:text-sm"></span>
+    <span class="hidden sm:table-cell hidden md:table-cell hidden sm:flex hidden sm:inline hidden sm:inline-block"></span>
+    <span class="px-3 py-3 sm:px-5 sm:py-3.5 px-3 py-2.5 sm:px-5 sm:py-3.5"></span>
+    <span class="p-3 sm:p-6 sm:p-4 sm:p-5 gap-4 sm:gap-8 sm:gap-6 gap-1.5 sm:gap-3"></span>
+    <span class="px-2 py-1.5 px-2.5 py-2.5 sm:px-4 sm:py-3 text-base sm:text-lg"></span>
+    <span class="min-w-[400px] min-w-[360px] lg:min-w-[900px] md:grid-cols-2 md:grid-cols-3 md:col-span-2"></span>
   </div>
 
   <script src="data.js"></script>

@@ -288,10 +288,10 @@
   function renderToggle(label, key, options) {
     return `
       <div class="flex items-center bg-white rounded-lg border border-navy-200 shadow-sm overflow-hidden">
-        <span class="px-3 py-2 text-xs font-semibold text-navy-500 bg-navy-50 border-r border-navy-200">${label}</span>
+        <span class="px-2 py-1.5 text-[10px] sm:px-3 sm:py-2 sm:text-xs font-semibold text-navy-500 bg-navy-50 border-r border-navy-200">${label}</span>
         ${options.map(([v, text]) => `
           <button data-control="${key}" data-value="${v}"
-            class="px-3 py-2 text-sm font-medium transition-all ${state[key] === v ? 'bg-amber-500 text-white shadow-inner' : 'text-navy-600 hover:bg-navy-100'}"
+            class="px-2 py-1.5 text-xs sm:px-3 sm:py-2 sm:text-sm font-medium transition-all ${state[key] === v ? 'bg-amber-500 text-white shadow-inner' : 'text-navy-600 hover:bg-navy-100'}"
           >${text}</button>
         `).join('')}
       </div>
@@ -324,25 +324,25 @@
 
     return `
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        <div class="stat-card bg-white rounded-xl p-5 border border-navy-200 border-l-4 border-l-sky-400">
+        <div class="stat-card bg-white rounded-xl p-3 sm:p-5 border border-navy-200 border-l-4 border-l-sky-400">
           <div class="flex items-center gap-2 mb-2">
             <svg class="w-4 h-4 text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
             </svg>
             <span class="text-xs font-semibold text-navy-500 uppercase tracking-wider">${periodLabel}${partialNote}</span>
           </div>
-          <div class="text-3xl font-extrabold text-navy-900">${fmtNum(displayVal)}</div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-navy-900">${fmtNum(displayVal)}</div>
           <div class="text-xs text-navy-400 mt-0.5">${displayUnit}</div>
           <div class="mt-2"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold ${pctBg}">${pctArrow} ${fmtPct(kpis.pctChange)} vs prior</span></div>
         </div>
-        <div class="stat-card bg-white rounded-xl p-5 border border-navy-200 border-l-4 border-l-amber-400">
+        <div class="stat-card bg-white rounded-xl p-3 sm:p-5 border border-navy-200 border-l-4 border-l-amber-400">
           <div class="flex items-center gap-2 mb-2">
             <svg class="w-4 h-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 14.25v2.25m3-4.5v4.5m3-6.75v6.75m3-9v9M6 20.25h12A2.25 2.25 0 0020.25 18V6A2.25 2.25 0 0018 3.75H6A2.25 2.25 0 003.75 6v12A2.25 2.25 0 006 20.25z" />
             </svg>
             <span class="text-xs font-semibold text-navy-500 uppercase tracking-wider">${rangeLabel} Avg</span>
           </div>
-          <div class="text-3xl font-extrabold text-navy-900">${fmtNum(displayAvg)}</div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-navy-900">${fmtNum(displayAvg)}</div>
           <div class="text-xs text-navy-400 mt-0.5">${displayUnit}</div>
           <div class="mt-2"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-navy-100 text-navy-500">All visible periods</span></div>
         </div>
@@ -371,18 +371,18 @@
         <div id="if-kpis"></div>
 
         ${crude ? `
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
           <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5">
             <h3 class="text-base font-bold text-navy-800 mb-0.5" id="chart-trend-title">Total Import Volume</h3>
             <p class="text-xs text-navy-400 mb-3">Cumulative volume per period (${unit})</p>
-            <div style="position:relative; height:360px;">
+            <div class="chart-container">
               <canvas id="chart-total-trend"></canvas>
             </div>
           </div>
           <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5">
             <h3 class="text-base font-bold text-navy-800 mb-0.5" id="chart-rate-title">Daily Import Rate</h3>
             <p class="text-xs text-navy-400 mb-3">Average daily rate per period (${rateUnit})</p>
-            <div style="position:relative; height:360px;">
+            <div class="chart-container">
               <canvas id="chart-daily-rate"></canvas>
             </div>
           </div>
@@ -392,25 +392,25 @@
           <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5">
             <h3 class="text-base font-bold text-navy-800 mb-0.5" id="chart-trend-title">Total Import Volume</h3>
             <p class="text-xs text-navy-400 mb-3">Cumulative volume per period (${unit})</p>
-            <div style="position:relative; height:360px;">
+            <div class="chart-container">
               <canvas id="chart-total-trend"></canvas>
             </div>
           </div>
         </div>
         `}
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 mb-6">
-          <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5 lg:col-span-2">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
+          <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5 md:col-span-2">
             <h3 class="text-base font-bold text-navy-800 mb-0.5">Origin Breakdown</h3>
             <p class="text-xs text-navy-400 mb-3">${crude ? 'Daily rate by top source countries (' + rateUnit + ')' : 'Stacked volume by top source countries (' + unit + ')'}</p>
-            <div style="position:relative; height:360px;">
+            <div class="chart-container">
               <canvas id="chart-origin-stacked"></canvas>
             </div>
           </div>
           <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5">
             <h3 class="text-base font-bold text-navy-800 mb-0.5">Current Period Mix</h3>
             <p class="text-xs text-navy-400 mb-3">${crude ? 'Latest period rate breakdown (' + rateUnit + ')' : 'Latest period supplier breakdown (' + unit + ')'}</p>
-            <div style="position:relative; height:360px;">
+            <div class="chart-container">
               <canvas id="chart-donut"></canvas>
             </div>
           </div>
@@ -420,7 +420,7 @@
           <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5">
             <h3 class="text-base font-bold text-navy-800 mb-0.5">Origin Share Over Time</h3>
             <p class="text-xs text-navy-400 mb-3">Percentage contribution of each supplier</p>
-            <div style="position:relative; height:300px;">
+            <div class="chart-container chart-container-sm">
               <canvas id="chart-pct-stacked"></canvas>
             </div>
           </div>
@@ -761,12 +761,12 @@
     }
 
     thead.innerHTML = `<tr>
-      <th class="px-5 py-3 font-semibold w-12">#</th>
-      <th class="px-5 py-3 font-semibold">Origin Country</th>
-      <th class="px-4 py-3 font-semibold text-right whitespace-nowrap">${latestLabel}</th>
-      <th class="px-4 py-3 font-semibold text-right">Share %</th>
-      <th class="px-4 py-3 font-semibold text-right">Period Avg</th>
-      <th class="px-4 py-3 font-semibold text-right">Avg Share %</th>
+      <th class="px-3 py-2.5 sm:px-5 sm:py-3 font-semibold w-12">#</th>
+      <th class="px-3 py-2.5 sm:px-5 sm:py-3 font-semibold">Origin Country</th>
+      <th class="px-2.5 py-2.5 sm:px-4 sm:py-3 font-semibold text-right whitespace-nowrap">${latestLabel}</th>
+      <th class="px-2.5 py-2.5 sm:px-4 sm:py-3 font-semibold text-right">Share %</th>
+      <th class="px-2.5 py-2.5 sm:px-4 sm:py-3 font-semibold text-right hidden sm:table-cell">Period Avg</th>
+      <th class="px-2.5 py-2.5 sm:px-4 sm:py-3 font-semibold text-right hidden sm:table-cell">Avg Share %</th>
     </tr>`;
 
     const rows = topSuppliers.map((c, i) => {
@@ -797,19 +797,19 @@
       const evenClass = ri % 2 === 1 ? 'bg-navy-50/30' : '';
       return `
         <tr class="hover:bg-sky-50/50 transition-colors ${evenClass}">
-          <td class="px-5 py-3 text-center">
+          <td class="px-3 py-2.5 sm:px-5 sm:py-3 text-center">
             <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-navy-100 text-xs font-bold text-navy-600">${r.rank}</span>
           </td>
-          <td class="px-5 py-3">
+          <td class="px-3 py-2.5 sm:px-5 sm:py-3">
             <div class="flex items-center gap-2.5">
               <span class="w-1 h-6 rounded-full flex-shrink-0" style="background:${r.color}"></span>
               <span class="text-sm font-medium text-navy-800">${r.country}</span>
             </div>
           </td>
-          <td class="px-4 py-3 text-right text-sm tabular-nums text-navy-700">${r.latestVal.toFixed(precision)}</td>
-          <td class="px-4 py-3 text-right text-sm tabular-nums text-navy-700">${r.latestShare.toFixed(1)}%</td>
-          <td class="px-4 py-3 text-right text-sm tabular-nums text-navy-700">${r.periodAvg.toFixed(precision)}</td>
-          <td class="px-4 py-3 text-right text-sm tabular-nums text-navy-600">${r.avgShare.toFixed(1)}%</td>
+          <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-navy-700">${r.latestVal.toFixed(precision)}</td>
+          <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-navy-700">${r.latestShare.toFixed(1)}%</td>
+          <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-navy-700 hidden sm:table-cell">${r.periodAvg.toFixed(precision)}</td>
+          <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-navy-600 hidden sm:table-cell">${r.avgShare.toFixed(1)}%</td>
         </tr>
       `;
     }).join('');
@@ -817,12 +817,12 @@
     // Total row
     const totalRowHtml = `
       <tr class="bg-navy-100/70 border-t-2 border-navy-300">
-        <td class="px-5 py-3"></td>
-        <td class="px-5 py-3 text-sm font-bold text-navy-900">Total</td>
-        <td class="px-4 py-3 text-right text-sm font-bold tabular-nums text-navy-900">${refTotal.toFixed(precision)}</td>
-        <td class="px-4 py-3 text-right text-sm font-bold text-navy-900">100%</td>
-        <td class="px-4 py-3 text-right text-sm font-bold tabular-nums text-navy-900">${avgTotal.toFixed(precision)}</td>
-        <td class="px-4 py-3 text-right text-sm font-bold text-navy-900">100%</td>
+        <td class="px-3 py-2.5 sm:px-5 sm:py-3"></td>
+        <td class="px-3 py-2.5 sm:px-5 sm:py-3 text-sm font-bold text-navy-900">Total</td>
+        <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm font-bold tabular-nums text-navy-900">${refTotal.toFixed(precision)}</td>
+        <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm font-bold text-navy-900">100%</td>
+        <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm font-bold tabular-nums text-navy-900 hidden sm:table-cell">${avgTotal.toFixed(precision)}</td>
+        <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm font-bold text-navy-900 hidden sm:table-cell">100%</td>
       </tr>
     `;
 

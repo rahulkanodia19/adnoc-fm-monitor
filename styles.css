@@ -192,9 +192,42 @@ a.source-link:hover {
 }
 
 /* Responsive table cards for mobile */
-@media (max-width: 640px) {
+@media (max-width: 639px) {
   .stat-card {
     padding: 0.75rem;
+  }
+  /* Hide tab bar scrollbar on mobile */
+  nav > div {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  nav > div::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Responsive chart containers */
+.chart-container {
+  position: relative;
+  height: 260px;
+}
+.chart-container-sm {
+  height: 220px;
+}
+@media (min-width: 640px) {
+  .chart-container {
+    height: 320px;
+  }
+  .chart-container-sm {
+    height: 260px;
+  }
+}
+@media (min-width: 1024px) {
+  .chart-container {
+    height: 360px;
+  }
+  .chart-container-sm {
+    height: 300px;
   }
 }
 
