@@ -88,6 +88,13 @@
         </svg>
         Country Status
       </button>
+      <button data-tab="import-flows"
+        class="tab-btn px-5 py-3.5 text-sm font-medium border-b-2 border-transparent text-navy-500 hover:text-navy-700 whitespace-nowrap transition-all">
+        <svg class="w-4 h-4 inline-block mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0H21M3.375 14.25V3.375c0-.621.504-1.125 1.125-1.125h9.75c.621 0 1.125.504 1.125 1.125v3.026M12 21v-7.5M12 6.375l3.375 3.375M12 6.375L8.625 9.75" />
+        </svg>
+        Import Flows
+      </button>
       <button data-tab="fm-declarations"
         class="tab-btn px-5 py-3.5 text-sm font-medium border-b-2 border-transparent text-navy-500 hover:text-navy-700 whitespace-nowrap transition-all">
         <svg class="w-4 h-4 inline-block mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -101,13 +108,6 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1012.728 0M12 3v9" />
         </svg>
         Shutdowns (No FM)
-      </button>
-      <button data-tab="import-flows"
-        class="tab-btn px-5 py-3.5 text-sm font-medium border-b-2 border-transparent text-navy-500 hover:text-navy-700 whitespace-nowrap transition-all">
-        <svg class="w-4 h-4 inline-block mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0H21M3.375 14.25V3.375c0-.621.504-1.125 1.125-1.125h9.75c.621 0 1.125.504 1.125 1.125v3.026M12 21v-7.5M12 6.375l3.375 3.375M12 6.375L8.625 9.75" />
-        </svg>
-        Import Flows
       </button>
     </div>
   </nav>
@@ -147,7 +147,12 @@
       </div>
     </div>
 
-    <!-- Panel 2: FM Declarations -->
+    <!-- Panel 2: Import Flows Dashboard -->
+    <div data-panel="import-flows" class="hidden">
+      <div id="import-flows-content"></div>
+    </div>
+
+    <!-- Panel 3: FM Declarations -->
     <div data-panel="fm-declarations" class="hidden">
       <div class="overflow-x-auto rounded-xl border border-navy-200 shadow-sm bg-white">
         <table class="w-full text-left min-w-[900px]">
@@ -187,11 +192,6 @@
           </tbody>
         </table>
       </div>
-    </div>
-
-    <!-- Panel 4: Import Flows Dashboard -->
-    <div data-panel="import-flows" class="hidden">
-      <div id="import-flows-content"></div>
     </div>
 
   </main>
