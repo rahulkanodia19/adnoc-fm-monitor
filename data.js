@@ -549,13 +549,13 @@ const COUNTRY_STATUS_DATA = [
     statusLabel: "Conflict / FM",
     summary: "Chevron FM on Leviathan gas field. Karish shut per ministry order. Tamar domestic only. All gas exports to Egypt and Jordan halted.",
     metrics: {
-      headline: "~1.8 Bcf/d gas offline",
-      productionOffline: "Leviathan + Karish shut",
+      headline: "~2.0 Bcf/d gas offline",
+      productionOffline: "Leviathan + Karish shut, Tamar domestic only",
       keyFigure: "Egypt/Jordan gas exports halted"
     },
     production: {
       oil: { preWar: 0, current: 0, unit: "kb/d" },
-      gas: { preWar: 3.0, current: 0.5, unit: "Bcf/d" },
+      gas: { preWar: 3.0, current: 1.0, unit: "Bcf/d" },
       refining: { capacity: 197, affected: 60, available: 137, unit: "kb/d" }
     },
     events: [
@@ -577,8 +577,8 @@ const COUNTRY_STATUS_DATA = [
     ],
     oilGasImpact: {
       severity: "critical",
-      summary: "~1.8 Bcf/d gas offline, exports halted",
-      details: "Leviathan (Chevron FM) and Karish (ministry shutdown) offline. Tamar producing for domestic only. All gas exports to Egypt and Jordan halted. Regional conflict is the primary driver of broader Middle East disruptions."
+      summary: "~2.0 Bcf/d gas offline, exports halted",
+      details: "Leviathan (Chevron FM, ~1.2 Bcf/d) and Karish (ministry shutdown, ~0.6 Bcf/d) offline. Tamar producing ~1.0 Bcf/d for domestic consumption only. All gas exports to Egypt and Jordan halted. Shutdown costs ~NIS 300M/week. Regional conflict is the primary driver of broader Middle East disruptions."
     },
     infrastructure: [
       { name: "Leviathan Gas Field", type: "Offshore Gas", capacity: "~1.2 Bcf/d", status: "shutdown" },
@@ -1037,8 +1037,8 @@ const FM_DECLARATIONS_DATA = [
     flag: "\u{1F1E8}\u{1F1F3}",
     date: "2026-03-04",
     status: "active",
-    statusLabel: "Suspended",
-    summary: "Halted all Gulf services. Frozen bookings to UAE, Bahrain, Saudi, Iraq, Kuwait.",
+    statusLabel: "Partially Resumed",
+    summary: "Resumed container bookings to Gulf states on Mar 25. Services remain subject to ongoing volatility. Bypassing Hormuz via alternative routes.",
     details: {
       volumeAffected: "All Gulf container and bulk services frozen",
       commodity: "Maritime Shipping",
@@ -1420,9 +1420,9 @@ const SHUTDOWNS_NO_FM_DATA = [
     country: "Kuwait",
     flag: "\u{1F1F0}\u{1F1FC}",
     date: "2026-03-09",
-    status: "ongoing",
-    statusLabel: "Ongoing",
-    summary: "Subiya power plant fire from intercepted drone debris. Not covered by KPC crude FM declaration.",
+    status: "contained",
+    statusLabel: "Contained",
+    summary: "Subiya power plant fire from intercepted drone debris contained. Ministry of Electricity confirmed all systems operational. Fuel tank damage sustained.",
     details: {
       volumeAffected: "Subiya power plant partially damaged; gas supply affected",
       commodity: "Natural Gas (power generation)",
@@ -1441,15 +1441,15 @@ const SHUTDOWNS_NO_FM_DATA = [
     country: "China",
     flag: "\u{1F1E8}\u{1F1F3}",
     date: "2026-03-04",
-    status: "suspended",
-    statusLabel: "Suspended",
-    summary: "All Gulf services halted. Bookings frozen to UAE, Bahrain, Saudi, Iraq, Kuwait. No FM declared.",
+    status: "partially_resumed",
+    statusLabel: "Partially Resumed",
+    summary: "Resumed container bookings to Gulf states on Mar 25 (UAE, Saudi, Bahrain, Qatar, Kuwait, Iraq). Services subject to ongoing volatility. Bypassing Hormuz.",
     details: {
-      volumeAffected: "All container and tanker bookings to 5 Gulf states",
+      volumeAffected: "Container bookings resumed to 6 Gulf states; tanker bookings status unclear",
       commodity: "All Commodities",
-      duration: "Since ~4 Mar 2026, indefinite",
-      reason: "Security risk; Gulf-bound bookings frozen due to Hormuz deterioration.",
-      financialImpact: "Chinese crude imports disrupted; China activated SPR drawdowns."
+      duration: "Suspended 4-25 Mar 2026; partially resumed 25 Mar",
+      reason: "Resumed via alternative routes bypassing Hormuz. COSCO cautioned bookings remain subject to change.",
+      financialImpact: "Partial restoration of China-Gulf trade lanes."
     },
     sources: [
       { id: 1, title: "COSCO Gulf freeze - HKFP", url: "https://hongkongfp.com", date: "2026-03-04" },
