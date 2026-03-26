@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-03-26T12:00:00Z",
+  "success": true,
+  "mode": "web-search + browser (sync:force)",
+  "changes": "Updated LAST_UPDATED to Mar 26. UAE: Habshan gas complex resumed (Mar 23), gas current 4.5→5.5 Bcf/d, ADNOC CEO 'economic terrorism' statement. Iraq: Production dropped further to ~800k bpd Basra, total 1000 kb/d, BP/Eni ordered further cuts. Qatar: FM extended to Italy/Belgium/S.Korea/China (Mar 24). Iran: Rejected ceasefire, 5 conditions (Mar 25). All isNew flags recalculated for 48h window. Added new shutdown sd-020 (Iraq further cuts). Habshan sd-019 status changed to restarted. Rystad estimates $25B infrastructure repair bill.",
+  "countriesCount": 9,
+  "fmCount": 24,
+  "shutdownsCount": 20,
+  "sourcesChecked": {
+    "tier1": ["Kpler", "Rystad Energy", "S&P Global Platts", "Bloomberg", "Argus Media"],
+    "tier2": ["Al Jazeera", "CNBC", "The National (UAE)", "Financial Times", "NPR", "NBC News", "CBS News"],
+    "tier3": ["OilPrice.com", "World Oil", "BOE Report", "Rigzone", "Anadolu Agency", "Iraq Business News"]
+  },
+  "keyFindings": {
+    "uaeHabshanResumed": "Habshan gas processing complex (6.1 Bcf/d, 60% of UAE gas) resumed operations Mar 23 after 4-day shutdown",
+    "iraqFurtherCuts": "Basra output dropped to ~800k bpd. BP ordered to cut Rumaila to 350k bpd, Eni to cut Zubair by 70k bpd",
+    "qatarFMExtended": "QatarEnergy extended FM to Italy, Belgium, South Korea, China on Mar 24",
+    "iranRejectsCeasefire": "Iran rejected US ceasefire, laid out 5 conditions including Hormuz sovereignty",
+    "trumpUltimatum": "Trump issued 48h ultimatum Mar 22, postponed Mar 23 citing 'productive talks'",
+    "rystadRepairBill": "Rystad estimates $25B in Gulf energy infrastructure repair costs",
+    "brentCrude": "Dropped ~15% to below $99/bbl on ceasefire hopes, partially recovered to ~$102"
+  },
+  "browserSync": {
+    "kpler": "Authenticated. Global LNG utilization dropped 90%→77% in March. Export volumes down ~20% (36.89→29.4 mt).",
+    "rystad": "Authenticated. Read Edition 22 alert (Mar 26): 2,000 ships/20,000 seafarers locked in Hormuz, Thai tanker transited via Iran coordination, Ukraine struck Russian crude infrastructure (~1.9M bpd), 50,000+ US troops in Middle East.",
+    "spglobal": "Required MFA via Microsoft Authenticator - session needed manual approval."
+  },
+  "verification": {
+    "jsSyntax": "PASS",
+    "preWarLock": "PASS - all 9 countries unchanged",
+    "refiningMath": "PASS",
+    "currentLePreWar": "PASS",
+    "countriesCount": "9/9",
+    "fmCount": "24 (>=22)",
+    "shutdownsCount": "20 (>=19, +1 new)"
+  }
+}

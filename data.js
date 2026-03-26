@@ -1,12 +1,12 @@
 // ============================================================
 // data.js -- ADNOC Force Majeure & Geopolitical Monitor
 // Pre-populated monitoring data from verified intelligence
-// Last updated: 2026-03-24T12:00:00Z
-// Period: 28 February - 24 March 2026
+// Last updated: 2026-03-26T12:00:00Z
+// Period: 28 February - 26 March 2026
 // Context: Strait of Hormuz / Gulf military escalation
 // ============================================================
 
-const LAST_UPDATED = "2026-03-24T12:00:00Z";
+const LAST_UPDATED = "2026-03-26T12:00:00Z";
 
 // ---------- TABLE 1: Country Status Matrix ----------
 const COUNTRY_STATUS_DATA = [
@@ -16,7 +16,7 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1F6}\u{1F1E6}",
     status: "critical",
     statusLabel: "FM Declared",
-    summary: "QatarEnergy halted ALL LNG production after Iranian drone strikes. Mar 18 missile strikes destroyed 2 LNG trains + Pearl GTL (12.8 Mtpa knocked out for 3-5 years). ~20% of global LNG offline.",
+    summary: "QatarEnergy halted ALL LNG production after Iranian drone strikes. Mar 18 missile strikes destroyed 2 LNG trains + Pearl GTL (12.8 Mtpa knocked out for 3-5 years). ~20% of global LNG offline. FM extended to Italy, Belgium, South Korea, China on Mar 24.",
     metrics: {
       headline: "~20% of global LNG offline",
       productionOffline: "77 Mtpa LNG + all downstream",
@@ -30,10 +30,15 @@ const COUNTRY_STATUS_DATA = [
     },
     events: [
       {
+        date: "2026-03-24",
+        title: "QatarEnergy extends FM to Italy, Belgium, South Korea, China",
+        description: "QatarEnergy invoked force majeure on additional long-term LNG supply contracts with customers in Italy, Belgium, South Korea, and China. CEO Saad al-Kaabi confirmed restart impossible until conflict ends, then 2 weeks minimum for cryogenic equipment restart.",
+        isNew: true
+      },
+      {
         date: "2026-03-18",
         title: "Iranian missiles cause extensive damage at Ras Laffan",
-        description: "Additional Iranian missile attacks hit Ras Laffan. Pearl GTL Train 2 extensively damaged (~1 year repair). Two LNG trains damaged (3-5 year repair). QatarEnergy CEO confirms 12.8 Mtpa (17%) of capacity knocked out; $20B annual revenue loss.",
-        isNew: true
+        description: "Additional Iranian missile attacks hit Ras Laffan. Pearl GTL Train 2 extensively damaged (~1 year repair). Two LNG trains damaged (3-5 year repair). QatarEnergy CEO confirms 12.8 Mtpa (17%) of capacity knocked out; $20B annual revenue loss."
       },
       {
         date: "2026-03-11",
@@ -97,7 +102,9 @@ const COUNTRY_STATUS_DATA = [
       { id: 5, title: "Shell FM on Qatar LNG - Al Jazeera", url: "https://www.aljazeera.com/economy/2026/3/11/shell-declares-force-majeure-on-lng-contracts-from-qatar", date: "2026-03-11" },
       { id: 6, title: "TotalEnergies FM - OilPrice.com", url: "https://oilprice.com/Latest-Energy-News/World-News/Shell-and-TotalEnergies-Issue-Force-Majeure-After-Qatar-LNG-Shut-Down.html", date: "2026-03-11" },
       { id: 7, title: "Iran attacks cut 17% of Qatar LNG - Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/19/iran-attacks-cut-17-of-qatars-lng-capacity-for-up-to-5-years-qatarenergy", date: "2026-03-19" },
-      { id: 8, title: "QatarEnergy: $20B annual revenue loss - Kathmandu Post", url: "https://kathmandupost.com/world/2026/03/20/iran-attacks-wipe-out-17-of-qatar-s-lng-capacity-for-up-to-five-years-qatarenergy-ceo-says", date: "2026-03-20" }
+      { id: 8, title: "QatarEnergy: $20B annual revenue loss - Kathmandu Post", url: "https://kathmandupost.com/world/2026/03/20/iran-attacks-wipe-out-17-of-qatar-s-lng-capacity-for-up-to-five-years-qatarenergy-ceo-says", date: "2026-03-20" },
+      { id: 9, title: "QatarEnergy extends FM to Italy, Belgium, S. Korea, China - Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/qatarenergy-declares-force-majeure-on-some-lng-contracts", date: "2026-03-24" },
+      { id: 10, title: "Qatar LNG restart impossible until conflict ends - Yahoo/FT", url: "https://finance.yahoo.com/news/quickly-qatar-restart-world-largest-010000527.html", date: "2026-03-24" }
     ]
   },
   {
@@ -121,8 +128,7 @@ const COUNTRY_STATUS_DATA = [
       {
         date: "2026-03-19",
         title: "Iranian drones strike Mina Al-Ahmadi refinery",
-        description: "Two consecutive days of drone attacks on Kuwait's largest refinery (730,000 bpd). Fires across multiple units. Additional sections shut as precaution. Significant escalation from prior partial damage.",
-        isNew: true
+        description: "Two consecutive days of drone attacks on Kuwait's largest refinery (730,000 bpd). Fires across multiple units. Additional sections shut as precaution. KPC expects 3-4 months to restore full capacity post-war."
       },
       {
         date: "2026-03-09",
@@ -184,8 +190,7 @@ const COUNTRY_STATUS_DATA = [
       {
         date: "2026-03-13",
         title: "Ras Tanura refinery restarts operations",
-        description: "Ras Tanura refinery (550 kb/d) restarted after 11 days of shutdown following drone attack repair. Crude processing resumed. East-West Pipeline rerouting continues for eastern exports.",
-        isNew: true
+        description: "Ras Tanura refinery (550 kb/d) restarted after 11 days of shutdown following drone attack repair. Crude processing resumed. East-West Pipeline rerouting continues for eastern exports."
       },
       {
         date: "2026-03-09",
@@ -233,49 +238,54 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1E6}\u{1F1EA}",
     status: "critical",
     statusLabel: "Escalated",
-    isNew: true,
-    summary: "Habshan gas complex shut (Mar 19) + Shah Gas Field struck (Mar 16). Ruwais Refinery-2 (417 kb/d) shut. Fujairah terminal attacked 3 times. Das Island LNG fully shut. >50% crude offline.",
+    summary: "Habshan gas complex resumed Mar 23. Shah Gas Field still shut. Ruwais Refinery-2 (417 kb/d) shut. Fujairah crude loading suspended. Das Island LNG at minimal capacity. >50% crude offline. ADNOC CEO calls Hormuz weaponization 'economic terrorism'.",
     metrics: {
-      headline: "Habshan + Shah + Ruwais + Fujairah offline",
-      productionOffline: "2+ Bcf/d gas + 417 kb/d refining + 1M bpd exports",
+      headline: "Shah + Ruwais + Fujairah offline; Habshan resumed",
+      productionOffline: "1+ Bcf/d gas + 417 kb/d refining + 1M bpd exports",
       keyFigure: ">50% of UAE crude output offline"
     },
     production: {
       oil: { preWar: 3400, current: 1600, unit: "kb/d" },
-      gas: { preWar: 6.5, current: 4.5, unit: "Bcf/d" },
+      gas: { preWar: 6.5, current: 5.5, unit: "Bcf/d" },
       refining: { capacity: 1222, affected: 922, available: 300, unit: "kb/d" },
       lng: { preWar: 6.0, current: 0.0, unit: "Mtpa" }
     },
     events: [
       {
+        date: "2026-03-25",
+        title: "ADNOC CEO calls Hormuz weaponization 'economic terrorism'",
+        description: "ADNOC CEO Sultan Al Jaber at CERAWeek: 'We took hits no civilian enterprise should ever have to take.' Called weaponizing Hormuz 'economic terrorism'. ADNOC deploying extraordinary measures for customers.",
+        isNew: true
+      },
+      {
+        date: "2026-03-23",
+        title: "Habshan gas complex resumes operations",
+        description: "UAE restarted Habshan gas processing complex (6.1 Bcf/d capacity, ~60% of UAE domestic gas) after 4-day shutdown. Das Island LNG remains at minimal capacity due to Hormuz blockage. ADNOC Gas adjusting LNG production on transaction-by-transaction basis."
+      },
+      {
         date: "2026-03-19",
         title: "Habshan gas complex shut after missile intercepts",
-        description: "Habshan gas processing complex shut after missile interceptions hit ADNOC hub. One of world's largest gas processing facilities (6.1 Bcf/d capacity). Additional 1+ Bcf/d gas offline.",
-        isNew: true
+        description: "Habshan gas processing complex shut after missile interceptions hit ADNOC hub. One of world's largest gas processing facilities (6.1 Bcf/d capacity). Additional 1+ Bcf/d gas offline."
       },
       {
         date: "2026-03-17",
         title: "Fujairah terminal attacked 3rd time - ADNOC loading halted",
-        description: "Oil loading at Fujairah partly halted after third drone attack in four days. ADNOC crude loading at Fujairah suspended. Fujairah handles ~1M bpd of Murban crude (~1% of global demand).",
-        isNew: true
+        description: "Oil loading at Fujairah partly halted after third drone attack in four days. ADNOC crude loading at Fujairah suspended. Fujairah handles ~1M bpd of Murban crude (~1% of global demand)."
       },
       {
         date: "2026-03-16",
         title: "Shah Gas Field struck by Iranian drones",
-        description: "Drone strike sparked fire at ADNOC/Occidental Shah Gas Field in Empty Quarter. Operations suspended. Shah supplies ~1 Bcf/d (~20% of UAE gas supply) and 5% of world's granulated sulphur.",
-        isNew: true
+        description: "Drone strike sparked fire at ADNOC/Occidental Shah Gas Field in Empty Quarter. Operations suspended. Shah supplies ~1 Bcf/d (~20% of UAE gas supply) and 5% of world's granulated sulphur."
       },
       {
         date: "2026-03-16",
         title: "Fujairah oil hub targeted by drone attack",
-        description: "Drone attack caused large fire at Fujairah oil trading hub. ADNOC suspended crude loading operations. Fujairah is critical export terminal for UAE Murban crude.",
-        isNew: true
+        description: "Drone attack caused large fire at Fujairah oil trading hub. ADNOC suspended crude loading operations. Fujairah is critical export terminal for UAE Murban crude."
       },
       {
         date: "2026-03-14",
         title: "Fujairah oil loading suspended after drone intercept fire",
-        description: "Smoke rose in Fujairah oil zone from debris after drone interception. Some oil-loading operations suspended. Resumed briefly on 15 Mar before being halted again.",
-        isNew: true
+        description: "Smoke rose in Fujairah oil zone from debris after drone interception. Some oil-loading operations suspended. Resumed briefly on 15 Mar before being halted again."
       },
       {
         date: "2026-03-10",
@@ -300,8 +310,8 @@ const COUNTRY_STATUS_DATA = [
     ],
     oilGasImpact: {
       severity: "critical",
-      summary: "Habshan + Shah + Ruwais + Fujairah + Das Island offline",
-      details: "Gas production down 2.0 Bcf/d (6.5 → 4.5): Habshan ASR gas complex shut Mar 19 after missile intercepts (~1 Bcf/d offline), Shah Gas Field struck 16 Mar (~1 Bcf/d offline). LNG exports at zero — Das Island LNG/LPG (ADGAS, 5.8 Mtpa) fully shut, operations restricted. Ruwais Refinery-2 (417 kb/d) shut 10 Mar. Fujairah terminal attacked 3 times (14, 16, 17 Mar) — ADNOC crude loading halted (~1M bpd). All offshore production offline. >50% of UAE crude output disrupted. ADNOC CEO said 'We took hits no civilian enterprise should ever have to take.'"
+      summary: "Habshan resumed; Shah + Ruwais + Fujairah + Das Island still offline",
+      details: "Gas production down 1.0 Bcf/d (6.5 → 5.5): Habshan gas complex resumed Mar 23 after 4-day shutdown, restoring ~1 Bcf/d. Shah Gas Field still shut since 16 Mar (~1 Bcf/d offline). LNG exports near zero — Das Island LNG/LPG (ADGAS, 5.8 Mtpa) at minimal capacity due to Hormuz blockage. Ruwais Refinery-2 (417 kb/d) shut 10 Mar. Fujairah terminal attacked 3 times (14, 16, 17 Mar) — ADNOC crude loading halted (~1M bpd). All offshore production offline. >50% of UAE crude output disrupted. ADNOC CEO at CERAWeek Mar 25 called weaponizing Hormuz 'economic terrorism'."
     },
     infrastructure: [
       { name: "Shah Gas Field (ADNOC/Oxy)", type: "Sour Gas Processing", capacity: "~1 Bcf/d gas, 50k bpd condensate", status: "shutdown" },
@@ -315,7 +325,7 @@ const COUNTRY_STATUS_DATA = [
       { name: "Bu Hasa Field", type: "Onshore Oil", capacity: "~650,000 bpd", status: "operational" },
       { name: "Bab Field", type: "Onshore Oil/Gas", capacity: "~300,000 bpd", status: "operational" },
       { name: "Asab Field", type: "Onshore Oil/Gas", capacity: "~60,000 bpd", status: "operational" },
-      { name: "Habshan ASR Gas Complex", type: "Gas Processing", capacity: "~1.0 Bcf/d", status: "shutdown" },
+      { name: "Habshan ASR Gas Complex", type: "Gas Processing", capacity: "~1.0 Bcf/d", status: "operational" },
       { name: "Ruwais Refinery Complex", type: "Refinery", capacity: "922,000 bpd total", status: "partial" },
       { name: "Ruwais Refinery 2 (West)", type: "Refinery", capacity: "417,000 bpd", status: "shutdown" },
       { name: "Habshan Gas Processing", type: "Gas Processing", capacity: "~3.5 Bcf/d", status: "operational" },
@@ -337,7 +347,10 @@ const COUNTRY_STATUS_DATA = [
       { id: 8, title: "Fujairah/Shah attacks - Cyprus Mail", url: "https://cyprus-mail.com/2026/03/17/attacks-on-uaes-fujairah-port-shah-gas-field-add-to-energy-disruptions", date: "2026-03-17" },
       { id: 9, title: "ADNOC loading halted Fujairah - Yahoo", url: "https://www.yahoo.com/news/articles/oil-loading-operations-suspended-uaes-081836446.html", date: "2026-03-17" },
       { id: 10, title: "Habshan gas shut - PGJ Online", url: "https://pgjonline.com/news/2026/march/uae-shuts-major-gas-facilities-after-missile-intercepts-hit-adnoc-hub", date: "2026-03-19" },
-      { id: 11, title: "ADNOC extraordinary measures - Al Arabiya", url: "https://english.alarabiya.net/business/energy/2026/03/23/uae-s-adnoc-deploying-extraordinary-measures-to-ensure-stakeholders-get-needs-ceo", date: "2026-03-23" }
+      { id: 11, title: "ADNOC extraordinary measures - Al Arabiya", url: "https://english.alarabiya.net/business/energy/2026/03/23/uae-s-adnoc-deploying-extraordinary-measures-to-ensure-stakeholders-get-needs-ceo", date: "2026-03-23" },
+      { id: 12, title: "UAE restarts Habshan gas complex - Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-03-23/uae-restarts-main-gas-supply-plant-while-idling-most-lng-output", date: "2026-03-23" },
+      { id: 13, title: "ADNOC Gas adjusts LNG output - Arab News", url: "https://www.arabnews.com/node/2637337/business-economy", date: "2026-03-23" },
+      { id: 14, title: "ADNOC CEO calls Hormuz weaponization economic terrorism - Rigzone", url: "https://www.rigzone.com/news/adnoc_ceo_says_weaponizing_hormuz_is_economic_terrorism-25-mar-2026-183294-article/", date: "2026-03-25" }
     ]
   },
   {
@@ -346,23 +359,28 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1EE}\u{1F1F6}",
     status: "critical",
     statusLabel: "FM / Production Halt",
-    summary: "FM declared on all foreign-operated oilfields (Mar 20). Basra output at 900k bpd (from 3.3M). Majnoon struck by drones. Kurdistan halted. ~73% of Basra output offline.",
+    summary: "FM declared on all foreign-operated oilfields (Mar 20). Basra output further dropped to ~800k bpd as storage fills. BP ordered to cut Rumaila to 350k bpd (Mar 24). Kurdistan halted. ~76% of Basra output offline.",
     metrics: {
-      headline: "Basra output 73% down",
-      productionOffline: "Basra 900k from 3.3M bpd",
-      keyFigure: "FM on all foreign fields"
+      headline: "Basra output 76% down, storage critical",
+      productionOffline: "Basra ~800k from 3.3M bpd",
+      keyFigure: "FM on all foreign fields + further cuts"
     },
     production: {
-      oil: { preWar: 4300, current: 1200, unit: "kb/d" },
-      gas: { preWar: 3.0, current: 1.0, unit: "Bcf/d" },
+      oil: { preWar: 4300, current: 1000, unit: "kb/d" },
+      gas: { preWar: 3.0, current: 0.8, unit: "Bcf/d" },
       refining: { capacity: 900, affected: 500, available: 400, unit: "kb/d" }
     },
     events: [
       {
+        date: "2026-03-25",
+        title: "Iraq oil output further plunges as storage fills",
+        description: "Southern oilfield production dropped to ~800k bpd as storage reached critical levels. Basrah Oil Co ordered BP to cut North Rumaila to 350k bpd (from 450k) and Eni to cut Zubair by 70k bpd. Officials warned further cuts possible if Hormuz remains blocked.",
+        isNew: true
+      },
+      {
         date: "2026-03-20",
         title: "Iraq declares FM on all foreign-operated oilfields",
-        description: "Iraq Oil Ministry declares force majeure on all oilfields developed by foreign companies. Basra output at 900k bpd (down from 3.3M). SOMO unable to nominate tankers. No compensation to operators.",
-        isNew: true
+        description: "Iraq Oil Ministry declares force majeure on all oilfields developed by foreign companies. Basra output at 900k bpd (down from 3.3M). SOMO unable to nominate tankers. No compensation to operators."
       },
       {
         date: "2026-03-09",
@@ -382,8 +400,8 @@ const COUNTRY_STATUS_DATA = [
     ],
     oilGasImpact: {
       severity: "critical",
-      summary: "Basra output 73% down, FM declared on foreign fields",
-      details: "Iraq Oil Ministry declared FM on all foreign-operated oilfields on Mar 20. Basra output at 900k bpd (from 3.3M; 73% reduction). Rumaila shut. WQ2 cut. All Kurdistan production halted. Majnoon struck by drones 9-12 Mar. Basra Oil Terminal and KAAOT halted. Southern exports impossible - tankers cannot be nominated."
+      summary: "Basra output 76% down and falling, FM on foreign fields",
+      details: "Iraq Oil Ministry declared FM on all foreign-operated oilfields on Mar 20. Basra output dropped further to ~800k bpd (from 3.3M; 76% reduction) by Mar 25 as storage filled. BP ordered to cut North Rumaila to 350k bpd; Eni ordered to cut Zubair by 70k bpd. All Kurdistan production halted. Majnoon struck by drones 9-12 Mar. Basra Oil Terminal and KAAOT halted. Southern exports impossible - further cuts warned if Hormuz remains blocked."
     },
     infrastructure: [
       { name: "Rumaila Field", type: "Oil Field", capacity: "~1.4 mb/d", status: "shutdown" },
@@ -416,7 +434,9 @@ const COUNTRY_STATUS_DATA = [
       { id: 5, title: "Basra terminals halted - Arab News", url: "https://www.arabnews.com", date: "2026-03-12" },
       { id: 6, title: "Basra output at 900k bpd - BOE Report", url: "https://boereport.com/2026/03/20/iraq-oil-output-crashes-as-hormuz-blockade-bites/", date: "2026-03-20" },
       { id: 7, title: "Iraq FM on foreign fields - World Oil", url: "https://worldoil.com/news/2026/3/20/iraq-declares-force-majeure-on-foreign-oilfields-as-hormuz-disruption-halts-exports/", date: "2026-03-20" },
-      { id: 8, title: "Basra output down 73% - Iraq Business News", url: "https://www.iraq-businessnews.com/2026/03/21/basra-oil-output-crashes-73-percent/", date: "2026-03-21" }
+      { id: 8, title: "Basra output down 73% - Iraq Business News", url: "https://www.iraq-businessnews.com/2026/03/21/basra-oil-output-crashes-73-percent/", date: "2026-03-21" },
+      { id: 9, title: "Iraq oil output further plunges - BOE Report", url: "https://boereport.com/2026/03/25/iraq-oil-output-further-plunges-as-storage-fills-hormuz-exports-blocked-by-conflict/", date: "2026-03-25" },
+      { id: 10, title: "Iraq cuts Basra oil output by 70% - Anadolu Agency", url: "https://www.aa.com.tr/en/energy/oil/iraq-cuts-basra-oil-output-by-70-amid-regional-escalation/55719", date: "2026-03-25" }
     ]
   },
   {
@@ -596,6 +616,12 @@ const COUNTRY_STATUS_DATA = [
     },
     events: [
       {
+        date: "2026-03-25",
+        title: "Iran rejects ceasefire, lays out 5 conditions",
+        description: "Iran rejected Trump's ceasefire proposal and laid out 5 conditions including war reparations and recognition of Iranian sovereignty over Hormuz. IRGC threatened to target Gulf power plants and economic infrastructure if Iranian power plants are attacked. Oil prices fell ~15% to below $99/bbl on earlier pause hopes.",
+        isNew: true
+      },
+      {
         date: "2026-03-18",
         title: "Israeli strikes hit South Pars gas field",
         description: "Phases 3-6, 14, 17-18 struck at Asaluyeh. ~100 MMcm/d gas offline (~12% of total). Fajr Jam Complex fire."
@@ -657,7 +683,9 @@ const COUNTRY_STATUS_DATA = [
       { id: 3, title: "Iran oil facilities targeted - Al Jazeera", url: "https://www.aljazeera.com", date: "2026-03-08" },
       { id: 4, title: "30+ depots destroyed - Axios", url: "https://www.axios.com", date: "2026-03-08" },
       { id: 5, title: "Kharg Island raided - CNN", url: "https://www.cnn.com", date: "2026-03-13" },
-      { id: 6, title: "Bandar Abbas strikes - Geopolitics Unplugged", url: "https://geopoliticsunplugged.com", date: "2026-03-01" }
+      { id: 6, title: "Bandar Abbas strikes - Geopolitics Unplugged", url: "https://geopoliticsunplugged.com", date: "2026-03-01" },
+      { id: 7, title: "Iran rejects ceasefire, 5 conditions - NPR", url: "https://www.npr.org/2026/03/25/nx-s1-5760675/iran-war-military-deployment", date: "2026-03-25" },
+      { id: 8, title: "Iran rejects US ceasefire, demands Hormuz sovereignty - CNBC", url: "https://www.cnbc.com/2026/03/25/iran-war-us-trump.html", date: "2026-03-25" }
     ]
   }
 ];
@@ -672,7 +700,6 @@ const FM_DECLARATIONS_DATA = [
     date: "2026-03-20",
     status: "active",
     statusLabel: "Active",
-    isNew: true,
     summary: "FM on all oilfields developed by foreign companies. Basra output at 900k bpd (from 3.3M). Tanker nominations impossible.",
     details: {
       volumeAffected: "All foreign-operated oilfields; Basra output down to 900k bpd from 3.3M bpd",
@@ -694,11 +721,11 @@ const FM_DECLARATIONS_DATA = [
     date: "2026-03-04",
     status: "active",
     statusLabel: "Active",
-    summary: "FM on all LNG exports globally. All downstream (polymers, methanol, urea) also halted. ~20% of global LNG supply removed.",
+    summary: "FM on all LNG exports globally. Extended Mar 24 to Italy, Belgium, South Korea, China contracts. All downstream halted. ~20% of global LNG supply removed. Restart impossible until conflict ends.",
     details: {
-      volumeAffected: "~7 million tonnes/month (~20% global LNG supply); all downstream halted",
+      volumeAffected: "~7 million tonnes/month (~20% global LNG supply); all downstream halted. Mar 24: FM extended to Italy, Belgium, South Korea, China contracts.",
       commodity: "LNG, Polymers, Methanol, Urea, Aluminium",
-      duration: "Indefinite - all production halted since 2 Mar. Mar 18 missile strikes knocked out 12.8 Mtpa (17%) for 3-5 years.",
+      duration: "Indefinite - all production halted since 2 Mar. Mar 18 missile strikes knocked out 12.8 Mtpa (17%) for 3-5 years. CEO: no restart until conflict ends + 2 weeks minimum.",
       reason: "Iranian drone strikes on Ras Laffan and Mesaieed facilities; Strait of Hormuz blocked. Mar 18 follow-up missile attack destroyed 2 LNG trains and Pearl GTL Train 2.",
       financialImpact: "Brent surged to $104/bbl. Dutch/British gas prices surged ~50%. Asian LNG spot prices jumped ~39%. $20B annual revenue loss confirmed by QatarEnergy CEO."
     },
@@ -1176,21 +1203,42 @@ const FM_DECLARATIONS_DATA = [
 // ---------- TABLE 3: Shutdowns Without FM ----------
 const SHUTDOWNS_NO_FM_DATA = [
   {
+    id: "sd-020",
+    company: "Iraq (Rumaila/Zubair further cuts)",
+    country: "Iraq",
+    flag: "\u{1F1EE}\u{1F1F6}",
+    date: "2026-03-25",
+    status: "shutdown",
+    statusLabel: "Further Cuts",
+    isNew: true,
+    summary: "Basrah Oil Co ordered BP to cut North Rumaila to 350k bpd and Eni to cut Zubair by 70k bpd. Storage critically full. Southern output down to ~800k bpd.",
+    details: {
+      volumeAffected: "Additional ~170,000 bpd cuts ordered (Rumaila -100k, Zubair -70k). Total southern output ~800k bpd.",
+      commodity: "Crude Oil",
+      duration: "Since 24-25 Mar 2026, ongoing",
+      reason: "Storage depots at critical levels. Exports remain impossible via Hormuz. Basrah Oil Co issued official letters to BP and Eni requesting further cuts.",
+      financialImpact: "Iraq oil revenue almost entirely suspended. Officials warned further cuts possible."
+    },
+    sources: [
+      { id: 1, title: "Iraq oil output further plunges - BOE Report", url: "https://boereport.com/2026/03/25/iraq-oil-output-further-plunges-as-storage-fills-hormuz-exports-blocked-by-conflict/", date: "2026-03-25" },
+      { id: 2, title: "Iraq cuts Basra output by 70% - Anadolu Agency", url: "https://www.aa.com.tr/en/energy/oil/iraq-cuts-basra-oil-output-by-70-amid-regional-escalation/55719", date: "2026-03-25" }
+    ]
+  },
+  {
     id: "sd-019",
     company: "ADNOC (Habshan Gas Complex)",
     country: "UAE",
     flag: "\u{1F1E6}\u{1F1EA}",
     date: "2026-03-19",
-    status: "shutdown",
-    statusLabel: "Shutdown",
-    isNew: true,
-    summary: "Habshan gas processing complex shut after missile intercepts. One of world's largest gas facilities.",
+    status: "restarted",
+    statusLabel: "Restarted",
+    summary: "Habshan gas processing complex shut Mar 19, resumed operations Mar 23. 4-day outage. ~60% of UAE domestic gas.",
     details: {
-      volumeAffected: "~1+ Bcf/d gas processing capacity",
+      volumeAffected: "~1+ Bcf/d gas processing capacity (restored Mar 23)",
       commodity: "Natural Gas",
-      duration: "Since 19 Mar 2026, ongoing",
-      reason: "Missile intercepts hit ADNOC Habshan hub. Complex shut as precaution.",
-      financialImpact: "Additional UAE gas supply disruption on top of Shah Field shutdown."
+      duration: "19 Mar - 23 Mar 2026 (restarted)",
+      reason: "Missile intercepts hit ADNOC Habshan hub. Complex shut as precaution. Resumed after 4 days.",
+      financialImpact: "Temporary disruption resolved. UAE domestic gas supply restored via Habshan restart."
     },
     sources: [
       { id: 1, title: "UAE shuts gas facilities - PGJ Online", url: "https://pgjonline.com/news/2026/march/uae-shuts-major-gas-facilities-after-missile-intercepts-hit-adnoc-hub", date: "2026-03-19" }
@@ -1204,7 +1252,6 @@ const SHUTDOWNS_NO_FM_DATA = [
     date: "2026-03-19",
     status: "shutdown",
     statusLabel: "Struck",
-    isNew: true,
     summary: "Mina Al-Ahmadi refinery (730k bpd) hit by drones for 2 consecutive days. Fires across multiple units.",
     details: {
       volumeAffected: "730,000 bpd (Kuwait's largest refinery)",
@@ -1226,7 +1273,6 @@ const SHUTDOWNS_NO_FM_DATA = [
     date: "2026-03-16",
     status: "shutdown",
     statusLabel: "Shutdown",
-    isNew: true,
     summary: "Drone strike sparked fire at Shah Gas Field. Operations suspended. ~1 Bcf/d gas (20% of UAE gas supply) and 5% of world sulphur offline.",
     details: {
       volumeAffected: "~1 Bcf/d gas, ~50,000 bpd condensate, 5% of global granulated sulphur",
@@ -1249,7 +1295,6 @@ const SHUTDOWNS_NO_FM_DATA = [
     date: "2026-03-16",
     status: "shutdown",
     statusLabel: "Shutdown",
-    isNew: true,
     summary: "ADNOC suspended crude loading at Fujairah after repeated drone attacks. ~1M bpd Murban crude export capacity halted.",
     details: {
       volumeAffected: "~1 million bpd Murban crude loading (~1% of global demand)",
@@ -1578,3 +1623,57 @@ const SHUTDOWNS_NO_FM_DATA = [
     ]
   }
 ];
+
+// ============================================================
+// SPR Release Data — IEA Coordinated Action, March 2026
+// Sources: IEA, US DOE, Bloomberg, Al Jazeera
+// ============================================================
+
+const SPR_RELEASE_DATA = {
+  announced: "2026-03-11",
+  asOf: "2026-03-25",
+  trigger: "Strait of Hormuz disruption / Iran conflict — ~20% of global oil supply at risk",
+  totalCommitted: 426.0,
+  totalCrude: 301,
+  totalProducts: 125,
+  totalReleased: 25.0,
+  releasePeriodDays: 120,
+  sources: [
+    { title: "IEA confirms member country contributions", url: "https://www.iea.org/news/iea-confirms-member-country-contributions-to-collective-action-to-release-oil-stocks-in-response-to-middle-east-disruptions", date: "2026-03-19" },
+    { title: "IEA collective action decision", url: "https://www.iea.org/news/update-on-iea-collective-action-decision-of-11-march-2026", date: "2026-03-15" },
+    { title: "US DOE SPR release announcement", url: "https://www.energy.gov/articles/united-states-release-172-million-barrels-oil-strategic-petroleum-reserve", date: "2026-03-11" },
+    { title: "IEA 400m barrels release — Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/11/iea-proposes-release-of-400m-barrels-of-oil-from-strategic-reserves", date: "2026-03-11" },
+  ],
+  countries: [
+    { country: "United States",   flag: "🇺🇸", committed: 172.2, crude: 172.2, products: 0,    startDate: "2026-03-20", released: 7.0,  region: "Americas" },
+    { country: "Japan",           flag: "🇯🇵", committed: 79.8,  crude: 54.0,  products: 25.8, startDate: "2026-03-16", released: 8.0,  region: "Asia-Oceania" },
+    { country: "Canada",          flag: "🇨🇦", committed: 23.6,  crude: 23.6,  products: 0,    startDate: "2026-03-24", released: 0.5,  region: "Americas" },
+    { country: "South Korea",     flag: "🇰🇷", committed: 22.5,  crude: 22.5,  products: 0,    startDate: "2026-03-16", released: 5.0,  region: "Asia-Oceania" },
+    { country: "Germany",         flag: "🇩🇪", committed: 19.5,  crude: 0,     products: 19.5, startDate: "2026-03-28", released: 0,    region: "Europe" },
+    { country: "France",          flag: "🇫🇷", committed: 14.6,  crude: 0,     products: 14.6, startDate: "2026-03-28", released: 0,    region: "Europe" },
+    { country: "United Kingdom",  flag: "🇬🇧", committed: 14.0,  crude: 4.3,   products: 9.7,  startDate: "2026-03-28", released: 0,    region: "Europe" },
+    { country: "Türkiye",         flag: "🇹🇷", committed: 11.7,  crude: 3.6,   products: 8.1,  startDate: "2026-03-28", released: 0,    region: "Europe" },
+    { country: "Spain",           flag: "🇪🇸", committed: 11.6,  crude: 0,     products: 11.6, startDate: "2026-03-16", released: 2.0,  region: "Europe" },
+    { country: "Italy",           flag: "🇮🇹", committed: 10.0,  crude: 0,     products: 10.0, startDate: "2026-03-28", released: 0,    region: "Europe" },
+    { country: "Poland",          flag: "🇵🇱", committed: 7.5,   crude: 6.0,   products: 1.5,  startDate: "2026-03-28", released: 0,    region: "Europe" },
+    { country: "Hungary",         flag: "🇭🇺", committed: 6.1,   crude: 0,     products: 6.1,  startDate: "2026-03-28", released: 0,    region: "Europe" },
+    { country: "Netherlands",     flag: "🇳🇱", committed: 5.4,   crude: 0,     products: 5.4,  startDate: "2026-03-28", released: 0,    region: "Europe" },
+    { country: "Australia",       flag: "🇦🇺", committed: 4.8,   crude: 0,     products: 4.8,  startDate: "2026-03-16", released: 1.5,  region: "Asia-Oceania" },
+    { country: "Mexico",          flag: "🇲🇽", committed: 3.9,   crude: 3.9,   products: 0,    startDate: "2026-03-28", released: 0,    region: "Americas" },
+    { country: "Austria",         flag: "🇦🇹", committed: 2.4,   crude: 2.4,   products: 0,    startDate: "2026-03-28", released: 0,    region: "Europe" },
+    { country: "Czech Republic",  flag: "🇨🇿", committed: 2.2,   crude: 2.2,   products: 0,    startDate: "2026-03-28", released: 0,    region: "Europe" },
+    { country: "Sweden",          flag: "🇸🇪", committed: 2.1,   crude: 0,     products: 2.1,  startDate: "2026-03-28", released: 0,    region: "Europe" },
+    { country: "Greece",          flag: "🇬🇷", committed: 2.0,   crude: 0,     products: 2.0,  startDate: "2026-03-28", released: 0,    region: "Europe" },
+    { country: "Portugal",        flag: "🇵🇹", committed: 2.0,   crude: 0,     products: 2.0,  startDate: "2026-03-28", released: 0,    region: "Europe" },
+    { country: "Finland",         flag: "🇫🇮", committed: 1.8,   crude: 0,     products: 1.8,  startDate: "2026-03-28", released: 0,    region: "Europe" },
+    { country: "Ireland",         flag: "🇮🇪", committed: 1.7,   crude: 0.2,   products: 1.5,  startDate: "2026-03-28", released: 0,    region: "Europe" },
+    { country: "New Zealand",     flag: "🇳🇿", committed: 1.6,   crude: 1.3,   products: 0.3,  startDate: "2026-03-16", released: 0,    region: "Asia-Oceania" },
+    { country: "Denmark",         flag: "🇩🇰", committed: 1.2,   crude: 0,     products: 1.2,  startDate: "2026-03-28", released: 0,    region: "Europe" },
+    { country: "Lithuania",       flag: "🇱🇹", committed: 0.6,   crude: 0,     products: 0.6,  startDate: "2026-03-28", released: 0,    region: "Europe" },
+    { country: "Norway",          flag: "🇳🇴", committed: 0.4,   crude: 0,     products: 0.4,  startDate: "2026-03-28", released: 0,    region: "Europe" },
+    { country: "Latvia",          flag: "🇱🇻", committed: 0.3,   crude: 0,     products: 0.3,  startDate: "2026-03-28", released: 0,    region: "Europe" },
+    { country: "Belgium",         flag: "🇧🇪", committed: 0.3,   crude: 0,     products: 0.3,  startDate: "2026-03-28", released: 0,    region: "Europe" },
+    { country: "Estonia",         flag: "🇪🇪", committed: 0.3,   crude: 0,     products: 0.3,  startDate: "2026-03-28", released: 0,    region: "Europe" },
+    { country: "Luxembourg",      flag: "🇱🇺", committed: 0.1,   crude: 0.1,   products: 0,    startDate: "2026-03-28", released: 0,    region: "Europe" },
+  ]
+};
