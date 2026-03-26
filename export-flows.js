@@ -377,7 +377,10 @@
           </div>
           <div class="text-3xl sm:text-4xl font-extrabold text-navy-900">${fmtNum(kpis.currRate)}</div>
           <div class="text-xs text-navy-400 mt-0.5">${getRateUnit()}</div>
-          <div class="mt-2"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-sm font-semibold ${pctBg}">${pctArrow} ${fmtPct(kpis.pctChange)} vs prior ${state.view === 'daily' ? 'day' : state.view === 'weekly' ? 'week' : 'month'}</span></div>
+          <div class="mt-2">${kpis.lastIsPartial
+            ? '<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-sm font-medium bg-navy-100 text-navy-500">Partial ' + (state.view === 'daily' ? 'day' : state.view === 'weekly' ? 'week' : 'month') + ' (' + kpis.currDays + ' days)</span>'
+            : '<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-sm font-semibold ' + pctBg + '">' + pctArrow + ' ' + fmtPct(kpis.pctChange) + ' vs prior ' + (state.view === 'daily' ? 'day' : state.view === 'weekly' ? 'week' : 'month') + '</span>'
+          }</div>
         </div>
         <div class="stat-card bg-white rounded-xl p-3 sm:p-5 border border-navy-200 border-l-4 border-l-amber-400">
           <div class="flex items-center gap-2 mb-2">
@@ -407,43 +410,62 @@
     const exporterLabel = getExporterLabel();
     const commodity = state.commodity.toUpperCase();
 
+    // Build period labels
+    const currRec = base[lastIdx];
+    const prevRec = base[prevIdx];
+    let currPeriodStr = '', prevPeriodStr = '';
+    if (state.view === 'monthly') {
+      currPeriodStr = new Date(currRec.p + '-01').toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+      prevPeriodStr = new Date(prevRec.p + '-01').toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+    } else if (state.view === 'weekly') {
+      currPeriodStr = currRec.p.replace(/^\d+-/, '') + ' (' + new Date(currRec.s).toLocaleDateString('en-GB', { day: '2-digit', month: 'short' }) + ' – ' + new Date(currRec.e).toLocaleDateString('en-GB', { day: '2-digit', month: 'short' }) + ')';
+      prevPeriodStr = prevRec.p.replace(/^\d+-/, '');
+    } else {
+      currPeriodStr = new Date(currRec.s).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+      prevPeriodStr = new Date(prevRec.s).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+    }
+
     const currVal = toRate(totals[lastIdx], lastDays);
     const prevVal = toRate(totals[prevIdx], prevDays);
-    const changePct = prevVal > 0 ? ((currVal - prevVal) / prevVal * 100) : 0;
+    const isPartial = kpis.lastIsPartial;
 
-    // 1. Headline
-    const direction = changePct >= 0 ? 'increased' : 'decreased';
-    insights.push(`${exporterLabel}'s ${commodity} exports ${direction} ${Math.abs(changePct).toFixed(1)}% to ${currVal.toFixed(1)} ${unit}, ${changePct >= 0 ? 'up' : 'down'} from ${prevVal.toFixed(1)} ${unit} in the prior ${viewLabel}. ${Math.abs(changePct) > 10 ? 'This is a material change that may affect downstream supply commitments.' : 'Export volumes remain broadly stable.'}`);
+    // 1. Headline with explicit period
+    if (isPartial) {
+      insights.push(`${exporterLabel}'s ${commodity} exports averaged ${currVal.toFixed(1)} ${unit} in ${currPeriodStr} (partial ${viewLabel}, ${lastDays} of ${state.view === 'monthly' ? '~30' : '7'} days recorded). Direct comparison with the prior full ${viewLabel} (${prevPeriodStr}: ${prevVal.toFixed(1)} ${unit}) is not meaningful due to incomplete data. The Strait of Hormuz disruption has curtailed ~90% of transit flows since early March, severely impacting Gulf exporters (Kpler, S&P Global).`);
+    } else {
+      const changePct = prevVal > 0 ? ((currVal - prevVal) / prevVal * 100) : 0;
+      const direction = changePct >= 0 ? 'increased' : 'decreased';
+      insights.push(`${exporterLabel}'s ${commodity} exports ${direction} ${Math.abs(changePct).toFixed(1)}% to ${currVal.toFixed(1)} ${unit} in ${currPeriodStr}, compared with ${prevVal.toFixed(1)} ${unit} in ${prevPeriodStr}. ${Math.abs(changePct) > 10 ? 'This material shift reflects the Hormuz closure, which has reduced Strait transit from ~20 mb/d to near-zero since early March (Kpler).' : 'Export volumes remain broadly stable despite Hormuz disruptions, with buyers drawing on strategic reserves and alternative routes.'} Source: Kpler vessel-tracking data.`);
+    }
 
-    // 2. Destination concentration and key movers
+    // 2. Destination concentration
     if (topDestinations && topDestinations.length >= 2) {
       const top3 = topDestinations.slice(0, 3);
       const top3Vals = top3.map(c => ({
         name: c,
         curr: toRate(countrySeriesData[c][lastIdx] || 0, lastDays),
-        prev: toRate(countrySeriesData[c][prevIdx] || 0, prevDays),
       }));
       const top3Share = currVal > 0 ? (top3Vals.reduce((s, v) => s + v.curr, 0) / currVal * 100).toFixed(0) : 0;
-      const movers = top3Vals.map(v => {
-        const pct = v.prev > 0 ? ((v.curr - v.prev) / v.prev * 100) : 0;
-        return `${v.name} ${pct >= 0 ? '+' : ''}${pct.toFixed(0)}%`;
-      }).join(', ');
-      insights.push(`The top three destinations — ${top3.join(', ')} — receive ${top3Share}% of exports. Period-over-period changes: ${movers}.`);
+      const top3Detail = top3Vals.map(v => v.name + ': ' + v.curr.toFixed(1) + ' ' + unit).join('; ');
+
+      insights.push(`Top three destinations in ${currPeriodStr}: ${top3Detail} — representing ${top3Share}% of total exports. Asian buyers (China, India, Japan, S. Korea) account for the bulk of Gulf crude demand, with China holding ~1.39 billion bbl in strategic reserves providing ~120 days of import cover (Kpler, Rystad Energy).`);
     }
 
-    // 3. Biggest mix shift
-    let maxShift = { country: '', shift: 0, from: 0, to: 0 };
-    for (const c of (topDestinations || []).slice(0, 5)) {
-      const currShare = currVal > 0 ? (toRate(countrySeriesData[c][lastIdx] || 0, lastDays) / currVal * 100) : 0;
-      const prevShare = prevVal > 0 ? (toRate(countrySeriesData[c][prevIdx] || 0, prevDays) / prevVal * 100) : 0;
-      const shift = currShare - prevShare;
-      if (Math.abs(shift) > Math.abs(maxShift.shift)) {
-        maxShift = { country: c, shift, from: prevShare, to: currShare };
+    // 3. Mix shift
+    if (!isPartial) {
+      let maxShift = { country: '', shift: 0, from: 0, to: 0 };
+      for (const c of (topDestinations || []).slice(0, 5)) {
+        const currShare = currVal > 0 ? (toRate(countrySeriesData[c][lastIdx] || 0, lastDays) / currVal * 100) : 0;
+        const prevShare = prevVal > 0 ? (toRate(countrySeriesData[c][prevIdx] || 0, prevDays) / prevVal * 100) : 0;
+        const shift = currShare - prevShare;
+        if (Math.abs(shift) > Math.abs(maxShift.shift)) {
+          maxShift = { country: c, shift, from: prevShare, to: currShare };
+        }
       }
-    }
-    if (Math.abs(maxShift.shift) >= 3) {
-      const shiftDir = maxShift.shift > 0 ? 'gained' : 'lost';
-      insights.push(`Notable mix change: ${maxShift.country} ${shiftDir} ${Math.abs(maxShift.shift).toFixed(1)} percentage points of export share (${maxShift.from.toFixed(1)}% → ${maxShift.to.toFixed(1)}%), indicating a potential shift in trade flow priorities.`);
+      if (Math.abs(maxShift.shift) >= 3) {
+        const shiftDir = maxShift.shift > 0 ? 'gained' : 'lost';
+        insights.push(`Destination mix shift: ${maxShift.country} ${shiftDir} ${Math.abs(maxShift.shift).toFixed(1)}pp of export share (${maxShift.from.toFixed(1)}% in ${prevPeriodStr} to ${maxShift.to.toFixed(1)}% in ${currPeriodStr}). This reflects the broader trade-flow reshuffling as Gulf barrels compete with discounted Russian and Latin American supply for Asian market share (Rystad Energy, S&P Global).`);
+      }
     }
 
     return insights;

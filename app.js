@@ -173,7 +173,7 @@ function renderProductionTable(title, unit, rows, type) {
       <td class="px-2 py-1.5 sm:px-3 sm:py-2 text-sm text-right tabular-nums text-navy-900 font-medium">${formatNum(a)}</td>
       <td class="px-2 py-1.5 sm:px-3 sm:py-2 text-sm text-right tabular-nums ${isCapacity ? 'text-red-600' : ''} font-medium">${formatNum(b)}</td>
       <td class="px-2 py-1.5 sm:px-3 sm:py-2 text-sm text-right tabular-nums ${changeClass}">${changeStr}</td>
-      <td class="px-2 py-1.5 sm:px-3 sm:py-2 text-xs text-navy-500 max-w-[180px] truncate hidden sm:table-cell" title="${r.notes || ''}">${r.notes || ''}</td>
+      <td class="px-2 py-1.5 sm:px-3 sm:py-2 text-xs text-navy-500 hidden sm:table-cell">${r.notes || ''}</td>
     </tr>`;
   }).join('');
 
@@ -221,7 +221,7 @@ function renderExecSummary() {
     'Qatar': 'Ras Laffan offline; all downstream halted',
     'Kuwait': 'KPC FM declared; tankers blocked',
     'Saudi Arabia': 'Offshore fields shut; rerouting to Yanbu',
-    'UAE': 'Offshore offline; Fujairah halted',
+    'United Arab Emirates': 'Offshore offline; Fujairah suspended; >50% crude shut-in',
     'Iraq': 'Basra 3.3M→900k; FM on foreign fields',
     'Bahrain': 'Abu Safa shut; Sitra FM declared',
     'Oman': 'Outside Hormuz; production intact',
@@ -232,12 +232,18 @@ function renderExecSummary() {
     'Saudi Arabia': 'Ras Tanura shut then reopened',
     'Iran': 'Tehran Refinery destroyed; BA curtailed',
     'Kuwait': 'Ahmadi + Abdullah hit by drones',
-    'UAE': 'Ruwais full complex shut',
+    'United Arab Emirates': 'Ruwais-2 shut (417 kb/d); 300 kb/d available',
     'Bahrain': 'Sitra FM; fully offline',
     'Iraq': 'No strikes; domestic runs only',
     'Israel': 'Haifa damaged but mostly online',
     'Qatar': 'Laffan 1+2 offline with Ras Laffan',
     'Oman': 'Outside Hormuz; operational'
+  };
+  const lngNotes = {
+    'Qatar': 'Ras Laffan LNG fully offline; 77 Mtpa halted',
+    'United Arab Emirates': 'Das Island LNG at minimal capacity; Hormuz blocked',
+    'Oman': 'Outside Hormuz; LNG operational',
+    'Iran': 'South Pars disrupted; LNG minimal',
   };
 
   COUNTRY_STATUS_DATA.forEach(c => {
@@ -253,7 +259,7 @@ function renderExecSummary() {
       refiningData.push({ country: c.country, flag: c.flag, capacity: p.refining.capacity, affected: p.refining.affected, available: p.refining.available, notes: refNotes[c.country] || '' });
     }
     if (p.lng && p.lng.preWar > 0) {
-      lngData.push({ country: c.country, flag: c.flag, preWar: p.lng.preWar, current: p.lng.current, notes: '' });
+      lngData.push({ country: c.country, flag: c.flag, preWar: p.lng.preWar, current: p.lng.current, notes: lngNotes[c.country] || '' });
     }
   });
 
@@ -636,6 +642,247 @@ function renderShutdowns() {
   }).join('');
 }
 
+// ---------- Market News / SPR ----------
+
+let sprChart = null;
+
+function renderMarketNews() {
+  const container = document.getElementById('market-news-content');
+  if (!container || typeof SPR_RELEASE_DATA === 'undefined') return;
+
+  const d = SPR_RELEASE_DATA;
+  const pctReleased = ((d.totalReleased / d.totalCommitted) * 100).toFixed(1);
+  const daysSinceAnnouncement = Math.floor((new Date(d.asOf) - new Date(d.announced)) / 86400000);
+
+  // Regional aggregation
+  const regions = {};
+  d.countries.forEach(c => {
+    if (!regions[c.region]) regions[c.region] = { committed: 0, released: 0 };
+    regions[c.region].committed += c.committed;
+    regions[c.region].released += c.released;
+  });
+
+  // Top 10 by commitment
+  const top10 = d.countries.slice(0, 10);
+
+  // Sources HTML
+  const sourcesHtml = d.sources.map(s =>
+    `<a href="${s.url}" target="_blank" class="text-sky-600 hover:underline text-sm">${s.title}</a> <span class="text-navy-400 text-xs">(${new Date(s.date).toLocaleDateString('en-GB', { day: '2-digit', month: 'short' })})</span>`
+  ).join(' &middot; ');
+
+  container.innerHTML = `
+    <div class="flow-fade-in">
+      <div class="mb-5">
+        <h2 class="text-lg font-bold text-navy-900 flex items-center gap-2">
+          <svg class="w-5 h-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6V7.5z" />
+          </svg>
+          SPR Status — IEA Emergency Release
+        </h2>
+        <p class="text-sm text-navy-500 mt-0.5">Coordinated release of strategic petroleum reserves by 30 IEA member countries | Announced ${new Date(d.announced).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</p>
+      </div>
+
+      <!-- Summary Cards -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        <div class="bg-white rounded-xl p-4 border border-navy-200 shadow-sm">
+          <div class="text-xs font-semibold text-navy-500 uppercase tracking-wider mb-1">Total Committed</div>
+          <div class="text-3xl font-extrabold text-navy-900">${d.totalCommitted}</div>
+          <div class="text-sm text-navy-400">million barrels</div>
+        </div>
+        <div class="bg-white rounded-xl p-4 border border-navy-200 shadow-sm">
+          <div class="text-xs font-semibold text-navy-500 uppercase tracking-wider mb-1">Released So Far</div>
+          <div class="text-3xl font-extrabold text-emerald-600">~${d.totalReleased}</div>
+          <div class="text-sm text-navy-400">million barrels (${pctReleased}%)</div>
+        </div>
+        <div class="bg-white rounded-xl p-4 border border-navy-200 shadow-sm">
+          <div class="text-xs font-semibold text-navy-500 uppercase tracking-wider mb-1">Crude / Products</div>
+          <div class="text-3xl font-extrabold text-sky-600">${d.totalCrude}</div>
+          <div class="text-sm text-navy-400">mb crude + ${d.totalProducts} mb products</div>
+        </div>
+        <div class="bg-white rounded-xl p-4 border border-navy-200 shadow-sm">
+          <div class="text-xs font-semibold text-navy-500 uppercase tracking-wider mb-1">Release Window</div>
+          <div class="text-3xl font-extrabold text-amber-600">${d.releasePeriodDays}</div>
+          <div class="text-sm text-navy-400">days (Day ${daysSinceAnnouncement} of ${d.releasePeriodDays})</div>
+        </div>
+      </div>
+
+      <!-- Overall Progress Bar -->
+      <div class="bg-white rounded-xl p-5 border border-navy-200 shadow-sm mb-6">
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-sm font-semibold text-navy-700">Overall Release Progress</span>
+          <span class="text-sm font-bold text-navy-900">${d.totalReleased} / ${d.totalCommitted} mb (${pctReleased}%)</span>
+        </div>
+        <div class="w-full bg-navy-100 rounded-full h-4 overflow-hidden">
+          <div class="bg-gradient-to-r from-sky-500 to-emerald-500 h-4 rounded-full transition-all" style="width: ${pctReleased}%"></div>
+        </div>
+        <p class="text-xs text-navy-400 mt-2">${d.trigger}</p>
+      </div>
+
+      <!-- Regional Breakdown -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        ${Object.entries(regions).map(([region, data]) => {
+          const pct = data.committed > 0 ? ((data.released / data.committed) * 100).toFixed(1) : '0.0';
+          return `
+          <div class="bg-white rounded-xl p-4 border border-navy-200 shadow-sm">
+            <div class="text-sm font-semibold text-navy-700 mb-2">${region}</div>
+            <div class="flex items-end justify-between mb-1">
+              <span class="text-2xl font-extrabold text-navy-900">${data.committed.toFixed(1)}</span>
+              <span class="text-sm text-emerald-600 font-semibold">${data.released.toFixed(1)} mb released</span>
+            </div>
+            <div class="text-xs text-navy-400 mb-2">million barrels committed</div>
+            <div class="w-full bg-navy-100 rounded-full h-2">
+              <div class="bg-sky-500 h-2 rounded-full" style="width: ${pct}%"></div>
+            </div>
+            <div class="text-xs text-navy-400 mt-1">${pct}% released</div>
+          </div>`;
+        }).join('')}
+      </div>
+
+      <!-- Chart: Top 10 Countries -->
+      <div class="bg-white rounded-xl border border-navy-200 shadow-sm p-5 mb-6">
+        <h3 class="text-lg font-bold text-navy-800 mb-1">Top 10 Countries — Committed vs Released</h3>
+        <p class="text-sm text-navy-400 mb-4">Million barrels (mb)</p>
+        <div style="height: 400px;">
+          <canvas id="spr-chart"></canvas>
+        </div>
+      </div>
+
+      <!-- Full Country Table -->
+      <div class="bg-white rounded-xl border border-navy-200 shadow-sm overflow-hidden mb-6">
+        <div class="h-1 bg-gradient-to-r from-sky-400 via-amber-400 to-sky-400"></div>
+        <div class="px-5 py-4 border-b border-navy-200">
+          <h3 class="text-lg font-bold text-navy-800">All IEA Member Contributions</h3>
+          <p class="text-sm text-navy-400 mt-0.5">30 countries | Data as of ${new Date(d.asOf).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</p>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="w-full text-left">
+            <thead class="bg-navy-50 text-navy-600 text-xs uppercase tracking-wider">
+              <tr>
+                <th class="px-4 py-3 font-semibold w-10">#</th>
+                <th class="px-4 py-3 font-semibold">Country</th>
+                <th class="px-4 py-3 font-semibold text-right">Committed (mb)</th>
+                <th class="px-4 py-3 font-semibold text-right">Crude (mb)</th>
+                <th class="px-4 py-3 font-semibold text-right hidden sm:table-cell">Products (mb)</th>
+                <th class="px-4 py-3 font-semibold text-right">Released (mb)</th>
+                <th class="px-4 py-3 font-semibold text-right">Progress</th>
+                <th class="px-4 py-3 font-semibold hidden md:table-cell">Release Start</th>
+                <th class="px-4 py-3 font-semibold hidden lg:table-cell">Region</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-navy-100">
+              ${d.countries.map((c, i) => {
+                const pct = c.committed > 0 ? ((c.released / c.committed) * 100).toFixed(1) : '0.0';
+                const startLabel = new Date(c.startDate).toLocaleDateString('en-GB', { day: '2-digit', month: 'short' });
+                const started = new Date(c.startDate) <= new Date(d.asOf);
+                const statusColor = started && c.released > 0 ? 'text-emerald-600' : started ? 'text-amber-600' : 'text-navy-400';
+                return `
+                <tr class="${i % 2 === 1 ? 'bg-navy-50/30' : ''} hover:bg-sky-50/50 transition-colors">
+                  <td class="px-4 py-3 text-center">
+                    <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-navy-100 text-xs font-bold text-navy-600">${i + 1}</span>
+                  </td>
+                  <td class="px-4 py-3">
+                    <span class="text-sm font-medium text-navy-800">${c.country}</span>
+                  </td>
+                  <td class="px-4 py-3 text-right text-sm font-semibold tabular-nums text-navy-900">${c.committed.toFixed(1)}</td>
+                  <td class="px-4 py-3 text-right text-sm tabular-nums text-navy-700">${c.crude > 0 ? c.crude.toFixed(1) : '—'}</td>
+                  <td class="px-4 py-3 text-right text-sm tabular-nums text-navy-700 hidden sm:table-cell">${c.products > 0 ? c.products.toFixed(1) : '—'}</td>
+                  <td class="px-4 py-3 text-right text-sm font-semibold tabular-nums ${statusColor}">${c.released > 0 ? c.released.toFixed(1) : '—'}</td>
+                  <td class="px-4 py-3 text-right">
+                    <div class="flex items-center justify-end gap-2">
+                      <div class="w-16 bg-navy-100 rounded-full h-2">
+                        <div class="bg-sky-500 h-2 rounded-full" style="width: ${Math.min(parseFloat(pct), 100)}%"></div>
+                      </div>
+                      <span class="text-xs font-medium text-navy-600 w-10 text-right">${pct}%</span>
+                    </div>
+                  </td>
+                  <td class="px-4 py-3 text-sm text-navy-600 hidden md:table-cell">${startLabel}</td>
+                  <td class="px-4 py-3 text-xs text-navy-500 hidden lg:table-cell">${c.region}</td>
+                </tr>`;
+              }).join('')}
+              <tr class="bg-navy-100/70 border-t-2 border-navy-300 font-bold">
+                <td class="px-4 py-3"></td>
+                <td class="px-4 py-3 text-sm text-navy-900">Total (30 countries)</td>
+                <td class="px-4 py-3 text-right text-sm tabular-nums text-navy-900">${d.totalCommitted.toFixed(1)}</td>
+                <td class="px-4 py-3 text-right text-sm tabular-nums text-navy-900">${d.totalCrude.toFixed(1)}</td>
+                <td class="px-4 py-3 text-right text-sm tabular-nums text-navy-900 hidden sm:table-cell">${d.totalProducts.toFixed(1)}</td>
+                <td class="px-4 py-3 text-right text-sm tabular-nums text-emerald-700">${d.totalReleased.toFixed(1)}</td>
+                <td class="px-4 py-3 text-right text-sm text-navy-900">${pctReleased}%</td>
+                <td class="px-4 py-3 hidden md:table-cell"></td>
+                <td class="px-4 py-3 hidden lg:table-cell"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Sources -->
+      <div class="text-xs text-navy-400 mb-4">
+        <span class="font-semibold">Sources:</span> ${sourcesHtml}
+      </div>
+    </div>
+  `;
+
+  // Draw chart
+  const ctx = document.getElementById('spr-chart');
+  if (ctx) {
+    if (sprChart) { try { sprChart.destroy(); } catch(e) {} }
+    sprChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: top10.map(c => c.country),
+        datasets: [
+          {
+            label: 'Committed (mb)',
+            data: top10.map(c => c.committed),
+            backgroundColor: 'rgba(14,165,233,0.3)',
+            borderColor: '#0ea5e9',
+            borderWidth: 1,
+            borderRadius: 6,
+          },
+          {
+            label: 'Released (mb)',
+            data: top10.map(c => c.released),
+            backgroundColor: '#10b981',
+            borderColor: '#059669',
+            borderWidth: 1,
+            borderRadius: 6,
+          },
+        ],
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'top', labels: { font: { size: 12 }, usePointStyle: true, pointStyle: 'rectRounded' } },
+          tooltip: {
+            backgroundColor: '#102a43',
+            titleFont: { size: 12, weight: '600' },
+            bodyFont: { size: 11 },
+            padding: 10,
+            cornerRadius: 8,
+            callbacks: {
+              label: ctx => ctx.dataset.label + ': ' + ctx.parsed.x.toFixed(1) + ' mb',
+            }
+          },
+          datalabels: { display: false },
+        },
+        scales: {
+          x: {
+            grid: { color: 'rgba(16,42,67,0.06)' },
+            ticks: { color: '#627d98', font: { size: 12 } },
+            title: { display: true, text: 'Million Barrels', color: '#627d98', font: { size: 11 } },
+          },
+          y: {
+            grid: { display: false },
+            ticks: { color: '#334e68', font: { size: 12, weight: '500' } },
+          },
+        },
+      },
+    });
+  }
+}
+
 // ---------- Tab Switching ----------
 
 function initTabs() {
@@ -840,6 +1087,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderCountryMatrix();
   renderFMDeclarations();
   renderShutdowns();
+  renderMarketNews();
 
   initTabs();
   updateStats('exec-summary');
