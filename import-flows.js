@@ -395,6 +395,7 @@
     const insights = [];
     const countryLabel = state.country.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
     const commodityLabel = state.commodity === 'crude' ? 'crude oil' : state.commodity.toUpperCase();
+    const rangeLabel = state.timeRange === 'all' ? 'all-time' : state.timeRange.toUpperCase();
 
     // Helper: friendly period label (no week numbers)
     function periodStr(rec) {
@@ -407,101 +408,147 @@
       return new Date(rec.s).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
     }
 
+    // Helper: compute value (rate for crude, display for LNG/LPG)
+    function val(total, days) { return crude ? toRate(total, days) : toDisplay(total); }
+
     // Reference period = latest full period; prior = the one before it
     const refIdx = isPartial ? totals.length - 2 : totals.length - 1;
     const prevIdx = refIdx - 1;
     if (refIdx < 1) return [];
     const refDays = base[refIdx].d || 1;
     const prevDays = base[prevIdx].d || 1;
-    const refVal = crude ? toRate(totals[refIdx], refDays) : toDisplay(totals[refIdx]);
-    const prevVal = crude ? toRate(totals[prevIdx], prevDays) : toDisplay(totals[prevIdx]);
+    const refVal = val(totals[refIdx], refDays);
+    const prevVal = val(totals[prevIdx], prevDays);
     const refLabel = periodStr(base[refIdx]);
     const prevLabel = periodStr(base[prevIdx]);
 
-    // Use same average as KPI card: exclude partial, average all full periods
+    // Compute all full-period values for statistical context
+    const endIdx = isPartial ? totals.length - 2 : totals.length - 1;
+    const fullVals = [];
+    for (let i = 0; i <= endIdx; i++) {
+      fullVals.push(val(totals[i], base[i].d || 1));
+    }
     const displayAvg = crude ? kpis.avgRate : toDisplay(kpis.avgVol);
+    const minVal = Math.min(...fullVals);
+    const maxVal = Math.max(...fullVals);
+    const devFromAvg = displayAvg > 0 ? ((refVal - displayAvg) / displayAvg * 100) : 0;
 
-    // --- Bullet 1: Volume trend ---
+    // Multi-period trend detection (3-period streak)
+    let streak = 0;
+    if (fullVals.length >= 3) {
+      const last3 = fullVals.slice(-3);
+      if (last3[2] > last3[1] && last3[1] > last3[0]) streak = 1;   // rising
+      else if (last3[2] < last3[1] && last3[1] < last3[0]) streak = -1; // falling
+    }
+
+    // --- Bullet 1: Volume trend with multi-period context ---
     const changePct = prevVal > 0 ? ((refVal - prevVal) / prevVal * 100) : 0;
-    const dir = changePct >= 0 ? 'up' : 'down';
-    let b1 = `${countryLabel}'s seaborne ${commodityLabel} imports averaged ${refVal.toFixed(1)} ${unit} for ${refLabel}, ${dir} ${Math.abs(changePct).toFixed(0)}% from ${prevVal.toFixed(1)} ${unit} in the prior period (${prevLabel}). The ${state.timeRange === 'all' ? 'all-time' : state.timeRange.toUpperCase()} average stands at ${displayAvg.toFixed(1)} ${unit}.`;
-    if (Math.abs(changePct) > 15) {
-      b1 += ` This sharp move is directly linked to the Strait of Hormuz closure in early March, which has cut roughly 90% of Gulf seaborne transit.`;
-    } else if (Math.abs(changePct) > 5) {
-      b1 += ` This reflects the ongoing supply-chain rerouting since the Hormuz disruption, as buyers pivot to non-Gulf corridors.`;
+    const dir = changePct >= 0 ? 'rose' : 'fell';
+    const flowType = (state.commodity === 'crude' && state.country === 'china') ? 'seaborne + pipeline' : 'seaborne';
+    let b1 = `${countryLabel}'s ${flowType} ${commodityLabel} imports averaged <strong>${refVal.toFixed(1)} ${unit}</strong> in ${refLabel}, ${changePct === 0 ? 'unchanged' : dir + ' ' + Math.abs(changePct).toFixed(0) + '%'} from ${prevVal.toFixed(1)} ${unit} in ${prevLabel}.`;
+
+    // Context vs range average
+    if (Math.abs(devFromAvg) > 2) {
+      b1 += ` This is <strong>${Math.abs(devFromAvg).toFixed(0)}% ${devFromAvg > 0 ? 'above' : 'below'}</strong> the ${rangeLabel} average of ${displayAvg.toFixed(1)} ${unit}.`;
     } else {
-      b1 += ` Volumes have held close to recent levels, pointing to effective diversification away from Hormuz-dependent supply.`;
+      b1 += ` This is in line with the ${rangeLabel} average of ${displayAvg.toFixed(1)} ${unit}.`;
+    }
+
+    // Multi-period trend
+    if (streak === 1) b1 += ` Imports have risen for three consecutive periods, signalling sustained demand growth.`;
+    else if (streak === -1) b1 += ` Imports have declined for three consecutive periods, indicating weakening demand or supply constraints.`;
+
+    // Peak/trough callout
+    if (fullVals.length >= 4) {
+      if (refVal === maxVal) b1 += ` This marks the highest level in the selected range.`;
+      else if (refVal === minVal) b1 += ` This is the lowest level recorded in the selected range.`;
     }
     insights.push(b1);
 
-    // --- Bullet 2: Supply mix with changes ---
+    // --- Bullet 2: Supplier concentration & movers ---
     if (topSuppliers.length >= 2) {
       const top = topSuppliers.slice(0, Math.min(5, topSuppliers.length));
-      const hormuzSet = new Set(['Saudi Arabia', 'United Arab Emirates', 'Iraq', 'Kuwait', 'Qatar', 'Bahrain', 'Iran']);
-      const gainers = [];
-      const decliners = [];
+      const rising = [];
+      const falling = [];
       const details = [];
+      let topTotal = 0;
 
       for (const c of top) {
-        const curr = crude ? toRate(countrySeriesData[c][refIdx] || 0, refDays) : toDisplay(countrySeriesData[c][refIdx] || 0);
-        const prev = crude ? toRate(countrySeriesData[c][prevIdx] || 0, prevDays) : toDisplay(countrySeriesData[c][prevIdx] || 0);
-        const sh = refVal > 0 ? (curr / refVal * 100).toFixed(0) : 0;
-        const chg = prev > 0 ? ((curr - prev) / prev * 100) : (curr > 0 ? 100 : 0);
-        details.push(`${c} ${curr.toFixed(1)} ${unit} (${sh}%)`);
-        if (chg > 5) gainers.push(`${c} +${chg.toFixed(0)}%`);
-        else if (chg < -5) decliners.push(`${c} ${chg.toFixed(0)}%`);
+        const curr = val(countrySeriesData[c][refIdx] || 0, refDays);
+        const prev = val(countrySeriesData[c][prevIdx] || 0, prevDays);
+        const diff = curr - prev;
+        const pctOfTotal = refVal > 0 ? (curr / refVal * 100) : 0;
+        topTotal += curr;
+        details.push(`${c} ${curr.toFixed(1)} ${unit} (${pctOfTotal.toFixed(0)}%)`);
+        if (Math.abs(diff) >= 0.05) {
+          const movePct = prev > 0 ? Math.abs(diff / prev * 100).toFixed(0) : '—';
+          if (diff > 0) rising.push(`${c} +${diff.toFixed(1)} ${unit} (+${movePct}%)`);
+          else falling.push(`${c} ${diff.toFixed(1)} ${unit} (−${movePct}%)`);
+        }
       }
 
-      let b2 = `Top suppliers for ${refLabel}: ${details.join(', ')}.`;
-      if (gainers.length > 0 || decliners.length > 0) {
-        const parts = [];
-        if (gainers.length > 0) parts.push(`rising: ${gainers.join(', ')}`);
-        if (decliners.length > 0) parts.push(`falling: ${decliners.join(', ')}`);
-        b2 += ` Compared to ${prevLabel} — ${parts.join('; ')}.`;
+      let b2 = `<strong>Top suppliers (${refLabel}):</strong> ${details.join('; ')}.`;
+
+      // Concentration risk
+      if (top.length >= 2 && refVal > 0) {
+        const top2Curr = val(countrySeriesData[top[0]][refIdx] || 0, refDays) + val(countrySeriesData[top[1]][refIdx] || 0, refDays);
+        const top2Share = (top2Curr / refVal * 100).toFixed(0);
+        if (top2Share >= 70) b2 += ` <strong>Concentration risk:</strong> ${top[0]} and ${top[1]} supply ${top2Share}% of total imports — high supplier dependency.`;
+        else if (top2Share >= 50) b2 += ` ${top[0]} and ${top[1]} together represent ${top2Share}% of supply.`;
       }
 
-      const nonH = top.filter(c => !hormuzSet.has(c));
-      const viaH = top.filter(c => hormuzSet.has(c));
-      if (nonH.length >= 2 && crude) {
-        b2 += ` ${nonH.join(', ')} do not transit Hormuz, underscoring the shift toward non-Gulf supply corridors.`;
+      // Biggest movers
+      if (rising.length > 0 || falling.length > 0) {
+        b2 += ` Period-over-period moves: ${[...rising, ...falling].join('; ')}.`;
       }
-      if (viaH.length > 0 && crude) {
-        b2 += ` ${viaH.join(' and ')} remain Hormuz-dependent and at risk.`;
-      }
-
       insights.push(b2);
     }
 
-    // --- Bullet 3: Strategic outlook ---
-    const crudeOutlooks = {
-      china: `With approximately 1.39 billion barrels in strategic reserves and diversified supply from Russia, Brazil, and West Africa, China has the strongest buffer among major importers. The key risk is a prolonged crisis beyond Q2, when refinery feedstock mismatches could emerge as medium-sour Gulf-grade substitutes narrow.`,
-      india: `India is significantly exposed — the Middle East historically supplies around 40% of its crude. Russian barrels arriving via non-Hormuz routes provide partial relief, but India's limited SPR capacity means prolonged disruption would translate directly into higher import costs and fiscal pressure.`,
-      japan: `Japan faces acute vulnerability, with roughly 95% of its crude historically sourced from the Middle East via Hormuz. Tokyo has committed 79.8 million barrels in SPR releases under the IEA action, but with minimal pipeline alternatives and limited refinery flexibility for non-Gulf grades, it carries the highest supply-security risk among major importers.`,
-      south_korea: `South Korea depends on the Middle East for approximately 70% of crude and a significant share of LNG. Seoul has committed 22.5 million barrels in SPR releases and is actively sourcing from West Africa and the Americas. Korean refiners can process a wide range of crude grades, providing some flexibility, but sustained disruption would strain petrochemical feedstock supply.`,
-      thailand: `Thailand imports modest crude volumes with a mixed supply base. The Hormuz disruption has limited direct impact on shipments but is driving benchmark prices higher, raising domestic fuel costs and widening the current account deficit.`,
-      vietnam: `Vietnam is a smaller crude importer with diversified sources. The impact is primarily indirect — through higher global crude prices — rather than a direct supply disruption to its refineries.`,
-    };
-    const lngOutlooks = {
-      china: `China's LNG imports are partially Hormuz-exposed via Qatari cargoes. However, long-term contracts with Australia, the US, and Mozambique provide diversification. Spot LNG prices have spiked, incentivising coal-to-gas switching deferrals.`,
-      japan: `Japan is the world's largest LNG importer and heavily reliant on Qatari supply transiting Hormuz. With Qatar's Ras Laffan offline, Japan is scrambling for spot cargoes from the US, Australia, and Papua New Guinea at significantly elevated prices.`,
-      south_korea: `South Korea's LNG supply is diversified across Qatar, Australia, and the US. The Hormuz closure has reduced Qatari deliveries, but Korean buyers have secured additional spot cargoes to cover near-term demand.`,
-      india: `India's growing LNG demand faces higher costs as Qatari cargoes are disrupted. Buyers are pivoting to US and African spot cargoes, but at steep premiums that pressure fertiliser and power sector economics.`,
-    };
-    const lpgOutlooks = {
-      china: `China is the world's largest LPG importer. Middle East supply — particularly from Saudi Arabia and UAE — transits Hormuz and is severely disrupted. Buyers are sourcing US LPG via the Panama Canal at higher freight costs.`,
-      india: `India depends heavily on Middle Eastern LPG for cooking fuel subsidies. The Hormuz disruption is forcing emergency tenders for US and African cargoes, with fiscal implications for the subsidy programme.`,
-      japan: `Japan's LPG imports are partially exposed to the Hormuz closure. Diversified sourcing from the US and Australia provides a buffer, though delivered costs have risen sharply.`,
-      south_korea: `South Korea's petrochemical sector relies on LPG as a naphtha substitute. Hormuz disruption is tightening feedstock availability and pushing crackers toward more expensive alternatives.`,
-    };
+    // --- Bullet 3: Range context & volatility ---
+    if (fullVals.length >= 4) {
+      const range = maxVal - minVal;
+      const coeffVar = displayAvg > 0 ? ((Math.sqrt(fullVals.reduce((s, v) => s + (v - displayAvg) ** 2, 0) / fullVals.length) / displayAvg) * 100) : 0;
+      let b3 = `Over the selected ${rangeLabel} range, ${commodityLabel} import volumes have ranged from ${minVal.toFixed(1)} to ${maxVal.toFixed(1)} ${unit} (spread: ${range.toFixed(1)} ${unit}).`;
 
-    const outlookMap = state.commodity === 'crude' ? crudeOutlooks : state.commodity === 'lng' ? lngOutlooks : lpgOutlooks;
-    if (outlookMap[state.country]) {
-      insights.push(outlookMap[state.country]);
+      if (coeffVar > 25) b3 += ` Volatility is <strong>high</strong> (CV ${coeffVar.toFixed(0)}%) — import volumes have fluctuated significantly, suggesting supply disruptions or demand swings.`;
+      else if (coeffVar > 12) b3 += ` Moderate variability (CV ${coeffVar.toFixed(0)}%) points to periodic shifts in sourcing or demand patterns.`;
+      else b3 += ` Low variability (CV ${coeffVar.toFixed(0)}%) indicates stable, predictable import flows.`;
+
+      insights.push(b3);
     }
+
+    // --- Bullet 4: Strategic synthesis (dynamic, forward-looking) ---
+    let b4 = '<strong>Outlook:</strong> ';
+    const parts = [];
+
+    // Trend + momentum
+    if (streak === 1 && devFromAvg > 10) parts.push(`${countryLabel}'s imports are on an upward trajectory and running well above the ${rangeLabel} norm — this may reflect restocking activity or structural demand growth`);
+    else if (streak === -1 && devFromAvg < -10) parts.push(`Persistent volume declines well below the ${rangeLabel} average warrant attention — monitor whether this reflects supply-chain disruptions, demand destruction, or strategic inventory drawdowns`);
+    else if (Math.abs(changePct) > 20) parts.push(`The sharp ${changePct > 0 ? 'increase' : 'decrease'} of ${Math.abs(changePct).toFixed(0)}% warrants close monitoring to determine if this is a one-off adjustment or the start of a new trend`);
+    else parts.push(`Import volumes are tracking within normal ranges for ${countryLabel}`);
+
+    // Concentration-based outlook
+    if (topSuppliers && topSuppliers.length >= 2 && refVal > 0) {
+      const topSupplier = topSuppliers[0];
+      const topSupplierVal = val(countrySeriesData[topSupplier][refIdx] || 0, refDays);
+      const topSupplierShare = (topSupplierVal / refVal * 100);
+      if (topSupplierShare > 45) parts.push(`heavy reliance on ${topSupplier} (${topSupplierShare.toFixed(0)}% of imports) creates supply-concentration risk — any export disruption from this source would materially impact ${countryLabel}'s ${commodityLabel} availability`);
+    }
+
+    // Partial period note
+    if (isPartial) {
+      const partialVal = val(totals[totals.length - 1], base[totals.length - 1].d || 1);
+      const partialDays = base[totals.length - 1].d || 1;
+      const partialVsRef = refVal > 0 ? ((partialVal - refVal) / refVal * 100) : 0;
+      if (Math.abs(partialVsRef) > 10) parts.push(`the current incomplete period (${partialDays} days) is tracking ${partialVsRef > 0 ? 'above' : 'below'} the prior full period by ${Math.abs(partialVsRef).toFixed(0)}%`);
+    }
+
+    b4 += parts.join('. ') + '.';
+    insights.push(b4);
 
     // Pipeline flow annotation for China crude
     if (state.country === 'china' && state.commodity === 'crude') {
-      insights.push('<strong>Pipeline flows included:</strong> Data includes estimated pipeline crude — ESPO (Russia→China, ~600 kb/d), Kazakhstan-China (~220 kb/d), and Myanmar-China (~200 kb/d). Combined ~1,020 kb/d of pipeline crude supplements seaborne imports. These pipelines bypass the Strait of Hormuz entirely.');
+      insights.push('<strong>Note — Pipeline flows included:</strong> Data includes estimated pipeline crude — ESPO (Russia→China, ~600 kb/d), Kazakhstan-China (~220 kb/d), and Myanmar-China (~200 kb/d). Combined ~1,020 kb/d supplements seaborne imports.');
     }
 
     return insights;
@@ -522,9 +569,80 @@
         </div>
         <ul class="space-y-3">
           ${insights.map(text => `<li class="text-sm text-amber-900 leading-relaxed">${text}</li>`).join('')}
+          <li id="if-insight-news" class="text-sm text-amber-900 leading-relaxed opacity-60">
+            <span class="inline-flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 animate-spin text-amber-500" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              Loading market context...
+            </span>
+          </li>
         </ul>
       </div>
     `;
+  }
+
+  // Async Bullet 5: Live market context from web sources
+  let ifNewsFetchId = 0;
+  async function fetchNewsInsight(timeline, kpis) {
+    const fetchId = ++ifNewsFetchId;
+    const snapshotKey = state.country + '_' + state.commodity;
+    const crude = isCrude();
+
+    // Compute trend from the same data generateInsights uses
+    let trend = 'stable';
+    const { totals, base } = timeline;
+    if (totals && totals.length >= 3) {
+      const isPartial = kpis.lastIsPartial;
+      const endIdx = isPartial ? totals.length - 2 : totals.length - 1;
+      const prevIdx = endIdx - 1;
+      if (endIdx >= 1) {
+        const refVal = crude ? toRate(totals[endIdx], base[endIdx].d || 1) : toDisplay(totals[endIdx]);
+        const prevVal = crude ? toRate(totals[prevIdx], base[prevIdx].d || 1) : toDisplay(totals[prevIdx]);
+        const changePct = prevVal > 0 ? ((refVal - prevVal) / prevVal * 100) : 0;
+        const displayAvg = crude ? kpis.avgRate : toDisplay(kpis.avgVol);
+        const devFromAvg = displayAvg > 0 ? ((refVal - displayAvg) / displayAvg * 100) : 0;
+        // 3-period streak
+        let streak = 0;
+        if (endIdx >= 2) {
+          const r0 = crude ? toRate(totals[endIdx - 2], base[endIdx - 2].d || 1) : toDisplay(totals[endIdx - 2]);
+          const r1 = crude ? toRate(totals[endIdx - 1], base[endIdx - 1].d || 1) : toDisplay(totals[endIdx - 1]);
+          const r2 = refVal;
+          if (r2 > r1 && r1 > r0) streak = 1;
+          else if (r2 < r1 && r1 < r0) streak = -1;
+        }
+        if (streak === 1 || changePct > 10) trend = 'up';
+        else if (streak === -1 || changePct < -10) trend = 'down';
+        else if (Math.abs(changePct) > 20) trend = 'volatile';
+      }
+    }
+
+    try {
+      const resp = await fetch(`/api/energy-news?country=${state.country}&commodity=${state.commodity}&direction=import&trend=${trend}`);
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      const data = await resp.json();
+
+      // Race condition guard: check state hasn't changed during fetch
+      if (fetchId !== ifNewsFetchId) return;
+      if (snapshotKey !== state.country + '_' + state.commodity) return;
+
+      const el = document.getElementById('if-insight-news');
+      if (!el) return;
+
+      if (data.headline) {
+        el.innerHTML = `<strong>Market context:</strong> ${data.headline}`;
+        el.classList.remove('opacity-60');
+        el.style.transition = 'opacity 0.3s';
+        el.style.opacity = '1';
+      } else {
+        el.remove();
+      }
+    } catch (err) {
+      console.warn('Import news insight fetch failed:', err.message);
+      const el = document.getElementById('if-insight-news');
+      if (el) el.remove();
+    }
   }
 
   function renderLayout() {
@@ -541,7 +659,7 @@
             </svg>
             Import Flows
           </h2>
-          <p class="text-sm text-navy-500 mt-0.5">${state.commodity === 'crude' ? 'Crude oil imports by origin country (excludes pipeline flows)' : (state.commodity === 'lng' ? 'LNG' : 'LPG') + ' imports by origin country'} | Source: Kpler vessel tracking</p>
+          <p class="text-sm text-navy-500 mt-0.5">${state.commodity === 'crude' ? 'Crude oil imports by origin country (includes pipeline flows for China)' : (state.commodity === 'lng' ? 'LNG' : 'LPG') + ' imports by origin country'} | Source: Kpler vessel tracking + pipeline estimates</p>
         </div>
 
         <div id="if-controls"></div>
@@ -1039,6 +1157,7 @@
 
     document.getElementById('if-kpis').innerHTML = renderKPICards(kpis);
     renderInsights(timeline, kpis);
+    fetchNewsInsight(timeline, kpis);
     drawCharts(timeline);
     renderSupplierTable(timeline);
     bindControlEvents();

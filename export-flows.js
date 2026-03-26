@@ -450,7 +450,8 @@
     // --- Bullet 1: Volume trend with multi-period context ---
     const changePct = prevVal > 0 ? ((refVal - prevVal) / prevVal * 100) : 0;
     const dir = changePct >= 0 ? 'rose' : 'fell';
-    let b1 = `${exporterLabel}'s seaborne ${commodityLabel} exports averaged <strong>${refVal.toFixed(1)} ${unit}</strong> in ${refLabel}, ${changePct === 0 ? 'unchanged' : dir + ' ' + Math.abs(changePct).toFixed(0) + '%'} from ${prevVal.toFixed(1)} ${unit} in ${prevLabel}.`;
+    const flowType = (state.commodity === 'crude' && ['iraq', 'russia'].includes(state.exporter)) ? 'seaborne + pipeline' : 'seaborne';
+    let b1 = `${exporterLabel}'s ${flowType} ${commodityLabel} exports averaged <strong>${refVal.toFixed(1)} ${unit}</strong> in ${refLabel}, ${changePct === 0 ? 'unchanged' : dir + ' ' + Math.abs(changePct).toFixed(0) + '%'} from ${prevVal.toFixed(1)} ${unit} in ${prevLabel}.`;
 
     // Context vs range average
     if (Math.abs(devFromAvg) > 2) {
@@ -577,9 +578,78 @@
         </div>
         <ul class="space-y-3">
           ${insights.map(text => `<li class="text-sm text-amber-900 leading-relaxed">${text}</li>`).join('')}
+          <li id="ef-insight-news" class="text-sm text-amber-900 leading-relaxed opacity-60">
+            <span class="inline-flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 animate-spin text-amber-500" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              Loading market context...
+            </span>
+          </li>
         </ul>
       </div>
     `;
+  }
+
+  // Async Bullet 5: Live market context from web sources
+  let efNewsFetchId = 0;
+  async function fetchNewsInsight(timeline, kpis) {
+    const fetchId = ++efNewsFetchId;
+    const snapshotKey = state.exporter + '_' + state.commodity;
+
+    // Compute trend from the same data generateInsights uses
+    let trend = 'stable';
+    const { totals, base } = timeline;
+    if (totals && totals.length >= 3) {
+      const isPartial = kpis.lastIsPartial;
+      const endIdx = isPartial ? totals.length - 2 : totals.length - 1;
+      const prevIdx = endIdx - 1;
+      if (endIdx >= 1) {
+        const refVal = toRate(totals[endIdx], base[endIdx].d || 1);
+        const prevVal = toRate(totals[prevIdx], base[prevIdx].d || 1);
+        const changePct = prevVal > 0 ? ((refVal - prevVal) / prevVal * 100) : 0;
+        const devFromAvg = kpis.avgRate > 0 ? ((refVal - kpis.avgRate) / kpis.avgRate * 100) : 0;
+        // 3-period streak
+        let streak = 0;
+        if (endIdx >= 2) {
+          const r0 = toRate(totals[endIdx - 2], base[endIdx - 2].d || 1);
+          const r1 = toRate(totals[endIdx - 1], base[endIdx - 1].d || 1);
+          const r2 = refVal;
+          if (r2 > r1 && r1 > r0) streak = 1;
+          else if (r2 < r1 && r1 < r0) streak = -1;
+        }
+        if (streak === 1 || changePct > 10) trend = 'up';
+        else if (streak === -1 || changePct < -10) trend = 'down';
+        else if (Math.abs(changePct) > 20) trend = 'volatile';
+      }
+    }
+
+    try {
+      const resp = await fetch(`/api/energy-news?country=${state.exporter}&commodity=${state.commodity}&direction=export&trend=${trend}`);
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      const data = await resp.json();
+
+      // Race condition guard: check state hasn't changed during fetch
+      if (fetchId !== efNewsFetchId) return;
+      if (snapshotKey !== state.exporter + '_' + state.commodity) return;
+
+      const el = document.getElementById('ef-insight-news');
+      if (!el) return;
+
+      if (data.headline) {
+        el.innerHTML = `<strong>Market context:</strong> ${data.headline}`;
+        el.classList.remove('opacity-60');
+        el.style.transition = 'opacity 0.3s';
+        el.style.opacity = '1';
+      } else {
+        el.remove();
+      }
+    } catch (err) {
+      console.warn('Export news insight fetch failed:', err.message);
+      const el = document.getElementById('ef-insight-news');
+      if (el) el.remove();
+    }
   }
 
   function renderLayout() {
@@ -592,7 +662,7 @@
             </svg>
             Export Flows
           </h2>
-          <p class="text-sm text-navy-500 mt-0.5">${state.commodity === 'crude' ? 'Crude oil exports by destination country (excludes pipeline flows)' : (state.commodity === 'lng' ? 'LNG' : 'LPG') + ' exports by destination country'} | Source: Kpler vessel tracking</p>
+          <p class="text-sm text-navy-500 mt-0.5">${state.commodity === 'crude' ? 'Crude oil exports by destination country (includes pipeline flows for Iraq, Russia)' : (state.commodity === 'lng' ? 'LNG' : 'LPG') + ' exports by destination country'} | Source: Kpler vessel tracking + pipeline estimates</p>
         </div>
 
         <div id="ef-controls"></div>
@@ -1058,6 +1128,7 @@
 
     document.getElementById('ef-kpis').innerHTML = renderKPICards(kpis);
     renderInsights(timeline, kpis);
+    fetchNewsInsight(timeline, kpis);
     drawCharts(timeline);
     renderDestinationTable(timeline);
     bindControlEvents();
