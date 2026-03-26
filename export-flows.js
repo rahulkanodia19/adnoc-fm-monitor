@@ -1,23 +1,48 @@
 // ============================================================
 // export-flows.js -- Export Flows Dashboard
-// Crude oil exports by destination country (weekly/monthly)
+// Crude, LNG & LPG exports by destination country (daily/weekly/monthly)
 // ============================================================
 
 (function () {
   'use strict';
 
+  // Register datalabels plugin if available, disabled by default
+  if (typeof ChartDataLabels !== 'undefined') {
+    Chart.register(ChartDataLabels);
+    Chart.defaults.plugins.datalabels = { display: false };
+  }
+
   // ---------- Constants ----------
   const DATASETS = {
-    bahrain_crude:      { label: 'Bahrain',      unit: 'mbbl', key: 'bahrain' },
-    iran_crude:         { label: 'Iran',          unit: 'mbbl', key: 'iran' },
-    iraq_crude:         { label: 'Iraq',          unit: 'mbbl', key: 'iraq' },
-    kuwait_crude:       { label: 'Kuwait',        unit: 'mbbl', key: 'kuwait' },
-    oman_crude:         { label: 'Oman',          unit: 'mbbl', key: 'oman' },
-    qatar_crude:        { label: 'Qatar',         unit: 'mbbl', key: 'qatar' },
-    russia_crude:       { label: 'Russia',        unit: 'mbbl', key: 'russia' },
-    saudi_arabia_crude: { label: 'Saudi Arabia',  unit: 'mbbl', key: 'saudi_arabia' },
-    uae_crude:          { label: 'UAE',           unit: 'mbbl', key: 'uae' },
-    us_crude:           { label: 'United States', unit: 'mbbl', key: 'us' },
+    bahrain_crude:       { label: 'Bahrain',      unit: 'mbbl', key: 'bahrain',       commodity: 'crude' },
+    bahrain_lng:         { label: 'Bahrain',      unit: 'Mt',   key: 'bahrain',       commodity: 'lng' },
+    bahrain_lpg:         { label: 'Bahrain',      unit: 'Mt',   key: 'bahrain',       commodity: 'lpg' },
+    iran_crude:          { label: 'Iran',          unit: 'mbbl', key: 'iran',          commodity: 'crude' },
+    iran_lng:            { label: 'Iran',          unit: 'Mt',   key: 'iran',          commodity: 'lng' },
+    iran_lpg:            { label: 'Iran',          unit: 'Mt',   key: 'iran',          commodity: 'lpg' },
+    iraq_crude:          { label: 'Iraq',          unit: 'mbbl', key: 'iraq',          commodity: 'crude' },
+    iraq_lng:            { label: 'Iraq',          unit: 'Mt',   key: 'iraq',          commodity: 'lng' },
+    iraq_lpg:            { label: 'Iraq',          unit: 'Mt',   key: 'iraq',          commodity: 'lpg' },
+    kuwait_crude:        { label: 'Kuwait',        unit: 'mbbl', key: 'kuwait',        commodity: 'crude' },
+    kuwait_lng:          { label: 'Kuwait',        unit: 'Mt',   key: 'kuwait',        commodity: 'lng' },
+    kuwait_lpg:          { label: 'Kuwait',        unit: 'Mt',   key: 'kuwait',        commodity: 'lpg' },
+    oman_crude:          { label: 'Oman',          unit: 'mbbl', key: 'oman',          commodity: 'crude' },
+    oman_lng:            { label: 'Oman',          unit: 'Mt',   key: 'oman',          commodity: 'lng' },
+    oman_lpg:            { label: 'Oman',          unit: 'Mt',   key: 'oman',          commodity: 'lpg' },
+    qatar_crude:         { label: 'Qatar',         unit: 'mbbl', key: 'qatar',         commodity: 'crude' },
+    qatar_lng:           { label: 'Qatar',         unit: 'Mt',   key: 'qatar',         commodity: 'lng' },
+    qatar_lpg:           { label: 'Qatar',         unit: 'Mt',   key: 'qatar',         commodity: 'lpg' },
+    russia_crude:        { label: 'Russia',        unit: 'mbbl', key: 'russia',        commodity: 'crude' },
+    russia_lng:          { label: 'Russia',        unit: 'Mt',   key: 'russia',        commodity: 'lng' },
+    russia_lpg:          { label: 'Russia',        unit: 'Mt',   key: 'russia',        commodity: 'lpg' },
+    saudi_arabia_crude:  { label: 'Saudi Arabia',  unit: 'mbbl', key: 'saudi_arabia',  commodity: 'crude' },
+    saudi_arabia_lng:    { label: 'Saudi Arabia',  unit: 'Mt',   key: 'saudi_arabia',  commodity: 'lng' },
+    saudi_arabia_lpg:    { label: 'Saudi Arabia',  unit: 'Mt',   key: 'saudi_arabia',  commodity: 'lpg' },
+    uae_lng:             { label: 'UAE',           unit: 'Mt',   key: 'uae',           commodity: 'lng' },
+    uae_lpg:             { label: 'UAE',           unit: 'Mt',   key: 'uae',           commodity: 'lpg' },
+    us_crude:            { label: 'United States', unit: 'mbbl', key: 'us',            commodity: 'crude' },
+    us_lng:              { label: 'United States', unit: 'Mt',   key: 'us',            commodity: 'lng' },
+    us_lpg:              { label: 'United States', unit: 'Mt',   key: 'us',            commodity: 'lpg' },
   };
 
   const CHART_COLORS = [
@@ -75,6 +100,7 @@
   // ---------- State ----------
   let state = {
     exporter: 'saudi_arabia',
+    commodity: 'crude',
     view: 'monthly',
     topN: 10,
     timeRange: '3m',
@@ -86,21 +112,27 @@
   // ---------- Data Helpers ----------
 
   function getDataKey() {
-    return state.exporter + '_crude';
+    return state.exporter + '_' + state.commodity;
   }
 
   function getAggData() {
     const src = EXPORT_FLOW_DATA[getDataKey()];
     if (!src) return [];
+    if (state.view === 'daily') return src.daily || [];
     return state.view === 'weekly' ? src.weekly : src.monthly;
   }
 
   function filterByTimeRange(records) {
     if (state.timeRange === 'all') return records;
-    const now = new Date('2026-03-24');
-    const months = { '12m': 12, '6m': 6, '3m': 3, '1m': 1 };
+    const now = new Date('2026-03-25');
     const cutoff = new Date(now);
-    cutoff.setMonth(cutoff.getMonth() - months[state.timeRange]);
+    const weeks = { '1w': 1, '2w': 2, '3w': 3 };
+    const months = { '1m': 1, '3m': 3, '6m': 6, '12m': 12 };
+    if (weeks[state.timeRange]) {
+      cutoff.setDate(cutoff.getDate() - weeks[state.timeRange] * 7);
+    } else {
+      cutoff.setMonth(cutoff.getMonth() - months[state.timeRange]);
+    }
     return records.filter(r => {
       const d = new Date(r.s || r.p + '-01');
       return d >= cutoff;
@@ -108,29 +140,37 @@
   }
 
   function getLabel(record) {
+    // Monthly records: show "Feb 26", "Mar 26"
+    if (record.p && record.p.length === 7 && !record.p.includes('W')) {
+      const d = new Date(record.p + '-01');
+      return d.toLocaleDateString('en-GB', { month: 'short', year: '2-digit' });
+    }
+    // Daily/weekly records with start date
     if (record.s) {
       const s = new Date(record.s);
       return s.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: '2-digit' });
     }
-    const d = new Date(record.p + '-01');
-    return d.toLocaleDateString('en-GB', { month: 'short', year: '2-digit' });
+    return record.p;
   }
 
   function isPartialPeriod(base, idx) {
     if (!base || !base[idx]) return false;
     const rec = base[idx];
     if (state.view === 'monthly') return rec.d < 28;
+    if (state.view === 'daily') return false;
     return rec.d < 5;
   }
 
   function getLastUpdatedDate() {
     const src = EXPORT_FLOW_DATA[getDataKey()];
     if (!src) return null;
+    const daily = src.daily;
+    if (daily && daily.length > 0) {
+      return daily[daily.length - 1].e;
+    }
     const weekly = src.weekly;
     if (weekly && weekly.length > 0) {
-      const endDate = weekly[weekly.length - 1].e;
-      const today = new Date().toISOString().slice(0, 10);
-      return endDate > today ? today : endDate;
+      return weekly[weekly.length - 1].e;
     }
     return null;
   }
@@ -214,11 +254,11 @@
 
   // ---------- Rendering ----------
 
-  const UNIT = 'mbbl';
-  const RATE_UNIT = 'mbbl/d';
+  function getUnit() { return state.commodity === 'crude' ? 'mbbl' : 'Mt'; }
+  function getRateUnit() { return state.commodity === 'crude' ? 'mbbl/d' : 'Mt/d'; }
 
-  function toDisplay(kbbl) { return kbbl / 1000; }
-  function toRate(kbbl, days) { return days > 0 ? kbbl / days / 1000 : 0; }
+  function toDisplay(val) { return val / 1000; }
+  function toRate(val, days) { return days > 0 ? val / days / 1000 : 0; }
 
   function fmtNum(n) {
     if (Math.abs(n) >= 1000000) return (n / 1000000).toFixed(1) + 'M';
@@ -242,22 +282,29 @@
     const dateStr = lastDate ? new Date(lastDate).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) : '';
 
     return `
-      <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+      <div class="flex flex-col gap-3 mb-6">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex flex-wrap items-center gap-2">
+            ${renderExporterToggle()}
+            ${renderToggle('Commodity', 'commodity', [
+              ['crude', 'Crude'], ['lng', 'LNG'], ['lpg', 'LPG']
+            ])}
+          </div>
+          ${dateStr ? `<div class="flex items-center gap-1.5 text-xs text-navy-500 bg-white px-3 py-2 rounded-lg border border-navy-200 shadow-sm">
+            <svg class="w-3.5 h-3.5 text-navy-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Data as of <span class="font-semibold text-navy-700">${dateStr}</span>
+          </div>` : ''}
+        </div>
         <div class="flex flex-wrap items-center gap-2">
-          ${renderExporterToggle()}
           ${renderToggle('View', 'view', [
-            ['weekly', 'Weekly'], ['monthly', 'Monthly']
+            ['daily', 'Daily'], ['weekly', 'Weekly'], ['monthly', 'Monthly']
           ])}
           ${renderToggle('Range', 'timeRange', [
-            ['all', 'All'], ['12m', '12M'], ['6m', '6M'], ['3m', '3M'], ['1m', '1M']
+            ['1w', '1W'], ['2w', '2W'], ['3w', '3W'], ['1m', '1M'], ['3m', '3M'], ['6m', '6M'], ['12m', '12M'], ['all', 'All']
           ])}
         </div>
-        ${dateStr ? `<div class="flex items-center gap-1.5 text-xs text-navy-500 bg-white px-3 py-2 rounded-lg border border-navy-200 shadow-sm">
-          <svg class="w-3.5 h-3.5 text-navy-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          Data as of <span class="font-semibold text-navy-700">${dateStr}</span>
-        </div>` : ''}
       </div>
     `;
   }
@@ -328,9 +375,9 @@
             </svg>
             <span class="text-xs font-semibold text-navy-500 uppercase tracking-wider">${periodLabel}${partialNote}</span>
           </div>
-          <div class="text-2xl sm:text-3xl font-extrabold text-navy-900">${fmtNum(kpis.currRate)}</div>
-          <div class="text-xs text-navy-400 mt-0.5">${RATE_UNIT}</div>
-          <div class="mt-2"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold ${pctBg}">${pctArrow} ${fmtPct(kpis.pctChange)} vs prior</span></div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-navy-900">${fmtNum(kpis.currRate)}</div>
+          <div class="text-xs text-navy-400 mt-0.5">${getRateUnit()}</div>
+          <div class="mt-2"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-sm font-semibold ${pctBg}">${pctArrow} ${fmtPct(kpis.pctChange)} vs prior ${state.view === 'daily' ? 'day' : state.view === 'weekly' ? 'week' : 'month'}</span></div>
         </div>
         <div class="stat-card bg-white rounded-xl p-3 sm:p-5 border border-navy-200 border-l-4 border-l-amber-400">
           <div class="flex items-center gap-2 mb-2">
@@ -339,10 +386,85 @@
             </svg>
             <span class="text-xs font-semibold text-navy-500 uppercase tracking-wider">${rangeLabel} Avg</span>
           </div>
-          <div class="text-2xl sm:text-3xl font-extrabold text-navy-900">${fmtNum(kpis.avgRate)}</div>
-          <div class="text-xs text-navy-400 mt-0.5">${RATE_UNIT}</div>
+          <div class="text-3xl sm:text-4xl font-extrabold text-navy-900">${fmtNum(kpis.avgRate)}</div>
+          <div class="text-xs text-navy-400 mt-0.5">${getRateUnit()}</div>
           <div class="mt-2"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-navy-100 text-navy-500">All visible periods</span></div>
         </div>
+      </div>
+    `;
+  }
+
+  function generateInsights(timeline, kpis) {
+    const { totals, topDestinations, countrySeriesData, base } = timeline;
+    if (!totals || totals.length < 2) return [];
+    const unit = getRateUnit();
+    const lastIdx = totals.length - 1;
+    const prevIdx = lastIdx - 1;
+    const lastDays = base[lastIdx] ? base[lastIdx].d : 1;
+    const prevDays = base[prevIdx] ? base[prevIdx].d : 1;
+    const insights = [];
+    const viewLabel = state.view === 'daily' ? 'day' : state.view === 'weekly' ? 'week' : 'month';
+    const exporterLabel = getExporterLabel();
+    const commodity = state.commodity.toUpperCase();
+
+    const currVal = toRate(totals[lastIdx], lastDays);
+    const prevVal = toRate(totals[prevIdx], prevDays);
+    const changePct = prevVal > 0 ? ((currVal - prevVal) / prevVal * 100) : 0;
+
+    // 1. Headline
+    const direction = changePct >= 0 ? 'increased' : 'decreased';
+    insights.push(`${exporterLabel}'s ${commodity} exports ${direction} ${Math.abs(changePct).toFixed(1)}% to ${currVal.toFixed(1)} ${unit}, ${changePct >= 0 ? 'up' : 'down'} from ${prevVal.toFixed(1)} ${unit} in the prior ${viewLabel}. ${Math.abs(changePct) > 10 ? 'This is a material change that may affect downstream supply commitments.' : 'Export volumes remain broadly stable.'}`);
+
+    // 2. Destination concentration and key movers
+    if (topDestinations && topDestinations.length >= 2) {
+      const top3 = topDestinations.slice(0, 3);
+      const top3Vals = top3.map(c => ({
+        name: c,
+        curr: toRate(countrySeriesData[c][lastIdx] || 0, lastDays),
+        prev: toRate(countrySeriesData[c][prevIdx] || 0, prevDays),
+      }));
+      const top3Share = currVal > 0 ? (top3Vals.reduce((s, v) => s + v.curr, 0) / currVal * 100).toFixed(0) : 0;
+      const movers = top3Vals.map(v => {
+        const pct = v.prev > 0 ? ((v.curr - v.prev) / v.prev * 100) : 0;
+        return `${v.name} ${pct >= 0 ? '+' : ''}${pct.toFixed(0)}%`;
+      }).join(', ');
+      insights.push(`The top three destinations — ${top3.join(', ')} — receive ${top3Share}% of exports. Period-over-period changes: ${movers}.`);
+    }
+
+    // 3. Biggest mix shift
+    let maxShift = { country: '', shift: 0, from: 0, to: 0 };
+    for (const c of (topDestinations || []).slice(0, 5)) {
+      const currShare = currVal > 0 ? (toRate(countrySeriesData[c][lastIdx] || 0, lastDays) / currVal * 100) : 0;
+      const prevShare = prevVal > 0 ? (toRate(countrySeriesData[c][prevIdx] || 0, prevDays) / prevVal * 100) : 0;
+      const shift = currShare - prevShare;
+      if (Math.abs(shift) > Math.abs(maxShift.shift)) {
+        maxShift = { country: c, shift, from: prevShare, to: currShare };
+      }
+    }
+    if (Math.abs(maxShift.shift) >= 3) {
+      const shiftDir = maxShift.shift > 0 ? 'gained' : 'lost';
+      insights.push(`Notable mix change: ${maxShift.country} ${shiftDir} ${Math.abs(maxShift.shift).toFixed(1)} percentage points of export share (${maxShift.from.toFixed(1)}% → ${maxShift.to.toFixed(1)}%), indicating a potential shift in trade flow priorities.`);
+    }
+
+    return insights;
+  }
+
+  function renderInsights(timeline, kpis) {
+    const el = document.getElementById('ef-insights');
+    if (!el) return;
+    const insights = generateInsights(timeline, kpis);
+    if (insights.length === 0) { el.innerHTML = ''; return; }
+    el.innerHTML = `
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6">
+        <div class="flex items-center gap-2 mb-2">
+          <svg class="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+          </svg>
+          <h4 class="text-base font-bold text-amber-900">Key Insights</h4>
+        </div>
+        <ul class="space-y-1.5">
+          ${insights.map(i => `<li class="flex items-start gap-2 text-base text-amber-800 leading-relaxed"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0"></span>${i}</li>`).join('')}
+        </ul>
       </div>
     `;
   }
@@ -357,40 +479,46 @@
             </svg>
             Export Flows
           </h2>
-          <p class="text-sm text-navy-500 mt-0.5">Crude oil exports by destination country | Source: Kpler vessel tracking</p>
+          <p class="text-sm text-navy-500 mt-0.5">${state.commodity === 'crude' ? 'Crude oil' : state.commodity === 'lng' ? 'LNG' : 'LPG'} exports by destination country | Source: Kpler vessel tracking</p>
         </div>
 
         <div id="ef-controls"></div>
         <div id="ef-kpis"></div>
+        <div id="ef-insights"></div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
+        ${state.commodity === 'crude' ? `
+        <div class="mb-6">
           <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5">
-            <h3 class="text-base font-bold text-navy-800 mb-0.5" id="ef-chart-trend-title">Total Export Volume</h3>
-            <p class="text-xs text-navy-400 mb-3">Cumulative volume per period (${UNIT})</p>
-            <div class="chart-container">
-              <canvas id="chart-ef-total-trend"></canvas>
-            </div>
-          </div>
-          <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5">
-            <h3 class="text-base font-bold text-navy-800 mb-0.5" id="ef-chart-rate-title">Daily Export Rate</h3>
-            <p class="text-xs text-navy-400 mb-3">Average daily rate per period (${RATE_UNIT})</p>
+            <h3 class="text-lg font-bold text-navy-800 mb-0.5" id="ef-chart-rate-title">Daily Export Rate</h3>
+            <p class="text-xs text-navy-400 mb-3">Average daily rate per period (${getRateUnit()})</p>
             <div class="chart-container">
               <canvas id="chart-ef-daily-rate"></canvas>
             </div>
           </div>
         </div>
+        ` : `
+        <div class="mb-6">
+          <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5">
+            <h3 class="text-lg font-bold text-navy-800 mb-0.5" id="ef-chart-trend-title">Total Export Volume</h3>
+            <p class="text-xs text-navy-400 mb-3">Cumulative volume per period (${getUnit()})</p>
+            <div class="chart-container">
+              <canvas id="chart-ef-total-trend"></canvas>
+            </div>
+          </div>
+        </div>
+        `}
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
           <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5 md:col-span-2">
-            <h3 class="text-base font-bold text-navy-800 mb-0.5">Destination Breakdown</h3>
-            <p class="text-xs text-navy-400 mb-3">Daily rate by top buyer countries (${RATE_UNIT})</p>
+            <h3 class="text-lg font-bold text-navy-800 mb-0.5">Destination Breakdown</h3>
+            <p class="text-xs text-navy-400 mb-3">Daily rate by top buyer countries (${getRateUnit()})</p>
             <div class="chart-container">
               <canvas id="chart-ef-origin-stacked"></canvas>
             </div>
           </div>
           <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5">
-            <h3 class="text-base font-bold text-navy-800 mb-0.5">Current Period Mix</h3>
-            <p class="text-xs text-navy-400 mb-3">Latest period rate breakdown (${RATE_UNIT})</p>
+            <h3 class="text-lg font-bold text-navy-800 mb-0.5">Current Period Mix</h3>
+            <p class="text-xs text-navy-400 mb-3">Latest period rate breakdown (${getRateUnit()})</p>
             <div class="chart-container">
               <canvas id="chart-ef-donut"></canvas>
             </div>
@@ -399,7 +527,7 @@
 
         <div class="mb-6">
           <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5">
-            <h3 class="text-base font-bold text-navy-800 mb-0.5">Destination Share Over Time</h3>
+            <h3 class="text-lg font-bold text-navy-800 mb-0.5">Destination Share Over Time</h3>
             <p class="text-xs text-navy-400 mb-3">Percentage contribution of each buyer</p>
             <div class="chart-container chart-container-sm">
               <canvas id="chart-ef-pct-stacked"></canvas>
@@ -411,8 +539,8 @@
           <div class="h-1 bg-gradient-to-r from-sky-400 via-amber-400 to-sky-400"></div>
           <div class="px-5 py-4 border-b border-navy-200 flex items-center justify-between">
             <div>
-              <h3 class="text-base font-bold text-navy-800">Top Destinations Breakdown</h3>
-              <p class="text-xs text-navy-400 mt-0.5">Daily rate by destination country (${RATE_UNIT})</p>
+              <h3 class="text-lg font-bold text-navy-800">Top Destinations Breakdown</h3>
+              <p class="text-xs text-navy-400 mt-0.5">Daily rate by destination country (${getRateUnit()})</p>
             </div>
             <span class="text-xs font-semibold text-navy-500 bg-navy-100 px-2.5 py-1 rounded-full" id="ef-table-subtitle"></span>
           </div>
@@ -461,7 +589,7 @@
       ctx.fillText(fmtNum(total), cx, cy - 8);
       ctx.font = '11px system-ui, sans-serif';
       ctx.fillStyle = '#627d98';
-      ctx.fillText(RATE_UNIT, cx, cy + 10);
+      ctx.fillText(getRateUnit(), cx, cy + 10);
       ctx.restore();
     }
   };
@@ -477,11 +605,11 @@
 
     const commonScaleX = {
       grid: { display: false },
-      ticks: { color: tickColor, font: { size: 10 }, maxRotation: 45, autoSkipPadding: 12 },
+      ticks: { color: tickColor, font: { size: 12 }, maxRotation: 45, autoSkipPadding: 12 },
     };
     const commonScaleY = {
       grid: { color: gridColor },
-      ticks: { color: tickColor, font: { size: 10 } },
+      ticks: { color: tickColor, font: { size: 12 } },
       beginAtZero: true,
     };
     const commonTooltip = {
@@ -525,7 +653,7 @@
         data: {
           labels,
           datasets: [{
-            label: 'Total Exports (' + UNIT + ')',
+            label: 'Total Exports (' + getUnit() + ')',
             data: displayTotals,
             backgroundColor: barColors,
             borderColor: barBorders,
@@ -543,12 +671,12 @@
               callbacks: {
                 label: ctx => {
                   const suffix = (ctx.dataIndex === displayTotals.length - 1 && lastIsPartial) ? ` (partial \u2014 ${partialDays} days)` : '';
-                  return `Total: ${ctx.parsed.y.toFixed(1)} ${UNIT}${suffix}`;
+                  return `Total: ${ctx.parsed.y.toFixed(1)} ${getUnit()}${suffix}`;
                 }
               }
             },
           },
-          scales: { x: commonScaleX, y: { ...commonScaleY, title: { display: true, text: UNIT, color: tickColor, font: { size: 10 } } } },
+          scales: { x: commonScaleX, y: { ...commonScaleY, title: { display: true, text: getUnit(), color: tickColor, font: { size: 10 } } } },
           interaction: { intersect: false, mode: 'index' },
         },
       });
@@ -571,7 +699,7 @@
         data: {
           labels,
           datasets: [{
-            label: 'Daily Rate (' + RATE_UNIT + ')',
+            label: 'Daily Rate (' + getRateUnit() + ')',
             data: rateTotals,
             backgroundColor: rateBarColors,
             borderColor: rateBorders,
@@ -589,12 +717,12 @@
               callbacks: {
                 label: ctx => {
                   const suffix = (ctx.dataIndex === rateTotals.length - 1 && lastIsPartial) ? ` (partial \u2014 ${partialDays} days)` : '';
-                  return `Rate: ${ctx.parsed.y.toFixed(2)} ${RATE_UNIT}${suffix}`;
+                  return `Rate: ${ctx.parsed.y.toFixed(2)} ${getRateUnit()}${suffix}`;
                 }
               }
             },
           },
-          scales: { x: commonScaleX, y: { ...commonScaleY, title: { display: true, text: RATE_UNIT, color: tickColor, font: { size: 10 } } } },
+          scales: { x: commonScaleX, y: { ...commonScaleY, title: { display: true, text: getRateUnit(), color: tickColor, font: { size: 10 } } } },
           interaction: { intersect: false, mode: 'index' },
         },
       });
@@ -617,9 +745,9 @@
           responsive: true, maintainAspectRatio: false,
           plugins: {
             legend: SHARED_LEGEND,
-            tooltip: { ...commonTooltip, mode: 'index', callbacks: { label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y.toFixed(2)} ${RATE_UNIT}` } },
+            tooltip: { ...commonTooltip, mode: 'index', callbacks: { label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y.toFixed(2)} ${getRateUnit()}` } },
           },
-          scales: { x: commonScaleX, y: { ...commonScaleY, stacked: true, title: { display: true, text: RATE_UNIT, color: tickColor, font: { size: 10 } } } },
+          scales: { x: commonScaleX, y: { ...commonScaleY, stacked: true, title: { display: true, text: getRateUnit(), color: tickColor, font: { size: 10 } } } },
           interaction: { intersect: false, mode: 'index' },
         },
       });
@@ -679,9 +807,15 @@
               label: ctx => {
                 const total = ctx.dataset.data.reduce((a, b) => a + b, 0);
                 const pct = total > 0 ? (ctx.parsed / total * 100).toFixed(1) : 0;
-                return `${ctx.label}: ${ctx.parsed.toFixed(2)} ${RATE_UNIT} (${pct}%)`;
+                return `${ctx.label}: ${ctx.parsed.toFixed(2)} ${getRateUnit()} (${pct}%)`;
               }
             }},
+            datalabels: {
+              color: '#fff',
+              font: { weight: 'bold', size: 11 },
+              formatter: (value) => value > 0 ? value.toFixed(1) : '',
+              display: (ctx) => ctx.dataset.data[ctx.dataIndex] > 0,
+            },
           },
         },
         plugins: [centerTextPlugin],
@@ -711,18 +845,28 @@
     const avgTotal = base.reduce((s, rec, i) => s + toRate(totals[i], rec.d), 0) / base.length;
 
     // Latest period label
-    const latestLabel = refIdx >= 0 && base[refIdx] ? getLabel(base[refIdx]) : '';
+    let periodHeader = '';
+    if (refIdx >= 0 && base[refIdx]) {
+      if (state.view === 'daily') {
+        periodHeader = new Date(base[refIdx].s).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+      } else if (state.view === 'weekly') {
+        periodHeader = base[refIdx].p.replace(/^\d+-/, '') + ' (' + getLabel(base[refIdx]) + ')';
+      } else {
+        periodHeader = new Date(base[refIdx].p + '-01').toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+      }
+    }
+    const rangeAvgLabel = (state.timeRange === 'all' ? 'All-Time' : state.timeRange.toUpperCase()) + ' Avg';
 
     if (subtitle) {
-      subtitle.textContent = RATE_UNIT;
+      subtitle.textContent = getRateUnit();
     }
 
     thead.innerHTML = `<tr>
       <th class="px-3 py-2.5 sm:px-5 sm:py-3 font-semibold w-12">#</th>
       <th class="px-3 py-2.5 sm:px-5 sm:py-3 font-semibold">Destination Country</th>
-      <th class="px-2.5 py-2.5 sm:px-4 sm:py-3 font-semibold text-right whitespace-nowrap">${latestLabel}</th>
+      <th class="px-2.5 py-2.5 sm:px-4 sm:py-3 font-semibold text-right whitespace-nowrap">${periodHeader}</th>
       <th class="px-2.5 py-2.5 sm:px-4 sm:py-3 font-semibold text-right">Share %</th>
-      <th class="px-2.5 py-2.5 sm:px-4 sm:py-3 font-semibold text-right hidden sm:table-cell">Period Avg</th>
+      <th class="px-2.5 py-2.5 sm:px-4 sm:py-3 font-semibold text-right hidden sm:table-cell">${rangeAvgLabel}</th>
       <th class="px-2.5 py-2.5 sm:px-4 sm:py-3 font-semibold text-right hidden sm:table-cell">Avg Share %</th>
     </tr>`;
 
@@ -800,6 +944,7 @@
     const kpis = computeKPIs(timeline);
 
     document.getElementById('ef-kpis').innerHTML = renderKPICards(kpis);
+    renderInsights(timeline, kpis);
     drawCharts(timeline);
     renderDestinationTable(timeline);
     bindControlEvents();

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ADNOC Geopolitics Monitor</title>
+  <title>ADNOC FM Monitor</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -36,6 +36,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 </head>
 <body class="bg-navy-50 text-navy-800 font-sans min-h-screen">
 
@@ -49,7 +50,7 @@
           </svg>
         </div>
         <div>
-          <h1 class="text-base sm:text-lg font-bold text-navy-900 leading-tight tracking-tight">ADNOC Geopolitics Monitor</h1>
+          <h1 class="text-base sm:text-lg font-bold text-navy-900 leading-tight tracking-tight">ADNOC FM Monitor</h1>
           <p class="text-xs text-navy-500 hidden sm:block">Oil & Gas Sector Intelligence Dashboard</p>
         </div>
       </div>
@@ -79,7 +80,7 @@
         <svg class="w-4 h-4 hidden sm:inline-block mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
         </svg>
-        <span class="sm:hidden">Summary</span><span class="hidden sm:inline">Executive Summary</span>
+        <span class="sm:hidden">Production</span><span class="hidden sm:inline">Production Overview</span>
       </button>
       <button data-tab="country-matrix"
         class="tab-btn px-3 py-3 text-xs sm:px-5 sm:py-3.5 sm:text-sm font-medium border-b-2 border-transparent text-navy-500 hover:text-navy-700 whitespace-nowrap transition-all">
@@ -123,7 +124,7 @@
         <svg class="w-4 h-4 hidden sm:inline-block mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M5.636 5.636a9 9 0 1012.728 0M12 3v9" />
         </svg>
-        <span class="sm:hidden">Shutdowns</span><span class="hidden sm:inline">Shutdowns (No FM)</span>
+        <span class="sm:hidden">No FM</span><span class="hidden sm:inline">No FM</span>
       </button>
     </div>
   </nav>
@@ -137,7 +138,7 @@
   <!-- TABLE PANELS -->
   <main class="max-w-[1440px] mx-auto px-4 sm:px-6 pb-8">
 
-    <!-- Panel 0: Executive Summary -->
+    <!-- Panel 0: Production Overview -->
     <div data-panel="exec-summary">
       <div id="exec-summary-content"></div>
     </div>
@@ -200,7 +201,7 @@
       </div>
     </div>
 
-    <!-- Panel 3: Shutdowns (No FM) -->
+    <!-- Panel 3: No FM -->
     <div data-panel="shutdowns" class="hidden">
       <div class="overflow-x-auto rounded-xl border border-navy-200 shadow-sm bg-white">
         <table class="w-full text-left min-w-[360px] lg:min-w-[900px]">
@@ -227,7 +228,7 @@
   <footer class="border-t border-navy-200 bg-white mt-auto">
     <div class="max-w-[1440px] mx-auto px-4 sm:px-6 py-4 text-center text-xs text-navy-400">
       <p>Data sourced from public reports, news agencies, and official company disclosures.</p>
-      <p class="mt-1">ADNOC Geopolitics Monitor v3.0 &mdash; Last research: March 2026</p>
+      <p class="mt-1">ADNOC FM Monitor v3.0 &mdash; Last research: March 2026</p>
     </div>
   </footer>
 
