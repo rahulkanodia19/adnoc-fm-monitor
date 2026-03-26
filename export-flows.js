@@ -101,7 +101,7 @@
   let state = {
     exporter: 'saudi_arabia',
     commodity: 'crude',
-    view: 'monthly',
+    view: 'weekly',
     topN: 10,
     timeRange: '3m',
   };
@@ -246,7 +246,9 @@
     const prevRate = prevDays > 0 ? prev / prevDays / 1000 : 0;
     const pctChange = prevRate > 0 ? ((currRate - prevRate) / prevRate * 100) : 0;
 
-    const avgRate = base.reduce((s, rec, i) => s + (rec.d > 0 ? totals[i] / rec.d / 1000 : 0), 0) / base.length;
+    const fullBase = lastIsPartial ? base.slice(0, -1) : base;
+    const fullTotals = lastIsPartial ? totals.slice(0, -1) : totals;
+    const avgRate = fullBase.length > 0 ? fullBase.reduce((s, rec, i) => s + (rec.d > 0 ? fullTotals[i] / rec.d / 1000 : 0), 0) / fullBase.length : 0;
     const currPeriod = periods[currIdx] || null;
 
     return { curr, currRate, prevRate, pctChange, avgRate, lastIsPartial, currIdx, currPeriod, currDays };
@@ -377,10 +379,7 @@
           </div>
           <div class="text-3xl sm:text-4xl font-extrabold text-navy-900">${fmtNum(kpis.currRate)}</div>
           <div class="text-xs text-navy-400 mt-0.5">${getRateUnit()}</div>
-          <div class="mt-2">${kpis.lastIsPartial
-            ? '<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-sm font-medium bg-navy-100 text-navy-500">Partial ' + (state.view === 'daily' ? 'day' : state.view === 'weekly' ? 'week' : 'month') + ' (' + kpis.currDays + ' days)</span>'
-            : '<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-sm font-semibold ' + pctBg + '">' + pctArrow + ' ' + fmtPct(kpis.pctChange) + ' vs prior ' + (state.view === 'daily' ? 'day' : state.view === 'weekly' ? 'week' : 'month') + '</span>'
-          }</div>
+          <div class="mt-2"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-sm font-medium bg-navy-100 text-navy-500">${state.view === 'daily' ? 'Daily rate' : state.view === 'weekly' ? 'Weekly avg' : 'Monthly avg'}${kpis.lastIsPartial ? ' (partial — ' + kpis.currDays + 'd)' : ''}</span></div>
         </div>
         <div class="stat-card bg-white rounded-xl p-3 sm:p-5 border border-navy-200 border-l-4 border-l-amber-400">
           <div class="flex items-center gap-2 mb-2">
@@ -399,73 +398,165 @@
 
   function generateInsights(timeline, kpis) {
     const { totals, topDestinations, countrySeriesData, base } = timeline;
-    if (!totals || totals.length < 2) return [];
+    if (!totals || totals.length < 3) return [];
     const unit = getRateUnit();
-    const lastIdx = totals.length - 1;
-    const prevIdx = lastIdx - 1;
-    const lastDays = base[lastIdx] ? base[lastIdx].d : 1;
-    const prevDays = base[prevIdx] ? base[prevIdx].d : 1;
-    const insights = [];
-    const viewLabel = state.view === 'daily' ? 'day' : state.view === 'weekly' ? 'week' : 'month';
-    const exporterLabel = getExporterLabel();
-    const commodity = state.commodity.toUpperCase();
-
-    // Build period labels
-    const currRec = base[lastIdx];
-    const prevRec = base[prevIdx];
-    let currPeriodStr = '', prevPeriodStr = '';
-    if (state.view === 'monthly') {
-      currPeriodStr = new Date(currRec.p + '-01').toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
-      prevPeriodStr = new Date(prevRec.p + '-01').toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
-    } else if (state.view === 'weekly') {
-      currPeriodStr = currRec.p.replace(/^\d+-/, '') + ' (' + new Date(currRec.s).toLocaleDateString('en-GB', { day: '2-digit', month: 'short' }) + ' – ' + new Date(currRec.e).toLocaleDateString('en-GB', { day: '2-digit', month: 'short' }) + ')';
-      prevPeriodStr = prevRec.p.replace(/^\d+-/, '');
-    } else {
-      currPeriodStr = new Date(currRec.s).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
-      prevPeriodStr = new Date(prevRec.s).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
-    }
-
-    const currVal = toRate(totals[lastIdx], lastDays);
-    const prevVal = toRate(totals[prevIdx], prevDays);
     const isPartial = kpis.lastIsPartial;
+    const insights = [];
+    const exporterLabel = getExporterLabel();
+    const commodityLabel = state.commodity === 'crude' ? 'crude oil' : state.commodity.toUpperCase();
+    const rangeLabel = state.timeRange === 'all' ? 'all-time' : state.timeRange.toUpperCase();
 
-    // 1. Headline with explicit period
-    if (isPartial) {
-      insights.push(`${exporterLabel}'s ${commodity} exports averaged ${currVal.toFixed(1)} ${unit} in ${currPeriodStr} (partial ${viewLabel}, ${lastDays} of ${state.view === 'monthly' ? '~30' : '7'} days recorded). Direct comparison with the prior full ${viewLabel} (${prevPeriodStr}: ${prevVal.toFixed(1)} ${unit}) is not meaningful due to incomplete data. The Strait of Hormuz disruption has curtailed ~90% of transit flows since early March, severely impacting Gulf exporters (Kpler, S&P Global).`);
+    // Helper: friendly period label (no week numbers)
+    function periodStr(rec) {
+      if (state.view === 'monthly') return new Date(rec.p + '-01').toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
+      if (state.view === 'weekly') {
+        const s = new Date(rec.s).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+        const e = new Date(rec.e).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+        return s + ' – ' + e;
+      }
+      return new Date(rec.s).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    }
+
+    // Reference period = latest full; prior = one before
+    const refIdx = isPartial ? totals.length - 2 : totals.length - 1;
+    const prevIdx = refIdx - 1;
+    if (refIdx < 1) return [];
+    const refDays = base[refIdx].d || 1;
+    const prevDays = base[prevIdx].d || 1;
+    const refVal = toRate(totals[refIdx], refDays);
+    const prevVal = toRate(totals[prevIdx], prevDays);
+    const refLabel = periodStr(base[refIdx]);
+    const prevLabel = periodStr(base[prevIdx]);
+
+    // Compute all full-period rates for statistical context
+    const endIdx = isPartial ? totals.length - 2 : totals.length - 1;
+    const fullRates = [];
+    for (let i = 0; i <= endIdx; i++) {
+      fullRates.push(toRate(totals[i], base[i].d || 1));
+    }
+    const displayAvg = kpis.avgRate;
+    const minRate = Math.min(...fullRates);
+    const maxRate = Math.max(...fullRates);
+    const devFromAvg = displayAvg > 0 ? ((refVal - displayAvg) / displayAvg * 100) : 0;
+
+    // Multi-period trend detection (3-period streak)
+    let streak = 0;
+    if (fullRates.length >= 3) {
+      const last3 = fullRates.slice(-3);
+      if (last3[2] > last3[1] && last3[1] > last3[0]) streak = 1;   // rising
+      else if (last3[2] < last3[1] && last3[1] < last3[0]) streak = -1; // falling
+    }
+
+    // --- Bullet 1: Volume trend with multi-period context ---
+    const changePct = prevVal > 0 ? ((refVal - prevVal) / prevVal * 100) : 0;
+    const dir = changePct >= 0 ? 'rose' : 'fell';
+    let b1 = `${exporterLabel}'s seaborne ${commodityLabel} exports averaged <strong>${refVal.toFixed(1)} ${unit}</strong> in ${refLabel}, ${changePct === 0 ? 'unchanged' : dir + ' ' + Math.abs(changePct).toFixed(0) + '%'} from ${prevVal.toFixed(1)} ${unit} in ${prevLabel}.`;
+
+    // Context vs range average
+    if (Math.abs(devFromAvg) > 2) {
+      b1 += ` This is <strong>${Math.abs(devFromAvg).toFixed(0)}% ${devFromAvg > 0 ? 'above' : 'below'}</strong> the ${rangeLabel} average of ${displayAvg.toFixed(1)} ${unit}.`;
     } else {
-      const changePct = prevVal > 0 ? ((currVal - prevVal) / prevVal * 100) : 0;
-      const direction = changePct >= 0 ? 'increased' : 'decreased';
-      insights.push(`${exporterLabel}'s ${commodity} exports ${direction} ${Math.abs(changePct).toFixed(1)}% to ${currVal.toFixed(1)} ${unit} in ${currPeriodStr}, compared with ${prevVal.toFixed(1)} ${unit} in ${prevPeriodStr}. ${Math.abs(changePct) > 10 ? 'This material shift reflects the Hormuz closure, which has reduced Strait transit from ~20 mb/d to near-zero since early March (Kpler).' : 'Export volumes remain broadly stable despite Hormuz disruptions, with buyers drawing on strategic reserves and alternative routes.'} Source: Kpler vessel-tracking data.`);
+      b1 += ` This is in line with the ${rangeLabel} average of ${displayAvg.toFixed(1)} ${unit}.`;
     }
 
-    // 2. Destination concentration
+    // Multi-period trend
+    if (streak === 1) b1 += ` Exports have risen for three consecutive periods, signalling a sustained upward trajectory.`;
+    else if (streak === -1) b1 += ` Exports have declined for three consecutive periods, indicating a persistent downward trend.`;
+
+    // Peak/trough callout
+    if (fullRates.length >= 4) {
+      if (refVal === maxRate) b1 += ` This marks the highest rate in the selected range.`;
+      else if (refVal === minRate) b1 += ` This is the lowest rate recorded in the selected range.`;
+    }
+    insights.push(b1);
+
+    // --- Bullet 2: Destination concentration & movers ---
     if (topDestinations && topDestinations.length >= 2) {
-      const top3 = topDestinations.slice(0, 3);
-      const top3Vals = top3.map(c => ({
-        name: c,
-        curr: toRate(countrySeriesData[c][lastIdx] || 0, lastDays),
-      }));
-      const top3Share = currVal > 0 ? (top3Vals.reduce((s, v) => s + v.curr, 0) / currVal * 100).toFixed(0) : 0;
-      const top3Detail = top3Vals.map(v => v.name + ': ' + v.curr.toFixed(1) + ' ' + unit).join('; ');
+      const top = topDestinations.slice(0, Math.min(5, topDestinations.length));
+      const rising = [];
+      const falling = [];
+      const details = [];
+      let topTotal = 0;
 
-      insights.push(`Top three destinations in ${currPeriodStr}: ${top3Detail} — representing ${top3Share}% of total exports. Asian buyers (China, India, Japan, S. Korea) account for the bulk of Gulf crude demand, with China holding ~1.39 billion bbl in strategic reserves providing ~120 days of import cover (Kpler, Rystad Energy).`);
-    }
-
-    // 3. Mix shift
-    if (!isPartial) {
-      let maxShift = { country: '', shift: 0, from: 0, to: 0 };
-      for (const c of (topDestinations || []).slice(0, 5)) {
-        const currShare = currVal > 0 ? (toRate(countrySeriesData[c][lastIdx] || 0, lastDays) / currVal * 100) : 0;
-        const prevShare = prevVal > 0 ? (toRate(countrySeriesData[c][prevIdx] || 0, prevDays) / prevVal * 100) : 0;
-        const shift = currShare - prevShare;
-        if (Math.abs(shift) > Math.abs(maxShift.shift)) {
-          maxShift = { country: c, shift, from: prevShare, to: currShare };
+      for (const c of top) {
+        const curr = toRate(countrySeriesData[c][refIdx] || 0, refDays);
+        const prev = toRate(countrySeriesData[c][prevIdx] || 0, prevDays);
+        const diff = curr - prev;
+        const pctOfTotal = refVal > 0 ? (curr / refVal * 100) : 0;
+        topTotal += curr;
+        details.push(`${c} ${curr.toFixed(1)} ${unit} (${pctOfTotal.toFixed(0)}%)`);
+        if (Math.abs(diff) >= 0.05) {
+          const movePct = prev > 0 ? Math.abs(diff / prev * 100).toFixed(0) : '—';
+          if (diff > 0) rising.push(`${c} +${diff.toFixed(1)} ${unit} (+${movePct}%)`);
+          else falling.push(`${c} ${diff.toFixed(1)} ${unit} (−${movePct}%)`);
         }
       }
-      if (Math.abs(maxShift.shift) >= 3) {
-        const shiftDir = maxShift.shift > 0 ? 'gained' : 'lost';
-        insights.push(`Destination mix shift: ${maxShift.country} ${shiftDir} ${Math.abs(maxShift.shift).toFixed(1)}pp of export share (${maxShift.from.toFixed(1)}% in ${prevPeriodStr} to ${maxShift.to.toFixed(1)}% in ${currPeriodStr}). This reflects the broader trade-flow reshuffling as Gulf barrels compete with discounted Russian and Latin American supply for Asian market share (Rystad Energy, S&P Global).`);
+
+      let b2 = `<strong>Top destinations (${refLabel}):</strong> ${details.join('; ')}.`;
+
+      // Concentration risk
+      if (top.length >= 2 && refVal > 0) {
+        const top2Curr = toRate(countrySeriesData[top[0]][refIdx] || 0, refDays) + toRate(countrySeriesData[top[1]][refIdx] || 0, refDays);
+        const top2Share = (top2Curr / refVal * 100).toFixed(0);
+        if (top2Share >= 70) b2 += ` <strong>Concentration risk:</strong> ${top[0]} and ${top[1]} account for ${top2Share}% of total exports — high buyer dependency.`;
+        else if (top2Share >= 50) b2 += ` ${top[0]} and ${top[1]} together represent ${top2Share}% of volume.`;
       }
+
+      // Biggest movers
+      if (rising.length > 0 || falling.length > 0) {
+        b2 += ` Period-over-period moves: ${[...rising, ...falling].join('; ')}.`;
+      }
+      insights.push(b2);
+    }
+
+    // --- Bullet 3: Range context & volatility ---
+    if (fullRates.length >= 4) {
+      const range = maxRate - minRate;
+      const coeffVar = displayAvg > 0 ? ((Math.sqrt(fullRates.reduce((s, v) => s + (v - displayAvg) ** 2, 0) / fullRates.length) / displayAvg) * 100) : 0;
+      let b3 = `Over the selected ${rangeLabel} range, ${commodityLabel} export rates have ranged from ${minRate.toFixed(1)} to ${maxRate.toFixed(1)} ${unit} (spread: ${range.toFixed(1)} ${unit}).`;
+
+      if (coeffVar > 25) b3 += ` Volatility is <strong>high</strong> (CV ${coeffVar.toFixed(0)}%) — export volumes have fluctuated significantly, suggesting supply or logistics disruptions.`;
+      else if (coeffVar > 12) b3 += ` Moderate variability (CV ${coeffVar.toFixed(0)}%) points to periodic shifts in export scheduling or demand patterns.`;
+      else b3 += ` Low variability (CV ${coeffVar.toFixed(0)}%) indicates stable, predictable export flows.`;
+
+      insights.push(b3);
+    }
+
+    // --- Bullet 4: Strategic synthesis (dynamic, forward-looking) ---
+    let b4 = '<strong>Outlook:</strong> ';
+    const parts = [];
+
+    // Trend + momentum
+    if (streak === 1 && devFromAvg > 10) parts.push(`${exporterLabel}'s exports are on an upward trajectory and running well above the ${rangeLabel} norm — watch for potential capacity constraints or destination saturation`);
+    else if (streak === -1 && devFromAvg < -10) parts.push(`Persistent volume declines well below the ${rangeLabel} average signal a structural shift — monitor whether this reflects reduced production, rerouted flows, or demand-side pullback`);
+    else if (Math.abs(changePct) > 20) parts.push(`The sharp ${changePct > 0 ? 'increase' : 'decrease'} of ${Math.abs(changePct).toFixed(0)}% warrants close monitoring to determine if this is a one-off adjustment or the start of a new trend`);
+    else parts.push(`Export volumes are tracking within normal ranges for ${exporterLabel}`);
+
+    // Concentration-based outlook
+    if (topDestinations && topDestinations.length >= 2 && refVal > 0) {
+      const topDest = topDestinations[0];
+      const topDestVal = toRate(countrySeriesData[topDest][refIdx] || 0, refDays);
+      const topDestShare = (topDestVal / refVal * 100);
+      if (topDestShare > 45) parts.push(`heavy reliance on ${topDest} (${topDestShare.toFixed(0)}% of exports) creates buyer-concentration risk — any demand shock from this market would significantly impact ${exporterLabel}'s revenues`);
+    }
+
+    // Partial period note
+    if (isPartial) {
+      const partialVal = toRate(totals[totals.length - 1], base[totals.length - 1].d || 1);
+      const partialDays = base[totals.length - 1].d || 1;
+      const partialVsRef = refVal > 0 ? ((partialVal - refVal) / refVal * 100) : 0;
+      if (Math.abs(partialVsRef) > 10) parts.push(`the current incomplete period (${partialDays} days) is tracking ${partialVsRef > 0 ? 'above' : 'below'} the prior full period by ${Math.abs(partialVsRef).toFixed(0)}%`);
+    }
+
+    b4 += parts.join('. ') + '.';
+    insights.push(b4);
+
+    // Pipeline flow annotations
+    if (state.exporter === 'iraq' && state.commodity === 'crude') {
+      insights.push('<strong>Note — Pipeline flows included:</strong> Data includes Kirkuk-Ceyhan pipeline exports to Turkey (~250 kb/d) restarted Mar 17 after 3-year shutdown. Iraq\'s only remaining viable export route as southern Basra terminals remain blocked by Hormuz closure. Contract expires Jul 2026.');
+    }
+    if (state.exporter === 'russia' && state.commodity === 'crude') {
+      insights.push('<strong>Note — Pipeline flows included:</strong> Data includes ESPO pipeline exports to China (~600 kb/d via Skovorodino-Mohe spur). This pipeline bypasses the Strait of Hormuz and operates at full capacity. China is Russia\'s #1 crude destination when pipeline + seaborne volumes are combined.');
     }
 
     return insights;
@@ -484,8 +575,8 @@
           </svg>
           <h4 class="text-base font-bold text-amber-900">Key Insights</h4>
         </div>
-        <ul class="space-y-1.5">
-          ${insights.map(i => `<li class="flex items-start gap-2 text-base text-amber-800 leading-relaxed"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0"></span>${i}</li>`).join('')}
+        <ul class="space-y-3">
+          ${insights.map(text => `<li class="text-sm text-amber-900 leading-relaxed">${text}</li>`).join('')}
         </ul>
       </div>
     `;
@@ -501,7 +592,7 @@
             </svg>
             Export Flows
           </h2>
-          <p class="text-sm text-navy-500 mt-0.5">${state.commodity === 'crude' ? 'Crude oil' : state.commodity === 'lng' ? 'LNG' : 'LPG'} exports by destination country | Source: Kpler vessel tracking</p>
+          <p class="text-sm text-navy-500 mt-0.5">${state.commodity === 'crude' ? 'Crude oil exports by destination country (excludes pipeline flows)' : (state.commodity === 'lng' ? 'LNG' : 'LPG') + ' exports by destination country'} | Source: Kpler vessel tracking</p>
         </div>
 
         <div id="ef-controls"></div>
@@ -511,7 +602,7 @@
         ${state.commodity === 'crude' ? `
         <div class="mb-6">
           <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5">
-            <h3 class="text-lg font-bold text-navy-800 mb-0.5" id="ef-chart-rate-title">Daily Export Rate</h3>
+            <h3 class="text-lg font-bold text-navy-800 mb-0.5" id="ef-chart-rate-title">${state.view === 'daily' ? 'Daily Export Rate' : state.view === 'weekly' ? 'Weekly Export Rate' : 'Monthly Export Rate'}</h3>
             <p class="text-xs text-navy-400 mb-3">Average daily rate per period (${getRateUnit()})</p>
             <div class="chart-container">
               <canvas id="chart-ef-daily-rate"></canvas>

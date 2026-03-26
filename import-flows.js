@@ -90,7 +90,7 @@
   let state = {
     country: 'china',
     commodity: 'crude',
-    view: 'monthly',
+    view: 'weekly',
     topN: 10,
     timeRange: '3m',
   };
@@ -244,8 +244,10 @@
     const prevRate = prevDays > 0 ? prev / prevDays / 1000 : 0;
     const pctChange = prevRate > 0 ? ((currRate - prevRate) / prevRate * 100) : 0;
 
-    const avgRate = base.reduce((s, rec, i) => s + (rec.d > 0 ? totals[i] / rec.d / 1000 : 0), 0) / base.length;
-    const avgVol = totals.reduce((a, b) => a + b, 0) / totals.length;
+    const fullBase = lastIsPartial ? base.slice(0, -1) : base;
+    const fullTotals = lastIsPartial ? totals.slice(0, -1) : totals;
+    const avgRate = fullBase.length > 0 ? fullBase.reduce((s, rec, i) => s + (rec.d > 0 ? fullTotals[i] / rec.d / 1000 : 0), 0) / fullBase.length : 0;
+    const avgVol = fullTotals.length > 0 ? fullTotals.reduce((a, b) => a + b, 0) / fullTotals.length : 0;
     const currPeriod = periods[currIdx] || null;
 
     return { curr, currRate, prevRate, pctChange, avgRate, avgVol, lastIsPartial, currIdx, currPeriod, currDays };
@@ -367,10 +369,7 @@
           </div>
           <div class="text-3xl sm:text-4xl font-extrabold text-navy-900">${fmtNum(displayVal)}</div>
           <div class="text-xs text-navy-400 mt-0.5">${displayUnit}</div>
-          <div class="mt-2">${kpis.lastIsPartial
-            ? '<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-sm font-medium bg-navy-100 text-navy-500">Partial ' + (state.view === 'daily' ? 'day' : state.view === 'weekly' ? 'week' : 'month') + ' (' + kpis.currDays + ' days)</span>'
-            : '<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-sm font-semibold ' + pctBg + '">' + pctArrow + ' ' + fmtPct(kpis.pctChange) + ' vs prior ' + (state.view === 'daily' ? 'day' : state.view === 'weekly' ? 'week' : 'month') + '</span>'
-          }</div>
+          <div class="mt-2"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-sm font-medium bg-navy-100 text-navy-500">${state.view === 'daily' ? 'Daily rate' : state.view === 'weekly' ? 'Weekly avg' : 'Monthly avg'}${kpis.lastIsPartial ? ' (partial — ' + kpis.currDays + 'd)' : ''}</span></div>
         </div>
         <div class="stat-card bg-white rounded-xl p-3 sm:p-5 border border-navy-200 border-l-4 border-l-amber-400">
           <div class="flex items-center gap-2 mb-2">
@@ -389,86 +388,120 @@
 
   function generateInsights(timeline, kpis) {
     const { totals, topSuppliers, countrySeriesData, base } = timeline;
-    if (!totals || totals.length < 2) return [];
+    if (!totals || totals.length < 3) return [];
     const crude = isCrude();
     const unit = crude ? getRateUnit() : getUnit();
-    const lastIdx = totals.length - 1;
-    const prevIdx = lastIdx - 1;
-    const lastDays = base[lastIdx] ? base[lastIdx].d : 1;
-    const prevDays = base[prevIdx] ? base[prevIdx].d : 1;
-    const insights = [];
-    const viewLabel = state.view === 'daily' ? 'day' : state.view === 'weekly' ? 'week' : 'month';
-    const countryLabel = state.country.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-    const commodity = state.commodity.toUpperCase();
-
-    // Build period label
-    const currRec = base[lastIdx];
-    const prevRec = base[prevIdx];
-    let currPeriodStr = '', prevPeriodStr = '';
-    if (state.view === 'monthly') {
-      currPeriodStr = new Date(currRec.p + '-01').toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
-      prevPeriodStr = new Date(prevRec.p + '-01').toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
-    } else if (state.view === 'weekly') {
-      currPeriodStr = currRec.p.replace(/^\d+-/, '') + ' (' + new Date(currRec.s).toLocaleDateString('en-GB', { day: '2-digit', month: 'short' }) + ' – ' + new Date(currRec.e).toLocaleDateString('en-GB', { day: '2-digit', month: 'short' }) + ')';
-      prevPeriodStr = prevRec.p.replace(/^\d+-/, '');
-    } else {
-      currPeriodStr = new Date(currRec.s).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
-      prevPeriodStr = new Date(prevRec.s).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
-    }
-
-    const currVal = crude ? toRate(totals[lastIdx], lastDays) : toDisplay(totals[lastIdx]);
-    const prevVal = crude ? toRate(totals[prevIdx], prevDays) : toDisplay(totals[prevIdx]);
     const isPartial = kpis.lastIsPartial;
+    const insights = [];
+    const countryLabel = state.country.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    const commodityLabel = state.commodity === 'crude' ? 'crude oil' : state.commodity.toUpperCase();
 
-    // 1. Headline with explicit period and partial note
-    if (isPartial) {
-      insights.push(`${countryLabel}'s ${commodity} seaborne imports averaged ${currVal.toFixed(1)} ${unit} in ${currPeriodStr} (partial ${viewLabel}, ${lastDays} of ${state.view === 'monthly' ? '~30' : '7'} days recorded). Comparison with the prior full ${viewLabel} (${prevPeriodStr}: ${prevVal.toFixed(1)} ${unit}) is not directly comparable due to incomplete data. Source: Kpler vessel-tracking data.`);
+    // Helper: friendly period label (no week numbers)
+    function periodStr(rec) {
+      if (state.view === 'monthly') return new Date(rec.p + '-01').toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
+      if (state.view === 'weekly') {
+        const s = new Date(rec.s).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+        const e = new Date(rec.e).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+        return s + ' – ' + e;
+      }
+      return new Date(rec.s).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    }
+
+    // Reference period = latest full period; prior = the one before it
+    const refIdx = isPartial ? totals.length - 2 : totals.length - 1;
+    const prevIdx = refIdx - 1;
+    if (refIdx < 1) return [];
+    const refDays = base[refIdx].d || 1;
+    const prevDays = base[prevIdx].d || 1;
+    const refVal = crude ? toRate(totals[refIdx], refDays) : toDisplay(totals[refIdx]);
+    const prevVal = crude ? toRate(totals[prevIdx], prevDays) : toDisplay(totals[prevIdx]);
+    const refLabel = periodStr(base[refIdx]);
+    const prevLabel = periodStr(base[prevIdx]);
+
+    // Use same average as KPI card: exclude partial, average all full periods
+    const displayAvg = crude ? kpis.avgRate : toDisplay(kpis.avgVol);
+
+    // --- Bullet 1: Volume trend ---
+    const changePct = prevVal > 0 ? ((refVal - prevVal) / prevVal * 100) : 0;
+    const dir = changePct >= 0 ? 'up' : 'down';
+    let b1 = `${countryLabel}'s seaborne ${commodityLabel} imports averaged ${refVal.toFixed(1)} ${unit} for ${refLabel}, ${dir} ${Math.abs(changePct).toFixed(0)}% from ${prevVal.toFixed(1)} ${unit} in the prior period (${prevLabel}). The ${state.timeRange === 'all' ? 'all-time' : state.timeRange.toUpperCase()} average stands at ${displayAvg.toFixed(1)} ${unit}.`;
+    if (Math.abs(changePct) > 15) {
+      b1 += ` This sharp move is directly linked to the Strait of Hormuz closure in early March, which has cut roughly 90% of Gulf seaborne transit.`;
+    } else if (Math.abs(changePct) > 5) {
+      b1 += ` This reflects the ongoing supply-chain rerouting since the Hormuz disruption, as buyers pivot to non-Gulf corridors.`;
     } else {
-      const changePct = prevVal > 0 ? ((currVal - prevVal) / prevVal * 100) : 0;
-      const direction = changePct >= 0 ? 'increased' : 'decreased';
-      insights.push(`${countryLabel}'s ${commodity} seaborne imports ${direction} ${Math.abs(changePct).toFixed(1)}% to ${currVal.toFixed(1)} ${unit} in ${currPeriodStr}, compared with ${prevVal.toFixed(1)} ${unit} in ${prevPeriodStr}. ${Math.abs(changePct) > 10 ? 'This significant move reflects the ongoing Strait of Hormuz disruption, which has curtailed ~90% of transit flows since early March (Kpler).' : 'Volumes are broadly stable despite Hormuz disruptions, suggesting successful rerouting via alternative supply corridors.'} Source: Kpler vessel-tracking data.`);
+      b1 += ` Volumes have held close to recent levels, pointing to effective diversification away from Hormuz-dependent supply.`;
     }
+    insights.push(b1);
 
-    // 2. Supply concentration with market context
+    // --- Bullet 2: Supply mix with changes ---
     if (topSuppliers.length >= 2) {
-      const top3 = topSuppliers.slice(0, 3);
-      const top3Vals = top3.map(c => ({
-        name: c,
-        curr: crude ? toRate(countrySeriesData[c][lastIdx] || 0, lastDays) : toDisplay(countrySeriesData[c][lastIdx] || 0),
-      }));
-      const top3Share = currVal > 0 ? (top3Vals.reduce((s, v) => s + v.curr, 0) / currVal * 100).toFixed(0) : 0;
-      const top3Detail = top3Vals.map(v => v.name + ': ' + v.curr.toFixed(1) + ' ' + unit).join('; ');
+      const top = topSuppliers.slice(0, Math.min(5, topSuppliers.length));
+      const hormuzSet = new Set(['Saudi Arabia', 'United Arab Emirates', 'Iraq', 'Kuwait', 'Qatar', 'Bahrain', 'Iran']);
+      const gainers = [];
+      const decliners = [];
+      const details = [];
 
-      // Market context based on country
-      let context = '';
-      if (state.country === 'china') {
-        context = ' China holds ~1.39 billion bbl in strategic reserves (~120 days of cover), providing a buffer. Russian seaborne crude has risen to ~1.8 mb/d, partially offsetting Middle East shortfalls (Kpler, Rystad).';
-      } else if (state.country === 'japan') {
-        context = ' Japan sources ~95% of crude from the Middle East via Hormuz, making it highly exposed. SPR releases of 79.8 mb have been committed under the IEA coordinated action (IEA, S&P Global).';
-      } else if (state.country === 'south_korea') {
-        context = ' South Korea depends on the Middle East for ~70% of crude and significant LNG volumes. Seoul has committed 22.5 mb in SPR releases and is actively sourcing from West Africa and the Americas (Rystad, S&P Global).';
-      } else if (state.country === 'india') {
-        context = ' The Middle East supplied ~40% of India\'s 4.9 mb/d crude imports in 2025. ~30 mb of Russian crude was sitting offshore India at end-Feb, indicating continued Russian supply (Kpler, S&P Global).';
+      for (const c of top) {
+        const curr = crude ? toRate(countrySeriesData[c][refIdx] || 0, refDays) : toDisplay(countrySeriesData[c][refIdx] || 0);
+        const prev = crude ? toRate(countrySeriesData[c][prevIdx] || 0, prevDays) : toDisplay(countrySeriesData[c][prevIdx] || 0);
+        const sh = refVal > 0 ? (curr / refVal * 100).toFixed(0) : 0;
+        const chg = prev > 0 ? ((curr - prev) / prev * 100) : (curr > 0 ? 100 : 0);
+        details.push(`${c} ${curr.toFixed(1)} ${unit} (${sh}%)`);
+        if (chg > 5) gainers.push(`${c} +${chg.toFixed(0)}%`);
+        else if (chg < -5) decliners.push(`${c} ${chg.toFixed(0)}%`);
       }
 
-      insights.push(`Top three suppliers in ${currPeriodStr}: ${top3Detail} — representing ${top3Share}% of total volume.${context}`);
+      let b2 = `Top suppliers for ${refLabel}: ${details.join(', ')}.`;
+      if (gainers.length > 0 || decliners.length > 0) {
+        const parts = [];
+        if (gainers.length > 0) parts.push(`rising: ${gainers.join(', ')}`);
+        if (decliners.length > 0) parts.push(`falling: ${decliners.join(', ')}`);
+        b2 += ` Compared to ${prevLabel} — ${parts.join('; ')}.`;
+      }
+
+      const nonH = top.filter(c => !hormuzSet.has(c));
+      const viaH = top.filter(c => hormuzSet.has(c));
+      if (nonH.length >= 2 && crude) {
+        b2 += ` ${nonH.join(', ')} do not transit Hormuz, underscoring the shift toward non-Gulf supply corridors.`;
+      }
+      if (viaH.length > 0 && crude) {
+        b2 += ` ${viaH.join(' and ')} remain Hormuz-dependent and at risk.`;
+      }
+
+      insights.push(b2);
     }
 
-    // 3. Mix shift with explicit share numbers
-    let maxShift = { country: '', shift: 0, from: 0, to: 0 };
-    if (!isPartial) {
-      for (const c of topSuppliers.slice(0, 5)) {
-        const currShare = currVal > 0 ? ((crude ? toRate(countrySeriesData[c][lastIdx] || 0, lastDays) : toDisplay(countrySeriesData[c][lastIdx] || 0)) / currVal * 100) : 0;
-        const prevShare = prevVal > 0 ? ((crude ? toRate(countrySeriesData[c][prevIdx] || 0, prevDays) : toDisplay(countrySeriesData[c][prevIdx] || 0)) / prevVal * 100) : 0;
-        const shift = currShare - prevShare;
-        if (Math.abs(shift) > Math.abs(maxShift.shift)) {
-          maxShift = { country: c, shift, from: prevShare, to: currShare };
-        }
-      }
-      if (Math.abs(maxShift.shift) >= 3) {
-        const shiftDir = maxShift.shift > 0 ? 'gained' : 'lost';
-        insights.push(`Supply mix shift: ${maxShift.country} ${shiftDir} ${Math.abs(maxShift.shift).toFixed(1)}pp of market share (${maxShift.from.toFixed(1)}% in ${prevPeriodStr} to ${maxShift.to.toFixed(1)}% in ${currPeriodStr}). This aligns with the broader trade-flow reshuffling as buyers diversify away from Hormuz-dependent routes toward Russian, West African, and Latin American barrels (Rystad Energy).`);
-      }
+    // --- Bullet 3: Strategic outlook ---
+    const crudeOutlooks = {
+      china: `With approximately 1.39 billion barrels in strategic reserves and diversified supply from Russia, Brazil, and West Africa, China has the strongest buffer among major importers. The key risk is a prolonged crisis beyond Q2, when refinery feedstock mismatches could emerge as medium-sour Gulf-grade substitutes narrow.`,
+      india: `India is significantly exposed — the Middle East historically supplies around 40% of its crude. Russian barrels arriving via non-Hormuz routes provide partial relief, but India's limited SPR capacity means prolonged disruption would translate directly into higher import costs and fiscal pressure.`,
+      japan: `Japan faces acute vulnerability, with roughly 95% of its crude historically sourced from the Middle East via Hormuz. Tokyo has committed 79.8 million barrels in SPR releases under the IEA action, but with minimal pipeline alternatives and limited refinery flexibility for non-Gulf grades, it carries the highest supply-security risk among major importers.`,
+      south_korea: `South Korea depends on the Middle East for approximately 70% of crude and a significant share of LNG. Seoul has committed 22.5 million barrels in SPR releases and is actively sourcing from West Africa and the Americas. Korean refiners can process a wide range of crude grades, providing some flexibility, but sustained disruption would strain petrochemical feedstock supply.`,
+      thailand: `Thailand imports modest crude volumes with a mixed supply base. The Hormuz disruption has limited direct impact on shipments but is driving benchmark prices higher, raising domestic fuel costs and widening the current account deficit.`,
+      vietnam: `Vietnam is a smaller crude importer with diversified sources. The impact is primarily indirect — through higher global crude prices — rather than a direct supply disruption to its refineries.`,
+    };
+    const lngOutlooks = {
+      china: `China's LNG imports are partially Hormuz-exposed via Qatari cargoes. However, long-term contracts with Australia, the US, and Mozambique provide diversification. Spot LNG prices have spiked, incentivising coal-to-gas switching deferrals.`,
+      japan: `Japan is the world's largest LNG importer and heavily reliant on Qatari supply transiting Hormuz. With Qatar's Ras Laffan offline, Japan is scrambling for spot cargoes from the US, Australia, and Papua New Guinea at significantly elevated prices.`,
+      south_korea: `South Korea's LNG supply is diversified across Qatar, Australia, and the US. The Hormuz closure has reduced Qatari deliveries, but Korean buyers have secured additional spot cargoes to cover near-term demand.`,
+      india: `India's growing LNG demand faces higher costs as Qatari cargoes are disrupted. Buyers are pivoting to US and African spot cargoes, but at steep premiums that pressure fertiliser and power sector economics.`,
+    };
+    const lpgOutlooks = {
+      china: `China is the world's largest LPG importer. Middle East supply — particularly from Saudi Arabia and UAE — transits Hormuz and is severely disrupted. Buyers are sourcing US LPG via the Panama Canal at higher freight costs.`,
+      india: `India depends heavily on Middle Eastern LPG for cooking fuel subsidies. The Hormuz disruption is forcing emergency tenders for US and African cargoes, with fiscal implications for the subsidy programme.`,
+      japan: `Japan's LPG imports are partially exposed to the Hormuz closure. Diversified sourcing from the US and Australia provides a buffer, though delivered costs have risen sharply.`,
+      south_korea: `South Korea's petrochemical sector relies on LPG as a naphtha substitute. Hormuz disruption is tightening feedstock availability and pushing crackers toward more expensive alternatives.`,
+    };
+
+    const outlookMap = state.commodity === 'crude' ? crudeOutlooks : state.commodity === 'lng' ? lngOutlooks : lpgOutlooks;
+    if (outlookMap[state.country]) {
+      insights.push(outlookMap[state.country]);
+    }
+
+    // Pipeline flow annotation for China crude
+    if (state.country === 'china' && state.commodity === 'crude') {
+      insights.push('<strong>Pipeline flows included:</strong> Data includes estimated pipeline crude — ESPO (Russia→China, ~600 kb/d), Kazakhstan-China (~220 kb/d), and Myanmar-China (~200 kb/d). Combined ~1,020 kb/d of pipeline crude supplements seaborne imports. These pipelines bypass the Strait of Hormuz entirely.');
     }
 
     return insights;
@@ -487,8 +520,8 @@
           </svg>
           <h4 class="text-base font-bold text-amber-900">Key Insights</h4>
         </div>
-        <ul class="space-y-1.5">
-          ${insights.map(i => `<li class="flex items-start gap-2 text-base text-amber-800 leading-relaxed"><span class="mt-2 w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0"></span>${i}</li>`).join('')}
+        <ul class="space-y-3">
+          ${insights.map(text => `<li class="text-sm text-amber-900 leading-relaxed">${text}</li>`).join('')}
         </ul>
       </div>
     `;
@@ -518,7 +551,7 @@
         ${crude ? `
         <div class="mb-6">
           <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5">
-            <h3 class="text-lg font-bold text-navy-800 mb-0.5" id="chart-rate-title">Daily Import Rate</h3>
+            <h3 class="text-lg font-bold text-navy-800 mb-0.5" id="chart-rate-title">${state.view === 'daily' ? 'Daily Import Rate' : state.view === 'weekly' ? 'Weekly Import Rate' : 'Monthly Import Rate'}</h3>
             <p class="text-xs text-navy-400 mb-3">Average daily rate per period (${rateUnit})</p>
             <div class="chart-container">
               <canvas id="chart-daily-rate"></canvas>
