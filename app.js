@@ -654,6 +654,18 @@ function renderMarketNews() {
   const pctReleased = ((d.totalReleased / d.totalCommitted) * 100).toFixed(1);
   const daysSinceAnnouncement = Math.floor((new Date(d.asOf) - new Date(d.announced)) / 86400000);
 
+  // Compute released crude vs products from country-level data
+  let releasedCrude = 0, releasedProducts = 0;
+  d.countries.forEach(c => {
+    if (c.released > 0 && c.committed > 0) {
+      const crudeRatio = c.crude / c.committed;
+      releasedCrude += c.released * crudeRatio;
+      releasedProducts += c.released * (1 - crudeRatio);
+    }
+  });
+  releasedCrude = +releasedCrude.toFixed(1);
+  releasedProducts = +releasedProducts.toFixed(1);
+
   // Regional aggregation
   const regions = {};
   d.countries.forEach(c => {
@@ -688,16 +700,28 @@ function renderMarketNews() {
           <div class="text-xs font-semibold text-navy-500 uppercase tracking-wider mb-1">Total Committed</div>
           <div class="text-3xl font-extrabold text-navy-900">${d.totalCommitted}</div>
           <div class="text-sm text-navy-400">million barrels</div>
+          <div class="flex items-center gap-2 mt-2 text-xs">
+            <span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-amber-50 text-amber-700 font-semibold">${d.totalCrude} crude</span>
+            <span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-700 font-semibold">${d.totalProducts} refined products</span>
+          </div>
         </div>
         <div class="bg-white rounded-xl p-4 border border-navy-200 shadow-sm">
           <div class="text-xs font-semibold text-navy-500 uppercase tracking-wider mb-1">Released So Far</div>
           <div class="text-3xl font-extrabold text-emerald-600">~${d.totalReleased}</div>
           <div class="text-sm text-navy-400">million barrels (${pctReleased}%)</div>
+          <div class="flex items-center gap-2 mt-2 text-xs">
+            <span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-amber-50 text-amber-700 font-semibold">${releasedCrude} crude</span>
+            <span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-700 font-semibold">${releasedProducts} refined products</span>
+          </div>
         </div>
         <div class="bg-white rounded-xl p-4 border border-navy-200 shadow-sm">
-          <div class="text-xs font-semibold text-navy-500 uppercase tracking-wider mb-1">Crude / Products</div>
-          <div class="text-3xl font-extrabold text-sky-600">${d.totalCrude}</div>
-          <div class="text-sm text-navy-400">mb crude + ${d.totalProducts} mb products</div>
+          <div class="text-xs font-semibold text-navy-500 uppercase tracking-wider mb-1">Crude / Refined Products</div>
+          <div class="text-3xl font-extrabold text-sky-600">${d.totalCrude}<span class="text-base font-bold text-navy-400"> / </span><span class="text-2xl text-indigo-600">${d.totalProducts}</span></div>
+          <div class="text-sm text-navy-400">mb crude / mb refined products</div>
+          <div class="flex items-center gap-2 mt-2 text-xs">
+            <span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-amber-50 text-amber-700 font-semibold">${((d.totalCrude / d.totalCommitted) * 100).toFixed(0)}% crude</span>
+            <span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-700 font-semibold">${((d.totalProducts / d.totalCommitted) * 100).toFixed(0)}% refined products</span>
+          </div>
         </div>
         <div class="bg-white rounded-xl p-4 border border-navy-200 shadow-sm">
           <div class="text-xs font-semibold text-navy-500 uppercase tracking-wider mb-1">Release Window</div>
@@ -715,7 +739,6 @@ function renderMarketNews() {
         <div class="w-full bg-navy-100 rounded-full h-4 overflow-hidden">
           <div class="bg-gradient-to-r from-sky-500 to-emerald-500 h-4 rounded-full transition-all" style="width: ${pctReleased}%"></div>
         </div>
-        <p class="text-xs text-navy-400 mt-2">${d.trigger}</p>
       </div>
 
       <!-- Regional Breakdown -->
@@ -762,7 +785,7 @@ function renderMarketNews() {
                 <th class="px-4 py-3 font-semibold">Country</th>
                 <th class="px-4 py-3 font-semibold text-right">Committed (mb)</th>
                 <th class="px-4 py-3 font-semibold text-right">Crude (mb)</th>
-                <th class="px-4 py-3 font-semibold text-right hidden sm:table-cell">Products (mb)</th>
+                <th class="px-4 py-3 font-semibold text-right hidden sm:table-cell">Refined Products (mb)</th>
                 <th class="px-4 py-3 font-semibold text-right">Released (mb)</th>
                 <th class="px-4 py-3 font-semibold text-right">Progress</th>
                 <th class="px-4 py-3 font-semibold hidden md:table-cell">Release Start</th>
@@ -968,6 +991,7 @@ function updateStats(activeTab) {
       break;
     case 'import-flows':
     case 'export-flows':
+    case 'market-prices':
     // case 'shipping': // DISABLED
       // Stats handled by respective JS modules — hide the default stats bar
       container.innerHTML = '';

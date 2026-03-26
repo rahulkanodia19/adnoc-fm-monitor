@@ -118,7 +118,7 @@
 
   function filterByTimeRange(records) {
     if (state.timeRange === 'all') return records;
-    const now = new Date('2026-03-25');
+    const now = new Date();
     const cutoff = new Date(now);
     const weeks = { '1w': 1, '2w': 2, '3w': 3 };
     const months = { '1m': 1, '3m': 3, '6m': 6, '12m': 12 };
@@ -260,7 +260,7 @@
   }
 
   function getRateUnit() {
-    return 'mbbl/d';
+    return state.commodity === 'crude' ? 'mbbl/d' : 'Mt/d';
   }
 
   function toDisplay(val) {
@@ -428,6 +428,7 @@
     for (let i = 0; i <= endIdx; i++) {
       fullVals.push(val(totals[i], base[i].d || 1));
     }
+    if (fullVals.length === 0) return insights;
     const displayAvg = crude ? kpis.avgRate : toDisplay(kpis.avgVol);
     const minVal = Math.min(...fullVals);
     const maxVal = Math.max(...fullVals);
@@ -471,14 +472,12 @@
       const rising = [];
       const falling = [];
       const details = [];
-      let topTotal = 0;
 
       for (const c of top) {
         const curr = val(countrySeriesData[c][refIdx] || 0, refDays);
         const prev = val(countrySeriesData[c][prevIdx] || 0, prevDays);
         const diff = curr - prev;
         const pctOfTotal = refVal > 0 ? (curr / refVal * 100) : 0;
-        topTotal += curr;
         details.push(`${c} ${curr.toFixed(1)} ${unit} (${pctOfTotal.toFixed(0)}%)`);
         if (Math.abs(diff) >= 0.05) {
           const movePct = prev > 0 ? Math.abs(diff / prev * 100).toFixed(0) : '—';
@@ -543,7 +542,7 @@
       if (Math.abs(partialVsRef) > 10) parts.push(`the current incomplete period (${partialDays} days) is tracking ${partialVsRef > 0 ? 'above' : 'below'} the prior full period by ${Math.abs(partialVsRef).toFixed(0)}%`);
     }
 
-    b4 += parts.join('. ') + '.';
+    b4 += parts.map((p, i) => i === 0 ? p : p.charAt(0).toUpperCase() + p.slice(1)).join('. ') + '.';
     insights.push(b4);
 
     // Pipeline flow annotation for China crude
@@ -584,54 +583,30 @@
   }
 
   // Async Bullet 5: Live market context from web sources
+  // Async Bullet 5: Market context from sync-populated static data
+  let ifNewsCache = null;
   let ifNewsFetchId = 0;
-  async function fetchNewsInsight(timeline, kpis) {
+  async function fetchNewsInsight() {
     const fetchId = ++ifNewsFetchId;
     const snapshotKey = state.country + '_' + state.commodity;
-    const crude = isCrude();
-
-    // Compute trend from the same data generateInsights uses
-    let trend = 'stable';
-    const { totals, base } = timeline;
-    if (totals && totals.length >= 3) {
-      const isPartial = kpis.lastIsPartial;
-      const endIdx = isPartial ? totals.length - 2 : totals.length - 1;
-      const prevIdx = endIdx - 1;
-      if (endIdx >= 1) {
-        const refVal = crude ? toRate(totals[endIdx], base[endIdx].d || 1) : toDisplay(totals[endIdx]);
-        const prevVal = crude ? toRate(totals[prevIdx], base[prevIdx].d || 1) : toDisplay(totals[prevIdx]);
-        const changePct = prevVal > 0 ? ((refVal - prevVal) / prevVal * 100) : 0;
-        const displayAvg = crude ? kpis.avgRate : toDisplay(kpis.avgVol);
-        const devFromAvg = displayAvg > 0 ? ((refVal - displayAvg) / displayAvg * 100) : 0;
-        // 3-period streak
-        let streak = 0;
-        if (endIdx >= 2) {
-          const r0 = crude ? toRate(totals[endIdx - 2], base[endIdx - 2].d || 1) : toDisplay(totals[endIdx - 2]);
-          const r1 = crude ? toRate(totals[endIdx - 1], base[endIdx - 1].d || 1) : toDisplay(totals[endIdx - 1]);
-          const r2 = refVal;
-          if (r2 > r1 && r1 > r0) streak = 1;
-          else if (r2 < r1 && r1 < r0) streak = -1;
-        }
-        if (streak === 1 || changePct > 10) trend = 'up';
-        else if (streak === -1 || changePct < -10) trend = 'down';
-        else if (Math.abs(changePct) > 20) trend = 'volatile';
-      }
-    }
 
     try {
-      const resp = await fetch(`/api/energy-news?country=${state.country}&commodity=${state.commodity}&direction=import&trend=${trend}`);
-      if (!resp.ok) throw new Error('HTTP ' + resp.status);
-      const data = await resp.json();
+      if (!ifNewsCache) {
+        const resp = await fetch('/energy-news-data.json');
+        if (!resp.ok) throw new Error('HTTP ' + resp.status);
+        ifNewsCache = await resp.json();
+      }
 
-      // Race condition guard: check state hasn't changed during fetch
+      // Race condition guard
       if (fetchId !== ifNewsFetchId) return;
       if (snapshotKey !== state.country + '_' + state.commodity) return;
 
       const el = document.getElementById('if-insight-news');
       if (!el) return;
 
-      if (data.headline) {
-        el.innerHTML = `<strong>Market context:</strong> ${data.headline}`;
+      const headline = ifNewsCache[snapshotKey];
+      if (headline) {
+        el.innerHTML = `<strong>Market context:</strong> ${headline}`;
         el.classList.remove('opacity-60');
         el.style.transition = 'opacity 0.3s';
         el.style.opacity = '1';
@@ -639,7 +614,6 @@
         el.remove();
       }
     } catch (err) {
-      console.warn('Import news insight fetch failed:', err.message);
       const el = document.getElementById('if-insight-news');
       if (el) el.remove();
     }
@@ -1157,7 +1131,7 @@
 
     document.getElementById('if-kpis').innerHTML = renderKPICards(kpis);
     renderInsights(timeline, kpis);
-    fetchNewsInsight(timeline, kpis);
+    fetchNewsInsight();
     drawCharts(timeline);
     renderSupplierTable(timeline);
     bindControlEvents();

@@ -31,9 +31,9 @@ echo "[sync] Web search sync complete."
 
 # 2. Commit and push if data changed
 echo "[sync] Checking for changes..."
-if ! git -C "$PROJECT_DIR" diff --quiet data.js data-previous.json sync-log.json 2>/dev/null; then
+if ! git -C "$PROJECT_DIR" diff --quiet data.js data-previous.json sync-log.json energy-news-data.json 2>/dev/null; then
   TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
-  git -C "$PROJECT_DIR" add data.js data-previous.json sync-log.json
+  git -C "$PROJECT_DIR" add data.js data-previous.json sync-log.json energy-news-data.json
   git -C "$PROJECT_DIR" commit -m "chore: daily data sync ($TIMESTAMP)"
   git -C "$PROJECT_DIR" push
   echo "[sync] Pushed to GitHub successfully."

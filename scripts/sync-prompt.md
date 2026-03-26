@@ -110,6 +110,72 @@ When data comes from a premium provider citation, note it in the source title. E
 - "Gulf crude exports drop 4 mb/d — Bloomberg citing Vortexa"
 - "Aramco production cut to 8.5 mb/d — FT citing Rystad Energy"
 
+## Step 3b: Update energy news context for Import/Export Flow insights
+
+Search for the latest market-moving developments affecting energy commodity flows for each country tracked in the dashboard. Write results to `energy-news-data.json`.
+
+### Countries to cover
+
+**Exporters (priority):** Saudi Arabia, UAE, Iraq, Qatar, Russia, United States, Kuwait, Iran, Oman, Bahrain
+**Importers (priority):** China, India, Japan, South Korea, Thailand, Vietnam
+
+### What to search for (per country)
+
+Run 8-10 web searches covering:
+- OPEC+ production quota decisions and compliance
+- Sanctions, tariffs, or trade restrictions affecting flows
+- Refinery outages, maintenance shutdowns, or capacity changes
+- Shipping/logistics disruptions (Hormuz, Suez, weather events)
+- Demand shifts (economic indicators, seasonal patterns, policy changes)
+- Supply developments (new fields online, pipeline changes, production ramp-ups)
+- LNG contract awards, spot market dynamics, regasification utilisation
+- LPG feedstock switching, petrochemical demand shifts
+
+### Search queries to run
+
+At minimum:
+- `"Saudi Arabia" OR "Saudi Aramco" crude oil exports 2026`
+- `UAE OR ADNOC crude LNG exports 2026`
+- `Iraq oil exports Basra pipeline Ceyhan 2026`
+- `Qatar LNG exports Ras Laffan 2026`
+- `Russia crude oil exports sanctions Asia 2026`
+- `US crude LNG exports Gulf Coast 2026`
+- `China crude oil imports refinery demand 2026`
+- `India crude LNG imports 2026`
+- `Japan South Korea crude LNG imports 2026`
+- `OPEC+ production cuts exports crude 2026`
+
+### Output format
+
+Write `energy-news-data.json` with this structure:
+```json
+{
+  "lastUpdated": "<ISO timestamp>",
+  "saudi_arabia_crude": "<one-line CEO-level headline citing source>",
+  "saudi_arabia_lng": "<one-line headline>",
+  "saudi_arabia_lpg": "<one-line headline>",
+  "china_crude": "<one-line headline>",
+  ...
+}
+```
+
+### Rules for headlines
+- Each headline should be **one sentence**, factual, and cite the source (e.g., "Reuters", "Kpler", "Platts")
+- Focus on the **most market-moving development** for that country+commodity in the last 7 days
+- If no recent news exists for a specific country+commodity, keep the existing entry unchanged
+- Do NOT fabricate news — if nothing found, preserve the current text
+- Use CEO-appropriate language: concise, no jargon, focused on impact
+- All 48 keys must be present (16 countries x 3 commodities)
+
+### Priority order
+1. Saudi Arabia, UAE, Iraq, Qatar (crude) — highest priority
+2. Russia, US (crude, LNG) — high priority
+3. China, India, Japan, South Korea (crude, LNG) — high priority
+4. All countries (LPG) — medium priority
+5. Thailand, Vietnam, Bahrain, Oman, Kuwait, Iran — lower priority (keep existing if nothing new)
+
+---
+
 ## Step 4: Update data.js
 
 Update the `data.js` file with any new findings. Preserve the exact same schema and variable structure:

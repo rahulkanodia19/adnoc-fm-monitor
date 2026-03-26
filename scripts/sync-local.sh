@@ -83,10 +83,10 @@ When citing data obtained via browser from premium sources, note the source clea
 
 # 3. Commit and push if data changed
 echo "[sync-local] Checking for changes..."
-if ! git -C "$PROJECT_DIR" diff --quiet data.js data-previous.json sync-log.json 2>/dev/null; then
+if ! git -C "$PROJECT_DIR" diff --quiet data.js data-previous.json sync-log.json energy-news-data.json 2>/dev/null; then
   echo "[sync-local] Changes detected, committing and pushing..."
   TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
-  git -C "$PROJECT_DIR" add data.js data-previous.json sync-log.json
+  git -C "$PROJECT_DIR" add data.js data-previous.json sync-log.json energy-news-data.json
   git -C "$PROJECT_DIR" commit -m "chore: local data sync with premium sources ($TIMESTAMP)"
   git -C "$PROJECT_DIR" push
   echo "[sync-local] Pushed to GitHub successfully."

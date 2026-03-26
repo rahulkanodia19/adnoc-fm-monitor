@@ -166,6 +166,12 @@ a.source-link:hover {
   transition: all 0.15s ease;
 }
 
+/* Market Prices control buttons */
+#market-prices-content [data-control] {
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
 /* Chart card hover lift */
 .chart-card {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -186,7 +192,8 @@ a.source-link:hover {
 
 /* Control button focus ring */
 #import-flows-content [data-control]:focus,
-#export-flows-content [data-control]:focus {
+#export-flows-content [data-control]:focus,
+#market-prices-content [data-control]:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.4);
 }

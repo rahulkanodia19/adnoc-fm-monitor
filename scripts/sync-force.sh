@@ -101,9 +101,9 @@ fi
 echo ""
 echo "[sync-force] ── Step 3/3: Commit and Push ──"
 
-if ! git -C "$PROJECT_DIR" diff --quiet data.js data-previous.json sync-log.json 2>/dev/null; then
+if ! git -C "$PROJECT_DIR" diff --quiet data.js data-previous.json sync-log.json energy-news-data.json 2>/dev/null; then
   TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
-  git -C "$PROJECT_DIR" add data.js data-previous.json sync-log.json
+  git -C "$PROJECT_DIR" add data.js data-previous.json sync-log.json energy-news-data.json
   git -C "$PROJECT_DIR" commit -m "chore: full data sync — web + browser ($TIMESTAMP)"
   git -C "$PROJECT_DIR" push
   echo "[sync-force] Pushed to GitHub successfully."
