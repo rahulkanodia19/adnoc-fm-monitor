@@ -232,9 +232,9 @@ function renderExecSummary() {
     'Saudi Arabia': 'Ras Tanura shut then reopened',
     'Iran': 'Tehran Refinery destroyed; BA curtailed',
     'Kuwait': 'Ahmadi + Abdullah hit by drones',
-    'United Arab Emirates': 'Ruwais-2 shut (417 kb/d); 300 kb/d available',
+    'United Arab Emirates': 'Ruwais-2 shut (417 kb/d); 805 kb/d available',
     'Bahrain': 'Sitra FM; fully offline',
-    'Iraq': 'No strikes; domestic runs only',
+    'Iraq': 'Lanaz struck; storage-constrained throughput',
     'Israel': 'Haifa damaged but mostly online',
     'Qatar': 'Laffan 1+2 offline with Ras Laffan',
     'Oman': 'Outside Hormuz; operational'
@@ -992,6 +992,7 @@ function updateStats(activeTab) {
     case 'import-flows':
     case 'export-flows':
     case 'market-prices':
+    case 'soh-tracker':
     // case 'shipping': // DISABLED
       // Stats handled by respective JS modules — hide the default stats bar
       container.innerHTML = '';

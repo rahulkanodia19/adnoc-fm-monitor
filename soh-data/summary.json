@@ -1,0 +1,18 @@
+{
+  "insideTotal": 743,
+  "insideBallast": 354,
+  "insideLaden": 388,
+  "outsideTotal": 356,
+  "outsideBallast": 240,
+  "outsideLaden": 116,
+  "adnocCount": 13,
+  "totalVessels": 1099,
+  "transitCount": 16,
+  "syncTimestamp": "2026-03-27T00:09:39.686Z",
+  "deltaLabel": "24h",
+  "deltas": {
+    "insideDelta": 0,
+    "outsideDelta": 0,
+    "adnocDelta": 0
+  }
+}

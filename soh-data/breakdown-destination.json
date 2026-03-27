@@ -1,0 +1,738 @@
+{
+  "data": [
+    {
+      "label": "Unknown",
+      "total": 696,
+      "ballast": 404,
+      "laden": 291
+    },
+    {
+      "label": "Fujairah",
+      "total": 60,
+      "ballast": 37,
+      "laden": 23
+    },
+    {
+      "label": "Sohar",
+      "total": 27,
+      "ballast": 18,
+      "laden": 9
+    },
+    {
+      "label": "Sharjah",
+      "total": 23,
+      "ballast": 15,
+      "laden": 8
+    },
+    {
+      "label": "China",
+      "total": 16,
+      "ballast": 8,
+      "laden": 8
+    },
+    {
+      "label": "Mina Al-ahmadi",
+      "total": 16,
+      "ballast": 5,
+      "laden": 11
+    },
+    {
+      "label": "Oman",
+      "total": 14,
+      "ballast": 8,
+      "laden": 6
+    },
+    {
+      "label": "Khor Al Zubair Port",
+      "total": 12,
+      "ballast": 7,
+      "laden": 5
+    },
+    {
+      "label": "Dubai Area",
+      "total": 11,
+      "ballast": 4,
+      "laden": 7
+    },
+    {
+      "label": "Karachi",
+      "total": 11,
+      "ballast": 3,
+      "laden": 8
+    },
+    {
+      "label": "Jebel Ali",
+      "total": 10,
+      "ballast": 2,
+      "laden": 8
+    },
+    {
+      "label": "Singapore",
+      "total": 10,
+      "ballast": 1,
+      "laden": 9
+    },
+    {
+      "label": "United Arab Emirates",
+      "total": 9,
+      "ballast": 9,
+      "laden": 0
+    },
+    {
+      "label": "Ruwais",
+      "total": 9,
+      "ballast": 7,
+      "laden": 2
+    },
+    {
+      "label": "Mina' Saqr",
+      "total": 7,
+      "ballast": 4,
+      "laden": 3
+    },
+    {
+      "label": "Bandar Imam Khomeini",
+      "total": 7,
+      "ballast": 0,
+      "laden": 7
+    },
+    {
+      "label": "Hamriya",
+      "total": 5,
+      "ballast": 2,
+      "laden": 3
+    },
+    {
+      "label": "Ras Laffan",
+      "total": 5,
+      "ballast": 2,
+      "laden": 3
+    },
+    {
+      "label": "Mideast Gulf",
+      "total": 4,
+      "ballast": 1,
+      "laden": 3
+    },
+    {
+      "label": "Umm Qasr South",
+      "total": 4,
+      "ballast": 0,
+      "laden": 4
+    },
+    {
+      "label": "Dibba Port",
+      "total": 4,
+      "ballast": 4,
+      "laden": 0
+    },
+    {
+      "label": "Muscat",
+      "total": 4,
+      "ballast": 4,
+      "laden": 0
+    },
+    {
+      "label": "Eastern Asia",
+      "total": 3,
+      "ballast": 1,
+      "laden": 2
+    },
+    {
+      "label": "Kuwait",
+      "total": 3,
+      "ballast": 3,
+      "laden": 0
+    },
+    {
+      "label": "Santos",
+      "total": 3,
+      "ballast": 2,
+      "laden": 1
+    },
+    {
+      "label": "Dahej",
+      "total": 3,
+      "ballast": 1,
+      "laden": 2
+    },
+    {
+      "label": "Dubai Industrial Port",
+      "total": 3,
+      "ballast": 3,
+      "laden": 0
+    },
+    {
+      "label": "Duqm",
+      "total": 3,
+      "ballast": 3,
+      "laden": 0
+    },
+    {
+      "label": "Chittagong",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
+    },
+    {
+      "label": "Yeosu",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
+    },
+    {
+      "label": "Jubail Industrial Port",
+      "total": 2,
+      "ballast": 2,
+      "laden": 0
+    },
+    {
+      "label": "Khalifa Industrial Zone",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
+    },
+    {
+      "label": "Mombasa",
+      "total": 2,
+      "ballast": 1,
+      "laden": 1
+    },
+    {
+      "label": "Zhu Hai",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
+    },
+    {
+      "label": "Dubai Light.",
+      "total": 2,
+      "ballast": 2,
+      "laden": 0
+    },
+    {
+      "label": "Ulsan",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
+    },
+    {
+      "label": "Daesan",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
+    },
+    {
+      "label": "Quanzhou",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
+    },
+    {
+      "label": "Saudi Arabia",
+      "total": 2,
+      "ballast": 1,
+      "laden": 1
+    },
+    {
+      "label": "Shuwaikh",
+      "total": 2,
+      "ballast": 1,
+      "laden": 1
+    },
+    {
+      "label": "Ras Al Khaimah",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
+    },
+    {
+      "label": "Tunisia",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
+    },
+    {
+      "label": "King Abdulaziz Port",
+      "total": 2,
+      "ballast": 1,
+      "laden": 1
+    },
+    {
+      "label": "Malacca",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
+    },
+    {
+      "label": "India",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
+    },
+    {
+      "label": "Visakhapatnam",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
+    },
+    {
+      "label": "Paradip",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
+    },
+    {
+      "label": "Rayong",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
+    },
+    {
+      "label": "Chiba",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
+    },
+    {
+      "label": "Sitra",
+      "total": 2,
+      "ballast": 2,
+      "laden": 0
+    },
+    {
+      "label": "Bahrain",
+      "total": 2,
+      "ballast": 2,
+      "laden": 0
+    },
+    {
+      "label": "Trieste",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Oita",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Sirri Island",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Rotterdam",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Tomakomai",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Maoming",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Fos",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Zhanjiang",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Geelong",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Cilacap",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Ras Tanura",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Iraq",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Sikka",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Port Klang",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Bandar Abbas",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "South Africa",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Kiire",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Galle",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "New Hamad",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Corinth",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Zhoushan",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Bandar Bushehr",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Al-jubail Anchorage",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Hazira",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Djibouti",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Saqr",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Assaluyeh",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Khor Fakkan Anchorage",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Saleef",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Das Island",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Suez Light.",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Guangzhou",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Sohar Anchorage",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Shanghai Area",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Mundra",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Dongying",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Suez Canal",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Tanjung Bara",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Vadinar",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Mesaieed",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Singapore Republic",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Thames",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Nagoya",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Port Louis",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Kandla",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Binhai",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Lome",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Okha Anchorage",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Mina Saud",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Ain Sukhna",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Japan",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Pengerang",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Al Basrah",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Ningbo",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Port Said",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Richards Bay",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Africa",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Maputo",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Thailand",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Qingdao",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Fujairah Light.",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Ko Sichang",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Qatar",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Al Zour",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Montevideo",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Coatzacoalcos",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Ningbo Area",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Ras Al Khair",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Indonesia",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Zhangjiagang",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Iran",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    }
+  ],
+  "total": 1099,
+  "syncTimestamp": "2026-03-27T00:09:39.686Z"
+}

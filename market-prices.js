@@ -10,13 +10,13 @@
   // ---------- Constants ----------
 
   const COMMODITIES = {
-    wti:      { label: 'WTI Crude',       category: 'crude',   unit: '$/bbl', color: '#0ea5e9', apiCode: 'WTI_USD' },
-    brent:    { label: 'Brent Crude',     category: 'crude',   unit: '$/bbl', color: '#f59e0b', apiCode: 'BRENT_CRUDE_USD' },
-    murban:   { label: 'Murban Crude',    category: 'crude',   unit: '$/bbl', color: '#10b981', apiCode: 'MURBAN_CRUDE_USD' },
-    gasoline: { label: 'Gasoline (RBOB)', category: 'product', unit: '$/bbl', color: '#ef4444', apiCode: 'GASOLINE_RBOB_USD' },
-    diesel:   { label: 'Diesel (ULSD)',   category: 'product', unit: '$/bbl', color: '#8b5cf6', apiCode: 'HEATING_OIL_USD' },
-    jetfuel:  { label: 'Jet Fuel',        category: 'product', unit: '$/bbl', color: '#ec4899', apiCode: 'JET_FUEL_USD' },
-    naphtha:  { label: 'Naphtha',         category: 'product', unit: '$/bbl', color: '#06b6d4', apiCode: 'NAPHTHA_USD' },
+    wti:      { label: 'WTI Crude',       category: 'crude',   unit: '$/bbl',   color: '#0ea5e9' },
+    brent:    { label: 'Dated Brent',     category: 'crude',   unit: '$/bbl',   color: '#f59e0b' },
+    murban:   { label: 'Murban Crude',    category: 'crude',   unit: '$/bbl',   color: '#10b981' },
+    gasoline: { label: 'Gasoline 95 RON', category: 'product', unit: '$/bbl',   color: '#ef4444' },
+    jetfuel:  { label: 'Jet Kero',        category: 'product', unit: '$/bbl',   color: '#ec4899' },
+    gasoil:   { label: 'Gasoil 10 ppm',   category: 'product', unit: '$/bbl',   color: '#8b5cf6' },
+    lng:      { label: 'LNG JKM Spot',    category: 'lng',     unit: '$/MMBtu', color: '#06b6d4' },
   };
 
   const SHARED_LEGEND = {
@@ -57,20 +57,21 @@
   // ---------- Helpers ----------
 
   function getVisibleCommodities() {
+    // LNG has its own dedicated chart — exclude it from the main chart
     return Object.entries(COMMODITIES)
-      .filter(([, cfg]) => state.category === 'all' || cfg.category === state.category)
+      .filter(([, cfg]) => cfg.category !== 'lng' && (state.category === 'all' || cfg.category === state.category))
       .map(([key]) => key);
   }
 
   function getPrimaryCommodity() {
-    if (state.category === 'crude') return 'wti';
+    if (state.category === 'crude') return 'murban';
     if (state.category === 'product') return 'gasoline';
     return 'brent';
   }
 
   function filterHistoryByRange(history) {
     if (!history || history.length === 0) return [];
-    const now = new Date('2026-03-26');
+    const now = new Date('2026-03-27');
     const cutoff = new Date(now);
     const ranges = { '1w': 7, '1m': 30, '3m': 90, '6m': 180, '1y': 365 };
     cutoff.setDate(cutoff.getDate() - (ranges[state.timeRange] || 90));
@@ -86,17 +87,17 @@
   }
 
   function fmtPrice(val) {
-    return '$' + val.toFixed(2);
+    return '$' + val.toFixed(1);
   }
 
   function fmtChange(val) {
     const sign = val >= 0 ? '+' : '';
-    return sign + val.toFixed(2);
+    return sign + val.toFixed(1);
   }
 
   function fmtPct(val) {
     const sign = val >= 0 ? '+' : '';
-    return sign + val.toFixed(2) + '%';
+    return sign + val.toFixed(1) + '%';
   }
 
   // ---------- Data Fetching ----------
@@ -111,7 +112,7 @@
     renderLoading();
 
     try {
-      const resp = await fetch('/api/market-prices');
+      const resp = await fetch('/api/market-prices?v=' + Date.now());
       if (!resp.ok) throw new Error('HTTP ' + resp.status);
       const data = await resp.json();
       state.data = data;
@@ -125,7 +126,7 @@
       // Fallback to seed data
       if (!state.data) {
         try {
-          const resp = await fetch('/market-prices-seed.json');
+          const resp = await fetch('/market-prices-seed.json?v=' + Date.now());
           if (resp.ok) {
             state.data = await resp.json();
             state.data._source = 'seed-fallback';
@@ -329,7 +330,7 @@
             </svg>
             Market Prices
           </h2>
-          <p class="text-sm text-navy-500 mt-0.5">Key crude grades & refined product spot prices | Source: OilPriceAPI</p>
+          <p class="text-sm text-navy-500 mt-0.5">Key crude grades, refined products & LNG spot prices | Source: S&P Global Platts</p>
         </div>
 
         <div id="mp-source-banner"></div>
@@ -345,17 +346,16 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-6">
-          <div id="mp-spread-wrap" class="bg-white rounded-xl border border-navy-200 shadow-sm p-3 sm:p-5">
-            <h3 class="text-sm sm:text-base font-bold text-navy-800 mb-3">Brent-WTI Spread</h3>
-            <div class="chart-container-sm">
-              <canvas id="mp-chart-spread"></canvas>
-            </div>
-          </div>
+        <div class="mb-6">
           <div class="bg-white rounded-xl border border-navy-200 shadow-sm p-3 sm:p-5">
-            <h3 class="text-sm sm:text-base font-bold text-navy-800 mb-3">Daily Price Change</h3>
-            <div class="chart-container-sm">
-              <canvas id="mp-chart-change"></canvas>
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-1.5 h-5 rounded-full bg-cyan-500"></span>
+              <h3 class="text-sm sm:text-base font-bold text-navy-800">LNG Japan/Korea (JKM) Spot Price</h3>
+              <span class="text-[10px] text-navy-400 ml-auto">$/MMBtu</span>
+            </div>
+            <div id="mp-lng-kpis"></div>
+            <div class="chart-container">
+              <canvas id="mp-chart-lng"></canvas>
             </div>
           </div>
         </div>
@@ -413,15 +413,13 @@
     // Thin out labels for readability
     const skipFactor = dateLabels.length > 60 ? Math.ceil(dateLabels.length / 30) : 1;
 
-    // --- Primary price chart ---
+    // --- Primary price chart (crude & refined products) ---
     const priceCanvas = document.getElementById('mp-chart-price');
-    if (priceCanvas) {
+    if (priceCanvas && visible.length > 0) {
       const ctx = priceCanvas.getContext('2d');
       const datasets = visible.map(key => {
         const cfg = COMMODITIES[key];
-        // Build a date→price map for this commodity
         const priceMap = new Map(filteredByKey[key].map(h => [h.date, h.price]));
-        // Map to the unified timeline (null for missing dates → Chart.js skips gaps)
         const data = allDates.map(d => priceMap.get(d) ?? null);
         return {
           label: cfg.label,
@@ -436,22 +434,6 @@
           spanGaps: true,
         };
       });
-
-      const scales = {
-        x: {
-          grid: { color: 'rgba(16,42,67,0.06)' },
-          ticks: {
-            color: '#627d98', font: { size: 10 }, maxRotation: 45,
-            callback: function (val, idx) { return idx % skipFactor === 0 ? this.getLabelForValue(val) : ''; }
-          },
-        },
-        y: {
-          position: 'left',
-          grid: { color: 'rgba(16,42,67,0.06)' },
-          ticks: { color: '#627d98', font: { size: 10 }, callback: v => '$' + v.toFixed(0) },
-          title: { display: true, text: '$/bbl', color: '#627d98', font: { size: 10 } },
-        },
-      };
 
       charts.price = new Chart(ctx, {
         type: 'line',
@@ -471,145 +453,97 @@
             },
             datalabels: { display: false },
           },
-          scales,
+          scales: {
+            x: {
+              grid: { color: 'rgba(16,42,67,0.06)' },
+              ticks: {
+                color: '#627d98', font: { size: 10 }, maxRotation: 45,
+                callback: function (val, idx) { return idx % skipFactor === 0 ? this.getLabelForValue(val) : ''; }
+              },
+            },
+            y: {
+              position: 'left',
+              grid: { color: 'rgba(16,42,67,0.06)' },
+              ticks: { color: '#627d98', font: { size: 10 }, callback: v => '$' + v.toFixed(0) },
+              title: { display: true, text: '$/bbl', color: '#627d98', font: { size: 10 } },
+            },
+          },
           interaction: { intersect: false, mode: 'index' },
         },
       });
     }
 
-    // --- Brent-WTI Spread chart ---
-    const spreadWrap = document.getElementById('mp-spread-wrap');
-    const spreadCanvas = document.getElementById('mp-chart-spread');
-    if (spreadCanvas && spreadWrap) {
-      const showSpread = state.category === 'crude' || state.category === 'all';
-      spreadWrap.style.display = showSpread ? '' : 'none';
+    // --- Separate LNG chart ---
+    drawLngChart(prices);
+  }
 
-      if (showSpread && prices.brent?.history && prices.wti?.history) {
-        const brentHist = filterHistoryByRange(prices.brent.history);
-        const wtiHist = filterHistoryByRange(prices.wti.history);
-        // Build date-aligned spread using date matching
-        const brentMap = new Map(brentHist.map(h => [h.date, h.price]));
-        const wtiMap = new Map(wtiHist.map(h => [h.date, h.price]));
-        const spreadDates = [...new Set([...brentMap.keys(), ...wtiMap.keys()])].sort();
-        const spreadData = [];
-        const spreadLabels = [];
-        for (const date of spreadDates) {
-          const b = brentMap.get(date);
-          const w = wtiMap.get(date);
-          if (b != null && w != null) {
-            spreadData.push(+(b - w).toFixed(2));
-            spreadLabels.push(formatDate(date));
-          }
-        }
+  function drawLngChart(prices) {
+    const lngCanvas = document.getElementById('mp-chart-lng');
+    if (!lngCanvas) return;
+    const lngData = prices.lng;
+    if (!lngData || !lngData.history) return;
 
-        const sCtx = spreadCanvas.getContext('2d');
-        charts.spread = new Chart(sCtx, {
-          type: 'line',
-          data: {
-            labels: spreadLabels,
-            datasets: [{
-              label: 'Brent-WTI Spread',
-              data: spreadData,
-              borderColor: '#f59e0b',
-              backgroundColor: 'rgba(245,158,11,0.12)',
-              fill: true,
-              borderWidth: 2,
-              pointRadius: 0,
-              pointHoverRadius: 3,
-              tension: 0.2,
-            }],
+    const hist = filterHistoryByRange(lngData.history);
+    if (hist.length === 0) return;
+
+    const labels = hist.map(h => formatDate(h.date));
+    const data = hist.map(h => h.price);
+    const skipFactor = labels.length > 60 ? Math.ceil(labels.length / 30) : 1;
+
+    const cfg = COMMODITIES.lng;
+    const gradient = lngCanvas.getContext('2d').createLinearGradient(0, 0, 0, lngCanvas.parentElement.clientHeight || 260);
+    gradient.addColorStop(0, cfg.color + '30');
+    gradient.addColorStop(1, cfg.color + '02');
+
+    charts.lng = new Chart(lngCanvas.getContext('2d'), {
+      type: 'line',
+      data: {
+        labels,
+        datasets: [{
+          label: cfg.label,
+          data,
+          borderColor: cfg.color,
+          backgroundColor: gradient,
+          borderWidth: 2,
+          pointRadius: 0,
+          pointHoverRadius: 4,
+          tension: 0.2,
+          fill: true,
+          spanGaps: true,
+        }],
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        animation: { duration: 600, easing: 'easeOutQuart' },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: '#102a43', titleColor: '#fff', bodyColor: '#d9e2ec',
+            borderColor: '#334e68', borderWidth: 1, padding: 10,
+            callbacks: {
+              label: ctx => cfg.label + ': $' + ctx.parsed.y.toFixed(3) + '/MMBtu'
+            }
           },
-          options: {
-            responsive: true, maintainAspectRatio: false,
-            animation: { duration: 600, easing: 'easeOutQuart' },
-            plugins: {
-              legend: { display: false },
-              tooltip: {
-                backgroundColor: '#102a43', titleColor: '#fff', bodyColor: '#d9e2ec',
-                borderColor: '#334e68', borderWidth: 1, padding: 8,
-                callbacks: { label: ctx => 'Spread: $' + ctx.parsed.y.toFixed(2) + '/bbl' }
-              },
-              datalabels: { display: false },
-            },
-            scales: {
-              x: {
-                grid: { color: 'rgba(16,42,67,0.06)' },
-                ticks: {
-                  color: '#627d98', font: { size: 9 }, maxRotation: 45,
-                  callback: function (val, idx) { return idx % skipFactor === 0 ? this.getLabelForValue(val) : ''; }
-                },
-              },
-              y: {
-                grid: { color: 'rgba(16,42,67,0.06)' },
-                ticks: { color: '#627d98', font: { size: 9 }, callback: v => '$' + v.toFixed(1) },
-                title: { display: true, text: '$/bbl', color: '#627d98', font: { size: 9 } },
-              },
-            },
-          },
-        });
-      }
-    }
-
-    // --- Daily change bar chart ---
-    const changeCanvas = document.getElementById('mp-chart-change');
-    if (changeCanvas) {
-      const primaryKey = getPrimaryCommodity();
-      const hist = filterHistoryByRange(prices[primaryKey]?.history || []);
-      const recent = hist.slice(-30);
-
-      const changes = [];
-      const changeLabels = [];
-      const changeColors = [];
-      for (let i = 1; i < recent.length; i++) {
-        const diff = +(recent[i].price - recent[i - 1].price).toFixed(3);
-        changes.push(diff);
-        changeLabels.push(formatDate(recent[i].date));
-        changeColors.push(diff >= 0 ? '#10b981' : '#ef4444');
-      }
-
-      const cCtx = changeCanvas.getContext('2d');
-      charts.change = new Chart(cCtx, {
-        type: 'bar',
-        data: {
-          labels: changeLabels,
-          datasets: [{
-            label: COMMODITIES[primaryKey].label + ' Daily Change',
-            data: changes,
-            backgroundColor: changeColors,
-            borderRadius: 3,
-          }],
+          datalabels: { display: false },
         },
-        options: {
-          responsive: true, maintainAspectRatio: false,
-          animation: { duration: 600, easing: 'easeOutQuart' },
-          plugins: {
-            legend: { display: false },
-            tooltip: {
-              backgroundColor: '#102a43', titleColor: '#fff', bodyColor: '#d9e2ec',
-              borderColor: '#334e68', borderWidth: 1, padding: 8,
-              callbacks: {
-                label: ctx => {
-                  const v = ctx.parsed.y;
-                  const unit = COMMODITIES[primaryKey].unit;
-                  return (v >= 0 ? '+' : '') + fmtPrice(Math.abs(v)).replace('$', (v >= 0 ? '+$' : '-$'));
-                }
-              }
+        scales: {
+          x: {
+            grid: { color: 'rgba(16,42,67,0.06)' },
+            ticks: {
+              color: '#627d98', font: { size: 10 }, maxRotation: 45,
+              callback: function (val, idx) { return idx % skipFactor === 0 ? this.getLabelForValue(val) : ''; }
             },
-            datalabels: { display: false },
           },
-          scales: {
-            x: {
-              grid: { display: false },
-              ticks: { color: '#627d98', font: { size: 9 }, maxRotation: 45 },
-            },
-            y: {
-              grid: { color: 'rgba(16,42,67,0.06)' },
-              ticks: { color: '#627d98', font: { size: 9 }, callback: v => '$' + v.toFixed(2) },
-            },
+          y: {
+            position: 'left',
+            grid: { color: 'rgba(16,42,67,0.06)' },
+            ticks: { color: '#627d98', font: { size: 10 }, callback: v => '$' + v.toFixed(0) },
+            title: { display: true, text: '$/MMBtu', color: '#627d98', font: { size: 10 } },
           },
         },
-      });
-    }
+        interaction: { intersect: false, mode: 'index' },
+      },
+    });
   }
 
   // ---------- Price Table ----------
@@ -677,6 +611,26 @@
     const kpis = computeKPIs();
     const kpisEl = document.getElementById('mp-kpis');
     if (kpisEl) kpisEl.innerHTML = renderKPICards(kpis);
+
+    // LNG mini KPIs
+    const lngKpisEl = document.getElementById('mp-lng-kpis');
+    if (lngKpisEl && state.data?.prices?.lng) {
+      const p = state.data.prices.lng;
+      const current = p.current;
+      const prev = p.previousClose || current;
+      const change = current - prev;
+      const changePct = prev !== 0 ? (change / prev) * 100 : 0;
+      const up = change >= 0;
+      const cc = up ? 'text-emerald-600' : 'text-red-600';
+      const arrow = up ? '&#9650;' : '&#9660;';
+      lngKpisEl.innerHTML = `
+        <div class="flex flex-wrap items-center gap-4 mb-3 text-sm">
+          <span class="font-bold text-navy-900 text-lg">$${current.toFixed(3)}</span>
+          <span class="${cc} font-medium">${fmtChange(change)} (${arrow} ${fmtPct(changePct)})</span>
+          <span class="text-navy-400 text-xs">52W: <span class="text-navy-600 font-medium">$${p.low52w.toFixed(2)}</span> – <span class="text-navy-600 font-medium">$${p.high52w.toFixed(2)}</span></span>
+        </div>
+      `;
+    }
 
     drawCharts();
     renderPriceTable();

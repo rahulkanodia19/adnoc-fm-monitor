@@ -315,3 +315,22 @@ a.source-link:hover {
     box-shadow: none;
   }
 }
+
+/* === Leaflet Overrides === */
+.leaflet-container { font-family: inherit; }
+.leaflet-popup-content-wrapper { background: #102a43; color: #d9e2ec; border-radius: 0.5rem; }
+.leaflet-popup-tip { background: #102a43; }
+.leaflet-control-zoom a { background: #243b53 !important; color: #d9e2ec !important; border-color: #334e68 !important; }
+.leaflet-control-zoom a:hover { background: #334e68 !important; }
+
+/* === SOH Tracker === */
+.soh-matrix-row { cursor: pointer; transition: background 0.15s; }
+.soh-matrix-row:hover { background: #f0f4f8; }
+.soh-mix-bar { height: 12px; border-radius: 6px; overflow: hidden; display: flex; background: #e5e7eb; }
+.soh-map-sidebar { position: absolute; top: 12px; right: 12px; z-index: 1000; max-width: 280px; }
+.soh-kpi-card { transition: transform 0.15s, box-shadow 0.15s; cursor: pointer; }
+.soh-kpi-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.soh-section { scroll-margin-top: 80px; }
+.soh-badge-ballast { background: #6b7280; color: white; font-size: 10px; padding: 2px 6px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+.soh-badge-laden { background: #0055A5; color: white; font-size: 10px; padding: 2px 6px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+.soh-badge-loaded { background: #0055A5; color: white; font-size: 10px; padding: 2px 6px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }

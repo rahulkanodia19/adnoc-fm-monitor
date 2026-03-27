@@ -25,7 +25,7 @@ const COUNTRY_STATUS_DATA = [
     production: {
       oil: { preWar: 1220, current: 200, unit: "kb/d" },
       gas: { preWar: 18.5, current: 0.5, unit: "Bcf/d" },
-      refining: { capacity: 292, affected: 292, available: 0, unit: "kb/d" },
+      refining: { capacity: 443, affected: 443, available: 0, unit: "kb/d" },
       lng: { preWar: 77.0, current: 0.0, unit: "Mtpa" }
     },
     events: [
@@ -89,7 +89,7 @@ const COUNTRY_STATUS_DATA = [
       { name: "Al Khalij Field", type: "Offshore Oil", capacity: "~25,000 bpd", status: "shutdown" },
       { name: "Laffan Refinery 1", type: "Refinery", capacity: "161,000 bpd", status: "shutdown" },
       { name: "Laffan Refinery 2", type: "Refinery", capacity: "146,000 bpd", status: "shutdown" },
-      { name: "Mesaieed Refinery", type: "Refinery", capacity: "127,000 bpd", status: "partial" },
+      { name: "Mesaieed Refinery", type: "Refinery", capacity: "136,000 bpd", status: "partial" },
       { name: "Mesaieed Industrial City", type: "Petrochemical Complex", capacity: "Various", status: "shutdown" },
       { name: "North Field East Expansion", type: "LNG Expansion", capacity: "32 Mtpa (construction)", status: "shutdown" },
       { name: "Qatalum Smelter", type: "Aluminium", capacity: "585,000 tpa", status: "shutdown" }
@@ -122,7 +122,7 @@ const COUNTRY_STATUS_DATA = [
     production: {
       oil: { preWar: 2600, current: 2000, unit: "kb/d" },
       gas: { preWar: 1.7, current: 1.3, unit: "Bcf/d" },
-      refining: { capacity: 1400, affected: 1200, available: 200, unit: "kb/d" }
+      refining: { capacity: 1400, affected: 900, available: 500, unit: "kb/d" }
     },
     events: [
       {
@@ -144,7 +144,7 @@ const COUNTRY_STATUS_DATA = [
     oilGasImpact: {
       severity: "critical",
       summary: "FM on crude exports, refineries reduced",
-      details: "KPC declared FM on all crude exports. Refineries reduced to 1.4M bpd from normal throughput. Kafco fuel storage tanks struck. Subiya power plant fire from intercepted drone debris. Export via Hormuz severely disrupted."
+      details: "KPC declared FM on all crude exports. Al-Ahmadi refinery offline (466k) after drone strikes. Mina Abdullah and Al-Zour at reduced rates. ~900 kb/d refining affected; ~500 kb/d available. Kafco fuel storage tanks struck. Subiya power plant fire from intercepted drone debris. Export via Hormuz severely disrupted."
     },
     infrastructure: [
       { name: "Greater Burgan (Burgan/Magwa/Ahmadi)", type: "Oil Field", capacity: "~1.7 mb/d", status: "partial" },
@@ -247,7 +247,7 @@ const COUNTRY_STATUS_DATA = [
     production: {
       oil: { preWar: 3400, current: 1600, unit: "kb/d" },
       gas: { preWar: 6.5, current: 5.5, unit: "Bcf/d" },
-      refining: { capacity: 1222, affected: 922, available: 300, unit: "kb/d" },
+      refining: { capacity: 1222, affected: 417, available: 805, unit: "kb/d" },
       lng: { preWar: 6.0, current: 0.0, unit: "Mtpa" }
     },
     events: [
@@ -368,7 +368,7 @@ const COUNTRY_STATUS_DATA = [
     production: {
       oil: { preWar: 4300, current: 1000, unit: "kb/d" },
       gas: { preWar: 3.0, current: 0.8, unit: "Bcf/d" },
-      refining: { capacity: 900, affected: 500, available: 400, unit: "kb/d" }
+      refining: { capacity: 1300, affected: 400, available: 900, unit: "kb/d" }
     },
     events: [
       {
@@ -422,9 +422,13 @@ const COUNTRY_STATUS_DATA = [
       { name: "Khor Mor Gas Field", type: "Gas Field", capacity: "~450 MMscf/d", status: "shutdown" },
       { name: "Basra Oil Terminal", type: "Export Terminal", capacity: "~1.8 mb/d", status: "shutdown" },
       { name: "Khor Al-Amaya Terminal", type: "Export Terminal", capacity: "~600,000 bpd", status: "shutdown" },
-      { name: "Karbala Refinery", type: "Refinery", capacity: "140,000 bpd", status: "operational" },
+      { name: "Baiji Refinery", type: "Refinery", capacity: "310,000 bpd", status: "partial" },
       { name: "Basra Refinery", type: "Refinery", capacity: "210,000 bpd", status: "partial" },
-      { name: "Lanaz Refinery", type: "Refinery", capacity: "100,000 bpd", status: "partial" }
+      { name: "Daura Refinery", type: "Refinery", capacity: "210,000 bpd", status: "operational" },
+      { name: "Karbala Refinery", type: "Refinery", capacity: "140,000 bpd", status: "operational" },
+      { name: "Kalak (KAR) Refinery", type: "Refinery", capacity: "110,000 bpd", status: "shutdown" },
+      { name: "Lanaz Refinery", type: "Refinery", capacity: "80,000 bpd", status: "partial" },
+      { name: "Kirkuk Refinery", type: "Refinery", capacity: "56,000 bpd", status: "partial" }
     ],
     sources: [
       { id: 1, title: "Rumaila shut - Bloomberg", url: "https://www.bloomberg.com", date: "2026-03-01" },
@@ -612,7 +616,7 @@ const COUNTRY_STATUS_DATA = [
     production: {
       oil: { preWar: 3176, current: 2700, unit: "kb/d" },
       gas: { preWar: 25.8, current: 22.5, unit: "Bcf/d" },
-      refining: { capacity: 2600, affected: 570, available: 2030, unit: "kb/d" }
+      refining: { capacity: 2600, affected: 410, available: 2190, unit: "kb/d" }
     },
     events: [
       {
@@ -668,9 +672,13 @@ const COUNTRY_STATUS_DATA = [
       { name: "Agha Jari", type: "Oil Field", capacity: "~30,000 bpd", status: "partial" },
       { name: "Sepehr/Jufair Phase 1", type: "Oil Field", capacity: "~25,000 bpd", status: "partial" },
       { name: "Karanj", type: "Oil Field", capacity: "~20,000 bpd", status: "partial" },
-      { name: "Tehran Refinery", type: "Refinery", capacity: "250,000 bpd", status: "shutdown" },
-      { name: "Persian Gulf Star Refinery", type: "Refinery", capacity: "360,000 bpd", status: "partial" },
+      { name: "Persian Gulf Star Refinery", type: "Refinery", capacity: "420,000 bpd", status: "partial" },
+      { name: "Abadan Refinery", type: "Refinery", capacity: "400,000 bpd", status: "operational" },
+      { name: "Isfahan Refinery", type: "Refinery", capacity: "360,000 bpd", status: "operational" },
       { name: "Bandar Abbas Refinery", type: "Refinery", capacity: "320,000 bpd", status: "partial" },
+      { name: "Tehran Refinery", type: "Refinery", capacity: "250,000 bpd", status: "shutdown" },
+      { name: "Arak/Shazand Refinery", type: "Refinery", capacity: "250,000 bpd", status: "operational" },
+      { name: "Tabriz Refinery", type: "Refinery", capacity: "110,000 bpd", status: "operational" },
       { name: "Siraf Condensate Refinery", type: "Refinery", capacity: "480,000 bpd", status: "operational" },
       { name: "Shahran Oil Depot", type: "Fuel Depot", capacity: "Major depot", status: "shutdown" },
       { name: "Aghdasieh Oil Depot", type: "Fuel Depot", capacity: "Major depot", status: "shutdown" },

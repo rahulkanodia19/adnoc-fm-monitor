@@ -1,0 +1,168 @@
+{
+  "data": [
+    {
+      "label": "Short Sea Tankers",
+      "total": 166,
+      "ballast": 104,
+      "laden": 62
+    },
+    {
+      "label": "MR",
+      "total": 128,
+      "ballast": 72,
+      "laden": 56
+    },
+    {
+      "label": "VLCC",
+      "total": 111,
+      "ballast": 42,
+      "laden": 69
+    },
+    {
+      "label": "Handysize",
+      "total": 103,
+      "ballast": 62,
+      "laden": 41
+    },
+    {
+      "label": "Supramax",
+      "total": 63,
+      "ballast": 32,
+      "laden": 31
+    },
+    {
+      "label": "Panamax",
+      "total": 57,
+      "ballast": 36,
+      "laden": 21
+    },
+    {
+      "label": "Intermediate Tankers",
+      "total": 54,
+      "ballast": 14,
+      "laden": 40
+    },
+    {
+      "label": "Aframax/LR2",
+      "total": 49,
+      "ballast": 24,
+      "laden": 25
+    },
+    {
+      "label": "Small Tankers",
+      "total": 49,
+      "ballast": 36,
+      "laden": 13
+    },
+    {
+      "label": "Panamax/LR1",
+      "total": 44,
+      "ballast": 24,
+      "laden": 20
+    },
+    {
+      "label": "Handy/MR1",
+      "total": 41,
+      "ballast": 18,
+      "laden": 23
+    },
+    {
+      "label": "Kamsarmax",
+      "total": 35,
+      "ballast": 27,
+      "laden": 8
+    },
+    {
+      "label": "Suezmax/LR3",
+      "total": 33,
+      "ballast": 11,
+      "laden": 22
+    },
+    {
+      "label": "SGC",
+      "total": 28,
+      "ballast": 26,
+      "laden": 2
+    },
+    {
+      "label": "VLGC",
+      "total": 27,
+      "ballast": 15,
+      "laden": 12
+    },
+    {
+      "label": "Ultramax",
+      "total": 26,
+      "ballast": 8,
+      "laden": 17
+    },
+    {
+      "label": "Handymax",
+      "total": 23,
+      "ballast": 12,
+      "laden": 11
+    },
+    {
+      "label": "MGC",
+      "total": 11,
+      "ballast": 4,
+      "laden": 7
+    },
+    {
+      "label": "Lower Conventional",
+      "total": 10,
+      "ballast": 6,
+      "laden": 4
+    },
+    {
+      "label": "Post-Panamax",
+      "total": 9,
+      "ballast": 4,
+      "laden": 5
+    },
+    {
+      "label": "Handy",
+      "total": 8,
+      "ballast": 7,
+      "laden": 1
+    },
+    {
+      "label": "Mini Bulker",
+      "total": 6,
+      "ballast": 3,
+      "laden": 3
+    },
+    {
+      "label": "Upper Conventional",
+      "total": 5,
+      "ballast": 1,
+      "laden": 4
+    },
+    {
+      "label": "Capesize",
+      "total": 4,
+      "ballast": 2,
+      "laden": 2
+    },
+    {
+      "label": "Baby Capes",
+      "total": 4,
+      "ballast": 4,
+      "laden": 0
+    },
+    {
+      "label": "Q-Flex",
+      "total": 4,
+      "ballast": 0,
+      "laden": 4
+    },
+    {
+      "label": "Q-Max",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    }
+  ],
+  "total": 1099,
+  "syncTimestamp": "2026-03-27T00:09:39.686Z"
+}

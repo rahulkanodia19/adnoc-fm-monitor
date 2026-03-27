@@ -1,8 +1,8 @@
 // ============================================================
 // api/market-prices.js -- Vercel Serverless Function
-// OilPriceAPI proxy: fetches live prices + daily history,
-// computes all metrics from live data only.
-// Converts refined products from $/gal → $/bbl (×42).
+// OilPriceAPI proxy: fetches live crude prices + daily history.
+// Refined products (Gasoline 95 RON, Jet Kero, Gasoil) served
+// from seed data (S&P Global Platts XLSX source).
 // Falls back to market-prices-seed.json only when no API key.
 // ============================================================
 
@@ -20,19 +20,14 @@ let responseCache = { data: null, timestamp: 0 };
 const RESPONSE_CACHE_TTL = 15 * 60 * 1000;
 
 // ---------- Constants ----------
-const GAL_TO_BBL = 42;
-const MT_TO_BBL_NAPHTHA = 7.45; // 1 metric ton of naphtha ≈ 7.45 barrels
-const GAL_PRODUCT_KEYS = new Set(['gasoline', 'diesel', 'jetfuel']); // $/gal → $/bbl (×42)
-const MT_PRODUCT_KEYS = new Set(['naphtha']); // $/mt → $/bbl (÷7.45)
-
 const COMMODITIES = {
   wti:      { apiCode: 'WTI_USD',          historyCode: 'WTI_USD',          label: 'WTI Crude' },
-  brent:    { apiCode: 'BRENT_CRUDE_USD',  historyCode: 'BRENT_CRUDE_USD',  label: 'Brent Crude' },
+  brent:    { apiCode: 'BRENT_CRUDE_USD',  historyCode: 'BRENT_CRUDE_USD',  label: 'Dated Brent' },
   murban:   { apiCode: 'MURBAN_CRUDE_USD', historyCode: null,               label: 'Murban Crude' }, // history from murban-history.json
-  gasoline: { apiCode: 'GASOLINE_RBOB_USD', historyCode: 'GASOLINE_RBOB_USD', label: 'Gasoline (RBOB)' },
-  diesel:   { apiCode: 'HEATING_OIL_USD',  historyCode: 'HEATING_OIL_USD',  label: 'Diesel (ULSD)' },
-  jetfuel:  { apiCode: 'JET_FUEL_USD',     historyCode: 'JET_FUEL_USD',     label: 'Jet Fuel' },
-  naphtha:  { apiCode: 'NAPHTHA_USD',      historyCode: 'NAPHTHA_USD',      label: 'Naphtha' },
+  gasoline: { apiCode: null,               historyCode: null,               label: 'Gasoline 95 RON' }, // from seed (Platts)
+  jetfuel:  { apiCode: null,               historyCode: null,               label: 'Jet Kero' },       // from seed (Platts)
+  gasoil:   { apiCode: null,               historyCode: null,               label: 'Gasoil 10 ppm' },  // from seed (Platts)
+  lng:      { apiCode: null,               historyCode: null,               label: 'LNG JKM Spot' },   // from seed (Platts)
 };
 
 // ---------- Load Murban history from scraped file ----------
@@ -104,25 +99,7 @@ async function fetchPeriod(apiKey, apiCode, period) {
   return resp.json();
 }
 
-// ---------- Barchart symbol mapping for products with sparse OilPriceAPI data ----------
-const BARCHART_SYMBOLS = {
-  gasoline: { symbol: 'RB*0', unit: 'gal' },   // RBOB Gasoline futures ($/gal)
-  diesel:   { symbol: 'HO*0', unit: 'gal' },   // Heating Oil (ULSD) futures ($/gal)
-  naphtha:  { symbol: 'NF*0', unit: 'bbl' },   // ICE Naphtha futures ($/bbl)
-};
-
-async function fetchBarchartHistory(symbol) {
-  const url = `https://advancedmedia.websol.barchart.com/proxies/timeseries/queryeod.ashx?symbol=${encodeURIComponent(symbol)}&data=daily&maxrecords=400&volume=contract&order=asc&dividends=false&backadjust=false&daystoexpiration=1&contractroll=expiration`;
-  const resp = await fetch(url, { headers: { 'Referer': 'https://oilprice.com/' } });
-  if (!resp.ok) throw new Error(`Barchart ${symbol}: HTTP ${resp.status}`);
-  const csv = (await resp.text()).trim();
-  return csv.split('\n').filter(l => l.trim()).map(line => {
-    const parts = line.split(',');
-    return { date: parts[1], price: parseFloat(parts[5]) }; // close price
-  }).filter(h => !isNaN(h.price) && h.price > 0 && h.date);
-}
-
-// ---------- Fetch history: OilPriceAPI first, Barchart supplement for sparse products ----------
+// ---------- Fetch history from OilPriceAPI ----------
 async function fetchHistory(apiKey, historyCode) {
   const yearData = await fetchPeriod(apiKey, historyCode, 'year');
   return parseHistory(yearData);
@@ -146,11 +123,6 @@ function parseHistory(apiResponse) {
       return acc;
     }, [])
     .sort((a, b) => a.date.localeCompare(b.date));
-}
-
-// ---------- Convert product prices from $/gal to $/bbl ----------
-function convertToBbl(price) {
-  return +(price * GAL_TO_BBL).toFixed(2);
 }
 
 // ---------- Compute metrics from history ----------
@@ -177,42 +149,22 @@ function computeMetrics(history, currentPrice) {
   return { previousClose, high52w, low52w };
 }
 
-// ---------- Build full response (live data only) ----------
+// ---------- Build full response (live data + seed for products) ----------
 function buildResponse(latestResults, historyResults) {
   const prices = {};
 
   for (const [key, config] of Object.entries(COMMODITIES)) {
+    // Skip commodities without an API source -- they come from seed data
+    if (!config.apiCode) continue;
+
     const latest = latestResults[key];
-    const liveHistory = historyResults[key] || [];
-    const isGalProduct = GAL_PRODUCT_KEYS.has(key);
-    const isMtProduct = MT_PRODUCT_KEYS.has(key);
+    const history = historyResults[key] || [];
 
-    // Get current price from latest endpoint
     let currentPrice = latest?.data?.price || 0;
-
-    // Extract 24h change data from latest
     const changes24h = latest?.data?.changes?.['24h'];
-    let apiPrevClose = changes24h?.previous_price || null;
-
-    // Convert to $/bbl for products
-    let history = liveHistory;
-    if (isGalProduct) {
-      // $/gal → $/bbl (×42)
-      if (currentPrice > 0) currentPrice = convertToBbl(currentPrice);
-      if (apiPrevClose) apiPrevClose = convertToBbl(apiPrevClose);
-      history = liveHistory.map(h => ({ date: h.date, price: convertToBbl(h.price) }));
-    } else if (isMtProduct) {
-      // $/mt → $/bbl (÷7.45)
-      const mtConvert = p => +(p / MT_TO_BBL_NAPHTHA).toFixed(2);
-      if (currentPrice > 0) currentPrice = mtConvert(currentPrice);
-      if (apiPrevClose) apiPrevClose = mtConvert(apiPrevClose);
-      history = liveHistory.map(h => ({ date: h.date, price: mtConvert(h.price) }));
-    }
+    const apiPrevClose = changes24h?.previous_price || null;
 
     const metrics = computeMetrics(history, currentPrice);
-
-    // Prefer the API's 24h previous_price over history-derived previousClose
-    // (more accurate for commodities with sparse history like Murban)
     const previousClose = apiPrevClose || metrics.previousClose;
 
     prices[key] = {
@@ -222,6 +174,16 @@ function buildResponse(latestResults, historyResults) {
       low52w: metrics.low52w,
       history: history,
     };
+  }
+
+  // Merge seed data for refined products without a live API source
+  const seedData = loadSeedData();
+  if (seedData?.prices) {
+    for (const [key, config] of Object.entries(COMMODITIES)) {
+      if (!config.apiCode && seedData.prices[key]) {
+        prices[key] = seedData.prices[key];
+      }
+    }
   }
 
   return {
@@ -263,8 +225,8 @@ module.exports = async function handler(req, res) {
     // --- Fetch latest prices (15-min cache) ---
     let latestResults = latestCache.data;
     if (!latestResults || (now - latestCache.timestamp) >= LATEST_CACHE_TTL) {
-      // Fetch from OilPriceAPI for all except Murban
-      const apiEntries = entries.filter(([key]) => key !== 'murban');
+      // Fetch from OilPriceAPI for commodities with an apiCode (except Murban)
+      const apiEntries = entries.filter(([key, config]) => key !== 'murban' && config.apiCode);
       const latestPromises = apiEntries.map(([key, config]) =>
         fetchLatest(apiKey, config.apiCode)
           .then(data => ({ key, data }))
@@ -301,23 +263,6 @@ module.exports = async function handler(req, res) {
 
       // Load Murban history from scraped file
       historyResults.murban = loadMurbanHistory();
-
-      // Supplement sparse products with Barchart data
-      for (const [key, bcConfig] of Object.entries(BARCHART_SYMBOLS)) {
-        if (!historyResults[key] || historyResults[key].length < 100) {
-          try {
-            let barchartData = await fetchBarchartHistory(bcConfig.symbol);
-            // Convert Barchart naphtha from $/bbl to $/mt so buildResponse can convert back uniformly
-            if (bcConfig.unit === 'bbl' && MT_PRODUCT_KEYS.has(key)) {
-              barchartData = barchartData.map(h => ({ date: h.date, price: +(h.price * MT_TO_BBL_NAPHTHA).toFixed(2) }));
-            }
-            if (barchartData.length > (historyResults[key]?.length || 0)) {
-              console.log(`Using Barchart for ${key}: ${barchartData.length} entries (vs ${historyResults[key]?.length || 0} from API)`);
-              historyResults[key] = barchartData;
-            }
-          } catch (err) { console.error(`Barchart fallback for ${key} failed:`, err.message); }
-        }
-      }
 
       historyCache = { data: historyResults, timestamp: now };
     }

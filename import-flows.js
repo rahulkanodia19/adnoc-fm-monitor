@@ -397,6 +397,20 @@
     const commodityLabel = state.commodity === 'crude' ? 'crude oil' : state.commodity.toUpperCase();
     const rangeLabel = state.timeRange === 'all' ? 'all-time' : state.timeRange.toUpperCase();
 
+    // Gulf / Middle East supplier set for conflict-aware analysis
+    const GULF_SUPPLIERS = ['Saudi Arabia', 'United Arab Emirates', 'Iraq', 'Qatar', 'Kuwait', 'Bahrain', 'Iran', 'Oman'];
+
+    // Conflict context from data.js (loaded globally before this script)
+    const GULF_IDS = { 'Saudi Arabia': 'saudi_arabia', 'United Arab Emirates': 'uae', 'Iraq': 'iraq', 'Qatar': 'qatar', 'Kuwait': 'kuwait', 'Bahrain': 'bahrain', 'Iran': 'iran', 'Oman': 'oman' };
+    function getSupplierStatus(name) {
+      const id = GULF_IDS[name];
+      if (!id || typeof COUNTRY_STATUS_DATA === 'undefined') return null;
+      return COUNTRY_STATUS_DATA.find(c => c.id === id) || null;
+    }
+    // Check if any Gulf suppliers are in conflict
+    const gulfInConflict = typeof COUNTRY_STATUS_DATA !== 'undefined' &&
+      COUNTRY_STATUS_DATA.some(c => ['critical', 'high'].includes(c.status));
+
     // Helper: friendly period label (no week numbers)
     function periodStr(rec) {
       if (state.view === 'monthly') return new Date(rec.p + '-01').toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
@@ -411,6 +425,9 @@
     // Helper: compute value (rate for crude, display for LNG/LPG)
     function val(total, days) { return crude ? toRate(total, days) : toDisplay(total); }
 
+    // Helper: display name (rename Unknown → Undisclosed)
+    function displayName(c) { return c === 'Unknown' ? 'Undisclosed' : c; }
+
     // Reference period = latest full period; prior = the one before it
     const refIdx = isPartial ? totals.length - 2 : totals.length - 1;
     const prevIdx = refIdx - 1;
@@ -420,7 +437,14 @@
     const refVal = val(totals[refIdx], refDays);
     const prevVal = val(totals[prevIdx], prevDays);
     const refLabel = periodStr(base[refIdx]);
-    const prevLabel = periodStr(base[prevIdx]);
+
+    // Zero-volume edge case
+    if (refVal === 0 && prevVal === 0) {
+      let msg = `No ${commodityLabel} imports recorded for ${countryLabel} in the latest two full periods.`;
+      if (gulfInConflict) msg += ' This may reflect supply disruption from the ongoing Gulf conflict, data lag, or minimal participation in this commodity market.';
+      else msg += ' This may reflect data lag or minimal participation in this commodity market.';
+      return [msg];
+    }
 
     // Compute all full-period values for statistical context
     const endIdx = isPartial ? totals.length - 2 : totals.length - 1;
@@ -430,124 +454,150 @@
     }
     if (fullVals.length === 0) return insights;
     const displayAvg = crude ? kpis.avgRate : toDisplay(kpis.avgVol);
-    const minVal = Math.min(...fullVals);
-    const maxVal = Math.max(...fullVals);
     const devFromAvg = displayAvg > 0 ? ((refVal - displayAvg) / displayAvg * 100) : 0;
 
     // Multi-period trend detection (3-period streak)
     let streak = 0;
     if (fullVals.length >= 3) {
       const last3 = fullVals.slice(-3);
-      if (last3[2] > last3[1] && last3[1] > last3[0]) streak = 1;   // rising
-      else if (last3[2] < last3[1] && last3[1] < last3[0]) streak = -1; // falling
+      if (last3[2] > last3[1] && last3[1] > last3[0]) streak = 1;
+      else if (last3[2] < last3[1] && last3[1] < last3[0]) streak = -1;
     }
 
-    // --- Bullet 1: Volume trend with multi-period context ---
+    // Compute Gulf vs non-Gulf supplier shares
+    let gulfRefTotal = 0, gulfPrevTotal = 0;
+    const allSuppliers = topSuppliers || [];
+    for (const c of Object.keys(countrySeriesData)) {
+      const currV = val(countrySeriesData[c][refIdx] || 0, refDays);
+      const prevV = val(countrySeriesData[c][prevIdx] || 0, prevDays);
+      if (GULF_SUPPLIERS.includes(c)) { gulfRefTotal += currV; gulfPrevTotal += prevV; }
+    }
+    const gulfShareRef = refVal > 0 ? (gulfRefTotal / refVal * 100) : 0;
+    const gulfChangeCombined = gulfRefTotal - gulfPrevTotal;
+
+    // --- Bullet 1: Headline with crisis context ---
     const changePct = prevVal > 0 ? ((refVal - prevVal) / prevVal * 100) : 0;
-    const dir = changePct >= 0 ? 'rose' : 'fell';
+    const absChange = Math.abs(changePct);
     const flowType = (state.commodity === 'crude' && state.country === 'china') ? 'seaborne + pipeline' : 'seaborne';
-    let b1 = `${countryLabel}'s ${flowType} ${commodityLabel} imports averaged <strong>${refVal.toFixed(1)} ${unit}</strong> in ${refLabel}, ${changePct === 0 ? 'unchanged' : dir + ' ' + Math.abs(changePct).toFixed(0) + '%'} from ${prevVal.toFixed(1)} ${unit} in ${prevLabel}.`;
+    let b1 = `${countryLabel}'s ${flowType} ${commodityLabel} imports averaged <strong>${refVal.toFixed(1)} ${unit}</strong> in ${refLabel}`;
 
-    // Context vs range average
-    if (Math.abs(devFromAvg) > 2) {
-      b1 += ` This is <strong>${Math.abs(devFromAvg).toFixed(0)}% ${devFromAvg > 0 ? 'above' : 'below'}</strong> the ${rangeLabel} average of ${displayAvg.toFixed(1)} ${unit}.`;
+    // Change framing — crisis-aware when Gulf supply is disrupted
+    const gulfDropping = gulfInConflict && gulfChangeCombined < -0.1;
+    if (absChange < 2) {
+      b1 += `, broadly flat versus the prior period`;
+    } else if (changePct < 0) {
+      b1 += `, <strong>down ${absChange.toFixed(0)}%</strong> from the prior period`;
+      if (gulfDropping) b1 += ' — consistent with tightening Gulf supply following the Hormuz closure and strikes on Middle Eastern export infrastructure';
+      else if (absChange > 15) b1 += ' — a significant contraction';
     } else {
-      b1 += ` This is in line with the ${rangeLabel} average of ${displayAvg.toFixed(1)} ${unit}.`;
+      b1 += `, <strong>up ${absChange.toFixed(0)}%</strong> from the prior period`;
+      if (absChange > 15) b1 += ' — likely driven by restocking or cargo rescheduling';
     }
+    b1 += '.';
 
-    // Multi-period trend
-    if (streak === 1) b1 += ` Imports have risen for three consecutive periods, signalling sustained demand growth.`;
-    else if (streak === -1) b1 += ` Imports have declined for three consecutive periods, indicating weakening demand or supply constraints.`;
-
-    // Peak/trough callout
-    if (fullVals.length >= 4) {
-      if (refVal === maxVal) b1 += ` This marks the highest level in the selected range.`;
-      else if (refVal === minVal) b1 += ` This is the lowest level recorded in the selected range.`;
+    // Context vs range average (only if meaningful)
+    if (Math.abs(devFromAvg) > 5) {
+      b1 += ` This is <strong>${Math.abs(devFromAvg).toFixed(0)}% ${devFromAvg > 0 ? 'above' : 'below'}</strong> the ${rangeLabel} average (${displayAvg.toFixed(1)} ${unit}).`;
     }
     insights.push(b1);
 
-    // --- Bullet 2: Supplier concentration & movers ---
-    if (topSuppliers.length >= 2) {
-      const top = topSuppliers.slice(0, Math.min(5, topSuppliers.length));
-      const rising = [];
-      const falling = [];
+    // --- Bullet 2: Supplier Shifts with per-supplier changes ---
+    if (allSuppliers.length >= 2) {
+      // Sort top 5 by current-period value (largest first)
+      const top = allSuppliers.slice(0, Math.min(5, allSuppliers.length))
+        .sort((a, b) => val(countrySeriesData[b][refIdx] || 0, refDays) - val(countrySeriesData[a][refIdx] || 0, refDays));
       const details = [];
+      let gulfFallTotal = 0, nonGulfRiseTotal = 0;
+      const gulfFallerNames = [], nonGulfRiserNames = [];
 
       for (const c of top) {
         const curr = val(countrySeriesData[c][refIdx] || 0, refDays);
         const prev = val(countrySeriesData[c][prevIdx] || 0, prevDays);
         const diff = curr - prev;
         const pctOfTotal = refVal > 0 ? (curr / refVal * 100) : 0;
-        details.push(`${c} ${curr.toFixed(1)} ${unit} (${pctOfTotal.toFixed(0)}%)`);
+        const isGulf = GULF_SUPPLIERS.includes(c);
+        // Format: "Country X.X unit, XX% (+/-change ▲/▼)"
+        let changeStr = '';
         if (Math.abs(diff) >= 0.05) {
-          const movePct = prev > 0 ? Math.abs(diff / prev * 100).toFixed(0) : '—';
-          if (diff > 0) rising.push(`${c} +${diff.toFixed(1)} ${unit} (+${movePct}%)`);
-          else falling.push(`${c} ${diff.toFixed(1)} ${unit} (−${movePct}%)`);
+          const arrow = diff > 0 ? ' ▲' : ' ▼';
+          const color = diff > 0 ? 'text-emerald-700' : 'text-red-700';
+          changeStr = ` (<span class="${color}">${diff > 0 ? '+' : ''}${diff.toFixed(1)}${arrow}</span>)`;
+          if (diff < 0 && isGulf) { gulfFallTotal += Math.abs(diff); gulfFallerNames.push(displayName(c)); }
+          if (diff > 0 && !isGulf) { nonGulfRiseTotal += diff; nonGulfRiserNames.push(displayName(c)); }
+        } else {
+          changeStr = ' (flat)';
         }
+        details.push(`${displayName(c)} ${curr.toFixed(1)} ${unit}, ${pctOfTotal.toFixed(0)}%${changeStr}`);
       }
 
-      let b2 = `<strong>Top suppliers (${refLabel}):</strong> ${details.join('; ')}.`;
+      let b2 = `<strong>Supplier shifts (${refLabel}):</strong> ${details.join('; ')}.`;
 
-      // Concentration risk
-      if (top.length >= 2 && refVal > 0) {
-        const top2Curr = val(countrySeriesData[top[0]][refIdx] || 0, refDays) + val(countrySeriesData[top[1]][refIdx] || 0, refDays);
-        const top2Share = (top2Curr / refVal * 100).toFixed(0);
-        if (top2Share >= 70) b2 += ` <strong>Concentration risk:</strong> ${top[0]} and ${top[1]} supply ${top2Share}% of total imports — high supplier dependency.`;
-        else if (top2Share >= 50) b2 += ` ${top[0]} and ${top[1]} together represent ${top2Share}% of supply.`;
-      }
-
-      // Biggest movers
-      if (rising.length > 0 || falling.length > 0) {
-        b2 += ` Period-over-period moves: ${[...rising, ...falling].join('; ')}.`;
+      // Summary line: Gulf shift or concentration
+      if (gulfFallerNames.length > 0 && nonGulfRiserNames.length > 0 && gulfInConflict) {
+        b2 += ` Gulf sources (${gulfFallerNames.join(', ')}) contracted by a combined ${gulfFallTotal.toFixed(1)} ${unit} as Hormuz-dependent supply tightens; ${nonGulfRiserNames.join(' and ')} absorbing the shortfall.`;
+      } else if (top.length >= 2 && refVal > 0) {
+        const top1Val = val(countrySeriesData[top[0]][refIdx] || 0, refDays);
+        const top1Share = (top1Val / refVal * 100);
+        if (top1Share >= 90) {
+          b2 += ` <strong>Single-supplier dependency:</strong> ${displayName(top[0])} accounts for ${top1Share.toFixed(0)}% — a loss of this source would eliminate nearly all imports.`;
+        } else {
+          const top2Val = top1Val + val(countrySeriesData[top[1]][refIdx] || 0, refDays);
+          const top2Share = (top2Val / refVal * 100);
+          if (top2Share >= 70) b2 += ` <strong>High concentration:</strong> ${displayName(top[0])} and ${displayName(top[1])} together supply ${top2Share.toFixed(0)}% — a disruption from either source would materially impact supply.`;
+        }
       }
       insights.push(b2);
     }
 
-    // --- Bullet 3: Range context & volatility ---
-    if (fullVals.length >= 4) {
-      const range = maxVal - minVal;
-      const coeffVar = displayAvg > 0 ? ((Math.sqrt(fullVals.reduce((s, v) => s + (v - displayAvg) ** 2, 0) / fullVals.length) / displayAvg) * 100) : 0;
-      let b3 = `Over the selected ${rangeLabel} range, ${commodityLabel} import volumes have ranged from ${minVal.toFixed(1)} to ${maxVal.toFixed(1)} ${unit} (spread: ${range.toFixed(1)} ${unit}).`;
+    // --- Bullet 3: Assessment (trend + trajectory + forward-looking, no repetition from B1) ---
+    const assessParts = [];
 
-      if (coeffVar > 25) b3 += ` Volatility is <strong>high</strong> (CV ${coeffVar.toFixed(0)}%) — import volumes have fluctuated significantly, suggesting supply disruptions or demand swings.`;
-      else if (coeffVar > 12) b3 += ` Moderate variability (CV ${coeffVar.toFixed(0)}%) points to periodic shifts in sourcing or demand patterns.`;
-      else b3 += ` Low variability (CV ${coeffVar.toFixed(0)}%) indicates stable, predictable import flows.`;
+    // Trend direction (stated here, not in B1)
+    if (streak === -1 && devFromAvg < -5) {
+      if (gulfInConflict) {
+        assessParts.push(`Imports have declined for three consecutive periods as Gulf supply constraints deepen`);
+      } else {
+        assessParts.push(`Imports have declined for three consecutive periods, indicating weakening supply access or demand`);
+      }
+    } else if (streak === 1 && devFromAvg > 5) {
+      assessParts.push(`Imports have risen for three consecutive periods, indicating strengthening demand or improving supply access`);
+    } else if (devFromAvg < -30 && absChange <= 10) {
+      if (gulfInConflict) {
+        assessParts.push(`Imports remain severely depressed at ${Math.abs(devFromAvg).toFixed(0)}% below the ${rangeLabel} average, consistent with acute Gulf supply disruption`);
+      } else {
+        assessParts.push(`Imports remain severely depressed at ${Math.abs(devFromAvg).toFixed(0)}% below the ${rangeLabel} average`);
+      }
+    } else if (absChange > 20) {
+      assessParts.push(`The ${changePct > 0 ? 'surge' : 'sharp drop'} of ${absChange.toFixed(0)}% is an outlier — determine whether this is a one-off cargo effect or the onset of a structural shift`);
+    }
 
+    // Gulf share shift (stated here, not in B2)
+    if (gulfShareRef > 5 && Math.abs(gulfChangeCombined) > 0.2) {
+      if (gulfChangeCombined < 0) {
+        assessParts.push(`Gulf supplier share now stands at ${gulfShareRef.toFixed(0)}% of total (down ${Math.abs(gulfChangeCombined).toFixed(1)} ${unit} period-over-period)`);
+      }
+    }
+
+    // Forward-looking with conflict context
+    if (gulfInConflict && gulfShareRef > 15 && devFromAvg < -5) {
+      assessParts.push(`with ~8 mb/d of regional export capacity offline, further import erosion is likely unless alternative sourcing accelerates or Gulf exports recover`);
+    } else if (streak === -1 && devFromAvg < -10) {
+      assessParts.push(`the trajectory warrants executive attention — monitor whether alternative sourcing can compensate`);
+    } else if (absChange <= 5 && Math.abs(devFromAvg) <= 5) {
+      assessParts.push(`flows are tracking within normal parameters`);
+    }
+
+    if (assessParts.length > 0) {
+      let b3 = '<strong>Assessment:</strong> ' + assessParts.map((p, i) => {
+        if (i === 0) return p;
+        return p.charAt(0).toUpperCase() + p.slice(1);
+      }).join('. ') + '.';
       insights.push(b3);
     }
 
-    // --- Bullet 4: Strategic synthesis (dynamic, forward-looking) ---
-    let b4 = '<strong>Outlook:</strong> ';
-    const parts = [];
-
-    // Trend + momentum
-    if (streak === 1 && devFromAvg > 10) parts.push(`${countryLabel}'s imports are on an upward trajectory and running well above the ${rangeLabel} norm — this may reflect restocking activity or structural demand growth`);
-    else if (streak === -1 && devFromAvg < -10) parts.push(`Persistent volume declines well below the ${rangeLabel} average warrant attention — monitor whether this reflects supply-chain disruptions, demand destruction, or strategic inventory drawdowns`);
-    else if (Math.abs(changePct) > 20) parts.push(`The sharp ${changePct > 0 ? 'increase' : 'decrease'} of ${Math.abs(changePct).toFixed(0)}% warrants close monitoring to determine if this is a one-off adjustment or the start of a new trend`);
-    else parts.push(`Import volumes are tracking within normal ranges for ${countryLabel}`);
-
-    // Concentration-based outlook
-    if (topSuppliers && topSuppliers.length >= 2 && refVal > 0) {
-      const topSupplier = topSuppliers[0];
-      const topSupplierVal = val(countrySeriesData[topSupplier][refIdx] || 0, refDays);
-      const topSupplierShare = (topSupplierVal / refVal * 100);
-      if (topSupplierShare > 45) parts.push(`heavy reliance on ${topSupplier} (${topSupplierShare.toFixed(0)}% of imports) creates supply-concentration risk — any export disruption from this source would materially impact ${countryLabel}'s ${commodityLabel} availability`);
-    }
-
-    // Partial period note
-    if (isPartial) {
-      const partialVal = val(totals[totals.length - 1], base[totals.length - 1].d || 1);
-      const partialDays = base[totals.length - 1].d || 1;
-      const partialVsRef = refVal > 0 ? ((partialVal - refVal) / refVal * 100) : 0;
-      if (Math.abs(partialVsRef) > 10) parts.push(`the current incomplete period (${partialDays} days) is tracking ${partialVsRef > 0 ? 'above' : 'below'} the prior full period by ${Math.abs(partialVsRef).toFixed(0)}%`);
-    }
-
-    b4 += parts.map((p, i) => i === 0 ? p : p.charAt(0).toUpperCase() + p.slice(1)).join('. ') + '.';
-    insights.push(b4);
-
-    // Pipeline flow annotation for China crude
+    // Pipeline flow annotation for China crude (condensed)
     if (state.country === 'china' && state.commodity === 'crude') {
-      insights.push('<strong>Note — Pipeline flows included:</strong> Data includes estimated pipeline crude — ESPO (Russia→China, ~600 kb/d), Kazakhstan-China (~220 kb/d), and Myanmar-China (~200 kb/d). Combined ~1,020 kb/d supplements seaborne imports.');
+      insights.push('<strong>Pipeline flows included:</strong> ESPO Russia→China (~600 kb/d), Kazakhstan-China (~220 kb/d), Myanmar-China (~200 kb/d) — combined ~1,020 kb/d of Hormuz-independent supply.');
     }
 
     return insights;
