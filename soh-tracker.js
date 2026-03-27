@@ -448,42 +448,74 @@
 
   function renderADNOCVessels(adnocData) {
     const vessels = adnocData.vessels || [];
-    const underway = vessels.filter(v => (v.speed || 0) >= 1).length;
-    const stationary = vessels.length - underway;
-    const laden = vessels.filter(v => v.state === 'loaded').length;
+    const live = vessels.filter(v => v.dataSource === 'kpler');
+    const anchored = live.filter(v => v.status === 'Anchored').length;
+    const moored = live.filter(v => v.status === 'Moored').length;
+    const underway = live.filter(v => v.status === 'Under way using engine').length;
+    const unavailable = vessels.filter(v => v.dataSource === 'unavailable').length;
 
-    const rows = vessels.map(v => `
-      <tr class="border-t border-navy-200 hover:bg-navy-50 text-xs">
-        <td class="px-3 py-2.5 font-semibold">${v.marineTrafficUrl ? `<a href="${v.marineTrafficUrl}" target="_blank" rel="noreferrer" class="text-sky-700 hover:underline">${v.name} &#8599;</a>` : v.name}</td>
-        <td class="px-3 py-2.5 hidden sm:table-cell text-navy-600">${v.type || v.vesselTypeClass || '-'}</td>
+    const rows = vessels.map(v => {
+      if (v.dataSource === 'unavailable') {
+        return `<tr class="border-t border-navy-200 bg-navy-50 text-xs">
+          <td class="px-3 py-2.5 font-semibold"><a href="${v.marineTrafficUrl}" target="_blank" rel="noreferrer" class="text-sky-700 hover:underline">${v.name} &#8599;</a></td>
+          <td colspan="8" class="px-3 py-2.5 text-navy-400 italic">Not tracked in Kpler (container ship) — check MarineTraffic for live status</td>
+        </tr>`;
+      }
+      const statusIcon = v.status === 'Under way using engine' ? '&#9654;' : v.status === 'Anchored' ? '&#9875;' : '&#9875;';
+      const statusColor = v.status === 'Under way using engine' ? 'text-emerald-600' : v.status === 'Anchored' ? 'text-amber-600' : 'text-amber-600';
+      return `<tr class="border-t border-navy-200 hover:bg-navy-50 text-xs">
+        <td class="px-3 py-2.5 font-semibold"><a href="${v.marineTrafficUrl}" target="_blank" rel="noreferrer" class="text-sky-700 hover:underline font-mono">${v.name.toUpperCase()} &#8599;</a></td>
+        <td class="px-3 py-2.5 hidden sm:table-cell text-navy-600">${v.type || '-'}</td>
         <td class="px-3 py-2.5">${cargoBadge(v.state)}</td>
-        <td class="px-3 py-2.5 hidden md:table-cell text-navy-600">${v.product || '-'}</td>
+        <td class="px-3 py-2.5"><span class="${statusColor}">${statusIcon}</span> ${v.status || '-'}</td>
+        <td class="px-3 py-2.5 hidden md:table-cell text-navy-600">${v.departed || '-'}</td>
         <td class="px-3 py-2.5 hidden md:table-cell text-navy-600">${v.destination || '-'}</td>
-        <td class="px-3 py-2.5 hidden lg:table-cell text-right font-mono text-navy-600">${fmtNum(v.deadWeight)}</td>
-        <td class="px-3 py-2.5 hidden lg:table-cell text-right font-mono text-navy-600">${v.speed != null ? v.speed.toFixed(1) + ' kn' : '-'}</td>
-        <td class="px-3 py-2.5 hidden lg:table-cell text-navy-500">${v.flagName || '-'}</td>
-      </tr>`).join('');
+        <td class="px-3 py-2.5 hidden lg:table-cell text-right font-mono">${fmtNum(v.deadWeight)}</td>
+        <td class="px-3 py-2.5 hidden lg:table-cell text-right font-mono">${v.capacity ? fmtNum(v.capacity) : '-'}</td>
+      </tr>`;
+    }).join('');
 
     return `
     <div class="soh-section mt-6" id="soh-adnoc">
       <div class="flex items-center gap-3 mb-3">
-        <h3 class="text-sm font-bold text-navy-900 uppercase tracking-wider">ADNOC Vessels in Hormuz</h3>
-        <span class="bg-[#0055A5] text-white text-[10px] font-bold px-2 py-0.5 rounded">ADNOC</span>
+        <p class="text-[10px] text-navy-500 italic">Strait of Hormuz Vessel Tracking - Curated live list</p>
       </div>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
-        <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">In Hormuz</div><div class="text-2xl font-extrabold text-navy-900">${vessels.length}</div></div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Under Way</div><div class="text-2xl font-extrabold text-emerald-600">${underway}</div></div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Stationary</div><div class="text-2xl font-extrabold text-amber-600">${stationary}</div></div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Laden</div><div class="text-2xl font-extrabold text-blue-600">${laden}</div></div>
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="text-xl font-extrabold text-[#0055A5] flex items-center gap-2">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 17h2l.5-1.5L7 11l1.5 6H18l2-4h1"/></svg>
+          ADNOC Vessels in Hormuz
+        </h3>
+        <span class="bg-[#0055A5] text-white text-xs font-bold px-3 py-1.5 rounded">ADNOC</span>
       </div>
-      <div class="bg-amber-50 border border-amber-200 rounded-lg px-4 py-2.5 mb-4 text-xs text-amber-800">AIS/GPS location services within the Mideast Gulf are subject to interference due to ongoing hostilities.</div>
+      <div class="grid grid-cols-2 lg:grid-cols-5 gap-3 mb-4">
+        <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">ADNOC Vessels in Hormuz</div><div class="text-2xl font-extrabold text-navy-900">${vessels.length}</div></div>
+        <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Total Owned Vessels</div><div class="text-2xl font-extrabold text-navy-900">353</div></div>
+        <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500"><span class="inline-block w-2 h-2 rounded-full bg-amber-500 mr-1"></span>Anchored</div><div class="text-2xl font-extrabold text-navy-900">${anchored}</div></div>
+        <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500"><span class="inline-block w-2 h-2 rounded-full bg-amber-400 mr-1"></span>Moored</div><div class="text-2xl font-extrabold text-navy-900">${moored}</div></div>
+        <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500"><span class="inline-block w-2 h-2 rounded-full bg-emerald-500 mr-1"></span>Under Way</div><div class="text-2xl font-extrabold text-navy-900">${underway}</div></div>
+      </div>
+      <div class="bg-amber-50 border border-amber-200 rounded-lg px-4 py-2.5 mb-4 text-xs text-amber-800">
+        <span class="font-bold uppercase tracking-wider text-[10px]">Live Vessel Tracking Disclaimer</span><br>
+        AIS/GPS location services within the Mideast Gulf are subject to interference due to the ongoing hostilities, vessels may appear in irregular and imprecise locations.
+      </div>
       <div class="overflow-x-auto rounded-xl border border-navy-200 shadow-sm bg-white">
-        <table class="w-full text-left min-w-[500px]">
-          <thead class="bg-navy-900 text-white text-[10px] uppercase tracking-wider">
-            <tr><th class="px-3 py-2.5">Vessel Name</th><th class="px-3 py-2.5 hidden sm:table-cell">Type</th><th class="px-3 py-2.5">Cargo</th><th class="px-3 py-2.5 hidden md:table-cell">Product</th><th class="px-3 py-2.5 hidden md:table-cell">Destination</th><th class="px-3 py-2.5 hidden lg:table-cell text-right">DWT</th><th class="px-3 py-2.5 hidden lg:table-cell text-right">Speed</th><th class="px-3 py-2.5 hidden lg:table-cell">Flag</th></tr>
-          </thead><tbody>${rows}</tbody>
+        <table class="w-full text-left min-w-[700px]">
+          <thead class="bg-[#0a1929] text-white text-[10px] font-mono uppercase tracking-wider">
+            <tr>
+              <th class="px-3 py-2.5">Vessel Name</th>
+              <th class="px-3 py-2.5 hidden sm:table-cell">Type</th>
+              <th class="px-3 py-2.5">Cargo</th>
+              <th class="px-3 py-2.5">Status</th>
+              <th class="px-3 py-2.5 hidden md:table-cell">Departed</th>
+              <th class="px-3 py-2.5 hidden md:table-cell">Destination</th>
+              <th class="px-3 py-2.5 hidden lg:table-cell text-right">DWT (mt)</th>
+              <th class="px-3 py-2.5 hidden lg:table-cell text-right">Max Cargo (m3)</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
         </table>
       </div>
+      ${unavailable > 0 ? `<p class="text-[10px] text-navy-400 mt-2">${unavailable} vessel(s) not tracked in Kpler commodity database (container ships). Check MarineTraffic for live data.</p>` : ''}
     </div>`;
   }
 

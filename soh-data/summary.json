@@ -5,14 +5,14 @@
   "outsideTotal": 356,
   "outsideBallast": 240,
   "outsideLaden": 116,
-  "adnocCount": 13,
+  "adnocCount": 11,
   "totalVessels": 1099,
   "transitCount": 16,
-  "syncTimestamp": "2026-03-27T00:09:39.686Z",
+  "syncTimestamp": "2026-03-27T06:04:36.144Z",
   "deltaLabel": "24h",
   "deltas": {
     "insideDelta": 0,
     "outsideDelta": 0,
-    "adnocDelta": 0
+    "adnocDelta": -2
   }
 }

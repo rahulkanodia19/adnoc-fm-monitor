@@ -138,19 +138,59 @@ function main() {
   console.log(`Vessel matrix: Inside ${insideMatrix.grandTotal.total} (${insideMatrix.matrix.length} classes), Outside ${outsideMatrix.grandTotal.total} (${outsideMatrix.matrix.length} classes)`);
   console.log(`Product volumes: Inside ${insideMatrix.productVolumes.length} products, Outside ${outsideMatrix.productVolumes.length} products`);
 
-  // --- Extract ADNOC vessels ---
-  const adnocKeywords = ['adnoc', 'abu dhabi marine', 'abu dhabi national oil'];
-  const adnocNames = ['GHANTOUT', 'AL SAMHA', 'UMM AL LULU', 'AL BAZM', 'AL REEM', 'AL SADR', 'MUBARAZ', 'AL SALAM', 'BAYNOUNAH', 'JANANA', 'NAVIG8 MACALLISTER'];
+  // --- Extract ADNOC vessels by IMO (from als-monitor VesselTracker.tsx) ---
+  const ADNOC_FLEET = [
+    { imo: '9592898', name: 'GHANTOUT' },
+    { imo: '9380324', name: 'AL SAMHA' },
+    { imo: '9494204', name: 'UMM AL LULU-I' },
+    { imo: '9573505', name: 'AL BAZM-II' },
+    { imo: '9300984', name: 'AL REEM I' },
+    { imo: '9574016', name: 'AL SADR - I' },
+    { imo: '9074626', name: 'MUBARAZ' },
+    { imo: '9923085', name: 'AL SALAM' },
+    { imo: '9923097', name: 'BAYNOUNAH' },
+    { imo: '9034236', name: 'JANANA' },
+    { imo: '9482873', name: 'NAVIG8 MACALLISTER' },
+  ];
 
-  const adnocVessels = vessels.filter(v => {
-    const ctrl = (v.controller || '').toLowerCase();
-    const name = (v.name || '').toUpperCase();
-    return adnocKeywords.some(k => ctrl.includes(k)) || adnocNames.some(n => name.includes(n));
-  }).map(v => ({
-    ...v,
-    isInside: v.lat && v.lng ? isInsideGulf(v.lat, v.lng) : null,
-    marineTrafficUrl: v.imo ? `https://www.marinetraffic.com/en/ais/details/ships/imo:${v.imo}` : null,
-  }));
+  const adnocVessels = ADNOC_FLEET.map(ref => {
+    const v = vessels.find(x => x.imo === ref.imo);
+    if (v) {
+      // Derive status from speed
+      let status = 'Unknown';
+      if ((v.speed || 0) >= 1) status = 'Under way using engine';
+      else if (v.state === 'loaded') status = 'Anchored';
+      else status = 'Moored';
+
+      return {
+        name: v.name || ref.name,
+        imo: ref.imo,
+        type: v.vesselTypeClass || '-',
+        state: v.state || 'unknown',
+        status,
+        flagName: v.flagName,
+        deadWeight: v.deadWeight,
+        capacity: v.capacity,
+        capacityUnit: v.capacityUnit,
+        speed: v.speed || 0,
+        course: v.course || 0,
+        lat: v.lat, lng: v.lng,
+        product: v.product,
+        destination: v.destination || v.aisDestination,
+        departed: v.lastPortCallEnd ? v.lastPortCallEnd.replace('T', ' ').substring(0, 16) : null,
+        isInside: v.lat && v.lng ? isInsideGulf(v.lat, v.lng) : null,
+        marineTrafficUrl: `https://www.marinetraffic.com/en/ais/details/ships/imo:${ref.imo}`,
+        dataSource: 'kpler',
+      };
+    }
+    // Not found in Kpler — mark as unavailable (don't hardcode status)
+    return {
+      name: ref.name,
+      imo: ref.imo,
+      marineTrafficUrl: `https://www.marinetraffic.com/en/ais/details/ships/imo:${ref.imo}`,
+      dataSource: 'unavailable',
+    };
+  });
 
   fs.writeFileSync(path.join(SOH_DIR, 'adnoc-vessels.json'), JSON.stringify({
     vessels: adnocVessels, count: adnocVessels.length, syncTimestamp: now,
