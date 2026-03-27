@@ -71,9 +71,10 @@
 
   function fmtNum(n) { return n == null ? '-' : n.toLocaleString('en-US'); }
   function fmtDelta(d) {
-    if (d == null) return '';
+    if (d == null) return '<span class="text-xs text-navy-400">—</span>';
+    if (d === 0) return '<span class="text-xs text-navy-400">No change</span>';
     const sign = d > 0 ? '+' : '';
-    const color = d > 0 ? 'text-emerald-600' : d < 0 ? 'text-red-600' : 'text-navy-400';
+    const color = d > 0 ? 'text-emerald-600' : 'text-red-600';
     return `<span class="${color} text-xs font-medium">${sign}${d}</span>`;
   }
   function fmtDate(iso) {
@@ -160,28 +161,24 @@
         </div>
         <div class="flex gap-2">
           <div class="bg-sky-50 border border-sky-200 px-3 py-1.5 rounded-lg text-xs text-sky-700 font-medium">${fmtNum(summary.totalVessels)} vessels in zone</div>
-          ${summary.transitCount ? `<div class="bg-amber-50 border border-amber-200 px-3 py-1.5 rounded-lg text-xs text-amber-700 font-medium">${summary.transitCount} transiting</div>` : ''}
         </div>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
         <div class="soh-kpi-card bg-white rounded-xl p-4 border border-navy-200" onclick="document.getElementById('soh-adnoc').scrollIntoView({behavior:'smooth'})">
           <div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">ADNOC Vessels in Hormuz</div>
           <div class="text-3xl font-extrabold text-navy-900 mt-1">${summary.adnocCount}</div>
-          <div class="mt-1">${fmtDelta(d.adnocDelta)} <span class="text-xs text-navy-400">in last ${label}</span></div>
           <div class="text-xs text-sky-600 mt-2 font-medium">Open Vessels &rarr;</div>
         </div>
         <div class="soh-kpi-card bg-white rounded-xl p-4 border border-navy-200" onclick="document.getElementById('soh-matrix').scrollIntoView({behavior:'smooth'})">
           <div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Vessels Inside Gulf</div>
           <div class="text-3xl font-extrabold text-navy-900 mt-1">${fmtNum(summary.insideTotal)}</div>
           <div class="text-xs text-navy-500 mt-1">Ballast ${fmtNum(summary.insideBallast)} | Laden ${fmtNum(summary.insideLaden)}</div>
-          <div class="mt-1">${fmtDelta(d.insideDelta)} <span class="text-xs text-navy-400">in last ${label}</span></div>
           <div class="text-xs text-sky-600 mt-2 font-medium">Open Inside Matrix &rarr;</div>
         </div>
         <div class="soh-kpi-card bg-white rounded-xl p-4 border border-navy-200" onclick="document.getElementById('soh-matrix').scrollIntoView({behavior:'smooth'})">
           <div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Vessels Outside Gulf</div>
           <div class="text-3xl font-extrabold text-navy-900 mt-1">${fmtNum(summary.outsideTotal)}</div>
           <div class="text-xs text-navy-500 mt-1">Ballast ${fmtNum(summary.outsideBallast)} | Laden ${fmtNum(summary.outsideLaden)}</div>
-          <div class="mt-1">${fmtDelta(d.outsideDelta)} <span class="text-xs text-navy-400">in last ${label}</span></div>
           <div class="text-xs text-sky-600 mt-2 font-medium">Open Outside Matrix &rarr;</div>
         </div>
       </div>
@@ -695,7 +692,7 @@
     </div>`;
   }
 
-  // ---------- Section 8: Crisis Transit Log ----------
+  // ---------- Section 8: Vessel Transit Log ----------
 
   function renderCrisisTransitLog(crisisData, imfData) {
     if (!crisisData) return '<div class="soh-section mt-6" id="soh-crisis"></div>';
@@ -759,7 +756,7 @@
 
     return `
     <div class="soh-section mt-6" id="soh-crisis">
-      <h3 class="text-sm font-bold text-navy-900 uppercase tracking-wider mb-3">Crisis Transit Log</h3>
+      <h3 class="text-sm font-bold text-navy-900 uppercase tracking-wider mb-3">Vessel Transit Log</h3>
       <p class="text-xs text-navy-500 mb-3">Vessels that crossed to the Gulf of Oman since Feb 28 (crisis start) — identified from Kpler AIS vessel positions</p>
       <div class="grid grid-cols-3 gap-3 mb-4">
         <div class="bg-white border border-navy-200 rounded-lg p-3 text-center">
