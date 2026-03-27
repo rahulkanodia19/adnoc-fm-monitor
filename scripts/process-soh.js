@@ -208,6 +208,40 @@ function main() {
   }, null, 2));
   console.log(`Transit vessels: ${transitVessels.length} (${exitingCount} exiting, ${enteringCount} entering)`);
 
+  // --- Crisis transit log (vessels that crossed out during crisis) ---
+  const CRISIS_START = '2026-02-28';
+  const crisisTransitVessels = allVesselsWithPos.filter(v => {
+    if (!v.lastPortCallEnd || v.lastPortCallEnd < CRISIS_START) return false;
+    return !isInsideGulf(v.lat, v.lng); // Currently outside Gulf = crossed the strait
+  }).map(v => ({
+    name: v.name, imo: v.imo, vesselTypeClass: v.vesselTypeClass, state: v.state,
+    flagName: v.flagName, product: v.product, destination: v.destination || v.aisDestination,
+    deadWeight: v.deadWeight, speed: v.speed,
+    departureDate: (v.lastPortCallEnd || '').substring(0, 10),
+    commodity: v.commodityTypes?.[0] || 'other',
+  })).sort((a, b) => b.departureDate.localeCompare(a.departureDate));
+
+  // Group by date
+  const dailyCrisis = {};
+  for (const v of crisisTransitVessels) {
+    const d = v.departureDate;
+    if (!dailyCrisis[d]) dailyCrisis[d] = { date: d, count: 0, tankers: 0, bulk: 0, other: 0 };
+    dailyCrisis[d].count++;
+    const c = v.commodity;
+    if (c === 'liquids' || c === 'lng' || c === 'lpg') dailyCrisis[d].tankers++;
+    else if (c === 'dry') dailyCrisis[d].bulk++;
+    else dailyCrisis[d].other++;
+  }
+
+  fs.writeFileSync(path.join(SOH_DIR, 'crisis-transits.json'), JSON.stringify({
+    crisisStart: CRISIS_START,
+    totalVessels: crisisTransitVessels.length,
+    dailyCounts: Object.values(dailyCrisis).sort((a, b) => b.date.localeCompare(a.date)),
+    vessels: crisisTransitVessels,
+    syncTimestamp: now,
+  }, null, 2));
+  console.log(`Crisis transits: ${crisisTransitVessels.length} vessels crossed out since ${CRISIS_START}`);
+
   // --- Map positions ---
   const mapPositions = allVesselsWithPos.map(v => ({
     lat: v.lat, lng: v.lng,

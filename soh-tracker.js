@@ -52,6 +52,7 @@
       loadJSON('flows-crude.json'),          // 15
       loadJSON('flows-lng.json'),            // 16
       loadJSON('flows-lpg.json'),            // 17
+      loadJSON('crisis-transits.json'),      // 18
     ]);
     const get = (i) => results[i].status === 'fulfilled' ? results[i].value : null;
     return {
@@ -62,6 +63,7 @@
       flowsMonthly: get(12), flowsMonthlyImport: get(13),
       imfTransit: get(14),
       flowsCrude: get(15), flowsLng: get(16), flowsLpg: get(17),
+      crisisTransits: get(18),
     };
   }
 
@@ -693,6 +695,96 @@
     </div>`;
   }
 
+  // ---------- Section 8: Crisis Transit Log ----------
+
+  function renderCrisisTransitLog(crisisData, imfData) {
+    if (!crisisData) return '<div class="soh-section mt-6" id="soh-crisis"></div>';
+    const daily = crisisData.dailyCounts || [];
+    const vessels = crisisData.vessels || [];
+    const totalDays = daily.length;
+    const avgPerDay = totalDays > 0 ? (crisisData.totalVessels / totalDays).toFixed(1) : 0;
+
+    // IMF pre-crisis average (Feb 2026)
+    const imfRecords = imfData?.records || [];
+    const febRecords = imfRecords.filter(r => r.date >= '2026-02-01' && r.date <= '2026-02-27');
+    const precrisisAvg = febRecords.length > 0 ? Math.round(febRecords.reduce((s, r) => s + r.n_total, 0) / febRecords.length) : 120;
+
+    // IMF daily counts for cross-reference (Mar 1+)
+    const imfCrisis = {};
+    for (const r of imfRecords) {
+      if (r.date >= '2026-03-01') imfCrisis[r.date] = r.n_total;
+    }
+
+    const dateRows = daily.map(d => {
+      const dayVessels = vessels.filter(v => v.departureDate === d.date);
+      const bg = d.count < 5 ? 'bg-red-50' : d.count < 20 ? 'bg-amber-50' : 'bg-emerald-50';
+      const imfCount = imfCrisis[d.date] != null ? imfCrisis[d.date] : '-';
+
+      const vesselRows = dayVessels.map(v => `
+        <tr class="border-t border-navy-100 text-[11px]">
+          <td class="px-2 py-1.5 font-medium">${v.name}</td>
+          <td class="px-2 py-1.5 font-mono text-navy-500">${v.imo || '-'}</td>
+          <td class="px-2 py-1.5 hidden sm:table-cell">${v.vesselTypeClass || '-'}</td>
+          <td class="px-2 py-1.5">${cargoBadge(v.state)}</td>
+          <td class="px-2 py-1.5 hidden md:table-cell">${v.product || '-'}</td>
+          <td class="px-2 py-1.5 hidden md:table-cell">${v.flagName || '-'}</td>
+          <td class="px-2 py-1.5 hidden lg:table-cell">${v.destination || '-'}</td>
+          <td class="px-2 py-1.5 hidden lg:table-cell text-right font-mono">${fmtNum(v.deadWeight)}</td>
+        </tr>`).join('');
+
+      return `
+        <div class="border border-navy-200 rounded-lg mb-2 overflow-hidden">
+          <button onclick="this.nextElementSibling.classList.toggle('hidden');this.querySelector('.chevron').classList.toggle('rotate-90')" class="w-full flex items-center justify-between px-3 py-2.5 ${bg} hover:brightness-95 transition-all text-left">
+            <div class="flex items-center gap-3">
+              <svg class="chevron w-4 h-4 text-navy-500 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              <span class="text-sm font-semibold text-navy-900">${d.date}</span>
+              <span class="text-xs font-bold ${d.count < 5 ? 'text-red-700' : d.count < 20 ? 'text-amber-700' : 'text-emerald-700'}">${d.count} vessels</span>
+            </div>
+            <div class="flex items-center gap-3 text-xs text-navy-500">
+              <span>Tankers: ${d.tankers}</span>
+              <span>Bulk: ${d.bulk}</span>
+              ${imfCount !== '-' ? `<span class="text-sky-600">IMF: ${imfCount}</span>` : ''}
+            </div>
+          </button>
+          <div class="hidden">
+            <table class="w-full text-left">
+              <thead class="bg-navy-50 text-[10px] uppercase tracking-wider text-navy-500">
+                <tr><th class="px-2 py-1.5">Name</th><th class="px-2 py-1.5">IMO</th><th class="px-2 py-1.5 hidden sm:table-cell">Type</th><th class="px-2 py-1.5">Cargo</th><th class="px-2 py-1.5 hidden md:table-cell">Product</th><th class="px-2 py-1.5 hidden md:table-cell">Flag</th><th class="px-2 py-1.5 hidden lg:table-cell">Dest</th><th class="px-2 py-1.5 hidden lg:table-cell text-right">DWT</th></tr>
+              </thead>
+              <tbody>${vesselRows}</tbody>
+            </table>
+          </div>
+        </div>`;
+    }).join('');
+
+    return `
+    <div class="soh-section mt-6" id="soh-crisis">
+      <h3 class="text-sm font-bold text-navy-900 uppercase tracking-wider mb-3">Crisis Transit Log</h3>
+      <p class="text-xs text-navy-500 mb-3">Vessels that crossed to the Gulf of Oman since Feb 28 (crisis start) — identified from Kpler AIS vessel positions</p>
+      <div class="grid grid-cols-3 gap-3 mb-4">
+        <div class="bg-white border border-navy-200 rounded-lg p-3 text-center">
+          <div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Vessels Crossed Out</div>
+          <div class="text-2xl font-extrabold text-red-600">${crisisData.totalVessels}</div>
+          <div class="text-[10px] text-navy-400">since Feb 28</div>
+        </div>
+        <div class="bg-white border border-navy-200 rounded-lg p-3 text-center">
+          <div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Avg Per Day</div>
+          <div class="text-2xl font-extrabold text-amber-600">${avgPerDay}</div>
+          <div class="text-[10px] text-navy-400">across ${totalDays} days</div>
+        </div>
+        <div class="bg-white border border-navy-200 rounded-lg p-3 text-center">
+          <div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Pre-Crisis Avg</div>
+          <div class="text-2xl font-extrabold text-navy-900">~${precrisisAvg}</div>
+          <div class="text-[10px] text-navy-400">vessels/day (IMF Feb 2026)</div>
+        </div>
+      </div>
+      <div class="max-h-[600px] overflow-y-auto rounded-xl border border-navy-200 bg-white p-3">
+        ${dateRows}
+      </div>
+      <p class="text-[10px] text-navy-400 mt-2">Vessels identified by comparing current position (outside Gulf) with last port call date (after crisis start). Click a date to see vessel details.</p>
+    </div>`;
+  }
+
   // ---------- Main Render ----------
 
   function render(data) {
@@ -707,6 +799,7 @@
       renderVesselMatrix(data.vesselMatrix || {}),
       renderBreakdowns(data.breakdownProduct, data.breakdownVesselType, data.breakdownDest),
       renderTransitVessels(data.transitVessels),
+      renderCrisisTransitLog(data.crisisTransits, data.imfTransit),
     ].join('');
 
     setTimeout(() => {
