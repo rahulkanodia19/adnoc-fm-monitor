@@ -140,7 +140,7 @@ These fields should be updated with fresh data:
 - Per-country `released` → updated values for countries with new data found
 - Per-country `startDate` → if a country that hadn't started has now begun releasing
 - `sources` → add any new source articles at the **top** of the array (keep all existing sources)
-- `keyInsights` → array of 3-5 bullet strings summarizing the most notable changes from the last 1-2 days. Each bullet should be one sentence, cite a source, and focus on what changed (new releases, new countries starting, milestones reached, revised figures). Replace the entire array each sync — these are ephemeral, not cumulative.
+- `keyInsights` → array of 3-5 bullet strings summarizing the most notable changes from the last 1-2 days. Each bullet should be one sentence and focus on what changed (new releases, new countries starting, milestones reached, revised figures). Do NOT include source citations in these bullets. Replace the entire array each sync — these are ephemeral, not cumulative.
 
 ### Fields to NOT change (unless IEA officially revises)
 
@@ -173,7 +173,7 @@ Run these checks mentally before writing the updated `SPR_RELEASE_DATA`:
 - [ ] `totalProducts` equals the sum of all per-country `products` values
 - [ ] `asOf` is set to today's date
 - [ ] All source URLs are real and accessible (not fabricated)
-- [ ] `keyInsights` has 3-5 bullets, each citing a source
+- [ ] `keyInsights` has 3-5 bullets, no source citations in bullets
 - [ ] Bullets focus on changes from the last 1-2 days, not static facts
 - [ ] No schema changes — variable name is still `SPR_RELEASE_DATA`, all fields present
 - [ ] The file still uses `const` declarations (not export)
@@ -210,14 +210,14 @@ The `keyInsights` array should contain 3-5 bullet-point strings that a CEO can s
 
 - Describe something that **changed** in the last 1-2 days (not static background)
 - Include a **specific number** (barrels, percentage, country count)
-- **Cite the source** at the end (e.g., "— DOE", "— IEA", "— Reuters citing Kpler")
+- Do **NOT** include source citations — the Sources section at the bottom of the page handles attribution
 - Be **one sentence**, max 30 words
 
 Example bullets:
-- "US released 2.1 mb this week, bringing total to 9.1 mb (5.3% of 172.2 mb commitment) — DOE weekly report"
-- "Germany, France, and UK began releasing on Mar 28, adding 47.6 mb of combined commitment — IEA"
-- "Japan's release pace accelerated to 1.2 mb/day, ahead of schedule for 79.8 mb target — JOGMEC"
-- "Overall release progress crossed 10% milestone at 42.6 mb of 426 mb committed — IEA update"
-- "Spain released 2.0 mb of refined products, the first European country to complete its allocation — Reuters"
+- "US released 2.1 mb this week, bringing total to 9.1 mb (5.3% of 172.2 mb commitment)"
+- "Germany, France, and UK began releasing on Mar 28, adding 47.6 mb of combined commitment"
+- "Japan's release pace accelerated to 1.2 mb/day, ahead of schedule for 79.8 mb target"
+- "Overall release progress crossed 10% milestone at 42.6 mb of 426 mb committed"
+- "Spain released 2.0 mb of refined products, the first European country to complete its allocation"
 
 Replace the entire `keyInsights` array each sync. If no notable changes occurred in the last 48 hours, write bullets about the current status, pace, and what's expected next.

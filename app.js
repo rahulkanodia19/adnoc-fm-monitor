@@ -654,12 +654,9 @@ function renderMarketNews() {
   const pctReleased = ((d.totalReleased / d.totalCommitted) * 100).toFixed(1);
   const daysSinceAnnouncement = Math.floor((new Date(d.asOf) - new Date(d.announced)) / 86400000);
 
-  // Recency badge
-  const sprAgeHours = (Date.now() - new Date(d.asOf).getTime()) / (1000 * 60 * 60);
-  const sprFreshBadge = sprAgeHours <= 48
-    ? '<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-700 border border-emerald-200 ml-1.5">LIVE</span>'
-    : sprAgeHours <= 72 ? ''
-    : '<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-700 border border-amber-200 ml-1.5">STALE</span>';
+  // Last updated label
+  const sprAsOfLabel = new Date(d.asOf).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+  const sprFreshBadge = '<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-semibold bg-navy-100 text-navy-600 border border-navy-200 ml-1.5">Last updated: ' + sprAsOfLabel + '</span>';
 
   // Compute released crude vs products from country-level data
   let releasedCrude = 0, releasedProducts = 0;
@@ -1016,17 +1013,6 @@ function updateStats(activeTab) {
       ];
       break;
     case 'market-news':
-      if (typeof SPR_RELEASE_DATA !== 'undefined') {
-        const spr = SPR_RELEASE_DATA;
-        const releasing = spr.countries.filter(c => c.released > 0).length;
-        stats = [
-          { label: 'Committed (mb)', value: spr.totalCommitted, color: 'text-blue-600', change: 0 },
-          { label: 'Released (mb)', value: spr.totalReleased, color: 'text-emerald-600', change: 0 },
-          { label: 'Countries Releasing', value: releasing, color: 'text-amber-600', change: 0 },
-          { label: 'Release Progress', value: ((spr.totalReleased / spr.totalCommitted) * 100).toFixed(1) + '%', color: 'text-sky-600', change: 0 },
-        ];
-      }
-      break;
     case 'import-flows':
     case 'export-flows':
     case 'market-prices':
