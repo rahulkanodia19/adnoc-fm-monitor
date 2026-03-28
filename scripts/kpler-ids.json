@@ -1,0 +1,47 @@
+{
+  "_description": "Kpler zone IDs and product IDs, discovered from the /api/flows endpoint. Used by sync-flows.js.",
+  "_discoveredOn": "2026-03-29",
+  "zones": {
+    "China": 213,
+    "India": 447,
+    "Japan": 477,
+    "South Korea": 873,
+    "Thailand": 911,
+    "Vietnam": 963,
+    "Bahrain": 77,
+    "Iran": 455,
+    "Iraq": 457,
+    "Kuwait": 505,
+    "Oman": 677,
+    "Qatar": 739,
+    "Russian Federation": 757,
+    "Saudi Arabia": 787,
+    "United Arab Emirates": 943,
+    "United States": 947
+  },
+  "products": {
+    "crude": 1370,
+    "lng": 1750,
+    "lpg": 2052
+  },
+  "productLabels": {
+    "1370": "Crude/Co",
+    "1750": "lng",
+    "2052": "LPG"
+  },
+  "urlPattern": {
+    "import": "https://terminal.kpler.com/cargo/flows?productEstimation=false&projection=actual&split=origin--country&granularity=days&unit={unit}&dates=1m&mZones={zoneId}&products={productId}&dir=import",
+    "export": "https://terminal.kpler.com/cargo/flows?productEstimation=false&projection=actual&split=destination--country&granularity=days&unit={unit}&dates=1m&mZones={zoneId}&products={productId}"
+  },
+  "apiPattern": {
+    "endpoint": "POST /api/flows",
+    "splitOn": {
+      "import": "Origin Countries",
+      "export": "Destination Countries"
+    },
+    "locationField": {
+      "import": "toLocations",
+      "export": "fromLocations"
+    }
+  }
+}

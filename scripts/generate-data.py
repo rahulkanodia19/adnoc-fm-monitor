@@ -96,7 +96,7 @@ def read_xlsx(filepath):
     headers = list(all_rows[0])  # ['date', 'Country1', 'Country2', ...]
     countries = headers[1:]
 
-    CUTOFF_DATE = "2026-03-25"
+    CUTOFF_DATE = datetime.now().strftime("%Y-%m-%d")
 
     daily_records = []
     for row in all_rows[1:]:
@@ -235,7 +235,7 @@ def compute_top_suppliers(daily_data, countries, top_n=15):
 def process_directory(directory, mapping):
     """Process all xlsx files in a directory and return data dict."""
     data = {}
-    files = glob.glob(os.path.join(directory, "*.xlsx"))
+    files = sorted(glob.glob(os.path.join(directory, "*.xlsx")), reverse=True)
 
     for filepath in files:
         country, commodity = parse_filename(filepath)

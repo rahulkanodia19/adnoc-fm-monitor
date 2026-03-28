@@ -1,37 +1,44 @@
 {
-  "timestamp": "2026-03-26T12:00:00Z",
+  "timestamp": "2026-03-29T08:00:00Z",
   "success": true,
-  "mode": "web-search + browser (sync:force)",
-  "changes": "Updated LAST_UPDATED to Mar 26. UAE: Habshan gas complex resumed (Mar 23), gas current 4.5→5.5 Bcf/d, ADNOC CEO 'economic terrorism' statement. Iraq: Production dropped further to ~800k bpd Basra, total 1000 kb/d, BP/Eni ordered further cuts. Qatar: FM extended to Italy/Belgium/S.Korea/China (Mar 24). Iran: Rejected ceasefire, 5 conditions (Mar 25). All isNew flags recalculated for 48h window. Added new shutdown sd-020 (Iraq further cuts). Habshan sd-019 status changed to restarted. Rystad estimates $25B infrastructure repair bill.",
+  "mode": "web-search + browser-premium (Kpler + Rystad)",
+  "changes": "Updated LAST_UPDATED to Mar 28. Added 7 new events total: Iran — Houthis joined war with missile attack on Israel (Mar 28), IRGC formally closed Hormuz to US/allied vessels (Mar 27), Israeli airstrike killed IRGC Navy commander Tangsiri (Mar 26). Saudi Arabia — East-West Pipeline flow tripled to 2.9M bpd (Mar 27). UAE — ADCOP pipeline exports rise to 1.62M bpd (Mar 27), ADNOC Safeen ship hit by projectile in Hormuz (Mar 29, from Kpler/The Loadstar). Oman — Salalah Port struck again by 2 Iranian drones, operations suspended (Mar 29, from Kpler/Maritime Executive). Gas production notes made commodity-specific for all 9 countries. All isNew flags recalculated. Rystad confirms Tropical Cyclone Narelle hit Australian LNG (~29 Mtpa offline) compounding Qatar shutdown. No new FM declarations found since Mar 20.",
   "countriesCount": 9,
   "fmCount": 24,
   "shutdownsCount": 20,
   "sourcesChecked": {
-    "tier1": ["Kpler", "Rystad Energy", "S&P Global Platts", "Bloomberg", "Argus Media"],
-    "tier2": ["Al Jazeera", "CNBC", "The National (UAE)", "Financial Times", "NPR", "NBC News", "CBS News"],
-    "tier3": ["OilPrice.com", "World Oil", "BOE Report", "Rigzone", "Anadolu Agency", "Iraq Business News"]
+    "tier1": ["Kpler (authenticated terminal)", "Rystad Energy (authenticated portal)", "Bloomberg", "Wood Mackenzie"],
+    "tier2": ["Al Jazeera", "CNBC", "NPR", "CBS News", "Fox News", "Washington Post", "Axios", "Fortune"],
+    "tier3": ["OilPrice.com", "USNI News", "Euronews", "Argus Media", "Maritime Executive", "The Loadstar", "gCaptain"]
+  },
+  "premiumBrowserSync": {
+    "kpler": "Authenticated (rkanodia@adnoc.ae). Accessed Insight > US & Israel - Iran War signal. Found 6 CRITICAL alerts: Oman Salalah Port drone strike (Mar 29), Safeen ship hit by projectile in Hormuz, Houthis threaten Red Sea escalation, $200 oil forecast. Cumulative oil losses reach 213+ million barrels.",
+    "rystad": "Authenticated. Read Alert: Tropical Cyclone Narelle (Mar 28) — ~29 Mtpa Australian LNG capacity affected (Gorgon, Wheatstone, NWS). Edition 22 Iran conflict alert previously captured. Crude Flow Signals Report Mar 2026 available.",
+    "spglobal": "Authenticated (after MFA). Read CERA Upstream Intelligence Week of Mar 23-27: Brent ~$105, WTI ~$95, OPEC basket ~$120. SAMREF Yanbu refinery hit by drone (damage unclear, status updated to partial). ADNOC Das Island LNG adjusting production. Haifa refinery back online after Mar 20 strike. Energy infrastructure attacks paused amid negotiations. Also found 'Qatari LNG ships head to US' article."
   },
   "keyFindings": {
-    "uaeHabshanResumed": "Habshan gas processing complex (6.1 Bcf/d, 60% of UAE gas) resumed operations Mar 23 after 4-day shutdown",
-    "iraqFurtherCuts": "Basra output dropped to ~800k bpd. BP ordered to cut Rumaila to 350k bpd, Eni to cut Zubair by 70k bpd",
-    "qatarFMExtended": "QatarEnergy extended FM to Italy, Belgium, South Korea, China on Mar 24",
-    "iranRejectsCeasefire": "Iran rejected US ceasefire, laid out 5 conditions including Hormuz sovereignty",
-    "trumpUltimatum": "Trump issued 48h ultimatum Mar 22, postponed Mar 23 citing 'productive talks'",
-    "rystadRepairBill": "Rystad estimates $25B in Gulf energy infrastructure repair costs",
-    "brentCrude": "Dropped ~15% to below $99/bbl on ceasefire hopes, partially recovered to ~$102"
+    "omanSalalahStruck": "Salalah Port hit by 2 Iranian drones Mar 29. Crane damaged, 1 worker injured. Maersk ~48hr downtime. Critical: this is Oman's key alternative to Gulf routes.",
+    "adnocSafeenHit": "ADNOC Safeen container ship hit by projectile in Strait of Hormuz. Reported by The Loadstar via Kpler.",
+    "houthiAttack": "Houthis launched ballistic missiles at Israel Mar 28 — first attack since war began. Fears of Red Sea shipping disruption renewal.",
+    "irgcHormuzClosure": "IRGC formally declared Hormuz closed to US/allied vessels Mar 27. Turned back 3 ships including 2 COSCO vessels.",
+    "pipelineBypass": "Saudi East-West at 2.9M bpd, UAE ADCOP at 1.62M bpd. Combined ~9M vs 20M bpd Strait capacity.",
+    "australianLNG": "Cyclone Narelle hit 29 Mtpa Australian LNG (Gorgon, Wheatstone, NWS) Mar 26 — compounds Qatar 77 Mtpa shutdown.",
+    "oilPrices": "Brent $112.57 (+4.22%), WTI $99.64 (+5.46%) Mar 28. Analysts warn $200 possible.",
+    "samrefYanbu": "S&P Global CERA confirms SAMREF Yanbu refinery (400k bpd) hit by drone — damage unclear, status updated to partial.",
+    "dasIslandLNG": "ADNOC Gas adjusting LNG production at 6 Mtpa Das Island facility due to shipping disruptions — S&P Global CERA Mar 27."
   },
-  "browserSync": {
-    "kpler": "Authenticated. Global LNG utilization dropped 90%→77% in March. Export volumes down ~20% (36.89→29.4 mt).",
-    "rystad": "Authenticated. Read Edition 22 alert (Mar 26): 2,000 ships/20,000 seafarers locked in Hormuz, Thai tanker transited via Iran coordination, Ukraine struck Russian crude infrastructure (~1.9M bpd), 50,000+ US troops in Middle East.",
-    "spglobal": "Required MFA via Microsoft Authenticator - session needed manual approval."
-  },
+  "noNewFMs": true,
+  "noNewFMsReason": "No new FM declarations found since Iraq Oil Ministry (fm-024, Mar 20). Most FMs declared in weeks 1-2 (Mar 1-11) when disruptions began. By week 4, situation is entrenched — existing FMs cover ongoing disruptions. QatarEnergy Mar 24 extension already captured.",
+  "gasNotesFixed": true,
+  "gasNotesFixReason": "All 9 countries now have commodity-specific gas notes (previously oil and gas notes were identical). Gas notes describe gas-specific impacts: associated gas, gas processing, pipeline status.",
   "verification": {
     "jsSyntax": "PASS",
-    "preWarLock": "PASS - all 9 countries unchanged",
+    "preWarLock": "PASS — all 9 countries unchanged",
     "refiningMath": "PASS",
     "currentLePreWar": "PASS",
     "countriesCount": "9/9",
-    "fmCount": "24 (>=22)",
-    "shutdownsCount": "20 (>=19, +1 new)"
+    "fmCount": "24",
+    "shutdownsCount": "20",
+    "validationScript": "PASS — 109/109 checks"
   }
 }

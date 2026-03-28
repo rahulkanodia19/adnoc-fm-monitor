@@ -10,13 +10,13 @@ Read the file `data.js` in the project root. Note the schema, the current countr
 
 ## Step 2: Save previous data
 
-Copy the current data arrays from data.js into a JSON file called `data-previous.json` with this structure:
+Before making ANY changes, save the current data to `data-previous.json` as a full backup. Read the complete `data.js` file and write `data-previous.json` with the full data arrays (not just IDs — the complete objects):
 ```json
 {
   "lastUpdated": "<value of LAST_UPDATED>",
-  "countryStatus": [...],
-  "fmDeclarations": [...],
-  "shutdowns": [...]
+  "countryStatus": [<full COUNTRY_STATUS_DATA array>],
+  "fmDeclarations": [<full FM_DECLARATIONS_DATA array>],
+  "shutdowns": [<full SHUTDOWNS_NO_FM_DATA array>]
 }
 ```
 
@@ -97,7 +97,7 @@ These outlets provide breaking news and often cite Tier 1 data. Search them for 
 Focus on events from the last 48 hours. Search for:
 - New force majeure declarations by energy/shipping/petrochemical companies
 - Oil & gas facility shutdowns, attacks, or disruptions
-- Country-level status changes for: Qatar, Kuwait, Saudi Arabia, UAE, Iraq, Bahrain, Oman, Israel
+- Country-level status changes for: Qatar, Kuwait, Saudi Arabia, UAE, Iraq, Bahrain, Oman, Israel, Iran
 - Production volume impacts (kb/d, Mtpa, Bcf/d) and infrastructure damage
 - Shipping disruptions through Strait of Hormuz
 - Tanker diversions, insurance rate changes, war risk premiums
@@ -176,16 +176,57 @@ Write `energy-news-data.json` with this structure:
 
 ---
 
+## Step 3c: Premium browser-authenticated search (if browser tools available)
+
+If you have access to Chrome DevTools MCP tools (mcp__chrome-devtools__*), use them to check authenticated premium platforms for data that supplements your web searches. Focus on the SAME data as Steps 1-3: country status, FM declarations, shutdowns, and production impacts. Do NOT search for prices, flows, or vessel tracking here.
+
+### What to check on each platform
+
+**terminal.kpler.com**
+- Check "Alerts" or "News" section for latest Gulf/Hormuz disruption reports
+- Look for production disruption alerts for the 9 tracked countries
+- Check for any new FM declarations or facility shutdown reports
+- Note any data that contradicts or enhances your web search findings
+
+**portal.rystadenergy.com**
+- Check latest supply disruption reports / intelligence alerts
+- Look for field-level production analytics for Gulf countries
+- Check for infrastructure damage assessments or repair timelines
+- Note any production volume updates not found in public sources
+
+**connect.spglobal.com**
+- Check latest Platts news/commentary on Gulf disruptions
+- Look for new FM declarations or status changes in their coverage
+- Check infrastructure damage or restart reports
+- Note any country status assessments or production impact analyses
+
+### Rules for browser search
+- Only enhance data.js with VERIFIED information from these platforms
+- Cite the platform in source entries (e.g., "Rystad supply disruption alert — Mar 28")
+- If a platform requires login/MFA and you cannot access it, skip it and note in sync-log.json
+- Do NOT use browser for prices, vessel counts, or flow data — those are separate tabs
+
+---
+
 ## Step 4: Update data.js
 
 Update the `data.js` file with any new findings. Preserve the exact same schema and variable structure:
 
 - `LAST_UPDATED` — set to current ISO timestamp
-- `COUNTRY_STATUS_DATA` — array of 8 countries (Qatar, Kuwait, Saudi Arabia, UAE, Iraq, Bahrain, Oman, Israel). Each has: id, country, flag, status (stable|elevated|high|critical|conflict), statusLabel, isNew, summary, metrics, production, events, oilGasImpact, infrastructure, sources
+- `COUNTRY_STATUS_DATA` — array of 9 countries (Qatar, Kuwait, Saudi Arabia, UAE, Iraq, Bahrain, Oman, Israel, Iran). Each has: id, country, flag, status (stable|elevated|high|critical|conflict), statusLabel, isNew, summary, metrics, production, events, oilGasImpact, infrastructure, sources
+- Each country's `production` object must include a `notes` sub-object with keys: oil, gas, refining, lng (only where applicable). These are short operational status notes shown in the Production Overview tables. Update them to reflect the current situation for each commodity.
 - `FM_DECLARATIONS_DATA` — array of force majeure declarations. Each has: id, company, country, flag, date, status (active|partially_lifted|lifted), statusLabel, isNew, summary, details, sources
 - `SHUTDOWNS_NO_FM_DATA` — array of non-FM shutdowns. Each has: id, company, country, flag, date, status, statusLabel, isNew, summary, details, sources
 
 ### Rules
+- Pre-war baseline values (`preWar` fields in production objects) must NEVER change — these are fixed reference points
+- Production notes (`production.notes`) MUST be updated to reflect current operational status each sync
+- production.notes.oil, .gas, .refining, .lng MUST each describe commodity-specific impacts — do NOT copy the same text across commodities:
+  - Oil notes: crude oil field shutdowns, export disruptions, storage constraints
+  - Gas notes: gas field/processing disruptions, associated gas impacts, pipeline status
+  - Refining notes: refinery-specific damage, throughput, capacity status
+  - LNG notes: liquefaction plant status, LNG export disruptions
+- If no new FM declarations are found in the last 7 days, note this in sync-log.json with a reason
 - Mark items as `isNew: true` if they occurred in the last 48 hours, otherwise `isNew: false`
 - Keep all existing entries, update their status if changed
 - Add new entries if found from web search
@@ -194,14 +235,52 @@ Update the `data.js` file with any new findings. Preserve the exact same schema 
 - The file must use `const` declarations (not export)
 - Preserve the production object structure on country entries if present
 
+### Pre-war baselines (LOCKED — never modify these values)
+
+| Country | Oil (kb/d) | Gas (Bcf/d) | Refining Cap (kb/d) | LNG (Mtpa) |
+|---------|-----------|-------------|---------------------|------------|
+| Qatar | 1220 | 18.5 | 443 | 77.0 |
+| Kuwait | 2600 | 1.7 | 1400 | — |
+| Saudi Arabia | 10400 | 11.3 | 3291 | — |
+| UAE | 3400 | 6.5 | 1222 | 6.0 |
+| Iraq | 4300 | 3.0 | 1300 | — |
+| Bahrain | 196 | 1.6 | 405 | — |
+| Oman | 1024 | 4.2 | 222 | 10.4 |
+| Israel | 0 | 3.0 | 197 | — |
+| Iran | 3176 | 25.8 | 2600 | — |
+
+### Valid status values
+
+- Country status: `stable`, `elevated`, `high`, `critical`, `conflict`
+- FM status: `active`, `partially_lifted`, `lifted`, `extended`
+- Shutdown status: `ongoing`, `resumed`, `partial`, `planned`, `shutdown`, `halted`, `struck`, `suspended`, `operational`, `restarted`, `fm_declared`, `contained`, `partially_resumed`
+- Impact severity: `none`, `low`, `moderate`, `severe`, `critical`
+
 ### Validation checklist (verify before writing)
-- [ ] All 8 countries present in COUNTRY_STATUS_DATA
+- [ ] All 9 countries present in COUNTRY_STATUS_DATA
 - [ ] Each country has events, infrastructure, oilGasImpact, and sources arrays
 - [ ] Each FM declaration has company, date, status, details, and sources
 - [ ] Each shutdown has company, date, status, details, and sources
 - [ ] All source URLs are real and accessible (not fabricated)
 - [ ] isNew flags reflect <48hr recency accurately
 - [ ] No schema changes to variable names or structure
+- [ ] All preWar values match the locked baselines table above exactly
+- [ ] All status values use valid enum values from the list above
+- [ ] Each country has production.notes with oil, gas, refining keys (and lng where applicable)
+- [ ] Refining math: capacity - affected = available (within rounding)
+
+## Step 4b: Self-validate before finishing
+
+After writing data.js, verify:
+1. The file has valid JavaScript syntax (all brackets/braces matched, no trailing commas after last array element)
+2. All 9 countries are present in COUNTRY_STATUS_DATA
+3. All preWar values match the locked baselines table above
+4. Every FM/shutdown entry has id, company, date, status, details.volumeAffected, details.commodity, sources
+5. Every country has production.notes with at least oil, gas, refining keys
+6. Refining math: capacity - affected = available (within rounding)
+7. All status values are valid enum values
+
+If any check fails, fix the issue before proceeding to Step 5.
 
 ## Step 5: Write sync log
 

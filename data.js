@@ -1,12 +1,12 @@
 // ============================================================
 // data.js -- ADNOC Force Majeure & Geopolitical Monitor
 // Pre-populated monitoring data from verified intelligence
-// Last updated: 2026-03-26T12:00:00Z
-// Period: 28 February - 26 March 2026
+// Last updated: 2026-03-28T12:00:00Z
+// Period: 28 February - 28 March 2026
 // Context: Strait of Hormuz / Gulf military escalation
 // ============================================================
 
-const LAST_UPDATED = "2026-03-26T12:00:00Z";
+const LAST_UPDATED = "2026-03-28T12:00:00Z";
 
 // ---------- TABLE 1: Country Status Matrix ----------
 const COUNTRY_STATUS_DATA = [
@@ -26,14 +26,20 @@ const COUNTRY_STATUS_DATA = [
       oil: { preWar: 1220, current: 200, unit: "kb/d" },
       gas: { preWar: 18.5, current: 0.5, unit: "Bcf/d" },
       refining: { capacity: 443, affected: 443, available: 0, unit: "kb/d" },
-      lng: { preWar: 77.0, current: 0.0, unit: "Mtpa" }
+      lng: { preWar: 77.0, current: 0.0, unit: "Mtpa" },
+      notes: {
+        oil: "Ras Laffan offline; all downstream halted",
+        gas: "North Field shut; all processing halted",
+        refining: "Laffan 1+2 offline with Ras Laffan",
+        lng: "Ras Laffan LNG fully offline; 77 Mtpa halted"
+      }
     },
     events: [
       {
         date: "2026-03-24",
         title: "QatarEnergy extends FM to Italy, Belgium, South Korea, China",
         description: "QatarEnergy invoked force majeure on additional long-term LNG supply contracts with customers in Italy, Belgium, South Korea, and China. CEO Saad al-Kaabi confirmed restart impossible until conflict ends, then 2 weeks minimum for cryogenic equipment restart.",
-        isNew: true
+        isNew: false
       },
       {
         date: "2026-03-18",
@@ -122,7 +128,12 @@ const COUNTRY_STATUS_DATA = [
     production: {
       oil: { preWar: 2600, current: 2000, unit: "kb/d" },
       gas: { preWar: 1.7, current: 1.3, unit: "Bcf/d" },
-      refining: { capacity: 1400, affected: 900, available: 500, unit: "kb/d" }
+      refining: { capacity: 1400, affected: 900, available: 500, unit: "kb/d" },
+      notes: {
+        oil: "KPC FM declared; tankers blocked",
+        gas: "Associated gas drops with crude output cuts; domestic supply prioritized",
+        refining: "Ahmadi + Abdullah hit by drones"
+      }
     },
     events: [
       {
@@ -184,9 +195,20 @@ const COUNTRY_STATUS_DATA = [
     production: {
       oil: { preWar: 10400, current: 8000, unit: "kb/d" },
       gas: { preWar: 11.3, current: 9.0, unit: "Bcf/d" },
-      refining: { capacity: 3291, affected: 0, available: 3291, unit: "kb/d" }
+      refining: { capacity: 3291, affected: 0, available: 3291, unit: "kb/d" },
+      notes: {
+        oil: "Offshore fields shut; rerouting to Yanbu via East-West Pipeline",
+        gas: "Master Gas System reduced; offshore associated gas offline",
+        refining: "Ras Tanura shut then reopened"
+      }
     },
     events: [
+      {
+        date: "2026-03-27",
+        title: "East-West Pipeline flow triples to bypass Hormuz",
+        description: "Saudi Aramco's East-West Pipeline (Petroline) flow averaged 2.9M bpd by Mar 27, up from 770k bpd pre-war. Aramco rerouting crude from Abqaiq to Yanbu on Red Sea, exporting ~5M bpd via bypass. Al Jazeera reports combined pipeline capacity (Saudi + UAE + Iraq) only 9M bpd vs Strait's 20M bpd.",
+        isNew: true
+      },
       {
         date: "2026-03-13",
         title: "Ras Tanura refinery restarts operations",
@@ -221,7 +243,7 @@ const COUNTRY_STATUS_DATA = [
       { name: "YASREF (Yanbu)", type: "Refinery", capacity: "400,000 bpd", status: "operational" },
       { name: "East-West Pipeline", type: "Pipeline", capacity: "~7 mb/d (converted)", status: "operational" },
       { name: "SABIC Yanbu Complex", type: "Petrochemical", capacity: "Various", status: "operational" },
-      { name: "SAMREF Refinery (Yanbu)", type: "Refinery", capacity: "400,000 bpd", status: "operational" },
+      { name: "SAMREF Refinery (Yanbu)", type: "Refinery", capacity: "400,000 bpd", status: "partial" },
       { name: "Marjan Expansion", type: "Offshore Oil", capacity: "~300,000 bpd", status: "shutdown" }
     ],
     sources: [
@@ -248,14 +270,32 @@ const COUNTRY_STATUS_DATA = [
       oil: { preWar: 3400, current: 1600, unit: "kb/d" },
       gas: { preWar: 6.5, current: 5.5, unit: "Bcf/d" },
       refining: { capacity: 1222, affected: 417, available: 805, unit: "kb/d" },
-      lng: { preWar: 6.0, current: 0.0, unit: "Mtpa" }
+      lng: { preWar: 6.0, current: 0.0, unit: "Mtpa" },
+      notes: {
+        oil: "Offshore offline; Fujairah suspended; >50% crude shut-in",
+        gas: "Habshan resumed Mar 23; offshore associated gas reduced",
+        refining: "Ruwais-2 shut (417 kb/d); 805 kb/d available",
+        lng: "Das Island LNG at minimal capacity; Hormuz blocked"
+      }
     },
     events: [
+      {
+        date: "2026-03-29",
+        title: "ADNOC Safeen container ship hit by projectile in Hormuz",
+        description: "ADNOC's Safeen shipping line vessel hit by projectile while transiting the Strait of Hormuz. Reported by The Loadstar, flagged as critical by Kpler intelligence. Highlights continued risk to ADNOC maritime operations despite pipeline bypass efforts.",
+        isNew: true
+      },
+      {
+        date: "2026-03-27",
+        title: "ADCOP pipeline exports rise to 1.62M bpd via Fujairah bypass",
+        description: "ADNOC's Abu Dhabi Crude Oil Pipeline (ADCOP/Habshan-Fujairah) averaging 1.62M bpd in March vs 1.17M bpd in February. Pipeline bypasses Hormuz entirely via Gulf of Oman. Combined with Saudi pipeline, total bypass capacity ~9M bpd vs Strait's 20M bpd — significant shortfall remains.",
+        isNew: true
+      },
       {
         date: "2026-03-25",
         title: "ADNOC CEO calls Hormuz weaponization 'economic terrorism'",
         description: "ADNOC CEO Sultan Al Jaber at CERAWeek: 'We took hits no civilian enterprise should ever have to take.' Called weaponizing Hormuz 'economic terrorism'. ADNOC deploying extraordinary measures for customers.",
-        isNew: true
+        isNew: false
       },
       {
         date: "2026-03-23",
@@ -368,14 +408,19 @@ const COUNTRY_STATUS_DATA = [
     production: {
       oil: { preWar: 4300, current: 1000, unit: "kb/d" },
       gas: { preWar: 3.0, current: 0.8, unit: "Bcf/d" },
-      refining: { capacity: 1300, affected: 400, available: 900, unit: "kb/d" }
+      refining: { capacity: 1300, affected: 400, available: 900, unit: "kb/d" },
+      notes: {
+        oil: "Basra 3.3M\u21920.9M; FM on foreign fields",
+        gas: "Associated gas collapses with 70% crude cuts; flaring reduced",
+        refining: "Lanaz struck; storage-constrained throughput"
+      }
     },
     events: [
       {
         date: "2026-03-25",
         title: "Iraq oil output further plunges as storage fills",
         description: "Southern oilfield production dropped to ~800k bpd as storage reached critical levels. Basrah Oil Co ordered BP to cut North Rumaila to 350k bpd (from 450k) and Eni to cut Zubair by 70k bpd. Officials warned further cuts possible if Hormuz remains blocked.",
-        isNew: true
+        isNew: false
       },
       {
         date: "2026-03-20",
@@ -458,7 +503,12 @@ const COUNTRY_STATUS_DATA = [
     production: {
       oil: { preWar: 196, current: 50, unit: "kb/d" },
       gas: { preWar: 1.6, current: 1.5, unit: "Bcf/d" },
-      refining: { capacity: 405, affected: 405, available: 0, unit: "kb/d" }
+      refining: { capacity: 405, affected: 405, available: 0, unit: "kb/d" },
+      notes: {
+        oil: "Abu Safa shut; Sitra FM declared",
+        gas: "Bahrain Field gas stable; Abu Safa associated gas offline",
+        refining: "Sitra FM; fully offline"
+      }
     },
     events: [
       {
@@ -508,9 +558,21 @@ const COUNTRY_STATUS_DATA = [
       oil: { preWar: 1024, current: 950, unit: "kb/d" },
       gas: { preWar: 4.2, current: 4.0, unit: "Bcf/d" },
       refining: { capacity: 222, affected: 0, available: 222, unit: "kb/d" },
-      lng: { preWar: 10.4, current: 10.4, unit: "Mtpa" }
+      lng: { preWar: 10.4, current: 10.4, unit: "Mtpa" },
+      notes: {
+        oil: "Outside Hormuz; crude production intact",
+        gas: "Outside Hormuz; gas processing unaffected",
+        refining: "Outside Hormuz; operational",
+        lng: "Outside Hormuz; LNG operational"
+      }
     },
     events: [
+      {
+        date: "2026-03-29",
+        title: "Salalah Port struck again — operations suspended",
+        description: "Two Iranian drones hit Salalah Port on Saturday morning, damaging a large container crane. One foreign worker injured. Maersk estimated ~48 hours downtime. Iran claimed it targeted a US support ship. Port handles 3.3M+ TEU annually and serves as critical alternative to Persian Gulf routes. — Kpler citing Maritime Executive",
+        isNew: true
+      },
       {
         date: "2026-03-11",
         title: "Salalah Port oil tanks struck by Iranian drones",
@@ -524,8 +586,8 @@ const COUNTRY_STATUS_DATA = [
     ],
     oilGasImpact: {
       severity: "moderate",
-      summary: "Export infrastructure damaged, production intact",
-      details: "Salalah Port oil storage struck by drones on 11 Mar with confirmed fire. Maersk suspended all Salalah operations. Duqm Port struck earlier. Oil production from inland fields (PDO, BP Khazzan) largely unaffected. Export infrastructure damaged but Mina Al-Fahal terminal operational."
+      summary: "Export infrastructure hit repeatedly; production intact",
+      details: "Salalah Port struck again on 29 Mar (two Iranian drones, crane damaged, Maersk ~48hr downtime). Previously struck 11 Mar with oil storage fire. Duqm Port struck 1 Mar. Oil production from inland fields (PDO, BP Khazzan) largely unaffected as outside Hormuz chokepoint. Export infrastructure repeatedly targeted but Mina Al-Fahal terminal and Oman LNG at Qalhat remain operational."
     },
     infrastructure: [
       { name: "PDO Fields (Block 6)", type: "Oil/Gas Fields", capacity: "~650,000 bpd", status: "operational" },
@@ -560,7 +622,12 @@ const COUNTRY_STATUS_DATA = [
     production: {
       oil: { preWar: 0, current: 0, unit: "kb/d" },
       gas: { preWar: 3.0, current: 1.0, unit: "Bcf/d" },
-      refining: { capacity: 197, affected: 60, available: 137, unit: "kb/d" }
+      refining: { capacity: 197, affected: 60, available: 137, unit: "kb/d" },
+      notes: {
+        oil: "Leviathan+Karish shut; Tamar domestic",
+        gas: "Leviathan+Karish gas offline; Tamar supplying domestic only",
+        refining: "Haifa damaged but mostly online"
+      }
     },
     events: [
       {
@@ -607,7 +674,7 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1EE}\u{1F1F7}",
     status: "critical",
     statusLabel: "Struck / Disrupted",
-    summary: "Israeli strikes hit South Pars gas field (Phases 3-6, 14, 17-18). USAF raids on Kharg Island. Tehran fuel depots and refinery destroyed. Bandar Abbas naval base struck. Southern oil fields partially shut in.",
+    summary: "Israeli strikes hit South Pars gas field (Phases 3-6, 14, 17-18). USAF raids on Kharg Island. Tehran fuel depots and refinery destroyed. IRGC formally closed Hormuz to US/allied vessels Mar 27. Commander Tangsiri killed by airstrike Mar 26. Houthis joined war Mar 28 with missile attack on Israel.",
     metrics: {
       headline: "~476 kb/d crude + ~3.3 Bcf/d gas offline",
       productionOffline: "South Pars phases + 14 oil fields reduced",
@@ -616,14 +683,37 @@ const COUNTRY_STATUS_DATA = [
     production: {
       oil: { preWar: 3176, current: 2700, unit: "kb/d" },
       gas: { preWar: 25.8, current: 22.5, unit: "Bcf/d" },
-      refining: { capacity: 2600, affected: 410, available: 2190, unit: "kb/d" }
+      refining: { capacity: 2600, affected: 410, available: 2190, unit: "kb/d" },
+      notes: {
+        oil: "South Pars struck; fields ~30% shut-in",
+        gas: "Asaluyeh processing hit; ~100 MMcm/d offline (~14% of South Pars)",
+        refining: "Tehran Refinery destroyed; BA curtailed",
+        lng: "South Pars disrupted; LNG minimal"
+      }
     },
     events: [
       {
+        date: "2026-03-28",
+        title: "Houthis join war — missile attack on Israel",
+        description: "Yemen's Houthis launched ballistic missiles at 'sensitive military targets' in southern Israel, their first attack since the war began. Israel intercepted one missile. Attack stokes fears of renewed Red Sea shipping disruption. Brent crude closed at $112.57/bbl, WTI at $99.64.",
+        isNew: true
+      },
+      {
+        date: "2026-03-27",
+        title: "IRGC formally closes Hormuz to US/allied vessels",
+        description: "IRGC Navy turned back 3 container ships including 2 COSCO vessels (CSCL Indian Ocean, CSCL Arctic Ocean). Officially proclaimed all movement prohibited for ships going to/from US, Israeli, and allied-nation ports. Thailand-flagged Mayuree Naree ran aground on Qeshm Island. Brent rose to $114/bbl.",
+        isNew: true
+      },
+      {
+        date: "2026-03-26",
+        title: "Israeli airstrike kills IRGC Navy commander Tangsiri",
+        description: "Israel announced IRGC Navy commander Alireza Tangsiri killed in airstrike, accusing him of being directly responsible for the Strait closure. Iran allows vessels from China, Russia, India, Iraq, Pakistan, Malaysia, Thailand to pass. Trump extends pause on striking Iranian power plants until April 6.",
+        isNew: true
+      },
+      {
         date: "2026-03-25",
         title: "Iran rejects ceasefire, lays out 5 conditions",
-        description: "Iran rejected Trump's ceasefire proposal and laid out 5 conditions including war reparations and recognition of Iranian sovereignty over Hormuz. IRGC threatened to target Gulf power plants and economic infrastructure if Iranian power plants are attacked. Oil prices fell ~15% to below $99/bbl on earlier pause hopes.",
-        isNew: true
+        description: "Iran rejected Trump's ceasefire proposal and laid out 5 conditions including war reparations and recognition of Iranian sovereignty over Hormuz. IRGC threatened to target Gulf power plants and economic infrastructure if Iranian power plants are attacked. Oil prices fell ~15% to below $99/bbl on earlier pause hopes."
       },
       {
         date: "2026-03-18",
@@ -693,7 +783,10 @@ const COUNTRY_STATUS_DATA = [
       { id: 5, title: "Kharg Island raided - CNN", url: "https://www.cnn.com", date: "2026-03-13" },
       { id: 6, title: "Bandar Abbas strikes - Geopolitics Unplugged", url: "https://geopoliticsunplugged.com", date: "2026-03-01" },
       { id: 7, title: "Iran rejects ceasefire, 5 conditions - NPR", url: "https://www.npr.org/2026/03/25/nx-s1-5760675/iran-war-military-deployment", date: "2026-03-25" },
-      { id: 8, title: "Iran rejects US ceasefire, demands Hormuz sovereignty - CNBC", url: "https://www.cnbc.com/2026/03/25/iran-war-us-trump.html", date: "2026-03-25" }
+      { id: 8, title: "Iran rejects US ceasefire, demands Hormuz sovereignty - CNBC", url: "https://www.cnbc.com/2026/03/25/iran-war-us-trump.html", date: "2026-03-25" },
+      { id: 9, title: "IRGC opens tolled passage, turns back 3 ships - USNI News", url: "https://news.usni.org/2026/03/27/irgc-opens-tolled-passage-for-merchant-ships-in-strait-of-hormuz-transit-continues-to-trickle-through", date: "2026-03-27" },
+      { id: 10, title: "Houthis launch missile at Israel, join Iran war - Axios", url: "https://www.axios.com/2026/03/28/houthis-iran-war-israel-missile", date: "2026-03-28" },
+      { id: 11, title: "Iran kills IRGC Navy commander Tangsiri - Fox News", url: "https://www.foxnews.com/live-news/us-israel-iran-war-strait-hormuz-updates-march-26", date: "2026-03-26" }
     ]
   }
 ];
@@ -1218,7 +1311,7 @@ const SHUTDOWNS_NO_FM_DATA = [
     date: "2026-03-25",
     status: "shutdown",
     statusLabel: "Further Cuts",
-    isNew: true,
+    isNew: false,
     summary: "Basrah Oil Co ordered BP to cut North Rumaila to 350k bpd and Eni to cut Zubair by 70k bpd. Storage critically full. Southern output down to ~800k bpd.",
     details: {
       volumeAffected: "Additional ~170,000 bpd cuts ordered (Rumaila -100k, Zubair -70k). Total southern output ~800k bpd.",

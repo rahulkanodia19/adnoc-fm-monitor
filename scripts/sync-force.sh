@@ -97,9 +97,23 @@ Update LAST_UPDATED timestamp. Write sync-log.json noting this was a browser-enh
   echo "[sync-force] Browser sync complete."
 fi
 
-# ── Step 3: Commit and Push ─────────────────────────────────────
+# ── Step 3: Validate and Commit ────────────────────────────────
 echo ""
-echo "[sync-force] ── Step 3/3: Commit and Push ──"
+echo "[sync-force] ── Step 3/3: Validate and Commit ──"
+
+# Verify sync completed
+if [ ! -f "$PROJECT_DIR/sync-log.json" ]; then
+  echo "[sync-force] ERROR: sync-log.json not written. Sync may be incomplete."
+  exit 1
+fi
+
+# Validate data.js before committing
+echo "[sync-force] Validating data.js..."
+if ! node "$SCRIPT_DIR/validate-data.js"; then
+  echo "[sync-force] VALIDATION FAILED — not committing. Restoring data.js from git..."
+  git -C "$PROJECT_DIR" checkout -- data.js
+  exit 1
+fi
 
 if ! git -C "$PROJECT_DIR" diff --quiet data.js data-previous.json sync-log.json energy-news-data.json 2>/dev/null; then
   TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")

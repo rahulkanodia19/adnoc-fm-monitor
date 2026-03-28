@@ -1,11 +1,3343 @@
 {
-  "lastUpdated": "2026-03-24T12:00:00Z",
-  "countryStatus": ["qatar", "kuwait", "saudi_arabia", "uae", "iraq", "bahrain", "oman", "israel", "iran"],
-  "fmDeclarations": ["fm-024", "fm-001", "fm-019", "fm-020", "fm-023", "fm-004", "fm-002", "fm-021", "fm-005", "fm-015", "fm-018", "fm-006", "fm-003", "fm-013", "fm-014", "fm-017", "fm-022", "fm-016", "fm-009", "fm-010", "fm-011", "fm-012", "fm-007", "fm-008"],
-  "shutdowns": ["sd-019", "sd-018", "sd-016", "sd-017", "sd-012", "sd-011", "sd-009", "sd-002", "sd-010", "sd-014", "sd-013", "sd-003", "sd-001", "sd-015", "sd-008", "sd-004", "sd-005", "sd-006", "sd-007"],
-  "counts": {
-    "countries": 9,
-    "fmDeclarations": 24,
-    "shutdowns": 19
-  }
+  "lastUpdated": "2026-03-28T12:00:00Z",
+  "countryStatus": [
+    {
+      "id": "qatar",
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "status": "critical",
+      "statusLabel": "FM Declared",
+      "summary": "QatarEnergy halted ALL LNG production after Iranian drone strikes. Mar 18 missile strikes destroyed 2 LNG trains + Pearl GTL (12.8 Mtpa knocked out for 3-5 years). ~20% of global LNG offline. FM extended to Italy, Belgium, South Korea, China on Mar 24.",
+      "metrics": {
+        "headline": "~20% of global LNG offline",
+        "productionOffline": "77 Mtpa LNG + all downstream",
+        "keyFigure": "12.8 Mtpa damaged 3-5 yrs"
+      },
+      "production": {
+        "oil": {
+          "preWar": 1220,
+          "current": 200,
+          "unit": "kb/d"
+        },
+        "gas": {
+          "preWar": 18.5,
+          "current": 0.5,
+          "unit": "Bcf/d"
+        },
+        "refining": {
+          "capacity": 443,
+          "affected": 443,
+          "available": 0,
+          "unit": "kb/d"
+        },
+        "lng": {
+          "preWar": 77,
+          "current": 0,
+          "unit": "Mtpa"
+        },
+        "notes": {
+          "oil": "Ras Laffan offline; all downstream halted",
+          "gas": "North Field shut; all processing halted",
+          "refining": "Laffan 1+2 offline with Ras Laffan",
+          "lng": "Ras Laffan LNG fully offline; 77 Mtpa halted"
+        }
+      },
+      "events": [
+        {
+          "date": "2026-03-24",
+          "title": "QatarEnergy extends FM to Italy, Belgium, South Korea, China",
+          "description": "QatarEnergy invoked force majeure on additional long-term LNG supply contracts with customers in Italy, Belgium, South Korea, and China. CEO Saad al-Kaabi confirmed restart impossible until conflict ends, then 2 weeks minimum for cryogenic equipment restart.",
+          "isNew": false
+        },
+        {
+          "date": "2026-03-18",
+          "title": "Iranian missiles cause extensive damage at Ras Laffan",
+          "description": "Additional Iranian missile attacks hit Ras Laffan. Pearl GTL Train 2 extensively damaged (~1 year repair). Two LNG trains damaged (3-5 year repair). QatarEnergy CEO confirms 12.8 Mtpa (17%) of capacity knocked out; $20B annual revenue loss."
+        },
+        {
+          "date": "2026-03-11",
+          "title": "Shell & TotalEnergies cascade FM on Qatar LNG",
+          "description": "Shell declared FM on LNG contracts to Asia/Europe. TotalEnergies declared FM on 5.2 Mtpa Qatar LNG offtake. April deliveries impacted."
+        },
+        {
+          "date": "2026-03-05",
+          "title": "Hydro/Qatalum JV declares FM - smelter shutdown",
+          "description": "Hydro/Qatalum declared FM on aluminium production. Smelter shutdown initiated. Restart estimated 6-12 months."
+        },
+        {
+          "date": "2026-03-04",
+          "title": "QatarEnergy declares FM on all LNG exports",
+          "description": "QatarEnergy declared Force Majeure on all LNG exports globally, removing ~7M tonnes/month (~20% of global LNG supply). Strait of Hormuz transit disruption cited."
+        },
+        {
+          "date": "2026-03-03",
+          "title": "QatarEnergy suspends all downstream operations",
+          "description": "QatarEnergy halted output of polymers, methanol, urea, and other chemicals. Alba-linked aluminium production suspended. Complete industrial shutdown across Mesaieed and Ras Laffan."
+        },
+        {
+          "date": "2026-03-02",
+          "title": "Iranian drones strike Ras Laffan and Mesaieed",
+          "description": "Iranian drones struck water tank at Mesaieed power plant and energy facility at Ras Laffan. QatarEnergy suspended all LNG production. Dutch and British gas prices surged ~50%. Asian LNG spot prices jumped ~39%."
+        }
+      ],
+      "oilGasImpact": {
+        "severity": "critical",
+        "summary": "All LNG + downstream production halted",
+        "details": "All LNG production halted since 2 Mar after Iranian drone strikes on Ras Laffan and Mesaieed. QatarEnergy declared FM on 4 Mar. All downstream suspended 3 Mar: polymers, methanol, urea, aluminium. ~20% of global LNG supply offline (~7M tonnes/month). Shell and TotalEnergies cascaded FM. Dutch/British gas prices surged ~50%. Qatalum smelter shutdown (restart 6-12 months)."
+      },
+      "infrastructure": [
+        {
+          "name": "North Field",
+          "type": "Gas Field",
+          "capacity": "~17 Bcf/d",
+          "status": "partial"
+        },
+        {
+          "name": "Qatargas 1 (Trains 1-3)",
+          "type": "LNG Train",
+          "capacity": "10 Mtpa",
+          "status": "shutdown"
+        },
+        {
+          "name": "Qatargas 2 (Trains 4-5)",
+          "type": "LNG Train",
+          "capacity": "15.6 Mtpa",
+          "status": "shutdown"
+        },
+        {
+          "name": "Qatargas 3 (Train 6)",
+          "type": "LNG Train",
+          "capacity": "7.8 Mtpa",
+          "status": "shutdown"
+        },
+        {
+          "name": "Qatargas 4 (Train 7)",
+          "type": "LNG Train",
+          "capacity": "7.8 Mtpa",
+          "status": "shutdown"
+        },
+        {
+          "name": "RasGas 1 (Trains 1-2)",
+          "type": "LNG Train",
+          "capacity": "6.6 Mtpa",
+          "status": "shutdown"
+        },
+        {
+          "name": "RasGas 2 (Trains 3-5)",
+          "type": "LNG Train",
+          "capacity": "14.1 Mtpa",
+          "status": "shutdown"
+        },
+        {
+          "name": "RasGas 3 (Trains 6-7)",
+          "type": "LNG Train",
+          "capacity": "15.6 Mtpa",
+          "status": "shutdown"
+        },
+        {
+          "name": "Pearl GTL",
+          "type": "GTL Plant",
+          "capacity": "140,000 bpd liquids",
+          "status": "shutdown"
+        },
+        {
+          "name": "Al Shaheen Field",
+          "type": "Offshore Oil",
+          "capacity": "~300,000 bpd",
+          "status": "shutdown"
+        },
+        {
+          "name": "Dukhan Field",
+          "type": "Oil/Gas Field",
+          "capacity": "~100,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Idd El Shargi North Dome",
+          "type": "Offshore Oil",
+          "capacity": "~60,000 bpd",
+          "status": "shutdown"
+        },
+        {
+          "name": "Bul Hanine Field",
+          "type": "Offshore Oil",
+          "capacity": "~40,000 bpd",
+          "status": "shutdown"
+        },
+        {
+          "name": "Maydan Mahzam Field",
+          "type": "Offshore Oil",
+          "capacity": "~15,000 bpd",
+          "status": "shutdown"
+        },
+        {
+          "name": "Al Khalij Field",
+          "type": "Offshore Oil",
+          "capacity": "~25,000 bpd",
+          "status": "shutdown"
+        },
+        {
+          "name": "Laffan Refinery 1",
+          "type": "Refinery",
+          "capacity": "161,000 bpd",
+          "status": "shutdown"
+        },
+        {
+          "name": "Laffan Refinery 2",
+          "type": "Refinery",
+          "capacity": "146,000 bpd",
+          "status": "shutdown"
+        },
+        {
+          "name": "Mesaieed Refinery",
+          "type": "Refinery",
+          "capacity": "136,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Mesaieed Industrial City",
+          "type": "Petrochemical Complex",
+          "capacity": "Various",
+          "status": "shutdown"
+        },
+        {
+          "name": "North Field East Expansion",
+          "type": "LNG Expansion",
+          "capacity": "32 Mtpa (construction)",
+          "status": "shutdown"
+        },
+        {
+          "name": "Qatalum Smelter",
+          "type": "Aluminium",
+          "capacity": "585,000 tpa",
+          "status": "shutdown"
+        }
+      ],
+      "sources": [
+        {
+          "id": 1,
+          "title": "QatarEnergy halts LNG production after attacks - Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/3/2/qatarenergy-worlds-largest-lng-firm-halts-production-after-iran-attacks",
+          "date": "2026-03-02"
+        },
+        {
+          "id": 2,
+          "title": "Qatar shuts LNG production - Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-02/qatar-stops-lng-production-at-world-s-top-plant-after-attack",
+          "date": "2026-03-02"
+        },
+        {
+          "id": 3,
+          "title": "QatarEnergy stops chemicals, aluminium - Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-03/qatarenergy-stops-output-of-some-chemicals-metal-after-lng-halt",
+          "date": "2026-03-03"
+        },
+        {
+          "id": 4,
+          "title": "QatarEnergy FM declaration - The National",
+          "url": "https://www.thenationalnews.com",
+          "date": "2026-03-04"
+        },
+        {
+          "id": 5,
+          "title": "Shell FM on Qatar LNG - Al Jazeera",
+          "url": "https://www.aljazeera.com/economy/2026/3/11/shell-declares-force-majeure-on-lng-contracts-from-qatar",
+          "date": "2026-03-11"
+        },
+        {
+          "id": 6,
+          "title": "TotalEnergies FM - OilPrice.com",
+          "url": "https://oilprice.com/Latest-Energy-News/World-News/Shell-and-TotalEnergies-Issue-Force-Majeure-After-Qatar-LNG-Shut-Down.html",
+          "date": "2026-03-11"
+        },
+        {
+          "id": 7,
+          "title": "Iran attacks cut 17% of Qatar LNG - Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/3/19/iran-attacks-cut-17-of-qatars-lng-capacity-for-up-to-5-years-qatarenergy",
+          "date": "2026-03-19"
+        },
+        {
+          "id": 8,
+          "title": "QatarEnergy: $20B annual revenue loss - Kathmandu Post",
+          "url": "https://kathmandupost.com/world/2026/03/20/iran-attacks-wipe-out-17-of-qatar-s-lng-capacity-for-up-to-five-years-qatarenergy-ceo-says",
+          "date": "2026-03-20"
+        },
+        {
+          "id": 9,
+          "title": "QatarEnergy extends FM to Italy, Belgium, S. Korea, China - Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/3/24/qatarenergy-declares-force-majeure-on-some-lng-contracts",
+          "date": "2026-03-24"
+        },
+        {
+          "id": 10,
+          "title": "Qatar LNG restart impossible until conflict ends - Yahoo/FT",
+          "url": "https://finance.yahoo.com/news/quickly-qatar-restart-world-largest-010000527.html",
+          "date": "2026-03-24"
+        }
+      ]
+    },
+    {
+      "id": "kuwait",
+      "country": "Kuwait",
+      "flag": "🇰🇼",
+      "status": "critical",
+      "statusLabel": "FM / Struck",
+      "summary": "KPC declared FM on crude exports. Al-Ahmadi refinery struck by Iranian drones Mar 19-20 with fires. Subiya power plant fire. 6 drones intercepted.",
+      "metrics": {
+        "headline": "~1.2 mb/d crude exports cut",
+        "productionOffline": "Al-Ahmadi refinery struck, multiple units shut",
+        "keyFigure": "2.6 mb/d baseline disrupted"
+      },
+      "production": {
+        "oil": {
+          "preWar": 2600,
+          "current": 2000,
+          "unit": "kb/d"
+        },
+        "gas": {
+          "preWar": 1.7,
+          "current": 1.3,
+          "unit": "Bcf/d"
+        },
+        "refining": {
+          "capacity": 1400,
+          "affected": 900,
+          "available": 500,
+          "unit": "kb/d"
+        },
+        "notes": {
+          "oil": "KPC FM declared; tankers blocked",
+          "gas": "Associated gas drops with crude output cuts; domestic supply prioritized",
+          "refining": "Ahmadi + Abdullah hit by drones"
+        }
+      },
+      "events": [
+        {
+          "date": "2026-03-19",
+          "title": "Iranian drones strike Mina Al-Ahmadi refinery",
+          "description": "Two consecutive days of drone attacks on Kuwait's largest refinery (730,000 bpd). Fires across multiple units. Additional sections shut as precaution. KPC expects 3-4 months to restore full capacity post-war."
+        },
+        {
+          "date": "2026-03-09",
+          "title": "Subiya Power Plant fire - drone debris",
+          "description": "Subiya power plant fire caused by intercepted drone debris. 6 drones intercepted over Kuwait. Status escalated beyond KPC crude FM."
+        },
+        {
+          "date": "2026-03-07",
+          "title": "KPC declares FM on crude oil exports",
+          "description": "Kuwait Petroleum Corporation declared Force Majeure on crude oil exports. Cuts from 2.6 mb/d baseline. Kafco fuel tanks struck. Refineries lowering throughput to 1.4M bpd."
+        }
+      ],
+      "oilGasImpact": {
+        "severity": "critical",
+        "summary": "FM on crude exports, refineries reduced",
+        "details": "KPC declared FM on all crude exports. Al-Ahmadi refinery offline (466k) after drone strikes. Mina Abdullah and Al-Zour at reduced rates. ~900 kb/d refining affected; ~500 kb/d available. Kafco fuel storage tanks struck. Subiya power plant fire from intercepted drone debris. Export via Hormuz severely disrupted."
+      },
+      "infrastructure": [
+        {
+          "name": "Greater Burgan (Burgan/Magwa/Ahmadi)",
+          "type": "Oil Field",
+          "capacity": "~1.7 mb/d",
+          "status": "partial"
+        },
+        {
+          "name": "Minagish Field",
+          "type": "Oil Field",
+          "capacity": "~150,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Raudhatain Field",
+          "type": "Oil Field",
+          "capacity": "~140,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Sabriya Field",
+          "type": "Oil Field",
+          "capacity": "~140,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Northern Kuwait Fields (GC-29/30/31)",
+          "type": "Oil/Gas Field",
+          "capacity": "~210,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Mina Al-Ahmadi Refinery",
+          "type": "Refinery",
+          "capacity": "466,000 bpd",
+          "status": "shutdown"
+        },
+        {
+          "name": "Mina Abdullah Refinery",
+          "type": "Refinery",
+          "capacity": "270,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Al-Zour Refinery",
+          "type": "Refinery",
+          "capacity": "615,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Mina Al-Ahmadi Terminal",
+          "type": "Export Terminal",
+          "capacity": "~1.5 mb/d",
+          "status": "shutdown"
+        },
+        {
+          "name": "Al-Zour LNG Import Terminal",
+          "type": "LNG Import",
+          "capacity": "22 Mtpa",
+          "status": "partial"
+        },
+        {
+          "name": "Kafco Fuel Storage",
+          "type": "Fuel Storage",
+          "capacity": "N/A",
+          "status": "shutdown"
+        },
+        {
+          "name": "Subiya Power Plant",
+          "type": "Power Plant",
+          "capacity": "2,400 MW",
+          "status": "shutdown"
+        }
+      ],
+      "sources": [
+        {
+          "id": 1,
+          "title": "KPC FM on crude - Express Tribune",
+          "url": "https://tribune.com.pk",
+          "date": "2026-03-07"
+        },
+        {
+          "id": 2,
+          "title": "Kuwait FM - Sunday Guardian",
+          "url": "https://sundayguardianlive.com/world/iran-israel-tensions-will-saudi-arabia-follow-kuwaits-oil-cuts-declares-force-majeure-as-hormuz-blockade-enters-day-8-20-of-global-oil-supply-suspended-174606/",
+          "date": "2026-03-07"
+        },
+        {
+          "id": 3,
+          "title": "Subiya fire - Times Kuwait",
+          "url": "https://timeskuwait.com",
+          "date": "2026-03-09"
+        },
+        {
+          "id": 4,
+          "title": "Kuwait drone intercepts - FDD",
+          "url": "https://www.fdd.org",
+          "date": "2026-03-09"
+        },
+        {
+          "id": 5,
+          "title": "Kuwait refinery struck again - Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/3/20/kuwait-oil-refinery-hit-again-as-iran-targets-gulf-energy-infrastructure",
+          "date": "2026-03-20"
+        },
+        {
+          "id": 6,
+          "title": "Al Ahmadi shutdown - Dawn",
+          "url": "https://www.dawn.com/news/1984011/kuwait-shuts-down-parts-of-al-ahmadi-refinery-after-drone-attack",
+          "date": "2026-03-20"
+        }
+      ]
+    },
+    {
+      "id": "saudi_arabia",
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦",
+      "status": "critical",
+      "statusLabel": "Shutdown",
+      "summary": "Ras Tanura refinery restarted Mar 13. 4 offshore mega-fields still shut (~2.5M bpd). Crude rerouted to Yanbu via East-West Pipeline (7M bpd capacity). No formal FM.",
+      "metrics": {
+        "headline": "~2.5-3.0 mb/d offline",
+        "productionOffline": "4 offshore fields + Ras Tanura",
+        "keyFigure": "~20-25% of Saudi capacity"
+      },
+      "production": {
+        "oil": {
+          "preWar": 10400,
+          "current": 8000,
+          "unit": "kb/d"
+        },
+        "gas": {
+          "preWar": 11.3,
+          "current": 9,
+          "unit": "Bcf/d"
+        },
+        "refining": {
+          "capacity": 3291,
+          "affected": 0,
+          "available": 3291,
+          "unit": "kb/d"
+        },
+        "notes": {
+          "oil": "Offshore fields shut; rerouting to Yanbu via East-West Pipeline",
+          "gas": "Master Gas System reduced; offshore associated gas offline",
+          "refining": "Ras Tanura shut then reopened"
+        }
+      },
+      "events": [
+        {
+          "date": "2026-03-27",
+          "title": "East-West Pipeline flow triples to bypass Hormuz",
+          "description": "Saudi Aramco's East-West Pipeline (Petroline) flow averaged 2.9M bpd by Mar 27, up from 770k bpd pre-war. Aramco rerouting crude from Abqaiq to Yanbu on Red Sea, exporting ~5M bpd via bypass. Al Jazeera reports combined pipeline capacity (Saudi + UAE + Iraq) only 9M bpd vs Strait's 20M bpd.",
+          "isNew": true
+        },
+        {
+          "date": "2026-03-13",
+          "title": "Ras Tanura refinery restarts operations",
+          "description": "Ras Tanura refinery (550 kb/d) restarted after 11 days of shutdown following drone attack repair. Crude processing resumed. East-West Pipeline rerouting continues for eastern exports."
+        },
+        {
+          "date": "2026-03-09",
+          "title": "Aramco shuts 4 offshore mega-fields",
+          "description": "Saudi Aramco shut Safaniya, Zuluf, Marjan, and Abu Safa offshore fields. Combined ~2.0-2.5M bpd offline. Storage contagion concerns cited."
+        },
+        {
+          "date": "2026-03-02",
+          "title": "Ras Tanura shut, Shaybah targeted",
+          "description": "Ras Tanura refinery (550 kb/d) shut. LPG suspended. Crude rerouted to Yanbu (Red Sea). Shaybah targeted by drones but attack thwarted."
+        }
+      ],
+      "oilGasImpact": {
+        "severity": "critical",
+        "summary": "~2.5-3.0 mb/d offline",
+        "details": "Ras Tanura refinery (550 kb/d) restarted Mar 13 after 11-day shutdown. Four major offshore fields (Safaniya, Zuluf, Marjan, Abu Safa) still shut since 9 Mar totaling 2-2.5M bpd. Crude rerouted via East-West Pipeline (converted to ~7M bpd capacity) to Yanbu. SABIC Yanbu plants operating via Red Sea route. ~20-25% of Saudi production capacity offline."
+      },
+      "infrastructure": [
+        {
+          "name": "Ghawar Field",
+          "type": "Oil Field",
+          "capacity": "~3.8 mb/d",
+          "status": "operational"
+        },
+        {
+          "name": "Safaniya Field",
+          "type": "Offshore Oil",
+          "capacity": "~1.2 mb/d",
+          "status": "shutdown"
+        },
+        {
+          "name": "Zuluf Field",
+          "type": "Offshore Oil",
+          "capacity": "~500,000 bpd",
+          "status": "shutdown"
+        },
+        {
+          "name": "Marjan Field",
+          "type": "Offshore Oil",
+          "capacity": "~500,000 bpd",
+          "status": "shutdown"
+        },
+        {
+          "name": "Abu Safa Field",
+          "type": "Offshore Oil",
+          "capacity": "~300,000 bpd",
+          "status": "shutdown"
+        },
+        {
+          "name": "Shaybah Field",
+          "type": "Oil Field",
+          "capacity": "~1.0 mb/d",
+          "status": "operational"
+        },
+        {
+          "name": "Ras Tanura Refinery",
+          "type": "Refinery",
+          "capacity": "550,000 bpd",
+          "status": "operational"
+        },
+        {
+          "name": "Ras Tanura Terminal",
+          "type": "Export Terminal",
+          "capacity": "~6 mb/d",
+          "status": "partial"
+        },
+        {
+          "name": "Yanbu Refinery Complex",
+          "type": "Refinery",
+          "capacity": "400,000 bpd",
+          "status": "operational"
+        },
+        {
+          "name": "YASREF (Yanbu)",
+          "type": "Refinery",
+          "capacity": "400,000 bpd",
+          "status": "operational"
+        },
+        {
+          "name": "East-West Pipeline",
+          "type": "Pipeline",
+          "capacity": "~7 mb/d (converted)",
+          "status": "operational"
+        },
+        {
+          "name": "SABIC Yanbu Complex",
+          "type": "Petrochemical",
+          "capacity": "Various",
+          "status": "operational"
+        },
+        {
+          "name": "SAMREF Refinery (Yanbu)",
+          "type": "Refinery",
+          "capacity": "400,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Marjan Expansion",
+          "type": "Offshore Oil",
+          "capacity": "~300,000 bpd",
+          "status": "shutdown"
+        }
+      ],
+      "sources": [
+        {
+          "id": 1,
+          "title": "Ras Tanura shutdown - Bloomberg",
+          "url": "https://www.bloomberg.com",
+          "date": "2026-03-02"
+        },
+        {
+          "id": 2,
+          "title": "Aramco reroute to Yanbu - Argus",
+          "url": "https://www.argusmedia.com",
+          "date": "2026-03-02"
+        },
+        {
+          "id": 3,
+          "title": "Offshore fields shut - Maritime Executive",
+          "url": "https://maritime-executive.com",
+          "date": "2026-03-09"
+        },
+        {
+          "id": 4,
+          "title": "Safaniya/Zuluf/Marjan shutdown - Splash247",
+          "url": "https://splash247.com",
+          "date": "2026-03-09"
+        },
+        {
+          "id": 5,
+          "title": "Ras Tanura restarted - Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-18/saudi-arabia-s-ras-tanura-refinery-has-restarted-operations",
+          "date": "2026-03-18"
+        }
+      ]
+    },
+    {
+      "id": "uae",
+      "country": "United Arab Emirates",
+      "flag": "🇦🇪",
+      "status": "critical",
+      "statusLabel": "Escalated",
+      "summary": "Habshan gas complex resumed Mar 23. Shah Gas Field still shut. Ruwais Refinery-2 (417 kb/d) shut. Fujairah crude loading suspended. Das Island LNG at minimal capacity. >50% crude offline. ADNOC CEO calls Hormuz weaponization 'economic terrorism'.",
+      "metrics": {
+        "headline": "Shah + Ruwais + Fujairah offline; Habshan resumed",
+        "productionOffline": "1+ Bcf/d gas + 417 kb/d refining + 1M bpd exports",
+        "keyFigure": ">50% of UAE crude output offline"
+      },
+      "production": {
+        "oil": {
+          "preWar": 3400,
+          "current": 1600,
+          "unit": "kb/d"
+        },
+        "gas": {
+          "preWar": 6.5,
+          "current": 5.5,
+          "unit": "Bcf/d"
+        },
+        "refining": {
+          "capacity": 1222,
+          "affected": 417,
+          "available": 805,
+          "unit": "kb/d"
+        },
+        "lng": {
+          "preWar": 6,
+          "current": 0,
+          "unit": "Mtpa"
+        },
+        "notes": {
+          "oil": "Offshore offline; Fujairah suspended; >50% crude shut-in",
+          "gas": "Habshan resumed Mar 23; offshore associated gas reduced",
+          "refining": "Ruwais-2 shut (417 kb/d); 805 kb/d available",
+          "lng": "Das Island LNG at minimal capacity; Hormuz blocked"
+        }
+      },
+      "events": [
+        {
+          "date": "2026-03-29",
+          "title": "ADNOC Safeen container ship hit by projectile in Hormuz",
+          "description": "ADNOC's Safeen shipping line vessel hit by projectile while transiting the Strait of Hormuz. Reported by The Loadstar, flagged as critical by Kpler intelligence. Highlights continued risk to ADNOC maritime operations despite pipeline bypass efforts.",
+          "isNew": true
+        },
+        {
+          "date": "2026-03-27",
+          "title": "ADCOP pipeline exports rise to 1.62M bpd via Fujairah bypass",
+          "description": "ADNOC's Abu Dhabi Crude Oil Pipeline (ADCOP/Habshan-Fujairah) averaging 1.62M bpd in March vs 1.17M bpd in February. Pipeline bypasses Hormuz entirely via Gulf of Oman. Combined with Saudi pipeline, total bypass capacity ~9M bpd vs Strait's 20M bpd — significant shortfall remains.",
+          "isNew": true
+        },
+        {
+          "date": "2026-03-25",
+          "title": "ADNOC CEO calls Hormuz weaponization 'economic terrorism'",
+          "description": "ADNOC CEO Sultan Al Jaber at CERAWeek: 'We took hits no civilian enterprise should ever have to take.' Called weaponizing Hormuz 'economic terrorism'. ADNOC deploying extraordinary measures for customers.",
+          "isNew": false
+        },
+        {
+          "date": "2026-03-23",
+          "title": "Habshan gas complex resumes operations",
+          "description": "UAE restarted Habshan gas processing complex (6.1 Bcf/d capacity, ~60% of UAE domestic gas) after 4-day shutdown. Das Island LNG remains at minimal capacity due to Hormuz blockage. ADNOC Gas adjusting LNG production on transaction-by-transaction basis."
+        },
+        {
+          "date": "2026-03-19",
+          "title": "Habshan gas complex shut after missile intercepts",
+          "description": "Habshan gas processing complex shut after missile interceptions hit ADNOC hub. One of world's largest gas processing facilities (6.1 Bcf/d capacity). Additional 1+ Bcf/d gas offline."
+        },
+        {
+          "date": "2026-03-17",
+          "title": "Fujairah terminal attacked 3rd time - ADNOC loading halted",
+          "description": "Oil loading at Fujairah partly halted after third drone attack in four days. ADNOC crude loading at Fujairah suspended. Fujairah handles ~1M bpd of Murban crude (~1% of global demand)."
+        },
+        {
+          "date": "2026-03-16",
+          "title": "Shah Gas Field struck by Iranian drones",
+          "description": "Drone strike sparked fire at ADNOC/Occidental Shah Gas Field in Empty Quarter. Operations suspended. Shah supplies ~1 Bcf/d (~20% of UAE gas supply) and 5% of world's granulated sulphur."
+        },
+        {
+          "date": "2026-03-16",
+          "title": "Fujairah oil hub targeted by drone attack",
+          "description": "Drone attack caused large fire at Fujairah oil trading hub. ADNOC suspended crude loading operations. Fujairah is critical export terminal for UAE Murban crude."
+        },
+        {
+          "date": "2026-03-14",
+          "title": "Fujairah oil loading suspended after drone intercept fire",
+          "description": "Smoke rose in Fujairah oil zone from debris after drone interception. Some oil-loading operations suspended. Resumed briefly on 15 Mar before being halted again."
+        },
+        {
+          "date": "2026-03-10",
+          "title": "ADNOC Ruwais Refinery shut after drone strike",
+          "description": "Ruwais Refinery-2 (417 kb/d) shut after drone strike on complex. ADNOC initiated plant-wide safety audit. Offshore production cuts continue."
+        },
+        {
+          "date": "2026-03-07",
+          "title": "ADNOC managing offshore output, onshore continues",
+          "description": "ADNOC announced monitoring offshore production levels for 'operational flexibility'. Onshore operations continue. Has not declared formal FM despite Hormuz closure."
+        },
+        {
+          "date": "2026-03-02",
+          "title": "Fujairah bunker suppliers declare FM",
+          "description": "MEE and Pearl Marine declared FM on marine fuel deliveries at Fujairah bunkering hub. World's 2nd largest bunkering hub disrupted."
+        },
+        {
+          "date": "2026-03-01",
+          "title": "UAE enters precautionary status",
+          "description": "DXB suspended. ADNOC using Habshan-Fujairah pipeline bypass for exports. De facto FM on maritime exports."
+        }
+      ],
+      "oilGasImpact": {
+        "severity": "critical",
+        "summary": "Habshan resumed; Shah + Ruwais + Fujairah + Das Island still offline",
+        "details": "Gas production down 1.0 Bcf/d (6.5 → 5.5): Habshan gas complex resumed Mar 23 after 4-day shutdown, restoring ~1 Bcf/d. Shah Gas Field still shut since 16 Mar (~1 Bcf/d offline). LNG exports near zero — Das Island LNG/LPG (ADGAS, 5.8 Mtpa) at minimal capacity due to Hormuz blockage. Ruwais Refinery-2 (417 kb/d) shut 10 Mar. Fujairah terminal attacked 3 times (14, 16, 17 Mar) — ADNOC crude loading halted (~1M bpd). All offshore production offline. >50% of UAE crude output disrupted. ADNOC CEO at CERAWeek Mar 25 called weaponizing Hormuz 'economic terrorism'."
+      },
+      "infrastructure": [
+        {
+          "name": "Shah Gas Field (ADNOC/Oxy)",
+          "type": "Sour Gas Processing",
+          "capacity": "~1 Bcf/d gas, 50k bpd condensate",
+          "status": "shutdown"
+        },
+        {
+          "name": "Upper Zakum Field",
+          "type": "Offshore Oil",
+          "capacity": "~1.0 mb/d",
+          "status": "partial"
+        },
+        {
+          "name": "Lower Zakum Field",
+          "type": "Offshore Oil",
+          "capacity": "~450,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Umm Shaif Field",
+          "type": "Offshore Oil/Gas",
+          "capacity": "~230,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "SARB Field",
+          "type": "Offshore Oil",
+          "capacity": "~100,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Nasr Field",
+          "type": "Offshore Oil",
+          "capacity": "~65,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Hail Field",
+          "type": "Offshore Oil",
+          "capacity": "~30,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Murban Field",
+          "type": "Onshore Oil",
+          "capacity": "~500,000 bpd",
+          "status": "operational"
+        },
+        {
+          "name": "Bu Hasa Field",
+          "type": "Onshore Oil",
+          "capacity": "~650,000 bpd",
+          "status": "operational"
+        },
+        {
+          "name": "Bab Field",
+          "type": "Onshore Oil/Gas",
+          "capacity": "~300,000 bpd",
+          "status": "operational"
+        },
+        {
+          "name": "Asab Field",
+          "type": "Onshore Oil/Gas",
+          "capacity": "~60,000 bpd",
+          "status": "operational"
+        },
+        {
+          "name": "Habshan ASR Gas Complex",
+          "type": "Gas Processing",
+          "capacity": "~1.0 Bcf/d",
+          "status": "operational"
+        },
+        {
+          "name": "Ruwais Refinery Complex",
+          "type": "Refinery",
+          "capacity": "922,000 bpd total",
+          "status": "partial"
+        },
+        {
+          "name": "Ruwais Refinery 2 (West)",
+          "type": "Refinery",
+          "capacity": "417,000 bpd",
+          "status": "shutdown"
+        },
+        {
+          "name": "Habshan Gas Processing",
+          "type": "Gas Processing",
+          "capacity": "~3.5 Bcf/d",
+          "status": "operational"
+        },
+        {
+          "name": "Habshan-Fujairah Pipeline",
+          "type": "Pipeline",
+          "capacity": "1.5 mb/d",
+          "status": "operational"
+        },
+        {
+          "name": "Fujairah Oil Terminal",
+          "type": "Export Terminal",
+          "capacity": "~1M bpd Murban crude",
+          "status": "shutdown"
+        },
+        {
+          "name": "Das Island LNG/LPG (ADGAS)",
+          "type": "LNG/LPG Plant",
+          "capacity": "~5.8 Mtpa",
+          "status": "shutdown"
+        },
+        {
+          "name": "Jebel Ali Refinery (ENOC)",
+          "type": "Refinery",
+          "capacity": "120,000 bpd",
+          "status": "operational"
+        },
+        {
+          "name": "Dubai Airport Fuel Terminal",
+          "type": "Fuel Terminal",
+          "capacity": "Major hub",
+          "status": "shutdown"
+        },
+        {
+          "name": "ADNOC Musaffah Terminal",
+          "type": "Fuel/LPG Terminal",
+          "capacity": "Distribution hub",
+          "status": "partial"
+        }
+      ],
+      "sources": [
+        {
+          "id": 1,
+          "title": "UAE precautionary status - Euronews",
+          "url": "https://www.euronews.com",
+          "date": "2026-03-01"
+        },
+        {
+          "id": 2,
+          "title": "Fujairah bunker FM - Argus",
+          "url": "https://www.argusmedia.com/en/news-and-insights/latest-market-news/2796111-uae-s-fujairah-bunker-suppliers-declare-force-majeure",
+          "date": "2026-03-02"
+        },
+        {
+          "id": 3,
+          "title": "ADNOC managing offshore output - BOE Report",
+          "url": "https://boereport.com/2026/03/07/adnoc-says-it-is-managing-offshore-output-onshore-operations-continue/",
+          "date": "2026-03-07"
+        },
+        {
+          "id": 4,
+          "title": "Ruwais shutdown - GMA News",
+          "url": "https://www.gmanetwork.com/news/topstories/world/979523/uae-oil-giant-adnoc-shuts-ruwais-refinery-after-drone-strike-source-says/story/",
+          "date": "2026-03-10"
+        },
+        {
+          "id": 5,
+          "title": "Fujairah loading suspended - CNBC",
+          "url": "https://www.cnbc.com/2026/03/14/some-oil-loading-operations-in-uae-hub-suspended-after-fire-reuters.html",
+          "date": "2026-03-14"
+        },
+        {
+          "id": 6,
+          "title": "Shah Gas Field drone strike - World Oil",
+          "url": "https://www.worldoil.com/news/2026/3/16/drone-strike-sparks-fire-at-uae-s-shah-gas-field-operated-by-adnoc-occidental/",
+          "date": "2026-03-16"
+        },
+        {
+          "id": 7,
+          "title": "Shah Field shutdown - The National",
+          "url": "https://www.thenationalnews.com/business/2026/03/17/shah-field-a-vital-gas-and-sulphur-asset-attacked-by-iranian-drones/",
+          "date": "2026-03-17"
+        },
+        {
+          "id": 8,
+          "title": "Fujairah/Shah attacks - Cyprus Mail",
+          "url": "https://cyprus-mail.com/2026/03/17/attacks-on-uaes-fujairah-port-shah-gas-field-add-to-energy-disruptions",
+          "date": "2026-03-17"
+        },
+        {
+          "id": 9,
+          "title": "ADNOC loading halted Fujairah - Yahoo",
+          "url": "https://www.yahoo.com/news/articles/oil-loading-operations-suspended-uaes-081836446.html",
+          "date": "2026-03-17"
+        },
+        {
+          "id": 10,
+          "title": "Habshan gas shut - PGJ Online",
+          "url": "https://pgjonline.com/news/2026/march/uae-shuts-major-gas-facilities-after-missile-intercepts-hit-adnoc-hub",
+          "date": "2026-03-19"
+        },
+        {
+          "id": 11,
+          "title": "ADNOC extraordinary measures - Al Arabiya",
+          "url": "https://english.alarabiya.net/business/energy/2026/03/23/uae-s-adnoc-deploying-extraordinary-measures-to-ensure-stakeholders-get-needs-ceo",
+          "date": "2026-03-23"
+        },
+        {
+          "id": 12,
+          "title": "UAE restarts Habshan gas complex - Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-23/uae-restarts-main-gas-supply-plant-while-idling-most-lng-output",
+          "date": "2026-03-23"
+        },
+        {
+          "id": 13,
+          "title": "ADNOC Gas adjusts LNG output - Arab News",
+          "url": "https://www.arabnews.com/node/2637337/business-economy",
+          "date": "2026-03-23"
+        },
+        {
+          "id": 14,
+          "title": "ADNOC CEO calls Hormuz weaponization economic terrorism - Rigzone",
+          "url": "https://www.rigzone.com/news/adnoc_ceo_says_weaponizing_hormuz_is_economic_terrorism-25-mar-2026-183294-article/",
+          "date": "2026-03-25"
+        }
+      ]
+    },
+    {
+      "id": "iraq",
+      "country": "Iraq",
+      "flag": "🇮🇶",
+      "status": "critical",
+      "statusLabel": "FM / Production Halt",
+      "summary": "FM declared on all foreign-operated oilfields (Mar 20). Basra output further dropped to ~800k bpd as storage fills. BP ordered to cut Rumaila to 350k bpd (Mar 24). Kurdistan halted. ~76% of Basra output offline.",
+      "metrics": {
+        "headline": "Basra output 76% down, storage critical",
+        "productionOffline": "Basra ~800k from 3.3M bpd",
+        "keyFigure": "FM on all foreign fields + further cuts"
+      },
+      "production": {
+        "oil": {
+          "preWar": 4300,
+          "current": 1000,
+          "unit": "kb/d"
+        },
+        "gas": {
+          "preWar": 3,
+          "current": 0.8,
+          "unit": "Bcf/d"
+        },
+        "refining": {
+          "capacity": 1300,
+          "affected": 400,
+          "available": 900,
+          "unit": "kb/d"
+        },
+        "notes": {
+          "oil": "Basra 3.3M→0.9M; FM on foreign fields",
+          "gas": "Associated gas collapses with 70% crude cuts; flaring reduced",
+          "refining": "Lanaz struck; storage-constrained throughput"
+        }
+      },
+      "events": [
+        {
+          "date": "2026-03-25",
+          "title": "Iraq oil output further plunges as storage fills",
+          "description": "Southern oilfield production dropped to ~800k bpd as storage reached critical levels. Basrah Oil Co ordered BP to cut North Rumaila to 350k bpd (from 450k) and Eni to cut Zubair by 70k bpd. Officials warned further cuts possible if Hormuz remains blocked.",
+          "isNew": false
+        },
+        {
+          "date": "2026-03-20",
+          "title": "Iraq declares FM on all foreign-operated oilfields",
+          "description": "Iraq Oil Ministry declares force majeure on all oilfields developed by foreign companies. Basra output at 900k bpd (down from 3.3M). SOMO unable to nominate tankers. No compensation to operators."
+        },
+        {
+          "date": "2026-03-09",
+          "title": "Majnoon hit by drones - Basra terminals halted",
+          "description": "Majnoon oil field (Basra) hit by drones over multiple days (9-12 Mar). Basra port terminals halted loading operations."
+        },
+        {
+          "date": "2026-03-03",
+          "title": "SOMO confirms 1.5M+ bpd production cuts",
+          "description": "Iraq's SOMO confirmed total cuts exceeding 1.5M bpd. Rumaila fully shut, WQ2 severely cut. No formal FM declared. SOMO denied sanctions rumors."
+        },
+        {
+          "date": "2026-02-28",
+          "title": "Kurdistan fields halted by multiple operators",
+          "description": "DNO, Gulf Keystone, Dana Gas, and HKN Energy all ceased Kurdistan operations. Regional security cited. Pipeline exports to Ceyhan suspended."
+        }
+      ],
+      "oilGasImpact": {
+        "severity": "critical",
+        "summary": "Basra output 76% down and falling, FM on foreign fields",
+        "details": "Iraq Oil Ministry declared FM on all foreign-operated oilfields on Mar 20. Basra output dropped further to ~800k bpd (from 3.3M; 76% reduction) by Mar 25 as storage filled. BP ordered to cut North Rumaila to 350k bpd; Eni ordered to cut Zubair by 70k bpd. All Kurdistan production halted. Majnoon struck by drones 9-12 Mar. Basra Oil Terminal and KAAOT halted. Southern exports impossible - further cuts warned if Hormuz remains blocked."
+      },
+      "infrastructure": [
+        {
+          "name": "Rumaila Field",
+          "type": "Oil Field",
+          "capacity": "~1.4 mb/d",
+          "status": "shutdown"
+        },
+        {
+          "name": "West Qurna 2",
+          "type": "Oil Field",
+          "capacity": "~460,000 bpd",
+          "status": "shutdown"
+        },
+        {
+          "name": "West Qurna 1",
+          "type": "Oil Field",
+          "capacity": "~500,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Majnoon Field",
+          "type": "Oil Field",
+          "capacity": "~230,000 bpd",
+          "status": "shutdown"
+        },
+        {
+          "name": "Halfaya Field",
+          "type": "Oil Field",
+          "capacity": "~300,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Zubair Field",
+          "type": "Oil Field",
+          "capacity": "~200,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Buzurgan Field",
+          "type": "Oil Field",
+          "capacity": "~90,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Faihaa Field",
+          "type": "Oil Field",
+          "capacity": "~75,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Fakka Field",
+          "type": "Oil Field",
+          "capacity": "~80,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Abu Ghirab Field",
+          "type": "Oil Field",
+          "capacity": "~70,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Garraf Field",
+          "type": "Oil Field",
+          "capacity": "~40,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Ahdab Field",
+          "type": "Oil Field",
+          "capacity": "~50,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Ratawi Field",
+          "type": "Oil Field",
+          "capacity": "~35,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Shaikan Field (Kurdistan)",
+          "type": "Oil Field",
+          "capacity": "~40,000 bpd",
+          "status": "shutdown"
+        },
+        {
+          "name": "Tawke/Peshkabir (Kurdistan)",
+          "type": "Oil Field",
+          "capacity": "~70,000 bpd",
+          "status": "shutdown"
+        },
+        {
+          "name": "Khor Mor Gas Field",
+          "type": "Gas Field",
+          "capacity": "~450 MMscf/d",
+          "status": "shutdown"
+        },
+        {
+          "name": "Basra Oil Terminal",
+          "type": "Export Terminal",
+          "capacity": "~1.8 mb/d",
+          "status": "shutdown"
+        },
+        {
+          "name": "Khor Al-Amaya Terminal",
+          "type": "Export Terminal",
+          "capacity": "~600,000 bpd",
+          "status": "shutdown"
+        },
+        {
+          "name": "Baiji Refinery",
+          "type": "Refinery",
+          "capacity": "310,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Basra Refinery",
+          "type": "Refinery",
+          "capacity": "210,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Daura Refinery",
+          "type": "Refinery",
+          "capacity": "210,000 bpd",
+          "status": "operational"
+        },
+        {
+          "name": "Karbala Refinery",
+          "type": "Refinery",
+          "capacity": "140,000 bpd",
+          "status": "operational"
+        },
+        {
+          "name": "Kalak (KAR) Refinery",
+          "type": "Refinery",
+          "capacity": "110,000 bpd",
+          "status": "shutdown"
+        },
+        {
+          "name": "Lanaz Refinery",
+          "type": "Refinery",
+          "capacity": "80,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Kirkuk Refinery",
+          "type": "Refinery",
+          "capacity": "56,000 bpd",
+          "status": "partial"
+        }
+      ],
+      "sources": [
+        {
+          "id": 1,
+          "title": "Rumaila shut - Bloomberg",
+          "url": "https://www.bloomberg.com",
+          "date": "2026-03-01"
+        },
+        {
+          "id": 2,
+          "title": "SOMO 1.5M bpd cuts - Fortune",
+          "url": "https://fortune.com",
+          "date": "2026-03-03"
+        },
+        {
+          "id": 3,
+          "title": "DNO Kurdistan halt - GBAF",
+          "url": "https://www.globalbankingandfinance.com",
+          "date": "2026-02-28"
+        },
+        {
+          "id": 4,
+          "title": "Majnoon drone strikes - Shafaq News",
+          "url": "https://shafaq.com",
+          "date": "2026-03-09"
+        },
+        {
+          "id": 5,
+          "title": "Basra terminals halted - Arab News",
+          "url": "https://www.arabnews.com",
+          "date": "2026-03-12"
+        },
+        {
+          "id": 6,
+          "title": "Basra output at 900k bpd - BOE Report",
+          "url": "https://boereport.com/2026/03/20/iraq-oil-output-crashes-as-hormuz-blockade-bites/",
+          "date": "2026-03-20"
+        },
+        {
+          "id": 7,
+          "title": "Iraq FM on foreign fields - World Oil",
+          "url": "https://worldoil.com/news/2026/3/20/iraq-declares-force-majeure-on-foreign-oilfields-as-hormuz-disruption-halts-exports/",
+          "date": "2026-03-20"
+        },
+        {
+          "id": 8,
+          "title": "Basra output down 73% - Iraq Business News",
+          "url": "https://www.iraq-businessnews.com/2026/03/21/basra-oil-output-crashes-73-percent/",
+          "date": "2026-03-21"
+        },
+        {
+          "id": 9,
+          "title": "Iraq oil output further plunges - BOE Report",
+          "url": "https://boereport.com/2026/03/25/iraq-oil-output-further-plunges-as-storage-fills-hormuz-exports-blocked-by-conflict/",
+          "date": "2026-03-25"
+        },
+        {
+          "id": 10,
+          "title": "Iraq cuts Basra oil output by 70% - Anadolu Agency",
+          "url": "https://www.aa.com.tr/en/energy/oil/iraq-cuts-basra-oil-output-by-70-amid-regional-escalation/55719",
+          "date": "2026-03-25"
+        }
+      ]
+    },
+    {
+      "id": "bahrain",
+      "country": "Bahrain",
+      "flag": "🇧🇭",
+      "status": "critical",
+      "statusLabel": "FM / Struck",
+      "summary": "Alba FM on aluminium. BAPCO Sitra refinery (405 kb/d) struck by missiles twice. Bapco Energies FM on all operations. Abu Safa shut.",
+      "metrics": {
+        "headline": "405 kb/d refining offline",
+        "productionOffline": "Sitra refinery + Abu Safa field",
+        "keyFigure": "Full export revenue suspended"
+      },
+      "production": {
+        "oil": {
+          "preWar": 196,
+          "current": 50,
+          "unit": "kb/d"
+        },
+        "gas": {
+          "preWar": 1.6,
+          "current": 1.5,
+          "unit": "Bcf/d"
+        },
+        "refining": {
+          "capacity": 405,
+          "affected": 405,
+          "available": 0,
+          "unit": "kb/d"
+        },
+        "notes": {
+          "oil": "Abu Safa shut; Sitra FM declared",
+          "gas": "Bahrain Field gas stable; Abu Safa associated gas offline",
+          "refining": "Sitra FM; fully offline"
+        }
+      },
+      "events": [
+        {
+          "date": "2026-03-09",
+          "title": "Bapco Energies FM on all group operations",
+          "description": "Bapco Energies declared FM on all group operations. Sitra refinery struck for second time. 405 kb/d offline. Local fuel supply secured but exports halted."
+        },
+        {
+          "date": "2026-03-04",
+          "title": "Alba FM + BAPCO Sitra missile strike",
+          "description": "Aluminium Bahrain (Alba) declared FM on aluminium shipments - smelter running but cannot ship. BAPCO Sitra refinery hit by missile. UK withdrew staff."
+        }
+      ],
+      "oilGasImpact": {
+        "severity": "critical",
+        "summary": "405 kb/d refining offline, FM declared",
+        "details": "BAPCO Sitra refinery (405 kb/d) struck by missiles on 4 Mar and 9 Mar. Bapco Energies declared FM on all group operations. Alba aluminium smelter FM - cannot ship via Hormuz. Abu Safa shared field (with Saudi) shut. UK evacuated personnel."
+      },
+      "infrastructure": [
+        {
+          "name": "Bahrain Field (Awali)",
+          "type": "Oil Field",
+          "capacity": "~45,000 bpd",
+          "status": "operational"
+        },
+        {
+          "name": "Abu Safa Field (shared)",
+          "type": "Offshore Oil",
+          "capacity": "~300,000 bpd",
+          "status": "shutdown"
+        },
+        {
+          "name": "BAPCO Sitra Refinery",
+          "type": "Refinery",
+          "capacity": "405,000 bpd",
+          "status": "shutdown"
+        },
+        {
+          "name": "Bahrain LNG Import",
+          "type": "LNG Import",
+          "capacity": "~800 mmscf/d",
+          "status": "partial"
+        },
+        {
+          "name": "Alba Aluminium Smelter",
+          "type": "Smelter",
+          "capacity": "~1.56 Mtpa",
+          "status": "partial"
+        },
+        {
+          "name": "Sitra Marine Terminal",
+          "type": "Export Terminal",
+          "capacity": "~200,000 bpd",
+          "status": "shutdown"
+        }
+      ],
+      "sources": [
+        {
+          "id": 1,
+          "title": "Alba FM - Bloomberg",
+          "url": "https://www.bloomberg.com",
+          "date": "2026-03-04"
+        },
+        {
+          "id": 2,
+          "title": "BAPCO Sitra strike - Argus",
+          "url": "https://www.argusmedia.com",
+          "date": "2026-03-04"
+        },
+        {
+          "id": 3,
+          "title": "Bapco Energies FM - Bloomberg",
+          "url": "https://www.bloomberg.com",
+          "date": "2026-03-09"
+        },
+        {
+          "id": 4,
+          "title": "Sitra 2nd strike - Euronews",
+          "url": "https://www.euronews.com",
+          "date": "2026-03-09"
+        }
+      ]
+    },
+    {
+      "id": "oman",
+      "country": "Oman",
+      "flag": "🇴🇲",
+      "status": "high",
+      "statusLabel": "Collateral",
+      "summary": "Salalah Port oil tanks hit by Iranian drones. Fire confirmed. Maersk suspended all Salalah operations. Duqm Port also struck. Production intact.",
+      "metrics": {
+        "headline": "Export infrastructure damaged",
+        "productionOffline": "Production intact (~650k bpd)",
+        "keyFigure": "Salalah oil storage destroyed"
+      },
+      "production": {
+        "oil": {
+          "preWar": 1024,
+          "current": 950,
+          "unit": "kb/d"
+        },
+        "gas": {
+          "preWar": 4.2,
+          "current": 4,
+          "unit": "Bcf/d"
+        },
+        "refining": {
+          "capacity": 222,
+          "affected": 0,
+          "available": 222,
+          "unit": "kb/d"
+        },
+        "lng": {
+          "preWar": 10.4,
+          "current": 10.4,
+          "unit": "Mtpa"
+        },
+        "notes": {
+          "oil": "Outside Hormuz; crude production intact",
+          "gas": "Outside Hormuz; gas processing unaffected",
+          "refining": "Outside Hormuz; operational",
+          "lng": "Outside Hormuz; LNG operational"
+        }
+      },
+      "events": [
+        {
+          "date": "2026-03-29",
+          "title": "Salalah Port struck again — operations suspended",
+          "description": "Two Iranian drones hit Salalah Port on Saturday morning, damaging a large container crane. One foreign worker injured. Maersk estimated ~48 hours downtime. Iran claimed it targeted a US support ship. Port handles 3.3M+ TEU annually and serves as critical alternative to Persian Gulf routes. — Kpler citing Maritime Executive",
+          "isNew": true
+        },
+        {
+          "date": "2026-03-11",
+          "title": "Salalah Port oil tanks struck by Iranian drones",
+          "description": "Salalah Port oil storage tanks hit by Iranian Shahed drones. Fire confirmed. Maersk suspended all Salalah Port operations until further notice."
+        },
+        {
+          "date": "2026-03-01",
+          "title": "Duqm Port and Salalah struck - collateral",
+          "description": "Duqm Port and Salalah struck in regional escalation. Foreign worker casualties reported. No formal FM declared by Oman."
+        }
+      ],
+      "oilGasImpact": {
+        "severity": "moderate",
+        "summary": "Export infrastructure hit repeatedly; production intact",
+        "details": "Salalah Port struck again on 29 Mar (two Iranian drones, crane damaged, Maersk ~48hr downtime). Previously struck 11 Mar with oil storage fire. Duqm Port struck 1 Mar. Oil production from inland fields (PDO, BP Khazzan) largely unaffected as outside Hormuz chokepoint. Export infrastructure repeatedly targeted but Mina Al-Fahal terminal and Oman LNG at Qalhat remain operational."
+      },
+      "infrastructure": [
+        {
+          "name": "PDO Fields (Block 6)",
+          "type": "Oil/Gas Fields",
+          "capacity": "~650,000 bpd",
+          "status": "operational"
+        },
+        {
+          "name": "Mukhaizna Field",
+          "type": "Heavy Oil",
+          "capacity": "~120,000 bpd",
+          "status": "operational"
+        },
+        {
+          "name": "Khazzan Gas Field (BP)",
+          "type": "Gas Field",
+          "capacity": "~1.5 Bcf/d",
+          "status": "operational"
+        },
+        {
+          "name": "Oman LNG (Qalhat)",
+          "type": "LNG Plant",
+          "capacity": "10.4 Mtpa",
+          "status": "operational"
+        },
+        {
+          "name": "Sohar Refinery",
+          "type": "Refinery",
+          "capacity": "198,000 bpd",
+          "status": "operational"
+        },
+        {
+          "name": "Duqm Refinery",
+          "type": "Refinery",
+          "capacity": "230,000 bpd",
+          "status": "operational"
+        },
+        {
+          "name": "Mina Al-Fahal Terminal",
+          "type": "Export Terminal",
+          "capacity": "~900,000 bpd",
+          "status": "operational"
+        },
+        {
+          "name": "Salalah Port / Oil Storage",
+          "type": "Port/Storage",
+          "capacity": "Major storage",
+          "status": "shutdown"
+        },
+        {
+          "name": "Duqm Port & SEZ",
+          "type": "Port",
+          "capacity": "Multi-purpose",
+          "status": "partial"
+        }
+      ],
+      "sources": [
+        {
+          "id": 1,
+          "title": "Duqm/Salalah struck - Anadolu",
+          "url": "https://www.aa.com.tr",
+          "date": "2026-03-01"
+        },
+        {
+          "id": 2,
+          "title": "Salalah tanks hit - Al Jazeera",
+          "url": "https://www.aljazeera.com",
+          "date": "2026-03-11"
+        },
+        {
+          "id": 3,
+          "title": "Salalah fire - Argus",
+          "url": "https://www.argusmedia.com",
+          "date": "2026-03-11"
+        },
+        {
+          "id": 4,
+          "title": "Maersk suspends Salalah - Maersk",
+          "url": "https://www.maersk.com",
+          "date": "2026-03-11"
+        }
+      ]
+    },
+    {
+      "id": "israel",
+      "country": "Israel",
+      "flag": "🇮🇱",
+      "status": "conflict",
+      "statusLabel": "Conflict / FM",
+      "summary": "Chevron FM on Leviathan gas field. Karish shut per ministry order. Tamar domestic only. All gas exports to Egypt and Jordan halted.",
+      "metrics": {
+        "headline": "~2.0 Bcf/d gas offline",
+        "productionOffline": "Leviathan + Karish shut, Tamar domestic only",
+        "keyFigure": "Egypt/Jordan gas exports halted"
+      },
+      "production": {
+        "oil": {
+          "preWar": 0,
+          "current": 0,
+          "unit": "kb/d"
+        },
+        "gas": {
+          "preWar": 3,
+          "current": 1,
+          "unit": "Bcf/d"
+        },
+        "refining": {
+          "capacity": 197,
+          "affected": 60,
+          "available": 137,
+          "unit": "kb/d"
+        },
+        "notes": {
+          "oil": "Leviathan+Karish shut; Tamar domestic",
+          "gas": "Leviathan+Karish gas offline; Tamar supplying domestic only",
+          "refining": "Haifa damaged but mostly online"
+        }
+      },
+      "events": [
+        {
+          "date": "2026-03-01",
+          "title": "Chevron declares FM on Leviathan gas field",
+          "description": "Chevron declared Force Majeure on Leviathan after government-ordered suspension. Israel's largest gas field offline. Gas exports to Egypt and Jordan halted."
+        },
+        {
+          "date": "2026-03-01",
+          "title": "Tamar producing domestic only - exports halted",
+          "description": "Tamar gas field continues producing for domestic consumption. All regional gas exports (EMG pipeline to Egypt, JNGET to Jordan) halted."
+        },
+        {
+          "date": "2026-02-28",
+          "title": "Karish gas field shut per ministry instruction",
+          "description": "Energean shut Karish offshore gas field per Israeli Energy Ministry instruction. FPSO Energean Power offline. Precautionary shutdown."
+        }
+      ],
+      "oilGasImpact": {
+        "severity": "critical",
+        "summary": "~2.0 Bcf/d gas offline, exports halted",
+        "details": "Leviathan (Chevron FM, ~1.2 Bcf/d) and Karish (ministry shutdown, ~0.6 Bcf/d) offline. Tamar producing ~1.0 Bcf/d for domestic consumption only. All gas exports to Egypt and Jordan halted. Shutdown costs ~NIS 300M/week. Regional conflict is the primary driver of broader Middle East disruptions."
+      },
+      "infrastructure": [
+        {
+          "name": "Leviathan Gas Field",
+          "type": "Offshore Gas",
+          "capacity": "~1.2 Bcf/d",
+          "status": "shutdown"
+        },
+        {
+          "name": "Tamar Gas Field",
+          "type": "Offshore Gas",
+          "capacity": "~1.0 Bcf/d",
+          "status": "partial"
+        },
+        {
+          "name": "Karish Gas Field",
+          "type": "Offshore Gas",
+          "capacity": "~0.6 Bcf/d",
+          "status": "shutdown"
+        },
+        {
+          "name": "EMG Pipeline (Israel-Egypt)",
+          "type": "Subsea Pipeline",
+          "capacity": "~700 mmscf/d",
+          "status": "shutdown"
+        },
+        {
+          "name": "JNGET Pipeline (Israel-Jordan)",
+          "type": "Gas Pipeline",
+          "capacity": "~300 mmscf/d",
+          "status": "shutdown"
+        },
+        {
+          "name": "Ashdod Refinery (Bazan)",
+          "type": "Refinery",
+          "capacity": "~100,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "EAPC Pipeline",
+          "type": "Pipeline",
+          "capacity": "~600,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Karish North Gas Field",
+          "type": "Offshore Gas",
+          "capacity": "~0.3 Bcf/d",
+          "status": "shutdown"
+        }
+      ],
+      "sources": [
+        {
+          "id": 1,
+          "title": "Chevron Leviathan FM - Yahoo Finance",
+          "url": "https://finance.yahoo.com",
+          "date": "2026-03-01"
+        },
+        {
+          "id": 2,
+          "title": "Leviathan FM - OilPrice.com",
+          "url": "https://oilprice.com",
+          "date": "2026-03-01"
+        },
+        {
+          "id": 3,
+          "title": "Karish shutdown - Sharecast",
+          "url": "https://www.sharecast.com",
+          "date": "2026-02-28"
+        },
+        {
+          "id": 4,
+          "title": "Israel gas shutdowns - World Oil",
+          "url": "https://www.worldoil.com",
+          "date": "2026-03-01"
+        }
+      ]
+    },
+    {
+      "id": "iran",
+      "country": "Iran",
+      "flag": "🇮🇷",
+      "status": "critical",
+      "statusLabel": "Struck / Disrupted",
+      "summary": "Israeli strikes hit South Pars gas field (Phases 3-6, 14, 17-18). USAF raids on Kharg Island. Tehran fuel depots and refinery destroyed. IRGC formally closed Hormuz to US/allied vessels Mar 27. Commander Tangsiri killed by airstrike Mar 26. Houthis joined war Mar 28 with missile attack on Israel.",
+      "metrics": {
+        "headline": "~476 kb/d crude + ~3.3 Bcf/d gas offline",
+        "productionOffline": "South Pars phases + 14 oil fields reduced",
+        "keyFigure": "~15% crude, ~13% gas disrupted"
+      },
+      "production": {
+        "oil": {
+          "preWar": 3176,
+          "current": 2700,
+          "unit": "kb/d"
+        },
+        "gas": {
+          "preWar": 25.8,
+          "current": 22.5,
+          "unit": "Bcf/d"
+        },
+        "refining": {
+          "capacity": 2600,
+          "affected": 410,
+          "available": 2190,
+          "unit": "kb/d"
+        },
+        "notes": {
+          "oil": "South Pars struck; fields ~30% shut-in",
+          "gas": "Asaluyeh processing hit; ~100 MMcm/d offline (~14% of South Pars)",
+          "refining": "Tehran Refinery destroyed; BA curtailed",
+          "lng": "South Pars disrupted; LNG minimal"
+        }
+      },
+      "events": [
+        {
+          "date": "2026-03-28",
+          "title": "Houthis join war — missile attack on Israel",
+          "description": "Yemen's Houthis launched ballistic missiles at 'sensitive military targets' in southern Israel, their first attack since the war began. Israel intercepted one missile. Attack stokes fears of renewed Red Sea shipping disruption. Brent crude closed at $112.57/bbl, WTI at $99.64.",
+          "isNew": true
+        },
+        {
+          "date": "2026-03-27",
+          "title": "IRGC formally closes Hormuz to US/allied vessels",
+          "description": "IRGC Navy turned back 3 container ships including 2 COSCO vessels (CSCL Indian Ocean, CSCL Arctic Ocean). Officially proclaimed all movement prohibited for ships going to/from US, Israeli, and allied-nation ports. Thailand-flagged Mayuree Naree ran aground on Qeshm Island. Brent rose to $114/bbl.",
+          "isNew": true
+        },
+        {
+          "date": "2026-03-26",
+          "title": "Israeli airstrike kills IRGC Navy commander Tangsiri",
+          "description": "Israel announced IRGC Navy commander Alireza Tangsiri killed in airstrike, accusing him of being directly responsible for the Strait closure. Iran allows vessels from China, Russia, India, Iraq, Pakistan, Malaysia, Thailand to pass. Trump extends pause on striking Iranian power plants until April 6.",
+          "isNew": true
+        },
+        {
+          "date": "2026-03-25",
+          "title": "Iran rejects ceasefire, lays out 5 conditions",
+          "description": "Iran rejected Trump's ceasefire proposal and laid out 5 conditions including war reparations and recognition of Iranian sovereignty over Hormuz. IRGC threatened to target Gulf power plants and economic infrastructure if Iranian power plants are attacked. Oil prices fell ~15% to below $99/bbl on earlier pause hopes."
+        },
+        {
+          "date": "2026-03-18",
+          "title": "Israeli strikes hit South Pars gas field",
+          "description": "Phases 3-6, 14, 17-18 struck at Asaluyeh. ~100 MMcm/d gas offline (~12% of total). Fajr Jam Complex fire."
+        },
+        {
+          "date": "2026-03-13",
+          "title": "USAF raids Kharg Island oil terminal",
+          "description": "90+ military sites hit. Oil infrastructure spared but export operations disrupted. Kharg handles 90% of Iran's crude exports."
+        },
+        {
+          "date": "2026-03-08",
+          "title": "Tehran fuel depots and refinery struck",
+          "description": "30+ fuel depots hit (Shahran, Aghdasieh, Shahid Dolati, Karaj). Tehran Refinery (250 kb/d) shut. 19.5M liters fuel consumed. 'Black rain' reported over Tehran."
+        },
+        {
+          "date": "2026-03-01",
+          "title": "Bandar Abbas naval base struck",
+          "description": "Underground fuel bunkers destroyed (60% reserves lost). Shahid Rajaee Port targeted. Southern logistics disrupted."
+        },
+        {
+          "date": "2026-03-01",
+          "title": "Southern oil fields partially shut in",
+          "description": "Ahwaz, Marun, Gachsaran fields ~30% reduced due to Hormuz closure and storage filling. Associated gas production impacted."
+        }
+      ],
+      "oilGasImpact": {
+        "severity": "critical",
+        "summary": "~476 kb/d crude + ~3.3 Bcf/d gas offline",
+        "details": "South Pars Phases 3-6, 14, 17-18 struck at Asaluyeh on 18 Mar (~12% of Iran's gas output offline). Tehran Refinery (250 kb/d) destroyed on 8 Mar. Bandar Abbas Refinery curtailed. 30+ fuel depots destroyed across Tehran. Kharg Island raided 13 Mar - exports disrupted. Southern oil fields (Ahwaz, Marun, Gachsaran) ~30% shut-in due to Hormuz closure and storage constraints."
+      },
+      "infrastructure": [
+        {
+          "name": "South Pars Phases 2-3",
+          "type": "Gas Field",
+          "capacity": "~50 MMcm/d",
+          "status": "shutdown"
+        },
+        {
+          "name": "South Pars Phases 4-5",
+          "type": "Gas Field",
+          "capacity": "~50 MMcm/d",
+          "status": "shutdown"
+        },
+        {
+          "name": "South Pars Phases 6-8",
+          "type": "Gas Field",
+          "capacity": "~75 MMcm/d",
+          "status": "shutdown"
+        },
+        {
+          "name": "Ahwaz Asmari/Bangestan",
+          "type": "Oil Field",
+          "capacity": "~700,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Marun",
+          "type": "Oil Field",
+          "capacity": "~170,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Gachsaran",
+          "type": "Oil Field",
+          "capacity": "~200,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Rag-E-Sefid",
+          "type": "Oil Field",
+          "capacity": "~40,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Parsi",
+          "type": "Oil Field",
+          "capacity": "~60,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Bibi Hakimeh",
+          "type": "Oil Field",
+          "capacity": "~80,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Mansouri",
+          "type": "Oil Field",
+          "capacity": "~50,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Shadegan",
+          "type": "Oil Field",
+          "capacity": "~30,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Azadegan North Phase 1",
+          "type": "Oil Field",
+          "capacity": "~75,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Agha Jari",
+          "type": "Oil Field",
+          "capacity": "~30,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Sepehr/Jufair Phase 1",
+          "type": "Oil Field",
+          "capacity": "~25,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Karanj",
+          "type": "Oil Field",
+          "capacity": "~20,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Persian Gulf Star Refinery",
+          "type": "Refinery",
+          "capacity": "420,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Abadan Refinery",
+          "type": "Refinery",
+          "capacity": "400,000 bpd",
+          "status": "operational"
+        },
+        {
+          "name": "Isfahan Refinery",
+          "type": "Refinery",
+          "capacity": "360,000 bpd",
+          "status": "operational"
+        },
+        {
+          "name": "Bandar Abbas Refinery",
+          "type": "Refinery",
+          "capacity": "320,000 bpd",
+          "status": "partial"
+        },
+        {
+          "name": "Tehran Refinery",
+          "type": "Refinery",
+          "capacity": "250,000 bpd",
+          "status": "shutdown"
+        },
+        {
+          "name": "Arak/Shazand Refinery",
+          "type": "Refinery",
+          "capacity": "250,000 bpd",
+          "status": "operational"
+        },
+        {
+          "name": "Tabriz Refinery",
+          "type": "Refinery",
+          "capacity": "110,000 bpd",
+          "status": "operational"
+        },
+        {
+          "name": "Siraf Condensate Refinery",
+          "type": "Refinery",
+          "capacity": "480,000 bpd",
+          "status": "operational"
+        },
+        {
+          "name": "Shahran Oil Depot",
+          "type": "Fuel Depot",
+          "capacity": "Major depot",
+          "status": "shutdown"
+        },
+        {
+          "name": "Aghdasieh Oil Depot",
+          "type": "Fuel Depot",
+          "capacity": "Major depot",
+          "status": "shutdown"
+        },
+        {
+          "name": "Shahid Dolati Oil Depot",
+          "type": "Fuel Depot",
+          "capacity": "Major depot",
+          "status": "shutdown"
+        },
+        {
+          "name": "Shahr-e Rey Oil Depot",
+          "type": "Fuel Depot",
+          "capacity": "Major depot",
+          "status": "shutdown"
+        }
+      ],
+      "sources": [
+        {
+          "id": 1,
+          "title": "Israeli strikes hit South Pars - CBS News",
+          "url": "https://www.cbsnews.com",
+          "date": "2026-03-18"
+        },
+        {
+          "id": 2,
+          "title": "Tehran fuel depots struck - TIME",
+          "url": "https://time.com",
+          "date": "2026-03-08"
+        },
+        {
+          "id": 3,
+          "title": "Iran oil facilities targeted - Al Jazeera",
+          "url": "https://www.aljazeera.com",
+          "date": "2026-03-08"
+        },
+        {
+          "id": 4,
+          "title": "30+ depots destroyed - Axios",
+          "url": "https://www.axios.com",
+          "date": "2026-03-08"
+        },
+        {
+          "id": 5,
+          "title": "Kharg Island raided - CNN",
+          "url": "https://www.cnn.com",
+          "date": "2026-03-13"
+        },
+        {
+          "id": 6,
+          "title": "Bandar Abbas strikes - Geopolitics Unplugged",
+          "url": "https://geopoliticsunplugged.com",
+          "date": "2026-03-01"
+        },
+        {
+          "id": 7,
+          "title": "Iran rejects ceasefire, 5 conditions - NPR",
+          "url": "https://www.npr.org/2026/03/25/nx-s1-5760675/iran-war-military-deployment",
+          "date": "2026-03-25"
+        },
+        {
+          "id": 8,
+          "title": "Iran rejects US ceasefire, demands Hormuz sovereignty - CNBC",
+          "url": "https://www.cnbc.com/2026/03/25/iran-war-us-trump.html",
+          "date": "2026-03-25"
+        },
+        {
+          "id": 9,
+          "title": "IRGC opens tolled passage, turns back 3 ships - USNI News",
+          "url": "https://news.usni.org/2026/03/27/irgc-opens-tolled-passage-for-merchant-ships-in-strait-of-hormuz-transit-continues-to-trickle-through",
+          "date": "2026-03-27"
+        },
+        {
+          "id": 10,
+          "title": "Houthis launch missile at Israel, join Iran war - Axios",
+          "url": "https://www.axios.com/2026/03/28/houthis-iran-war-israel-missile",
+          "date": "2026-03-28"
+        },
+        {
+          "id": 11,
+          "title": "Iran kills IRGC Navy commander Tangsiri - Fox News",
+          "url": "https://www.foxnews.com/live-news/us-israel-iran-war-strait-hormuz-updates-march-26",
+          "date": "2026-03-26"
+        }
+      ]
+    }
+  ],
+  "fmDeclarations": [
+    {
+      "id": "fm-024",
+      "company": "Iraq Oil Ministry",
+      "country": "Iraq",
+      "flag": "🇮🇶",
+      "date": "2026-03-20",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "FM on all oilfields developed by foreign companies. Basra output at 900k bpd (from 3.3M). Tanker nominations impossible.",
+      "details": {
+        "volumeAffected": "All foreign-operated oilfields; Basra output down to 900k bpd from 3.3M bpd",
+        "commodity": "Crude Oil",
+        "duration": "Since 17 Mar (letter dated), declared 20 Mar - indefinite",
+        "reason": "Strait of Hormuz disruption halted tanker traffic, blocking Iraqi oil exports. SOMO ready to load but no partners can nominate tankers.",
+        "financialImpact": "~70% of Iraq oil revenue suspended. No compensation to foreign operators."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Iraq FM on foreign oilfields - World Oil",
+          "url": "https://worldoil.com/news/2026/3/20/iraq-declares-force-majeure-on-foreign-oilfields-as-hormuz-disruption-halts-exports/",
+          "date": "2026-03-20"
+        },
+        {
+          "id": 2,
+          "title": "Iraq FM exclusive - US News",
+          "url": "https://www.usnews.com/news/world/articles/2026-03-20/exclusive-iraq-declares-force-majeure-on-foreign-operated-oilfields-over-hormuz-disruption-sources-say",
+          "date": "2026-03-20"
+        }
+      ]
+    },
+    {
+      "id": "fm-001",
+      "company": "QatarEnergy",
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "date": "2026-03-04",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "FM on all LNG exports globally. Extended Mar 24 to Italy, Belgium, South Korea, China contracts. All downstream halted. ~20% of global LNG supply removed. Restart impossible until conflict ends.",
+      "details": {
+        "volumeAffected": "~7 million tonnes/month (~20% global LNG supply); all downstream halted. Mar 24: FM extended to Italy, Belgium, South Korea, China contracts.",
+        "commodity": "LNG, Polymers, Methanol, Urea, Aluminium",
+        "duration": "Indefinite - all production halted since 2 Mar. Mar 18 missile strikes knocked out 12.8 Mtpa (17%) for 3-5 years. CEO: no restart until conflict ends + 2 weeks minimum.",
+        "reason": "Iranian drone strikes on Ras Laffan and Mesaieed facilities; Strait of Hormuz blocked. Mar 18 follow-up missile attack destroyed 2 LNG trains and Pearl GTL Train 2.",
+        "financialImpact": "Brent surged to $104/bbl. Dutch/British gas prices surged ~50%. Asian LNG spot prices jumped ~39%. $20B annual revenue loss confirmed by QatarEnergy CEO."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "QatarEnergy halts LNG - Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/3/2/qatarenergy-worlds-largest-lng-firm-halts-production-after-iran-attacks",
+          "date": "2026-03-02"
+        },
+        {
+          "id": 2,
+          "title": "Qatar LNG shutdown - Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-02/qatar-stops-lng-production-at-world-s-top-plant-after-attack",
+          "date": "2026-03-02"
+        },
+        {
+          "id": 3,
+          "title": "QatarEnergy FM - ROIC News",
+          "url": "https://www.roic.ai/news/qatarenergy-halts-all-lng-production-after-iranian-attacks-four-week-recovery-expected-03-04-2026",
+          "date": "2026-03-04"
+        },
+        {
+          "id": 4,
+          "title": "Iran attacks cut 17% of Qatar LNG - Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/3/19/iran-attacks-cut-17-of-qatars-lng-capacity-for-up-to-5-years-qatarenergy",
+          "date": "2026-03-19"
+        }
+      ]
+    },
+    {
+      "id": "fm-019",
+      "company": "Shell",
+      "country": "UK / Global",
+      "flag": "🇬🇧",
+      "date": "2026-03-11",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "FM on Qatar-sourced LNG contracts to Asia/Europe clients. April deliveries impacted.",
+      "details": {
+        "volumeAffected": "QatarEnergy-sourced LNG offtake contracts",
+        "commodity": "LNG",
+        "duration": "Ongoing - April deliveries confirmed impacted",
+        "reason": "Upstream QatarEnergy FM; Shell unable to fulfill downstream obligations.",
+        "financialImpact": "Downstream LNG obligations suspended; buyers scrambling for alternatives."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Shell FM - Al Jazeera",
+          "url": "https://www.aljazeera.com/economy/2026/3/11/shell-declares-force-majeure-on-lng-contracts-from-qatar",
+          "date": "2026-03-11"
+        },
+        {
+          "id": 2,
+          "title": "Shell FM - Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-11/shell-declares-force-majeure-on-lng-contracts-from-qatar",
+          "date": "2026-03-11"
+        }
+      ]
+    },
+    {
+      "id": "fm-020",
+      "company": "TotalEnergies",
+      "country": "France",
+      "flag": "🇫🇷",
+      "date": "2026-03-11",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "FM on 5.2 Mtpa Qatar LNG offtake. Europe and Asia buyers notified.",
+      "details": {
+        "volumeAffected": "5.2 Mtpa Qatar LNG offtake",
+        "commodity": "LNG",
+        "duration": "Ongoing - buyers notified",
+        "reason": "QatarEnergy upstream FM; unable to deliver contracted volumes.",
+        "financialImpact": "5.2 Mtpa represents significant portion of TotalEnergies' LNG portfolio."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "TotalEnergies FM - OilPrice.com",
+          "url": "https://oilprice.com/Latest-Energy-News/World-News/Shell-and-TotalEnergies-Issue-Force-Majeure-After-Qatar-LNG-Shut-Down.html",
+          "date": "2026-03-11"
+        },
+        {
+          "id": 2,
+          "title": "TotalEnergies FM - Manila Times",
+          "url": "https://www.manilatimes.net",
+          "date": "2026-03-11"
+        }
+      ]
+    },
+    {
+      "id": "fm-023",
+      "company": "Wanhua Chemical",
+      "country": "China",
+      "flag": "🇨🇳",
+      "date": "2026-03-09",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "FM on Middle East supplies. Hormuz shipping disruption makes delivery impossible. 2.2 Mtpa ethylene capacity.",
+      "details": {
+        "volumeAffected": "All Middle East supply contracts; 2.2 Mtpa ethylene capacity at Yantai",
+        "commodity": "Isocyanates, Polyurethane derivatives",
+        "duration": "Effective 7 Mar, declared 9 Mar - indefinite",
+        "reason": "Severe disruption of Strait of Hormuz shipping routes making delivery impossible or unreasonably dangerous.",
+        "financialImpact": "Polyurethane supply chain disrupted across Middle East and Asia."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Wanhua Chemical FM - Hydrocarbon Processing",
+          "url": "https://hydrocarbonprocessing.com/news/2026/03/chinas-wanhua-chemical-declares-force-majeure-on-supplies-to-middle-east/",
+          "date": "2026-03-09"
+        },
+        {
+          "id": 2,
+          "title": "Wanhua FM - OE Digital",
+          "url": "https://energynews.oedigital.com/refined-products/2026/03/09/wanhua-chemical-a-chinese-company-declares-force-majeure-for-middle-east-supplies",
+          "date": "2026-03-09"
+        }
+      ]
+    },
+    {
+      "id": "fm-004",
+      "company": "Bapco Energies",
+      "country": "Bahrain",
+      "flag": "🇧🇭",
+      "date": "2026-03-09",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "FM on all group operations after Sitra refinery struck 2nd time. 405 kb/d offline.",
+      "details": {
+        "volumeAffected": "405 kb/d (full Sitra refinery capacity)",
+        "commodity": "Refined Petroleum Products",
+        "duration": "Indefinite - refinery + exports suspended",
+        "reason": "Sitra refinery struck by missile a second time on 9 Mar.",
+        "financialImpact": "Full export and refining revenue suspended; local supply prioritized."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Bapco FM - Financial Content",
+          "url": "https://markets.financialcontent.com/stocks/article/marketminute-2026-3-9-bahrains-bapco-declares-force-majeure-after-iranian-refinery-strike",
+          "date": "2026-03-09"
+        },
+        {
+          "id": 2,
+          "title": "Bapco FM - Euronews",
+          "url": "https://www.euronews.com",
+          "date": "2026-03-09"
+        }
+      ]
+    },
+    {
+      "id": "fm-002",
+      "company": "Kuwait Petroleum Corp (KPC)",
+      "country": "Kuwait",
+      "flag": "🇰🇼",
+      "date": "2026-03-07",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "FM on crude exports from 2.6 mb/d baseline. Refineries lowering throughput. Al-Ahmadi refinery struck by drones Mar 19-20.",
+      "details": {
+        "volumeAffected": "~1.2 mb/d crude export cuts (from 2.6 mb/d baseline)",
+        "commodity": "Crude Oil",
+        "duration": "Ongoing - escalated with Al-Ahmadi refinery strikes Mar 19-20",
+        "reason": "Regional military escalation; Kafco fuel tanks struck; 6 drones intercepted over Kuwait.",
+        "financialImpact": "Major crude export disruption; refineries forced to lower throughput."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "KPC FM - Express Tribune",
+          "url": "https://tribune.com.pk",
+          "date": "2026-03-07"
+        },
+        {
+          "id": 2,
+          "title": "Kuwait FM - Sunday Guardian",
+          "url": "https://sundayguardianlive.com/world/iran-israel-tensions-will-saudi-arabia-follow-kuwaits-oil-cuts-declares-force-majeure-as-hormuz-blockade-enters-day-8-20-of-global-oil-supply-suspended-174606/",
+          "date": "2026-03-07"
+        }
+      ]
+    },
+    {
+      "id": "fm-021",
+      "company": "Evergreen Marine",
+      "country": "Taiwan",
+      "flag": "🇹🇼",
+      "date": "2026-03-06",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "FM on all Gulf bookings. Suspended services to Bahrain, Kuwait, Qatar, UAE, Saudi, Iraq.",
+      "details": {
+        "volumeAffected": "All Gulf-bound container bookings",
+        "commodity": "Maritime Shipping",
+        "duration": "Indefinite",
+        "reason": "Regional military escalation; all Gulf port calls suspended.",
+        "financialImpact": "Full Gulf service revenue suspended."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Evergreen FM - ShipmentLink",
+          "url": "https://www.shipmentlink.com",
+          "date": "2026-03-06"
+        },
+        {
+          "id": 2,
+          "title": "Evergreen FM - Container Mag",
+          "url": "https://www.container-mag.com",
+          "date": "2026-03-06"
+        }
+      ]
+    },
+    {
+      "id": "fm-005",
+      "company": "Chevron (Leviathan field)",
+      "country": "Israel",
+      "flag": "🇮🇱",
+      "date": "2026-03-01",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "FM on Leviathan gas field after govt-ordered suspension. Egypt/Jordan gas exports halted.",
+      "details": {
+        "volumeAffected": "Leviathan ~22 bcm/yr; Egypt & Jordan exports halted",
+        "commodity": "Natural Gas",
+        "duration": "Ongoing since 1 Mar 2026",
+        "reason": "Government-ordered suspension amid regional military escalation.",
+        "financialImpact": "Egypt and Jordan pipeline gas exports halted; downstream energy shortages."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Chevron FM - Yahoo Finance",
+          "url": "https://finance.yahoo.com",
+          "date": "2026-03-01"
+        },
+        {
+          "id": 2,
+          "title": "Leviathan FM - OilPrice.com",
+          "url": "https://oilprice.com",
+          "date": "2026-03-01"
+        }
+      ]
+    },
+    {
+      "id": "fm-015",
+      "company": "Gujarat Gas",
+      "country": "India",
+      "flag": "🇮🇳",
+      "date": "2026-03-05",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "FM to industrial customers. 50% supply cut. Stock fell -6.7%.",
+      "details": {
+        "volumeAffected": "50% supply cut to industrial customers",
+        "commodity": "Natural Gas (piped)",
+        "duration": "Ongoing",
+        "reason": "LNG supply cascade from QatarEnergy FM; insufficient gas for industrial demand.",
+        "financialImpact": "Gujarat Gas stock dropped -6.7%."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Gujarat Gas FM - DeshGujarat",
+          "url": "https://www.deshgujarat.com",
+          "date": "2026-03-05"
+        },
+        {
+          "id": 2,
+          "title": "Gujarat Gas impact - OfficeNewz",
+          "url": "https://www.officenewz.com",
+          "date": "2026-03-05"
+        }
+      ]
+    },
+    {
+      "id": "fm-018",
+      "company": "PCS (Singapore)",
+      "country": "Singapore",
+      "flag": "🇸🇬",
+      "date": "2026-03-05",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "FM on petrochemical products due to Middle East feedstock disruption.",
+      "details": {
+        "volumeAffected": "Petrochemical product output",
+        "commodity": "Petrochemicals",
+        "duration": "Ongoing",
+        "reason": "Middle East naphtha/condensate feedstock supply disrupted.",
+        "financialImpact": "Singapore petchem hub output reduced."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "PCS FM - OE Digital",
+          "url": "https://energynews.oedigital.com/crude-oil/2026/03/05/singapores-pcs-declares-petrochemical-force-majeure-a-letter-shows",
+          "date": "2026-03-05"
+        },
+        {
+          "id": 2,
+          "title": "Singapore petchem FM - Baird Maritime",
+          "url": "https://www.bairdmaritime.com",
+          "date": "2026-03-05"
+        }
+      ]
+    },
+    {
+      "id": "fm-006",
+      "company": "Hydro / Qatalum (JV)",
+      "country": "Norway / Qatar",
+      "flag": "🇳🇴",
+      "date": "2026-03-03",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "FM on aluminium. Smelter maintaining scaled-down production. Restart estimated 6-12 months.",
+      "details": {
+        "volumeAffected": "585,000 tonnes/year (full smelter capacity)",
+        "commodity": "Aluminium",
+        "duration": "Restart estimated 6-12 months after resolution",
+        "reason": "Hormuz disruption preventing raw material imports and product exports.",
+        "financialImpact": "Smelter restart costs typically $100M+."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Hydro Qatalum FM - Hydro.com",
+          "url": "https://www.hydro.com",
+          "date": "2026-03-03"
+        },
+        {
+          "id": 2,
+          "title": "Qatalum scaled-down production - GlobeNewsWire",
+          "url": "https://www.globenewswire.com/news-release/2026/03/12/3254424/0/en/Norsk-Hydro-Qatalum-maintaining-scaled-down-aluminium-production.html",
+          "date": "2026-03-12"
+        }
+      ]
+    },
+    {
+      "id": "fm-003",
+      "company": "Aluminium Bahrain (Alba)",
+      "country": "Bahrain",
+      "flag": "🇧🇭",
+      "date": "2026-03-04",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "FM on aluminium shipments. Smelter running but cannot ship via Hormuz. BAPCO Sitra struck by missile.",
+      "details": {
+        "volumeAffected": "Full aluminium deliveries halted; BAPCO Sitra 405 kb/d struck",
+        "commodity": "Aluminium / Refined Products",
+        "duration": "Ongoing - Sitra struck 2nd time on 9 Mar",
+        "reason": "Hormuz shipping disruption; BAPCO Sitra missile strike; UK withdrew staff.",
+        "financialImpact": "Aluminium delivery obligations suspended; refinery damage ongoing."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Alba FM - Newsweek",
+          "url": "https://www.newsweek.com/what-is-force-majeure-gulf-companies-shut-down-oil-production-11637203",
+          "date": "2026-03-04"
+        },
+        {
+          "id": 2,
+          "title": "Alba/Sitra - Kitco",
+          "url": "https://www.kitco.com",
+          "date": "2026-03-04"
+        }
+      ]
+    },
+    {
+      "id": "fm-013",
+      "company": "MRPL (Mangalore Refinery)",
+      "country": "India",
+      "flag": "🇮🇳",
+      "date": "2026-03-04",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "FM on gasoline exports. Cutting 500 kb/d of refinery runs due to Gulf crude supply disruption.",
+      "details": {
+        "volumeAffected": "500 kb/d refinery throughput cuts; gasoline export FM",
+        "commodity": "Gasoline / Refined Products",
+        "duration": "Ongoing",
+        "reason": "Crude supply disruption from Gulf sources via Hormuz.",
+        "financialImpact": "Stock declined; refinery margin compression."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "MRPL FM - Bloomberg",
+          "url": "https://www.bloomberg.com",
+          "date": "2026-03-04"
+        },
+        {
+          "id": 2,
+          "title": "MRPL FM - Business Standard",
+          "url": "https://www.business-standard.com",
+          "date": "2026-03-04"
+        }
+      ]
+    },
+    {
+      "id": "fm-014",
+      "company": "Petronet LNG",
+      "country": "India",
+      "flag": "🇮🇳",
+      "date": "2026-03-04",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "FM to QatarEnergy and local buyers after Qatar LNG halt. Stock fell -9.3%.",
+      "details": {
+        "volumeAffected": "QatarEnergy long-term LNG contracts (7.5 MTPA Dahej terminal)",
+        "commodity": "LNG",
+        "duration": "Linked to QatarEnergy FM resolution",
+        "reason": "Upstream QatarEnergy FM; inability to receive contracted LNG volumes.",
+        "financialImpact": "Petronet LNG stock dropped -9.3%."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Petronet FM - PSU Connect",
+          "url": "https://www.psuconnect.in",
+          "date": "2026-03-04"
+        },
+        {
+          "id": 2,
+          "title": "Petronet stock fall - Moneylife",
+          "url": "https://www.moneylife.in",
+          "date": "2026-03-04"
+        }
+      ]
+    },
+    {
+      "id": "fm-017",
+      "company": "Yeochun NCC (YNCC)",
+      "country": "South Korea",
+      "flag": "🇰🇷",
+      "date": "2026-03-04",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "FM on ethylene production due to total Middle East naphtha supply suspension.",
+      "details": {
+        "volumeAffected": "Ethylene production (naphtha cracker dependent)",
+        "commodity": "Ethylene / Petrochemicals",
+        "duration": "Ongoing",
+        "reason": "Total Middle East naphtha supply suspension; cracker feedstock unavailable.",
+        "financialImpact": "Ethylene and polymer supply chain disrupted across Asia."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "YNCC FM - CMS Law-Now",
+          "url": "https://cms-lawnow.com/en/ealerts/2026/03/force-majeure-at-oil-refineries-in-singapore-south-korea-and-china",
+          "date": "2026-03-05"
+        },
+        {
+          "id": 2,
+          "title": "Korea cracker FM - TradingView",
+          "url": "https://www.tradingview.com",
+          "date": "2026-03-05"
+        }
+      ]
+    },
+    {
+      "id": "fm-022",
+      "company": "Cosco Shipping",
+      "country": "China",
+      "flag": "🇨🇳",
+      "date": "2026-03-04",
+      "status": "active",
+      "statusLabel": "Partially Resumed",
+      "summary": "Resumed container bookings to Gulf states on Mar 25. Services remain subject to ongoing volatility. Bypassing Hormuz via alternative routes.",
+      "details": {
+        "volumeAffected": "All Gulf container and bulk services frozen",
+        "commodity": "Maritime Shipping",
+        "duration": "Indefinite",
+        "reason": "Regional security; all Gulf bookings frozen.",
+        "financialImpact": "Full Gulf trade revenue suspended."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Cosco halt - Hong Kong Free Press",
+          "url": "https://hongkongfp.com",
+          "date": "2026-03-04"
+        },
+        {
+          "id": 2,
+          "title": "Cosco Gulf freeze - Cyprus Shipping",
+          "url": "https://www.cyprus-shipping.com",
+          "date": "2026-03-04"
+        }
+      ]
+    },
+    {
+      "id": "fm-016",
+      "company": "Chandra Asri",
+      "country": "Indonesia",
+      "flag": "🇮🇩",
+      "date": "2026-03-03",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "FM on petrochemical production due to Middle East naphtha feedstock loss.",
+      "details": {
+        "volumeAffected": "Petrochemical production (naphtha-dependent units)",
+        "commodity": "Petrochemicals (naphtha-based)",
+        "duration": "Ongoing - linked to naphtha supply recovery",
+        "reason": "Middle East naphtha feedstock supply disrupted by Hormuz crisis.",
+        "financialImpact": "Production suspension; downstream polymer supply affected in SE Asia."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Chandra Asri FM - Jakarta Post",
+          "url": "https://www.jakartapost.com",
+          "date": "2026-03-03"
+        },
+        {
+          "id": 2,
+          "title": "Indonesia petchem FM - The Edge Singapore",
+          "url": "https://www.theedgesingapore.com",
+          "date": "2026-03-03"
+        }
+      ]
+    },
+    {
+      "id": "fm-009",
+      "company": "MSC",
+      "country": "Switzerland",
+      "flag": "🇨🇭",
+      "date": "2026-03-03",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "End of Voyage FM. $800/container surcharge on Gulf-affected routes.",
+      "details": {
+        "volumeAffected": "All Gulf-route container services",
+        "commodity": "Maritime Shipping",
+        "duration": "Indefinite",
+        "reason": "Strait of Hormuz security; End of Voyage FM invoked.",
+        "financialImpact": "$800/container surcharge applied across affected routes."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "MSC FM - Lloyd's List",
+          "url": "https://www.lloydslist.com",
+          "date": "2026-03-03"
+        },
+        {
+          "id": 2,
+          "title": "MSC surcharge - Container Mag",
+          "url": "https://www.container-mag.com",
+          "date": "2026-03-03"
+        }
+      ]
+    },
+    {
+      "id": "fm-010",
+      "company": "CMA CGM",
+      "country": "France",
+      "flag": "🇫🇷",
+      "date": "2026-03-02",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "Suspended Hormuz and Suez transits. Vessels ordered to shelter positions.",
+      "details": {
+        "volumeAffected": "All Gulf and Suez route services",
+        "commodity": "Maritime Shipping",
+        "duration": "Indefinite",
+        "reason": "Strait of Hormuz and Suez Canal security threat.",
+        "financialImpact": "Full Gulf service revenue suspended; rerouting costs significant."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "CMA CGM FM - Arab News",
+          "url": "https://www.arabnews.com",
+          "date": "2026-03-02"
+        },
+        {
+          "id": 2,
+          "title": "CMA CGM FM - Kpler",
+          "url": "https://www.kpler.com",
+          "date": "2026-03-02"
+        }
+      ]
+    },
+    {
+      "id": "fm-011",
+      "company": "MEE (Fujairah bunker)",
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "date": "2026-03-02",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "FM on marine fuel deliveries across Fujairah bunkering hub. World's 2nd largest hub disrupted.",
+      "details": {
+        "volumeAffected": "Marine fuel delivery suspended across UAE hub",
+        "commodity": "Marine Fuel / Bunker Fuel",
+        "duration": "Indefinite",
+        "reason": "Drone attacks on Fujairah area; marine fuel delivery unsafe.",
+        "financialImpact": "World's 2nd largest bunkering hub disrupted; global vessel refueling affected."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "MEE FM - Argus Media",
+          "url": "https://www.argusmedia.com/en/news-and-insights/latest-market-news/2796111-uae-s-fujairah-bunker-suppliers-declare-force-majeure",
+          "date": "2026-03-02"
+        },
+        {
+          "id": 2,
+          "title": "Fujairah FM - Ship & Bunker",
+          "url": "https://www.shipandbunker.com",
+          "date": "2026-03-02"
+        }
+      ]
+    },
+    {
+      "id": "fm-012",
+      "company": "Pearl Marine",
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "date": "2026-03-02",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "FM on all bunker fuel supply contracts at Fujairah hub.",
+      "details": {
+        "volumeAffected": "All bunker fuel supply contracts suspended",
+        "commodity": "Marine Fuel",
+        "duration": "Indefinite",
+        "reason": "Regional security; unable to fulfill Fujairah supply obligations.",
+        "financialImpact": "Bunker fuel supply contracts force majeure'd."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Pearl Marine FM - Argus",
+          "url": "https://www.argusmedia.com",
+          "date": "2026-03-02"
+        },
+        {
+          "id": 2,
+          "title": "Pearl Marine FM - Ship & Bunker",
+          "url": "https://www.shipandbunker.com",
+          "date": "2026-03-02"
+        }
+      ]
+    },
+    {
+      "id": "fm-007",
+      "company": "Hapag-Lloyd",
+      "country": "Germany",
+      "flag": "🇩🇪",
+      "date": "2026-03-01",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "FM on Gulf shipping loops. Suspended all Hormuz transits. Rerouting via Cape of Good Hope.",
+      "details": {
+        "volumeAffected": "All Gulf container loop services",
+        "commodity": "Maritime Shipping",
+        "duration": "Indefinite",
+        "reason": "Strait of Hormuz security threat; inability to safely transit.",
+        "financialImpact": "Gulf trade lanes suspended; cargo rerouting costs escalating."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Hapag-Lloyd FM - Maritime Executive",
+          "url": "https://www.maritime-executive.com",
+          "date": "2026-03-01"
+        },
+        {
+          "id": 2,
+          "title": "Hapag-Lloyd FM - Container Mag",
+          "url": "https://www.container-mag.com",
+          "date": "2026-03-01"
+        }
+      ]
+    },
+    {
+      "id": "fm-008",
+      "company": "Maersk",
+      "country": "Denmark",
+      "flag": "🇩🇰",
+      "date": "2026-03-01",
+      "status": "active",
+      "statusLabel": "Active",
+      "summary": "Suspended Hormuz transit, Cape reroute. FM under Bill of Lading. All Salalah ops suspended 11 Mar.",
+      "details": {
+        "volumeAffected": "All Gulf-bound container services",
+        "commodity": "Maritime Shipping",
+        "duration": "Ongoing - escalated 11 Mar with Salalah suspension",
+        "reason": "Hormuz security; Salalah Port struck by Iranian drones on 11 Mar.",
+        "financialImpact": "Cape rerouting adds 10-14 days per voyage."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Maersk FM - France24",
+          "url": "https://www.france24.com",
+          "date": "2026-03-01"
+        },
+        {
+          "id": 2,
+          "title": "Maersk Salalah - Middle East Eye",
+          "url": "https://www.middleeasteye.net",
+          "date": "2026-03-11"
+        }
+      ]
+    }
+  ],
+  "shutdowns": [
+    {
+      "id": "sd-020",
+      "company": "Iraq (Rumaila/Zubair further cuts)",
+      "country": "Iraq",
+      "flag": "🇮🇶",
+      "date": "2026-03-25",
+      "status": "shutdown",
+      "statusLabel": "Further Cuts",
+      "isNew": false,
+      "summary": "Basrah Oil Co ordered BP to cut North Rumaila to 350k bpd and Eni to cut Zubair by 70k bpd. Storage critically full. Southern output down to ~800k bpd.",
+      "details": {
+        "volumeAffected": "Additional ~170,000 bpd cuts ordered (Rumaila -100k, Zubair -70k). Total southern output ~800k bpd.",
+        "commodity": "Crude Oil",
+        "duration": "Since 24-25 Mar 2026, ongoing",
+        "reason": "Storage depots at critical levels. Exports remain impossible via Hormuz. Basrah Oil Co issued official letters to BP and Eni requesting further cuts.",
+        "financialImpact": "Iraq oil revenue almost entirely suspended. Officials warned further cuts possible."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Iraq oil output further plunges - BOE Report",
+          "url": "https://boereport.com/2026/03/25/iraq-oil-output-further-plunges-as-storage-fills-hormuz-exports-blocked-by-conflict/",
+          "date": "2026-03-25"
+        },
+        {
+          "id": 2,
+          "title": "Iraq cuts Basra output by 70% - Anadolu Agency",
+          "url": "https://www.aa.com.tr/en/energy/oil/iraq-cuts-basra-oil-output-by-70-amid-regional-escalation/55719",
+          "date": "2026-03-25"
+        }
+      ]
+    },
+    {
+      "id": "sd-019",
+      "company": "ADNOC (Habshan Gas Complex)",
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "date": "2026-03-19",
+      "status": "restarted",
+      "statusLabel": "Restarted",
+      "summary": "Habshan gas processing complex shut Mar 19, resumed operations Mar 23. 4-day outage. ~60% of UAE domestic gas.",
+      "details": {
+        "volumeAffected": "~1+ Bcf/d gas processing capacity (restored Mar 23)",
+        "commodity": "Natural Gas",
+        "duration": "19 Mar - 23 Mar 2026 (restarted)",
+        "reason": "Missile intercepts hit ADNOC Habshan hub. Complex shut as precaution. Resumed after 4 days.",
+        "financialImpact": "Temporary disruption resolved. UAE domestic gas supply restored via Habshan restart."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "UAE shuts gas facilities - PGJ Online",
+          "url": "https://pgjonline.com/news/2026/march/uae-shuts-major-gas-facilities-after-missile-intercepts-hit-adnoc-hub",
+          "date": "2026-03-19"
+        }
+      ]
+    },
+    {
+      "id": "sd-018",
+      "company": "Kuwait (Mina Al-Ahmadi Refinery)",
+      "country": "Kuwait",
+      "flag": "🇰🇼",
+      "date": "2026-03-19",
+      "status": "shutdown",
+      "statusLabel": "Struck",
+      "summary": "Mina Al-Ahmadi refinery (730k bpd) hit by drones for 2 consecutive days. Fires across multiple units.",
+      "details": {
+        "volumeAffected": "730,000 bpd (Kuwait's largest refinery)",
+        "commodity": "Refined Products",
+        "duration": "Since 19 Mar 2026, ongoing",
+        "reason": "Iranian drone attacks struck refinery on March 19 and 20. Fires across multiple units. Additional sections shut as precaution.",
+        "financialImpact": "Kuwait refined product output severely curtailed."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Kuwait refinery hit again - Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/3/20/kuwait-oil-refinery-hit-again-as-iran-targets-gulf-energy-infrastructure",
+          "date": "2026-03-20"
+        },
+        {
+          "id": 2,
+          "title": "Al Ahmadi shutdown - Dawn",
+          "url": "https://www.dawn.com/news/1984011/kuwait-shuts-down-parts-of-al-ahmadi-refinery-after-drone-attack",
+          "date": "2026-03-20"
+        }
+      ]
+    },
+    {
+      "id": "sd-016",
+      "company": "ADNOC / Occidental (Shah Gas Field)",
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "date": "2026-03-16",
+      "status": "shutdown",
+      "statusLabel": "Shutdown",
+      "summary": "Drone strike sparked fire at Shah Gas Field. Operations suspended. ~1 Bcf/d gas (20% of UAE gas supply) and 5% of world sulphur offline.",
+      "details": {
+        "volumeAffected": "~1 Bcf/d gas, ~50,000 bpd condensate, 5% of global granulated sulphur",
+        "commodity": "Natural Gas, Condensate, Sulphur",
+        "duration": "Since 16 Mar 2026, ongoing",
+        "reason": "Iranian drone strike sparked fire at Shah Gas Field in Empty Quarter. ADNOC/Occidental JV. Operations suspended while damage assessed.",
+        "financialImpact": "20% of UAE domestic gas supply disrupted. Sulphur market tightening globally."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Shah Gas Field drone strike - World Oil",
+          "url": "https://www.worldoil.com/news/2026/3/16/drone-strike-sparks-fire-at-uae-s-shah-gas-field-operated-by-adnoc-occidental/",
+          "date": "2026-03-16"
+        },
+        {
+          "id": 2,
+          "title": "Shah field shutdown - The National",
+          "url": "https://www.thenationalnews.com/business/2026/03/17/shah-field-a-vital-gas-and-sulphur-asset-attacked-by-iranian-drones/",
+          "date": "2026-03-17"
+        },
+        {
+          "id": 3,
+          "title": "Shah/Fujairah attacks - Cyprus Mail",
+          "url": "https://cyprus-mail.com/2026/03/17/attacks-on-uaes-fujairah-port-shah-gas-field-add-to-energy-disruptions",
+          "date": "2026-03-17"
+        }
+      ]
+    },
+    {
+      "id": "sd-017",
+      "company": "ADNOC (Fujairah Terminal)",
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "date": "2026-03-16",
+      "status": "shutdown",
+      "statusLabel": "Shutdown",
+      "summary": "ADNOC suspended crude loading at Fujairah after repeated drone attacks. ~1M bpd Murban crude export capacity halted.",
+      "details": {
+        "volumeAffected": "~1 million bpd Murban crude loading (~1% of global demand)",
+        "commodity": "Crude Oil (Murban)",
+        "duration": "Loading suspended 16 Mar, 3rd attack 17 Mar - ongoing",
+        "reason": "Repeated drone attacks on Fujairah oil terminal (14, 16, 17 Mar). ADNOC suspended all crude loading operations.",
+        "financialImpact": "Murban crude buyers scrambling for alternatives. Fujairah storage at capacity."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "ADNOC loading halted - Yahoo",
+          "url": "https://www.yahoo.com/news/articles/oil-loading-operations-suspended-uaes-081836446.html",
+          "date": "2026-03-17"
+        },
+        {
+          "id": 2,
+          "title": "Fujairah drone attack - CNBC",
+          "url": "https://www.cnbc.com/2026/03/16/uae-fujairah-oil-hub-drone-fire-iran-war-us-israel-middle-east.html",
+          "date": "2026-03-16"
+        },
+        {
+          "id": 3,
+          "title": "ADNOC Fujairah halted - Baird Maritime",
+          "url": "https://www.bairdmaritime.com/shipping/ports/adnoc-oil-loading-still-halted-at-fujairah-as-other-loadings-resume",
+          "date": "2026-03-16"
+        }
+      ]
+    },
+    {
+      "id": "sd-012",
+      "company": "Maersk (Salalah operations)",
+      "country": "Denmark",
+      "flag": "🇩🇰",
+      "date": "2026-03-11",
+      "status": "suspended",
+      "statusLabel": "Suspended",
+      "summary": "All Salalah Port operations suspended until further notice after drone strikes. Operational suspension, not FM.",
+      "details": {
+        "volumeAffected": "All container and bulk cargo at Salalah",
+        "commodity": "Refined Products, Containers",
+        "duration": "Since 11 Mar 2026, indefinite",
+        "reason": "Security - Iranian drone strikes on Salalah Port oil storage.",
+        "financialImpact": "Major re-routing; freight rates surged for alternative routes."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Maersk Salalah suspension - Maersk",
+          "url": "https://www.maersk.com",
+          "date": "2026-03-11"
+        },
+        {
+          "id": 2,
+          "title": "Maersk Oman halt - Middle East Eye",
+          "url": "https://www.middleeasteye.net",
+          "date": "2026-03-11"
+        }
+      ]
+    },
+    {
+      "id": "sd-011",
+      "company": "Salalah Port / Oil Storage",
+      "country": "Oman",
+      "flag": "🇴🇲",
+      "date": "2026-03-11",
+      "status": "struck",
+      "statusLabel": "Struck",
+      "summary": "Oil storage tanks hit by Iranian Shahed drones. Fire confirmed. No FM declared by Oman.",
+      "details": {
+        "volumeAffected": "Oil storage tank farm damaged; port throughput halted",
+        "commodity": "Crude Oil, Fuel Oil Storage",
+        "duration": "Since 11 Mar 2026, ongoing",
+        "reason": "Iranian Shahed-series drones struck oil storage tanks. Fire confirmed.",
+        "financialImpact": "Oman's southern export route compromised; Gulf shipping insurance surged."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Salalah tanks hit - Argus Media",
+          "url": "https://www.argusmedia.com",
+          "date": "2026-03-11"
+        },
+        {
+          "id": 2,
+          "title": "Salalah fire - Middle East Eye",
+          "url": "https://www.middleeasteye.net",
+          "date": "2026-03-11"
+        }
+      ]
+    },
+    {
+      "id": "sd-009",
+      "company": "ADNOC (Ruwais Refinery)",
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "date": "2026-03-10",
+      "status": "shutdown",
+      "statusLabel": "Shutdown",
+      "summary": "Ruwais Refinery-2 (417 kb/d) shut after drone strike. Plant-wide safety audit. No FM declared.",
+      "details": {
+        "volumeAffected": "417,000 bpd (Ruwais Refinery-2)",
+        "commodity": "Refined Products (gasoline, diesel, jet fuel)",
+        "duration": "Since 10 Mar 2026, ongoing",
+        "reason": "Drone strike on Ruwais complex; ADNOC ordered plant-wide safety audit.",
+        "financialImpact": "UAE refined product exports severely curtailed; ADNOC Distribution shares dropped."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "ADNOC Ruwais shutdown - GMA News",
+          "url": "https://www.gmanetwork.com/news/topstories/world/979523/uae-oil-giant-adnoc-shuts-ruwais-refinery-after-drone-strike-source-says/story/",
+          "date": "2026-03-10"
+        },
+        {
+          "id": 2,
+          "title": "ADNOC safety audit - Bloomberg",
+          "url": "https://www.bloomberg.com",
+          "date": "2026-03-10"
+        }
+      ]
+    },
+    {
+      "id": "sd-002",
+      "company": "Saudi Aramco (Offshore Fields)",
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦",
+      "date": "2026-03-09",
+      "status": "shutdown",
+      "statusLabel": "Shutdown",
+      "summary": "Safaniya, Zuluf, Marjan, Abu Safa shut (~2-2.5M bpd). Storage contagion. No FM declared.",
+      "details": {
+        "volumeAffected": "2,000,000-2,500,000 bpd across 4 major offshore fields",
+        "commodity": "Crude Oil (Arab Heavy, Arab Medium)",
+        "duration": "Since 9 Mar 2026, ongoing",
+        "reason": "Precautionary shutdown after drone interceptions at Shaybah; floating storage filled, causing storage contagion.",
+        "financialImpact": "~20% of Saudi production capacity offline. Brent surged past $100/bbl."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Aramco offshore shutdown - Maritime Executive",
+          "url": "https://www.maritime-executive.com",
+          "date": "2026-03-09"
+        },
+        {
+          "id": 2,
+          "title": "Saudi offshore shutdown - Splash247",
+          "url": "https://www.splash247.com",
+          "date": "2026-03-09"
+        }
+      ]
+    },
+    {
+      "id": "sd-010",
+      "company": "Iraq / Majnoon Oil Field",
+      "country": "Iraq",
+      "flag": "🇮🇶",
+      "date": "2026-03-09",
+      "status": "struck",
+      "statusLabel": "Struck",
+      "summary": "Majnoon oil field hit by drones over multiple days (9-12 Mar). Basra terminals halted. No FM declared.",
+      "details": {
+        "volumeAffected": "~240,000 bpd (Majnoon); Basra terminal exports suspended",
+        "commodity": "Crude Oil (Basra Heavy/Medium)",
+        "duration": "9-12 Mar 2026, ongoing",
+        "reason": "Repeated drone strikes on Majnoon oil field; Basra terminals suspended loading.",
+        "financialImpact": "Iraq southern export corridor compromised; Basra crude spot market seized up."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Majnoon strikes - Shafaq News",
+          "url": "https://shafaq.com",
+          "date": "2026-03-09"
+        },
+        {
+          "id": 2,
+          "title": "Basra terminals halted - Arab News",
+          "url": "https://www.arabnews.com",
+          "date": "2026-03-12"
+        }
+      ]
+    },
+    {
+      "id": "sd-014",
+      "company": "Kuwait (Subiya Power Plant)",
+      "country": "Kuwait",
+      "flag": "🇰🇼",
+      "date": "2026-03-09",
+      "status": "contained",
+      "statusLabel": "Contained",
+      "summary": "Subiya power plant fire from intercepted drone debris contained. Ministry of Electricity confirmed all systems operational. Fuel tank damage sustained.",
+      "details": {
+        "volumeAffected": "Subiya power plant partially damaged; gas supply affected",
+        "commodity": "Natural Gas (power generation)",
+        "duration": "Since 9 Mar 2026, ongoing",
+        "reason": "Collateral damage - 6 drones intercepted, debris caused fire. KPC FM (7 Mar) was crude exports only.",
+        "financialImpact": "Kuwait domestic power disrupted; emergency gas-to-oil switching activated."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Subiya fire - Times Kuwait",
+          "url": "https://www.timeskuwait.com",
+          "date": "2026-03-09"
+        },
+        {
+          "id": 2,
+          "title": "Kuwait drones - Arab Times",
+          "url": "https://www.arabtimesonline.com",
+          "date": "2026-03-09"
+        }
+      ]
+    },
+    {
+      "id": "sd-013",
+      "company": "COSCO Shipping (Gulf services)",
+      "country": "China",
+      "flag": "🇨🇳",
+      "date": "2026-03-04",
+      "status": "partially_resumed",
+      "statusLabel": "Partially Resumed",
+      "summary": "Resumed container bookings to Gulf states on Mar 25 (UAE, Saudi, Bahrain, Qatar, Kuwait, Iraq). Services subject to ongoing volatility. Bypassing Hormuz.",
+      "details": {
+        "volumeAffected": "Container bookings resumed to 6 Gulf states; tanker bookings status unclear",
+        "commodity": "All Commodities",
+        "duration": "Suspended 4-25 Mar 2026; partially resumed 25 Mar",
+        "reason": "Resumed via alternative routes bypassing Hormuz. COSCO cautioned bookings remain subject to change.",
+        "financialImpact": "Partial restoration of China-Gulf trade lanes."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "COSCO Gulf freeze - HKFP",
+          "url": "https://hongkongfp.com",
+          "date": "2026-03-04"
+        },
+        {
+          "id": 2,
+          "title": "COSCO halt - Cyprus Shipping",
+          "url": "https://www.cyprusshippingnews.com",
+          "date": "2026-03-04"
+        }
+      ]
+    },
+    {
+      "id": "sd-003",
+      "company": "SOMO / Iraq",
+      "country": "Iraq",
+      "flag": "🇮🇶",
+      "date": "2026-03-03",
+      "status": "fm_declared",
+      "statusLabel": "FM Declared",
+      "summary": "Basra output at 900k bpd (from 3.3M). Iraq Oil Ministry declared FM on all foreign-operated fields Mar 20. Kurdistan halted.",
+      "details": {
+        "volumeAffected": "Basra output now 900k bpd (down from 3.3M); ~73% reduction. All foreign-operated fields under FM.",
+        "commodity": "Crude Oil",
+        "duration": "Ongoing since 28 Feb - 3 Mar 2026",
+        "reason": "Regional security escalation. SOMO denied sanctions rumors. Multiple operators halted simultaneously.",
+        "financialImpact": "~30% of Iraq's 4.5M bpd production offline. Basra differentials widened."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Iraq output crashes - Bloomberg",
+          "url": "https://www.bloomberg.com",
+          "date": "2026-03-03"
+        },
+        {
+          "id": 2,
+          "title": "SOMO cuts confirmed - Fortune",
+          "url": "https://fortune.com",
+          "date": "2026-03-03"
+        }
+      ]
+    },
+    {
+      "id": "sd-001",
+      "company": "Saudi Aramco (Ras Tanura)",
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦",
+      "date": "2026-03-02",
+      "status": "restarted",
+      "statusLabel": "Restarted",
+      "summary": "Ras Tanura refinery (550 kb/d) restarted Mar 13 after 11-day shutdown. Crude processing resumed.",
+      "details": {
+        "volumeAffected": "550,000 bpd refining (restarted)",
+        "commodity": "Crude Oil, LPG",
+        "duration": "2 Mar - 13 Mar 2026 (restarted)",
+        "reason": "Security threat - Shaybah targeted by drones; Ras Tanura shut as precaution. Crude rerouted to Yanbu via East-West Pipeline.",
+        "financialImpact": "Asian crude term-contract liftings disrupted; LPG spot prices spiked ~15%."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Aramco Ras Tanura shutdown - Bloomberg",
+          "url": "https://www.bloomberg.com",
+          "date": "2026-03-02"
+        },
+        {
+          "id": 2,
+          "title": "Aramco reroutes to Yanbu - Argus",
+          "url": "https://www.argusmedia.com",
+          "date": "2026-03-02"
+        }
+      ]
+    },
+    {
+      "id": "sd-015",
+      "company": "Salalah/Duqm Ports (Oman)",
+      "country": "Oman",
+      "flag": "🇴🇲",
+      "date": "2026-03-01",
+      "status": "ongoing",
+      "statusLabel": "Ongoing",
+      "summary": "Duqm Port and Salalah struck by collateral damage. Foreign worker casualties. No FM declared.",
+      "details": {
+        "volumeAffected": "Port operations disrupted; oil storage/terminal throughput affected",
+        "commodity": "Crude Oil, Refined Products",
+        "duration": "Ongoing since ~1 Mar 2026",
+        "reason": "Collateral damage from regional military strikes. Foreign worker casualties confirmed.",
+        "financialImpact": "Oman crude exports delayed; Duqm refinery (230 kb/d) operations uncertain."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Oman ports struck - Anadolu",
+          "url": "https://www.aa.com.tr",
+          "date": "2026-03-01"
+        },
+        {
+          "id": 2,
+          "title": "Duqm/Salalah - Al Jazeera",
+          "url": "https://www.aljazeera.com",
+          "date": "2026-03-01"
+        }
+      ]
+    },
+    {
+      "id": "sd-008",
+      "company": "Energean (Karish field)",
+      "country": "Israel",
+      "flag": "🇮🇱",
+      "date": "2026-02-28",
+      "status": "shutdown",
+      "statusLabel": "Shutdown",
+      "summary": "Karish gas platform shut per Israeli Ministry instruction. No separate FM by Energean.",
+      "details": {
+        "volumeAffected": "~6.2 Bcm/yr capacity (Karish)",
+        "commodity": "Natural Gas, Condensate",
+        "duration": "Since 28 Feb 2026, ongoing",
+        "reason": "Government-ordered shutdown per Israeli Energy Ministry instruction.",
+        "financialImpact": "Israel activated emergency gas reserves."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Karish shutdown - Sharecast",
+          "url": "https://www.sharecast.com",
+          "date": "2026-02-28"
+        },
+        {
+          "id": 2,
+          "title": "Karish closure - World Oil",
+          "url": "https://www.worldoil.com",
+          "date": "2026-02-28"
+        }
+      ]
+    },
+    {
+      "id": "sd-004",
+      "company": "DNO ASA",
+      "country": "Iraq / Norway",
+      "flag": "🇮🇶",
+      "date": "2026-02-28",
+      "status": "halted",
+      "statusLabel": "Halted",
+      "summary": "All Kurdistan oil field operations halted. Coordinated with KRG. No FM declared.",
+      "details": {
+        "volumeAffected": "~100,000 bpd (Tawke + Peshkabir fields)",
+        "commodity": "Crude Oil",
+        "duration": "Since 28 Feb 2026, ongoing",
+        "reason": "Precautionary halt coordinated with Kurdistan Regional Government.",
+        "financialImpact": "DNO shares dropped ~12% on Oslo Bors."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "DNO halt - GBAF",
+          "url": "https://www.gbaf.com",
+          "date": "2026-02-28"
+        },
+        {
+          "id": 2,
+          "title": "DNO Kurdistan - World Energy News",
+          "url": "https://www.worldenergynews.com",
+          "date": "2026-02-28"
+        }
+      ]
+    },
+    {
+      "id": "sd-005",
+      "company": "Gulf Keystone Petroleum",
+      "country": "Iraq / UK",
+      "flag": "🇮🇶",
+      "date": "2026-02-28",
+      "status": "halted",
+      "statusLabel": "Halted",
+      "summary": "Sheikhan oil field halted citing regional security. No FM declared.",
+      "details": {
+        "volumeAffected": "~40,000 bpd (Sheikhan field)",
+        "commodity": "Crude Oil",
+        "duration": "Since 28 Feb 2026, ongoing",
+        "reason": "Regional security - precautionary shutdown.",
+        "financialImpact": "Shares fell sharply on London AIM market."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Gulf Keystone halt - The New Region",
+          "url": "https://www.thenewregion.com",
+          "date": "2026-02-28"
+        }
+      ]
+    },
+    {
+      "id": "sd-006",
+      "company": "Dana Gas",
+      "country": "Iraq / UAE",
+      "flag": "🇮🇶",
+      "date": "2026-02-28",
+      "status": "halted",
+      "statusLabel": "Halted",
+      "summary": "Khor Mor gas field in Kurdistan halted. No FM declared.",
+      "details": {
+        "volumeAffected": "~450 MMscf/d gas (Khor Mor field)",
+        "commodity": "Natural Gas, Condensate",
+        "duration": "Since 28 Feb 2026, ongoing",
+        "reason": "Precautionary shutdown due to regional security escalation.",
+        "financialImpact": "Kurdistan domestic gas supply disrupted."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Dana Gas halt - ZAWYA",
+          "url": "https://www.zawya.com",
+          "date": "2026-02-28"
+        }
+      ]
+    },
+    {
+      "id": "sd-007",
+      "company": "HKN Energy",
+      "country": "Iraq",
+      "flag": "🇮🇶",
+      "date": "2026-02-28",
+      "status": "halted",
+      "statusLabel": "Halted",
+      "summary": "Kurdistan oil production halted as precautionary measure. No FM declared.",
+      "details": {
+        "volumeAffected": "~30,000 bpd (Sarsang block)",
+        "commodity": "Crude Oil",
+        "duration": "Since 28 Feb 2026, ongoing",
+        "reason": "Precautionary; coordinated with other Kurdistan operators.",
+        "financialImpact": "Kurdistan export pipeline flows reduced to zero."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "HKN halt - Al Jazeera",
+          "url": "https://www.aljazeera.com",
+          "date": "2026-02-28"
+        },
+        {
+          "id": 2,
+          "title": "HKN halt - Modern Diplomacy",
+          "url": "https://www.moderndiplomacy.eu",
+          "date": "2026-02-28"
+        }
+      ]
+    }
+  ]
 }

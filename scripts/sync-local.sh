@@ -81,7 +81,21 @@ When citing data obtained via browser from premium sources, note the source clea
   --allowedTools "Edit,Write,Read,WebSearch,WebFetch,Glob,Grep,Bash(git diff*),Bash(git status*),mcp__chrome-devtools*" \
   --max-turns 50
 
-# 3. Commit and push if data changed
+# 3. Verify sync completed
+if [ ! -f "$PROJECT_DIR/sync-log.json" ]; then
+  echo "[sync-local] ERROR: sync-log.json not written. Sync may be incomplete."
+  exit 1
+fi
+
+# 4. Validate data.js before committing
+echo "[sync-local] Validating data.js..."
+if ! node "$SCRIPT_DIR/validate-data.js"; then
+  echo "[sync-local] VALIDATION FAILED — not committing. Restoring data.js from git..."
+  git -C "$PROJECT_DIR" checkout -- data.js
+  exit 1
+fi
+
+# 5. Commit and push if data changed
 echo "[sync-local] Checking for changes..."
 if ! git -C "$PROJECT_DIR" diff --quiet data.js data-previous.json sync-log.json energy-news-data.json 2>/dev/null; then
   echo "[sync-local] Changes detected, committing and pushing..."
@@ -94,11 +108,15 @@ else
   echo "[sync-local] No changes detected."
 fi
 
-# 4. Run SPR sync
+# 6. Run SPR sync
 echo "[sync-local] Running SPR data sync..."
 bash "$SCRIPT_DIR/sync-spr.sh"
 
-# 5. Close Chrome if we started it
+# 7. Run flows sync
+echo "[sync-local] Running flow data sync..."
+bash "$SCRIPT_DIR/sync-flows.sh"
+
+# 8. Close Chrome if we started it
 if [ -n "$CHROME_PID" ]; then
   echo "[sync-local] Closing Chrome (PID: $CHROME_PID)..."
   kill "$CHROME_PID" 2>/dev/null || true

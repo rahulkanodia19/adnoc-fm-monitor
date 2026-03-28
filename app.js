@@ -215,51 +215,24 @@ function renderExecSummary() {
   const container = document.getElementById('exec-summary-content');
   if (!container) return;
 
-  // Build production data arrays
+  // Build production data arrays (notes come from data.js production.notes)
   const oilData = [], gasData = [], refiningData = [], lngData = [];
-  const prodNotes = {
-    'Qatar': 'Ras Laffan offline; all downstream halted',
-    'Kuwait': 'KPC FM declared; tankers blocked',
-    'Saudi Arabia': 'Offshore fields shut; rerouting to Yanbu',
-    'United Arab Emirates': 'Offshore offline; Fujairah suspended; >50% crude shut-in',
-    'Iraq': 'Basra 3.3M→900k; FM on foreign fields',
-    'Bahrain': 'Abu Safa shut; Sitra FM declared',
-    'Oman': 'Outside Hormuz; production intact',
-    'Israel': 'Leviathan+Karish shut; Tamar domestic',
-    'Iran': 'South Pars struck; fields ~30% shut-in'
-  };
-  const refNotes = {
-    'Saudi Arabia': 'Ras Tanura shut then reopened',
-    'Iran': 'Tehran Refinery destroyed; BA curtailed',
-    'Kuwait': 'Ahmadi + Abdullah hit by drones',
-    'United Arab Emirates': 'Ruwais-2 shut (417 kb/d); 805 kb/d available',
-    'Bahrain': 'Sitra FM; fully offline',
-    'Iraq': 'Lanaz struck; storage-constrained throughput',
-    'Israel': 'Haifa damaged but mostly online',
-    'Qatar': 'Laffan 1+2 offline with Ras Laffan',
-    'Oman': 'Outside Hormuz; operational'
-  };
-  const lngNotes = {
-    'Qatar': 'Ras Laffan LNG fully offline; 77 Mtpa halted',
-    'United Arab Emirates': 'Das Island LNG at minimal capacity; Hormuz blocked',
-    'Oman': 'Outside Hormuz; LNG operational',
-    'Iran': 'South Pars disrupted; LNG minimal',
-  };
 
   COUNTRY_STATUS_DATA.forEach(c => {
     if (!c.production) return;
     const p = c.production;
+    const n = p.notes || {};
     if (p.oil && p.oil.preWar > 0) {
-      oilData.push({ country: c.country, flag: c.flag, preWar: p.oil.preWar, current: p.oil.current, notes: prodNotes[c.country] || '' });
+      oilData.push({ country: c.country, flag: c.flag, preWar: p.oil.preWar, current: p.oil.current, notes: n.oil || '' });
     }
     if (p.gas && p.gas.preWar > 0) {
-      gasData.push({ country: c.country, flag: c.flag, preWar: p.gas.preWar, current: p.gas.current, notes: prodNotes[c.country] || '' });
+      gasData.push({ country: c.country, flag: c.flag, preWar: p.gas.preWar, current: p.gas.current, notes: n.gas || '' });
     }
     if (p.refining && p.refining.capacity > 0) {
-      refiningData.push({ country: c.country, flag: c.flag, capacity: p.refining.capacity, affected: p.refining.affected, available: p.refining.available, notes: refNotes[c.country] || '' });
+      refiningData.push({ country: c.country, flag: c.flag, capacity: p.refining.capacity, affected: p.refining.affected, available: p.refining.available, notes: n.refining || '' });
     }
     if (p.lng && p.lng.preWar > 0) {
-      lngData.push({ country: c.country, flag: c.flag, preWar: p.lng.preWar, current: p.lng.current, notes: lngNotes[c.country] || '' });
+      lngData.push({ country: c.country, flag: c.flag, preWar: p.lng.preWar, current: p.lng.current, notes: n.lng || '' });
     }
   });
 
@@ -271,7 +244,7 @@ function renderExecSummary() {
   container.innerHTML = `
     <div class="mb-5">
       <h2 class="text-lg font-bold text-navy-900">Regional Production Impact Assessment</h2>
-      <p class="text-sm text-navy-500">Gulf Escalation: 28 Feb - 23 Mar 2026 | Sources: IEA, OPEC, Bloomberg, Reuters, Argus</p>
+      <p class="text-sm text-navy-500">Gulf Escalation: 28 Feb \u2013 ${new Date(LAST_UPDATED).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })} | Sources: IEA, OPEC, Bloomberg, Reuters, Argus</p>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
@@ -1070,13 +1043,28 @@ function verifyData() {
     pass(`${c.country}: production object valid`);
   });
 
-  // 3. Cross-check key production numbers
+  // 3. Cross-check pre-war baseline values (these must never change)
   const checks = [
+    { id: 'qatar', field: 'oil', prop: 'preWar', expected: 1220 },
+    { id: 'qatar', field: 'gas', prop: 'preWar', expected: 18.5 },
+    { id: 'qatar', field: 'lng', prop: 'preWar', expected: 77.0 },
+    { id: 'kuwait', field: 'oil', prop: 'preWar', expected: 2600 },
+    { id: 'kuwait', field: 'gas', prop: 'preWar', expected: 1.7 },
     { id: 'saudi_arabia', field: 'oil', prop: 'preWar', expected: 10400 },
-    { id: 'qatar', field: 'lng', prop: 'current', expected: 0 },
-    { id: 'iran', field: 'gas', prop: 'preWar', expected: 25.8 },
+    { id: 'saudi_arabia', field: 'gas', prop: 'preWar', expected: 11.3 },
     { id: 'uae', field: 'oil', prop: 'preWar', expected: 3400 },
-    { id: 'iraq', field: 'oil', prop: 'current', expected: 1200 },
+    { id: 'uae', field: 'gas', prop: 'preWar', expected: 6.5 },
+    { id: 'uae', field: 'lng', prop: 'preWar', expected: 6.0 },
+    { id: 'iraq', field: 'oil', prop: 'preWar', expected: 4300 },
+    { id: 'iraq', field: 'gas', prop: 'preWar', expected: 3.0 },
+    { id: 'bahrain', field: 'oil', prop: 'preWar', expected: 196 },
+    { id: 'bahrain', field: 'gas', prop: 'preWar', expected: 1.6 },
+    { id: 'oman', field: 'oil', prop: 'preWar', expected: 1024 },
+    { id: 'oman', field: 'gas', prop: 'preWar', expected: 4.2 },
+    { id: 'oman', field: 'lng', prop: 'preWar', expected: 10.4 },
+    { id: 'israel', field: 'gas', prop: 'preWar', expected: 3.0 },
+    { id: 'iran', field: 'oil', prop: 'preWar', expected: 3176 },
+    { id: 'iran', field: 'gas', prop: 'preWar', expected: 25.8 },
   ];
   checks.forEach(({ id, field, prop, expected }) => {
     const c = COUNTRY_STATUS_DATA.find(x => x.id === id);

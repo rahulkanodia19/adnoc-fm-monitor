@@ -1,0 +1,12 @@
+{
+  "insideTotal": 1083,
+  "insideBallast": 584,
+  "insideLaden": 498,
+  "outsideTotal": 16,
+  "outsideBallast": 10,
+  "outsideLaden": 6,
+  "adnocCount": 13,
+  "totalVessels": 1099,
+  "syncTimestamp": "2026-03-26T21:20:17.889Z",
+  "deltas": null
+}
