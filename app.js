@@ -654,6 +654,13 @@ function renderMarketNews() {
   const pctReleased = ((d.totalReleased / d.totalCommitted) * 100).toFixed(1);
   const daysSinceAnnouncement = Math.floor((new Date(d.asOf) - new Date(d.announced)) / 86400000);
 
+  // Recency badge
+  const sprAgeHours = (Date.now() - new Date(d.asOf).getTime()) / (1000 * 60 * 60);
+  const sprFreshBadge = sprAgeHours <= 48
+    ? '<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-700 border border-emerald-200 ml-1.5">LIVE</span>'
+    : sprAgeHours <= 72 ? ''
+    : '<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-700 border border-amber-200 ml-1.5">STALE</span>';
+
   // Compute released crude vs products from country-level data
   let releasedCrude = 0, releasedProducts = 0;
   d.countries.forEach(c => {
@@ -689,7 +696,7 @@ function renderMarketNews() {
           <svg class="w-5 h-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6V7.5z" />
           </svg>
-          SPR Status — IEA Emergency Release
+          SPR Status — IEA Emergency Release ${sprFreshBadge}
         </h2>
         <p class="text-sm text-navy-500 mt-0.5">Coordinated release of strategic petroleum reserves by 30 IEA member countries | Announced ${new Date(d.announced).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</p>
       </div>
@@ -740,6 +747,25 @@ function renderMarketNews() {
           <div class="bg-gradient-to-r from-sky-500 to-emerald-500 h-4 rounded-full transition-all" style="width: ${pctReleased}%"></div>
         </div>
       </div>
+
+      <!-- Key Insights -->
+      ${d.keyInsights && d.keyInsights.length > 0 ? `
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6">
+        <div class="flex items-center gap-2 mb-2">
+          <svg class="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+          </svg>
+          <h4 class="text-base font-bold text-amber-900">Key Insights</h4>
+          <span class="text-xs text-amber-600 ml-auto">Last 48 hours</span>
+        </div>
+        <ul class="space-y-2">
+          ${d.keyInsights.map(text => `
+          <li class="flex gap-2 text-sm text-amber-900 leading-relaxed">
+            <span class="text-amber-400 mt-1 flex-shrink-0">&bull;</span>
+            <span>${text}</span>
+          </li>`).join('')}
+        </ul>
+      </div>` : ''}
 
       <!-- Regional Breakdown -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
@@ -989,6 +1015,18 @@ function updateStats(activeTab) {
         { label: 'Operational', value: SHUTDOWNS_NO_FM_DATA.filter(d => ['operational', 'resumed'].includes(d.status)).length, color: 'text-emerald-600', change: countNew(SHUTDOWNS_NO_FM_DATA, d => ['operational', 'resumed'].includes(d.status)) },
       ];
       break;
+    case 'market-news':
+      if (typeof SPR_RELEASE_DATA !== 'undefined') {
+        const spr = SPR_RELEASE_DATA;
+        const releasing = spr.countries.filter(c => c.released > 0).length;
+        stats = [
+          { label: 'Committed (mb)', value: spr.totalCommitted, color: 'text-blue-600', change: 0 },
+          { label: 'Released (mb)', value: spr.totalReleased, color: 'text-emerald-600', change: 0 },
+          { label: 'Countries Releasing', value: releasing, color: 'text-amber-600', change: 0 },
+          { label: 'Release Progress', value: ((spr.totalReleased / spr.totalCommitted) * 100).toFixed(1) + '%', color: 'text-sky-600', change: 0 },
+        ];
+      }
+      break;
     case 'import-flows':
     case 'export-flows':
     case 'market-prices':
@@ -1068,6 +1106,25 @@ function verifyData() {
     if (c.infrastructure && c.infrastructure.length > 0) pass(`${c.country}: ${c.infrastructure.length} infrastructure entries`);
     else fail(`${c.country}: empty or missing infrastructure`);
   });
+
+  // 5. SPR data validation
+  if (typeof SPR_RELEASE_DATA !== 'undefined') {
+    const spr = SPR_RELEASE_DATA;
+    if (spr.countries.length === 30) pass('SPR: 30 countries present');
+    else fail(`SPR: Expected 30 countries, found ${spr.countries.length}`);
+
+    const sumReleased = spr.countries.reduce((s, c) => s + c.released, 0);
+    if (Math.abs(sumReleased - spr.totalReleased) <= 0.2) pass('SPR: totalReleased matches sum');
+    else fail(`SPR: totalReleased ${spr.totalReleased} != sum ${sumReleased.toFixed(1)}`);
+
+    const sumCommitted = spr.countries.reduce((s, c) => s + c.committed, 0);
+    if (Math.abs(sumCommitted - spr.totalCommitted) <= 0.2) pass('SPR: totalCommitted matches sum');
+    else fail(`SPR: totalCommitted ${spr.totalCommitted} != sum ${sumCommitted.toFixed(1)}`);
+
+    spr.countries.forEach(c => {
+      if (c.released > c.committed) fail(`SPR: ${c.country} released (${c.released}) > committed (${c.committed})`);
+    });
+  }
 
   // Summary
   const passes = results.filter(r => r.status === 'PASS').length;

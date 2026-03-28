@@ -94,7 +94,11 @@ else
   echo "[sync-local] No changes detected."
 fi
 
-# 4. Close Chrome if we started it
+# 4. Run SPR sync
+echo "[sync-local] Running SPR data sync..."
+bash "$SCRIPT_DIR/sync-spr.sh"
+
+# 5. Close Chrome if we started it
 if [ -n "$CHROME_PID" ]; then
   echo "[sync-local] Closing Chrome (PID: $CHROME_PID)..."
   kill "$CHROME_PID" 2>/dev/null || true

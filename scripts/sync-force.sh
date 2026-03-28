@@ -111,6 +111,10 @@ else
   echo "[sync-force] No changes detected."
 fi
 
+# 4. Run SPR sync
+echo "[sync-force] Running SPR data sync..."
+bash "$SCRIPT_DIR/sync-spr.sh"
+
 # Close Chrome if we started it
 if [ -n "$CHROME_PID" ] && [ "$CHROME_PID" != "SKIP" ]; then
   echo "[sync-force] Closing Chrome..."

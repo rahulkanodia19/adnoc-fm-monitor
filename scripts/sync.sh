@@ -41,4 +41,8 @@ else
   echo "[sync] No changes detected."
 fi
 
+# 3. Run SPR sync
+echo "[sync] Running SPR data sync..."
+bash "$SCRIPT_DIR/sync-spr.sh"
+
 echo "[sync] Done."
