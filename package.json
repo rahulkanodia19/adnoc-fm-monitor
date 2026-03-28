@@ -10,7 +10,10 @@
     "sync:local": "bash scripts/sync-local.sh",
     "sync:force": "bash scripts/sync-force.sh",
     "sync:spr": "bash scripts/sync-spr.sh",
-    "scrape:murban": "node scripts/scrape-murban.js"
+    "sync:flows": "bash scripts/sync-flows.sh",
+    "scrape:murban": "node scripts/scrape-murban.js",
+    "sync:soh": "bash scripts/sync-soh.sh",
+    "merge:containers": "node scripts/merge-containers.js"
   },
   "keywords": [],
   "author": "",

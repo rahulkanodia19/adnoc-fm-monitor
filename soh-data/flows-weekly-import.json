@@ -1,0 +1,1580 @@
+{
+  "series": [
+    {
+      "date": "2024-W13",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31025196.000654947,
+            "volume_gas": 1996584516.6506548,
+            "mass": 24586612.984002,
+            "energy": 787775407.4548367
+          }
+        }
+      ],
+      "periodEndDate": "2024-03-31T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W14",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 33175857.361928686,
+            "volume_gas": 2532638824.1219287,
+            "mass": 26020057.63685,
+            "energy": 842159898.2272501
+          }
+        }
+      ],
+      "periodEndDate": "2024-04-07T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W15",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31255712.388263755,
+            "volume_gas": 1758327960.0732636,
+            "mass": 25146621.404740002,
+            "energy": 794569724.1968486
+          }
+        }
+      ],
+      "periodEndDate": "2024-04-14T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W16",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 33857214.871217415,
+            "volume_gas": 2487664357.0212173,
+            "mass": 26599062.285386,
+            "energy": 858952206.19456
+          }
+        }
+      ],
+      "periodEndDate": "2024-04-21T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W17",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 32362575.62715045,
+            "volume_gas": 1793400113.0371501,
+            "mass": 25813465.020078,
+            "energy": 822489219.3558148
+          }
+        }
+      ],
+      "periodEndDate": "2024-04-28T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W18",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 29024794.73910402,
+            "volume_gas": 1595511014.9841037,
+            "mass": 23330074.204556003,
+            "energy": 738067226.6022168
+          }
+        }
+      ],
+      "periodEndDate": "2024-05-05T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W19",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 34217572.65600129,
+            "volume_gas": 2922679685.261001,
+            "mass": 26624023.06503,
+            "energy": 867499705.6300617
+          }
+        }
+      ],
+      "periodEndDate": "2024-05-12T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W20",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31229280.59420102,
+            "volume_gas": 2022663374.9392009,
+            "mass": 24858591.667844,
+            "energy": 793345885.4878538
+          }
+        }
+      ],
+      "periodEndDate": "2024-05-19T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W21",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31794105.17335346,
+            "volume_gas": 949187430.7583535,
+            "mass": 26055529.75216,
+            "energy": 810073097.5794443
+          }
+        }
+      ],
+      "periodEndDate": "2024-05-26T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W22",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31787190.94153743,
+            "volume_gas": 2233662294.196537,
+            "mass": 25012403.7639,
+            "energy": 806584270.2350612
+          }
+        }
+      ],
+      "periodEndDate": "2024-06-02T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W23",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31706301.177323077,
+            "volume_gas": 2121098026.1073227,
+            "mass": 25230270.906401,
+            "energy": 805024566.25766
+          }
+        }
+      ],
+      "periodEndDate": "2024-06-09T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W24",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 28646313.038401417,
+            "volume_gas": 1545800752.2684014,
+            "mass": 22893308.93591,
+            "energy": 728331315.4333408
+          }
+        }
+      ],
+      "periodEndDate": "2024-06-16T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W25",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 32406768.177721016,
+            "volume_gas": 1566032627.9577208,
+            "mass": 26089626.67645,
+            "energy": 824398711.0810981
+          }
+        }
+      ],
+      "periodEndDate": "2024-06-23T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W26",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31205921.62416023,
+            "volume_gas": 2466151160.79916,
+            "mass": 24470709.904622,
+            "energy": 791112640.4051293
+          }
+        }
+      ],
+      "periodEndDate": "2024-06-30T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W27",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 27407257.500436462,
+            "volume_gas": 2131671220.4104364,
+            "mass": 21443061.02308,
+            "energy": 695317382.4637277
+          }
+        }
+      ],
+      "periodEndDate": "2024-07-07T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W28",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 30282195.707207616,
+            "volume_gas": 1945330300.5722075,
+            "mass": 24103557.269,
+            "energy": 769082113.1342314
+          }
+        }
+      ],
+      "periodEndDate": "2024-07-14T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W29",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 30638713.104270287,
+            "volume_gas": 1943228021.9742703,
+            "mass": 24398249.15362,
+            "energy": 778025860.0708338
+          }
+        }
+      ],
+      "periodEndDate": "2024-07-21T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W30",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 28591407.5681908,
+            "volume_gas": 2248791830.4831905,
+            "mass": 22276900.86171,
+            "energy": 725415229.1612552
+          }
+        }
+      ],
+      "periodEndDate": "2024-07-28T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W31",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 34130810.095716506,
+            "volume_gas": 1970105838.5907164,
+            "mass": 27381345.701840002,
+            "energy": 867641767.4416294
+          }
+        }
+      ],
+      "periodEndDate": "2024-08-04T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W32",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 30995773.500207894,
+            "volume_gas": 1711504565.4952078,
+            "mass": 24865865.252890002,
+            "energy": 787924107.3783585
+          }
+        }
+      ],
+      "periodEndDate": "2024-08-11T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W33",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 35464845.01149561,
+            "volume_gas": 2319971874.8564954,
+            "mass": 28118037.64533,
+            "energy": 899716379.3468356
+          }
+        }
+      ],
+      "periodEndDate": "2024-08-18T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W34",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 33459972.486524403,
+            "volume_gas": 1988095836.871524,
+            "mass": 26883459.06424,
+            "energy": 850146591.6867496
+          }
+        }
+      ],
+      "periodEndDate": "2024-08-25T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W35",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 30152147.702997338,
+            "volume_gas": 2241984986.217997,
+            "mass": 23732729.08137,
+            "energy": 765147647.17592
+          }
+        }
+      ],
+      "periodEndDate": "2024-09-01T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W36",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 33190286.58711025,
+            "volume_gas": 1800508297.38711,
+            "mass": 26816685.437930003,
+            "energy": 843851498.7807752
+          }
+        }
+      ],
+      "periodEndDate": "2024-09-08T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W37",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 29002161.361205783,
+            "volume_gas": 1955035780.4462056,
+            "mass": 22925258.67745,
+            "energy": 736766630.5939323
+          }
+        }
+      ],
+      "periodEndDate": "2024-09-15T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W38",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 30803653.235042218,
+            "volume_gas": 1627380314.440042,
+            "mass": 24617731.962789997,
+            "energy": 783019640.3293093
+          }
+        }
+      ],
+      "periodEndDate": "2024-09-22T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W39",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 35055435.86598212,
+            "volume_gas": 2566374828.420982,
+            "mass": 27755378.224230003,
+            "energy": 889779839.7799021
+          }
+        }
+      ],
+      "periodEndDate": "2024-09-29T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W40",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 28953606.109106764,
+            "volume_gas": 1781653856.7641068,
+            "mass": 23156888.821936,
+            "energy": 735623776.0263304
+          }
+        }
+      ],
+      "periodEndDate": "2024-10-06T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W41",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 34083980.249210164,
+            "volume_gas": 1651910623.56421,
+            "mass": 27655682.89513,
+            "energy": 867364505.2688664
+          }
+        }
+      ],
+      "periodEndDate": "2024-10-13T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W42",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 26953069.419968914,
+            "volume_gas": 1483613430.944969,
+            "mass": 21454012.28126,
+            "energy": 685001771.0302576
+          }
+        }
+      ],
+      "periodEndDate": "2024-10-20T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W43",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 34736777.11712598,
+            "volume_gas": 2399954499.4921255,
+            "mass": 27591318.687364,
+            "energy": 881866675.1133885
+          }
+        }
+      ],
+      "periodEndDate": "2024-10-27T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W44",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 29954333.440749064,
+            "volume_gas": 2280390568.635749,
+            "mass": 23565391.85091,
+            "energy": 759954569.6791605
+          }
+        }
+      ],
+      "periodEndDate": "2024-11-03T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W45",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 32249817.809525948,
+            "volume_gas": 1742802545.2645257,
+            "mass": 25990925.14076,
+            "energy": 820003176.2505947
+          }
+        }
+      ],
+      "periodEndDate": "2024-11-10T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W46",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 34492476.58157309,
+            "volume_gas": 1884144885.1965728,
+            "mass": 27715056.38686,
+            "energy": 877338561.7819948
+          }
+        }
+      ],
+      "periodEndDate": "2024-11-17T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W47",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 30522972.199203145,
+            "volume_gas": 1710067401.229203,
+            "mass": 24476438.76092,
+            "energy": 775737097.289721
+          }
+        }
+      ],
+      "periodEndDate": "2024-11-24T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W48",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 32434570.14764766,
+            "volume_gas": 2106641680.9026475,
+            "mass": 25967010.18175,
+            "energy": 823973015.9487412
+          }
+        }
+      ],
+      "periodEndDate": "2024-12-01T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W49",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31147676.321231917,
+            "volume_gas": 1976408748.4162316,
+            "mass": 24892982.20765,
+            "energy": 791552228.8675663
+          }
+        }
+      ],
+      "periodEndDate": "2024-12-08T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W50",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 30400798.94058438,
+            "volume_gas": 1736079932.2405841,
+            "mass": 24339312.101815,
+            "energy": 772558557.4404174
+          }
+        }
+      ],
+      "periodEndDate": "2024-12-15T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W51",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 29550049.132268816,
+            "volume_gas": 2670257179.1522684,
+            "mass": 23238100.7485,
+            "energy": 748912878.1373835
+          }
+        }
+      ],
+      "periodEndDate": "2024-12-22T23:59:59.999Z"
+    },
+    {
+      "date": "2024-W52",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 33963141.91026902,
+            "volume_gas": 2402512697.975269,
+            "mass": 26881631.58851,
+            "energy": 862624851.7961701
+          }
+        }
+      ],
+      "periodEndDate": "2024-12-29T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W01",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 32640871.61458993,
+            "volume_gas": 1819909853.9495897,
+            "mass": 26128025.065425,
+            "energy": 830168623.9866095
+          }
+        }
+      ],
+      "periodEndDate": "2025-01-05T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W02",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31927360.25458519,
+            "volume_gas": 2077274544.267585,
+            "mass": 25448037.28804,
+            "energy": 810378995.17428
+          }
+        }
+      ],
+      "periodEndDate": "2025-01-12T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W03",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 28371570.45649138,
+            "volume_gas": 1853978452.620541,
+            "mass": 22482060.50222,
+            "energy": 721046082.5367479
+          }
+        }
+      ],
+      "periodEndDate": "2025-01-19T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W04",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 32672585.241066128,
+            "volume_gas": 2399726438.911066,
+            "mass": 25700906.18704,
+            "energy": 829634569.5707972
+          }
+        }
+      ],
+      "periodEndDate": "2025-01-26T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W05",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31224473.030676566,
+            "volume_gas": 1749101575.3006763,
+            "mass": 25010007.162496,
+            "energy": 793624276.6177381
+          }
+        }
+      ],
+      "periodEndDate": "2025-02-02T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W06",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 33672843.82808755,
+            "volume_gas": 2346097587.4830875,
+            "mass": 26777079.503174,
+            "energy": 855319988.9345057
+          }
+        }
+      ],
+      "periodEndDate": "2025-02-09T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W07",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 29896104.5594161,
+            "volume_gas": 2090314824.149416,
+            "mass": 23689993.022795,
+            "energy": 758064424.9395132
+          }
+        }
+      ],
+      "periodEndDate": "2025-02-16T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W08",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 33952145.12488087,
+            "volume_gas": 2493562002.6548805,
+            "mass": 26918140.33293,
+            "energy": 861974475.6960366
+          }
+        }
+      ],
+      "periodEndDate": "2025-02-23T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W09",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31480936.87949679,
+            "volume_gas": 2382598968.6294966,
+            "mass": 24598536.189728,
+            "energy": 798912753.5420393
+          }
+        }
+      ],
+      "periodEndDate": "2025-03-02T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W10",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31211051.74599701,
+            "volume_gas": 2501888913.315997,
+            "mass": 24317916.9957,
+            "energy": 792129182.7489835
+          }
+        }
+      ],
+      "periodEndDate": "2025-03-09T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W11",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31911138.001348045,
+            "volume_gas": 1491773435.856348,
+            "mass": 25754511.224154003,
+            "energy": 812010130.26703
+          }
+        }
+      ],
+      "periodEndDate": "2025-03-16T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W12",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 32683706.97858861,
+            "volume_gas": 2165904362.2735887,
+            "mass": 25892503.593608,
+            "energy": 830177617.7094772
+          }
+        }
+      ],
+      "periodEndDate": "2025-03-23T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W13",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 33412856.192903753,
+            "volume_gas": 2229890765.7829037,
+            "mass": 26450586.26812,
+            "energy": 848707089.827262
+          }
+        }
+      ],
+      "periodEndDate": "2025-03-30T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W14",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 30962686.546141468,
+            "volume_gas": 2015934895.6211414,
+            "mass": 24640075.240704,
+            "energy": 786536410.6909902
+          }
+        }
+      ],
+      "periodEndDate": "2025-04-06T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W15",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 24819600.826156992,
+            "volume_gas": 1774156093.551157,
+            "mass": 19502731.05359,
+            "energy": 629559955.5511609
+          }
+        }
+      ],
+      "periodEndDate": "2025-04-13T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W16",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 37122527.9543798,
+            "volume_gas": 2438472071.82438,
+            "mass": 29497889.824392,
+            "energy": 942370995.3073721
+          }
+        }
+      ],
+      "periodEndDate": "2025-04-20T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W17",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31542094.31031607,
+            "volume_gas": 2021110347.405316,
+            "mass": 25107328.015049998,
+            "energy": 801702399.7881993
+          }
+        }
+      ],
+      "periodEndDate": "2025-04-27T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W18",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31090338.805242088,
+            "volume_gas": 1680804908.4852421,
+            "mass": 24944915.959078003,
+            "energy": 790668319.2102162
+          }
+        }
+      ],
+      "periodEndDate": "2025-05-04T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W19",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 29181244.846441813,
+            "volume_gas": 2254088285.1214414,
+            "mass": 22881916.544111,
+            "energy": 740396586.5468911
+          }
+        }
+      ],
+      "periodEndDate": "2025-05-11T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W20",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31466646.610833388,
+            "volume_gas": 1636561266.9508333,
+            "mass": 25297188.967834,
+            "energy": 799697412.4650179
+          }
+        }
+      ],
+      "periodEndDate": "2025-05-18T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W21",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 29204477.371300843,
+            "volume_gas": 1896395250.6563005,
+            "mass": 23014486.921007,
+            "energy": 741674607.6676911
+          }
+        }
+      ],
+      "periodEndDate": "2025-05-25T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W22",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 30221446.185299147,
+            "volume_gas": 2684650391.835299,
+            "mass": 23623666.687342,
+            "energy": 766330790.0376433
+          }
+        }
+      ],
+      "periodEndDate": "2025-06-01T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W23",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 29496036.423050653,
+            "volume_gas": 1879552296.5630505,
+            "mass": 23445595.335970003,
+            "energy": 749116990.246148
+          }
+        }
+      ],
+      "periodEndDate": "2025-06-08T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W24",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 32766721.753478482,
+            "volume_gas": 1839595428.2884784,
+            "mass": 26343471.789632,
+            "energy": 833150729.1588148
+          }
+        }
+      ],
+      "periodEndDate": "2025-06-15T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W25",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31015443.88726903,
+            "volume_gas": 1931394964.277269,
+            "mass": 24634129.422080003,
+            "energy": 787888997.8499879
+          }
+        }
+      ],
+      "periodEndDate": "2025-06-22T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W26",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 34398034.75332286,
+            "volume_gas": 2689554301.6233225,
+            "mass": 27095473.519093998,
+            "energy": 872720760.8098054
+          }
+        }
+      ],
+      "periodEndDate": "2025-06-29T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W27",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 29901179.93536397,
+            "volume_gas": 1375628740.650364,
+            "mass": 23909048.897526,
+            "energy": 760731153.1945825
+          }
+        }
+      ],
+      "periodEndDate": "2025-07-06T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W28",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31127296.022386406,
+            "volume_gas": 2213884799.297386,
+            "mass": 24582078.04627,
+            "energy": 789541480.7705547
+          }
+        }
+      ],
+      "periodEndDate": "2025-07-13T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W29",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31515867.899944272,
+            "volume_gas": 2299018980.309944,
+            "mass": 24868809.506525002,
+            "energy": 800045410.6284418
+          }
+        }
+      ],
+      "periodEndDate": "2025-07-20T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W30",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31867761.63120098,
+            "volume_gas": 1817677785.8412008,
+            "mass": 25400630.87425,
+            "energy": 809690081.2516549
+          }
+        }
+      ],
+      "periodEndDate": "2025-07-27T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W31",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 33750083.91628783,
+            "volume_gas": 2017784692.1312876,
+            "mass": 26968379.21548,
+            "energy": 856917209.839656
+          }
+        }
+      ],
+      "periodEndDate": "2025-08-03T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W32",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31198060.040820293,
+            "volume_gas": 2017132488.0308201,
+            "mass": 24832712.020902,
+            "energy": 792577657.4273235
+          }
+        }
+      ],
+      "periodEndDate": "2025-08-10T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W33",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31113748.68723919,
+            "volume_gas": 1883365786.997239,
+            "mass": 24940217.452184,
+            "energy": 790538272.0645506
+          }
+        }
+      ],
+      "periodEndDate": "2025-08-17T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W34",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 34020570.74644028,
+            "volume_gas": 2127746804.8914402,
+            "mass": 27195652.228644,
+            "energy": 864367912.2762372
+          }
+        }
+      ],
+      "periodEndDate": "2025-08-24T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W35",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 32626375.38677071,
+            "volume_gas": 1965424035.4117706,
+            "mass": 25855750.66508,
+            "energy": 829098040.1163555
+          }
+        }
+      ],
+      "periodEndDate": "2025-08-31T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W36",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 33674210.306728676,
+            "volume_gas": 1980672476.5717285,
+            "mass": 27061259.415633,
+            "energy": 855570397.5223049
+          }
+        }
+      ],
+      "periodEndDate": "2025-09-07T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W37",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 32619036.67994576,
+            "volume_gas": 1719570663.3999457,
+            "mass": 26119106.983813,
+            "energy": 829542896.754885
+          }
+        }
+      ],
+      "periodEndDate": "2025-09-14T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W38",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31345809.48060571,
+            "volume_gas": 2021478349.5306056,
+            "mass": 24912538.145317,
+            "energy": 796660545.438488
+          }
+        }
+      ],
+      "periodEndDate": "2025-09-21T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W39",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 32450410.417946327,
+            "volume_gas": 1785999513.4929461,
+            "mass": 26039979.647660002,
+            "energy": 825370696.1502323
+          }
+        }
+      ],
+      "periodEndDate": "2025-09-28T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W40",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 32317007.277162086,
+            "volume_gas": 1737243565.952162,
+            "mass": 25846586.893030003,
+            "energy": 821867861.4019349
+          }
+        }
+      ],
+      "periodEndDate": "2025-10-05T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W41",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31465213.43937935,
+            "volume_gas": 1328112766.2493792,
+            "mass": 25570763.737326,
+            "energy": 800751691.509423
+          }
+        }
+      ],
+      "periodEndDate": "2025-10-12T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W42",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31936085.999933176,
+            "volume_gas": 2302452114.8499327,
+            "mass": 25122533.303808,
+            "energy": 810833294.7993417
+          }
+        }
+      ],
+      "periodEndDate": "2025-10-19T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W43",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 32275339.860954035,
+            "volume_gas": 2212016253.555954,
+            "mass": 25562048.145455003,
+            "energy": 819824092.4624753
+          }
+        }
+      ],
+      "periodEndDate": "2025-10-26T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W44",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 32426024.50808374,
+            "volume_gas": 1850745490.9830837,
+            "mass": 26020500.439658,
+            "energy": 824334725.7586038
+          }
+        }
+      ],
+      "periodEndDate": "2025-11-02T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W45",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 32466573.97435261,
+            "volume_gas": 1706127986.2993524,
+            "mass": 26183004.204577,
+            "energy": 825775242.1370395
+          }
+        }
+      ],
+      "periodEndDate": "2025-11-09T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W46",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 32209746.498469267,
+            "volume_gas": 1984734884.5734692,
+            "mass": 25724892.470925,
+            "energy": 818491732.6384761
+          }
+        }
+      ],
+      "periodEndDate": "2025-11-16T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W47",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 30997282.87078544,
+            "volume_gas": 1956376216.2257853,
+            "mass": 24840620.010648,
+            "energy": 787746870.1166387
+          }
+        }
+      ],
+      "periodEndDate": "2025-11-23T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W48",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 30858867.349670593,
+            "volume_gas": 1598780477.4996705,
+            "mass": 25009521.11792,
+            "energy": 785087625.3787704
+          }
+        }
+      ],
+      "periodEndDate": "2025-11-30T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W49",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 32584184.875099905,
+            "volume_gas": 2027296192.6050997,
+            "mass": 25891207.60903,
+            "energy": 827773291.0568041
+          }
+        }
+      ],
+      "periodEndDate": "2025-12-07T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W50",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 33443229.579828113,
+            "volume_gas": 2484251601.864828,
+            "mass": 26431379.194704,
+            "energy": 849006750.219937
+          }
+        }
+      ],
+      "periodEndDate": "2025-12-14T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W51",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 31729436.545954496,
+            "volume_gas": 2151292739.0759544,
+            "mass": 25098515.05324,
+            "energy": 806030167.1204519
+          }
+        }
+      ],
+      "periodEndDate": "2025-12-21T23:59:59.999Z"
+    },
+    {
+      "date": "2025-W52",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 33835458.21127049,
+            "volume_gas": 2458592906.23627,
+            "mass": 26751235.196879998,
+            "energy": 859080199.0582954
+          }
+        }
+      ],
+      "periodEndDate": "2025-12-28T23:59:59.999Z"
+    },
+    {
+      "date": "2026-W01",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 27344153.00856901,
+            "volume_gas": 1582244131.203569,
+            "mass": 21893945.423982,
+            "energy": 694972687.6554756
+          }
+        }
+      ],
+      "periodEndDate": "2026-01-04T23:59:59.999Z"
+    },
+    {
+      "date": "2026-W02",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 30634693.446588803,
+            "volume_gas": 2056080684.7665887,
+            "mass": 24369594.815486,
+            "energy": 778283489.856405
+          }
+        }
+      ],
+      "periodEndDate": "2026-01-11T23:59:59.999Z"
+    },
+    {
+      "date": "2026-W03",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 35517735.33849062,
+            "volume_gas": 2466166960.24349,
+            "mass": 28037860.31016,
+            "energy": 901840750.5752046
+          }
+        }
+      ],
+      "periodEndDate": "2026-01-18T23:59:59.999Z"
+    },
+    {
+      "date": "2026-W04",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 32465318.489472695,
+            "volume_gas": 2164470686.5794725,
+            "mass": 25969760.38876,
+            "energy": 824633264.484292
+          }
+        }
+      ],
+      "periodEndDate": "2026-01-25T23:59:59.999Z"
+    },
+    {
+      "date": "2026-W05",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 32024211.461038414,
+            "volume_gas": 1916455032.8110383,
+            "mass": 25489215.900647,
+            "energy": 810880047.728599
+          }
+        }
+      ],
+      "periodEndDate": "2026-02-01T23:59:59.999Z"
+    },
+    {
+      "date": "2026-W06",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 33374031.561752994,
+            "volume_gas": 2182822351.091753,
+            "mass": 26766593.859989002,
+            "energy": 845463658.0769875
+          }
+        }
+      ],
+      "periodEndDate": "2026-02-08T23:59:59.999Z"
+    },
+    {
+      "date": "2026-W07",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 33767012.43882036,
+            "volume_gas": 2395253540.98382,
+            "mass": 26684919.20612,
+            "energy": 857625622.9236431
+          }
+        }
+      ],
+      "periodEndDate": "2026-02-15T23:59:59.999Z"
+    },
+    {
+      "date": "2026-W08",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 32357940.44977677,
+            "volume_gas": 1417023999.1647766,
+            "mass": 26206403.21847,
+            "energy": 823399381.6505735
+          }
+        }
+      ],
+      "periodEndDate": "2026-02-22T23:59:59.999Z"
+    },
+    {
+      "date": "2026-W09",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 32104791.147847246,
+            "volume_gas": 2400566692.687847,
+            "mass": 25282992.400321,
+            "energy": 815156539.0447258
+          }
+        }
+      ],
+      "periodEndDate": "2026-03-01T23:59:59.999Z"
+    },
+    {
+      "date": "2026-W10",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 29002071.52167362,
+            "volume_gas": 1635614732.9366734,
+            "mass": 23459908.225858,
+            "energy": 737307449.2479762
+          }
+        }
+      ],
+      "periodEndDate": "2026-03-08T23:59:59.999Z"
+    },
+    {
+      "date": "2026-W11",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 26096325.752893124,
+            "volume_gas": 1502128850.222893,
+            "mass": 20966234.535775,
+            "energy": 663541157.3440135
+          }
+        }
+      ],
+      "periodEndDate": "2026-03-15T23:59:59.999Z"
+    },
+    {
+      "date": "2026-W12",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 17870665.03144133,
+            "volume_gas": 585187230.8964413,
+            "mass": 14674102.56342,
+            "energy": 455327420.779329
+          }
+        }
+      ],
+      "periodEndDate": "2026-03-22T23:59:59.999Z"
+    },
+    {
+      "date": "2026-W13",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 8228118.907194905,
+            "volume_gas": 361991379.14719486,
+            "mass": 6766832.2117,
+            "energy": 209461032.45820826
+          }
+        }
+      ],
+      "periodEndDate": "2026-03-29T23:59:59.999Z"
+    }
+  ],
+  "metadata": null
+}

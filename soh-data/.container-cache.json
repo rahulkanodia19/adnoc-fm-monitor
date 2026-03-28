@@ -1,0 +1,16 @@
+{
+  "inside": {
+    "ballast": 55,
+    "laden": 67,
+    "total": 122,
+    "children": []
+  },
+  "outside": {
+    "ballast": 7,
+    "laden": 16,
+    "total": 23,
+    "children": []
+  },
+  "source": "als-monitor (MarineTraffic snapshot)",
+  "timestamp": "2026-03-28T20:38:31.839Z"
+}

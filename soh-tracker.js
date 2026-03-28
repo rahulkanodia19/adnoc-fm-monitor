@@ -16,9 +16,9 @@
   const state = {
     matrixRegion: 'inside',
     breakdownTab: 'product',
-    flowView: 'daily',
+    flowView: 'weekly',
     flowRange: '3m',
-    flowCommodity: 'all',
+    flowCommodity: 'crude',
     expandedClasses: {},
     loaded: false,
     data: {},
@@ -53,6 +53,9 @@
       loadJSON('flows-lng.json'),            // 16
       loadJSON('flows-lpg.json'),            // 17
       loadJSON('crisis-transits.json'),      // 18
+      loadJSON('flows-crude-import.json'),   // 19
+      loadJSON('flows-lng-import.json'),     // 20
+      loadJSON('flows-lpg-import.json'),     // 21
     ]);
     const get = (i) => results[i].status === 'fulfilled' ? results[i].value : null;
     return {
@@ -64,6 +67,7 @@
       imfTransit: get(14),
       flowsCrude: get(15), flowsLng: get(16), flowsLpg: get(17),
       crisisTransits: get(18),
+      flowsCrudeImport: get(19), flowsLngImport: get(20), flowsLpgImport: get(21),
     };
   }
 
@@ -76,6 +80,14 @@
     const sign = d > 0 ? '+' : '';
     const color = d > 0 ? 'text-emerald-600' : 'text-red-600';
     return `<span class="${color} text-xs font-medium">${sign}${d}</span>`;
+  }
+  function fmtSignedDelta(d) {
+    if (d == null) return '—';
+    return `${d > 0 ? '+' : ''}${d}`;
+  }
+  function deltaColor(d) {
+    if (d == null || d === 0) return '#666';
+    return d > 0 ? '#166534' : '#991B1B';
   }
   function fmtDate(iso) {
     if (!iso) return '-';
@@ -144,6 +156,23 @@
     }));
   }
 
+  function aggregateToMonthly(series) {
+    if (!series?.length) return [];
+    const months = {};
+    for (const p of series) {
+      const mk = p.date.substring(0, 7); // YYYY-MM
+      if (!months[mk]) months[mk] = { date: mk, volume: 0, mass: 0, count: 0 };
+      const vals = p.datasets?.[0]?.values || {};
+      months[mk].volume += (vals.volume || 0);
+      months[mk].mass += (vals.mass || 0);
+      months[mk].count++;
+    }
+    return Object.values(months).sort((a, b) => a.date.localeCompare(b.date)).map(m => ({
+      date: m.date,
+      datasets: [{ datasetName: 'flows', values: { volume: m.volume / m.count, volume_gas: 0, mass: m.mass / m.count, energy: 0 } }],
+    }));
+  }
+
   // Estimate vessel count from volume (avg ~500K bbl per vessel transit)
   const AVG_BBL_PER_VESSEL = 500000;
 
@@ -151,37 +180,52 @@
 
   function renderKPIs(summary) {
     const d = summary.deltas || {};
-    const label = summary.deltaLabel || '24h';
+    const cards = [
+      {
+        title: 'ADNOC Vessels in Hormuz', value: summary.adnocCount,
+        delta: d.adnocDelta, ballast: null, laden: null,
+        deltaB: null, deltaL: null,
+        cta: 'Open Vessels', target: 'soh-adnoc',
+      },
+      {
+        title: 'Vessels Inside', value: summary.insideTotal,
+        delta: d.insideDelta, ballast: summary.insideBallast, laden: summary.insideLaden,
+        deltaB: d.insideBallastDelta, deltaL: d.insideLadenDelta,
+        cta: 'Open Inside Matrix', target: 'soh-matrix',
+      },
+      {
+        title: 'Vessels Outside', value: summary.outsideTotal,
+        delta: d.outsideDelta, ballast: summary.outsideBallast, laden: summary.outsideLaden,
+        deltaB: d.outsideBallastDelta, deltaL: d.outsideLadenDelta,
+        cta: 'Open Outside Matrix', target: 'soh-matrix',
+      },
+    ];
+    const cardHtml = cards.map(c => `
+      <button class="soh-kpi-card flex flex-col justify-between text-left border border-navy-200 bg-white rounded-xl p-4 transition-all hover:border-navy-400 hover:shadow-sm cursor-pointer"
+        onclick="document.getElementById('${c.target}').scrollIntoView({behavior:'smooth'})">
+        <div>
+          <div class="mb-2 text-[10px] font-semibold uppercase tracking-wider text-navy-500">${c.title}</div>
+          <div class="text-3xl font-extrabold leading-none text-navy-900">${fmtNum(c.value)}</div>
+          ${c.delta != null && c.delta !== 0 ? `<div class="mt-2 text-[10px] font-semibold uppercase tracking-wider" style="color:${deltaColor(c.delta)}">
+            Change vs last: ${fmtSignedDelta(c.delta)}
+          </div>` : ''}
+          ${c.ballast != null && c.laden != null ? `
+          <div class="mt-3 flex items-center gap-2 text-[10px] font-semibold uppercase text-navy-500">
+            <span>Ballast ${fmtNum(c.ballast)}</span><span>|</span><span>Laden ${fmtNum(c.laden)}</span>
+          </div>
+          ${(c.deltaB != null && c.deltaB !== 0) || (c.deltaL != null && c.deltaL !== 0) ? `<div class="mt-1 text-[10px] font-semibold uppercase tracking-wider text-navy-400">
+            Delta B ${fmtSignedDelta(c.deltaB)} | Delta L ${fmtSignedDelta(c.deltaL)}
+          </div>` : ''}` : ''}
+        </div>
+        <div class="mt-4 text-xs text-sky-600 font-medium">${c.cta} &rarr;</div>
+      </button>`).join('');
     return `
     <div class="soh-section" id="soh-kpis">
-      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4">
-        <div>
-          <h2 class="text-lg sm:text-xl font-extrabold text-navy-900 tracking-tight">STRAIT OF HORMUZ TRACKER</h2>
-          <p class="text-xs text-navy-500 mt-0.5">Data: Kpler Terminal | Last synced: ${fmtDate(summary.syncTimestamp)}</p>
-        </div>
-        <div class="flex gap-2">
-          <div class="bg-sky-50 border border-sky-200 px-3 py-1.5 rounded-lg text-xs text-sky-700 font-medium">${fmtNum(summary.totalVessels)} vessels in zone</div>
-        </div>
+      <div class="mb-4">
+        <h2 class="text-lg sm:text-xl font-extrabold text-navy-900 tracking-tight">STRAIT OF HORMUZ TRACKER</h2>
+        <p class="text-xs text-navy-500 mt-0.5">Data: Kpler Terminal (commodity vessels) | Last synced: ${fmtDate(summary.syncTimestamp)}</p>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-        <div class="soh-kpi-card bg-white rounded-xl p-4 border border-navy-200" onclick="document.getElementById('soh-adnoc').scrollIntoView({behavior:'smooth'})">
-          <div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">ADNOC Vessels in Hormuz</div>
-          <div class="text-3xl font-extrabold text-navy-900 mt-1">${summary.adnocCount}</div>
-          <div class="text-xs text-sky-600 mt-2 font-medium">Open Vessels &rarr;</div>
-        </div>
-        <div class="soh-kpi-card bg-white rounded-xl p-4 border border-navy-200" onclick="document.getElementById('soh-matrix').scrollIntoView({behavior:'smooth'})">
-          <div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Vessels Inside Gulf</div>
-          <div class="text-3xl font-extrabold text-navy-900 mt-1">${fmtNum(summary.insideTotal)}</div>
-          <div class="text-xs text-navy-500 mt-1">Ballast ${fmtNum(summary.insideBallast)} | Laden ${fmtNum(summary.insideLaden)}</div>
-          <div class="text-xs text-sky-600 mt-2 font-medium">Open Inside Matrix &rarr;</div>
-        </div>
-        <div class="soh-kpi-card bg-white rounded-xl p-4 border border-navy-200" onclick="document.getElementById('soh-matrix').scrollIntoView({behavior:'smooth'})">
-          <div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Vessels Outside Gulf</div>
-          <div class="text-3xl font-extrabold text-navy-900 mt-1">${fmtNum(summary.outsideTotal)}</div>
-          <div class="text-xs text-navy-500 mt-1">Ballast ${fmtNum(summary.outsideBallast)} | Laden ${fmtNum(summary.outsideLaden)}</div>
-          <div class="text-xs text-sky-600 mt-2 font-medium">Open Outside Matrix &rarr;</div>
-        </div>
-      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">${cardHtml}</div>
     </div>`;
   }
 
@@ -211,21 +255,9 @@
       L.polygon(mapData.hormuzPolygon, { color: '#94a3b8', weight: 1, dashArray: '4 4', fillColor: '#94a3b8', fillOpacity: 0.05 }).addTo(mapInstance);
     }
 
-    // IHO boundary line (Persian Gulf / Gulf of Oman)
-    if (mapData.ihoLine) {
-      const { rasLimah, rasAlKuh } = mapData.ihoLine;
-      // Draw the IHO line + extension north along Iran coast
-      L.polyline([
-        [rasLimah.lat, rasLimah.lng],
-        [rasAlKuh.lat, rasAlKuh.lng],
-        [27.5, 57.3], // Extension north along Iran coast
-      ], { color: '#ef4444', weight: 3, dashArray: '8 6', opacity: 0.9 })
-        .addTo(mapInstance)
-        .bindTooltip('IHO Boundary<br>West = Persian Gulf | East = Gulf of Oman', { sticky: true });
-    }
 
     // Vessel markers
-    const colorMap = { liquids: '#ef4444', lng: '#22c55e', lpg: '#a855f7', dry: '#06b6d4', other: '#6b7280' };
+    const colorMap = { liquids: '#ef4444', lng: '#22c55e', lpg: '#a855f7', dry: '#06b6d4', container: '#f59e0b', other: '#6b7280' };
     for (const p of (mapData.positions || [])) {
       const color = colorMap[p.commodity] || colorMap.other;
       const fillOpacity = p.state === 'loaded' ? 0.9 : 0.5;
@@ -247,7 +279,7 @@
           <span class="opacity-50">&#9679;</span> Ballast &nbsp; <span class="opacity-90">&#9679;</span> Laden
           <br><span style="font-size:13px">&#9679;</span> = In Transit
         </div>
-        <div class="mt-1 border-t border-navy-200 pt-1 text-red-600">--- Strait Line</div>`;
+`;
       return div;
     };
     legend.addTo(mapInstance);
@@ -259,40 +291,28 @@
   function renderFlowCharts() {
     return `
     <div class="soh-section mt-6" id="soh-flows">
-      <h3 class="text-sm font-bold text-navy-900 uppercase tracking-wider mb-3">Chokepoint Transit Flows</h3>
+      <h3 class="text-sm font-bold text-navy-900 uppercase tracking-wider mb-3">Commodity Flows via Hormuz</h3>
       <div class="flex flex-wrap items-center gap-2 mb-4">
-        ${renderToggle('Commodity', 'flowCommodity', [['all', 'All'], ['crude', 'Crude/Condensate'], ['lng', 'LNG'], ['lpg', 'LPG']])}
+        ${renderToggle('Commodity', 'flowCommodity', [['all', 'All'], ['crude', 'Crude/Condensate'], ['lpg', 'LPG'], ['lng', 'Refined & Other']])}
         ${renderToggle('View', 'flowView', [['daily', 'Daily'], ['weekly', 'Weekly'], ['monthly', 'Monthly']])}
         ${renderToggle('Range', 'flowRange', [['1w', '1W'], ['2w', '2W'], ['3w', '3W'], ['1m', '1M'], ['3m', '3M'], ['6m', '6M'], ['12m', '12M'], ['all', 'All']])}
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-        <div class="bg-white rounded-xl border border-navy-200 p-3 sm:p-5">
-          <p class="text-xs font-semibold text-navy-700 mb-1">Volume Out of Gulf &rarr;</p>
-          <p class="text-[10px] text-navy-400 mb-2">${{all:'All commodity',crude:'Crude/condensate',lng:'LNG',lpg:'LPG'}[state.flowCommodity]} exports via Hormuz (${{all:'bbl/day',crude:'bbl/day',lng:'mt/day',lpg:'mt/day'}[state.flowCommodity]}) — Source: Kpler</p>
-          <div class="h-[240px] sm:h-[280px]"><canvas id="soh-flow-export-chart"></canvas></div>
-        </div>
-        <div class="bg-white rounded-xl border border-navy-200 p-3 sm:p-5">
-          <p class="text-xs font-semibold text-navy-700 mb-1">Volume Into Gulf &larr;</p>
-          <p class="text-[10px] text-navy-400 mb-2">All commodity imports via Strait of Hormuz (bbl/day) — Source: Kpler</p>
-          <div class="h-[240px] sm:h-[280px]"><canvas id="soh-flow-import-chart"></canvas></div>
-        </div>
+      <div class="bg-white rounded-xl border border-navy-200 p-3 sm:p-5">
+        <p class="text-xs font-semibold text-navy-700 mb-1">Volume via Hormuz</p>
+        <p class="text-[10px] text-navy-400 mb-2">${{all:'All commodity',crude:'Crude/condensate',lng:'Refined products, LNG, dry bulk & other',lpg:'LPG'}[state.flowCommodity]} flows via Hormuz (${{all:'bbl/day',crude:'bbl/day',lng:'bbl/day',lpg:'mmt/day'}[state.flowCommodity]}) — Source: Kpler</p>
+        <div class="h-[280px] sm:h-[320px]"><canvas id="soh-flow-export-chart"></canvas></div>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4">
-        <div class="bg-white rounded-xl border border-navy-200 p-3 sm:p-5">
-          <p class="text-xs font-semibold text-navy-700 mb-1">Daily Vessel Transits (Total)</p>
-          <p class="text-[10px] text-navy-400 mb-2">All vessels transiting Strait of Hormuz — Source: IMF PortWatch</p>
-          <div class="h-[200px] sm:h-[240px]"><canvas id="soh-vessel-total-chart"></canvas></div>
-        </div>
-        <div class="bg-white rounded-xl border border-navy-200 p-3 sm:p-5">
-          <p class="text-xs font-semibold text-navy-700 mb-1">Daily Vessel Transits (Tankers Only)</p>
-          <p class="text-[10px] text-navy-400 mb-2">Oil/gas tankers transiting Strait of Hormuz — Source: IMF PortWatch</p>
-          <div class="h-[200px] sm:h-[240px]"><canvas id="soh-vessel-tanker-chart"></canvas></div>
-        </div>
+
+      <h3 class="text-sm font-bold text-navy-900 uppercase tracking-wider mt-6 mb-3">Vessel Transits via Hormuz</h3>
+      <p class="text-xs text-navy-500 mb-3">All vessel types transiting the Strait (not commodity-specific). View and Range toggles above also apply.</p>
+      <div class="bg-white rounded-xl border border-navy-200 p-3 sm:p-5">
+        <p class="text-xs font-semibold text-navy-700 mb-1">Daily Vessel Transits by Type</p>
+        <p class="text-[10px] text-navy-400 mb-2">Vessel transits through Strait of Hormuz by vessel type (both directions) — Source: IMF PortWatch</p>
+        <div class="h-[260px] sm:h-[300px]"><canvas id="soh-vessel-stacked-chart"></canvas></div>
       </div>
       <div class="bg-sky-50 border border-sky-200 rounded-lg px-4 py-2.5 mt-3 text-xs text-sky-800">
-        <strong>Note on volumes:</strong> Kpler m&sup3; converted to barrels (&times;6.29) for crude/all. Crude/condensate: ~17M bbl/day (EIA ref: ~15M).
-        LNG &amp; LPG shown in metric tons (LNG ~92 Mt/year, LPG ~49 Mt/year).
-        Vessel counts from IMF PortWatch (~90-130/day pre-crisis) include all vessel types.
+        <strong>Note:</strong> Volume chart: Crude/condensate &amp; Refined in bbl/day; LPG in mmt/day. Pre-crisis crude: ~15M bbl/day.
+        Vessel count chart: All vessel types from IMF PortWatch (~90-130/day pre-crisis). Commodity toggle does not affect vessel counts.
       </div>
     </div>`;
   }
@@ -302,47 +322,43 @@
     const commodity = state.flowCommodity;
     let raw;
     if (direction === 'export') {
-      // Select commodity-specific or total data
       if (commodity === 'crude') raw = data.flowsCrude;
       else if (commodity === 'lng') raw = data.flowsLng;
       else if (commodity === 'lpg') raw = data.flowsLpg;
-      else raw = view === 'monthly' ? data.flowsMonthly : data.flowsDaily;
-      // For commodity-specific, only daily data available (no monthly breakdowns yet)
-      if (commodity !== 'all' && view === 'monthly') raw = data.flowsCrude || data.flowsDaily; // fallback to daily
+      if (!raw) raw = view === 'monthly' ? data.flowsMonthly : data.flowsDaily;
     } else {
-      // Import only has total (no commodity breakdown for imports yet)
-      raw = view === 'monthly' ? data.flowsMonthlyImport : data.flowsDailyImport;
+      if (commodity === 'crude') raw = data.flowsCrudeImport;
+      else if (commodity === 'lng') raw = data.flowsLngImport;
+      else if (commodity === 'lpg') raw = data.flowsLpgImport;
+      if (!raw) raw = view === 'monthly' ? data.flowsMonthlyImport : data.flowsDailyImport;
     }
     let series = trimToToday(raw?.series);
     if (view === 'weekly') series = aggregateToWeekly(series);
+    else if (view === 'monthly') series = aggregateToMonthly(series);
     return series;
   }
 
   function initFlowCharts(data) {
     let exportSeries = getFlowSeries(data, 'export');
-    let importSeries = getFlowSeries(data, 'import');
-
-    // Align date ranges so both charts have same x-axis
-    const aligned = alignDateRanges(exportSeries, importSeries);
-    exportSeries = aligned.a;
-    importSeries = aligned.b;
 
     // Apply range filter
     exportSeries = filterFlowsByRange(exportSeries, state.flowRange);
-    importSeries = filterFlowsByRange(importSeries, state.flowRange);
 
     // Unit conversion: Kpler 'volume' is in m³, 'mass' in metric tons
     const commodity = state.flowCommodity;
-    const unitInfo = (commodity === 'lng' || commodity === 'lpg')
-      ? { field: 'mass', factor: 1, unit: 'mt', label: 'mt/day', threshold: 50000 }  // metric tons
-      : { field: 'volume', factor: 6.29, unit: 'bbl', label: 'bbl/day', threshold: 3e6 };  // m³ → bbl (crude/all)
+    const unitInfo = commodity === 'lpg'
+      ? { field: 'mass', factor: 1e-6, unit: 'mmt', label: 'mmt/day', threshold: 0.05 }
+      : { field: 'volume', factor: 6.29, unit: 'bbl', label: 'bbl/day', threshold: 3e6 };  // m³ → bbl for all/crude/refined
 
     function makeVolumeChart(canvasId, series, oldChart) {
       const canvas = document.getElementById(canvasId);
       if (!canvas) return null;
       if (oldChart) oldChart.destroy();
       const labels = series.map(p => p.date);
-      const volumes = series.map(p => Math.round((p.datasets?.[0]?.values?.[unitInfo.field] || 0) * unitInfo.factor));
+      const volumes = series.map(p => {
+        const raw = (p.datasets?.[0]?.values?.[unitInfo.field] || 0) * unitInfo.factor;
+        return unitInfo.unit === 'bbl' ? Math.round(raw) : parseFloat(raw.toFixed(3));
+      });
       return new Chart(canvas, {
         type: 'bar',
         data: {
@@ -352,7 +368,7 @@
         options: {
           responsive: true, maintainAspectRatio: false,
           plugins: { legend: { display: false }, datalabels: { display: false },
-            tooltip: { callbacks: { label: (ctx) => `${fmtNum(ctx.raw)} ${unitInfo.unit}`, title: (items) => items[0]?.label || '' } } },
+            tooltip: { callbacks: { label: (ctx) => `${unitInfo.unit === 'bbl' ? fmtNum(ctx.raw) : ctx.raw.toFixed(2)} ${unitInfo.unit}`, title: (items) => items[0]?.label || '' } } },
           scales: {
             x: { ticks: { maxTicksLimit: 10, font: { size: 9 }, color: '#627d98' }, grid: { display: false } },
             y: { ticks: { callback: (v) => v >= 1e6 ? (v / 1e6).toFixed(1) + 'M' : v >= 1e3 ? Math.round(v / 1e3) + 'K' : v, font: { size: 9 }, color: '#627d98' }, grid: { color: '#e5e7eb' } },
@@ -386,61 +402,63 @@
     }
 
     flowChartExport = makeVolumeChart('soh-flow-export-chart', exportSeries, flowChartExport);
-    flowChartImport = makeVolumeChart('soh-flow-import-chart', importSeries, flowChartImport);
 
     // IMF PortWatch vessel count charts
     const imf = data.imfTransit;
     if (imf?.records) {
       let imfRecords = imf.records.filter(r => r.date <= new Date().toISOString().split('T')[0]);
       imfRecords = filterFlowsByRange(imfRecords.map(r => ({ date: r.date, _raw: r })), state.flowRange).map(r => r._raw);
+      // Aggregate by view (weekly/monthly)
+      const agg = (records, keyFn) => {
+        const groups = {};
+        for (const r of records) {
+          const k = keyFn(r);
+          if (!groups[k]) groups[k] = { date: k, n_tanker: 0, n_dry_bulk: 0, n_container: 0, n_other: 0, count: 0 };
+          groups[k].n_tanker += (r.n_tanker || 0);
+          groups[k].n_dry_bulk += (r.n_dry_bulk || 0);
+          groups[k].n_container += (r.n_container || 0);
+          groups[k].n_other += ((r.n_total || 0) - (r.n_tanker || 0) - (r.n_dry_bulk || 0) - (r.n_container || 0));
+          groups[k].count++;
+        }
+        return Object.values(groups).sort((a, b) => a.date.localeCompare(b.date)).map(g => ({
+          date: g.date, n_tanker: Math.round(g.n_tanker / g.count), n_dry_bulk: Math.round(g.n_dry_bulk / g.count),
+          n_container: Math.round(g.n_container / g.count), n_other: Math.round(g.n_other / g.count),
+        }));
+      };
       if (state.flowView === 'weekly') {
-        // Aggregate IMF to weekly
-        const weeks = {};
-        for (const r of imfRecords) {
-          const d = new Date(r.date); const day = d.getDay();
-          const mon = new Date(d); mon.setDate(mon.getDate() - ((day + 6) % 7));
-          const wk = mon.toISOString().split('T')[0];
-          if (!weeks[wk]) weeks[wk] = { date: wk, n_total: 0, n_tanker: 0, count: 0 };
-          weeks[wk].n_total += r.n_total; weeks[wk].n_tanker += r.n_tanker; weeks[wk].count++;
-        }
-        imfRecords = Object.values(weeks).sort((a, b) => a.date.localeCompare(b.date)).map(w => ({
-          date: w.date, n_total: Math.round(w.n_total / w.count), n_tanker: Math.round(w.n_tanker / w.count),
-        }));
+        imfRecords = agg(imfRecords, r => { const d = new Date(r.date); const mon = new Date(d); mon.setDate(mon.getDate() - ((d.getDay() + 6) % 7)); return mon.toISOString().split('T')[0]; });
       } else if (state.flowView === 'monthly') {
-        const months = {};
-        for (const r of imfRecords) {
-          const mk = r.date.substring(0, 7);
-          if (!months[mk]) months[mk] = { date: mk, n_total: 0, n_tanker: 0, count: 0 };
-          months[mk].n_total += r.n_total; months[mk].n_tanker += r.n_tanker; months[mk].count++;
-        }
-        imfRecords = Object.values(months).sort((a, b) => a.date.localeCompare(b.date)).map(m => ({
-          date: m.date, n_total: Math.round(m.n_total / m.count), n_tanker: Math.round(m.n_tanker / m.count),
-        }));
+        imfRecords = agg(imfRecords, r => r.date.substring(0, 7));
+      } else {
+        imfRecords = imfRecords.map(r => ({ date: r.date, n_tanker: r.n_tanker || 0, n_dry_bulk: r.n_dry_bulk || 0, n_container: r.n_container || 0, n_other: (r.n_total || 0) - (r.n_tanker || 0) - (r.n_dry_bulk || 0) - (r.n_container || 0) }));
       }
 
-      function makeIMFChart(canvasId, field, color, oldChart) {
-        const canvas = document.getElementById(canvasId);
-        if (!canvas) return null;
-        if (oldChart) oldChart.destroy();
+      const canvas = document.getElementById('soh-vessel-stacked-chart');
+      if (canvas) {
+        if (vesselCountExportChart) vesselCountExportChart.destroy();
         const labels = imfRecords.map(r => r.date);
-        const values = imfRecords.map(r => r[field] || 0);
-        return new Chart(canvas, {
+        vesselCountExportChart = new Chart(canvas, {
           type: 'bar',
-          data: { labels, datasets: [{ label: 'Vessels', data: values, backgroundColor: values.map(v => v < 15 ? '#ef4444' : color), borderWidth: 0, borderRadius: 1 }] },
+          data: {
+            labels,
+            datasets: [
+              { label: 'Tankers', data: imfRecords.map(r => r.n_tanker), backgroundColor: '#ef4444', borderWidth: 0, borderRadius: 1 },
+              { label: 'Dry Bulk', data: imfRecords.map(r => r.n_dry_bulk), backgroundColor: '#06b6d4', borderWidth: 0, borderRadius: 1 },
+              { label: 'Container', data: imfRecords.map(r => r.n_container), backgroundColor: '#8b5cf6', borderWidth: 0, borderRadius: 1 },
+              { label: 'Other', data: imfRecords.map(r => r.n_other), backgroundColor: '#9ca3af', borderWidth: 0, borderRadius: 1 },
+            ],
+          },
           options: {
             responsive: true, maintainAspectRatio: false,
-            plugins: { legend: { display: false }, datalabels: { display: false },
-              tooltip: { callbacks: { label: (ctx) => `${ctx.raw} vessels`, title: (items) => items[0]?.label || '' } } },
+            plugins: { legend: { position: 'top', labels: { font: { size: 10 } } }, datalabels: { display: false },
+              tooltip: { mode: 'index', intersect: false, callbacks: { label: (ctx) => `${ctx.dataset.label}: ${ctx.raw}` } } },
             scales: {
-              x: { ticks: { maxTicksLimit: 10, font: { size: 9 }, color: '#627d98' }, grid: { display: false } },
-              y: { ticks: { font: { size: 9 }, color: '#627d98' }, grid: { color: '#e5e7eb' }, beginAtZero: true },
+              x: { stacked: true, ticks: { maxTicksLimit: 10, font: { size: 9 }, color: '#627d98' }, grid: { display: false } },
+              y: { stacked: true, ticks: { font: { size: 9 }, color: '#627d98' }, grid: { color: '#e5e7eb' }, beginAtZero: true },
             },
           },
         });
       }
-
-      vesselCountExportChart = makeIMFChart('soh-vessel-total-chart', 'n_total', '#6366f1', vesselCountExportChart);
-      vesselCountImportChart = makeIMFChart('soh-vessel-tanker-chart', 'n_tanker', '#0d9488', vesselCountImportChart);
     }
   }
 
@@ -448,10 +466,10 @@
 
   function renderADNOCVessels(adnocData) {
     const vessels = adnocData.vessels || [];
-    const live = vessels.filter(v => v.dataSource === 'kpler');
-    const anchored = live.filter(v => v.status === 'Anchored').length;
-    const moored = live.filter(v => v.status === 'Moored').length;
-    const underway = live.filter(v => v.status === 'Under way using engine').length;
+    const tracked = vessels.filter(v => v.dataSource === 'kpler' || v.dataSource === 'als-monitor');
+    const anchored = tracked.filter(v => v.status === 'Anchored').length;
+    const moored = tracked.filter(v => v.status === 'Moored').length;
+    const underway = tracked.filter(v => v.status === 'Under way using engine').length;
     const unavailable = vessels.filter(v => v.dataSource === 'unavailable').length;
 
     const rows = vessels.map(v => {
@@ -485,11 +503,9 @@
           <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 17h2l.5-1.5L7 11l1.5 6H18l2-4h1"/></svg>
           ADNOC Vessels in Hormuz
         </h3>
-        <span class="bg-[#0055A5] text-white text-xs font-bold px-3 py-1.5 rounded">ADNOC</span>
       </div>
-      <div class="grid grid-cols-2 lg:grid-cols-5 gap-3 mb-4">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
         <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">ADNOC Vessels in Hormuz</div><div class="text-2xl font-extrabold text-navy-900">${vessels.length}</div></div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Total Owned Vessels</div><div class="text-2xl font-extrabold text-navy-900">353</div></div>
         <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500"><span class="inline-block w-2 h-2 rounded-full bg-amber-500 mr-1"></span>Anchored</div><div class="text-2xl font-extrabold text-navy-900">${anchored}</div></div>
         <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500"><span class="inline-block w-2 h-2 rounded-full bg-amber-400 mr-1"></span>Moored</div><div class="text-2xl font-extrabold text-navy-900">${moored}</div></div>
         <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500"><span class="inline-block w-2 h-2 rounded-full bg-emerald-500 mr-1"></span>Under Way</div><div class="text-2xl font-extrabold text-navy-900">${underway}</div></div>
@@ -536,7 +552,6 @@
       const mixL = cls.total > 0 ? ((cls.laden / cls.total) * 100).toFixed(0) : 0;
       return `<tr class="soh-matrix-row border-t border-navy-200 bg-navy-50 hover:bg-sky-50 font-semibold text-xs">
         <td class="px-3 py-2.5 text-sky-800">${cls.label}</td>
-        <td class="px-3 py-2.5 text-right font-mono">${cls.unknown}</td>
         <td class="px-3 py-2.5 text-right font-mono">${cls.ballast}</td>
         <td class="px-3 py-2.5 text-right font-mono">${cls.laden}</td>
         <td class="px-3 py-2.5 text-right font-mono font-bold">${cls.total}</td>
@@ -546,8 +561,9 @@
     }).join('');
 
     // Product volumes sub-section (grouped by commodity type)
-    const pvTotal = pv.reduce((s, p) => s + p.totalCapacity, 0);
-    const pvRows = pv.map((p, i) => `
+    const pvFiltered = pv.filter(p => p.totalCapacity > 0);
+    const pvTotal = pvFiltered.reduce((s, p) => s + p.totalCapacity, 0);
+    const pvRows = pvFiltered.map((p, i) => `
       <tr class="border-t border-navy-200 text-xs ${i % 2 ? 'bg-navy-50' : 'bg-white'}">
         <td class="px-3 py-2 font-semibold text-navy-900">${p.commodity}</td>
         <td class="px-3 py-2 text-right font-mono">${p.vesselCount}</td>
@@ -566,11 +582,10 @@
           <button onclick="window.__sohSetRegion('outside')" class="px-3 py-1.5 text-xs font-medium border-l border-navy-200 ${region === 'outside' ? 'bg-navy-900 text-white' : 'bg-white text-navy-600 hover:bg-navy-50'}">Outside Gulf (${vesselMatrix.outside?.grandTotal?.total || 0})</button>
         </div>
       </div>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
-        <div class="bg-white border border-navy-200 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Unknown</div><div class="text-xl font-bold" style="color:#9C6B00">${gt.unknown}</div></div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Ballast</div><div class="text-xl font-bold" style="color:#0F4C81">${gt.ballast}</div></div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Laden</div><div class="text-xl font-bold" style="color:#8A2D1A">${gt.laden}</div></div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Total</div><div class="text-xl font-bold text-navy-900">${gt.total}</div></div>
+      <div class="grid grid-cols-3 gap-3 mb-4">
+        <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Total Vessels</div><div class="text-2xl font-extrabold text-navy-900">${gt.total}</div></div>
+        <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500"><span class="inline-block w-2 h-2 rounded-full mr-1" style="background:#0F4C81"></span>Ballast</div><div class="text-2xl font-extrabold text-navy-900">${gt.ballast}</div></div>
+        <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500"><span class="inline-block w-2 h-2 rounded-full mr-1" style="background:#8A2D1A"></span>Laden</div><div class="text-2xl font-extrabold text-navy-900">${gt.laden}</div></div>
       </div>
       <div class="flex flex-col lg:flex-row gap-4 mb-4">
         <div class="lg:w-[65%] bg-white rounded-xl border border-navy-200 p-4"><p class="text-[10px] uppercase tracking-wider text-navy-500 font-semibold mb-2">Category Composition</p><div class="h-[300px]"><canvas id="soh-category-chart"></canvas></div></div>
@@ -579,14 +594,14 @@
       <div class="overflow-x-auto rounded-xl border border-navy-200 shadow-sm bg-white">
         <table class="w-full text-left min-w-[400px]">
           <thead class="bg-navy-900 text-white text-[10px] uppercase tracking-wider">
-            <tr><th class="px-3 py-2.5">Class</th><th class="px-3 py-2.5 text-right">Unknown</th><th class="px-3 py-2.5 text-right">Ballast</th><th class="px-3 py-2.5 text-right">Laden</th><th class="px-3 py-2.5 text-right">Total</th><th class="px-3 py-2.5 text-right hidden sm:table-cell">Share</th><th class="px-3 py-2.5 hidden md:table-cell">Mix</th></tr>
+            <tr><th class="px-3 py-2.5">Class</th><th class="px-3 py-2.5 text-right">Ballast</th><th class="px-3 py-2.5 text-right">Laden</th><th class="px-3 py-2.5 text-right">Total</th><th class="px-3 py-2.5 text-right hidden sm:table-cell">Share</th><th class="px-3 py-2.5 hidden md:table-cell">Mix</th></tr>
           </thead>
           <tbody>${rows}
-            <tr class="border-t-2 border-navy-300 bg-navy-100 font-bold text-xs"><td class="px-3 py-2.5 uppercase">Grand Total</td><td class="px-3 py-2.5 text-right font-mono">${gt.unknown}</td><td class="px-3 py-2.5 text-right font-mono">${gt.ballast}</td><td class="px-3 py-2.5 text-right font-mono">${gt.laden}</td><td class="px-3 py-2.5 text-right font-mono">${gt.total}</td><td class="px-3 py-2.5 text-right hidden sm:table-cell">100.0%</td><td class="px-3 py-2.5 hidden md:table-cell"></td></tr>
+            <tr class="border-t-2 border-navy-300 bg-navy-100 font-bold text-xs"><td class="px-3 py-2.5 uppercase">Grand Total</td><td class="px-3 py-2.5 text-right font-mono">${gt.ballast}</td><td class="px-3 py-2.5 text-right font-mono">${gt.laden}</td><td class="px-3 py-2.5 text-right font-mono">${gt.total}</td><td class="px-3 py-2.5 text-right hidden sm:table-cell">100.0%</td><td class="px-3 py-2.5 hidden md:table-cell"></td></tr>
           </tbody>
         </table>
       </div>
-      ${pv.length > 0 ? `
+      ${pvFiltered.length > 0 ? `
       <div class="mt-4">
         <p class="text-[10px] uppercase tracking-wider text-navy-500 font-semibold mb-2">Estimated Laden Cargo by Product (${region === 'inside' ? 'Inside Gulf' : 'Outside Gulf'})</p>
         <div class="overflow-x-auto rounded-xl border border-navy-200 shadow-sm bg-white">
@@ -615,7 +630,6 @@
           datasets: [
             { label: 'Ballast', data: matrix.map(c => c.ballast), backgroundColor: '#0F4C81' },
             { label: 'Laden', data: matrix.map(c => c.laden), backgroundColor: '#8A2D1A' },
-            { label: 'Unknown', data: matrix.map(c => c.unknown), backgroundColor: '#9C6B00' },
           ],
         },
         options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top', labels: { font: { size: 10 } } }, datalabels: { display: false } }, scales: { x: { stacked: true, ticks: { font: { size: 10 } }, grid: { color: '#e5e7eb' } }, y: { stacked: true, ticks: { font: { size: 10 } } } } },
@@ -627,7 +641,7 @@
       if (statusDonut) statusDonut.destroy();
       statusDonut = new Chart(donutCanvas, {
         type: 'doughnut',
-        data: { labels: ['Ballast', 'Laden', 'Unknown'], datasets: [{ data: [gt.ballast, gt.laden, gt.unknown], backgroundColor: ['#0F4C81', '#8A2D1A', '#9C6B00'], borderWidth: 2, borderColor: '#fff' }] },
+        data: { labels: ['Ballast', 'Laden'], datasets: [{ data: [gt.ballast, gt.laden], backgroundColor: ['#0F4C81', '#8A2D1A'], borderWidth: 2, borderColor: '#fff' }] },
         options: { responsive: true, maintainAspectRatio: false, cutout: '60%', plugins: { legend: { position: 'bottom', labels: { font: { size: 11 } } }, datalabels: { color: '#fff', font: { weight: 'bold', size: 12 }, textAlign: 'center', formatter: (value, ctx) => { const total = ctx.dataset.data.reduce((a, b) => a + b, 0); if (!value || !total) return ''; return `${value}\n(${(value / total * 100).toFixed(0)}%)`; }, display: (ctx) => ctx.dataset.data[ctx.dataIndex] > 0 } } },
       });
     }
@@ -708,7 +722,7 @@
     return `
     <div class="soh-section mt-6" id="soh-transit">
       <h3 class="text-sm font-bold text-navy-900 uppercase tracking-wider mb-3">Vessels In Transit</h3>
-      <p class="text-xs text-navy-500 mb-3">Vessels actively transiting the Strait neck (lat 25.5°-26.8°N, speed &gt; 3 kn) — Source: Kpler AIS</p>
+      <p class="text-xs text-navy-500 mb-3">Commodity vessels actively transiting the Strait (speed &gt; 3 kn) — Source: Kpler AIS (excludes container ships)</p>
       <div class="grid grid-cols-3 gap-3 mb-4">
         <div class="bg-white border border-navy-200 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Exiting Gulf</div><div class="text-2xl font-extrabold text-red-600">${exiting}</div></div>
         <div class="bg-white border border-navy-200 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Entering Gulf</div><div class="text-2xl font-extrabold text-emerald-600">${entering}</div></div>

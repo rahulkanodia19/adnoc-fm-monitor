@@ -22,11 +22,47 @@ const BASE = 'https://terminal.kpler.com';
 const HORMUZ_ZONE_ID = 107647;
 const OUT_DIR = path.join(__dirname, '..', 'soh-data');
 
-// Hormuz polygon for inside/outside classification (from als-monitor HormuzTrafficView.tsx)
-const HORMUZ_POLYGON = [
+// Hormuz monitoring zone polygon (for map overlay only — NOT used for inside/outside classification)
+const HORMUZ_MONITORING_ZONE = [
   [30.6, 47.2], [30.95, 50.4], [29.4, 56.9], [25.2, 58.2],
   [23.5, 56.9], [23.0, 50.6], [25.1, 48.2], [29.3, 47.0]
 ];
+
+// --- Strait of Hormuz boundary: coastline-following segments ---
+// Defines the eastern edge of "inside" (Persian Gulf). Everything east = "outside" (Gulf of Oman).
+const GULF_BOUNDARY = [
+  { lat: 30.0, lng: 56.50 },   // Far north Iran coast
+  { lat: 29.0, lng: 56.50 },   // Northern Gulf Iran coast
+  { lat: 28.0, lng: 56.45 },   // Central Iran coast
+  { lat: 27.2, lng: 56.45 },   // Bandar Abbas area
+  { lat: 27.0, lng: 56.40 },   // South of Bandar Abbas
+  { lat: 26.8, lng: 56.35 },   // Hormoz/Larak Island area
+  { lat: 26.5, lng: 56.30 },   // North of strait channel
+  { lat: 26.2, lng: 56.25 },   // Strait narrows
+  { lat: 26.0, lng: 56.20 },   // Narrowest part of strait
+  { lat: 25.8, lng: 56.15 },   // Musandam Peninsula tip
+  { lat: 25.5, lng: 56.05 },   // South Musandam
+  { lat: 25.3, lng: 56.00 },   // Ras Al Khaimah coast
+  { lat: 25.0, lng: 55.90 },   // UAE east coast (west of Fujairah)
+  { lat: 24.5, lng: 55.50 },   // Southern UAE coast
+  { lat: 24.0, lng: 55.00 },   // Abu Dhabi area
+  { lat: 23.5, lng: 54.00 },   // Far south
+];
+
+function boundaryLng(lat) {
+  for (let i = 0; i < GULF_BOUNDARY.length - 1; i++) {
+    const a = GULF_BOUNDARY[i], b = GULF_BOUNDARY[i + 1];
+    if (lat >= b.lat && lat <= a.lat) {
+      const frac = (lat - b.lat) / (a.lat - b.lat);
+      return b.lng + frac * (a.lng - b.lng);
+    }
+  }
+  return lat > 30.0 ? 56.50 : 54.00;
+}
+
+function isInsideGulf(lat, lng) {
+  return lng < boundaryLng(lat);
+}
 
 // Try env var first, then token file
 let TOKEN = process.env.KPLER_ACCESS_TOKEN;
@@ -169,7 +205,7 @@ function buildVesselMatrix(vessels) {
 
     const lat = v.lastPosition.geo.lat;
     const lng = v.lastPosition.geo.lon;
-    const isInside = pointInPolygon(lat, lng, HORMUZ_POLYGON);
+    const isInside = isInsideGulf(lat, lng);
     const region = isInside ? inside : outside;
 
     const cls = v.vesselTypeClass || 'Unknown';
@@ -178,9 +214,9 @@ function buildVesselMatrix(vessels) {
     if (!region.classes[cls]) {
       region.classes[cls] = { unknown: 0, ballast: 0, laden: 0, total: 0 };
     }
-    region.classes[cls][state === 'laden' ? 'laden' : state === 'ballast' ? 'ballast' : 'unknown']++;
+    region.classes[cls][state === 'loaded' ? 'laden' : state === 'ballast' ? 'ballast' : 'unknown']++;
     region.classes[cls].total++;
-    region.total[state === 'laden' ? 'laden' : state === 'ballast' ? 'ballast' : 'unknown']++;
+    region.total[state === 'loaded' ? 'laden' : state === 'ballast' ? 'ballast' : 'unknown']++;
     region.total.total++;
 
     // Check for ADNOC vessels
@@ -301,7 +337,7 @@ async function main() {
 
     fs.writeFileSync(path.join(OUT_DIR, 'map-positions.json'), JSON.stringify({
       positions: mapPositions,
-      hormuzPolygon: HORMUZ_POLYGON,
+      hormuzPolygon: HORMUZ_MONITORING_ZONE,
       center: [26.4, 53.7],
       zoom: 6,
       syncTimestamp: now.toISOString(),

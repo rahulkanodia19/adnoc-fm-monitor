@@ -9,42 +9,53 @@ const path = require('path');
 
 const SOH_DIR = path.join(__dirname, '..', 'soh-data');
 
-// --- IHO Boundary: Persian Gulf / Gulf of Oman ---
-// Official IHO line: Ras Limah (25.95°N, 56.42°E) to Ras al Kuh (25.78°N, 57.32°E)
-// Sources: IHO "Limits of Oceans and Seas", Marine Regions, Wikipedia
-const IHO_LINE = {
-  rasLimah: { lat: 25.95, lng: 56.42 },   // Oman/Musandam coast
-  rasAlKuh: { lat: 25.78, lng: 57.32 },    // Iran coast
-};
+// --- Strait of Hormuz boundary: coastline-following segments ---
+// Defines the eastern edge of "inside" (Persian Gulf). Everything east = "outside" (Gulf of Oman).
+// Traced from Iran coast south through the strait to UAE coast.
+const GULF_BOUNDARY = [
+  { lat: 30.0, lng: 56.50 },   // Far north Iran coast
+  { lat: 29.0, lng: 56.50 },   // Northern Gulf Iran coast
+  { lat: 28.0, lng: 56.45 },   // Central Iran coast
+  { lat: 27.2, lng: 56.45 },   // Bandar Abbas area (port 56.27, anchorage to ~56.4)
+  { lat: 27.0, lng: 56.40 },   // South of Bandar Abbas
+  { lat: 26.8, lng: 56.35 },   // Hormoz/Larak Island area
+  { lat: 26.5, lng: 56.30 },   // North of strait channel
+  { lat: 26.2, lng: 56.25 },   // Strait narrows
+  { lat: 26.0, lng: 56.20 },   // Narrowest part of strait
+  { lat: 25.8, lng: 56.15 },   // Musandam Peninsula tip
+  { lat: 25.5, lng: 56.05 },   // South Musandam
+  { lat: 25.3, lng: 56.00 },   // Ras Al Khaimah coast
+  { lat: 25.0, lng: 55.90 },   // UAE east coast (west of Fujairah)
+  { lat: 24.5, lng: 55.50 },   // Southern UAE coast
+  { lat: 24.0, lng: 55.00 },   // Abu Dhabi area
+  { lat: 23.5, lng: 54.00 },   // Far south
+];
 
 // Hormuz monitoring zone polygon (for map overlay only)
-const HORMUZ_ZONE_POLYGON = [
+const HORMUZ_MONITORING_ZONE = [
   [30.6, 47.2], [30.95, 50.4], [29.4, 56.9], [25.2, 58.2],
   [23.5, 56.9], [23.0, 50.6], [25.1, 48.2], [29.3, 47.0]
 ];
 
-// Boundary longitude at a given latitude, following the IHO line and extending north
-function ihoBoundaryLng(lat) {
-  const { rasLimah, rasAlKuh } = IHO_LINE;
-  // South of both IHO points: use Ras Limah lng
-  if (lat <= rasAlKuh.lat) return rasLimah.lng;
-  // Between the two IHO endpoints: interpolate
-  if (lat <= rasLimah.lat) {
-    const frac = (lat - rasAlKuh.lat) / (rasLimah.lat - rasAlKuh.lat);
-    return rasAlKuh.lng - frac * (rasAlKuh.lng - rasLimah.lng);
+function boundaryLng(lat) {
+  for (let i = 0; i < GULF_BOUNDARY.length - 1; i++) {
+    const a = GULF_BOUNDARY[i], b = GULF_BOUNDARY[i + 1];
+    if (lat >= b.lat && lat <= a.lat) {
+      const frac = (lat - b.lat) / (a.lat - b.lat);
+      return b.lng + frac * (a.lng - b.lng);
+    }
   }
-  // North of IHO line: extend along Iran coast (~57.3°E)
-  return 57.3;
+  return lat > 30.0 ? 56.50 : 54.00;
 }
 
 function isInsideGulf(lat, lng) {
-  return lng < ihoBoundaryLng(lat);
+  return lng < boundaryLng(lat);
 }
 
-// Strait neck: the narrow passage at the IHO boundary area
+// Strait neck: the narrow passage near the boundary
 function isInStraitNeck(lat, lng) {
   if (lat < 25.5 || lat > 26.8) return false;
-  return Math.abs(lng - ihoBoundaryLng(lat)) < 0.5;
+  return Math.abs(lng - boundaryLng(lat)) < 0.5;
 }
 
 // Commodity type labels (from Kpler commodityTypes field)
@@ -100,10 +111,10 @@ function main() {
   // Conversion factors from Kpler native units to display units
   const UNIT_CONFIG = {
     liquids: { unit: 'mmbbl', factor: 6.28981 / 1000000 },  // m³ → million barrels
-    lng:     { unit: 'kmt',   factor: 0.45 / 1000 },         // m³ → thousand metric tonnes
-    lpg:     { unit: 'kmt',   factor: 0.55 / 1000 },         // m³ → thousand metric tonnes
-    dry:     { unit: 'kmt',   factor: 1 / 1000 },             // mt → thousand metric tonnes
-    other:   { unit: 'kmt',   factor: 1 / 1000 },
+    lng:     { unit: 'mmt',   factor: 0.45 / 1000000 },      // m³ → million metric tonnes
+    lpg:     { unit: 'mmt',   factor: 0.55 / 1000000 },      // m³ → million metric tonnes
+    dry:     { unit: 'mmt',   factor: 1 / 1000000 },          // mt → million metric tonnes
+    other:   { unit: 'mmt',   factor: 1 / 1000000 },
   };
 
   function buildProductVolumes(vesselList) {
@@ -177,13 +188,30 @@ function main() {
         lat: v.lat, lng: v.lng,
         product: v.product,
         destination: v.destination || v.aisDestination,
-        departed: v.lastPortCallEnd ? v.lastPortCallEnd.replace('T', ' ').substring(0, 16) : null,
+        departed: v.lastPortCall?.end ? v.lastPortCall.end.replace('T', ' ').substring(0, 16) : null,
         isInside: v.lat && v.lng ? isInsideGulf(v.lat, v.lng) : null,
         marineTrafficUrl: `https://www.marinetraffic.com/en/ais/details/ships/imo:${ref.imo}`,
         dataSource: 'kpler',
       };
     }
-    // Not found in Kpler — mark as unavailable (don't hardcode status)
+    // Not found in Kpler — use static fallback from als-monitor (container ships not tracked by Kpler)
+    const STATIC_FALLBACK = {
+      '9573505': { name: 'AL BAZM-II', type: 'Container Ship (Fully Cellular)', size: 'Small Handy', state: 'ballast', status: 'Under way using engine', previousPort: 'Ruwais', departed: '03 Mar 2026 09:14', deadWeight: 13944, flagName: 'United Arab Emirates' },
+      '9300984': { name: 'AL REEM I', type: 'Container Ship (Fully Cellular)', size: 'Large Handy', state: 'loaded', status: 'Under way using engine', previousPort: 'Ruwais', departed: '03 Mar 2026 18:47', deadWeight: 38686, flagName: 'United Arab Emirates' },
+      '9574016': { name: 'AL SADR - I', type: 'Container Ship (Fully Cellular)', size: 'Small Handy', state: 'loaded', status: 'Moored', previousPort: 'Ruwais', departed: '04 Mar 2026 09:43', deadWeight: 13944, flagName: 'United Arab Emirates' },
+    };
+    const fb = STATIC_FALLBACK[ref.imo];
+    if (fb) {
+      return {
+        name: fb.name, imo: ref.imo, type: fb.type, size: fb.size,
+        state: fb.state, status: fb.status, flagName: fb.flagName,
+        deadWeight: fb.deadWeight, speed: 0, course: 0,
+        product: null, destination: null, departed: fb.departed,
+        previousPort: fb.previousPort, isInside: true,
+        marineTrafficUrl: `https://www.marinetraffic.com/en/ais/details/ships/imo:${ref.imo}`,
+        dataSource: 'als-monitor',
+      };
+    }
     return {
       name: ref.name,
       imo: ref.imo,
@@ -251,13 +279,13 @@ function main() {
   // --- Crisis transit log (vessels that crossed out during crisis) ---
   const CRISIS_START = '2026-02-28';
   const crisisTransitVessels = allVesselsWithPos.filter(v => {
-    if (!v.lastPortCallEnd || v.lastPortCallEnd < CRISIS_START) return false;
+    if (!v.lastPortCall?.end || v.lastPortCall.end < CRISIS_START) return false;
     return !isInsideGulf(v.lat, v.lng); // Currently outside Gulf = crossed the strait
   }).map(v => ({
     name: v.name, imo: v.imo, vesselTypeClass: v.vesselTypeClass, state: v.state,
     flagName: v.flagName, product: v.product, destination: v.destination || v.aisDestination,
     deadWeight: v.deadWeight, speed: v.speed,
-    departureDate: (v.lastPortCallEnd || '').substring(0, 10),
+    departureDate: (v.lastPortCall?.end || '').substring(0, 10),
     commodity: v.commodityTypes?.[0] || 'other',
   })).sort((a, b) => b.departureDate.localeCompare(a.departureDate));
 
@@ -296,8 +324,8 @@ function main() {
 
   fs.writeFileSync(path.join(SOH_DIR, 'map-positions.json'), JSON.stringify({
     positions: mapPositions,
-    hormuzPolygon: HORMUZ_ZONE_POLYGON,
-    ihoLine: IHO_LINE,
+    hormuzPolygon: HORMUZ_MONITORING_ZONE,
+    gulfBoundary: GULF_BOUNDARY,
     center: [26.2, 56.3],
     zoom: 8,
     tileUrl: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
@@ -350,6 +378,10 @@ function main() {
       insideDelta: summaryData.insideTotal - (prevDay.insideTotal || 0),
       outsideDelta: summaryData.outsideTotal - (prevDay.outsideTotal || 0),
       adnocDelta: summaryData.adnocCount - (prevDay.adnocCount || 0),
+      insideBallastDelta: summaryData.insideBallast - (prevDay.insideBallast || 0),
+      insideLadenDelta: summaryData.insideLaden - (prevDay.insideLaden || 0),
+      outsideBallastDelta: summaryData.outsideBallast - (prevDay.outsideBallast || 0),
+      outsideLadenDelta: summaryData.outsideLaden - (prevDay.outsideLaden || 0),
     } : null,
   };
 

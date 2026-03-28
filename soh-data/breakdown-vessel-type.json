@@ -2,39 +2,45 @@
   "data": [
     {
       "label": "Short Sea Tankers",
-      "total": 166,
+      "total": 165,
       "ballast": 104,
-      "laden": 62
+      "laden": 61
+    },
+    {
+      "label": "Container Ship",
+      "total": 145,
+      "ballast": 62,
+      "laden": 83
     },
     {
       "label": "MR",
-      "total": 128,
-      "ballast": 72,
-      "laden": 56
+      "total": 123,
+      "ballast": 73,
+      "laden": 50
     },
     {
       "label": "VLCC",
-      "total": 111,
-      "ballast": 42,
-      "laden": 69
+      "total": 109,
+      "ballast": 39,
+      "laden": 70
     },
     {
       "label": "Handysize",
-      "total": 103,
-      "ballast": 62,
-      "laden": 41
+      "total": 105,
+      "ballast": 63,
+      "laden": 42
     },
     {
       "label": "Supramax",
-      "total": 63,
-      "ballast": 32,
-      "laden": 31
+      "total": 65,
+      "ballast": 33,
+      "laden": 32
     },
     {
       "label": "Panamax",
       "total": 57,
-      "ballast": 36,
-      "laden": 21
+      "ballast": 37,
+      "laden": 20
     },
     {
       "label": "Intermediate Tankers",
@@ -44,63 +50,63 @@
     },
     {
       "label": "Aframax/LR2",
-      "total": 49,
-      "ballast": 24,
-      "laden": 25
+      "total": 50,
+      "ballast": 23,
+      "laden": 27
     },
     {
       "label": "Small Tankers",
       "total": 49,
-      "ballast": 36,
-      "laden": 13
+      "ballast": 37,
+      "laden": 12
     },
     {
       "label": "Panamax/LR1",
-      "total": 44,
-      "ballast": 24,
-      "laden": 20
+      "total": 46,
+      "ballast": 25,
+      "laden": 21
     },
     {
       "label": "Handy/MR1",
       "total": 41,
-      "ballast": 18,
-      "laden": 23
+      "ballast": 20,
+      "laden": 21
     },
     {
       "label": "Kamsarmax",
-      "total": 35,
-      "ballast": 27,
-      "laden": 8
+      "total": 38,
+      "ballast": 28,
+      "laden": 10
     },
     {
       "label": "Suezmax/LR3",
       "total": 33,
-      "ballast": 11,
-      "laden": 22
+      "ballast": 12,
+      "laden": 21
     },
     {
       "label": "SGC",
-      "total": 28,
-      "ballast": 26,
+      "total": 29,
+      "ballast": 27,
       "laden": 2
     },
     {
       "label": "VLGC",
-      "total": 27,
-      "ballast": 15,
+      "total": 28,
+      "ballast": 16,
       "laden": 12
     },
     {
       "label": "Ultramax",
-      "total": 26,
+      "total": 28,
       "ballast": 8,
-      "laden": 17
+      "laden": 19
     },
     {
       "label": "Handymax",
-      "total": 23,
-      "ballast": 12,
-      "laden": 11
+      "total": 22,
+      "ballast": 10,
+      "laden": 12
     },
     {
       "label": "MGC",
@@ -111,8 +117,8 @@
     {
       "label": "Lower Conventional",
       "total": 10,
-      "ballast": 6,
-      "laden": 4
+      "ballast": 4,
+      "laden": 6
     },
     {
       "label": "Post-Panamax",
@@ -129,8 +135,8 @@
     {
       "label": "Mini Bulker",
       "total": 6,
-      "ballast": 3,
-      "laden": 3
+      "ballast": 4,
+      "laden": 2
     },
     {
       "label": "Upper Conventional",
@@ -141,8 +147,8 @@
     {
       "label": "Capesize",
       "total": 4,
-      "ballast": 2,
-      "laden": 2
+      "ballast": 3,
+      "laden": 1
     },
     {
       "label": "Baby Capes",
@@ -163,6 +169,6 @@
       "laden": 1
     }
   ],
-  "total": 1099,
-  "syncTimestamp": "2026-03-27T00:09:39.686Z"
+  "total": 1249,
+  "syncTimestamp": "2026-03-28T21:21:39.376Z"
 }
