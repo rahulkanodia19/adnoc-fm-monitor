@@ -547,6 +547,55 @@ async function main() {
     console.log(`Has Turkey: ${exportData.iraq_crude.countries.includes('Turkey')}`);
   }
 
+  // Write enriched flow-summary.json for the insights agent
+  console.log('\n--- Writing Flow Summary ---');
+  const GULF_COUNTRIES = ['Saudi Arabia', 'United Arab Emirates', 'Iraq', 'Qatar', 'Kuwait', 'Bahrain', 'Iran', 'Oman'];
+  const PIPELINE_NOTES = {
+    'china_crude': 'Includes ESPO Russia→China (~600 kbd), Kazakhstan-China (~220 kbd), Myanmar-China (~200 kbd) — ~1,020 kbd Hormuz-independent',
+    'iraq_crude': 'Includes Kirkuk-Ceyhan pipeline (~250 kbd) to Turkey since Mar 17 2026',
+    'russia_crude': 'Includes ESPO pipeline (~600 kbd) to China',
+  };
+
+  function buildSummary(data, direction, defs) {
+    const result = {};
+    for (const def of defs) {
+      const dataset = data[def.key];
+      if (!dataset) continue;
+      const weekly = dataset.weekly?.slice(-4) || [];
+      const weeks = weekly.map(w => {
+        const allCountries = {};
+        for (const [k, v] of Object.entries(w)) {
+          if (!['p', 's', 'e', 'd', '_t'].includes(k)) allCountries[k] = Math.round(v * 10) / 10;
+        }
+        let gulfTotal = 0;
+        for (const gc of GULF_COUNTRIES) { gulfTotal += allCountries[gc] || 0; }
+        const gulfShare = w._t > 0 ? Math.round(gulfTotal / w._t * 1000) / 10 : 0;
+        const sorted = Object.entries(allCountries).sort((a, b) => b[1] - a[1]);
+        return {
+          period: w.p, total: Math.round(w._t), days: w.d,
+          allCountries, gulfTotal: Math.round(gulfTotal), gulfShare,
+          top5: sorted.slice(0, 5).map(([name]) => name),
+        };
+      });
+      result[def.key] = {
+        direction, country: def.country, commodity: def.commodity,
+        unit: UNIT_CONV[def.commodity]?.divisor === 158.987 ? 'kbd' : 'ktons',
+        hasPipeline: !!PIPELINE_NOTES[def.key],
+        pipelineNote: PIPELINE_NOTES[def.key] || '',
+        weeks,
+      };
+    }
+    return result;
+  }
+
+  const summaryData = {
+    ...buildSummary(importData, 'import', IMPORT_DATASETS),
+    ...buildSummary(exportData, 'export', EXPORT_DATASETS),
+  };
+  const summaryPath = path.join(PROJECT_DIR, 'flow-summary.json');
+  fs.writeFileSync(summaryPath, JSON.stringify(summaryData, null, 2));
+  console.log(`  Wrote ${summaryPath} (${(fs.statSync(summaryPath).size / 1024).toFixed(0)} KB, ${Object.keys(summaryData).length} datasets)`);
+
   console.log('\n=== Done ===');
 }
 

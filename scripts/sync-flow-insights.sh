@@ -21,8 +21,8 @@ echo "[sync-flow-insights] =========================================="
 cd "$PROJECT_DIR"
 
 claude -p "$(cat scripts/sync-flow-insights-prompt.md)" \
-  --allowedTools "Read,Glob,Grep,Write" \
-  --max-turns 40
+  --allowedTools "Read,Glob,Grep,Write,WebSearch,WebFetch" \
+  --max-turns 50
 
 echo "[sync-flow-insights] Insights generated."
 
