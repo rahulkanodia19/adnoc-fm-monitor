@@ -29,67 +29,44 @@ const ZONES = config.zones;
 const PRODUCTS = config.products;
 
 // Unit conversion: API returns m³ (volume) and tonnes (mass)
-// xlsx uses kbd (thousand barrels) for crude, ktons for LNG/LPG
+// Crude and refined products use volume/158.987 → kbd
+// LNG, LPG, Sulphur use mass/1000 → ktons (Mt)
 const UNIT_CONV = {
-  crude: { field: 'volume', divisor: 158.987 },  // m³ → kbd (verified exact match)
-  lng:   { field: 'mass',   divisor: 1000 },      // tonnes → ktons
-  lpg:   { field: 'mass',   divisor: 1000 },      // tonnes → ktons
+  crude:         { field: 'volume', divisor: 158.987 },  // m³ → kbd
+  lng:           { field: 'mass',   divisor: 1000 },     // tonnes → ktons
+  lpg:           { field: 'mass',   divisor: 1000 },     // tonnes → ktons
+  kero_jet:      { field: 'volume', divisor: 158.987 },  // m³ → kbd
+  gasoil_diesel: { field: 'volume', divisor: 158.987 },  // m³ → kbd
+  gasoline:      { field: 'volume', divisor: 158.987 },  // m³ → kbd
+  naphtha:       { field: 'volume', divisor: 158.987 },  // m³ → kbd
+  sulphur:       { field: 'mass',   divisor: 1000 },     // tonnes → ktons (Mt)
 };
 
 // Dataset definitions — all imports and exports
-const IMPORT_DATASETS = [
-  { key: 'china_crude',        country: 'China',        commodity: 'crude' },
-  { key: 'china_lng',          country: 'China',        commodity: 'lng' },
-  { key: 'china_lpg',          country: 'China',        commodity: 'lpg' },
-  { key: 'india_crude',        country: 'India',        commodity: 'crude' },
-  { key: 'india_lng',          country: 'India',        commodity: 'lng' },
-  { key: 'india_lpg',          country: 'India',        commodity: 'lpg' },
-  { key: 'japan_crude',        country: 'Japan',        commodity: 'crude' },
-  { key: 'japan_lng',          country: 'Japan',        commodity: 'lng' },
-  { key: 'japan_lpg',          country: 'Japan',        commodity: 'lpg' },
-  { key: 'south_korea_crude',  country: 'South Korea',  commodity: 'crude' },
-  { key: 'south_korea_lng',    country: 'South Korea',  commodity: 'lng' },
-  { key: 'south_korea_lpg',    country: 'South Korea',  commodity: 'lpg' },
-  { key: 'thailand_crude',     country: 'Thailand',     commodity: 'crude' },
-  { key: 'thailand_lng',       country: 'Thailand',     commodity: 'lng' },
-  { key: 'thailand_lpg',       country: 'Thailand',     commodity: 'lpg' },
-  { key: 'vietnam_crude',      country: 'Vietnam',      commodity: 'crude' },
-  { key: 'vietnam_lng',        country: 'Vietnam',      commodity: 'lng' },
-  { key: 'vietnam_lpg',        country: 'Vietnam',      commodity: 'lpg' },
-];
+// 8 commodities per country: crude, lng, lpg, kero_jet, gasoil_diesel, gasoline, naphtha, sulphur
+const COMMODITIES = ['crude', 'lng', 'lpg', 'kero_jet', 'gasoil_diesel', 'gasoline', 'naphtha', 'sulphur'];
+const IMPORT_COUNTRIES = ['China', 'India', 'Japan', 'South Korea', 'Thailand', 'Vietnam'];
 
-const EXPORT_DATASETS = [
-  { key: 'bahrain_crude',       country: 'Bahrain',               commodity: 'crude' },
-  { key: 'bahrain_lng',         country: 'Bahrain',               commodity: 'lng' },
-  { key: 'bahrain_lpg',         country: 'Bahrain',               commodity: 'lpg' },
-  { key: 'iran_crude',          country: 'Iran',                  commodity: 'crude' },
-  { key: 'iran_lng',            country: 'Iran',                  commodity: 'lng' },
-  { key: 'iran_lpg',            country: 'Iran',                  commodity: 'lpg' },
-  { key: 'iraq_crude',          country: 'Iraq',                  commodity: 'crude' },
-  { key: 'iraq_lng',            country: 'Iraq',                  commodity: 'lng' },
-  { key: 'iraq_lpg',            country: 'Iraq',                  commodity: 'lpg' },
-  { key: 'kuwait_crude',        country: 'Kuwait',                commodity: 'crude' },
-  { key: 'kuwait_lng',          country: 'Kuwait',                commodity: 'lng' },
-  { key: 'kuwait_lpg',          country: 'Kuwait',                commodity: 'lpg' },
-  { key: 'oman_crude',          country: 'Oman',                  commodity: 'crude' },
-  { key: 'oman_lng',            country: 'Oman',                  commodity: 'lng' },
-  { key: 'oman_lpg',            country: 'Oman',                  commodity: 'lpg' },
-  { key: 'qatar_crude',         country: 'Qatar',                 commodity: 'crude' },
-  { key: 'qatar_lng',           country: 'Qatar',                 commodity: 'lng' },
-  { key: 'qatar_lpg',           country: 'Qatar',                 commodity: 'lpg' },
-  { key: 'russia_crude',        country: 'Russian Federation',    commodity: 'crude' },
-  { key: 'russia_lng',          country: 'Russian Federation',    commodity: 'lng' },
-  { key: 'russia_lpg',          country: 'Russian Federation',    commodity: 'lpg' },
-  { key: 'saudi_arabia_crude',  country: 'Saudi Arabia',          commodity: 'crude' },
-  { key: 'saudi_arabia_lng',    country: 'Saudi Arabia',          commodity: 'lng' },
-  { key: 'saudi_arabia_lpg',    country: 'Saudi Arabia',          commodity: 'lpg' },
-  { key: 'uae_crude',           country: 'United Arab Emirates',  commodity: 'crude' },
-  { key: 'uae_lng',             country: 'United Arab Emirates',  commodity: 'lng' },
-  { key: 'uae_lpg',             country: 'United Arab Emirates',  commodity: 'lpg' },
-  { key: 'us_crude',            country: 'United States',         commodity: 'crude' },
-  { key: 'us_lng',              country: 'United States',         commodity: 'lng' },
-  { key: 'us_lpg',              country: 'United States',         commodity: 'lpg' },
-];
+const IMPORT_DATASETS = [];
+for (const country of IMPORT_COUNTRIES) {
+  const prefix = country.toLowerCase().replace(/ /g, '_');
+  for (const commodity of COMMODITIES) {
+    IMPORT_DATASETS.push({ key: `${prefix}_${commodity}`, country, commodity });
+  }
+}
+
+const EXPORT_COUNTRIES_MAP = {
+  'Bahrain': 'bahrain', 'Iran': 'iran', 'Iraq': 'iraq', 'Kuwait': 'kuwait',
+  'Oman': 'oman', 'Qatar': 'qatar', 'Russian Federation': 'russia',
+  'Saudi Arabia': 'saudi_arabia', 'United Arab Emirates': 'uae', 'United States': 'us',
+};
+
+const EXPORT_DATASETS = [];
+for (const [country, prefix] of Object.entries(EXPORT_COUNTRIES_MAP)) {
+  for (const commodity of COMMODITIES) {
+    EXPORT_DATASETS.push({ key: `${prefix}_${commodity}`, country, commodity });
+  }
+}
 
 // Pipeline flows to add on top of seaborne data
 const PIPELINES = [
@@ -161,13 +138,14 @@ function buildFlowsRequest(def, direction) {
   const productId = PRODUCTS[def.commodity];
   if (!productId) throw new Error(`No product ID for ${def.commodity}`);
 
-  const now = new Date();
-  const twoYearsAgo = new Date(now);
-  twoYearsAgo.setFullYear(twoYearsAgo.getFullYear() - 2);
+  // Fixed start date: always from Jan 1 2024
+  // End date: yesterday (exclude partial current day)
+  const yesterday = new Date();
+  yesterday.setDate(yesterday.getDate() - 1);
 
   return {
     cumulative: false,
-    filters: { product: [productId] },
+    filters: { product: Array.isArray(productId) ? productId : [productId] },
     flowDirection: direction,
     fromLocations: [{ id: zoneId, resourceType: 'zone' }],
     toLocations: [],
@@ -187,8 +165,8 @@ function buildFlowsRequest(def, direction) {
     vesselClassifications: [],
     vessels: [],
     splitOn: direction === 'import' ? 'Origin Countries' : 'Destination Countries',
-    startDate: dateStr(twoYearsAgo),
-    endDate: dateStr(now),
+    startDate: '2024-01-01',
+    endDate: dateStr(yesterday),
     numberOfSplits: 50,
   };
 }

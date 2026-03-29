@@ -13,26 +13,26 @@
   }
 
   // ---------- Constants ----------
-  const DATASETS = {
-    china_crude:         { label: 'China Crude',       unit: 'mbbl', country: 'china',       commodity: 'crude' },
-    china_lng:           { label: 'China LNG',         unit: 'Mt',   country: 'china',       commodity: 'lng' },
-    china_lpg:           { label: 'China LPG',         unit: 'Mt',   country: 'china',       commodity: 'lpg' },
-    india_crude:         { label: 'India Crude',       unit: 'mbbl', country: 'india',       commodity: 'crude' },
-    india_lng:           { label: 'India LNG',         unit: 'Mt',   country: 'india',       commodity: 'lng' },
-    india_lpg:           { label: 'India LPG',         unit: 'Mt',   country: 'india',       commodity: 'lpg' },
-    japan_crude:         { label: 'Japan Crude',       unit: 'mbbl', country: 'japan',       commodity: 'crude' },
-    japan_lng:           { label: 'Japan LNG',         unit: 'Mt',   country: 'japan',       commodity: 'lng' },
-    japan_lpg:           { label: 'Japan LPG',         unit: 'Mt',   country: 'japan',       commodity: 'lpg' },
-    south_korea_crude:   { label: 'S. Korea Crude',    unit: 'mbbl', country: 'south_korea', commodity: 'crude' },
-    south_korea_lng:     { label: 'S. Korea LNG',      unit: 'Mt',   country: 'south_korea', commodity: 'lng' },
-    south_korea_lpg:     { label: 'S. Korea LPG',      unit: 'Mt',   country: 'south_korea', commodity: 'lpg' },
-    thailand_crude:      { label: 'Thailand Crude',    unit: 'mbbl', country: 'thailand',    commodity: 'crude' },
-    thailand_lng:        { label: 'Thailand LNG',      unit: 'Mt',   country: 'thailand',    commodity: 'lng' },
-    thailand_lpg:        { label: 'Thailand LPG',      unit: 'Mt',   country: 'thailand',    commodity: 'lpg' },
-    vietnam_crude:       { label: 'Vietnam Crude',     unit: 'mbbl', country: 'vietnam',     commodity: 'crude' },
-    vietnam_lng:         { label: 'Vietnam LNG',       unit: 'Mt',   country: 'vietnam',     commodity: 'lng' },
-    vietnam_lpg:         { label: 'Vietnam LPG',       unit: 'Mt',   country: 'vietnam',     commodity: 'lpg' },
-  };
+  const DATASETS = {};
+  const IMPORT_COUNTRIES = [
+    { key: 'china', label: 'China' }, { key: 'india', label: 'India' }, { key: 'japan', label: 'Japan' },
+    { key: 'south_korea', label: 'S. Korea' }, { key: 'thailand', label: 'Thailand' }, { key: 'vietnam', label: 'Vietnam' },
+  ];
+  const COMMODITIES_META = [
+    { key: 'crude', label: 'Crude', unit: 'mbbl' },
+    { key: 'lng', label: 'LNG', unit: 'Mt' },
+    { key: 'lpg', label: 'LPG', unit: 'Mt' },
+    { key: 'kero_jet', label: 'Kero/Jet', unit: 'mbbl' },
+    { key: 'gasoil_diesel', label: 'Gasoil/Diesel', unit: 'mbbl' },
+    { key: 'gasoline', label: 'Gasoline', unit: 'mbbl' },
+    { key: 'naphtha', label: 'Naphtha', unit: 'mbbl' },
+    { key: 'sulphur', label: 'Sulphur', unit: 'Mt' },
+  ];
+  for (const c of IMPORT_COUNTRIES) {
+    for (const com of COMMODITIES_META) {
+      DATASETS[`${c.key}_${com.key}`] = { label: `${c.label} ${com.label}`, unit: com.unit, country: c.key, commodity: com.key };
+    }
+  }
 
   const CHART_COLORS = [
     '#0ea5e9', '#f59e0b', '#10b981', '#ef4444', '#8b5cf6',
@@ -272,7 +272,10 @@
   }
 
   function isCrude() {
-    return state.commodity === 'crude';
+    // Volume-based commodities (kbd) vs mass-based (Mt)
+    // kbd: crude, kero_jet, gasoil_diesel, gasoline, naphtha
+    // Mt: lng, lpg, sulphur
+    return !['lng', 'lpg', 'sulphur'].includes(state.commodity);
   }
 
   function fmtNum(n) {
@@ -299,7 +302,8 @@
               ['india', 'India'], ['china', 'China'], ['japan', 'Japan'], ['south_korea', 'S. Korea'], ['thailand', 'Thailand'], ['vietnam', 'Vietnam']
             ])}
             ${renderToggle('Commodity', 'commodity', [
-              ['crude', 'Crude'], ['lng', 'LNG'], ['lpg', 'LPG']
+              ['crude', 'Crude'], ['lng', 'LNG'], ['lpg', 'LPG'],
+              ['kero_jet', 'Kero/Jet'], ['gasoil_diesel', 'Gasoil/Diesel'], ['gasoline', 'Gasoline'], ['naphtha', 'Naphtha'], ['sulphur', 'Sulphur']
             ])}
           </div>
           ${dateStr ? `<div class="flex items-center gap-1.5 text-xs text-navy-500 bg-white px-3 py-2 rounded-lg border border-navy-200 shadow-sm">

@@ -22,12 +22,22 @@
   "products": {
     "crude": 1370,
     "lng": 1750,
-    "lpg": 2052
+    "lpg": 2052,
+    "kero_jet": 1644,
+    "gasoil_diesel": 1530,
+    "gasoline": 1534,
+    "naphtha": 1886,
+    "sulphur": 2256
   },
   "productLabels": {
     "1370": "Crude/Co",
-    "1750": "lng",
-    "2052": "LPG"
+    "1750": "LNG",
+    "2052": "LPG",
+    "1644": "Kero/Jet",
+    "1530": "Gasoil/Diesel",
+    "1534": "Gasoline",
+    "1886": "Naphtha",
+    "2256": "Sulphur"
   },
   "urlPattern": {
     "import": "https://terminal.kpler.com/cargo/flows?productEstimation=false&projection=actual&split=origin--country&granularity=days&unit={unit}&dates=1m&mZones={zoneId}&products={productId}&dir=import",

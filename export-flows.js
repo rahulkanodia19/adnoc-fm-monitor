@@ -13,37 +13,28 @@
   }
 
   // ---------- Constants ----------
-  const DATASETS = {
-    bahrain_crude:       { label: 'Bahrain',      unit: 'mbbl', key: 'bahrain',       commodity: 'crude' },
-    bahrain_lng:         { label: 'Bahrain',      unit: 'Mt',   key: 'bahrain',       commodity: 'lng' },
-    bahrain_lpg:         { label: 'Bahrain',      unit: 'Mt',   key: 'bahrain',       commodity: 'lpg' },
-    iran_crude:          { label: 'Iran',          unit: 'mbbl', key: 'iran',          commodity: 'crude' },
-    iran_lng:            { label: 'Iran',          unit: 'Mt',   key: 'iran',          commodity: 'lng' },
-    iran_lpg:            { label: 'Iran',          unit: 'Mt',   key: 'iran',          commodity: 'lpg' },
-    iraq_crude:          { label: 'Iraq',          unit: 'mbbl', key: 'iraq',          commodity: 'crude' },
-    iraq_lng:            { label: 'Iraq',          unit: 'Mt',   key: 'iraq',          commodity: 'lng' },
-    iraq_lpg:            { label: 'Iraq',          unit: 'Mt',   key: 'iraq',          commodity: 'lpg' },
-    kuwait_crude:        { label: 'Kuwait',        unit: 'mbbl', key: 'kuwait',        commodity: 'crude' },
-    kuwait_lng:          { label: 'Kuwait',        unit: 'Mt',   key: 'kuwait',        commodity: 'lng' },
-    kuwait_lpg:          { label: 'Kuwait',        unit: 'Mt',   key: 'kuwait',        commodity: 'lpg' },
-    oman_crude:          { label: 'Oman',          unit: 'mbbl', key: 'oman',          commodity: 'crude' },
-    oman_lng:            { label: 'Oman',          unit: 'Mt',   key: 'oman',          commodity: 'lng' },
-    oman_lpg:            { label: 'Oman',          unit: 'Mt',   key: 'oman',          commodity: 'lpg' },
-    qatar_crude:         { label: 'Qatar',         unit: 'mbbl', key: 'qatar',         commodity: 'crude' },
-    qatar_lng:           { label: 'Qatar',         unit: 'Mt',   key: 'qatar',         commodity: 'lng' },
-    qatar_lpg:           { label: 'Qatar',         unit: 'Mt',   key: 'qatar',         commodity: 'lpg' },
-    russia_crude:        { label: 'Russia',        unit: 'mbbl', key: 'russia',        commodity: 'crude' },
-    russia_lng:          { label: 'Russia',        unit: 'Mt',   key: 'russia',        commodity: 'lng' },
-    russia_lpg:          { label: 'Russia',        unit: 'Mt',   key: 'russia',        commodity: 'lpg' },
-    saudi_arabia_crude:  { label: 'Saudi Arabia',  unit: 'mbbl', key: 'saudi_arabia',  commodity: 'crude' },
-    saudi_arabia_lng:    { label: 'Saudi Arabia',  unit: 'Mt',   key: 'saudi_arabia',  commodity: 'lng' },
-    saudi_arabia_lpg:    { label: 'Saudi Arabia',  unit: 'Mt',   key: 'saudi_arabia',  commodity: 'lpg' },
-    uae_lng:             { label: 'UAE',           unit: 'Mt',   key: 'uae',           commodity: 'lng' },
-    uae_lpg:             { label: 'UAE',           unit: 'Mt',   key: 'uae',           commodity: 'lpg' },
-    us_crude:            { label: 'United States', unit: 'mbbl', key: 'us',            commodity: 'crude' },
-    us_lng:              { label: 'United States', unit: 'Mt',   key: 'us',            commodity: 'lng' },
-    us_lpg:              { label: 'United States', unit: 'Mt',   key: 'us',            commodity: 'lpg' },
-  };
+  const DATASETS = {};
+  const EXPORT_COUNTRIES = [
+    { key: 'bahrain', label: 'Bahrain' }, { key: 'iran', label: 'Iran' }, { key: 'iraq', label: 'Iraq' },
+    { key: 'kuwait', label: 'Kuwait' }, { key: 'oman', label: 'Oman' }, { key: 'qatar', label: 'Qatar' },
+    { key: 'russia', label: 'Russia' }, { key: 'saudi_arabia', label: 'Saudi Arabia' },
+    { key: 'uae', label: 'UAE' }, { key: 'us', label: 'United States' },
+  ];
+  const COMMODITIES_META = [
+    { key: 'crude', label: 'Crude', unit: 'mbbl' },
+    { key: 'lng', label: 'LNG', unit: 'Mt' },
+    { key: 'lpg', label: 'LPG', unit: 'Mt' },
+    { key: 'kero_jet', label: 'Kero/Jet', unit: 'mbbl' },
+    { key: 'gasoil_diesel', label: 'Gasoil/Diesel', unit: 'mbbl' },
+    { key: 'gasoline', label: 'Gasoline', unit: 'mbbl' },
+    { key: 'naphtha', label: 'Naphtha', unit: 'mbbl' },
+    { key: 'sulphur', label: 'Sulphur', unit: 'Mt' },
+  ];
+  for (const c of EXPORT_COUNTRIES) {
+    for (const com of COMMODITIES_META) {
+      DATASETS[`${c.key}_${com.key}`] = { label: c.label, unit: com.unit, key: c.key, commodity: com.key };
+    }
+  }
 
   const CHART_COLORS = [
     '#0ea5e9', '#f59e0b', '#10b981', '#ef4444', '#8b5cf6',
@@ -256,8 +247,9 @@
 
   // ---------- Rendering ----------
 
-  function getUnit() { return state.commodity === 'crude' ? 'mbbl' : 'Mt'; }
-  function getRateUnit() { return state.commodity === 'crude' ? 'mbbl/d' : 'Mt/d'; }
+  function isMassBased() { return ['lng', 'lpg', 'sulphur'].includes(state.commodity); }
+  function getUnit() { return isMassBased() ? 'Mt' : 'mbbl'; }
+  function getRateUnit() { return isMassBased() ? 'Mt/d' : 'mbbl/d'; }
 
   function toDisplay(val) { return val / 1000; }
   function toRate(val, days) { return days > 0 ? val / days / 1000 : 0; }
@@ -289,7 +281,8 @@
           <div class="flex flex-wrap items-center gap-2">
             ${renderExporterToggle()}
             ${renderToggle('Commodity', 'commodity', [
-              ['crude', 'Crude'], ['lng', 'LNG'], ['lpg', 'LPG']
+              ['crude', 'Crude'], ['lng', 'LNG'], ['lpg', 'LPG'],
+              ['kero_jet', 'Kero/Jet'], ['gasoil_diesel', 'Gasoil/Diesel'], ['gasoline', 'Gasoline'], ['naphtha', 'Naphtha'], ['sulphur', 'Sulphur']
             ])}
           </div>
           ${dateStr ? `<div class="flex items-center gap-1.5 text-xs text-navy-500 bg-white px-3 py-2 rounded-lg border border-navy-200 shadow-sm">
