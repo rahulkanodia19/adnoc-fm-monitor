@@ -1,603 +1,569 @@
 {
-  "lastUpdated": "2026-03-29T14:11:14.348Z",
+  "lastUpdated": "2026-03-29T12:00:00Z",
+
   "china_crude": [
-    "China's crude oil imports averaged 8,389 kbd/day in 2026-W13 (partial week, 6 days), down 33% from 2026-W12. Notable: Iraq, Saudi Arabia, United Arab Emirates dropped out of the top suppliers.",
-    "Top suppliers: Russian Federation 14,142 (28% ▼); Oman 10,789 (21% ▲); Brazil 6,503 (13% ▼); Iran 3,425 (7% ▲).",
-    "Four-week declining trend — crude oil imports have contracted steadily."
+    "China's crude imports have halved over four weeks, plunging from 101,417 kbd (W10) to 50,334 kbd (W13), as the Hormuz closure chokes Gulf-origin supply that previously accounted for 44% of intake.",
+    "Russia has consolidated its position as China's dominant crude supplier at 14,142 kbd in W13, while Saudi Arabia and Iraq have virtually disappeared from W13 flows -- Iraq collapsed from 11,829 kbd (W10) to just 511 kbd as the FM declaration halted Basra terminal operations.",
+    "Gulf supplier share has eroded from 44.1% to 29.3% over the period, with Oman (10,789 kbd in W13) emerging as the primary Gulf-origin source thanks to its non-Hormuz export position at Mina Al-Fahal.",
+    "Pipeline flows from Russia (~600 kbd ESPO), Kazakhstan (~220 kbd), and Myanmar (~200 kbd) provide a ~1,020 kbd Hormuz-independent floor, but cannot offset the ~50,000 kbd seaborne shortfall. Watch for further drawdowns from China's pre-crisis stockpiling."
   ],
   "china_lng": [
-    "China's LNG imports averaged 81 ktons/day in 2026-W13 (partial week, 6 days), down 51% from 2026-W12. Notable: Qatar dropped out of the top suppliers.",
-    "Top suppliers: Australia 261 (54% ▼); Malaysia 99 (20% ▼); Russian Federation 64 (13% ▼); Indonesia 61 (13%).",
-    "Current volumes are 39% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "Qatar LNG to China has gone from 362 ktons (47.6% share in W10) to zero in W13, consistent with QatarEnergy's FM extension to Chinese contracts on Mar 24.",
+    "Australia has stepped in as China's primary LNG supplier at 261 ktons in W13, supported by Malaysia (99 ktons) and Russia (64 ktons), but total imports dropped 36% from W12 to W13 indicating the market cannot fully replace lost Qatari volumes.",
+    "Gulf LNG share collapsed from 47.6% (W10) to 0% (W13) -- the fastest structural supply shift in Chinese LNG import history, driven by the complete shutdown of Qatar's 77 Mtpa capacity."
   ],
   "china_lpg": [
-    "China's LPG imports averaged 76 ktons/day in 2026-W13 (partial week, 6 days), up 43% from 2026-W12.",
-    "Top suppliers: United States 235 (51% ▲); Iran 107 (23% ▼); Canada 92 (20% ▲); Australia 23 (5% ▲)."
+    "US LPG has surged to 52% of China's imports in W13 (235 ktons) as Middle Eastern NGL-linked supply from Saudi Arabia, UAE, and Qatar has been curtailed -- Saudi and Qatari volumes went from 64 ktons combined (W10) to zero.",
+    "Iran remains a significant supplier at 107 ktons (W13) via sanctions-circumventing ship-to-ship transfers, but total imports are volatile week-to-week (544 to 433 to 319 to 457 ktons), suggesting procurement scrambling.",
+    "The LPG-naphtha price spread is favouring increased US Gulf Coast exports to China, with PDH plant operators paying significant premiums to secure replacement cargoes."
   ],
   "china_kero_jet": [
-    "No significant jet/kerosene imports recorded for China in recent weeks."
+    "China's jet fuel imports have ceased entirely since W12, dropping from 345 kbd (W10) to zero. South Korea was the sole supplier and appears to have redirected volumes, likely reflecting China's large domestic refining capacity and reduced aviation fuel demand amid the crisis."
   ],
   "china_gasoil_diesel": [
-    "China's gasoil/diesel imports averaged 14 kbd/day in 2026-W13 (partial week, 6 days), up 9% from 2026-W12.",
-    "Top suppliers: South Korea 82 (100% ▲).",
-    "Current volumes are 65% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "China's gasoil/diesel imports have stabilized at low levels (75-82 kbd in W12-W13) from a peak of 690 kbd in W10, sourced exclusively from South Korea. No Gulf exposure, reflecting China's domestic refining self-sufficiency for middle distillates."
   ],
   "china_gasoline": [
-    "No significant gasoline imports recorded for China in recent weeks."
+    "No significant gasoline imports recorded for China in W12-W13, down from 178 kbd in W10. China's massive domestic refining capacity (~18 mb/d) provides insulation from the Gulf crisis for lighter products."
   ],
   "china_naphtha": [
-    "China's naphtha imports averaged 326 kbd/day in 2026-W13 (partial week, 6 days), up 19% from 2026-W12. Notable: United Arab Emirates, Bahrain, Qatar dropped out of the top suppliers.",
-    "Top suppliers: Russian Federation 742 (38% ▲); Norway 536 (27% ▲); South Korea 345 (18% ▲); Thailand 332 (17% ▲).",
-    "Gulf sources absent this week — supply now entirely from non-Gulf origins, reflecting the depth of the Hormuz disruption."
+    "China's naphtha imports saw a dramatic supplier rotation: Gulf share collapsed from 76.8% (W10) to 0% (W13) as Qatar, Saudi Arabia, and UAE volumes disappeared entirely.",
+    "Russia has become the dominant naphtha supplier at 742 kbd in W13, joined by non-traditional sources Norway (536 kbd) and Thailand (332 kbd), indicating an emergency pivot by Chinese petrochemical feedstock buyers.",
+    "Total volumes dropped 31% from 2,821 kbd (W10) to 1,956 kbd (W13), squeezing petchem margins and feedstock availability."
   ],
   "china_sulphur": [
-    "China's sulphur imports averaged 5 ktons/day in 2026-W13 (partial week, 6 days), down 59% from 2026-W12. Notable: Kuwait dropped out of the top suppliers.",
-    "Top suppliers: Canada 32 (100% ▲)."
+    "China's sulphur imports have collapsed from 94 ktons (W10, 58% from Saudi Arabia) to just 32 ktons (W13) sourced entirely from Canada, as Gulf suppliers including UAE and Qatar have been cut off by the Hormuz closure."
   ],
+
   "india_crude": [
-    "India's crude oil imports averaged 5,073 kbd/day in 2026-W13 (partial week, 6 days), broadly flat versus the prior week.",
-    "Top suppliers: Russian Federation 11,558 (38% ▼); Saudi Arabia 6,660 (22% ▲); United Arab Emirates 3,400 (11% ▲); Nigeria 2,888 (9% ▲)."
+    "India's crude imports recovered to 30,440 kbd in W13 from a trough of 25,069 kbd in W11, driven by an aggressive pivot to Russian barrels -- Russia now supplies 11,558 kbd (38% share), up from 8,263 kbd (25%) in W10.",
+    "Gulf supplier share collapsed from 44.2% (W10) to just 5.8% (W11) as the Hormuz closure hit, but has since recovered to 34.5% (W13) as Saudi Arabia (6,660 kbd) and UAE (3,400 kbd) rerouted crude via non-Hormuz pipelines (East-West Pipeline to Yanbu, ADCOP to Fujairah).",
+    "Iraq has essentially disappeared from India's supply -- from 4,574 kbd (W10) to just 427 kbd (W13), consistent with the FM on all foreign-operated oilfields and Basra terminal shutdowns.",
+    "MRPL's FM on gasoline exports and 500 kb/d refinery throughput cuts signal that supply disruption is cascading into India's downstream sector despite the sourcing shift."
   ],
   "india_lng": [
-    "India's LNG imports averaged 81 ktons/day in 2026-W13 (partial week, 6 days), up 123% from 2026-W12.",
-    "Top suppliers: Oman 225 (46% ▲); United States 135 (28% ▲); Angola 67 (14% ▼); Nigeria 60 (12% ▼).",
-    "Current volumes are 43% above the 4-week average — indicating a recovery or cargo bunching."
+    "India's LNG imports bounced to 487 ktons in W13 from a low of 218 ktons in W12, with Oman emerging as the key Gulf-origin supplier at 225 ktons (46% share) -- critically, Qatar has been entirely absent since W11.",
+    "The US supplied 135 ktons in W13, confirming India's emergency procurement of American spot cargoes to replace the 41.4% of LNG imports previously sourced from Qatar's Ras Laffan.",
+    "Nigeria and Angola are providing supplementary LNG cargoes, but Gujarat Gas's 50% industrial supply cut and Petronet LNG's FM underscore that India's gas market remains severely stressed."
   ],
   "india_lpg": [
-    "India's LPG imports averaged 13 ktons/day in 2026-W13 (partial week, 6 days), up 10% from 2026-W12. Notable: Kuwait, Saudi Arabia dropped out of the top suppliers.",
-    "Top suppliers: United States 52 (65% ▲); Qatar 28 (35% ▲).",
-    "Current volumes are 31% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "India's LPG imports have fallen 62% from 210 ktons (W10) to 80 ktons (W13), with the US now the dominant supplier at 52 ktons, as UAE and Saudi volumes that previously supplied 75% of imports have largely dried up.",
+    "Only Qatar LPG (28 ktons) remains from the Gulf in W13, down from 157 ktons combined Gulf supply in W10. The Pradhan Mantri Ujjwala cooking fuel programme faces growing supply risk."
   ],
   "india_kero_jet": [
-    "No significant jet/kerosene imports recorded for India in recent weeks."
+    "No jet fuel imports recorded for India across the entire W10-W13 period. India's domestic refining capacity is covering aviation fuel needs, though MRPL's refinery throughput cuts may eventually create tightness."
   ],
   "india_gasoil_diesel": [
-    "India's gasoil/diesel imports averaged 18 kbd/day in 2026-W13 (partial week, 6 days), down 54% from 2026-W12.",
-    "Top suppliers: Russian Federation 110 (100% ▼)."
+    "India's gasoil/diesel imports shifted from UAE (59 kbd in W10) to Russia (237 kbd W12, 110 kbd W13) as Hormuz disruption cut off Gulf product flows. Russia is filling the gap at discounted prices."
   ],
   "india_gasoline": [
-    "India's gasoline imports averaged 8 kbd/day in 2026-W13 (partial week, 6 days), up 50% from 2026-W12.",
-    "Top suppliers: South Korea 45 (100% ▲)."
+    "Minimal gasoline imports for India (30-75 kbd), sourced exclusively from South Korea. Domestic refining capacity is largely meeting demand, though the 500 kb/d throughput cuts at MRPL are a risk factor."
   ],
   "india_naphtha": [
-    "India's naphtha imports averaged 105 kbd/day in 2026-W13 (partial week, 6 days), up 96% from 2026-W12.",
-    "Top suppliers: Oman 324 (52% ▲); Russian Federation 304 (48% ▼)."
+    "India's naphtha imports collapsed from 1,060 kbd (W10, 100% Gulf) to 321 kbd (W12, 100% Russia) before rebounding to 628 kbd (W13) with Oman (324 kbd) returning alongside Russia (304 kbd).",
+    "The complete disappearance of UAE, Kuwait, and Iran naphtha in W12-W13 is crippling India's petrochemical feedstock supply chain. Oman's non-Hormuz position makes it the last Gulf naphtha source standing."
   ],
   "india_sulphur": [
-    "India's sulphur imports averaged 12 ktons/day in 2026-W13 (partial week, 6 days), broadly flat versus the prior week.",
-    "Top suppliers: Canada 61 (82% ▲); Jordan 12 (16% ▲).",
-    "Current volumes are 177% above the 4-week average — indicating a recovery or cargo bunching."
+    "India's sulphur imports are sporadic -- only Qatar (33 ktons in W11) and then Canada/Jordan (74 ktons in W13) appeared across the period, reflecting the broader disruption to Gulf sulphur exports from refinery and gas processing shutdowns."
   ],
+
   "japan_crude": [
-    "Japan's crude oil imports averaged 959 kbd/day in 2026-W13 (partial week, 6 days), down 62% from 2026-W12. Notable: Kuwait, Oman dropped out of the top suppliers.",
-    "Top suppliers: United Arab Emirates 2,764 (48% ▼); Saudi Arabia 2,421 (42% ▼); Malaysia 345 (6% ▲); Qatar 224 (4% ▼).",
-    "Current volumes are 54% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "Japan remains the most Gulf-dependent major crude importer at 94-100% Gulf share, with Saudi Arabia and UAE supplying virtually all volumes across W10-W13.",
+    "Total imports appeared stable at ~14,700-14,950 kbd through W10-W12 before dropping to 5,754 kbd in W13 (6-day week), suggesting the SPR release of 80 mb is bridging supply but cannot sustain current demand indefinitely.",
+    "Non-Gulf diversification is minimal -- the US (1,018 kbd in W11), Malaysia, and Ecuador appeared briefly but Gulf dependence remains structurally above 85%.",
+    "Qatar crude re-emerged at small volumes (637 kbd W12, 224 kbd W13), likely from pre-loaded cargoes rather than new production given the total field shutdown."
   ],
   "japan_lng": [
-    "Japan's LNG imports averaged 140 ktons/day in 2026-W13 (partial week, 6 days), down 32% from 2026-W12.",
-    "Top suppliers: Australia 516 (61% ▲); Malaysia 207 (25% ▲); Papua New Guinea 70 (8% ▼); Russian Federation 47 (6% ▲).",
-    "Current volumes are 30% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "Japan's LNG imports are trending down from 1,305 ktons (W10) to 840 ktons (W13), with Australia consistently dominant (516 ktons in W13, 61% share) as the nuclear restart provides partial demand relief.",
+    "Qatar LNG appeared at small volumes in W11-W12 (75-77 ktons) but was absent in W10 and W13, confirming the FM has effectively eliminated Japanese access to Qatari supply.",
+    "Japan has diversified to Canada (141 ktons W12), Indonesia (204 ktons W11), and Papua New Guinea (70-135 ktons), but no single source can replace Qatar's pre-crisis contribution."
   ],
   "japan_lpg": [
-    "Japan's LPG imports averaged 35 ktons/day in 2026-W13 (partial week, 6 days), up 78% from 2026-W12.",
-    "Top suppliers: United States 208 (100% ▲).",
-    "Current volumes are 25% above the 4-week average — indicating a recovery or cargo bunching."
+    "Japan's LPG imports are now 100% US-sourced (208 ktons in W13), a complete shift from the pre-crisis mix that included Saudi Arabia and Qatar. The US Gulf Coast has replaced the entire Middle Eastern LPG supply chain for Japan."
   ],
   "japan_kero_jet": [
-    "Japan's jet/kerosene imports averaged 82 kbd/day in 2026-W13 (partial week, 6 days), broadly flat versus the prior week.",
-    "Top suppliers: South Korea 490 (100% ▼)."
+    "Japan's jet fuel imports are sourced entirely from South Korea (490 kbd in W13), steady across the period. No Gulf dependency for this product."
   ],
   "japan_gasoil_diesel": [
-    "Japan's gasoil/diesel imports averaged 0 kbd/day in 2026-W13 (partial week, 6 days), down 100% from 2026-W12."
+    "Sporadic gasoil/diesel imports for Japan -- 0 in W10, 115 kbd (S. Korea) in W11, 369 kbd (mainly Brunei) in W12, then back to 0 in W13. Domestic refining is covering most demand."
   ],
   "japan_gasoline": [
-    "Japan's gasoline imports averaged 100 kbd/day in 2026-W13 (partial week, 6 days), up 139% from 2026-W12.",
-    "Top suppliers: South Korea 598 (100% ▲).",
-    "Current volumes are 110% above the 4-week average — indicating a recovery or cargo bunching."
+    "Japan's gasoline imports from South Korea have risen sharply from 99 kbd (W10) to 598 kbd (W13), suggesting domestic refinery throughput cuts are beginning to impact lighter product availability."
   ],
   "japan_naphtha": [
-    "Japan's naphtha imports averaged 220 kbd/day in 2026-W13 (partial week, 6 days), up 119% from 2026-W12. Notable: Qatar dropped out of the top suppliers.",
-    "Top suppliers: United Arab Emirates 935 (71% ▲); South Korea 165 (12% ▲); Peru 131 (10% ▲); Algeria 90 (7% ▲)."
+    "Japan's naphtha imports remain heavily Gulf-dependent but volatile: 1,510 kbd (W10, 100% Gulf) to 2,021 kbd (W11, 41% Gulf with new US/Peru/India sources) to 605 kbd (W12, 100% Qatar) to 1,322 kbd (W13, 71% UAE).",
+    "The UAE emerged as the dominant naphtha supplier in W13 at 935 kbd, likely via the ADCOP Fujairah pipeline. Japan's petrochemical sector is scrambling to maintain feedstock flows."
   ],
   "japan_sulphur": [
-    "No significant sulphur imports recorded for Japan in recent weeks."
+    "No sulphur imports recorded for Japan across the entire W10-W13 period."
   ],
+
   "south_korea_crude": [
-    "South Korea's crude oil imports averaged 1,534 kbd/day in 2026-W13 (partial week, 6 days), down 39% from 2026-W12. Notable: Kuwait dropped out of the top suppliers.",
-    "Top suppliers: United Arab Emirates 4,120 (45% ▲); Saudi Arabia 1,528 (17% ▼); Algeria 1,078 (12% ▲); United States 1,050 (11% ▼).",
-    "Four-week declining trend — crude oil imports have contracted steadily."
+    "South Korea's crude imports have declined 62% from 23,961 kbd (W10) to 9,206 kbd (W13), the most severe contraction among major Asian importers.",
+    "The US became the top non-Gulf supplier at 5,645 kbd in W12, but Gulf-origin crude still accounted for 72% of W13 imports (UAE at 4,120 kbd, Saudi Arabia at 1,528 kbd, Iraq at 951 kbd).",
+    "The 22.5 mb SPR release (5 mb already delivered by Mar 25) is providing critical bridging supply while YNCC's petrochemical FM signals downstream stress from reduced refinery throughput."
   ],
   "south_korea_lng": [
-    "South Korea's LNG imports averaged 106 ktons/day in 2026-W13 (partial week, 6 days), down 23% from 2026-W12. Notable: Oman dropped out of the top suppliers.",
-    "Top suppliers: Australia 335 (53% ▲); Indonesia 119 (19% ▲); Malaysia 68 (11% ▼); United States 58 (9% ▲).",
-    "Current volumes are 33% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "South Korea's LNG supply has diversified well despite the crisis: Australia leads (335 ktons W13), supplemented by Indonesia (119 ktons), Malaysia (68 ktons), US, and China re-exports.",
+    "Qatar's contribution dropped from 75 ktons (W10) to zero in W13, but KOGAS's new 10-year 3.3 mtpa Trafigura deal for US LNG demonstrates proactive supply chain resilience.",
+    "Gulf share has fallen from 7.9% (already low) to 0% in W13 -- South Korea's early diversification strategy is paying off."
   ],
   "south_korea_lpg": [
-    "South Korea's LPG imports averaged 8 ktons/day in 2026-W13 (partial week, 6 days), down 56% from 2026-W12.",
-    "Top suppliers: United States 47 (100% ▼)."
+    "South Korea's LPG imports are entirely from US and Canada (47 ktons in W13), with zero Gulf exposure across all four weeks. The pre-crisis shift to US Gulf Coast supply has fully insulated Korea's LPG market."
   ],
   "south_korea_kero_jet": [
-    "No significant jet/kerosene imports recorded for South Korea in recent weeks."
+    "Minimal jet fuel imports for South Korea -- only 89 kbd from China in W11, zero in other weeks. Domestic refining capacity is sufficient."
   ],
   "south_korea_gasoil_diesel": [
-    "South Korea's gasoil/diesel imports averaged 12 kbd/day in 2026-W13 (partial week, 6 days), down 83% from 2026-W12.",
-    "Top suppliers: Russian Federation 53 (74% ▲); China 20 (28% ▼).",
-    "Current volumes are 48% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "South Korea's gasoil/diesel imports are small and non-Gulf (0-436 kbd), sourced from Japan, China, and Russia. Domestic mega-refineries (SK, S-Oil, GS Caltex, Hyundai) are self-sufficient for middle distillates."
   ],
   "south_korea_gasoline": [
-    "South Korea's gasoline imports averaged 0 kbd/day in 2026-W13 (partial week, 6 days), down 100% from 2026-W12."
+    "South Korea's gasoline imports shifted from Japan (535-756 kbd in W10-W11) to Singapore (167 kbd W12) to zero in W13, suggesting inventory drawdowns or domestic production adjustment."
   ],
   "south_korea_naphtha": [
-    "South Korea's naphtha imports averaged 401 kbd/day in 2026-W13 (partial week, 6 days), down 40% from 2026-W12. Notable: Kuwait, Qatar dropped out of the top suppliers.",
-    "Top suppliers: Oman 489 (20% ▲); Greece 436 (18% ▲); Algeria 372 (15% ▲); Peru 345 (14% ▲).",
-    "Current volumes are 34% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "South Korea's naphtha imports declined from 4,655 kbd (W10) to 2,408 kbd (W13), with Gulf share dropping from 56% to 30% as Kuwait, UAE, and Qatar volumes fell.",
+    "The supplier base has fragmented dramatically -- from 13 countries in W10 to 8 in W13, with non-traditional sources like Greece (436 kbd), Peru (345 kbd), and Libya (186 kbd) appearing as petchem feedstock procurement becomes increasingly opportunistic."
   ],
   "south_korea_sulphur": [
-    "No significant sulphur imports recorded for South Korea in recent weeks."
+    "No sulphur imports recorded for South Korea across the W10-W13 period."
   ],
+
   "thailand_crude": [
-    "Thailand's crude oil imports averaged 877 kbd/day in 2026-W13 (partial week, 6 days), down 27% from 2026-W12. Notable: Saudi Arabia dropped out of the top suppliers.",
-    "Top suppliers: United Arab Emirates 4,905 (93% ▼); Malaysia 357 (7% ▼).",
-    "Current volumes are 26% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "Thailand's crude imports have narrowed dramatically from 7 suppliers (W10) to just 2 in W13 (UAE at 4,905 kbd and Malaysia at 357 kbd), with UAE now supplying 93% of crude via the ADCOP-Fujairah route.",
+    "The shift to near-total UAE dependence (up from 33% in W10) creates concentration risk if Fujairah port operations are further disrupted by drone attacks.",
+    "US crude, which surged to 3,140 kbd in W11 as an emergency bridge, has completely disappeared from W12-W13 as logistics settle into a more concentrated non-Hormuz supply pattern."
   ],
   "thailand_lng": [
-    "Thailand's LNG imports averaged 36 ktons/day in 2026-W13 (partial week, 6 days), down 29% from 2026-W12.",
-    "Top suppliers: Australia 76 (36%); Oman 70 (33% ▲); China 68 (32% ▲)."
+    "Thailand's LNG imports dropped from 367 ktons (W10, 52% from Qatar) to 213 ktons (W13, zero Qatar), with Australia (76 ktons), Oman (70 ktons), and China re-exports (68 ktons) filling the gap.",
+    "The diversification to Oman LNG in W13 is a new development -- Thailand's declining Gulf of Thailand domestic gas production makes LNG security increasingly critical."
   ],
   "thailand_lpg": [
-    "Thailand's LPG imports averaged 0 ktons/day in 2026-W13 (partial week, 6 days), down 100% from 2026-W12."
+    "Negligible LPG imports for Thailand (0-7 ktons) across the period. Domestic production and relatively low Middle East LPG dependence provide insulation."
   ],
   "thailand_kero_jet": [
-    "No significant jet/kerosene imports recorded for Thailand in recent weeks."
+    "No jet fuel imports recorded for Thailand in W10-W13."
   ],
   "thailand_gasoil_diesel": [
-    "Thailand's gasoil/diesel imports averaged 10 kbd/day in 2026-W13 (partial week, 6 days), down 82% from 2026-W12.",
-    "Top suppliers: Malaysia 57 (100% ▲).",
-    "Current volumes are 52% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "Small, variable gasoil/diesel imports for Thailand (38-319 kbd) from non-Gulf sources including China, Malaysia, and India. No direct Gulf exposure."
   ],
   "thailand_gasoline": [
-    "Thailand's gasoline imports averaged 0 kbd/day in 2026-W13 (partial week, 6 days), down 100% from 2026-W12."
+    "Thailand's gasoline imports from Singapore dropped from 50 kbd (W10) to zero (W13), indicating domestic refining capacity adjustment or demand contraction."
   ],
   "thailand_naphtha": [
-    "Thailand's naphtha imports averaged 4 kbd/day in 2026-W13 (partial week, 6 days), broadly flat versus the prior week.",
-    "Top suppliers: Singapore Republic 22 (100% ▲)."
+    "Thailand's naphtha imports collapsed from 796 kbd (W10, 63% from Bahrain) to near-zero (22 kbd from Singapore in W13), as Bapco's Sitra refinery destruction eliminated Bahrain's naphtha exports entirely after W11."
   ],
   "thailand_sulphur": [
-    "No significant sulphur imports recorded for Thailand in recent weeks."
+    "Thailand received only one sulphur cargo in the period -- 19 ktons from Russia in W10. Gulf sulphur supply disruption is evident."
   ],
+
   "vietnam_crude": [
-    "Vietnam's crude oil imports averaged 0 kbd/day in 2026-W13 (partial week, 6 days), down 100% from 2026-W12."
+    "Vietnam's extreme Kuwait dependence (100% of crude in W10-W11 at 2,000 kbd) has been fully severed -- W12 brought only 618 kbd from Nigeria, and W13 saw zero crude imports.",
+    "The government's emergency cut of MFN oil import tariffs to 0% reflects the severity of the supply crisis for Nghi Son Refinery, which was designed around Kuwaiti crude grades."
   ],
   "vietnam_lng": [
-    "No significant LNG imports recorded for Vietnam in recent weeks."
+    "Vietnam received one small Qatar LNG cargo (62 ktons in W11) before the FM cut supply. No LNG imports in W10, W12, or W13. The Thi Vai terminal is likely running on the February cargo with limited buffer."
   ],
   "vietnam_lpg": [
-    "Vietnam's LPG imports averaged 12 ktons/day in 2026-W13 (partial week, 6 days), up 20% from 2026-W12. Notable: Saudi Arabia dropped out of the top suppliers.",
-    "Top suppliers: United States 71 (100% ▲).",
-    "Current volumes are 109% above the 4-week average — indicating a recovery or cargo bunching."
+    "Vietnam's LPG imports surged from 3 ktons (W10-W11, China) to 71 ktons (W13, US) as American cargoes replaced negligible Middle Eastern supply. The shift to US sourcing is a direct consequence of Gulf disruption."
   ],
   "vietnam_kero_jet": [
-    "Vietnam's jet/kerosene imports averaged 16 kbd/day in 2026-W13 (partial week, 6 days), up 41% from 2026-W12.",
-    "Top suppliers: Singapore Republic 93 (100% ▲).",
-    "Current volumes are 30% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "Vietnam's jet fuel imports are declining (232 to 142 to 66 to 93 kbd) and sourced from regional suppliers (Thailand, China, Singapore). No Gulf exposure."
   ],
   "vietnam_gasoil_diesel": [
-    "Vietnam's gasoil/diesel imports averaged 168 kbd/day in 2026-W13 (partial week, 6 days), down 15% from 2026-W12.",
-    "Top suppliers: South Korea 920 (91% ▼); Singapore Republic 87 (9% ▲)."
+    "Vietnam's gasoil/diesel imports surged from 672 kbd (W10) to 1,007 kbd (W13), sourced almost entirely from South Korea. This likely reflects domestic refining shortfalls as crude supply to Nghi Son has been disrupted."
   ],
   "vietnam_gasoline": [
-    "Vietnam's gasoline imports averaged 14 kbd/day in 2026-W13 (partial week, 6 days), down 31% from 2026-W12.",
-    "Top suppliers: Singapore Republic 82 (100% ▼).",
-    "Four-week declining trend — gasoline imports have contracted steadily."
+    "Vietnam's gasoline imports are declining (442 to 303 to 119 to 82 kbd), sourced from Malaysia, Singapore, and Japan. Falling volumes may indicate demand destruction from rising fuel prices."
   ],
   "vietnam_naphtha": [
-    "No significant naphtha imports recorded for Vietnam in recent weeks."
+    "No naphtha imports recorded for Vietnam across W10-W13."
   ],
   "vietnam_sulphur": [
-    "Vietnam's sulphur imports averaged 0 ktons/day in 2026-W13 (partial week, 6 days), down 100% from 2026-W12."
+    "Vietnam's sulphur imports shifted from Qatar (17 ktons W10) to Jordan (19 ktons W12), then ceased. Gulf sulphur disruption is forcing procurement rotation."
   ],
+
   "eu_27_crude": [
-    "EU-27's crude oil exports averaged 168 kbd/day in 2026-W13 (partial week, 6 days), up 210% from 2026-W12.",
-    "Top destinations: Finland 599 (60% ▲); Netherlands 407 (40% ▲).",
-    "Current volumes are 30% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "EU-27 crude exports (intra-EU and to neighbours) fell from 3,047 kbd (W10) to 324 kbd (W12) before recovering to 1,006 kbd (W13), as European refineries adjust throughput amid rising input costs from the Gulf crisis.",
+    "Finland remains a consistent destination (599 kbd) for likely North Sea/Baltic crude re-exports, while Brazil (2,132 kbd in W10) has disappeared from later weeks."
   ],
   "eu_27_lng": [
-    "No significant LNG exports recorded for EU-27 in recent weeks."
+    "EU-27 LNG exports are negligible (0-13 ktons), reflecting Europe's position as a net LNG importer. The single 13-kton Italy-bound cargo in W10 was likely a re-export."
   ],
   "eu_27_lpg": [
-    "EU-27's LPG exports averaged 2 ktons/day in 2026-W13 (partial week, 6 days), down 40% from 2026-W12.",
-    "Top destinations: Poland 7 (58% ▼); Ireland 4 (33% ▲); France 1 (8% ▲)."
+    "Small intra-European LPG trade (12-32 ktons), primarily to Poland (dominant) and Ireland. No Gulf relevance -- this is domestic redistribution."
   ],
   "eu_27_kero_jet": [
-    "EU-27's jet/kerosene exports averaged 12 kbd/day in 2026-W13 (partial week, 6 days), down 89% from 2026-W12.",
-    "Top destinations: United Kingdom 69 (100% ▲).",
-    "Current volumes are 87% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "EU-27 jet fuel exports dropped sharply from 1,025 kbd (W11) to 69 kbd (W13), as European refineries facing higher crude costs reduce output of aviation fuel for export."
   ],
   "eu_27_gasoil_diesel": [
-    "EU-27's gasoil/diesel exports averaged 430 kbd/day in 2026-W13 (partial week, 6 days), down 66% from 2026-W12.",
-    "Top destinations: Croatia 544 (21% ▲); Slovenia 356 (14% ▼); Poland 345 (13% ▼); Ireland 295 (11% ▲).",
-    "Current volumes are 55% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "EU-27 gasoil/diesel exports declined from 7,696 kbd (W11) to 2,582 kbd (W13), with the UK, Poland, and intra-EU destinations dominating. The contraction reflects tightening European diesel supply amid Gulf crude disruption.",
+    "The shift suggests European refineries are prioritising domestic diesel supply over exports as input costs surge."
   ],
   "eu_27_gasoline": [
-    "EU-27's gasoline exports averaged 1,145 kbd/day in 2026-W13 (partial week, 6 days), down 20% from 2026-W12.",
-    "Top destinations: Spain 414 (6% ▲); Morocco 347 (5% ▲); Ghana 345 (5% ▼); Senegal 345 (5% ▲)."
+    "EU-27 gasoline exports remain robust at 6,867 kbd (W13), increasingly directed to Africa (Morocco, Senegal, Ghana, Tunisia, Mauritania) as traditional Gulf-supplied markets in Asia redirect purchases to European surplus.",
+    "The shift toward West African destinations in W12-W13 suggests Gulf gasoline disruption is creating secondary trade flow redirections."
   ],
   "eu_27_naphtha": [
-    "EU-27's naphtha exports averaged 235 kbd/day in 2026-W13 (partial week, 6 days), down 52% from 2026-W12.",
-    "Top destinations: Italy 502 (36% ▲); China 345 (24% ▲); Germany 282 (20% ▲).",
-    "Current volumes are 40% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "EU-27 naphtha exports are variable (1,409-2,959 kbd), with Asian destinations (China, Japan, Taiwan) appearing in W11-W13 as Gulf naphtha supply disruption creates arbitrage opportunities for European refiners."
   ],
   "eu_27_sulphur": [
-    "No significant sulphur exports recorded for EU-27 in recent weeks."
+    "No sulphur exports recorded for EU-27 across W10-W13."
   ],
+
   "united_states_crude": [
-    "United States's crude oil imports averaged 1,966 kbd/day in 2026-W13 (partial week, 6 days), down 39% from 2026-W12.",
-    "Top suppliers: Saudi Arabia 2,995 (25% ▲); Venezuela 2,319 (20% ▼); Mexico 1,553 (13% ▼); Panama 1,032 (9% ▲).",
-    "Current volumes are 35% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "US crude imports are steady at 11,794-21,930 kbd, with Saudi Arabia consistently in the top 3 suppliers (2,410-4,121 kbd), confirming that Yanbu/Red Sea route shipments are reaching US refineries.",
+    "Venezuela (2,319-3,452 kbd) and Mexico (1,553-3,943 kbd) remain critical Western Hemisphere suppliers, while Gulf share has drifted from 27.5% (W10) to 18.1% (W12) then 27.8% (W13).",
+    "The 172 mb SPR release (43% of the IEA's record 400 mb coordinated release) with first deliveries from Mar 20 is supplementing commercial imports."
   ],
   "united_states_lng": [
-    "No significant LNG imports recorded for United States in recent weeks."
+    "No LNG imports for the US across W10-W13. As the world's largest LNG exporter, the US is a net supplier drawing maximum utilisation from Sabine Pass, Freeport, and Plaquemines facilities."
   ],
   "united_states_lpg": [
-    "United States's LPG imports averaged 0 ktons/day in 2026-W13 (partial week, 6 days), down 100% from 2026-W12."
+    "Negligible US LPG imports (0-12 ktons). The US is a major net LPG exporter benefiting from Gulf supply disruption."
   ],
   "united_states_kero_jet": [
-    "United States's jet/kerosene imports averaged 86 kbd/day in 2026-W13 (partial week, 6 days), down 15% from 2026-W12.",
-    "Top suppliers: South Korea 403 (78% ▼); Taiwan 115 (22% ▲).",
-    "Current volumes are 22% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "US jet fuel imports surged from 91 kbd (W10) to 1,428 kbd (W11) then stabilised at 518-611 kbd, sourced primarily from South Korea and Canada. This reflects US refinery product mix adjustments during the crisis."
   ],
   "united_states_gasoil_diesel": [
-    "United States's gasoil/diesel imports averaged 89 kbd/day in 2026-W13 (partial week, 6 days), down 26% from 2026-W12.",
-    "Top suppliers: Canada 477 (89% ▼); Argentina 56 (11% ▲).",
-    "Current volumes are 49% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "US gasoil/diesel imports are modest (533-1,694 kbd) and declining, sourced from Canada (dominant) and Turkey. No Gulf exposure -- the US is self-sufficient in middle distillates."
   ],
   "united_states_gasoline": [
-    "United States's gasoline imports averaged 209 kbd/day in 2026-W13 (partial week, 6 days), down 51% from 2026-W12.",
-    "Top suppliers: Canada 765 (61% ▲); United States Virgin Islands 292 (23% ▲); Bahamas 112 (9% ▼); United Kingdom 85 (7% ▼).",
-    "Current volumes are 43% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "US gasoline imports remain steady at 1,254-2,598 kbd from Canada, Bahamas, UK, and Caribbean sources. No Gulf dependence, though European gasoline is appearing (UK at 85-405 kbd) as trade flows adjust."
   ],
   "united_states_naphtha": [
-    "United States's naphtha imports averaged 92 kbd/day in 2026-W13 (partial week, 6 days), up 72% from 2026-W12.",
-    "Top suppliers: Angola 345 (63% ▲); Argentina 106 (19% ▲); Brazil 101 (18% ▲)."
+    "US naphtha imports are shifting from European sources (Belgium, France, Netherlands in W10-W12) to Latin American/African sources (Angola 345 kbd, Argentina 106 kbd, Brazil 101 kbd in W13) as global naphtha trade reroutes."
   ],
   "united_states_sulphur": [
-    "No significant sulphur imports recorded for United States in recent weeks."
+    "No sulphur imports for the US across W10-W13."
   ],
+
   "taiwan_crude": [
-    "Taiwan's crude oil imports averaged 344 kbd/day in 2026-W13 (partial week, 6 days), down 50% from 2026-W12. Notable: Saudi Arabia dropped out of the top suppliers.",
-    "Top suppliers: United States 2,061 (100% ▼).",
-    "Current volumes are 46% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "Taiwan's crude imports are undergoing a rapid de-Gulfification: Gulf share fell from 99.3% (W10, almost entirely Saudi Arabia at 2,600 kbd) to 0% (W13, 100% US at 2,061 kbd).",
+    "The US has become Taiwan's sole crude supplier in W13, a dramatic strategic shift from near-total Saudi/UAE dependence just three weeks prior.",
+    "Kuwait appeared in W11 (2,000 kbd) for likely pre-loaded cargoes but has since disappeared. Taiwan's small SPR provides limited buffer if US supply is disrupted."
   ],
   "taiwan_lng": [
-    "Taiwan's LNG imports averaged 84 ktons/day in 2026-W13 (partial week, 6 days), up 18% from 2026-W12.",
-    "Top suppliers: Australia 290 (58% ▲); Equatorial Guinea 73 (15% ▲); Oman 70 (14%); Brunei 69 (14% ▲)."
+    "Taiwan's LNG supply is diversifying successfully: Qatar share fell from 18% (W10) to 0% (W13), replaced by increased Australian volumes (290 ktons, 58% of W13 total).",
+    "Oman LNG (70 ktons) provides residual Gulf-origin supply, while Brunei (69 ktons) and Equatorial Guinea (73 ktons) have emerged as new sources reflecting Taiwan's aggressive spot procurement."
   ],
   "taiwan_lpg": [
-    "No significant LPG imports recorded for Taiwan in recent weeks."
+    "Taiwan's LPG imports have dried up -- from 17 ktons (W10, Australia) to zero in W12-W13, reflecting broader Asian LPG market tightening."
   ],
   "taiwan_kero_jet": [
-    "No significant jet/kerosene imports recorded for Taiwan in recent weeks."
+    "No jet fuel imports recorded for Taiwan across W10-W13."
   ],
   "taiwan_gasoil_diesel": [
-    "Taiwan's gasoil/diesel imports averaged 35 kbd/day in 2026-W13 (partial week, 6 days), down 17% from 2026-W12.",
-    "Top suppliers: South Korea 129 (61% ▲); China 82 (39% ▼).",
-    "Current volumes are 26% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "Taiwan's gasoil/diesel imports shifted from South Korea (675 kbd W11) to China/Russia mix (254 kbd W12, 211 kbd W13), indicating a broadening of product supply sources during the crisis."
   ],
   "taiwan_gasoline": [
-    "Taiwan's gasoline imports averaged 0 kbd/day in 2026-W13 (partial week, 6 days), down 100% from 2026-W12."
+    "Minimal gasoline imports for Taiwan -- only 176 kbd from Japan in W12, zero in other weeks."
   ],
   "taiwan_naphtha": [
-    "Taiwan's naphtha imports averaged 0 kbd/day in 2026-W13 (partial week, 6 days), down 100% from 2026-W12. Notable: United Arab Emirates dropped out of the top suppliers."
+    "Taiwan's naphtha imports pivoted from zero Gulf (W10, Singapore/US) to 100% Gulf (W11-W12, UAE at 664-892 kbd) then back to zero in W13, suggesting UAE naphtha via Fujairah was temporarily available before being redirected."
   ],
   "taiwan_sulphur": [
-    "No significant sulphur imports recorded for Taiwan in recent weeks."
+    "No sulphur imports recorded for Taiwan across W10-W13."
   ],
+
   "bahrain_crude": [
-    "No significant crude oil exports recorded for Bahrain in recent weeks."
+    "No crude exports from Bahrain across W10-W13. The Sitra refinery (405 kb/d) was struck by Iranian drones on Mar 4 and Mar 9, and Bapco Energies declared FM on all operations -- the facility is offline indefinitely."
   ],
   "bahrain_lng": [
-    "No significant LNG exports recorded for Bahrain in recent weeks."
+    "No LNG exports from Bahrain. The country is an LNG importer dependent on Saudi pipeline gas, and faces acute energy security risk from the regional supply chain disruption."
   ],
   "bahrain_lpg": [
-    "No significant LPG exports recorded for Bahrain in recent weeks."
+    "No LPG exports from Bahrain across W10-W13, consistent with the complete Bapco refinery shutdown and FM declaration."
   ],
   "bahrain_kero_jet": [
-    "No significant jet/kerosene exports recorded for Bahrain in recent weeks."
+    "Bahrain exported 503 kbd of jet fuel to UAE in W10 only, then zero for W11-W13. The Sitra refinery destruction has eliminated all product exports."
   ],
   "bahrain_gasoil_diesel": [
-    "No significant gasoil/diesel exports recorded for Bahrain in recent weeks."
+    "No gasoil/diesel exports from Bahrain across W10-W13 following the Sitra refinery shutdown."
   ],
   "bahrain_gasoline": [
-    "No significant gasoline exports recorded for Bahrain in recent weeks."
+    "No gasoline exports from Bahrain across W10-W13."
   ],
   "bahrain_naphtha": [
-    "No significant naphtha exports recorded for Bahrain in recent weeks."
+    "Bahrain exported 512 kbd of naphtha to Japan in W10, then zero for W11-W13. This was likely the last pre-strike cargo before the Sitra refinery was destroyed."
   ],
   "bahrain_sulphur": [
-    "No significant sulphur exports recorded for Bahrain in recent weeks."
+    "No sulphur exports from Bahrain across W10-W13."
   ],
+
   "iran_crude": [
-    "Iran's crude oil exports averaged 1,333 kbd/day in 2026-W13 (partial week, 6 days), down 33% from 2026-W12.",
-    "Current volumes are 32% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "Iran's crude exports have declined from 12,920 kbd (W10) to 8,000 kbd (W13), a 38% drop despite Iran being the conflict aggressor -- USAF strikes on Kharg Island military targets (Mar 13) and Israeli strikes on South Pars are constraining output.",
+    "China was the only identified destination (4,604 kbd in W10) but destination data is opaque in W11-W13, consistent with shadow-fleet tanker operations and ship-to-ship transfers to evade tracking.",
+    "The decline from 14,083 kbd (W11 peak) to 8,000 kbd suggests the military strikes on South Pars gas infrastructure (~12% of Iran's gas offline) are having a cascading effect on oil-associated output."
   ],
   "iran_lng": [
-    "No significant LNG exports recorded for Iran in recent weeks."
+    "No LNG exports from Iran. Despite holding the world's second-largest gas reserves, Iran has no LNG export infrastructure."
   ],
   "iran_lpg": [
-    "Iran's LPG exports averaged 7 ktons/day in 2026-W13 (partial week, 6 days), up 78% from 2026-W12."
+    "Iran's LPG exports collapsed from 63 ktons (W10) to near-zero visible volumes in W11-W13 (23-41 ktons, destinations undisclosed), reflecting both Hormuz disruption and the ~30% shut-in of southern NGL-linked oil fields."
   ],
   "iran_kero_jet": [
-    "No significant jet/kerosene exports recorded for Iran in recent weeks."
+    "No jet fuel exports from Iran across W10-W13."
   ],
   "iran_gasoil_diesel": [
-    "No significant gasoil/diesel exports recorded for Iran in recent weeks."
+    "No gasoil/diesel exports from Iran across W10-W13."
   ],
   "iran_gasoline": [
-    "No significant gasoline exports recorded for Iran in recent weeks."
+    "No gasoline exports from Iran across W10-W13."
   ],
   "iran_naphtha": [
-    "No significant naphtha exports recorded for Iran in recent weeks."
+    "Iran's naphtha exports went from 89 kbd (W10) to 320 kbd (W11, of which 211 kbd to UAE) then zero in W12-W13. The brief W11 UAE flow may reflect pre-conflict vessel movements."
   ],
   "iran_sulphur": [
-    "No significant sulphur exports recorded for Iran in recent weeks."
+    "No sulphur exports from Iran across W10-W13."
   ],
+
   "iraq_crude": [
-    "Iraq's crude oil exports averaged 250 kbd/day in 2026-W13 (partial week, 6 days), broadly flat versus the prior week.",
-    "Top destinations: Turkey 1,500 (100%).",
-    "Current volumes are 68% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "Iraq's crude exports have collapsed 90% from 15,283 kbd (W10) to 1,500 kbd (W12-W13), with the only remaining exports flowing via the Kirkuk-Ceyhan pipeline to Turkey after the FM declaration on all foreign-operated oilfields (Mar 20).",
+    "Basra output has fallen to ~800 kb/d from 3.3 mb/d as storage fills and southern terminal operations have halted entirely. BP was ordered to cut North Rumaila to 350 kb/d.",
+    "The Kirkuk-Ceyhan pipeline is now Iraq's only functioning export route, making Turkey the sole destination. China, India, and Italy -- previously the top three destinations -- have received zero Iraqi crude since W11."
   ],
   "iraq_lng": [
-    "No significant LNG exports recorded for Iraq in recent weeks."
+    "No LNG exports from Iraq. The country has no LNG export infrastructure, and Basra Gas Company flaring-to-capture projects are stalled alongside the crude output collapse."
   ],
   "iraq_lpg": [
-    "No significant LPG exports recorded for Iraq in recent weeks."
+    "Iraq's LPG exports effectively ceased after W10 (11 ktons), consistent with the Basra terminal shutdown and FM declaration on all operations."
   ],
   "iraq_kero_jet": [
-    "No significant jet/kerosene exports recorded for Iraq in recent weeks."
+    "No jet fuel exports from Iraq across W10-W13."
   ],
   "iraq_gasoil_diesel": [
-    "No significant gasoil/diesel exports recorded for Iraq in recent weeks."
+    "No gasoil/diesel exports from Iraq across W10-W13."
   ],
   "iraq_gasoline": [
-    "No significant gasoline exports recorded for Iraq in recent weeks."
+    "No gasoline exports from Iraq across W10-W13."
   ],
   "iraq_naphtha": [
-    "Iraq's naphtha exports averaged 15 kbd/day in 2026-W13 (partial week, 6 days), broadly flat versus the prior week.",
-    "Current volumes are 87% above the 4-week average — indicating a recovery or cargo bunching."
+    "Small, intermittent naphtha exports from Iraq (104 kbd W11, 91 kbd W13) with undisclosed destinations, likely residual volumes from northern production routed via Turkey."
   ],
   "iraq_sulphur": [
-    "No significant sulphur exports recorded for Iraq in recent weeks."
+    "No sulphur exports from Iraq across W10-W13."
   ],
+
   "kuwait_crude": [
-    "Kuwait's crude oil exports averaged 0 kbd/day in 2026-W13 (partial week, 6 days), down 100% from 2026-W12."
+    "Kuwait's crude exports collapsed from 8,135 kbd (W10) to zero (W11, W13) with only a tiny 546 kbd in W12, after KPC declared FM on crude exports and the Al-Ahmadi refinery was struck by Iranian drones on Mar 19-20.",
+    "China was the only identified destination in W10 (2,000 kbd). The Hormuz closure and refinery destruction have effectively shut down Kuwait's entire petroleum export apparatus."
   ],
   "kuwait_lng": [
-    "No significant LNG exports recorded for Kuwait in recent weeks."
+    "No LNG exports from Kuwait. Kuwait is an LNG importer via the Al-Zour FSRU, and faces acute domestic power generation risk as Qatar's LNG is entirely offline."
   ],
   "kuwait_lpg": [
-    "No significant LPG exports recorded for Kuwait in recent weeks."
+    "Kuwait's LPG exports ceased after W10 (23 ktons), consistent with the refinery damage and export infrastructure shutdown."
   ],
   "kuwait_kero_jet": [
-    "No significant jet/kerosene exports recorded for Kuwait in recent weeks."
+    "Kuwait exported 64 kbd of jet fuel (to UAE) in W10 only, then zero for W11-W13 following the Al-Ahmadi refinery strikes."
   ],
   "kuwait_gasoil_diesel": [
-    "No significant gasoil/diesel exports recorded for Kuwait in recent weeks."
+    "Kuwait's gasoil/diesel exports fell from 941 kbd (W10) to 714 kbd (W11) then zero in W12-W13, as the Al-Ahmadi refinery went offline after drone strikes and throughput cuts cascaded."
   ],
   "kuwait_gasoline": [
-    "No significant gasoline exports recorded for Kuwait in recent weeks."
+    "Kuwait exported 448 kbd of gasoline in W11 only (likely pre-strike inventory), then zero in W12-W13."
   ],
   "kuwait_naphtha": [
-    "No significant naphtha exports recorded for Kuwait in recent weeks."
+    "No naphtha exports from Kuwait across W10-W13."
   ],
   "kuwait_sulphur": [
-    "Kuwait's sulphur exports averaged 0 ktons/day in 2026-W13 (partial week, 6 days), down 100% from 2026-W12."
+    "Minimal sulphur exports from Kuwait (18 ktons in W11-W12), then zero in W13."
   ],
+
   "oman_crude": [
-    "Oman's crude oil exports averaged 1,272 kbd/day in 2026-W13 (partial week, 6 days), up 33% from 2026-W12.",
-    "Top destinations: China 7,632 (100% ▲).",
-    "Current volumes are 22% above the 4-week average — indicating a recovery or cargo bunching."
+    "Oman's crude exports have recovered to 7,632 kbd (W13) from a trough of 3,850 kbd (W11), nearly matching pre-crisis levels of 7,800 kbd (W10) -- a standout recovery driven by Oman's non-Hormuz export position at Mina Al-Fahal.",
+    "China absorbs virtually all Oman crude (7,632 kbd in W13), with Taiwan appearing in W12 (1,885 kbd), confirming Oman's strategic importance as the last major Gulf crude exporter with unimpeded sea access.",
+    "Oman's inland production base was largely unaffected by the conflict despite the Iranian drone strike on Salalah port oil tanks (Mar 11), giving it a unique competitive advantage."
   ],
   "oman_lng": [
-    "Oman's LNG exports averaged 25 ktons/day in 2026-W13 (partial week, 6 days), down 51% from 2026-W12.",
-    "Top destinations: India 77 (52% ▼); Thailand 35 (24% ▲).",
-    "Current volumes are 39% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "Oman LNG's 10.4 Mtpa facility is one of the few Middle Eastern LNG operations still running, exporting 148-303 ktons weekly to India, Japan, South Korea, Taiwan, and Thailand.",
+    "With Qatar's 77 Mtpa offline, Oman LNG cargoes are commanding significant Asian spot premiums. India (77-154 ktons) and Japan (68-77 ktons) are the primary customers."
   ],
   "oman_lpg": [
-    "No significant LPG exports recorded for Oman in recent weeks."
+    "No LPG exports from Oman recorded across W10-W13."
   ],
   "oman_kero_jet": [
-    "Oman's jet/kerosene exports averaged 0 kbd/day in 2026-W13 (partial week, 6 days), down 100% from 2026-W12."
+    "Sporadic jet fuel exports from Oman (58 kbd W10, 172 kbd W12), then zero in W11 and W13."
   ],
   "oman_gasoil_diesel": [
-    "Oman's gasoil/diesel exports averaged 114 kbd/day in 2026-W13 (partial week, 6 days), broadly flat versus the prior week.",
-    "Top destinations: Pakistan 351 (51% ▲); Mauritius 331 (49% ▲)."
+    "Oman's gasoil/diesel exports remain active at 682 kbd (W13), down from 1,005 kbd (W10) but consistent. The non-Hormuz position allows continued product exports while Gulf neighbours are shut in."
   ],
   "oman_gasoline": [
-    "Oman's gasoline exports averaged 141 kbd/day in 2026-W13 (partial week, 6 days), up 72% from 2026-W12.",
-    "Top destinations: Pakistan 511 (61% ▲); Saudi Arabia 332 (39% ▲).",
-    "Current volumes are 43% above the 4-week average — indicating a recovery or cargo bunching."
+    "Oman's gasoline exports surged to 843 kbd in W13 from 300 kbd (W11), potentially filling regional demand as Kuwait, Bahrain, and UAE gasoline exports have ceased. Oman's operational refineries are running at high utilisation."
   ],
   "oman_naphtha": [
-    "No significant naphtha exports recorded for Oman in recent weeks."
+    "Oman's naphtha exports dropped from 813 kbd (W10) to zero in W12-W13. This may reflect feedstock prioritisation for domestic petrochemical use as regional supply tightens."
   ],
   "oman_sulphur": [
-    "No significant sulphur exports recorded for Oman in recent weeks."
+    "No sulphur exports from Oman across W10-W13."
   ],
+
   "qatar_crude": [
-    "Qatar's crude oil exports averaged 0 kbd/day in 2026-W13 (partial week, 6 days), down 100% from 2026-W12. Notable: United Arab Emirates dropped out of the top suppliers."
+    "Qatar's crude exports collapsed from 2,047 kbd (W10) to effectively zero, with only a small 822 kbd cargo to UAE in W12. All offshore oil fields (~440 kb/d including Al Shaheen) have been shut since early March.",
+    "QatarEnergy's FM encompasses all hydrocarbon exports. The 12.8 Mtpa of LNG capacity damaged by Mar 18 missile strikes will take 3-5 years to repair, and crude cannot restart until the conflict ends."
   ],
   "qatar_lng": [
-    "Qatar's LNG exports averaged 22 ktons/day in 2026-W13 (partial week, 6 days), up 180% from 2026-W12.",
-    "Top destinations: Kuwait 68 (53% ▲)."
+    "Qatar's LNG exports have collapsed from 370 ktons (W10) to near-zero, with only tiny residual volumes in W12-W13 (46-129 ktons to Kuwait). This represents the removal of ~20% of global LNG supply (~7M tonnes/month).",
+    "The FM was extended to Italy, Belgium, South Korea, and China on Mar 24. Asian spot LNG surged ~39% and European TTF spiked 52% within 24 hours of the initial shutdown.",
+    "QatarEnergy CEO confirmed restart is impossible until the conflict ends, plus a minimum 2-week restart for cryogenic equipment. The 12.8 Mtpa of infrastructure damaged on Mar 18 is offline for 3-5 years."
   ],
   "qatar_lpg": [
-    "No significant LPG exports recorded for Qatar in recent weeks."
+    "Qatar's LPG exports ceased after W10 (32 ktons, 23 to India), consistent with the complete halt of all downstream operations at Ras Laffan since Mar 2."
   ],
   "qatar_kero_jet": [
-    "No significant jet/kerosene exports recorded for Qatar in recent weeks."
+    "No jet fuel exports from Qatar across W10-W13."
   ],
   "qatar_gasoil_diesel": [
-    "No significant gasoil/diesel exports recorded for Qatar in recent weeks."
+    "No gasoil/diesel exports from Qatar across W10-W13. All refining capacity (Laffan 1+2, Mesaieed) is offline."
   ],
   "qatar_gasoline": [
-    "No significant gasoline exports recorded for Qatar in recent weeks."
+    "No gasoline exports from Qatar across W10-W13."
   ],
   "qatar_naphtha": [
-    "No significant naphtha exports recorded for Qatar in recent weeks."
+    "Qatar's naphtha exports went from 116 kbd (W10) to zero for W11-W13, as all Ras Laffan condensate processing has been halted."
   ],
   "qatar_sulphur": [
-    "Qatar's sulphur exports averaged 0 ktons/day in 2026-W13 (partial week, 6 days), down 100% from 2026-W12."
+    "Qatar's sulphur exports dropped from 72 ktons (W10) to zero in W11 and W13 with a small 37-kton cargo in W12, reflecting the shutdown of gas processing that produces sulphur as a byproduct."
   ],
+
   "russia_crude": [
-    "Russia's crude oil exports averaged 4,776 kbd/day in 2026-W13 (partial week, 6 days), down 37% from 2026-W12.",
-    "Top destinations: China 6,954 (24% ▼); India 2,727 (10% ▼); Turkey 2,163 (8% ▼); Netherlands 1,767 (6% ▼).",
-    "Current volumes are 26% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "Russia's crude exports surged 41% from 33,451 kbd (W10) to 47,314 kbd (W11), capitalising on the Gulf supply vacuum. China (18,027 kbd) and India (10,021 kbd) dominated as refiners pivoted to discounted Urals and ESPO barrels.",
+    "Exports have since moderated to 28,658 kbd (W13), but European flows remain surprisingly strong -- Netherlands (1,767 kbd), France (1,078 kbd), Italy (1,059 kbd) continue importing despite sanctions, with 68% of Russian crude reportedly moving on shadow-fleet tankers.",
+    "The ESPO pipeline provides ~600 kbd of Hormuz-independent supply to China. Russia is the clearest strategic beneficiary of the Gulf crisis, with China absorbing 52% of Russian fossil fuel export revenue."
   ],
   "russia_lng": [
-    "Russia's LNG exports averaged 81 ktons/day in 2026-W13 (partial week, 6 days), down 38% from 2026-W12.",
-    "Top destinations: Japan 127 (26% ▲); Spain 74 (15% ▼); Belgium 73 (15%); South Korea 64 (13% ▲).",
-    "Current volumes are 26% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "Russia's LNG exports are steady at 485-779 ktons weekly, with Yamal and Arctic LNG-2 positioned to capture marginal Asian demand as Qatar's 77 Mtpa shutdown creates the largest LNG supply deficit in history.",
+    "Key markets are Spain (74-220 ktons), Belgium (73-147 ktons), France (74-221 ktons), and Japan (64-135 ktons). Asian spot demand for Russian cargoes is surging."
   ],
   "russia_lpg": [
-    "Russia's LPG exports averaged 0 ktons/day in 2026-W13 (partial week, 6 days), down 100% from 2026-W12."
+    "Minimal LPG exports from Russia (0-21 ktons), exclusively to Turkey when active. Russia's LPG share remains a small part of global trade."
   ],
   "russia_kero_jet": [
-    "No significant jet/kerosene exports recorded for Russia in recent weeks."
+    "No jet fuel exports from Russia across W10-W13."
   ],
   "russia_gasoil_diesel": [
-    "Russia's gasoil/diesel exports averaged 279 kbd/day in 2026-W13 (partial week, 6 days), down 68% from 2026-W12.",
-    "Top destinations: Turkey 349 (21% ▼); Egypt 262 (16% ▲); Togo 260 (16% ▲).",
-    "Current volumes are 65% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "Russia's gasoil/diesel exports fell sharply from 6,525 kbd (W11) to 1,675 kbd (W13). Despite crude exports surging, product exports are declining -- likely reflecting domestic fuel prioritisation or refinery constraints."
   ],
   "russia_gasoline": [
-    "No significant gasoline exports recorded for Russia in recent weeks."
+    "Russia's gasoline exports dropped to zero in W12-W13 from 263-269 kbd in W10-W11, consistent with Russia's seasonal domestic fuel priority and potential refinery maintenance."
   ],
   "russia_naphtha": [
-    "Russia's naphtha exports averaged 252 kbd/day in 2026-W13 (partial week, 6 days), down 48% from 2026-W12.",
-    "Top destinations: Turkey 321 (21% ▼).",
-    "Current volumes are 52% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "Russia's naphtha exports declined from 4,420 kbd (W11) to 1,514 kbd (W13), after initially surging to fill the Gulf naphtha gap. China is the primary beneficiary, with Russian naphtha replacing Qatari and Saudi volumes."
   ],
   "russia_sulphur": [
-    "Russia's sulphur exports averaged 13 ktons/day in 2026-W13 (partial week, 6 days), up 10% from 2026-W12.",
-    "Top destinations: China 78 (100% ▲).",
-    "Current volumes are 73% above the 4-week average — indicating a recovery or cargo bunching."
+    "Russia's sulphur exports are small but present (31-78 ktons), providing an alternative to Gulf sulphur that has gone offline with gas processing shutdowns across Qatar, UAE, and Saudi Arabia."
   ],
+
   "saudi_arabia_crude": [
-    "Saudi Arabia's crude oil exports averaged 4,519 kbd/day in 2026-W13 (partial week, 6 days), broadly flat versus the prior week.",
-    "Top destinations: China 7,706 (28% ▼); India 7,201 (27% ▲); Myanmar 2,010 (7%)."
+    "Saudi Arabia's crude exports dropped 39% from 44,659 kbd (W10) to 27,115 kbd (W13) as four major offshore fields remain shut since Mar 9, but the rerouting of crude via the East-West Pipeline to Yanbu has been the critical lifeline.",
+    "Yanbu loadings have surged 220% to ~2.2 mb/d, and the destination mix has concentrated dramatically around China (7,706 kbd), India (7,201 kbd), and Myanmar (2,010 kbd).",
+    "Egypt volumes dropped from 16,191 kbd (W10) to zero in W13, while South Korea and Japan have disappeared from Saudi supply -- these Hormuz-dependent routes are fully blocked.",
+    "The pipeline bypass strategy is working but cannot offset the ~20-25% production cut from offshore field closures. Watch for further Yanbu capacity constraints."
   ],
   "saudi_arabia_lng": [
-    "No significant LNG exports recorded for Saudi Arabia in recent weeks."
+    "No LNG exports from Saudi Arabia. The kingdom has no LNG export capacity -- the Jafurah unconventional gas development is in early construction. The conflict has underscored the strategic urgency to diversify beyond crude oil."
   ],
   "saudi_arabia_lpg": [
-    "Saudi Arabia's LPG exports averaged 4 ktons/day in 2026-W13 (partial week, 6 days), broadly flat versus the prior week.",
-    "Top destinations: India 23 (100%)."
+    "Saudi LPG exports have been curtailed to just 23 ktons (W12-W13, to India/Jordan) from zero in W10, reflecting reduced NGL throughput from offshore field closures and the Mar 2-13 Ras Tanura shutdown."
   ],
   "saudi_arabia_kero_jet": [
-    "Saudi Arabia's jet/kerosene exports averaged 0 kbd/day in 2026-W13 (partial week, 6 days), down 100% from 2026-W12."
+    "Saudi jet fuel exports dropped from 698 kbd (W10) to zero (W13), as the offshore field shutdowns reduce condensate feedstock for refinery kero/jet production."
   ],
   "saudi_arabia_gasoil_diesel": [
-    "Saudi Arabia's gasoil/diesel exports averaged 593 kbd/day in 2026-W13 (partial week, 6 days), broadly flat versus the prior week.",
-    "Top destinations: Egypt 762 (21% ▼); Belgium 744 (21% ▲); Pakistan 306 (9% ▲); Sudan 133 (4% ▲)."
+    "Saudi gasoil/diesel exports declined 32% from 5,201 kbd (W10) to 3,559 kbd (W13), still substantial -- suggesting Yanbu-accessible refinery capacity (Yanbu refinery, SAMREF) is maintaining product output for export."
   ],
   "saudi_arabia_gasoline": [
-    "Saudi Arabia's gasoline exports averaged 102 kbd/day in 2026-W13 (partial week, 6 days), down 68% from 2026-W12.",
-    "Top destinations: Kenya 313 (51% ▲); Singapore Republic 300 (49% ▼).",
-    "Current volumes are 52% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "Saudi gasoline exports have been volatile (1,565 to 963 to 1,924 to 613 kbd), trending down in W13 as the refinery throughput cuts from offshore field closures cascade into lighter product availability."
   ],
   "saudi_arabia_naphtha": [
-    "Saudi Arabia's naphtha exports averaged 85 kbd/day in 2026-W13 (partial week, 6 days), down 27% from 2026-W12.",
-    "Top destinations: Indonesia 510 (100% ▲)."
+    "Saudi naphtha exports surged from near-zero (94 kbd W10) to 837 kbd (W11) then moderated to 510 kbd (W13), likely reflecting Yanbu refinery condensate processing -- a product that was not historically a major Saudi export."
   ],
   "saudi_arabia_sulphur": [
-    "Saudi Arabia's sulphur exports averaged 0 ktons/day in 2026-W13 (partial week, 6 days), down 100% from 2026-W12."
+    "Saudi sulphur exports declined from 86 ktons (W11) to zero (W13) as gas processing throughput has been reduced alongside crude production cuts."
   ],
+
   "uae_crude": [
-    "Uae's crude oil exports averaged 3,205 kbd/day in 2026-W13 (partial week, 6 days), up 108% from 2026-W12.",
-    "Top destinations: India 5,595 (29% ▲); South Korea 3,850 (20% ▲); Japan 1,900 (10% ▲); Philippines 1,000 (5% ▲)."
+    "UAE crude exports fell from 22,343 kbd (W10) to a trough of 9,265 kbd (W12) before rebounding to 19,227 kbd (W13), driven by ADNOC's rerouting of residual exports via the 1 mb/d ADCOP pipeline to Fujairah.",
+    "India (5,595 kbd), South Korea (3,850 kbd), and Japan (1,900 kbd) were the key W13 destinations, with the Philippines (1,000 kbd) emerging as a new buyer.",
+    "The W12 trough coincided with reported drone attacks on Fujairah port disrupting loading operations. The W13 recovery suggests port operations have partially stabilised.",
+    "UAE output has fallen by more than half from pre-crisis levels, but the ADCOP pipeline makes the UAE one of only two Gulf producers (alongside Saudi Arabia) maintaining significant exports."
   ],
   "uae_lng": [
-    "No significant LNG exports recorded for Uae in recent weeks."
+    "UAE LNG exports from Das Island have collapsed from 63 ktons (W10, to India) to zero in W11-W13, as the Hormuz blockage forces operations to minimal capacity and the Habshan gas complex resumed only on Mar 23 after a 4-day emergency shutdown."
   ],
   "uae_lpg": [
-    "No significant LPG exports recorded for Uae in recent weeks."
+    "UAE LPG exports declined from 55 ktons (W10) to zero in W12-W13, as the Shah Gas Field remains shut and Ruwais Refinery-2 (a major NGL source) is offline after drone strikes."
   ],
   "uae_kero_jet": [
-    "No significant jet/kerosene exports recorded for Uae in recent weeks."
+    "No jet fuel exports from UAE across W10-W13."
   ],
   "uae_gasoil_diesel": [
-    "No significant gasoil/diesel exports recorded for Uae in recent weeks."
+    "UAE gasoil/diesel exports fell from 280-511 kbd (W10-W11) to zero in W12-W13, as refinery throughput has been sharply curtailed."
   ],
   "uae_gasoline": [
-    "No significant gasoline exports recorded for Uae in recent weeks."
+    "UAE gasoline exports went from 982 kbd (W10) to zero for W11-W13, reflecting the severe downstream impact of the Hormuz closure and facility damage on UAE's refining complex."
   ],
   "uae_naphtha": [
-    "Uae's naphtha exports averaged 54 kbd/day in 2026-W13 (partial week, 6 days), broadly flat versus the prior week.",
-    "Top destinations: Taiwan 323 (100% ▲).",
-    "Current volumes are 47% above the 4-week average — indicating a recovery or cargo bunching."
+    "UAE naphtha exports show an unusual pattern: 557 kbd (W10), zero (W11-W12), then 323 kbd (W13). The W13 recovery suggests Fujairah-accessible condensate processing has partially resumed."
   ],
   "uae_sulphur": [
-    "No significant sulphur exports recorded for Uae in recent weeks."
+    "No sulphur exports from UAE across W10-W13."
   ],
+
   "us_crude": [
-    "Us's crude oil exports averaged 4,332 kbd/day in 2026-W13 (partial week, 6 days), down 5% from 2026-W12.",
-    "Top destinations: Netherlands 3,500 (13% ▲); South Korea 3,344 (13% ▼); India 1,741 (7% ▲); Spain 1,406 (5% ▲)."
+    "US crude exports are running at maximum capacity at 25,556-27,503 kbd, making the US the primary non-Gulf crude supplier globally. The 172 mb SPR release (43% of IEA's 400 mb coordinated release) supplements commercial exports.",
+    "Key destinations include Netherlands (2,113-4,920 kbd), South Korea (810-5,647 kbd), UK (1,400-2,607 kbd), and India (1,207-1,741 kbd), with Taiwan and Thailand also pulling significant US barrels.",
+    "The breadth of destinations (15+ countries per week) reflects the US's role as the swing supplier backstopping the global crude market during the worst Gulf disruption in history."
   ],
   "us_lng": [
-    "Us's LNG exports averaged 367 ktons/day in 2026-W13 (partial week, 6 days), down 14% from 2026-W12.",
-    "Top destinations: Netherlands 285 (13% ▲); Thailand 240 (11% ▲); France 148 (7% ▼); Egypt 148 (7% ▲)."
+    "US LNG exports are the world's largest at 2,204-2,600 ktons weekly, providing the primary offset to Qatar's total shutdown. Sabine Pass, Freeport, and Plaquemines are running at maximum utilisation.",
+    "The customer base spans 15-20 countries per week, with Europe (Germany, France, Spain, Netherlands, Belgium) and Asia (Japan, South Korea, India, Thailand, Egypt, Turkey) competing for limited spot cargoes.",
+    "The ~20% global LNG supply gap from Qatar has driven Asian spot prices up ~39% and European gas up ~50%, creating enormous revenue upside for US LNG producers."
   ],
   "us_lpg": [
-    "Us's LPG exports averaged 174 ktons/day in 2026-W13 (partial week, 6 days), up 17% from 2026-W12.",
-    "Top destinations: Indonesia 80 (8% ▲); Mexico 71 (7% ▲); Japan 68 (7% ▼); Netherlands 61 (6% ▲)."
+    "US LPG exports are robust at 893-1,042 ktons weekly, distributed across 15-20 countries. Japan (68-237 ktons), Indonesia (23-80 ktons), and Mexico (48-121 ktons) are consistent buyers.",
+    "The US Gulf Coast has effectively replaced Middle Eastern NGL-linked LPG supply for most Asian importers, with the LPG-naphtha spread favouring increased US exports."
   ],
   "us_kero_jet": [
-    "Us's jet/kerosene exports averaged 265 kbd/day in 2026-W13 (partial week, 6 days), down 34% from 2026-W12.",
-    "Top destinations: United Kingdom 609 (38% ▲); Netherlands 302 (19% ▲); Costa Rica 152 (10% ▲); Panama 61 (4% ▲)."
+    "US jet fuel exports surged from 1,074 kbd (W10) to 2,424 kbd (W12) as the US fills global aviation fuel gaps. South Korea is a major destination alongside the usual Latin American and European buyers."
   ],
   "us_gasoil_diesel": [
-    "Us's gasoil/diesel exports averaged 1,380 kbd/day in 2026-W13 (partial week, 6 days), up 7% from 2026-W12.",
-    "Top destinations: Netherlands 2,802 (34% ▲); United Kingdom 903 (11% ▲); Mexico 425 (5% ▼); Peru 306 (4% ▲)."
+    "US gasoil/diesel exports are running at elevated levels of 6,360-8,405 kbd, with broad distribution to Latin America, Europe, and Asia. The US has become the global swing diesel supplier during the crisis."
   ],
   "us_gasoline": [
-    "Us's gasoline exports averaged 923 kbd/day in 2026-W13 (partial week, 6 days), up 6% from 2026-W12.",
-    "Top destinations: Mexico 1,066 (19% ▼); Colombia 426 (8% ▲); Australia 303 (5% ▼); Dominican Republic 300 (5% ▲)."
+    "US gasoline exports remain strong at 4,952-6,004 kbd, directed primarily to Latin America and West Africa. Demand pull from Africa has increased as Gulf gasoline supply (Kuwait, UAE, Saudi Arabia) has been curtailed."
   ],
   "us_naphtha": [
-    "Us's naphtha exports averaged 439 kbd/day in 2026-W13 (partial week, 6 days), down 49% from 2026-W12.",
-    "Top destinations: Venezuela 504 (19% ▼); Colombia 320 (12% ▲); Japan 227 (9% ▼)."
+    "US naphtha exports surged to 5,169 kbd in W12 before moderating to 2,631 kbd in W13. Asian and Latin American petrochemical sectors are increasingly dependent on US feedstock as Gulf naphtha dries up."
   ],
   "us_sulphur": [
-    "Us's sulphur exports averaged 0 ktons/day in 2026-W13 (partial week, 6 days), down 100% from 2026-W12."
+    "Minimal US sulphur exports (0-44 ktons), suggesting the global sulphur market is tightening as Gulf gas processing shutdowns reduce output."
   ],
+
   "australia_crude": [
-    "Australia's crude oil exports averaged 213 kbd/day in 2026-W13 (partial week, 6 days), down 41% from 2026-W12.",
-    "Top destinations: South Korea 743 (58% ▲).",
-    "Current volumes are 30% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "Australia's crude exports are modest at 1,277-2,178 kbd, directed to regional refineries in South Korea, Thailand, Indonesia, Singapore, and Brunei. Not a significant global swing supplier."
   ],
   "australia_lng": [
-    "Australia's LNG exports averaged 157 ktons/day in 2026-W13 (partial week, 6 days), down 43% from 2026-W12.",
-    "Top destinations: Japan 422 (45% ▲); China 143 (15% ▼); Thailand 139 (15% ▲); South Korea 104 (11% ▼).",
-    "Current volumes are 35% below the 4-week average — suggesting ongoing supply constraints or demand weakness."
+    "Australia has become the single most critical LNG supplier globally, with exports at 940-1,760 ktons weekly flowing to Japan (339-583 ktons), China (143-404 ktons), South Korea (104-343 ktons), and Taiwan (73-371 ktons).",
+    "With Qatar's 77 Mtpa offline, Australian LNG cargoes are commanding significant premiums. Exports surged 26% from W10 to W11 as operators maximised output, but have since tapered to 940 ktons in W13, suggesting facilities are near capacity limits.",
+    "Australia's LNG is now the single largest offset to the Qatar shutdown, and any operational disruption at NW Shelf, Gorgon, or Wheatstone would have immediate global price impact."
   ],
   "australia_lpg": [
-    "Australia's LPG exports averaged 0 ktons/day in 2026-W13 (partial week, 6 days), down 100% from 2026-W12."
+    "Australia's LPG exports are negligible (0-45 ktons) and directed to China when active."
   ],
   "australia_kero_jet": [
-    "No significant jet/kerosene exports recorded for Australia in recent weeks."
+    "No jet fuel exports from Australia across W10-W13."
   ],
   "australia_gasoil_diesel": [
-    "No significant gasoil/diesel exports recorded for Australia in recent weeks."
+    "No gasoil/diesel exports from Australia across W10-W13."
   ],
   "australia_gasoline": [
-    "No significant gasoline exports recorded for Australia in recent weeks."
+    "No gasoline exports from Australia across W10-W13."
   ],
   "australia_naphtha": [
-    "Australia's naphtha exports averaged 58 kbd/day in 2026-W13 (partial week, 6 days), broadly flat versus the prior week.",
-    "Top destinations: Malaysia 345 (100% ▲).",
-    "Current volumes are 100% above the 4-week average — indicating a recovery or cargo bunching."
+    "Small, intermittent naphtha exports from Australia (345 kbd in W11 and W13), reflecting limited condensate-based output."
   ],
   "australia_sulphur": [
-    "No significant sulphur exports recorded for Australia in recent weeks."
+    "No sulphur exports from Australia across W10-W13."
   ]
 }
