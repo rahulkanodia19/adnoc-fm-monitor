@@ -47,6 +47,7 @@ For each dataset key in `flow-summary.json`, write 2-4 insight bullets.
 ### Writing rules
 
 - **Natural language** — write like a senior analyst, not a template
+- **Date ranges, never week numbers** — use "17–23 Mar" (from `start`/`end` fields), NEVER "W13" or "Week 13". A CEO should immediately understand the time period.
 - **Specific numbers** — "14,142 kbd" not "increased significantly"
 - **Causal** — "Saudi Arabia absent this week due to active FM since Mar 4" not just "Saudi Arabia dropped out"
 - **Forward-looking** — trajectory, risks, what to watch

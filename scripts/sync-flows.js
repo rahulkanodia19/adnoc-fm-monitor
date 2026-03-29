@@ -572,7 +572,7 @@ async function main() {
         const gulfShare = w._t > 0 ? Math.round(gulfTotal / w._t * 1000) / 10 : 0;
         const sorted = Object.entries(allCountries).sort((a, b) => b[1] - a[1]);
         return {
-          period: w.p, total: Math.round(w._t), days: w.d,
+          period: w.p, start: w.s, end: w.e, total: Math.round(w._t), days: w.d,
           allCountries, gulfTotal: Math.round(gulfTotal), gulfShare,
           top5: sorted.slice(0, 5).map(([name]) => name),
         };
