@@ -17,7 +17,10 @@
     "Russian Federation": 757,
     "Saudi Arabia": 787,
     "United Arab Emirates": 943,
-    "United States": 947
+    "United States": 947,
+    "Australia": 65,
+    "EU-27": 113302,
+    "Taiwan": 899
   },
   "products": {
     "crude": 1370,

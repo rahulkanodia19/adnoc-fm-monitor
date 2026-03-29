@@ -17,6 +17,7 @@
   const IMPORT_COUNTRIES = [
     { key: 'china', label: 'China' }, { key: 'india', label: 'India' }, { key: 'japan', label: 'Japan' },
     { key: 'south_korea', label: 'S. Korea' }, { key: 'thailand', label: 'Thailand' }, { key: 'vietnam', label: 'Vietnam' },
+    { key: 'eu_27', label: 'EU-27' }, { key: 'united_states', label: 'United States' }, { key: 'taiwan', label: 'Taiwan' },
   ];
   const COMMODITIES_META = [
     { key: 'crude', label: 'Crude', unit: 'mbbl' },
@@ -299,7 +300,8 @@
         <div class="flex flex-wrap items-center justify-between gap-2">
           <div class="flex flex-wrap items-center gap-2">
             ${renderToggle('Importer', 'country', [
-              ['india', 'India'], ['china', 'China'], ['japan', 'Japan'], ['south_korea', 'S. Korea'], ['thailand', 'Thailand'], ['vietnam', 'Vietnam']
+              ['india', 'India'], ['china', 'China'], ['japan', 'Japan'], ['south_korea', 'S. Korea'], ['thailand', 'Thailand'], ['vietnam', 'Vietnam'],
+              ['eu_27', 'EU-27'], ['united_states', 'US'], ['taiwan', 'Taiwan']
             ])}
             ${renderToggle('Commodity', 'commodity', [
               ['crude', 'Crude'], ['lng', 'LNG'], ['lpg', 'LPG'],

@@ -45,11 +45,11 @@ const UNIT_CONV = {
 // Dataset definitions — all imports and exports
 // 8 commodities per country: crude, lng, lpg, kero_jet, gasoil_diesel, gasoline, naphtha, sulphur
 const COMMODITIES = ['crude', 'lng', 'lpg', 'kero_jet', 'gasoil_diesel', 'gasoline', 'naphtha', 'sulphur'];
-const IMPORT_COUNTRIES = ['China', 'India', 'Japan', 'South Korea', 'Thailand', 'Vietnam'];
+const IMPORT_COUNTRIES = ['China', 'India', 'Japan', 'South Korea', 'Thailand', 'Vietnam', 'EU-27', 'United States', 'Taiwan'];
 
 const IMPORT_DATASETS = [];
 for (const country of IMPORT_COUNTRIES) {
-  const prefix = country.toLowerCase().replace(/ /g, '_');
+  const prefix = country.toLowerCase().replace(/[ -]/g, '_');
   for (const commodity of COMMODITIES) {
     IMPORT_DATASETS.push({ key: `${prefix}_${commodity}`, country, commodity });
   }
@@ -59,6 +59,7 @@ const EXPORT_COUNTRIES_MAP = {
   'Bahrain': 'bahrain', 'Iran': 'iran', 'Iraq': 'iraq', 'Kuwait': 'kuwait',
   'Oman': 'oman', 'Qatar': 'qatar', 'Russian Federation': 'russia',
   'Saudi Arabia': 'saudi_arabia', 'United Arab Emirates': 'uae', 'United States': 'us',
+  'Australia': 'australia', 'EU-27': 'eu_27',
 };
 
 const EXPORT_DATASETS = [];
@@ -87,6 +88,57 @@ if (!TOKEN && fs.existsSync(TOKEN_PATH)) {
 if (!TOKEN) {
   console.error('ERROR: Set KPLER_ACCESS_TOKEN env var or save token to soh-data/.token.txt');
   process.exit(1);
+}
+
+// ---------- Token refresh via Chrome DevTools Protocol ----------
+
+async function refreshToken() {
+  try {
+    const http = require('http');
+    let WebSocket;
+    try { WebSocket = require('ws'); } catch { console.log('  ws module not available, cannot refresh token'); return false; }
+
+    const pages = await new Promise((resolve, reject) => {
+      http.get('http://127.0.0.1:9222/json', res => {
+        let data = '';
+        res.on('data', d => data += d);
+        res.on('end', () => resolve(JSON.parse(data)));
+      }).on('error', reject);
+    });
+
+    const page = pages.find(p => p.url.includes('kpler.com')) || pages[0];
+    if (!page) { console.log('  No Kpler page found in Chrome'); return false; }
+
+    const ws = new WebSocket(page.webSocketDebuggerUrl);
+    await new Promise(r => ws.on('open', r));
+
+    const newToken = await new Promise((resolve, reject) => {
+      ws.send(JSON.stringify({
+        id: 1, method: 'Runtime.evaluate',
+        params: {
+          expression: 'JSON.parse(localStorage.getItem("@@auth0spajs@@::0LglhXfJvfepANl3HqVT9i1U0OwV0gSP::https://terminal.kpler.com::openid profile email offline_access")).body.access_token',
+          returnByValue: true
+        }
+      }));
+      ws.on('message', m => {
+        const d = JSON.parse(m);
+        if (d.id === 1 && d.result?.result?.value) resolve(d.result.result.value);
+      });
+      setTimeout(() => reject(new Error('Timeout')), 10000);
+    });
+    ws.close();
+
+    if (newToken && newToken.length > 100) {
+      TOKEN = newToken;
+      fs.writeFileSync(TOKEN_PATH, newToken);
+      console.log('  Token refreshed successfully');
+      return true;
+    }
+    return false;
+  } catch (e) {
+    console.log('  Token refresh failed:', e.message);
+    return false;
+  }
 }
 
 // ---------- HTTP ----------
@@ -401,8 +453,20 @@ async function main() {
       failures++;
       console.error(`  [${success + failures}/${totalDatasets}] ✗ ${def.key}: ${e.message}`);
       if (e.message === 'TOKEN_EXPIRED') {
-        console.error('\nToken expired. Refresh token and retry.');
-        process.exit(2);
+        console.log('  Token expired, refreshing...');
+        const refreshed = await refreshToken();
+        if (refreshed) {
+          // Retry this dataset
+          try {
+            const body2 = buildFlowsRequest(def, 'import');
+            const apiData2 = await kplerPost('/api/flows', body2);
+            importData[def.key] = transformResponse(apiData2, def.commodity);
+            failures--; success++;
+            console.log(`  [${success}/${totalDatasets}] ✓ ${def.key} (retry succeeded)`);
+          } catch (e2) { console.error(`  Retry failed: ${e2.message}`); }
+        } else {
+          console.error('  Could not refresh token. Continuing with remaining datasets...');
+        }
       }
     }
     await sleep(500); // Rate limiting
@@ -423,8 +487,19 @@ async function main() {
       failures++;
       console.error(`  [${success + failures}/${totalDatasets}] ✗ ${def.key}: ${e.message}`);
       if (e.message === 'TOKEN_EXPIRED') {
-        console.error('\nToken expired. Refresh token and retry.');
-        process.exit(2);
+        console.log('  Token expired, refreshing...');
+        const refreshed = await refreshToken();
+        if (refreshed) {
+          try {
+            const body2 = buildFlowsRequest(def, 'export');
+            const apiData2 = await kplerPost('/api/flows', body2);
+            exportData[def.key] = transformResponse(apiData2, def.commodity);
+            failures--; success++;
+            console.log(`  [${success}/${totalDatasets}] ✓ ${def.key} (retry succeeded)`);
+          } catch (e2) { console.error(`  Retry failed: ${e2.message}`); }
+        } else {
+          console.error('  Could not refresh token. Continuing...');
+        }
       }
     }
     await sleep(500);

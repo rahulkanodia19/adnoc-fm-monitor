@@ -19,6 +19,7 @@
     { key: 'kuwait', label: 'Kuwait' }, { key: 'oman', label: 'Oman' }, { key: 'qatar', label: 'Qatar' },
     { key: 'russia', label: 'Russia' }, { key: 'saudi_arabia', label: 'Saudi Arabia' },
     { key: 'uae', label: 'UAE' }, { key: 'us', label: 'United States' },
+    { key: 'australia', label: 'Australia' }, { key: 'eu_27', label: 'EU-27' },
   ];
   const COMMODITIES_META = [
     { key: 'crude', label: 'Crude', unit: 'mbbl' },
@@ -310,7 +311,7 @@
       ['kuwait', 'Kuwait'], ['oman', 'Oman'], ['qatar', 'Qatar'],
       ['saudi_arabia', 'Saudi'], ['uae', 'UAE'],
     ];
-    const other = [['russia', 'Russia'], ['us', 'US']];
+    const other = [['russia', 'Russia'], ['us', 'US'], ['australia', 'Australia'], ['eu_27', 'EU-27']];
 
     function btn(v, text) {
       return `<button data-control="exporter" data-value="${v}"
