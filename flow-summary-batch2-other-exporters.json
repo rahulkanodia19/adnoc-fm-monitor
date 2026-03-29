@@ -1,0 +1,2986 @@
+{
+  "eu_27_crude": {
+    "direction": "export",
+    "country": "EU-27",
+    "commodity": "crude",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 3047,
+        "days": 7,
+        "allCountries": {
+          "Finland": 598.5,
+          "Brazil": 2132.3,
+          "Turkey": 124.6
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Brazil",
+          "Finland",
+          "Turkey"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 1384,
+        "days": 7,
+        "allCountries": {
+          "Belgium": 7.4,
+          "Finland": 598.5,
+          "United Kingdom": 777.9
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "United Kingdom",
+          "Finland",
+          "Belgium"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 324,
+        "days": 7,
+        "allCountries": {
+          "Turkey": 323.8
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Turkey"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 1006,
+        "days": 6,
+        "allCountries": {
+          "Netherlands": 407.2,
+          "Finland": 598.5
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Finland",
+          "Netherlands"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -67,
+    "topGainerName": "Netherlands",
+    "topGainerDelta": 407,
+    "topLoserName": "Brazil",
+    "topLoserDelta": -2132,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Brazil",
+      "Turkey"
+    ],
+    "supplierAppeared": [
+      "Netherlands"
+    ]
+  },
+  "eu_27_lpg": {
+    "direction": "export",
+    "country": "EU-27",
+    "commodity": "lpg",
+    "unit": "ktons",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 32,
+        "days": 7,
+        "allCountries": {
+          "Ireland": 2.7,
+          "Netherlands": 1.4,
+          "Spain": 4.5,
+          "Lebanon": 4.6,
+          "Denmark": 1.9,
+          "Poland": 10.5,
+          "Turkey": 3.6,
+          "Belgium": 0.8
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Poland",
+          "Lebanon",
+          "Spain",
+          "Turkey",
+          "Ireland"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 16,
+        "days": 7,
+        "allCountries": {
+          "Morocco": 1.6,
+          "Poland": 12.4,
+          "United Kingdom": 1.8
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Poland",
+          "United Kingdom",
+          "Morocco"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 20,
+        "days": 7,
+        "allCountries": {
+          "Ireland": 2,
+          "Portugal": 1.9,
+          "Germany": 2,
+          "Italy": 2.7,
+          "Poland": 11.1
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Poland",
+          "Italy",
+          "Ireland",
+          "Germany",
+          "Portugal"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 12,
+        "days": 6,
+        "allCountries": {
+          "Poland": 6.9,
+          "Ireland": 4.4,
+          "France": 0.8
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Poland",
+          "Ireland",
+          "France"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -62.5,
+    "topGainerName": "Ireland",
+    "topGainerDelta": 2,
+    "topLoserName": "Lebanon",
+    "topLoserDelta": -5,
+    "activeFMs": [
+      "France",
+      "Germany",
+      "Denmark"
+    ],
+    "supplierDisappeared": [
+      "Lebanon",
+      "Spain",
+      "Turkey"
+    ],
+    "supplierAppeared": [
+      "France"
+    ]
+  },
+  "eu_27_kero_jet": {
+    "direction": "export",
+    "country": "EU-27",
+    "commodity": "kero_jet",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 483,
+        "days": 7,
+        "allCountries": {
+          "United Kingdom": 322.2,
+          "Albania": 27.6,
+          "Denmark": 133
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "United Kingdom",
+          "Denmark",
+          "Albania"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 1025,
+        "days": 7,
+        "allCountries": {
+          "Spain": 270.7,
+          "United Kingdom": 269.9,
+          "Belgium": 128.4,
+          "France": 355.6
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "France",
+          "Spain",
+          "United Kingdom",
+          "Belgium"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 621,
+        "days": 7,
+        "allCountries": {
+          "Norway": 49.2,
+          "Cyprus": 117.9,
+          "Albania": 71.8,
+          "Spain": 175.3,
+          "Malta": 37.3,
+          "South Africa": 169.4
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Spain",
+          "South Africa",
+          "Cyprus",
+          "Albania",
+          "Norway"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 69,
+        "days": 6,
+        "allCountries": {
+          "United Kingdom": 69.1
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "United Kingdom"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -85.7,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "United Kingdom",
+    "topLoserDelta": -253,
+    "activeFMs": [
+      "France",
+      "Denmark"
+    ],
+    "supplierDisappeared": [
+      "Denmark",
+      "Albania"
+    ],
+    "supplierAppeared": []
+  },
+  "eu_27_gasoil_diesel": {
+    "direction": "export",
+    "country": "EU-27",
+    "commodity": "gasoil_diesel",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 5267,
+        "days": 7,
+        "allCountries": {
+          "Germany": 781.4,
+          "Spain": 240.1,
+          "Lithuania": 113.6,
+          "Morocco": 112.7,
+          "Portugal": 276.7,
+          "United Kingdom": 966.5,
+          "Georgia": 103.9,
+          "Norway": 211.3,
+          "Guinea": 117.5,
+          "Poland": 587,
+          "Romania": 411.8,
+          "Finland": 52.9,
+          "Netherlands": 33.7,
+          "Ukraine": 52.1,
+          "Ireland": 113,
+          "Egypt": 120.6,
+          "Latvia": 110.5,
+          "Turkey": 97.3,
+          "Croatia": 268.5,
+          "Denmark": 43.5,
+          "Sierra Leone": 84.9,
+          "Slovenia": 265.9
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "United Kingdom",
+          "Germany",
+          "Poland",
+          "Romania",
+          "Portugal"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 7696,
+        "days": 7,
+        "allCountries": {
+          "Germany": 469.1,
+          "Italy": 165.1,
+          "Libya": 447.7,
+          "Morocco": 461,
+          "Netherlands": 40.8,
+          "Poland": 1713.5,
+          "Spain": 327.4,
+          "United Kingdom": 595.8,
+          "Norway": 234.6,
+          "Croatia": 434.7,
+          "Finland": 147.5,
+          "Malta": 528.8,
+          "Nigeria": 231.3,
+          "Slovenia": 279.7,
+          "Lebanon": 208,
+          "France": 132.2,
+          "Sweden": 50.9,
+          "Bulgaria": 52.2,
+          "Denmark": 130.9,
+          "Romania": 262.4,
+          "Portugal": 70.9,
+          "Guinea": 134.8,
+          "Ireland": 52.2,
+          "Mauritania": 210.6
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Poland",
+          "United Kingdom",
+          "Malta",
+          "Germany",
+          "Morocco"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 7600,
+        "days": 7,
+        "allCountries": {
+          "Finland": 105.6,
+          "United Kingdom": 1430.7,
+          "Ireland": 201.4,
+          "Morocco": 383.5,
+          "Germany": 144.9,
+          "Slovenia": 458.7,
+          "Spain": 279,
+          "Latvia": 117.8,
+          "Sweden": 38.9,
+          "Western Sahara": 28.1,
+          "Croatia": 279.1,
+          "Egypt": 92.9,
+          "Lebanon": 113.1,
+          "Libya": 264.8,
+          "Poland": 902.9,
+          "Romania": 544.1,
+          "Cyprus": 259.8,
+          "France": 265,
+          "Lithuania": 118.7,
+          "Estonia": 133.3,
+          "Malta": 37.3,
+          "Netherlands": 29.3,
+          "Norway": 104.1,
+          "Ukraine": 22.4
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "United Kingdom",
+          "Poland",
+          "Romania",
+          "Slovenia",
+          "Morocco"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 2582,
+        "days": 6,
+        "allCountries": {
+          "Croatia": 543.6,
+          "Ireland": 295.1,
+          "Slovenia": 355.5,
+          "Georgia": 33.8,
+          "Mauritania": 25.9,
+          "Netherlands": 29.3,
+          "Turkey": 97.8,
+          "Belgium": 24.9,
+          "Italy": 169.2,
+          "Poland": 345.4,
+          "Spain": 38.5,
+          "Denmark": 110.4,
+          "Sweden": 78.1,
+          "France": 162.7,
+          "Latvia": 132.2
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Croatia",
+          "Slovenia",
+          "Poland",
+          "Ireland",
+          "Italy"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -51,
+    "topGainerName": "Croatia",
+    "topGainerDelta": 275,
+    "topLoserName": "United Kingdom",
+    "topLoserDelta": -966,
+    "activeFMs": [
+      "France",
+      "Germany",
+      "Denmark"
+    ],
+    "supplierDisappeared": [
+      "United Kingdom",
+      "Germany",
+      "Romania",
+      "Portugal"
+    ],
+    "supplierAppeared": [
+      "Croatia",
+      "Slovenia",
+      "Ireland",
+      "Italy"
+    ]
+  },
+  "eu_27_gasoline": {
+    "direction": "export",
+    "country": "EU-27",
+    "commodity": "gasoline",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 6555,
+        "days": 7,
+        "allCountries": {
+          "Canada": 316.8,
+          "Belgium": 476.3,
+          "Namibia": 289.8,
+          "Portugal": 71.4,
+          "United Kingdom": 294.6,
+          "United States": 430.9,
+          "Libya": 912.1,
+          "Netherlands": 509.5,
+          "Finland": 158.6,
+          "France": 339.2,
+          "Morocco": 35,
+          "Puerto Rico": 172.7,
+          "Spain": 190.5,
+          "Poland": 253.8,
+          "Cyprus": 183,
+          "Germany": 125.8,
+          "Ghana": 282,
+          "Guinea": 84.9,
+          "Latvia": 74.8,
+          "Senegal": 156.7,
+          "Togo": 156.7,
+          "Mauritania": 12.5
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Libya",
+          "Netherlands",
+          "Belgium",
+          "United States",
+          "France"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 7861,
+        "days": 7,
+        "allCountries": {
+          "France": 219.6,
+          "Libya": 777.6,
+          "Netherlands": 229.2,
+          "Cyprus": 397.3,
+          "Finland": 114.1,
+          "Italy": 74.5,
+          "Saudi Arabia": 521.5,
+          "Tunisia": 74.5,
+          "Lebanon": 464.3,
+          "Belgium": 147.5,
+          "South Africa": 357.3,
+          "Spain": 160.4,
+          "United Kingdom": 270.2,
+          "United States Virgin Islands": 344.1,
+          "Puerto Rico": 332,
+          "Poland": 138.2,
+          "Brazil": 159.9,
+          "Egypt": 543.2,
+          "Georgia": 331.3,
+          "Morocco": 319.9,
+          "Canada": 123.5,
+          "Slovenia": 74.6,
+          "Germany": 70.5,
+          "Latvia": 134.4,
+          "Nigeria": 342.8,
+          "Portugal": 35.5,
+          "Saint Lucia": 345.4
+        },
+        "gulfTotal": 522,
+        "gulfShare": 6.6,
+        "top5": [
+          "Libya",
+          "Egypt",
+          "Saudi Arabia",
+          "Lebanon",
+          "Cyprus"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 8570,
+        "days": 7,
+        "allCountries": {
+          "Belgium": 68.8,
+          "Georgia": 62.9,
+          "Kenya": 775.7,
+          "Lebanon": 129.8,
+          "Netherlands": 690,
+          "South Africa": 686.8,
+          "Italy": 295.3,
+          "Nigeria": 643.1,
+          "Ghana": 690.8,
+          "Latvia": 237.2,
+          "United Kingdom": 691.5,
+          "United States": 634.4,
+          "France": 174.7,
+          "Morocco": 291.9,
+          "Egypt": 160.6,
+          "Spain": 215.4,
+          "Poland": 64.2,
+          "Slovenia": 36.7,
+          "Canada": 313.3,
+          "Libya": 243.8,
+          "Liberia": 345.4
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Kenya",
+          "United Kingdom",
+          "Ghana",
+          "Netherlands",
+          "South Africa"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 6867,
+        "days": 6,
+        "allCountries": {
+          "United Kingdom": 244.3,
+          "France": 214.5,
+          "Mauritania": 318.9,
+          "Finland": 70.4,
+          "Morocco": 346.8,
+          "Spain": 413.5,
+          "Tunisia": 273,
+          "Ghana": 345.4,
+          "Libya": 281.9,
+          "Netherlands": 81.5,
+          "Puerto Rico": 216,
+          "Canada": 237,
+          "Senegal": 345.4,
+          "United States": 208.6
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Spain",
+          "Morocco",
+          "Ghana",
+          "Senegal",
+          "Mauritania"
+        ]
+      }
+    ],
+    "fourWeekTrend": "flat",
+    "fourWeekChangePct": 4.8,
+    "topGainerName": "Morocco",
+    "topGainerDelta": 312,
+    "topLoserName": "Libya",
+    "topLoserDelta": -630,
+    "activeFMs": [
+      "France",
+      "Germany"
+    ],
+    "supplierDisappeared": [
+      "Libya",
+      "Netherlands",
+      "Belgium",
+      "United States",
+      "France"
+    ],
+    "supplierAppeared": [
+      "Spain",
+      "Morocco",
+      "Ghana",
+      "Senegal",
+      "Mauritania"
+    ]
+  },
+  "eu_27_naphtha": {
+    "direction": "export",
+    "country": "EU-27",
+    "commodity": "naphtha",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 2064,
+        "days": 7,
+        "allCountries": {
+          "Belgium": 817.4,
+          "Netherlands": 531.5,
+          "Norway": 34.3,
+          "Argentina": 176.4,
+          "Germany": 35.2,
+          "Spain": 34.5
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Belgium",
+          "Netherlands",
+          "Argentina",
+          "Germany",
+          "Spain"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 2888,
+        "days": 7,
+        "allCountries": {
+          "Belgium": 164.2,
+          "China": 511.3,
+          "Finland": 121.2,
+          "France": 69.4,
+          "United Kingdom": 177,
+          "Italy": 420,
+          "Netherlands": 173.1,
+          "Brazil": 512,
+          "Taiwan": 319.2,
+          "Bahamas": 345.4,
+          "Sweden": 74.9
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Brazil",
+          "China",
+          "Italy",
+          "Bahamas",
+          "Taiwan"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 2959,
+        "days": 7,
+        "allCountries": {
+          "Belgium": 647.3,
+          "Cyprus": 35.4,
+          "Spain": 1259.9,
+          "Sweden": 21.7,
+          "Latvia": 133.3,
+          "France": 263.3,
+          "Japan": 352,
+          "United Kingdom": 24.5,
+          "United States": 110.7
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Spain",
+          "Belgium",
+          "Japan",
+          "France",
+          "Latvia"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 1409,
+        "days": 6,
+        "allCountries": {
+          "Italy": 501.8,
+          "China": 345.4,
+          "Germany": 282
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Italy",
+          "China",
+          "Germany"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -31.7,
+    "topGainerName": "Italy",
+    "topGainerDelta": 502,
+    "topLoserName": "Belgium",
+    "topLoserDelta": -817,
+    "activeFMs": [
+      "France",
+      "China",
+      "Taiwan",
+      "Germany"
+    ],
+    "supplierDisappeared": [
+      "Belgium",
+      "Netherlands",
+      "Argentina",
+      "Spain"
+    ],
+    "supplierAppeared": [
+      "Italy",
+      "China"
+    ]
+  },
+  "russia_crude": {
+    "direction": "export",
+    "country": "Russia",
+    "commodity": "crude",
+    "unit": "kbd",
+    "hasPipeline": true,
+    "pipelineNote": "Includes ESPO pipeline (~600 kbd) to China",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 33451,
+        "days": 7,
+        "allCountries": {
+          "China": 12051.4,
+          "India": 7549.7,
+          "Egypt": 721.3,
+          "Netherlands": 1791.4,
+          "Israel": 1084,
+          "South Korea": 1061.4,
+          "Singapore Republic": 576.3,
+          "Bulgaria": 980.8,
+          "France": 763.1,
+          "Italy": 766.4,
+          "Greece": 1061.4
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "China",
+          "India",
+          "Netherlands",
+          "Israel",
+          "South Korea"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 47314,
+        "days": 7,
+        "allCountries": {
+          "China": 18027.1,
+          "Cuba": 730,
+          "India": 10020.6,
+          "Israel": 737.4,
+          "Italy": 4802.5,
+          "Turkey": 1040.4,
+          "France": 3183.2,
+          "Netherlands": 1499.3,
+          "Spain": 616.9,
+          "South Korea": 1007.3,
+          "Romania": 621.9
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "China",
+          "India",
+          "Italy",
+          "France",
+          "Netherlands"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 45537,
+        "days": 7,
+        "allCountries": {
+          "India": 8502.2,
+          "Turkey": 3630.3,
+          "Italy": 3189.3,
+          "Netherlands": 3047.2,
+          "Philippines": 1482.8,
+          "China": 10414.5,
+          "Greece": 1067.3,
+          "South Korea": 1011.5,
+          "Croatia": 1057.7,
+          "France": 2118.7
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "China",
+          "India",
+          "Turkey",
+          "Italy",
+          "Netherlands"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 28658,
+        "days": 6,
+        "allCountries": {
+          "China": 6953.9,
+          "Hong Kong": 509.5,
+          "India": 2726.6,
+          "Netherlands": 1767,
+          "France": 1078.1,
+          "Italy": 1059.2,
+          "Turkey": 2162.9,
+          "Azerbaijan": 89.7,
+          "Georgia": 628.1
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "China",
+          "India",
+          "Turkey",
+          "Netherlands",
+          "France"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -14.3,
+    "topGainerName": "Turkey",
+    "topGainerDelta": 2163,
+    "topLoserName": "China",
+    "topLoserDelta": -5097,
+    "activeFMs": [
+      "France",
+      "China",
+      "Israel",
+      "India",
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "Israel",
+      "South Korea"
+    ],
+    "supplierAppeared": [
+      "Turkey",
+      "France"
+    ]
+  },
+  "russia_lng": {
+    "direction": "export",
+    "country": "Russia",
+    "commodity": "lng",
+    "unit": "ktons",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 779,
+        "days": 7,
+        "allCountries": {
+          "Spain": 220.4,
+          "China": 61.4,
+          "Belgium": 147,
+          "France": 73.6,
+          "Japan": 63.6,
+          "Netherlands": 73.4,
+          "South Korea": 63.7
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Spain",
+          "Belgium",
+          "France",
+          "Netherlands",
+          "South Korea"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 567,
+        "days": 7,
+        "allCountries": {
+          "China": 64.3,
+          "France": 220.5,
+          "Japan": 135.3,
+          "Spain": 73.4,
+          "Belgium": 73.6
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "France",
+          "Japan",
+          "Belgium",
+          "Spain",
+          "China"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 776,
+        "days": 7,
+        "allCountries": {
+          "China": 194.2,
+          "Spain": 147,
+          "France": 73.6,
+          "South Korea": 63.7,
+          "Netherlands": 73.6,
+          "Belgium": 73.4
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "China",
+          "Spain",
+          "France",
+          "Netherlands",
+          "Belgium"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 485,
+        "days": 6,
+        "allCountries": {
+          "Spain": 73.6,
+          "Belgium": 73.4,
+          "Japan": 127,
+          "South Korea": 63.7
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Japan",
+          "Spain",
+          "Belgium",
+          "South Korea"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -37.7,
+    "topGainerName": "Japan",
+    "topGainerDelta": 63,
+    "topLoserName": "Spain",
+    "topLoserDelta": -147,
+    "activeFMs": [
+      "France",
+      "China",
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "France",
+      "Netherlands"
+    ],
+    "supplierAppeared": [
+      "Japan"
+    ]
+  },
+  "russia_lpg": {
+    "direction": "export",
+    "country": "Russia",
+    "commodity": "lpg",
+    "unit": "ktons",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 0,
+        "days": 7,
+        "allCountries": {},
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": []
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 19,
+        "days": 7,
+        "allCountries": {
+          "Turkey": 19.3
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Turkey"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 21,
+        "days": 7,
+        "allCountries": {
+          "Turkey": 20.8
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Turkey"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 0,
+        "days": 6,
+        "allCountries": {},
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": []
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
+  },
+  "russia_gasoil_diesel": {
+    "direction": "export",
+    "country": "Russia",
+    "commodity": "gasoil_diesel",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 5610,
+        "days": 7,
+        "allCountries": {
+          "Turkey": 2043,
+          "Ivory Coast": 200,
+          "Ghana": 425.3,
+          "Sudan": 276.1,
+          "Brazil": 1156.5,
+          "Egypt": 135.3,
+          "Tunisia": 99.6,
+          "Senegal": 275
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Turkey",
+          "Brazil",
+          "Ghana",
+          "Sudan",
+          "Senegal"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 6525,
+        "days": 7,
+        "allCountries": {
+          "Egypt": 1268.9,
+          "Turkey": 2876.3,
+          "Ghana": 231.3,
+          "Morocco": 313.4,
+          "Togo": 345.4,
+          "Sudan": 223.8,
+          "Brazil": 447.7
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Turkey",
+          "Egypt",
+          "Brazil",
+          "Togo",
+          "Morocco"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 5184,
+        "days": 7,
+        "allCountries": {
+          "Turkey": 2331.8,
+          "Brazil": 993.6,
+          "Ghana": 298.5,
+          "Morocco": 373.1,
+          "Benin": 351.7,
+          "Taiwan": 298.5
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Turkey",
+          "Brazil",
+          "Morocco",
+          "Benin",
+          "Ghana"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 1675,
+        "days": 6,
+        "allCountries": {
+          "Turkey": 349.3,
+          "Egypt": 261.8,
+          "Togo": 260.2
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Turkey",
+          "Egypt",
+          "Togo"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -70.1,
+    "topGainerName": "Togo",
+    "topGainerDelta": 260,
+    "topLoserName": "Turkey",
+    "topLoserDelta": -1694,
+    "activeFMs": [
+      "Taiwan"
+    ],
+    "supplierDisappeared": [
+      "Brazil",
+      "Ghana",
+      "Sudan",
+      "Senegal"
+    ],
+    "supplierAppeared": [
+      "Egypt",
+      "Togo"
+    ]
+  },
+  "russia_naphtha": {
+    "direction": "export",
+    "country": "Russia",
+    "commodity": "naphtha",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 3925,
+        "days": 7,
+        "allCountries": {
+          "China": 1336,
+          "Senegal": 268.2,
+          "Brazil": 225.6,
+          "India": 321,
+          "Turkey": 589.9,
+          "South Korea": 234.2
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "China",
+          "Turkey",
+          "India",
+          "Senegal",
+          "South Korea"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 4420,
+        "days": 7,
+        "allCountries": {
+          "China": 1619.4,
+          "India": 1083.7,
+          "Italy": 36.3,
+          "Morocco": 47.6,
+          "Spain": 125.9,
+          "Brazil": 97.5,
+          "Egypt": 494.5
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "China",
+          "India",
+          "Egypt",
+          "Spain",
+          "Brazil"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 2885,
+        "days": 7,
+        "allCountries": {
+          "China": 510.7,
+          "India": 263.6,
+          "Indonesia": 321,
+          "Brazil": 607.2,
+          "Turkey": 347.4,
+          "Morocco": 338
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Brazil",
+          "China",
+          "Turkey",
+          "Morocco",
+          "Indonesia"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 1514,
+        "days": 6,
+        "allCountries": {
+          "Turkey": 320.6
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Turkey"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -61.4,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "China",
+    "topLoserDelta": -1336,
+    "activeFMs": [
+      "China",
+      "India",
+      "South Korea",
+      "Indonesia"
+    ],
+    "supplierDisappeared": [
+      "China",
+      "India",
+      "Senegal",
+      "South Korea"
+    ],
+    "supplierAppeared": []
+  },
+  "russia_sulphur": {
+    "direction": "export",
+    "country": "Russia",
+    "commodity": "sulphur",
+    "unit": "ktons",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 31,
+        "days": 7,
+        "allCountries": {
+          "Brazil": 31.2
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Brazil"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 0,
+        "days": 7,
+        "allCountries": {},
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": []
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 71,
+        "days": 7,
+        "allCountries": {
+          "Morocco": 71.4
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Morocco"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 78,
+        "days": 6,
+        "allCountries": {
+          "China": 77.9
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "China"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 151.6,
+    "topGainerName": "China",
+    "topGainerDelta": 78,
+    "topLoserName": "Brazil",
+    "topLoserDelta": -31,
+    "activeFMs": [
+      "China"
+    ],
+    "supplierDisappeared": [
+      "Brazil"
+    ],
+    "supplierAppeared": [
+      "China"
+    ]
+  },
+  "us_crude": {
+    "direction": "export",
+    "country": "Us",
+    "commodity": "crude",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 25556,
+        "days": 7,
+        "allCountries": {
+          "Denmark": 700,
+          "Netherlands": 2858,
+          "Uruguay": 924,
+          "France": 2107,
+          "Italy": 3156.5,
+          "Nigeria": 4126.8,
+          "Canada": 1780,
+          "Sweden": 707,
+          "Japan": 2069,
+          "Taiwan": 2041,
+          "Germany": 820,
+          "Norway": 1050,
+          "United Kingdom": 2406.5,
+          "South Korea": 810
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Nigeria",
+          "Italy",
+          "Netherlands",
+          "United Kingdom",
+          "France"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 26902,
+        "days": 7,
+        "allCountries": {
+          "Brazil": 700,
+          "Greece": 707,
+          "Italy": 2059,
+          "Poland": 700,
+          "Canada": 980,
+          "India": 1207,
+          "United Kingdom": 1915,
+          "South Korea": 4114,
+          "Netherlands": 4920,
+          "Singapore Republic": 735,
+          "Nicaragua": 305,
+          "Taiwan": 2094,
+          "France": 2119.5,
+          "Sweden": 1036.7,
+          "Thailand": 760,
+          "Dominican Republic": 500
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Netherlands",
+          "South Korea",
+          "France",
+          "Taiwan",
+          "Italy"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 27503,
+        "days": 7,
+        "allCountries": {
+          "South Korea": 5647,
+          "Japan": 2089,
+          "United Kingdom": 2606.7,
+          "India": 1500,
+          "Canada": 3624.7,
+          "Colombia": 900,
+          "Netherlands": 2113,
+          "Thailand": 770,
+          "Ireland": 500,
+          "Italy": 1206.5,
+          "France": 900
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "South Korea",
+          "Canada",
+          "United Kingdom",
+          "Netherlands",
+          "Japan"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 25991,
+        "days": 6,
+        "allCountries": {
+          "Netherlands": 3500,
+          "Denmark": 705,
+          "South Korea": 3343.8,
+          "United Kingdom": 1400,
+          "Spain": 1405.7,
+          "Brazil": 700,
+          "India": 1741,
+          "Canada": 700,
+          "Peru": 500,
+          "Bahamas": 599
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Netherlands",
+          "South Korea",
+          "India",
+          "Spain",
+          "United Kingdom"
+        ]
+      }
+    ],
+    "fourWeekTrend": "flat",
+    "fourWeekChangePct": 1.7,
+    "topGainerName": "South Korea",
+    "topGainerDelta": 2534,
+    "topLoserName": "Nigeria",
+    "topLoserDelta": -4127,
+    "activeFMs": [
+      "France",
+      "Taiwan",
+      "India",
+      "South Korea",
+      "Germany",
+      "Denmark"
+    ],
+    "supplierDisappeared": [
+      "Nigeria",
+      "Italy",
+      "France"
+    ],
+    "supplierAppeared": [
+      "South Korea",
+      "India",
+      "Spain"
+    ]
+  },
+  "us_lng": {
+    "direction": "export",
+    "country": "Us",
+    "commodity": "lng",
+    "unit": "ktons",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 2475,
+        "days": 7,
+        "allCountries": {
+          "Germany": 286.7,
+          "China": 72.7,
+          "Italy": 358.2,
+          "Poland": 72.7,
+          "Portugal": 72.2,
+          "United Kingdom": 214.5,
+          "France": 361.9,
+          "Thailand": 66.9,
+          "Brazil": 92,
+          "South Korea": 111.1,
+          "Spain": 126.8,
+          "Egypt": 286.2,
+          "Turkey": 153,
+          "India": 71.1,
+          "Taiwan": 72.8,
+          "Jamaica": 10.8,
+          "Senegal": 45.7
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "France",
+          "Italy",
+          "Germany",
+          "Egypt",
+          "United Kingdom"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 2600,
+        "days": 7,
+        "allCountries": {
+          "Colombia": 63,
+          "Egypt": 322,
+          "Germany": 137.3,
+          "Netherlands": 289.4,
+          "Poland": 72.4,
+          "Portugal": 27.9,
+          "Belgium": 132.2,
+          "China": 74.4,
+          "Japan": 144.2,
+          "United Kingdom": 213.4,
+          "Bahamas": 7.6,
+          "Puerto Rico": 54.5,
+          "Croatia": 63.1,
+          "Dominican Republic": 72.5,
+          "Greece": 72.7,
+          "Italy": 145.4,
+          "Spain": 285.7,
+          "South Korea": 63.5,
+          "Thailand": 75.3,
+          "Turkey": 72.5
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Egypt",
+          "Netherlands",
+          "Spain",
+          "United Kingdom",
+          "Italy"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 2572,
+        "days": 7,
+        "allCountries": {
+          "France": 513.6,
+          "Finland": 72.7,
+          "Netherlands": 225.9,
+          "Poland": 144.6,
+          "Germany": 214.8,
+          "Taiwan": 145.5,
+          "Egypt": 135.2,
+          "Japan": 70.5,
+          "Bangladesh": 63.9,
+          "Belgium": 57.7,
+          "India": 142.3,
+          "China": 72.7,
+          "Italy": 144.5,
+          "Turkey": 70.4,
+          "Portugal": 72.7,
+          "Spain": 72.7
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "France",
+          "Netherlands",
+          "Germany",
+          "Taiwan",
+          "Poland"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 2204,
+        "days": 6,
+        "allCountries": {
+          "France": 148,
+          "South Korea": 72.7,
+          "Thailand": 239.9,
+          "Spain": 144.8,
+          "Belgium": 72.7,
+          "Dominican Republic": 72.5,
+          "Egypt": 148.1,
+          "India": 72.7,
+          "Netherlands": 284.9,
+          "Bangladesh": 72.7,
+          "Germany": 145.2,
+          "Italy": 144.9
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Netherlands",
+          "Thailand",
+          "Egypt",
+          "France",
+          "Germany"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -10.9,
+    "topGainerName": "Netherlands",
+    "topGainerDelta": 285,
+    "topLoserName": "United Kingdom",
+    "topLoserDelta": -214,
+    "activeFMs": [
+      "France",
+      "China",
+      "Taiwan",
+      "India",
+      "South Korea",
+      "Germany"
+    ],
+    "supplierDisappeared": [
+      "Italy",
+      "United Kingdom"
+    ],
+    "supplierAppeared": [
+      "Netherlands",
+      "Thailand"
+    ]
+  },
+  "us_lpg": {
+    "direction": "export",
+    "country": "Us",
+    "commodity": "lpg",
+    "unit": "ktons",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 1000,
+        "days": 7,
+        "allCountries": {
+          "Japan": 237.4,
+          "Ecuador": 47.2,
+          "Indonesia": 72.1,
+          "Mexico": 121.3,
+          "Netherlands": 50.2,
+          "China": 69.5,
+          "United States Virgin Islands": 3,
+          "Belgium": 45.1,
+          "Dominican Republic": 41.1,
+          "Honduras": 3.1,
+          "Chile": 37.3,
+          "Costa Rica": 4.2,
+          "India": 49.4,
+          "Latvia": 21.9,
+          "South Korea": 99.8,
+          "Peru": 21.8,
+          "Egypt": 2.2,
+          "Italy": 25
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Japan",
+          "Mexico",
+          "South Korea",
+          "Indonesia",
+          "China"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 1033,
+        "days": 7,
+        "allCountries": {
+          "Belgium": 46.1,
+          "Bahamas": 1.2,
+          "El Salvador": 20.8,
+          "Japan": 233,
+          "Panama": 6.3,
+          "Peru": 14.9,
+          "France": 64.7,
+          "Guatemala": 23.3,
+          "Honduras": 35.8,
+          "Turkey": 17.4,
+          "China": 49.9,
+          "Indonesia": 39.7,
+          "Italy": 8.6,
+          "Jamaica": 1.5,
+          "Mexico": 80.9,
+          "Portugal": 13.4,
+          "India": 34,
+          "Dominican Republic": 61.9,
+          "South Korea": 70.2,
+          "Costa Rica": 4.1,
+          "Vietnam": 47.2,
+          "Sweden": 46.1
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Japan",
+          "Mexico",
+          "South Korea",
+          "France",
+          "Dominican Republic"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 893,
+        "days": 7,
+        "allCountries": {
+          "Japan": 171.2,
+          "Netherlands": 46.2,
+          "Turkey": 25.3,
+          "India": 46,
+          "Brazil": 46.1,
+          "Ecuador": 35.4,
+          "Colombia": 15.6,
+          "Panama": 2.8,
+          "Taiwan": 75.1,
+          "Mexico": 47.7,
+          "Bahamas": 1.7,
+          "Honduras": 1.7,
+          "South Korea": 67.9,
+          "United States Virgin Islands": 6,
+          "Morocco": 11.8,
+          "Indonesia": 23
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Japan",
+          "Taiwan",
+          "South Korea",
+          "Mexico",
+          "Netherlands"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 1042,
+        "days": 6,
+        "allCountries": {
+          "Honduras": 37.6,
+          "Japan": 67.5,
+          "China": 51.2,
+          "India": 23,
+          "Indonesia": 80.4,
+          "France": 46.1,
+          "Jamaica": 2.8,
+          "Mexico": 70.8,
+          "Netherlands": 61.4,
+          "Egypt": 32.7,
+          "Colombia": 16.3
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Indonesia",
+          "Mexico",
+          "Japan",
+          "Netherlands",
+          "China"
+        ]
+      }
+    ],
+    "fourWeekTrend": "flat",
+    "fourWeekChangePct": 4.2,
+    "topGainerName": "France",
+    "topGainerDelta": 46,
+    "topLoserName": "Japan",
+    "topLoserDelta": -170,
+    "activeFMs": [
+      "France",
+      "China",
+      "Taiwan",
+      "India",
+      "South Korea",
+      "Indonesia"
+    ],
+    "supplierDisappeared": [
+      "South Korea"
+    ],
+    "supplierAppeared": [
+      "Netherlands"
+    ]
+  },
+  "us_kero_jet": {
+    "direction": "export",
+    "country": "Us",
+    "commodity": "kero_jet",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 1074,
+        "days": 7,
+        "allCountries": {
+          "Mexico": 145.2,
+          "Costa Rica": 136.8,
+          "Panama": 275,
+          "Canada": 50,
+          "United States Virgin Islands": 90,
+          "Curacao": 41.4,
+          "Guatemala": 40.9,
+          "Trinidad and Tobago": 257.5,
+          "Honduras": 37.6
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Panama",
+          "Trinidad and Tobago",
+          "Mexico",
+          "Costa Rica",
+          "United States Virgin Islands"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 1498,
+        "days": 7,
+        "allCountries": {
+          "Brazil": 315,
+          "Chile": 84,
+          "Mexico": 269.9,
+          "Peru": 111.8,
+          "Honduras": 90.4,
+          "Netherlands": 330
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Netherlands",
+          "Brazil",
+          "Mexico",
+          "Peru",
+          "Honduras"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 2424,
+        "days": 7,
+        "allCountries": {
+          "United Kingdom": 584.9,
+          "Cayman Islands": 162,
+          "Ecuador": 225,
+          "Honduras": 168.4,
+          "Belize": 15,
+          "Canada": 362.7,
+          "Panama": 60.8,
+          "Aruba": 219,
+          "Mexico": 270
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "United Kingdom",
+          "Canada",
+          "Mexico",
+          "Ecuador",
+          "Aruba"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 1592,
+        "days": 6,
+        "allCountries": {
+          "United Kingdom": 608.7,
+          "Jamaica": 33.3,
+          "Panama": 61.3,
+          "Costa Rica": 151.9,
+          "Netherlands": 302.2
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "United Kingdom",
+          "Netherlands",
+          "Costa Rica",
+          "Panama",
+          "Jamaica"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 48.2,
+    "topGainerName": "United Kingdom",
+    "topGainerDelta": 609,
+    "topLoserName": "Trinidad and Tobago",
+    "topLoserDelta": -257,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Trinidad and Tobago",
+      "Mexico",
+      "United States Virgin Islands"
+    ],
+    "supplierAppeared": [
+      "United Kingdom",
+      "Netherlands",
+      "Jamaica"
+    ]
+  },
+  "us_gasoil_diesel": {
+    "direction": "export",
+    "country": "Us",
+    "commodity": "gasoil_diesel",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 6360,
+        "days": 7,
+        "allCountries": {
+          "Canada": 442.8,
+          "Costa Rica": 475.8,
+          "El Salvador": 127.3,
+          "Guatemala": 496.3,
+          "Netherlands": 73.4,
+          "Peru": 672,
+          "Poland": 226.6,
+          "Chile": 625.6,
+          "Mexico": 527.7,
+          "Dominican Republic": 288.2,
+          "Jamaica": 24.8,
+          "Panama": 205.3,
+          "South Africa": 300,
+          "United Kingdom": 516.2,
+          "United States Virgin Islands": 33.6,
+          "France": 300,
+          "Germany": 300,
+          "Morocco": 300,
+          "Honduras": 163.4,
+          "Nicaragua": 61.4
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Peru",
+          "Chile",
+          "Mexico",
+          "United Kingdom",
+          "Guatemala"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 8405,
+        "days": 7,
+        "allCountries": {
+          "Angola": 285,
+          "Colombia": 639.8,
+          "Chile": 1095.4,
+          "Peru": 1134.3,
+          "Saint Lucia": 297,
+          "Mexico": 927.4,
+          "South Africa": 947.5,
+          "El Salvador": 150,
+          "Germany": 248,
+          "Honduras": 119.2,
+          "Panama": 576.2,
+          "Australia": 300,
+          "Trinidad and Tobago": 285,
+          "Bahamas": 140.1,
+          "Dominican Republic": 140.1,
+          "Ecuador": 124.4,
+          "Jamaica": 66.5,
+          "United Kingdom": 311.1
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Peru",
+          "Chile",
+          "South Africa",
+          "Mexico",
+          "Colombia"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 7723,
+        "days": 7,
+        "allCountries": {
+          "Australia": 300,
+          "Guatemala": 450,
+          "Mexico": 550,
+          "Netherlands": 1036.4,
+          "Cayman Islands": 54.4,
+          "Costa Rica": 304,
+          "Honduras": 430.7,
+          "United Kingdom": 888.9,
+          "Belize": 55,
+          "Ecuador": 899.6,
+          "Belgium": 297.2,
+          "Panama": 121.6,
+          "South Africa": 300,
+          "Aruba": 29.4,
+          "Dominican Republic": 70.6,
+          "France": 302.1
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Netherlands",
+          "Ecuador",
+          "United Kingdom",
+          "Mexico",
+          "Guatemala"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 8279,
+        "days": 6,
+        "allCountries": {
+          "Morocco": 304,
+          "Netherlands": 2801.7,
+          "Australia": 304,
+          "Colombia": 280.2,
+          "Mexico": 424.5,
+          "Jamaica": 66.7,
+          "Panama": 122.5,
+          "United Kingdom": 903.4,
+          "Chile": 304,
+          "Costa Rica": 151.9,
+          "Peru": 305.7,
+          "Trinidad and Tobago": 300
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Netherlands",
+          "United Kingdom",
+          "Mexico",
+          "Peru",
+          "Morocco"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 30.2,
+    "topGainerName": "Netherlands",
+    "topGainerDelta": 2728,
+    "topLoserName": "Guatemala",
+    "topLoserDelta": -496,
+    "activeFMs": [
+      "France",
+      "Germany"
+    ],
+    "supplierDisappeared": [
+      "Chile",
+      "Guatemala"
+    ],
+    "supplierAppeared": [
+      "Netherlands",
+      "Morocco"
+    ]
+  },
+  "us_gasoline": {
+    "direction": "export",
+    "country": "Us",
+    "commodity": "gasoline",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 4952,
+        "days": 7,
+        "allCountries": {
+          "Colombia": 330,
+          "El Salvador": 262.3,
+          "Guatemala": 486.6,
+          "Mexico": 1828.8,
+          "Peru": 334.1,
+          "Jamaica": 106.9,
+          "Dominican Republic": 107.1,
+          "Panama": 120,
+          "Canada": 300,
+          "Ecuador": 606,
+          "Belize": 65,
+          "Bahamas": 250.6,
+          "Honduras": 154.5
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Mexico",
+          "Ecuador",
+          "Guatemala",
+          "Peru",
+          "Colombia"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 6004,
+        "days": 7,
+        "allCountries": {
+          "Chile": 316.5,
+          "Honduras": 330.8,
+          "Mexico": 2212.7,
+          "Dominican Republic": 321.2,
+          "Guatemala": 150,
+          "Haiti": 119.6,
+          "Panama": 198.9,
+          "Colombia": 972.1,
+          "Ecuador": 643,
+          "Jamaica": 233.8,
+          "Peru": 56
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Mexico",
+          "Colombia",
+          "Ecuador",
+          "Honduras",
+          "Dominican Republic"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 5203,
+        "days": 7,
+        "allCountries": {
+          "Dominican Republic": 144.6,
+          "Mexico": 1673.6,
+          "El Salvador": 107.1,
+          "Guatemala": 347.9,
+          "Honduras": 372.9,
+          "Bahamas": 153.9,
+          "Costa Rica": 315.3,
+          "Peru": 5,
+          "Trinidad and Tobago": 325,
+          "Australia": 450,
+          "Panama": 121.6,
+          "Ecuador": 300,
+          "Netherlands": 315
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Mexico",
+          "Australia",
+          "Honduras",
+          "Guatemala",
+          "Trinidad and Tobago"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 5540,
+        "days": 6,
+        "allCountries": {
+          "Colombia": 426,
+          "Nigeria": 78.6,
+          "Bahamas": 119.2,
+          "Cayman Islands": 9.8,
+          "Jamaica": 200,
+          "Mexico": 1065.5,
+          "Dominican Republic": 300,
+          "Panama": 122.5,
+          "Argentina": 174,
+          "Australia": 303.4
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Mexico",
+          "Colombia",
+          "Australia",
+          "Dominican Republic",
+          "Jamaica"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 11.9,
+    "topGainerName": "Australia",
+    "topGainerDelta": 303,
+    "topLoserName": "Mexico",
+    "topLoserDelta": -763,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Ecuador",
+      "Guatemala",
+      "Peru"
+    ],
+    "supplierAppeared": [
+      "Australia",
+      "Dominican Republic",
+      "Jamaica"
+    ]
+  },
+  "us_naphtha": {
+    "direction": "export",
+    "country": "Us",
+    "commodity": "naphtha",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 2337,
+        "days": 7,
+        "allCountries": {
+          "Brazil": 495,
+          "Venezuela": 1538.3,
+          "Curacao": 46.4
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Venezuela",
+          "Brazil",
+          "Curacao"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 2931,
+        "days": 7,
+        "allCountries": {
+          "Japan": 797,
+          "Venezuela": 464.8,
+          "Colombia": 300,
+          "Mexico": 275,
+          "Brazil": 402.5,
+          "South Korea": 117.3
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Japan",
+          "Venezuela",
+          "Brazil",
+          "Colombia",
+          "Mexico"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 5169,
+        "days": 7,
+        "allCountries": {
+          "Brazil": 611.1,
+          "South Korea": 1421.4,
+          "Ecuador": 262.6,
+          "Japan": 882.6,
+          "Mexico": 611.2,
+          "Colombia": 304,
+          "Venezuela": 507.7
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "South Korea",
+          "Japan",
+          "Mexico",
+          "Brazil",
+          "Venezuela"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 2631,
+        "days": 6,
+        "allCountries": {
+          "Japan": 226.8,
+          "Venezuela": 503.5,
+          "Colombia": 320
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Venezuela",
+          "Colombia",
+          "Japan"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 12.6,
+    "topGainerName": "Colombia",
+    "topGainerDelta": 320,
+    "topLoserName": "Venezuela",
+    "topLoserDelta": -1035,
+    "activeFMs": [
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "Brazil",
+      "Curacao"
+    ],
+    "supplierAppeared": [
+      "Colombia",
+      "Japan"
+    ]
+  },
+  "us_sulphur": {
+    "direction": "export",
+    "country": "Us",
+    "commodity": "sulphur",
+    "unit": "ktons",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 0,
+        "days": 7,
+        "allCountries": {},
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": []
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 14,
+        "days": 7,
+        "allCountries": {
+          "Mexico": 14
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Mexico"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 44,
+        "days": 7,
+        "allCountries": {
+          "Belgium": 44.4
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Belgium"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 0,
+        "days": 6,
+        "allCountries": {},
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": []
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
+  },
+  "australia_crude": {
+    "direction": "export",
+    "country": "Australia",
+    "commodity": "crude",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 1867,
+        "days": 7,
+        "allCountries": {
+          "Thailand": 570,
+          "Indonesia": 650,
+          "Singapore Republic": 647
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Indonesia",
+          "Singapore Republic",
+          "Thailand"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 1962,
+        "days": 7,
+        "allCountries": {
+          "South Korea": 929,
+          "Canada": 91,
+          "Thailand": 292.2,
+          "Brunei": 650
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "South Korea",
+          "Brunei",
+          "Thailand",
+          "Canada"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 2178,
+        "days": 7,
+        "allCountries": {
+          "Singapore Republic": 650,
+          "South Korea": 648.7
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Singapore Republic",
+          "South Korea"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 1277,
+        "days": 6,
+        "allCountries": {
+          "South Korea": 743.2
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "South Korea"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -31.6,
+    "topGainerName": "South Korea",
+    "topGainerDelta": 743,
+    "topLoserName": "Indonesia",
+    "topLoserDelta": -650,
+    "activeFMs": [
+      "South Korea",
+      "Indonesia"
+    ],
+    "supplierDisappeared": [
+      "Indonesia",
+      "Singapore Republic",
+      "Thailand"
+    ],
+    "supplierAppeared": [
+      "South Korea"
+    ]
+  },
+  "australia_lng": {
+    "direction": "export",
+    "country": "Australia",
+    "commodity": "lng",
+    "unit": "ktons",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 1397,
+        "days": 7,
+        "allCountries": {
+          "Japan": 583.4,
+          "China": 404,
+          "Malaysia": 62.8,
+          "South Korea": 199.6,
+          "Singapore Republic": 74.3,
+          "Taiwan": 72.5
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Japan",
+          "China",
+          "South Korea",
+          "Singapore Republic",
+          "Taiwan"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 1760,
+        "days": 7,
+        "allCountries": {
+          "Bangladesh": 73.8,
+          "Japan": 498.6,
+          "Taiwan": 371.1,
+          "China": 262.4,
+          "South Korea": 131.7,
+          "Singapore Republic": 208,
+          "Thailand": 76,
+          "Malaysia": 62.8
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Japan",
+          "Taiwan",
+          "China",
+          "Singapore Republic",
+          "South Korea"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 1659,
+        "days": 7,
+        "allCountries": {
+          "Japan": 338.8,
+          "South Korea": 343.2,
+          "Bangladesh": 74.3,
+          "China": 311.6,
+          "Malaysia": 59.8,
+          "Thailand": 113.9,
+          "Taiwan": 340.9
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "South Korea",
+          "Taiwan",
+          "Japan",
+          "China",
+          "Thailand"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 940,
+        "days": 6,
+        "allCountries": {
+          "Japan": 422.4,
+          "South Korea": 104.1,
+          "Thailand": 139.2,
+          "China": 143.1,
+          "India": 55.8
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Japan",
+          "China",
+          "Thailand",
+          "South Korea",
+          "India"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -32.7,
+    "topGainerName": "Thailand",
+    "topGainerDelta": 139,
+    "topLoserName": "China",
+    "topLoserDelta": -261,
+    "activeFMs": [
+      "China",
+      "Taiwan",
+      "India",
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "Singapore Republic",
+      "Taiwan"
+    ],
+    "supplierAppeared": [
+      "Thailand",
+      "India"
+    ]
+  },
+  "australia_lpg": {
+    "direction": "export",
+    "country": "Australia",
+    "commodity": "lpg",
+    "unit": "ktons",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 24,
+        "days": 7,
+        "allCountries": {
+          "China": 23.9
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "China"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 1,
+        "days": 7,
+        "allCountries": {
+          "Fiji": 0.7,
+          "Solomon Islands": 0.5
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Fiji",
+          "Solomon Islands"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 45,
+        "days": 7,
+        "allCountries": {
+          "China": 44.9
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "China"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 0,
+        "days": 6,
+        "allCountries": {},
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": []
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "China",
+    "topLoserDelta": -24,
+    "activeFMs": [
+      "China"
+    ],
+    "supplierDisappeared": [
+      "China"
+    ],
+    "supplierAppeared": []
+  },
+  "australia_naphtha": {
+    "direction": "export",
+    "country": "Australia",
+    "commodity": "naphtha",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 0,
+        "days": 7,
+        "allCountries": {},
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": []
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 345,
+        "days": 7,
+        "allCountries": {
+          "Singapore Republic": 345.4
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Singapore Republic"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 0,
+        "days": 7,
+        "allCountries": {},
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": []
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 345,
+        "days": 6,
+        "allCountries": {
+          "Malaysia": 345.4
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Malaysia"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 0,
+    "topGainerName": "Malaysia",
+    "topGainerDelta": 345,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": [
+      "Malaysia"
+    ]
+  }
+}

@@ -1,0 +1,2731 @@
+{
+  "china_crude": {
+    "direction": "import",
+    "country": "China",
+    "commodity": "crude",
+    "unit": "kbd",
+    "hasPipeline": true,
+    "pipelineNote": "Includes ESPO Russia→China (~600 kbd), Kazakhstan-China (~220 kbd), Myanmar-China (~200 kbd)",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 101417,
+        "days": 7,
+        "allCountries": {
+          "Russian Federation": 18828.3,
+          "Brazil": 11077.5,
+          "Iran": 10000,
+          "Saudi Arabia": 10846.2,
+          "United Arab Emirates": 2660.8,
+          "Kazakhstan": 1540,
+          "Myanmar": 1400,
+          "Canada": 3350,
+          "Iraq": 11828.7,
+          "Panama": 180.2,
+          "Oman": 7670.5,
+          "Venezuela": 7854.4,
+          "Angola": 4742.5,
+          "Kuwait": 1739.7,
+          "Saudi-Kuwaiti Neutral Zone": 1394,
+          "Ecuador": 1048.8,
+          "Gabon": 1000,
+          "Republic of the Congo": 16.2
+        },
+        "gulfTotal": 44746,
+        "gulfShare": 44.1,
+        "top5": [
+          "Russian Federation",
+          "Iraq",
+          "Brazil",
+          "Saudi Arabia",
+          "Iran"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 78598,
+        "days": 7,
+        "allCountries": {
+          "Brazil": 4340.2,
+          "Russian Federation": 15401.7,
+          "Angola": 3560.3,
+          "Saudi Arabia": 12107.4,
+          "Oman": 4080.2,
+          "United Arab Emirates": 4306.8,
+          "Saudi-Kuwaiti Neutral Zone": 847,
+          "Kazakhstan": 1540,
+          "Myanmar": 1400,
+          "Canada": 1750,
+          "Iraq": 5470,
+          "Iran": 7246.6,
+          "Australia": 194.7,
+          "Indonesia": 138.5,
+          "Libya": 1063.3,
+          "Panama": 2960.7,
+          "Sudan": 1000,
+          "Republic of the Congo": 1444,
+          "Ecuador": 1526.1,
+          "Cameroon": 910.3,
+          "Nigeria": 950
+        },
+        "gulfTotal": 33211,
+        "gulfShare": 42.3,
+        "top5": [
+          "Russian Federation",
+          "Saudi Arabia",
+          "Iran",
+          "Iraq",
+          "Brazil"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 75183,
+        "days": 7,
+        "allCountries": {
+          "Angola": 4920.1,
+          "Republic of the Congo": 981.8,
+          "Russian Federation": 16283,
+          "Saudi Arabia": 8806.2,
+          "United Arab Emirates": 4995.2,
+          "Kazakhstan": 1540,
+          "Myanmar": 1400,
+          "Iraq": 9230,
+          "Oman": 2419.3,
+          "Iran": 4723.9,
+          "Brazil": 11399,
+          "Canada": 1739.2,
+          "Sudan": 600.6,
+          "Ghana": 962.1
+        },
+        "gulfTotal": 30175,
+        "gulfShare": 40.1,
+        "top5": [
+          "Russian Federation",
+          "Brazil",
+          "Iraq",
+          "Saudi Arabia",
+          "United Arab Emirates"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 50334,
+        "days": 6,
+        "allCountries": {
+          "Oman": 10788.6,
+          "Iran": 3425.3,
+          "Russian Federation": 14141.9,
+          "Brazil": 6502.6,
+          "Iraq": 511,
+          "Kazakhstan": 1320,
+          "Myanmar": 1200,
+          "Angola": 1785.3,
+          "Cameroon": 461.2,
+          "Panama": 538.9,
+          "Saudi-Kuwaiti Neutral Zone": 858.4,
+          "Republic of the Congo": 981.8,
+          "Thailand": 294.5,
+          "Algeria": 769.7,
+          "Canada": 1150,
+          "Ecuador": 498.6,
+          "Sudan": 600,
+          "Malaysia": 184.5,
+          "Venezuela": 257.1
+        },
+        "gulfTotal": 14725,
+        "gulfShare": 29.3,
+        "top5": [
+          "Russian Federation",
+          "Oman",
+          "Brazil",
+          "Iran",
+          "Angola"
+        ]
+      }
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -50.4,
+    "topGainerName": "Oman",
+    "topGainerDelta": 3118,
+    "topLoserName": "Iraq",
+    "topLoserDelta": -11318,
+    "activeFMs": [
+      "Iraq",
+      "Kuwait",
+      "Indonesia"
+    ],
+    "supplierDisappeared": [
+      "Iraq",
+      "Saudi Arabia"
+    ],
+    "supplierAppeared": [
+      "Oman",
+      "Angola"
+    ]
+  },
+  "china_lng": {
+    "direction": "import",
+    "country": "China",
+    "commodity": "lng",
+    "unit": "ktons",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 761,
+        "days": 7,
+        "allCountries": {
+          "Malaysia": 92.5,
+          "Canada": 28.5,
+          "Australia": 200.7,
+          "Qatar": 362.4,
+          "Russian Federation": 77.1
+        },
+        "gulfTotal": 362,
+        "gulfShare": 47.6,
+        "top5": [
+          "Qatar",
+          "Australia",
+          "Malaysia",
+          "Russian Federation",
+          "Canada"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 937,
+        "days": 7,
+        "allCountries": {
+          "Malaysia": 134.5,
+          "Qatar": 316.4,
+          "Russian Federation": 168.8,
+          "Australia": 179.3,
+          "Indonesia": 60.9,
+          "Papua New Guinea": 76.9
+        },
+        "gulfTotal": 316,
+        "gulfShare": 33.8,
+        "top5": [
+          "Qatar",
+          "Australia",
+          "Russian Federation",
+          "Malaysia",
+          "Papua New Guinea"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 982,
+        "days": 7,
+        "allCountries": {
+          "Qatar": 208.9,
+          "Russian Federation": 201.8,
+          "Australia": 286.1,
+          "Malaysia": 224.8,
+          "Indonesia": 60.8
+        },
+        "gulfTotal": 209,
+        "gulfShare": 21.3,
+        "top5": [
+          "Australia",
+          "Malaysia",
+          "Qatar",
+          "Russian Federation",
+          "Indonesia"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 485,
+        "days": 6,
+        "allCountries": {
+          "Australia": 260.6,
+          "Malaysia": 99.4,
+          "Indonesia": 61.1,
+          "Russian Federation": 63.9
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Australia",
+          "Malaysia",
+          "Russian Federation",
+          "Indonesia"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -36.3,
+    "topGainerName": "Indonesia",
+    "topGainerDelta": 61,
+    "topLoserName": "Qatar",
+    "topLoserDelta": -362,
+    "activeFMs": [
+      "Qatar",
+      "Indonesia"
+    ],
+    "supplierDisappeared": [
+      "Qatar",
+      "Canada"
+    ],
+    "supplierAppeared": [
+      "Indonesia"
+    ]
+  },
+  "china_lpg": {
+    "direction": "import",
+    "country": "China",
+    "commodity": "lpg",
+    "unit": "ktons",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 544,
+        "days": 7,
+        "allCountries": {
+          "Iran": 85.9,
+          "United States": 284.5,
+          "Canada": 92.2,
+          "Qatar": 46,
+          "Kuwait": 17.8,
+          "Saudi Arabia": 17.5
+        },
+        "gulfTotal": 167,
+        "gulfShare": 30.7,
+        "top5": [
+          "United States",
+          "Canada",
+          "Iran",
+          "Qatar",
+          "Kuwait"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 433,
+        "days": 7,
+        "allCountries": {
+          "Iran": 70.9,
+          "United States": 184.8,
+          "Kuwait": 28,
+          "Nigeria": 11,
+          "Saudi Arabia": 5.8,
+          "Australia": 23.9,
+          "Algeria": 23.6,
+          "Canada": 44.2,
+          "Angola": 23,
+          "Qatar": 17.3
+        },
+        "gulfTotal": 122,
+        "gulfShare": 28.2,
+        "top5": [
+          "United States",
+          "Iran",
+          "Canada",
+          "Kuwait",
+          "Australia"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 319,
+        "days": 7,
+        "allCountries": {
+          "Iran": 148.2,
+          "Nigeria": 19,
+          "Qatar": 5.8,
+          "United States": 85,
+          "Canada": 49.9,
+          "Angola": 11.5
+        },
+        "gulfTotal": 154,
+        "gulfShare": 48.2,
+        "top5": [
+          "Iran",
+          "United States",
+          "Canada",
+          "Nigeria",
+          "Angola"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 457,
+        "days": 6,
+        "allCountries": {
+          "Iran": 106.5,
+          "United States": 235.4,
+          "Canada": 92.2,
+          "Australia": 23
+        },
+        "gulfTotal": 107,
+        "gulfShare": 23.3,
+        "top5": [
+          "United States",
+          "Iran",
+          "Canada",
+          "Australia"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -16,
+    "topGainerName": "Australia",
+    "topGainerDelta": 23,
+    "topLoserName": "United States",
+    "topLoserDelta": -49,
+    "activeFMs": [
+      "Qatar",
+      "Kuwait"
+    ],
+    "supplierDisappeared": [
+      "Qatar",
+      "Kuwait"
+    ],
+    "supplierAppeared": [
+      "Australia"
+    ]
+  },
+  "china_gasoil_diesel": {
+    "direction": "import",
+    "country": "China",
+    "commodity": "gasoil_diesel",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 690,
+        "days": 7,
+        "allCountries": {
+          "Japan": 185,
+          "Chile": 172.7,
+          "South Korea": 331.9
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "South Korea",
+          "Japan",
+          "Chile"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 103,
+        "days": 7,
+        "allCountries": {
+          "South Korea": 52.6,
+          "Japan": 50.6
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "South Korea",
+          "Japan"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 75,
+        "days": 7,
+        "allCountries": {
+          "South Korea": 75
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "South Korea"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 82,
+        "days": 6,
+        "allCountries": {
+          "South Korea": 82.3
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "South Korea"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -88.1,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "South Korea",
+    "topLoserDelta": -250,
+    "activeFMs": [
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "Japan",
+      "Chile"
+    ],
+    "supplierAppeared": []
+  },
+  "china_naphtha": {
+    "direction": "import",
+    "country": "China",
+    "commodity": "naphtha",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 2821,
+        "days": 7,
+        "allCountries": {
+          "Qatar": 1200.8,
+          "Saudi Arabia": 511.9,
+          "India": 506.4,
+          "Iran": 136.3,
+          "United Arab Emirates": 317.8,
+          "Georgia": 147.8
+        },
+        "gulfTotal": 2167,
+        "gulfShare": 76.8,
+        "top5": [
+          "Qatar",
+          "Saudi Arabia",
+          "India",
+          "United Arab Emirates",
+          "Georgia"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 2611,
+        "days": 7,
+        "allCountries": {
+          "India": 683.6,
+          "Kuwait": 865.6,
+          "Russian Federation": 249.1,
+          "Qatar": 265.2,
+          "Algeria": 360.7,
+          "Oman": 186.7
+        },
+        "gulfTotal": 1318,
+        "gulfShare": 50.5,
+        "top5": [
+          "Kuwait",
+          "India",
+          "Algeria",
+          "Qatar",
+          "Russian Federation"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 1647,
+        "days": 7,
+        "allCountries": {
+          "Australia": 193,
+          "Qatar": 249,
+          "Bahrain": 257.2,
+          "United Arab Emirates": 687,
+          "Russian Federation": 260.3
+        },
+        "gulfTotal": 1193,
+        "gulfShare": 72.5,
+        "top5": [
+          "United Arab Emirates",
+          "Russian Federation",
+          "Bahrain",
+          "Qatar",
+          "Australia"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 1956,
+        "days": 6,
+        "allCountries": {
+          "Russian Federation": 741.6,
+          "Thailand": 332.2,
+          "Norway": 536.3,
+          "South Korea": 345.4
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Russian Federation",
+          "Norway",
+          "South Korea",
+          "Thailand"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -30.7,
+    "topGainerName": "Russian Federation",
+    "topGainerDelta": 742,
+    "topLoserName": "Qatar",
+    "topLoserDelta": -1201,
+    "activeFMs": [
+      "Qatar",
+      "Bahrain",
+      "Kuwait",
+      "India",
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "Qatar",
+      "Saudi Arabia",
+      "India",
+      "United Arab Emirates",
+      "Georgia"
+    ],
+    "supplierAppeared": [
+      "Russian Federation",
+      "Norway",
+      "South Korea",
+      "Thailand"
+    ]
+  },
+  "china_sulphur": {
+    "direction": "import",
+    "country": "China",
+    "commodity": "sulphur",
+    "unit": "ktons",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 94,
+        "days": 7,
+        "allCountries": {
+          "Saudi Arabia": 54.7,
+          "Canada": 39.3
+        },
+        "gulfTotal": 55,
+        "gulfShare": 58.2,
+        "top5": [
+          "Saudi Arabia",
+          "Canada"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 60,
+        "days": 7,
+        "allCountries": {
+          "Qatar": 8.8,
+          "United Arab Emirates": 50.9
+        },
+        "gulfTotal": 60,
+        "gulfShare": 100,
+        "top5": [
+          "United Arab Emirates",
+          "Qatar"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 78,
+        "days": 7,
+        "allCountries": {
+          "Kuwait": 18.6,
+          "Russian Federation": 59.3
+        },
+        "gulfTotal": 19,
+        "gulfShare": 23.9,
+        "top5": [
+          "Russian Federation",
+          "Kuwait"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 32,
+        "days": 6,
+        "allCountries": {
+          "Canada": 32.2
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Canada"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -66,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "Saudi Arabia",
+    "topLoserDelta": -55,
+    "activeFMs": [
+      "Qatar",
+      "Kuwait"
+    ],
+    "supplierDisappeared": [
+      "Saudi Arabia"
+    ],
+    "supplierAppeared": []
+  },
+  "india_crude": {
+    "direction": "import",
+    "country": "India",
+    "commodity": "crude",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 32549,
+        "days": 7,
+        "allCountries": {
+          "United Arab Emirates": 929.8,
+          "Brazil": 1505.5,
+          "Kuwait": 1926.4,
+          "Saudi Arabia": 3800.1,
+          "Russian Federation": 8263.3,
+          "Saudi-Kuwaiti Neutral Zone": 2107.7,
+          "Iraq": 4574.1,
+          "Angola": 3464.3,
+          "United States": 1066.7,
+          "Gabon": 776.3,
+          "Qatar": 2077.2,
+          "Nigeria": 975,
+          "Oman": 1082.3
+        },
+        "gulfTotal": 14390,
+        "gulfShare": 44.2,
+        "top5": [
+          "Russian Federation",
+          "Iraq",
+          "Saudi Arabia",
+          "Angola",
+          "Saudi-Kuwaiti Neutral Zone"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 25069,
+        "days": 7,
+        "allCountries": {
+          "Russian Federation": 13292.8,
+          "Colombia": 1996.5,
+          "Republic of the Congo": 1870,
+          "Angola": 4038.1,
+          "Saudi Arabia": 1095.5,
+          "United States": 1975,
+          "Brunei": 454.2,
+          "Iraq": 346.4
+        },
+        "gulfTotal": 1442,
+        "gulfShare": 5.8,
+        "top5": [
+          "Russian Federation",
+          "Angola",
+          "Colombia",
+          "United States",
+          "Republic of the Congo"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 29705,
+        "days": 7,
+        "allCountries": {
+          "Russian Federation": 18280.9,
+          "Saudi Arabia": 5964.9,
+          "Gabon": 950,
+          "Sudan": 700,
+          "United Arab Emirates": 1600,
+          "Angola": 1855
+        },
+        "gulfTotal": 7565,
+        "gulfShare": 25.5,
+        "top5": [
+          "Russian Federation",
+          "Saudi Arabia",
+          "Angola",
+          "United Arab Emirates",
+          "Gabon"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 30440,
+        "days": 6,
+        "allCountries": {
+          "Saudi Arabia": 6659.7,
+          "Iraq": 427.3,
+          "United Arab Emirates": 3400,
+          "Russian Federation": 11557.9,
+          "Angola": 867.4,
+          "Nigeria": 2887.5,
+          "United States": 629.7,
+          "Ecuador": 2110.9,
+          "Colombia": 1900
+        },
+        "gulfTotal": 10487,
+        "gulfShare": 34.5,
+        "top5": [
+          "Russian Federation",
+          "Saudi Arabia",
+          "United Arab Emirates",
+          "Nigeria",
+          "Ecuador"
+        ]
+      }
+    ],
+    "fourWeekTrend": "flat",
+    "fourWeekChangePct": -6.5,
+    "topGainerName": "Russian Federation",
+    "topGainerDelta": 3295,
+    "topLoserName": "Iraq",
+    "topLoserDelta": -4147,
+    "activeFMs": [
+      "Iraq",
+      "Qatar",
+      "Kuwait"
+    ],
+    "supplierDisappeared": [
+      "Iraq",
+      "Angola",
+      "Saudi-Kuwaiti Neutral Zone"
+    ],
+    "supplierAppeared": [
+      "United Arab Emirates",
+      "Nigeria",
+      "Ecuador"
+    ]
+  },
+  "india_lng": {
+    "direction": "import",
+    "country": "India",
+    "commodity": "lng",
+    "unit": "ktons",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 407,
+        "days": 7,
+        "allCountries": {
+          "Mozambique": 75.3,
+          "Oman": 230.6,
+          "United Arab Emirates": 100.9
+        },
+        "gulfTotal": 332,
+        "gulfShare": 81.5,
+        "top5": [
+          "Oman",
+          "United Arab Emirates",
+          "Mozambique"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 246,
+        "days": 7,
+        "allCountries": {
+          "Angola": 67.2,
+          "United States": 71.2,
+          "United Arab Emirates": 30.5,
+          "Oman": 76.8
+        },
+        "gulfTotal": 107,
+        "gulfShare": 43.7,
+        "top5": [
+          "Oman",
+          "United States",
+          "Angola",
+          "United Arab Emirates"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 218,
+        "days": 7,
+        "allCountries": {
+          "Nigeria": 144.7,
+          "Angola": 73.7
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Nigeria",
+          "Angola"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 487,
+        "days": 6,
+        "allCountries": {
+          "United States": 134.9,
+          "Nigeria": 59.8,
+          "Oman": 224.9,
+          "Angola": 67.1
+        },
+        "gulfTotal": 225,
+        "gulfShare": 46.2,
+        "top5": [
+          "Oman",
+          "United States",
+          "Angola",
+          "Nigeria"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 19.7,
+    "topGainerName": "United States",
+    "topGainerDelta": 135,
+    "topLoserName": "United Arab Emirates",
+    "topLoserDelta": -101,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "United Arab Emirates",
+      "Mozambique"
+    ],
+    "supplierAppeared": [
+      "United States",
+      "Angola",
+      "Nigeria"
+    ]
+  },
+  "india_lpg": {
+    "direction": "import",
+    "country": "India",
+    "commodity": "lpg",
+    "unit": "ktons",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 210,
+        "days": 7,
+        "allCountries": {
+          "Saudi Arabia": 9.7,
+          "United Arab Emirates": 83.3,
+          "United States": 46.9,
+          "Qatar": 52.9,
+          "Argentina": 6.6,
+          "Bahrain": 10.9
+        },
+        "gulfTotal": 157,
+        "gulfShare": 74.6,
+        "top5": [
+          "United Arab Emirates",
+          "Qatar",
+          "United States",
+          "Bahrain",
+          "Saudi Arabia"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 102,
+        "days": 7,
+        "allCountries": {
+          "United States": 58.7,
+          "Saudi Arabia": 15.9,
+          "Kuwait": 11.1,
+          "United Arab Emirates": 5.5,
+          "Qatar": 11.1
+        },
+        "gulfTotal": 44,
+        "gulfShare": 42.6,
+        "top5": [
+          "United States",
+          "Saudi Arabia",
+          "Kuwait",
+          "Qatar",
+          "United Arab Emirates"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 73,
+        "days": 7,
+        "allCountries": {
+          "Qatar": 11.1,
+          "Saudi Arabia": 17,
+          "Kuwait": 22.2,
+          "United States": 23
+        },
+        "gulfTotal": 50,
+        "gulfShare": 68.6,
+        "top5": [
+          "United States",
+          "Kuwait",
+          "Saudi Arabia",
+          "Qatar"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 80,
+        "days": 6,
+        "allCountries": {
+          "United States": 52,
+          "Qatar": 28
+        },
+        "gulfTotal": 28,
+        "gulfShare": 35,
+        "top5": [
+          "United States",
+          "Qatar"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -61.9,
+    "topGainerName": "United States",
+    "topGainerDelta": 5,
+    "topLoserName": "United Arab Emirates",
+    "topLoserDelta": -83,
+    "activeFMs": [
+      "Qatar",
+      "Bahrain",
+      "Kuwait"
+    ],
+    "supplierDisappeared": [
+      "United Arab Emirates",
+      "Bahrain",
+      "Saudi Arabia"
+    ],
+    "supplierAppeared": []
+  },
+  "india_gasoil_diesel": {
+    "direction": "import",
+    "country": "India",
+    "commodity": "gasoil_diesel",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 59,
+        "days": 7,
+        "allCountries": {
+          "United Arab Emirates": 59.4
+        },
+        "gulfTotal": 59,
+        "gulfShare": 100,
+        "top5": [
+          "United Arab Emirates"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 0,
+        "days": 7,
+        "allCountries": {},
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": []
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 237,
+        "days": 7,
+        "allCountries": {
+          "Russian Federation": 237.3
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Russian Federation"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 110,
+        "days": 6,
+        "allCountries": {
+          "Russian Federation": 109.5
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Russian Federation"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 86.4,
+    "topGainerName": "Russian Federation",
+    "topGainerDelta": 110,
+    "topLoserName": "United Arab Emirates",
+    "topLoserDelta": -59,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "United Arab Emirates"
+    ],
+    "supplierAppeared": [
+      "Russian Federation"
+    ]
+  },
+  "india_gasoline": {
+    "direction": "import",
+    "country": "India",
+    "commodity": "gasoline",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 75,
+        "days": 7,
+        "allCountries": {
+          "South Korea": 75.2
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "South Korea"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 0,
+        "days": 7,
+        "allCountries": {},
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": []
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 30,
+        "days": 7,
+        "allCountries": {
+          "South Korea": 30.3
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "South Korea"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 45,
+        "days": 6,
+        "allCountries": {
+          "South Korea": 44.9
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "South Korea"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -40,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "South Korea",
+    "topLoserDelta": -30,
+    "activeFMs": [
+      "South Korea"
+    ],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
+  },
+  "india_naphtha": {
+    "direction": "import",
+    "country": "India",
+    "commodity": "naphtha",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 1060,
+        "days": 7,
+        "allCountries": {
+          "United Arab Emirates": 511.1,
+          "Iran": 43.6,
+          "Kuwait": 505.7
+        },
+        "gulfTotal": 1060,
+        "gulfShare": 100,
+        "top5": [
+          "United Arab Emirates",
+          "Kuwait",
+          "Iran"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 710,
+        "days": 7,
+        "allCountries": {
+          "Russian Federation": 373,
+          "United Arab Emirates": 336.8
+        },
+        "gulfTotal": 337,
+        "gulfShare": 47.4,
+        "top5": [
+          "Russian Federation",
+          "United Arab Emirates"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 321,
+        "days": 7,
+        "allCountries": {
+          "Russian Federation": 321
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Russian Federation"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 628,
+        "days": 6,
+        "allCountries": {
+          "Oman": 323.9,
+          "Russian Federation": 303.6
+        },
+        "gulfTotal": 324,
+        "gulfShare": 51.6,
+        "top5": [
+          "Oman",
+          "Russian Federation"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -40.8,
+    "topGainerName": "Oman",
+    "topGainerDelta": 324,
+    "topLoserName": "United Arab Emirates",
+    "topLoserDelta": -511,
+    "activeFMs": [
+      "Kuwait"
+    ],
+    "supplierDisappeared": [
+      "United Arab Emirates",
+      "Kuwait",
+      "Iran"
+    ],
+    "supplierAppeared": [
+      "Oman",
+      "Russian Federation"
+    ]
+  },
+  "india_sulphur": {
+    "direction": "import",
+    "country": "India",
+    "commodity": "sulphur",
+    "unit": "ktons",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 0,
+        "days": 7,
+        "allCountries": {},
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": []
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 33,
+        "days": 7,
+        "allCountries": {
+          "Qatar": 33.2
+        },
+        "gulfTotal": 33,
+        "gulfShare": 100,
+        "top5": [
+          "Qatar"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 0,
+        "days": 7,
+        "allCountries": {},
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": []
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 74,
+        "days": 6,
+        "allCountries": {
+          "Canada": 61.2,
+          "Jordan": 12.3
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Canada",
+          "Jordan"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 0,
+    "topGainerName": "Canada",
+    "topGainerDelta": 61,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [
+      "Qatar"
+    ],
+    "supplierDisappeared": [],
+    "supplierAppeared": [
+      "Canada",
+      "Jordan"
+    ]
+  },
+  "japan_crude": {
+    "direction": "import",
+    "country": "Japan",
+    "commodity": "crude",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 14653,
+        "days": 7,
+        "allCountries": {
+          "Saudi Arabia": 8928.5,
+          "Kuwait": 1250.2,
+          "United Arab Emirates": 4474.5
+        },
+        "gulfTotal": 14653,
+        "gulfShare": 100,
+        "top5": [
+          "Saudi Arabia",
+          "United Arab Emirates",
+          "Kuwait"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 14754,
+        "days": 7,
+        "allCountries": {
+          "Saudi Arabia": 6806.6,
+          "United Arab Emirates": 5737.6,
+          "Malaysia": 542.1,
+          "Ecuador": 650,
+          "United States": 1017.8
+        },
+        "gulfTotal": 12544,
+        "gulfShare": 85,
+        "top5": [
+          "Saudi Arabia",
+          "United Arab Emirates",
+          "United States",
+          "Ecuador",
+          "Malaysia"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 14953,
+        "days": 7,
+        "allCountries": {
+          "Saudi Arabia": 7922.3,
+          "United Arab Emirates": 5024.1,
+          "Oman": 300,
+          "Kuwait": 1069.8,
+          "Qatar": 636.7
+        },
+        "gulfTotal": 14953,
+        "gulfShare": 100,
+        "top5": [
+          "Saudi Arabia",
+          "United Arab Emirates",
+          "Kuwait",
+          "Qatar",
+          "Oman"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 5754,
+        "days": 6,
+        "allCountries": {
+          "Saudi Arabia": 2421.2,
+          "United Arab Emirates": 2763.7,
+          "Qatar": 223.6,
+          "Malaysia": 345.4
+        },
+        "gulfTotal": 5409,
+        "gulfShare": 94,
+        "top5": [
+          "United Arab Emirates",
+          "Saudi Arabia",
+          "Malaysia",
+          "Qatar"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -60.7,
+    "topGainerName": "Malaysia",
+    "topGainerDelta": 345,
+    "topLoserName": "Saudi Arabia",
+    "topLoserDelta": -6507,
+    "activeFMs": [
+      "Qatar",
+      "Kuwait"
+    ],
+    "supplierDisappeared": [
+      "Kuwait"
+    ],
+    "supplierAppeared": [
+      "Malaysia",
+      "Qatar"
+    ]
+  },
+  "japan_lng": {
+    "direction": "import",
+    "country": "Japan",
+    "commodity": "lng",
+    "unit": "ktons",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 1305,
+        "days": 7,
+        "allCountries": {
+          "Australia": 666.6,
+          "Malaysia": 294.2,
+          "Russian Federation": 198.2,
+          "Brunei": 68.6,
+          "Papua New Guinea": 77
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Australia",
+          "Malaysia",
+          "Russian Federation",
+          "Papua New Guinea",
+          "Brunei"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 1407,
+        "days": 7,
+        "allCountries": {
+          "Australia": 565.9,
+          "Qatar": 75.2,
+          "United States": 63.3,
+          "Oman": 144.5,
+          "Indonesia": 204.4,
+          "Malaysia": 128.7,
+          "Mozambique": 74.5,
+          "Papua New Guinea": 78.7,
+          "Canada": 72.1
+        },
+        "gulfTotal": 220,
+        "gulfShare": 15.6,
+        "top5": [
+          "Australia",
+          "Indonesia",
+          "Oman",
+          "Malaysia",
+          "Papua New Guinea"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 1234,
+        "days": 7,
+        "allCountries": {
+          "Australia": 392.8,
+          "China": 146.7,
+          "Qatar": 76.5,
+          "Russian Federation": 87.3,
+          "Indonesia": 119.1,
+          "Malaysia": 135.3,
+          "Papua New Guinea": 135.2,
+          "Canada": 141.1
+        },
+        "gulfTotal": 77,
+        "gulfShare": 6.2,
+        "top5": [
+          "Australia",
+          "China",
+          "Canada",
+          "Malaysia",
+          "Papua New Guinea"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 840,
+        "days": 6,
+        "allCountries": {
+          "Australia": 515.7,
+          "Malaysia": 207.3,
+          "Russian Federation": 46.8,
+          "Papua New Guinea": 69.7
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Australia",
+          "Malaysia",
+          "Papua New Guinea",
+          "Russian Federation"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -35.6,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "Russian Federation",
+    "topLoserDelta": -151,
+    "activeFMs": [
+      "Qatar",
+      "China",
+      "Indonesia"
+    ],
+    "supplierDisappeared": [
+      "Brunei"
+    ],
+    "supplierAppeared": []
+  },
+  "japan_lpg": {
+    "direction": "import",
+    "country": "Japan",
+    "commodity": "lpg",
+    "unit": "ktons",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 154,
+        "days": 7,
+        "allCountries": {
+          "United States": 148.5,
+          "Australia": 5.3
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "United States",
+          "Australia"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 186,
+        "days": 7,
+        "allCountries": {
+          "United States": 186
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "United States"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 117,
+        "days": 7,
+        "allCountries": {
+          "United States": 117.4
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "United States"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 208,
+        "days": 6,
+        "allCountries": {
+          "United States": 207.9
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "United States"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 35.1,
+    "topGainerName": "United States",
+    "topGainerDelta": 59,
+    "topLoserName": "Australia",
+    "topLoserDelta": -5,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Australia"
+    ],
+    "supplierAppeared": []
+  },
+  "japan_kero_jet": {
+    "direction": "import",
+    "country": "Japan",
+    "commodity": "kero_jet",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 658,
+        "days": 7,
+        "allCountries": {
+          "South Korea": 342.1,
+          "China": 315.9
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "South Korea",
+          "China"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 216,
+        "days": 7,
+        "allCountries": {
+          "South Korea": 215.7
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "South Korea"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 511,
+        "days": 7,
+        "allCountries": {
+          "South Korea": 510.7
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "South Korea"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 490,
+        "days": 6,
+        "allCountries": {
+          "South Korea": 490.3
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "South Korea"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -25.5,
+    "topGainerName": "South Korea",
+    "topGainerDelta": 148,
+    "topLoserName": "China",
+    "topLoserDelta": -316,
+    "activeFMs": [
+      "China",
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "China"
+    ],
+    "supplierAppeared": []
+  },
+  "japan_gasoil_diesel": {
+    "direction": "import",
+    "country": "Japan",
+    "commodity": "gasoil_diesel",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 0,
+        "days": 7,
+        "allCountries": {},
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": []
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 115,
+        "days": 7,
+        "allCountries": {
+          "South Korea": 115.4
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "South Korea"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 369,
+        "days": 7,
+        "allCountries": {
+          "Brunei": 347.4,
+          "South Korea": 21.8
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Brunei",
+          "South Korea"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 0,
+        "days": 6,
+        "allCountries": {},
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": []
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [
+      "South Korea"
+    ],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
+  },
+  "japan_gasoline": {
+    "direction": "import",
+    "country": "Japan",
+    "commodity": "gasoline",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 99,
+        "days": 7,
+        "allCountries": {
+          "South Korea": 98.6
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "South Korea"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 191,
+        "days": 7,
+        "allCountries": {
+          "South Korea": 190.5
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "South Korea"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 250,
+        "days": 7,
+        "allCountries": {
+          "South Korea": 249.7
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "South Korea"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 598,
+        "days": 6,
+        "allCountries": {
+          "South Korea": 598.1
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "South Korea"
+        ]
+      }
+    ],
+    "fourWeekTrend": "rising",
+    "fourWeekChangePct": 504,
+    "topGainerName": "South Korea",
+    "topGainerDelta": 500,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [
+      "South Korea"
+    ],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
+  },
+  "japan_naphtha": {
+    "direction": "import",
+    "country": "Japan",
+    "commodity": "naphtha",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 1510,
+        "days": 7,
+        "allCountries": {
+          "United Arab Emirates": 811.3,
+          "Kuwait": 247.3,
+          "Qatar": 451.4
+        },
+        "gulfTotal": 1510,
+        "gulfShare": 100,
+        "top5": [
+          "United Arab Emirates",
+          "Qatar",
+          "Kuwait"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 2021,
+        "days": 7,
+        "allCountries": {
+          "India": 204.6,
+          "Kuwait": 487.7,
+          "South Korea": 327.2,
+          "United States": 312.3,
+          "Peru": 343.4,
+          "United Arab Emirates": 345.4
+        },
+        "gulfTotal": 833,
+        "gulfShare": 41.2,
+        "top5": [
+          "Kuwait",
+          "United Arab Emirates",
+          "Peru",
+          "South Korea",
+          "United States"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 605,
+        "days": 7,
+        "allCountries": {
+          "Qatar": 604.7
+        },
+        "gulfTotal": 605,
+        "gulfShare": 100,
+        "top5": [
+          "Qatar"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 1322,
+        "days": 6,
+        "allCountries": {
+          "United Arab Emirates": 935.4,
+          "Algeria": 90.4,
+          "Peru": 131.1,
+          "South Korea": 165.1
+        },
+        "gulfTotal": 935,
+        "gulfShare": 70.8,
+        "top5": [
+          "United Arab Emirates",
+          "South Korea",
+          "Peru",
+          "Algeria"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -12.5,
+    "topGainerName": "South Korea",
+    "topGainerDelta": 165,
+    "topLoserName": "Qatar",
+    "topLoserDelta": -451,
+    "activeFMs": [
+      "Qatar",
+      "Kuwait",
+      "India",
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "Qatar",
+      "Kuwait"
+    ],
+    "supplierAppeared": [
+      "South Korea",
+      "Peru",
+      "Algeria"
+    ]
+  },
+  "south_korea_crude": {
+    "direction": "import",
+    "country": "South Korea",
+    "commodity": "crude",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 23961,
+        "days": 7,
+        "allCountries": {
+          "Ecuador": 2013.7,
+          "United States": 3893.8,
+          "United Arab Emirates": 2263,
+          "Australia": 570,
+          "Saudi Arabia": 6507.7,
+          "Kuwait": 4000,
+          "Panama": 524.9,
+          "Republic of the Congo": 1298,
+          "Iraq": 956.5,
+          "Saudi-Kuwaiti Neutral Zone": 920.8,
+          "Equatorial Guinea": 507.8,
+          "Qatar": 505
+        },
+        "gulfTotal": 14232,
+        "gulfShare": 59.4,
+        "top5": [
+          "Saudi Arabia",
+          "Kuwait",
+          "United States",
+          "United Arab Emirates",
+          "Ecuador"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 22575,
+        "days": 7,
+        "allCountries": {
+          "Saudi Arabia": 8661.6,
+          "Iraq": 3848,
+          "Kuwait": 1516.4,
+          "United Arab Emirates": 2187,
+          "United States": 4736.5,
+          "Qatar": 1028.1,
+          "Australia": 194.7,
+          "Malaysia": 402.5
+        },
+        "gulfTotal": 17241,
+        "gulfShare": 76.4,
+        "top5": [
+          "Saudi Arabia",
+          "United States",
+          "Iraq",
+          "United Arab Emirates",
+          "Kuwait"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 15104,
+        "days": 7,
+        "allCountries": {
+          "Iraq": 1404.1,
+          "Kuwait": 1248.2,
+          "United States": 5645.3,
+          "Brazil": 809.5,
+          "Saudi Arabia": 4799.4,
+          "Saudi-Kuwaiti Neutral Zone": 1197.3
+        },
+        "gulfTotal": 7452,
+        "gulfShare": 49.3,
+        "top5": [
+          "United States",
+          "Saudi Arabia",
+          "Iraq",
+          "Kuwait",
+          "Saudi-Kuwaiti Neutral Zone"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 9206,
+        "days": 6,
+        "allCountries": {
+          "Saudi Arabia": 1527.9,
+          "Iraq": 951,
+          "United States": 1050,
+          "United Arab Emirates": 4120.1,
+          "Algeria": 1077.6,
+          "Australia": 479
+        },
+        "gulfTotal": 6599,
+        "gulfShare": 71.7,
+        "top5": [
+          "United Arab Emirates",
+          "Saudi Arabia",
+          "Algeria",
+          "United States",
+          "Iraq"
+        ]
+      }
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -61.6,
+    "topGainerName": "United Arab Emirates",
+    "topGainerDelta": 1857,
+    "topLoserName": "Saudi Arabia",
+    "topLoserDelta": -4980,
+    "activeFMs": [
+      "Iraq",
+      "Qatar",
+      "Kuwait"
+    ],
+    "supplierDisappeared": [
+      "Kuwait",
+      "Ecuador"
+    ],
+    "supplierAppeared": [
+      "Algeria",
+      "Iraq"
+    ]
+  },
+  "south_korea_lng": {
+    "direction": "import",
+    "country": "South Korea",
+    "commodity": "lng",
+    "unit": "ktons",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 949,
+        "days": 7,
+        "allCountries": {
+          "Australia": 344.2,
+          "China": 68.4,
+          "Malaysia": 141.6,
+          "Russian Federation": 63.3,
+          "United States": 70.5,
+          "Indonesia": 45.4,
+          "Peru": 71.7,
+          "Qatar": 75.4,
+          "Brunei": 68.7
+        },
+        "gulfTotal": 75,
+        "gulfShare": 7.9,
+        "top5": [
+          "Australia",
+          "Malaysia",
+          "Qatar",
+          "Peru",
+          "United States"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 1403,
+        "days": 7,
+        "allCountries": {
+          "Australia": 472.6,
+          "Canada": 256.7,
+          "Malaysia": 265.7,
+          "Qatar": 116.7,
+          "Indonesia": 77.1,
+          "China": 150.3,
+          "Russian Federation": 63.4
+        },
+        "gulfTotal": 117,
+        "gulfShare": 8.3,
+        "top5": [
+          "Australia",
+          "Malaysia",
+          "Canada",
+          "China",
+          "Qatar"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 829,
+        "days": 7,
+        "allCountries": {
+          "Australia": 197,
+          "Malaysia": 141.8,
+          "China": 70.2,
+          "Peru": 70.7,
+          "Brunei": 65.5,
+          "Canada": 70.2,
+          "Nigeria": 74.3,
+          "Oman": 76.1,
+          "Russian Federation": 63.5
+        },
+        "gulfTotal": 76,
+        "gulfShare": 9.2,
+        "top5": [
+          "Australia",
+          "Malaysia",
+          "Oman",
+          "Nigeria",
+          "Peru"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 637,
+        "days": 6,
+        "allCountries": {
+          "Australia": 335,
+          "Indonesia": 119.2,
+          "United States": 57.5,
+          "Malaysia": 67.7,
+          "China": 57.9
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Australia",
+          "Indonesia",
+          "Malaysia",
+          "China",
+          "United States"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -32.9,
+    "topGainerName": "Indonesia",
+    "topGainerDelta": 74,
+    "topLoserName": "Qatar",
+    "topLoserDelta": -75,
+    "activeFMs": [
+      "Qatar",
+      "China",
+      "Indonesia"
+    ],
+    "supplierDisappeared": [
+      "Qatar",
+      "Peru"
+    ],
+    "supplierAppeared": [
+      "Indonesia",
+      "China"
+    ]
+  },
+  "south_korea_lpg": {
+    "direction": "import",
+    "country": "South Korea",
+    "commodity": "lpg",
+    "unit": "ktons",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 104,
+        "days": 7,
+        "allCountries": {
+          "United States": 91.9,
+          "Canada": 12.1
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "United States",
+          "Canada"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 125,
+        "days": 7,
+        "allCountries": {
+          "Canada": 12.1,
+          "United States": 112.6
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "United States",
+          "Canada"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 106,
+        "days": 7,
+        "allCountries": {
+          "United States": 94.1,
+          "Canada": 12.1
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "United States",
+          "Canada"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 47,
+        "days": 6,
+        "allCountries": {
+          "United States": 47.1
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "United States"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -54.8,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "United States",
+    "topLoserDelta": -45,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Canada"
+    ],
+    "supplierAppeared": []
+  },
+  "south_korea_gasoil_diesel": {
+    "direction": "import",
+    "country": "South Korea",
+    "commodity": "gasoil_diesel",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 0,
+        "days": 7,
+        "allCountries": {},
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": []
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 47,
+        "days": 7,
+        "allCountries": {
+          "Japan": 46.9
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Japan"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 436,
+        "days": 7,
+        "allCountries": {
+          "China": 91,
+          "Japan": 345.4
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Japan",
+          "China"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 72,
+        "days": 6,
+        "allCountries": {
+          "Russian Federation": 52.6,
+          "China": 19.6
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Russian Federation",
+          "China"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 0,
+    "topGainerName": "Russian Federation",
+    "topGainerDelta": 53,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [
+      "China"
+    ],
+    "supplierDisappeared": [],
+    "supplierAppeared": [
+      "Russian Federation",
+      "China"
+    ]
+  },
+  "south_korea_gasoline": {
+    "direction": "import",
+    "country": "South Korea",
+    "commodity": "gasoline",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 535,
+        "days": 7,
+        "allCountries": {
+          "Japan": 534.5
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Japan"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 756,
+        "days": 7,
+        "allCountries": {
+          "Japan": 756.4
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Japan"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 167,
+        "days": 7,
+        "allCountries": {
+          "Singapore Republic": 167.1
+        },
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": [
+          "Singapore Republic"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 0,
+        "days": 6,
+        "allCountries": {},
+        "gulfTotal": 0,
+        "gulfShare": 0,
+        "top5": []
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "Japan",
+    "topLoserDelta": -534,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Japan"
+    ],
+    "supplierAppeared": []
+  },
+  "south_korea_naphtha": {
+    "direction": "import",
+    "country": "South Korea",
+    "commodity": "naphtha",
+    "unit": "kbd",
+    "hasPipeline": false,
+    "pipelineNote": "",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "start": "2026-03-02",
+        "end": "2026-03-08",
+        "total": 4655,
+        "days": 7,
+        "allCountries": {
+          "Iraq": 282.3,
+          "Malaysia": 114,
+          "United Arab Emirates": 730.5,
+          "India": 345.4,
+          "Egypt": 320.1,
+          "Oman": 715.7,
+          "Qatar": 345.4,
+          "United States": 187.8,
+          "Algeria": 663.6,
+          "Georgia": 134.3,
+          "Turkey": 251.4,
+          "Japan": 49.4,
+          "Bahrain": 514.6
+        },
+        "gulfTotal": 2589,
+        "gulfShare": 55.6,
+        "top5": [
+          "United Arab Emirates",
+          "Oman",
+          "Algeria",
+          "Bahrain",
+          "India"
+        ]
+      },
+      {
+        "period": "2026-W11",
+        "start": "2026-03-09",
+        "end": "2026-03-15",
+        "total": 3431,
+        "days": 7,
+        "allCountries": {
+          "Qatar": 1198.9,
+          "United Arab Emirates": 1609.3,
+          "India": 150,
+          "Saudi Arabia": 218.1,
+          "Bahrain": 254.5
+        },
+        "gulfTotal": 3281,
+        "gulfShare": 95.6,
+        "top5": [
+          "United Arab Emirates",
+          "Qatar",
+          "Bahrain",
+          "Saudi Arabia",
+          "India"
+        ]
+      },
+      {
+        "period": "2026-W12",
+        "start": "2026-03-16",
+        "end": "2026-03-22",
+        "total": 4005,
+        "days": 7,
+        "allCountries": {
+          "Kuwait": 1302.2,
+          "India": 985.2,
+          "Thailand": 137.5,
+          "Algeria": 222,
+          "Italy": 337.7,
+          "Oman": 448.1,
+          "Qatar": 426.4,
+          "Greece": 145.5
+        },
+        "gulfTotal": 2177,
+        "gulfShare": 54.4,
+        "top5": [
+          "Kuwait",
+          "India",
+          "Oman",
+          "Qatar",
+          "Italy"
+        ]
+      },
+      {
+        "period": "2026-W13",
+        "start": "2026-03-23",
+        "end": "2026-03-28",
+        "total": 2408,
+        "days": 6,
+        "allCountries": {
+          "Egypt": 330.1,
+          "Greece": 436,
+          "Libya": 186.4,
+          "Peru": 345.4,
+          "Qatar": 237.2,
+          "Japan": 12.3,
+          "Oman": 488.6,
+          "Algeria": 371.6
+        },
+        "gulfTotal": 726,
+        "gulfShare": 30.1,
+        "top5": [
+          "Oman",
+          "Greece",
+          "Algeria",
+          "Peru",
+          "Egypt"
+        ]
+      }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -48.3,
+    "topGainerName": "Greece",
+    "topGainerDelta": 436,
+    "topLoserName": "United Arab Emirates",
+    "topLoserDelta": -730,
+    "activeFMs": [
+      "Iraq",
+      "Qatar",
+      "Bahrain",
+      "Kuwait",
+      "India"
+    ],
+    "supplierDisappeared": [
+      "United Arab Emirates",
+      "Bahrain",
+      "India"
+    ],
+    "supplierAppeared": [
+      "Greece",
+      "Peru",
+      "Egypt"
+    ]
+  }
+}

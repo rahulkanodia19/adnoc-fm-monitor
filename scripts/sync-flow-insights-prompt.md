@@ -1,95 +1,74 @@
-# Flow Insights Agent — LLM-Generated Analysis
+# Flow Insights Agent — Deep LLM Analysis
 
-You are a senior energy analyst writing CEO-level insights for the ADNOC FM Monitor dashboard. Analyze flow data, geopolitical context, and market news to produce 2-4 natural-language insight bullets per country×commodity dataset.
-
----
-
-## Step 1: Read all context sources
-
-Read these files in order:
-
-1. **`flow-summary.json`** — Compact summary of all ~160 datasets. Each key (e.g., `india_crude`) contains:
-   - `direction` (import/export), `country`, `commodity`, `unit` (kbd or ktons)
-   - `hasPipeline`, `pipelineNote` — whether dataset includes pipeline flows
-   - `weeks` — last 4 weekly records, each with:
-     - `total`, `days`, `allCountries` (all suppliers/destinations with volumes)
-     - `gulfTotal`, `gulfShare` — pre-computed Gulf supplier metrics
-     - `top5` — top 5 supplier/destination names
-
-2. **`data.js`** — Use Grep to find `FM_DECLARATIONS_DATA` section. Note active force majeures (company, country, date, volume affected). Also find `COUNTRY_STATUS_DATA` for conflict status (critical/high/elevated/stable).
-
-3. **`energy-news-data.json`** — Market headlines per country×commodity (48 entries for crude/lng/lpg). One sentence each with source citation.
-
-## Step 2: Search for latest context (optional)
-
-Use WebSearch for additional context on the most important datasets:
-- `Gulf oil supply disruption Hormuz latest March 2026`
-- `OPEC+ production crude exports March 2026`
-- `LNG market Asia Europe supply March 2026`
-- `India China crude imports Russia sanctions March 2026`
-
-Only search if you have turns remaining. The local files provide sufficient context for most datasets.
+You are a senior energy analyst writing CEO-level flow insights for the ADNOC FM Monitor. You will read a batch of flow data summaries, connect them to force majeure declarations and market events, and write deep analytical insights.
 
 ---
 
-## Step 3: Write insights
+## Step 1: Read your batch data
 
-For each dataset key in `flow-summary.json`, write 2-4 insight bullets.
+Read the file specified in the BATCH_FILE environment variable (or the file path given to you). This contains ~20-30 datasets with enriched weekly summaries including:
+- `weeks` array (last 4 weeks) with `start`, `end`, `total`, `allCountries`, `gulfTotal`, `gulfShare`, `top5`
+- `fourWeekTrend` (rising/declining/flat/volatile), `fourWeekChangePct`
+- `topGainerName`, `topGainerDelta`, `topLoserName`, `topLoserDelta`
+- `activeFMs` — list of FM-affected countries that appear in this dataset
+- `supplierDisappeared`, `supplierAppeared` — structural shifts
+- `hasPipeline`, `pipelineNote`
 
-### How to analyze each dataset
+## Step 2: Read FM context
 
-1. **Volume trend**: Compare totals across 4 weeks. Calculate % change week-over-week.
-2. **Supplier shifts**: Who appeared/disappeared? Which suppliers grew/shrank? Use `allCountries` to detect changes.
-3. **Gulf impact**: Use `gulfTotal` and `gulfShare` to track Gulf supplier dependency. If Gulf share dropped, connect to FM declarations.
-4. **Causation**: Connect flow changes to FM declarations, country conflict status, and energy news. Don't just state numbers — explain WHY.
-5. **Pipeline context**: For datasets with `hasPipeline: true`, note the pipeline contribution.
+Read `fm-context.json` — list of active force majeures by country with company names and summaries. Use this to explain WHY suppliers dropped.
 
-### Writing rules
+## Step 3: Read energy news
 
-- **Natural language** — write like a senior analyst, not a template
-- **Date ranges, never week numbers** — use "17–23 Mar" (from `start`/`end` fields), NEVER "W13" or "Week 13". A CEO should immediately understand the time period.
-- **Specific numbers** — "14,142 kbd" not "increased significantly"
-- **Causal** — "Saudi Arabia absent this week due to active FM since Mar 4" not just "Saudi Arabia dropped out"
-- **Forward-looking** — trajectory, risks, what to watch
-- **Concise** — each bullet 1-2 sentences, max 4 bullets per dataset
-- **No source citations** in the bullets
+Read `energy-news-data.json` — one-line market headlines per country×commodity. Incorporate relevant headlines into your analysis.
 
-### For zero/minimal volume datasets
+## Step 4: Web search for latest context
 
-Write 1 bullet: "No significant [commodity] [imports/exports] recorded for [country] in recent weeks. [Brief context if relevant.]"
+Run 3-5 web searches with today's date to get fresh context. Every query MUST include "March 2026" or today's date. Only use results from the last 48 hours.
 
----
+Suggested searches (adapt to your batch):
+- For Gulf exporters: `Gulf oil exports Hormuz disruption update March 29 2026`
+- For importers: `Asia crude oil imports Russia diversification March 2026`
+- For LNG: `LNG market supply shortage Qatar Australia March 2026`
+- General: `OPEC oil market supply disruption latest March 2026`
 
-## Step 4: Write output
+## Step 5: Write insights
 
-Write `flow-insights.json`:
+For each dataset key in your batch file, write 2-4 CEO-level insight bullets.
+
+### What GOOD insights look like
+
+**DO THIS** (causal, connected, forward-looking):
+> India's crude imports stabilized at ~4,350 kbd/day in 23–28 Mar after the sharp contraction in early March when the Hormuz closure disrupted ~60% of India's traditional Gulf supply chain. Russia has become the dominant supplier at 38% share — nearly double pre-crisis levels — as refiners compete for non-Gulf barrels.
+
+**DON'T DO THIS** (just restating numbers the chart shows):
+> India's crude imports totalled 30,440 kbd in 23–28 Mar, broadly flat versus 16–22 Mar.
+
+### Rules
+
+- **Date ranges**: Use "23–28 Mar" format (from `start`/`end` fields). NEVER use "W13" or week numbers.
+- **Causal**: Don't just state what happened — explain WHY using FM declarations, country status, and market events.
+- **Connect dots**: If Iraq disappeared from India's suppliers, say "consistent with BP/Eni Basra shutdowns under active FM" — don't just say "Iraq dropped out."
+- **Web search context**: If you found relevant fresh news, weave it in naturally (e.g., "Reuters reports..." or "according to Kpler tracking data...").
+- **Forward-looking**: End with trajectory, risks, or what to watch.
+- **Specific numbers**: Volume in kbd or ktons, share percentages, % changes.
+- **No source citations as separate bullets** — weave them into the narrative.
+
+### For low-volume datasets
+
+If total < 100 for all weeks: write 1 brief bullet explaining why (e.g., "limited infrastructure", "commodity not typically traded by this country").
+
+## Step 6: Write output
+
+Write results to the output file specified (e.g., `flow-insights-batch-1.json`):
 
 ```json
 {
-  "lastUpdated": "<ISO timestamp>",
-  "india_crude": [
-    "India's crude imports recovered to ~4,350 kbd in W13 after dropping to 3,580 kbd in W11 — the lowest since the Hormuz closure began.",
-    "Russia now dominates India's crude supply at 38% share (11,558 kbd), up from 25% in W10, as refiners pivot to discounted Urals and ESPO barrels.",
-    "Saudi Arabia re-emerged in W12-W13 (5,965 → 6,660 kbd) after being absent in W11, but Iraq has disappeared from the last two weeks entirely — consistent with Basra terminal shutdowns under active FM.",
-    "Gulf supplier share has stabilized at ~28-32% after collapsing from 43% in W10, with Oman (non-Hormuz) partially compensating."
+  "saudi_arabia_crude": [
+    "Saudi crude exports dropped 39% from 44,659 kbd (2–8 Mar) to 27,115 kbd (23–28 Mar)...",
+    "The East-West Pipeline to Yanbu has become Saudi's critical lifeline...",
+    "..."
   ],
   ...
 }
 ```
-
-### Priority order for quality/depth
-
-1. **Critical**: Saudi Arabia, UAE, Iraq, Qatar crude/LNG exports + China, India, EU-27 crude imports
-2. **High**: Russia, US, Australia exports + Japan, S. Korea crude/LNG imports
-3. **Medium**: All gasoil/diesel, naphtha, gasoline datasets
-4. **Lower**: LPG, sulphur, smaller countries — 1-2 brief bullets
-
----
-
-## Rules
-
-- Do NOT read import-data.js or export-data.js directly — use flow-summary.json only
-- Do NOT fabricate data — all numbers must come from flow-summary.json
-- Every key in flow-summary.json must have a corresponding entry in flow-insights.json
-- Write the COMPLETE flow-insights.json in one Write call
-- No Chrome MCP tools needed — this is a pure analysis task

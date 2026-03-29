@@ -151,6 +151,25 @@
           "Angola"
         ]
       }
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -50.4,
+    "topGainerName": "Oman",
+    "topGainerDelta": 3118,
+    "topLoserName": "Iraq",
+    "topLoserDelta": -11318,
+    "activeFMs": [
+      "Iraq",
+      "Kuwait",
+      "Indonesia"
+    ],
+    "supplierDisappeared": [
+      "Iraq",
+      "Saudi Arabia"
+    ],
+    "supplierAppeared": [
+      "Oman",
+      "Angola"
     ]
   },
   "china_lng": {
@@ -252,6 +271,23 @@
           "Indonesia"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -36.3,
+    "topGainerName": "Indonesia",
+    "topGainerDelta": 61,
+    "topLoserName": "Qatar",
+    "topLoserDelta": -362,
+    "activeFMs": [
+      "Qatar",
+      "Indonesia"
+    ],
+    "supplierDisappeared": [
+      "Qatar",
+      "Canada"
+    ],
+    "supplierAppeared": [
+      "Indonesia"
     ]
   },
   "china_lpg": {
@@ -359,6 +395,23 @@
           "Australia"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -16,
+    "topGainerName": "Australia",
+    "topGainerDelta": 23,
+    "topLoserName": "United States",
+    "topLoserDelta": -49,
+    "activeFMs": [
+      "Qatar",
+      "Kuwait"
+    ],
+    "supplierDisappeared": [
+      "Qatar",
+      "Kuwait"
+    ],
+    "supplierAppeared": [
+      "Australia"
     ]
   },
   "china_kero_jet": {
@@ -421,7 +474,20 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "South Korea",
+    "topLoserDelta": -345,
+    "activeFMs": [
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "South Korea"
+    ],
+    "supplierAppeared": []
   },
   "china_gasoil_diesel": {
     "direction": "import",
@@ -497,7 +563,21 @@
           "South Korea"
         ]
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -88.1,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "South Korea",
+    "topLoserDelta": -250,
+    "activeFMs": [
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "Japan",
+      "Chile"
+    ],
+    "supplierAppeared": []
   },
   "china_gasoline": {
     "direction": "import",
@@ -559,7 +639,20 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "Singapore Republic",
+    "topLoserDelta": -178,
+    "activeFMs": [
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "Singapore Republic"
+    ],
+    "supplierAppeared": []
   },
   "china_naphtha": {
     "direction": "import",
@@ -661,6 +754,32 @@
           "Thailand"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -30.7,
+    "topGainerName": "Russian Federation",
+    "topGainerDelta": 742,
+    "topLoserName": "Qatar",
+    "topLoserDelta": -1201,
+    "activeFMs": [
+      "Qatar",
+      "Bahrain",
+      "Kuwait",
+      "India",
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "Qatar",
+      "Saudi Arabia",
+      "India",
+      "United Arab Emirates",
+      "Georgia"
+    ],
+    "supplierAppeared": [
+      "Russian Federation",
+      "Norway",
+      "South Korea",
+      "Thailand"
     ]
   },
   "china_sulphur": {
@@ -737,7 +856,21 @@
           "Canada"
         ]
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -66,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "Saudi Arabia",
+    "topLoserDelta": -55,
+    "activeFMs": [
+      "Qatar",
+      "Kuwait"
+    ],
+    "supplierDisappeared": [
+      "Saudi Arabia"
+    ],
+    "supplierAppeared": []
   },
   "india_crude": {
     "direction": "import",
@@ -855,6 +988,27 @@
           "Ecuador"
         ]
       }
+    ],
+    "fourWeekTrend": "flat",
+    "fourWeekChangePct": -6.5,
+    "topGainerName": "Russian Federation",
+    "topGainerDelta": 3295,
+    "topLoserName": "Iraq",
+    "topLoserDelta": -4147,
+    "activeFMs": [
+      "Iraq",
+      "Qatar",
+      "Kuwait"
+    ],
+    "supplierDisappeared": [
+      "Iraq",
+      "Angola",
+      "Saudi-Kuwaiti Neutral Zone"
+    ],
+    "supplierAppeared": [
+      "United Arab Emirates",
+      "Nigeria",
+      "Ecuador"
     ]
   },
   "india_lng": {
@@ -943,6 +1097,22 @@
           "Nigeria"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 19.7,
+    "topGainerName": "United States",
+    "topGainerDelta": 135,
+    "topLoserName": "United Arab Emirates",
+    "topLoserDelta": -101,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "United Arab Emirates",
+      "Mozambique"
+    ],
+    "supplierAppeared": [
+      "United States",
+      "Angola",
+      "Nigeria"
     ]
   },
   "india_lpg": {
@@ -1038,7 +1208,24 @@
           "Qatar"
         ]
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -61.9,
+    "topGainerName": "United States",
+    "topGainerDelta": 5,
+    "topLoserName": "United Arab Emirates",
+    "topLoserDelta": -83,
+    "activeFMs": [
+      "Qatar",
+      "Bahrain",
+      "Kuwait"
+    ],
+    "supplierDisappeared": [
+      "United Arab Emirates",
+      "Bahrain",
+      "Saudi Arabia"
+    ],
+    "supplierAppeared": []
   },
   "india_kero_jet": {
     "direction": "import",
@@ -1092,7 +1279,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "india_gasoil_diesel": {
     "direction": "import",
@@ -1158,6 +1354,19 @@
           "Russian Federation"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 86.4,
+    "topGainerName": "Russian Federation",
+    "topGainerDelta": 110,
+    "topLoserName": "United Arab Emirates",
+    "topLoserDelta": -59,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "United Arab Emirates"
+    ],
+    "supplierAppeared": [
+      "Russian Federation"
     ]
   },
   "india_gasoline": {
@@ -1224,7 +1433,18 @@
           "South Korea"
         ]
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -40,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "South Korea",
+    "topLoserDelta": -30,
+    "activeFMs": [
+      "South Korea"
+    ],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "india_naphtha": {
     "direction": "import",
@@ -1302,6 +1522,24 @@
           "Russian Federation"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -40.8,
+    "topGainerName": "Oman",
+    "topGainerDelta": 324,
+    "topLoserName": "United Arab Emirates",
+    "topLoserDelta": -511,
+    "activeFMs": [
+      "Kuwait"
+    ],
+    "supplierDisappeared": [
+      "United Arab Emirates",
+      "Kuwait",
+      "Iran"
+    ],
+    "supplierAppeared": [
+      "Oman",
+      "Russian Federation"
     ]
   },
   "india_sulphur": {
@@ -1366,6 +1604,20 @@
           "Jordan"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 0,
+    "topGainerName": "Canada",
+    "topGainerDelta": 61,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [
+      "Qatar"
+    ],
+    "supplierDisappeared": [],
+    "supplierAppeared": [
+      "Canada",
+      "Jordan"
     ]
   },
   "japan_crude": {
@@ -1462,6 +1714,23 @@
           "Qatar"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -60.7,
+    "topGainerName": "Malaysia",
+    "topGainerDelta": 345,
+    "topLoserName": "Saudi Arabia",
+    "topLoserDelta": -6507,
+    "activeFMs": [
+      "Qatar",
+      "Kuwait"
+    ],
+    "supplierDisappeared": [
+      "Kuwait"
+    ],
+    "supplierAppeared": [
+      "Malaysia",
+      "Qatar"
     ]
   },
   "japan_lng": {
@@ -1569,7 +1838,22 @@
           "Russian Federation"
         ]
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -35.6,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "Russian Federation",
+    "topLoserDelta": -151,
+    "activeFMs": [
+      "Qatar",
+      "China",
+      "Indonesia"
+    ],
+    "supplierDisappeared": [
+      "Brunei"
+    ],
+    "supplierAppeared": []
   },
   "japan_lpg": {
     "direction": "import",
@@ -1641,7 +1925,18 @@
           "United States"
         ]
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 35.1,
+    "topGainerName": "United States",
+    "topGainerDelta": 59,
+    "topLoserName": "Australia",
+    "topLoserDelta": -5,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Australia"
+    ],
+    "supplierAppeared": []
   },
   "japan_kero_jet": {
     "direction": "import",
@@ -1713,7 +2008,21 @@
           "South Korea"
         ]
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -25.5,
+    "topGainerName": "South Korea",
+    "topGainerDelta": 148,
+    "topLoserName": "China",
+    "topLoserDelta": -316,
+    "activeFMs": [
+      "China",
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "China"
+    ],
+    "supplierAppeared": []
   },
   "japan_gasoil_diesel": {
     "direction": "import",
@@ -1777,7 +2086,18 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [
+      "South Korea"
+    ],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "japan_gasoline": {
     "direction": "import",
@@ -1847,7 +2167,18 @@
           "South Korea"
         ]
       }
-    ]
+    ],
+    "fourWeekTrend": "rising",
+    "fourWeekChangePct": 504,
+    "topGainerName": "South Korea",
+    "topGainerDelta": 500,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [
+      "South Korea"
+    ],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "japan_naphtha": {
     "direction": "import",
@@ -1936,6 +2267,27 @@
           "Algeria"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -12.5,
+    "topGainerName": "South Korea",
+    "topGainerDelta": 165,
+    "topLoserName": "Qatar",
+    "topLoserDelta": -451,
+    "activeFMs": [
+      "Qatar",
+      "Kuwait",
+      "India",
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "Qatar",
+      "Kuwait"
+    ],
+    "supplierAppeared": [
+      "South Korea",
+      "Peru",
+      "Algeria"
     ]
   },
   "japan_sulphur": {
@@ -1990,7 +2342,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "south_korea_crude": {
     "direction": "import",
@@ -2104,6 +2465,25 @@
           "Iraq"
         ]
       }
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -61.6,
+    "topGainerName": "United Arab Emirates",
+    "topGainerDelta": 1857,
+    "topLoserName": "Saudi Arabia",
+    "topLoserDelta": -4980,
+    "activeFMs": [
+      "Iraq",
+      "Qatar",
+      "Kuwait"
+    ],
+    "supplierDisappeared": [
+      "Kuwait",
+      "Ecuador"
+    ],
+    "supplierAppeared": [
+      "Algeria",
+      "Iraq"
     ]
   },
   "south_korea_lng": {
@@ -2216,6 +2596,25 @@
           "United States"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -32.9,
+    "topGainerName": "Indonesia",
+    "topGainerDelta": 74,
+    "topLoserName": "Qatar",
+    "topLoserDelta": -75,
+    "activeFMs": [
+      "Qatar",
+      "China",
+      "Indonesia"
+    ],
+    "supplierDisappeared": [
+      "Qatar",
+      "Peru"
+    ],
+    "supplierAppeared": [
+      "Indonesia",
+      "China"
     ]
   },
   "south_korea_lpg": {
@@ -2292,7 +2691,18 @@
           "United States"
         ]
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -54.8,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "United States",
+    "topLoserDelta": -45,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Canada"
+    ],
+    "supplierAppeared": []
   },
   "south_korea_kero_jet": {
     "direction": "import",
@@ -2350,7 +2760,18 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [
+      "China"
+    ],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "south_korea_gasoil_diesel": {
     "direction": "import",
@@ -2420,6 +2841,20 @@
           "China"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 0,
+    "topGainerName": "Russian Federation",
+    "topGainerDelta": 53,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [
+      "China"
+    ],
+    "supplierDisappeared": [],
+    "supplierAppeared": [
+      "Russian Federation",
+      "China"
     ]
   },
   "south_korea_gasoline": {
@@ -2486,7 +2921,18 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "Japan",
+    "topLoserDelta": -534,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Japan"
+    ],
+    "supplierAppeared": []
   },
   "south_korea_naphtha": {
     "direction": "import",
@@ -2602,6 +3048,29 @@
           "Egypt"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -48.3,
+    "topGainerName": "Greece",
+    "topGainerDelta": 436,
+    "topLoserName": "United Arab Emirates",
+    "topLoserDelta": -730,
+    "activeFMs": [
+      "Iraq",
+      "Qatar",
+      "Bahrain",
+      "Kuwait",
+      "India"
+    ],
+    "supplierDisappeared": [
+      "United Arab Emirates",
+      "Bahrain",
+      "India"
+    ],
+    "supplierAppeared": [
+      "Greece",
+      "Peru",
+      "Egypt"
     ]
   },
   "south_korea_sulphur": {
@@ -2656,7 +3125,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "thailand_crude": {
     "direction": "import",
@@ -2757,6 +3235,25 @@
           "Malaysia"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -23.1,
+    "topGainerName": "United Arab Emirates",
+    "topGainerDelta": 2630,
+    "topLoserName": "Indonesia",
+    "topLoserDelta": -1321,
+    "activeFMs": [
+      "Kuwait",
+      "Indonesia"
+    ],
+    "supplierDisappeared": [
+      "Indonesia",
+      "Saudi Arabia",
+      "United States",
+      "Saudi-Kuwaiti Neutral Zone"
+    ],
+    "supplierAppeared": [
+      "Malaysia"
     ]
   },
   "thailand_lng": {
@@ -2845,6 +3342,23 @@
           "China"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -42,
+    "topGainerName": "Oman",
+    "topGainerDelta": 70,
+    "topLoserName": "Qatar",
+    "topLoserDelta": -192,
+    "activeFMs": [
+      "Qatar",
+      "China"
+    ],
+    "supplierDisappeared": [
+      "Qatar",
+      "Malaysia"
+    ],
+    "supplierAppeared": [
+      "Oman"
     ]
   },
   "thailand_lpg": {
@@ -2903,7 +3417,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "thailand_kero_jet": {
     "direction": "import",
@@ -2957,7 +3480,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "thailand_gasoil_diesel": {
     "direction": "import",
@@ -3027,6 +3559,22 @@
           "Malaysia"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 50,
+    "topGainerName": "Malaysia",
+    "topGainerDelta": 57,
+    "topLoserName": "China",
+    "topLoserDelta": -38,
+    "activeFMs": [
+      "China",
+      "India"
+    ],
+    "supplierDisappeared": [
+      "China"
+    ],
+    "supplierAppeared": [
+      "Malaysia"
     ]
   },
   "thailand_gasoline": {
@@ -3093,7 +3641,18 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "Singapore Republic",
+    "topLoserDelta": -50,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Singapore Republic"
+    ],
+    "supplierAppeared": []
   },
   "thailand_naphtha": {
     "direction": "import",
@@ -3161,6 +3720,22 @@
           "Singapore Republic"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -97.2,
+    "topGainerName": "Singapore Republic",
+    "topGainerDelta": 22,
+    "topLoserName": "Bahrain",
+    "topLoserDelta": -502,
+    "activeFMs": [
+      "Bahrain"
+    ],
+    "supplierDisappeared": [
+      "Bahrain",
+      "United States"
+    ],
+    "supplierAppeared": [
+      "Singapore Republic"
     ]
   },
   "thailand_sulphur": {
@@ -3219,7 +3794,18 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "Russian Federation",
+    "topLoserDelta": -19,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Russian Federation"
+    ],
+    "supplierAppeared": []
   },
   "vietnam_crude": {
     "direction": "import",
@@ -3285,7 +3871,20 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "Kuwait",
+    "topLoserDelta": -2000,
+    "activeFMs": [
+      "Kuwait"
+    ],
+    "supplierDisappeared": [
+      "Kuwait"
+    ],
+    "supplierAppeared": []
   },
   "vietnam_lng": {
     "direction": "import",
@@ -3343,7 +3942,18 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [
+      "Qatar"
+    ],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "vietnam_lpg": {
     "direction": "import",
@@ -3419,6 +4029,21 @@
           "United States"
         ]
       }
+    ],
+    "fourWeekTrend": "rising",
+    "fourWeekChangePct": 2266.7,
+    "topGainerName": "United States",
+    "topGainerDelta": 71,
+    "topLoserName": "China",
+    "topLoserDelta": -3,
+    "activeFMs": [
+      "China"
+    ],
+    "supplierDisappeared": [
+      "China"
+    ],
+    "supplierAppeared": [
+      "United States"
     ]
   },
   "vietnam_kero_jet": {
@@ -3493,7 +4118,21 @@
           "Singapore Republic"
         ]
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -59.9,
+    "topGainerName": "Singapore Republic",
+    "topGainerDelta": 3,
+    "topLoserName": "Thailand",
+    "topLoserDelta": -102,
+    "activeFMs": [
+      "China"
+    ],
+    "supplierDisappeared": [
+      "Thailand",
+      "China"
+    ],
+    "supplierAppeared": []
   },
   "vietnam_gasoil_diesel": {
     "direction": "import",
@@ -3571,7 +4210,20 @@
           "Singapore Republic"
         ]
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 49.9,
+    "topGainerName": "South Korea",
+    "topGainerDelta": 487,
+    "topLoserName": "Malaysia",
+    "topLoserDelta": -106,
+    "activeFMs": [
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "Malaysia"
+    ],
+    "supplierAppeared": []
   },
   "vietnam_gasoline": {
     "direction": "import",
@@ -3645,7 +4297,18 @@
           "Singapore Republic"
         ]
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -81.4,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "Malaysia",
+    "topLoserDelta": -324,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Malaysia"
+    ],
+    "supplierAppeared": []
   },
   "vietnam_naphtha": {
     "direction": "import",
@@ -3699,7 +4362,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "vietnam_sulphur": {
     "direction": "import",
@@ -3761,7 +4433,20 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "Qatar",
+    "topLoserDelta": -17,
+    "activeFMs": [
+      "Qatar"
+    ],
+    "supplierDisappeared": [
+      "Qatar"
+    ],
+    "supplierAppeared": []
   },
   "eu_27_crude": {
     "direction": "export",
@@ -3841,6 +4526,20 @@
           "Netherlands"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -67,
+    "topGainerName": "Netherlands",
+    "topGainerDelta": 407,
+    "topLoserName": "Brazil",
+    "topLoserDelta": -2132,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Brazil",
+      "Turkey"
+    ],
+    "supplierAppeared": [
+      "Netherlands"
     ]
   },
   "eu_27_lng": {
@@ -3899,7 +4598,18 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "Italy",
+    "topLoserDelta": -13,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Italy"
+    ],
+    "supplierAppeared": []
   },
   "eu_27_lpg": {
     "direction": "export",
@@ -3996,6 +4706,25 @@
           "France"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -62.5,
+    "topGainerName": "Ireland",
+    "topGainerDelta": 2,
+    "topLoserName": "Lebanon",
+    "topLoserDelta": -5,
+    "activeFMs": [
+      "France",
+      "Germany",
+      "Denmark"
+    ],
+    "supplierDisappeared": [
+      "Lebanon",
+      "Spain",
+      "Turkey"
+    ],
+    "supplierAppeared": [
+      "France"
     ]
   },
   "eu_27_kero_jet": {
@@ -4085,7 +4814,22 @@
           "United Kingdom"
         ]
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -85.7,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "United Kingdom",
+    "topLoserDelta": -253,
+    "activeFMs": [
+      "France",
+      "Denmark"
+    ],
+    "supplierDisappeared": [
+      "Denmark",
+      "Albania"
+    ],
+    "supplierAppeared": []
   },
   "eu_27_gasoil_diesel": {
     "direction": "export",
@@ -4252,6 +4996,29 @@
           "Italy"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -51,
+    "topGainerName": "Croatia",
+    "topGainerDelta": 275,
+    "topLoserName": "United Kingdom",
+    "topLoserDelta": -966,
+    "activeFMs": [
+      "France",
+      "Germany",
+      "Denmark"
+    ],
+    "supplierDisappeared": [
+      "United Kingdom",
+      "Germany",
+      "Romania",
+      "Portugal"
+    ],
+    "supplierAppeared": [
+      "Croatia",
+      "Slovenia",
+      "Ireland",
+      "Italy"
     ]
   },
   "eu_27_gasoline": {
@@ -4418,6 +5185,30 @@
           "Mauritania"
         ]
       }
+    ],
+    "fourWeekTrend": "flat",
+    "fourWeekChangePct": 4.8,
+    "topGainerName": "Morocco",
+    "topGainerDelta": 312,
+    "topLoserName": "Libya",
+    "topLoserDelta": -630,
+    "activeFMs": [
+      "France",
+      "Germany"
+    ],
+    "supplierDisappeared": [
+      "Libya",
+      "Netherlands",
+      "Belgium",
+      "United States",
+      "France"
+    ],
+    "supplierAppeared": [
+      "Spain",
+      "Morocco",
+      "Ghana",
+      "Senegal",
+      "Mauritania"
     ]
   },
   "eu_27_naphtha": {
@@ -4527,6 +5318,28 @@
           "Germany"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -31.7,
+    "topGainerName": "Italy",
+    "topGainerDelta": 502,
+    "topLoserName": "Belgium",
+    "topLoserDelta": -817,
+    "activeFMs": [
+      "France",
+      "China",
+      "Taiwan",
+      "Germany"
+    ],
+    "supplierDisappeared": [
+      "Belgium",
+      "Netherlands",
+      "Argentina",
+      "Spain"
+    ],
+    "supplierAppeared": [
+      "Italy",
+      "China"
     ]
   },
   "eu_27_sulphur": {
@@ -4581,7 +5394,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "united_states_crude": {
     "direction": "import",
@@ -4716,6 +5538,21 @@
           "Bahamas"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -38.7,
+    "topGainerName": "Bahamas",
+    "topGainerDelta": 352,
+    "topLoserName": "Iraq",
+    "topLoserDelta": -2295,
+    "activeFMs": [
+      "Iraq"
+    ],
+    "supplierDisappeared": [
+      "Iraq"
+    ],
+    "supplierAppeared": [
+      "Bahamas"
     ]
   },
   "united_states_lng": {
@@ -4770,7 +5607,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "united_states_lpg": {
     "direction": "import",
@@ -4828,7 +5674,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "united_states_kero_jet": {
     "direction": "import",
@@ -4906,6 +5761,24 @@
           "Taiwan"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 469.2,
+    "topGainerName": "South Korea",
+    "topGainerDelta": 403,
+    "topLoserName": "Canada",
+    "topLoserDelta": -91,
+    "activeFMs": [
+      "China",
+      "Taiwan",
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "Canada"
+    ],
+    "supplierAppeared": [
+      "South Korea",
+      "Taiwan"
     ]
   },
   "united_states_gasoil_diesel": {
@@ -4984,6 +5857,19 @@
           "Argentina"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -57.6,
+    "topGainerName": "Argentina",
+    "topGainerDelta": 56,
+    "topLoserName": "Canada",
+    "topLoserDelta": -406,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Turkey"
+    ],
+    "supplierAppeared": [
+      "Argentina"
     ]
   },
   "united_states_gasoline": {
@@ -5085,6 +5971,24 @@
           "United Kingdom"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -46.5,
+    "topGainerName": "United States Virgin Islands",
+    "topGainerDelta": 292,
+    "topLoserName": "Netherlands",
+    "topLoserDelta": -614,
+    "activeFMs": [
+      "India",
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "Netherlands",
+      "Belgium"
+    ],
+    "supplierAppeared": [
+      "United States Virgin Islands",
+      "United Kingdom"
     ]
   },
   "united_states_naphtha": {
@@ -5169,6 +6073,26 @@
           "Brazil"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -34.6,
+    "topGainerName": "Angola",
+    "topGainerDelta": 345,
+    "topLoserName": "France",
+    "topLoserDelta": -352,
+    "activeFMs": [
+      "France"
+    ],
+    "supplierDisappeared": [
+      "France",
+      "Netherlands",
+      "Belgium",
+      "Peru"
+    ],
+    "supplierAppeared": [
+      "Angola",
+      "Argentina",
+      "Brazil"
     ]
   },
   "united_states_sulphur": {
@@ -5223,7 +6147,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "taiwan_crude": {
     "direction": "import",
@@ -5303,6 +6236,23 @@
           "United States"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -29.7,
+    "topGainerName": "United States",
+    "topGainerDelta": 2061,
+    "topLoserName": "Saudi Arabia",
+    "topLoserDelta": -2600,
+    "activeFMs": [
+      "Kuwait"
+    ],
+    "supplierDisappeared": [
+      "Saudi Arabia",
+      "United Arab Emirates",
+      "Republic of the Congo"
+    ],
+    "supplierAppeared": [
+      "United States"
     ]
   },
   "taiwan_lng": {
@@ -5399,6 +6349,24 @@
           "Brunei"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 43.4,
+    "topGainerName": "Australia",
+    "topGainerDelta": 228,
+    "topLoserName": "Papua New Guinea",
+    "topLoserDelta": -79,
+    "activeFMs": [
+      "Qatar"
+    ],
+    "supplierDisappeared": [
+      "Papua New Guinea",
+      "United States",
+      "Qatar"
+    ],
+    "supplierAppeared": [
+      "Equatorial Guinea",
+      "Brunei"
     ]
   },
   "taiwan_lpg": {
@@ -5461,7 +6429,18 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "Australia",
+    "topLoserDelta": -17,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Australia"
+    ],
+    "supplierAppeared": []
   },
   "taiwan_kero_jet": {
     "direction": "import",
@@ -5515,7 +6494,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "taiwan_gasoil_diesel": {
     "direction": "import",
@@ -5585,6 +6573,21 @@
           "China"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 0,
+    "topGainerName": "South Korea",
+    "topGainerDelta": 129,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [
+      "China",
+      "South Korea"
+    ],
+    "supplierDisappeared": [],
+    "supplierAppeared": [
+      "South Korea",
+      "China"
     ]
   },
   "taiwan_gasoline": {
@@ -5643,7 +6646,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "taiwan_naphtha": {
     "direction": "import",
@@ -5713,7 +6725,21 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "Singapore Republic",
+    "topLoserDelta": -776,
+    "activeFMs": [
+      "Iraq"
+    ],
+    "supplierDisappeared": [
+      "Singapore Republic",
+      "United States"
+    ],
+    "supplierAppeared": []
   },
   "taiwan_sulphur": {
     "direction": "import",
@@ -5767,7 +6793,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "bahrain_crude": {
     "direction": "export",
@@ -5821,7 +6856,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "bahrain_lng": {
     "direction": "export",
@@ -5875,7 +6919,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "bahrain_lpg": {
     "direction": "export",
@@ -5929,7 +6982,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "bahrain_kero_jet": {
     "direction": "export",
@@ -5987,7 +7049,18 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "United Arab Emirates",
+    "topLoserDelta": -503,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "United Arab Emirates"
+    ],
+    "supplierAppeared": []
   },
   "bahrain_gasoil_diesel": {
     "direction": "export",
@@ -6041,7 +7114,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "bahrain_gasoline": {
     "direction": "export",
@@ -6095,7 +7177,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "bahrain_naphtha": {
     "direction": "export",
@@ -6153,7 +7244,18 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "Japan",
+    "topLoserDelta": -512,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Japan"
+    ],
+    "supplierAppeared": []
   },
   "bahrain_sulphur": {
     "direction": "export",
@@ -6207,7 +7309,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "iran_crude": {
     "direction": "export",
@@ -6265,7 +7376,20 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -38.1,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "China",
+    "topLoserDelta": -4603,
+    "activeFMs": [
+      "China"
+    ],
+    "supplierDisappeared": [
+      "China"
+    ],
+    "supplierAppeared": []
   },
   "iran_lng": {
     "direction": "export",
@@ -6319,7 +7443,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "iran_lpg": {
     "direction": "export",
@@ -6383,7 +7516,22 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -34.9,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "China",
+    "topLoserDelta": -41,
+    "activeFMs": [
+      "China",
+      "India"
+    ],
+    "supplierDisappeared": [
+      "China",
+      "India"
+    ],
+    "supplierAppeared": []
   },
   "iran_kero_jet": {
     "direction": "export",
@@ -6437,7 +7585,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "iran_gasoil_diesel": {
     "direction": "export",
@@ -6491,7 +7648,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "iran_gasoline": {
     "direction": "export",
@@ -6545,7 +7711,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "iran_naphtha": {
     "direction": "export",
@@ -6603,7 +7778,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "iran_sulphur": {
     "direction": "export",
@@ -6657,7 +7841,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "iraq_crude": {
     "direction": "export",
@@ -6729,6 +7922,25 @@
           "Turkey"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -90.2,
+    "topGainerName": "Turkey",
+    "topGainerDelta": 1500,
+    "topLoserName": "China",
+    "topLoserDelta": -4841,
+    "activeFMs": [
+      "China",
+      "India"
+    ],
+    "supplierDisappeared": [
+      "China",
+      "India",
+      "Italy",
+      "Malaysia"
+    ],
+    "supplierAppeared": [
+      "Turkey"
     ]
   },
   "iraq_lng": {
@@ -6783,7 +7995,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "iraq_lpg": {
     "direction": "export",
@@ -6837,7 +8058,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "iraq_kero_jet": {
     "direction": "export",
@@ -6891,7 +8121,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "iraq_gasoil_diesel": {
     "direction": "export",
@@ -6945,7 +8184,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "iraq_gasoline": {
     "direction": "export",
@@ -6999,7 +8247,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "iraq_naphtha": {
     "direction": "export",
@@ -7053,7 +8310,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "iraq_sulphur": {
     "direction": "export",
@@ -7107,7 +8373,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "kuwait_crude": {
     "direction": "export",
@@ -7165,7 +8440,20 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "China",
+    "topLoserDelta": -2000,
+    "activeFMs": [
+      "China"
+    ],
+    "supplierDisappeared": [
+      "China"
+    ],
+    "supplierAppeared": []
   },
   "kuwait_lng": {
     "direction": "export",
@@ -7219,7 +8507,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "kuwait_lpg": {
     "direction": "export",
@@ -7273,7 +8570,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "kuwait_kero_jet": {
     "direction": "export",
@@ -7331,7 +8637,18 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "United Arab Emirates",
+    "topLoserDelta": -64,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "United Arab Emirates"
+    ],
+    "supplierAppeared": []
   },
   "kuwait_gasoil_diesel": {
     "direction": "export",
@@ -7397,7 +8714,22 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "United Arab Emirates",
+    "topLoserDelta": -102,
+    "activeFMs": [
+      "Qatar",
+      "China"
+    ],
+    "supplierDisappeared": [
+      "United Arab Emirates",
+      "China"
+    ],
+    "supplierAppeared": []
   },
   "kuwait_gasoline": {
     "direction": "export",
@@ -7455,7 +8787,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "kuwait_naphtha": {
     "direction": "export",
@@ -7509,7 +8850,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "kuwait_sulphur": {
     "direction": "export",
@@ -7563,7 +8913,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "oman_crude": {
     "direction": "export",
@@ -7635,7 +8994,19 @@
           "China"
         ]
       }
-    ]
+    ],
+    "fourWeekTrend": "flat",
+    "fourWeekChangePct": -2.2,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "China",
+    "topLoserDelta": -168,
+    "activeFMs": [
+      "China",
+      "Taiwan"
+    ],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "oman_lng": {
     "direction": "export",
@@ -7719,6 +9090,25 @@
           "Thailand"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -51.2,
+    "topGainerName": "Thailand",
+    "topGainerDelta": 35,
+    "topLoserName": "India",
+    "topLoserDelta": -77,
+    "activeFMs": [
+      "China",
+      "Taiwan",
+      "India",
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "South Korea",
+      "Taiwan"
+    ],
+    "supplierAppeared": [
+      "Thailand"
     ]
   },
   "oman_lpg": {
@@ -7773,7 +9163,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "oman_kero_jet": {
     "direction": "export",
@@ -7835,7 +9234,18 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "Mauritius",
+    "topLoserDelta": -58,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Mauritius"
+    ],
+    "supplierAppeared": []
   },
   "oman_gasoil_diesel": {
     "direction": "export",
@@ -7917,6 +9327,22 @@
           "Mauritius"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -32.1,
+    "topGainerName": "Pakistan",
+    "topGainerDelta": 351,
+    "topLoserName": "Namibia",
+    "topLoserDelta": -345,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Namibia",
+      "Argentina",
+      "Madagascar",
+      "South Africa"
+    ],
+    "supplierAppeared": [
+      "Pakistan"
     ]
   },
   "oman_gasoline": {
@@ -7997,6 +9423,20 @@
           "Saudi Arabia"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 15.8,
+    "topGainerName": "Saudi Arabia",
+    "topGainerDelta": 332,
+    "topLoserName": "Madagascar",
+    "topLoserDelta": -167,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Madagascar",
+      "Mauritius"
+    ],
+    "supplierAppeared": [
+      "Saudi Arabia"
     ]
   },
   "oman_naphtha": {
@@ -8061,7 +9501,22 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "South Korea",
+    "topLoserDelta": -489,
+    "activeFMs": [
+      "India",
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "South Korea",
+      "India"
+    ],
+    "supplierAppeared": []
   },
   "oman_sulphur": {
     "direction": "export",
@@ -8115,7 +9570,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "qatar_crude": {
     "direction": "export",
@@ -8173,7 +9637,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "qatar_lng": {
     "direction": "export",
@@ -8239,6 +9712,22 @@
           "Kuwait"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -65.1,
+    "topGainerName": "Kuwait",
+    "topGainerDelta": 68,
+    "topLoserName": "China",
+    "topLoserDelta": -95,
+    "activeFMs": [
+      "China",
+      "Kuwait"
+    ],
+    "supplierDisappeared": [
+      "China"
+    ],
+    "supplierAppeared": [
+      "Kuwait"
     ]
   },
   "qatar_lpg": {
@@ -8297,7 +9786,20 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "India",
+    "topLoserDelta": -22,
+    "activeFMs": [
+      "India"
+    ],
+    "supplierDisappeared": [
+      "India"
+    ],
+    "supplierAppeared": []
   },
   "qatar_kero_jet": {
     "direction": "export",
@@ -8351,7 +9853,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "qatar_gasoil_diesel": {
     "direction": "export",
@@ -8405,7 +9916,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "qatar_gasoline": {
     "direction": "export",
@@ -8459,7 +9979,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "qatar_naphtha": {
     "direction": "export",
@@ -8517,7 +10046,18 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "Japan",
+    "topLoserDelta": -115,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Japan"
+    ],
+    "supplierAppeared": []
   },
   "qatar_sulphur": {
     "direction": "export",
@@ -8571,7 +10111,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "russia_crude": {
     "direction": "export",
@@ -8694,6 +10243,27 @@
           "France"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -14.3,
+    "topGainerName": "Turkey",
+    "topGainerDelta": 2163,
+    "topLoserName": "China",
+    "topLoserDelta": -5097,
+    "activeFMs": [
+      "France",
+      "China",
+      "Israel",
+      "India",
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "Israel",
+      "South Korea"
+    ],
+    "supplierAppeared": [
+      "Turkey",
+      "France"
     ]
   },
   "russia_lng": {
@@ -8797,6 +10367,24 @@
           "South Korea"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -37.7,
+    "topGainerName": "Japan",
+    "topGainerDelta": 63,
+    "topLoserName": "Spain",
+    "topLoserDelta": -147,
+    "activeFMs": [
+      "France",
+      "China",
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "France",
+      "Netherlands"
+    ],
+    "supplierAppeared": [
+      "Japan"
     ]
   },
   "russia_lpg": {
@@ -8859,7 +10447,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "russia_kero_jet": {
     "direction": "export",
@@ -8913,7 +10510,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "russia_gasoil_diesel": {
     "direction": "export",
@@ -9017,6 +10623,25 @@
           "Togo"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -70.1,
+    "topGainerName": "Togo",
+    "topGainerDelta": 260,
+    "topLoserName": "Turkey",
+    "topLoserDelta": -1694,
+    "activeFMs": [
+      "Taiwan"
+    ],
+    "supplierDisappeared": [
+      "Brazil",
+      "Ghana",
+      "Sudan",
+      "Senegal"
+    ],
+    "supplierAppeared": [
+      "Egypt",
+      "Togo"
     ]
   },
   "russia_gasoline": {
@@ -9079,7 +10704,18 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "Libya",
+    "topLoserDelta": -268,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Libya"
+    ],
+    "supplierAppeared": []
   },
   "russia_naphtha": {
     "direction": "export",
@@ -9177,7 +10813,26 @@
           "Turkey"
         ]
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -61.4,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "China",
+    "topLoserDelta": -1336,
+    "activeFMs": [
+      "China",
+      "India",
+      "South Korea",
+      "Indonesia"
+    ],
+    "supplierDisappeared": [
+      "China",
+      "India",
+      "Senegal",
+      "South Korea"
+    ],
+    "supplierAppeared": []
   },
   "russia_sulphur": {
     "direction": "export",
@@ -9243,6 +10898,21 @@
           "China"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 151.6,
+    "topGainerName": "China",
+    "topGainerDelta": 78,
+    "topLoserName": "Brazil",
+    "topLoserDelta": -31,
+    "activeFMs": [
+      "China"
+    ],
+    "supplierDisappeared": [
+      "Brazil"
+    ],
+    "supplierAppeared": [
+      "China"
     ]
   },
   "saudi_arabia_crude": {
@@ -9344,6 +11014,25 @@
           "Myanmar"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -39.3,
+    "topGainerName": "China",
+    "topGainerDelta": 5152,
+    "topLoserName": "Egypt",
+    "topLoserDelta": -16191,
+    "activeFMs": [
+      "China",
+      "India",
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "Egypt",
+      "South Korea",
+      "Japan"
+    ],
+    "supplierAppeared": [
+      "Myanmar"
     ]
   },
   "saudi_arabia_lng": {
@@ -9398,7 +11087,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "saudi_arabia_lpg": {
     "direction": "export",
@@ -9464,6 +11162,19 @@
           "India"
         ]
       }
+    ],
+    "fourWeekTrend": "rising",
+    "fourWeekChangePct": 0,
+    "topGainerName": "India",
+    "topGainerDelta": 23,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [
+      "India"
+    ],
+    "supplierDisappeared": [],
+    "supplierAppeared": [
+      "India"
     ]
   },
   "saudi_arabia_kero_jet": {
@@ -9528,7 +11239,19 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "United Kingdom",
+    "topLoserDelta": -667,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "United Kingdom",
+      "Jordan"
+    ],
+    "supplierAppeared": []
   },
   "saudi_arabia_gasoil_diesel": {
     "direction": "export",
@@ -9632,6 +11355,26 @@
           "Sudan"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -31.6,
+    "topGainerName": "Belgium",
+    "topGainerDelta": 744,
+    "topLoserName": "France",
+    "topLoserDelta": -987,
+    "activeFMs": [
+      "France"
+    ],
+    "supplierDisappeared": [
+      "France",
+      "Albania",
+      "Spain",
+      "Italy"
+    ],
+    "supplierAppeared": [
+      "Belgium",
+      "Pakistan",
+      "Sudan"
     ]
   },
   "saudi_arabia_gasoline": {
@@ -9724,6 +11467,22 @@
           "Singapore Republic"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -60.8,
+    "topGainerName": "Kenya",
+    "topGainerDelta": 313,
+    "topLoserName": "Malaysia",
+    "topLoserDelta": -325,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Malaysia",
+      "South Africa",
+      "Pakistan",
+      "Jordan"
+    ],
+    "supplierAppeared": [
+      "Kenya"
     ]
   },
   "saudi_arabia_naphtha": {
@@ -9798,6 +11557,21 @@
           "Indonesia"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 442.6,
+    "topGainerName": "Indonesia",
+    "topGainerDelta": 510,
+    "topLoserName": "Japan",
+    "topLoserDelta": -94,
+    "activeFMs": [
+      "Indonesia"
+    ],
+    "supplierDisappeared": [
+      "Japan"
+    ],
+    "supplierAppeared": [
+      "Indonesia"
     ]
   },
   "saudi_arabia_sulphur": {
@@ -9862,7 +11636,22 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "Indonesia",
+    "topLoserDelta": -51,
+    "activeFMs": [
+      "China",
+      "Indonesia"
+    ],
+    "supplierDisappeared": [
+      "Indonesia",
+      "Lithuania"
+    ],
+    "supplierAppeared": []
   },
   "uae_crude": {
     "direction": "export",
@@ -9962,6 +11751,28 @@
           "Philippines"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -13.9,
+    "topGainerName": "India",
+    "topGainerDelta": 5595,
+    "topLoserName": "Thailand",
+    "topLoserDelta": -3850,
+    "activeFMs": [
+      "China",
+      "India",
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "Thailand",
+      "Singapore Republic",
+      "China",
+      "Malaysia"
+    ],
+    "supplierAppeared": [
+      "India",
+      "Japan",
+      "Philippines"
     ]
   },
   "uae_lng": {
@@ -10020,7 +11831,20 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "India",
+    "topLoserDelta": -62,
+    "activeFMs": [
+      "India"
+    ],
+    "supplierDisappeared": [
+      "India"
+    ],
+    "supplierAppeared": []
   },
   "uae_lpg": {
     "direction": "export",
@@ -10078,7 +11902,20 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "India",
+    "topLoserDelta": -32,
+    "activeFMs": [
+      "India"
+    ],
+    "supplierDisappeared": [
+      "India"
+    ],
+    "supplierAppeared": []
   },
   "uae_kero_jet": {
     "direction": "export",
@@ -10132,7 +11969,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "uae_gasoil_diesel": {
     "direction": "export",
@@ -10190,7 +12036,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "uae_gasoline": {
     "direction": "export",
@@ -10250,7 +12105,19 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "Pakistan",
+    "topLoserDelta": -512,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Pakistan",
+      "Singapore Republic"
+    ],
+    "supplierAppeared": []
   },
   "uae_naphtha": {
     "direction": "export",
@@ -10312,6 +12179,22 @@
           "Taiwan"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -42,
+    "topGainerName": "Taiwan",
+    "topGainerDelta": 323,
+    "topLoserName": "China",
+    "topLoserDelta": -557,
+    "activeFMs": [
+      "China",
+      "Taiwan"
+    ],
+    "supplierDisappeared": [
+      "China"
+    ],
+    "supplierAppeared": [
+      "Taiwan"
     ]
   },
   "uae_sulphur": {
@@ -10366,7 +12249,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "us_crude": {
     "direction": "export",
@@ -10499,6 +12391,30 @@
           "United Kingdom"
         ]
       }
+    ],
+    "fourWeekTrend": "flat",
+    "fourWeekChangePct": 1.7,
+    "topGainerName": "South Korea",
+    "topGainerDelta": 2534,
+    "topLoserName": "Nigeria",
+    "topLoserDelta": -4127,
+    "activeFMs": [
+      "France",
+      "Taiwan",
+      "India",
+      "South Korea",
+      "Germany",
+      "Denmark"
+    ],
+    "supplierDisappeared": [
+      "Nigeria",
+      "Italy",
+      "France"
+    ],
+    "supplierAppeared": [
+      "South Korea",
+      "India",
+      "Spain"
     ]
   },
   "us_lng": {
@@ -10646,6 +12562,28 @@
           "Germany"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -10.9,
+    "topGainerName": "Netherlands",
+    "topGainerDelta": 285,
+    "topLoserName": "United Kingdom",
+    "topLoserDelta": -214,
+    "activeFMs": [
+      "France",
+      "China",
+      "Taiwan",
+      "India",
+      "South Korea",
+      "Germany"
+    ],
+    "supplierDisappeared": [
+      "Italy",
+      "United Kingdom"
+    ],
+    "supplierAppeared": [
+      "Netherlands",
+      "Thailand"
     ]
   },
   "us_lpg": {
@@ -10795,6 +12733,26 @@
           "China"
         ]
       }
+    ],
+    "fourWeekTrend": "flat",
+    "fourWeekChangePct": 4.2,
+    "topGainerName": "France",
+    "topGainerDelta": 46,
+    "topLoserName": "Japan",
+    "topLoserDelta": -170,
+    "activeFMs": [
+      "France",
+      "China",
+      "Taiwan",
+      "India",
+      "South Korea",
+      "Indonesia"
+    ],
+    "supplierDisappeared": [
+      "South Korea"
+    ],
+    "supplierAppeared": [
+      "Netherlands"
     ]
   },
   "us_kero_jet": {
@@ -10906,6 +12864,23 @@
           "Jamaica"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 48.2,
+    "topGainerName": "United Kingdom",
+    "topGainerDelta": 609,
+    "topLoserName": "Trinidad and Tobago",
+    "topLoserDelta": -257,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Trinidad and Tobago",
+      "Mexico",
+      "United States Virgin Islands"
+    ],
+    "supplierAppeared": [
+      "United Kingdom",
+      "Netherlands",
+      "Jamaica"
     ]
   },
   "us_gasoil_diesel": {
@@ -11054,6 +13029,24 @@
           "Morocco"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 30.2,
+    "topGainerName": "Netherlands",
+    "topGainerDelta": 2728,
+    "topLoserName": "Guatemala",
+    "topLoserDelta": -496,
+    "activeFMs": [
+      "France",
+      "Germany"
+    ],
+    "supplierDisappeared": [
+      "Chile",
+      "Guatemala"
+    ],
+    "supplierAppeared": [
+      "Netherlands",
+      "Morocco"
     ]
   },
   "us_gasoline": {
@@ -11183,6 +13176,23 @@
           "Jamaica"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 11.9,
+    "topGainerName": "Australia",
+    "topGainerDelta": 303,
+    "topLoserName": "Mexico",
+    "topLoserDelta": -763,
+    "activeFMs": [],
+    "supplierDisappeared": [
+      "Ecuador",
+      "Guatemala",
+      "Peru"
+    ],
+    "supplierAppeared": [
+      "Australia",
+      "Dominican Republic",
+      "Jamaica"
     ]
   },
   "us_naphtha": {
@@ -11280,6 +13290,23 @@
           "Japan"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 12.6,
+    "topGainerName": "Colombia",
+    "topGainerDelta": 320,
+    "topLoserName": "Venezuela",
+    "topLoserDelta": -1035,
+    "activeFMs": [
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "Brazil",
+      "Curacao"
+    ],
+    "supplierAppeared": [
+      "Colombia",
+      "Japan"
     ]
   },
   "us_sulphur": {
@@ -11342,7 +13369,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "australia_crude": {
     "direction": "export",
@@ -11424,6 +13460,24 @@
           "South Korea"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -31.6,
+    "topGainerName": "South Korea",
+    "topGainerDelta": 743,
+    "topLoserName": "Indonesia",
+    "topLoserDelta": -650,
+    "activeFMs": [
+      "South Korea",
+      "Indonesia"
+    ],
+    "supplierDisappeared": [
+      "Indonesia",
+      "Singapore Republic",
+      "Thailand"
+    ],
+    "supplierAppeared": [
+      "South Korea"
     ]
   },
   "australia_lng": {
@@ -11532,6 +13586,26 @@
           "India"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -32.7,
+    "topGainerName": "Thailand",
+    "topGainerDelta": 139,
+    "topLoserName": "China",
+    "topLoserDelta": -261,
+    "activeFMs": [
+      "China",
+      "Taiwan",
+      "India",
+      "South Korea"
+    ],
+    "supplierDisappeared": [
+      "Singapore Republic",
+      "Taiwan"
+    ],
+    "supplierAppeared": [
+      "Thailand",
+      "India"
     ]
   },
   "australia_lpg": {
@@ -11600,7 +13674,20 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": -100,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "China",
+    "topLoserDelta": -24,
+    "activeFMs": [
+      "China"
+    ],
+    "supplierDisappeared": [
+      "China"
+    ],
+    "supplierAppeared": []
   },
   "australia_kero_jet": {
     "direction": "export",
@@ -11654,7 +13741,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "australia_gasoil_diesel": {
     "direction": "export",
@@ -11708,7 +13804,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "australia_gasoline": {
     "direction": "export",
@@ -11762,7 +13867,16 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   },
   "australia_naphtha": {
     "direction": "export",
@@ -11824,6 +13938,17 @@
           "Malaysia"
         ]
       }
+    ],
+    "fourWeekTrend": "volatile",
+    "fourWeekChangePct": 0,
+    "topGainerName": "Malaysia",
+    "topGainerDelta": 345,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": [
+      "Malaysia"
     ]
   },
   "australia_sulphur": {
@@ -11878,6 +14003,15 @@
         "gulfShare": 0,
         "top5": []
       }
-    ]
+    ],
+    "fourWeekTrend": "declining",
+    "fourWeekChangePct": 0,
+    "topGainerName": "",
+    "topGainerDelta": 0,
+    "topLoserName": "",
+    "topLoserDelta": 0,
+    "activeFMs": [],
+    "supplierDisappeared": [],
+    "supplierAppeared": []
   }
 }
