@@ -657,7 +657,10 @@
       }
 
       listEl.innerHTML = insights.map(text =>
-        `<li class="text-sm text-amber-900 leading-relaxed">${text}</li>`
+        `<li class="flex gap-2 text-sm text-amber-900 leading-relaxed">
+          <span class="text-amber-400 mt-1 flex-shrink-0">&bull;</span>
+          <span>${text}</span>
+        </li>`
       ).join('');
     });
   }
