@@ -316,12 +316,6 @@
               ['kero_jet', 'Kero/Jet'], ['gasoil_diesel', 'Gasoil/Diesel'], ['gasoline', 'Gasoline'], ['naphtha', 'Naphtha'], ['sulphur', 'Sulphur']
             ])}
           </div>
-          ${dateStr ? `<div class="flex items-center gap-1.5 text-xs text-navy-500 bg-white px-3 py-2 rounded-lg border border-navy-200 shadow-sm">
-            <svg class="w-3.5 h-3.5 text-navy-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            Data as of <span class="font-semibold text-navy-700">${dateStr}</span>
-          </div>` : ''}
         </div>
         <div class="flex flex-wrap items-center gap-2">
           ${renderToggle('View', 'view', [
@@ -743,14 +737,17 @@
   function renderLayout() {
     return `
       <div class="flow-fade-in">
-        <div class="mb-5">
-          <h2 class="text-lg font-bold text-navy-900 flex items-center gap-2">
-            <svg class="w-5 h-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0H21M3.375 14.25V3.375c0-.621.504-1.125 1.125-1.125h9.75c.621 0 1.125.504 1.125 1.125v3.026M12 3v7.5M12 17.625l3.375-3.375M12 17.625L8.625 14.25" />
-            </svg>
-            Export Flows
-          </h2>
-          <p class="text-sm text-navy-500 mt-0.5">${state.commodity === 'crude' ? 'Crude oil exports by destination country (includes pipeline flows for Iraq, Russia)' : (state.commodity === 'lng' ? 'LNG' : 'LPG') + ' exports by destination country'} | Source: Kpler vessel tracking + pipeline estimates</p>
+        <div class="flex items-start justify-between gap-4 mb-5">
+          <div>
+            <h2 class="text-lg font-bold text-navy-900 flex items-center gap-2">
+              <svg class="w-5 h-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0H21M3.375 14.25V3.375c0-.621.504-1.125 1.125-1.125h9.75c.621 0 1.125.504 1.125 1.125v3.026M12 3v7.5M12 17.625l3.375-3.375M12 17.625L8.625 14.25" />
+              </svg>
+              Export Flows
+            </h2>
+            <p class="text-sm text-navy-500 mt-0.5">${state.commodity === 'crude' ? 'Crude oil exports by destination country (includes pipeline flows for Iraq, Russia)' : (state.commodity === 'lng' ? 'LNG' : 'LPG') + ' exports by destination country'} | Source: Kpler vessel tracking + pipeline estimates</p>
+          </div>
+          <div id="ef-date-badge"></div>
         </div>
 
         <div id="ef-controls"></div>
@@ -884,11 +881,15 @@
       beginAtZero: true,
     };
     const commonTooltip = {
-      backgroundColor: '#102a43',
+      backgroundColor: '#0a1929',
+      titleColor: '#f0f4f8',
+      bodyColor: '#d9e2ec',
+      borderColor: '#334e68',
+      borderWidth: 1,
+      cornerRadius: 8,
       titleFont: { size: 12, weight: '600' },
       bodyFont: { size: 11 },
       padding: 10,
-      cornerRadius: 8,
       displayColors: true,
       boxPadding: 4,
     };
@@ -907,29 +908,25 @@
     const displayTotals = totals.map(v => toDisplay(v));
     const rateTotals = totals.map((v, i) => toRate(v, base[i] ? base[i].d : 0));
 
-    // 1) Bar chart — Total Volume (mbbl)
+    // 1) Line chart — Total Volume
     const ctxTrend = document.getElementById('chart-ef-total-trend');
     if (ctxTrend) {
-      const barColors = displayTotals.map((_, i) => {
-        if (i === displayTotals.length - 1 && lastIsPartial) return 'rgba(14,165,233,0.35)';
-        return '#0ea5e9';
-      });
-      const barBorders = displayTotals.map((_, i) => {
-        if (i === displayTotals.length - 1 && lastIsPartial) return '#0ea5e9';
-        return '#0284c7';
-      });
-
       charts.trend = new Chart(ctxTrend, {
-        type: 'bar',
+        type: 'line',
         data: {
           labels,
           datasets: [{
             label: 'Total Exports (' + getUnit() + ')',
             data: displayTotals,
-            backgroundColor: barColors,
-            borderColor: barBorders,
-            borderWidth: 1,
-            borderRadius: 6,
+            borderColor: '#0ea5e9',
+            backgroundColor: '#0ea5e9' + '20',
+            borderWidth: 2,
+            fill: true,
+            pointRadius: 0,
+            pointHoverRadius: 5,
+            pointHoverBorderColor: '#fff',
+            pointHoverBorderWidth: 2,
+            tension: 0.3,
           }],
         },
         options: {
@@ -953,29 +950,25 @@
       });
     }
 
-    // 1b) Bar chart — Daily Rate (mbbl/d)
+    // 1b) Line chart — Daily Rate (mbbl/d)
     const ctxRate = document.getElementById('chart-ef-daily-rate');
     if (ctxRate) {
-      const rateBarColors = rateTotals.map((_, i) => {
-        if (i === rateTotals.length - 1 && lastIsPartial) return 'rgba(245,158,11,0.35)';
-        return '#f59e0b';
-      });
-      const rateBorders = rateTotals.map((_, i) => {
-        if (i === rateTotals.length - 1 && lastIsPartial) return '#f59e0b';
-        return '#d97706';
-      });
-
       charts.rate = new Chart(ctxRate, {
-        type: 'bar',
+        type: 'line',
         data: {
           labels,
           datasets: [{
             label: 'Daily Rate (' + getRateUnit() + ')',
             data: rateTotals,
-            backgroundColor: rateBarColors,
-            borderColor: rateBorders,
-            borderWidth: 1,
-            borderRadius: 6,
+            borderColor: '#f59e0b',
+            backgroundColor: '#f59e0b' + '20',
+            borderWidth: 2,
+            fill: true,
+            pointRadius: 0,
+            pointHoverRadius: 5,
+            pointHoverBorderColor: '#fff',
+            pointHoverBorderWidth: 2,
+            tension: 0.3,
           }],
         },
         options: {
@@ -1210,6 +1203,19 @@
     }
 
     document.getElementById('ef-controls').innerHTML = renderControls();
+
+    // Date badge in top-right
+    const dateBadgeEl = document.getElementById('ef-date-badge');
+    if (dateBadgeEl) {
+      const lastDate = getLastUpdatedDate();
+      const dateStr = lastDate ? new Date(lastDate).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) : '';
+      dateBadgeEl.innerHTML = typeof renderPipelineBadge === 'function' ? renderPipelineBadge('export_flows', lastDate) : (dateStr ? `<div class="flex items-center gap-1.5 text-xs text-navy-500 bg-white px-3 py-2 rounded-lg border border-navy-200 shadow-sm whitespace-nowrap">
+        <svg class="w-3.5 h-3.5 text-navy-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        Data as of <span class="font-semibold text-navy-700">${dateStr}</span>
+      </div>` : '');
+    }
 
     const timeline = getMergedTimeline();
     const kpis = computeKPIs(timeline);

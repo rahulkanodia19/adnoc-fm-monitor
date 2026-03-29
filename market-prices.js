@@ -254,12 +254,12 @@
               ['crude', 'Crude'], ['product', 'Products'], ['all', 'All']
             ])}
           </div>
-          ${dateStr ? `<div class="flex items-center gap-1.5 text-xs text-navy-500 bg-white px-3 py-2 rounded-lg border border-navy-200 shadow-sm">
+          ${typeof renderPipelineBadge === 'function' ? renderPipelineBadge('prices', lastUpdated) : (dateStr ? `<div class="flex items-center gap-1.5 text-xs text-navy-500 bg-white px-3 py-2 rounded-lg border border-navy-200 shadow-sm">
             <svg class="w-3.5 h-3.5 text-navy-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             Data as of <span class="font-semibold text-navy-700">${dateStr}</span>
-          </div>` : ''}
+          </div>` : '')}
         </div>
         <div class="flex flex-wrap items-center gap-2">
           ${renderToggle('Range', 'timeRange', [
@@ -278,7 +278,7 @@
     const arrow = up ? '&#9650;' : '&#9660;';
 
     return `
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-6">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-6">
         <div class="stat-card bg-white rounded-xl p-3 sm:p-4 border border-navy-200 border-l-4 border-l-sky-400">
           <div class="flex items-center gap-1.5 mb-1.5">
             <svg class="w-4 h-4 text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -323,6 +323,34 @@
     `;
   }
 
+  function renderMurbanSpotlight() {
+    if (state.category !== 'crude' && state.category !== 'all') return '';
+    if (!state.data || !state.data.prices || !state.data.prices.murban) return '';
+    const raw = state.data.prices.murban;
+    if (!raw || raw.current == null) return '';
+    const current = raw.current;
+    const prev = raw.previousClose || current;
+    const change = current - prev;
+    const changePct = prev !== 0 ? (change / prev) * 100 : 0;
+    const up = change >= 0;
+    const cc = up ? 'text-emerald-600' : 'text-red-600';
+    return `
+      <div class="bg-white rounded-xl p-4 sm:p-5 border border-navy-200/70 border-l-4 border-l-emerald-500 shadow-[0_1px_3px_rgba(10,25,41,0.04)] mb-4">
+        <div class="flex items-center justify-between">
+          <div>
+            <div class="text-xs font-semibold text-emerald-600 uppercase tracking-wider mb-1">ADNOC Benchmark — Murban Crude</div>
+            <div class="flex items-baseline gap-3">
+              <span class="text-3xl sm:text-4xl font-extrabold tabular-nums text-navy-900">${fmtPrice(current)}</span>
+              <span class="text-lg font-bold tabular-nums ${cc}">${fmtChange(change)}</span>
+              <span class="text-sm font-medium tabular-nums ${cc}">(${fmtPct(changePct)})</span>
+            </div>
+            <div class="text-xs text-navy-400 mt-1">$/bbl</div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
   function renderLayout() {
     return `
       <div class="flow-fade-in">
@@ -338,6 +366,7 @@
 
         <div id="mp-source-banner"></div>
         <div id="mp-controls"></div>
+        <div id="mp-murban-spotlight"></div>
         <div id="mp-kpis"></div>
 
         <div class="mb-6">
@@ -428,12 +457,14 @@
           label: cfg.label,
           data: data,
           borderColor: cfg.color,
-          backgroundColor: cfg.color + '15',
+          backgroundColor: cfg.color + '20',
           borderWidth: 2,
           pointRadius: 0,
-          pointHoverRadius: 4,
+          pointHoverRadius: 5,
+          pointHoverBorderColor: '#fff',
+          pointHoverBorderWidth: 2,
           tension: 0.2,
-          fill: false,
+          fill: true,
           spanGaps: true,
         };
       });
@@ -447,8 +478,10 @@
           plugins: {
             legend: SHARED_LEGEND,
             tooltip: {
-              backgroundColor: '#102a43', titleColor: '#fff', bodyColor: '#d9e2ec',
-              borderColor: '#334e68', borderWidth: 1, padding: 10,
+              backgroundColor: '#0a1929', titleColor: '#f0f4f8', bodyColor: '#d9e2ec',
+              borderColor: '#334e68', borderWidth: 1, cornerRadius: 8,
+              titleFont: { size: 12, weight: '600' }, bodyFont: { size: 11 },
+              padding: 10,
               mode: 'index', intersect: false,
               callbacks: {
                 label: ctx => ctx.dataset.label + ': ' + fmtPrice(ctx.parsed.y)
@@ -515,12 +548,14 @@
         label: cfg.label,
         data: sortedDates.map(d => histMap[key][d] ?? null),
         borderColor: cfg.color,
-        backgroundColor: cfg.color + '15',
+        backgroundColor: cfg.color + '20',
         borderWidth: 2,
         pointRadius: dataPoints < 5 ? 4 : 0,
-        pointHoverRadius: 4,
+        pointHoverRadius: 5,
+        pointHoverBorderColor: '#fff',
+        pointHoverBorderWidth: 2,
         tension: 0.2,
-        fill: false,
+        fill: true,
         spanGaps: false,
       });
     }
@@ -537,8 +572,10 @@
         plugins: {
           legend: SHARED_LEGEND,
           tooltip: {
-            backgroundColor: '#102a43', titleColor: '#fff', bodyColor: '#d9e2ec',
-            borderColor: '#334e68', borderWidth: 1, padding: 10,
+            backgroundColor: '#0a1929', titleColor: '#f0f4f8', bodyColor: '#d9e2ec',
+            borderColor: '#334e68', borderWidth: 1, cornerRadius: 8,
+            titleFont: { size: 12, weight: '600' }, bodyFont: { size: 11 },
+            padding: 10,
             callbacks: {
               label: ctx => ctx.dataset.label + ': $' + ctx.parsed.y.toFixed(3) + '/MMBtu'
             }
@@ -626,6 +663,9 @@
 
     const controlsEl = document.getElementById('mp-controls');
     if (controlsEl) controlsEl.innerHTML = renderControls();
+
+    const spotlightEl = document.getElementById('mp-murban-spotlight');
+    if (spotlightEl) spotlightEl.innerHTML = renderMurbanSpotlight();
 
     const kpis = computeKPIs();
     const kpisEl = document.getElementById('mp-kpis');

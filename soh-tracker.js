@@ -835,7 +835,17 @@
     const container = document.getElementById('soh-tracker-content');
     if (!container) return;
 
-    container.innerHTML = [
+    // Add "Data as of" badge at top
+    const syncDate = data.summary && data.summary.syncTimestamp
+      ? new Date(data.summary.syncTimestamp).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
+      : null;
+    const badgeHtml = syncDate && typeof renderPipelineBadge === 'function'
+      ? `<div class="flex justify-end mb-3">${renderPipelineBadge('soh', data.summary.syncTimestamp)}</div>`
+      : syncDate && typeof renderDataAsOfBadge === 'function'
+        ? `<div class="flex justify-end mb-3">${renderDataAsOfBadge(syncDate, 'ok')}</div>`
+        : '';
+
+    container.innerHTML = badgeHtml + [
       renderKPIs(data.summary || {}),
       renderMap(),
       renderFlowCharts(),

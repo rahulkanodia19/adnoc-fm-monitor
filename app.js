@@ -92,6 +92,46 @@ function formatDateShort(dateStr) {
   return d.toLocaleDateString('en-GB', { day: '2-digit', month: 'short' });
 }
 
+// ---------- Sync Status + Data-as-of Badges ----------
+
+let syncStatus = null;
+
+function renderDataAsOfBadge(dateStr, status) {
+  if (!dateStr) return '';
+  const colors = {
+    ok:      { bg: 'bg-emerald-50', text: 'text-emerald-700', border: 'border-emerald-200', icon: 'text-emerald-500' },
+    stale:   { bg: 'bg-amber-50',   text: 'text-amber-700',   border: 'border-amber-200',   icon: 'text-amber-500' },
+    failed:  { bg: 'bg-red-50',     text: 'text-red-700',     border: 'border-red-200',     icon: 'text-red-500' },
+    skipped: { bg: 'bg-navy-50',    text: 'text-navy-500',    border: 'border-navy-200',    icon: 'text-navy-400' },
+  };
+  const c = colors[status] || colors.ok;
+  return `<div class="flex items-center gap-1.5 text-xs ${c.text} ${c.bg} px-3 py-2 rounded-lg border ${c.border} shadow-sm">
+    <svg class="w-3.5 h-3.5 ${c.icon}" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+    Data as of <span class="font-semibold">${dateStr}</span>
+  </div>`;
+}
+
+function getSyncPipeline(key) {
+  if (syncStatus && syncStatus.pipelines && syncStatus.pipelines[key]) {
+    return syncStatus.pipelines[key];
+  }
+  return null;
+}
+
+function renderPipelineBadge(pipelineKey, fallbackDate) {
+  const p = getSyncPipeline(pipelineKey);
+  if (p) return renderDataAsOfBadge(p.dataAsOf, p.status);
+  if (fallbackDate) return renderDataAsOfBadge(formatDate(fallbackDate), 'ok');
+  return '';
+}
+
+function updateStaticBadge(elementId, pipelineKey, fallbackDate) {
+  const el = document.getElementById(elementId);
+  if (el) el.innerHTML = renderPipelineBadge(pipelineKey, fallbackDate);
+}
+
 function sortByDateDesc(arr) {
   return [...arr].sort((a, b) => new Date(b.date) - new Date(a.date));
 }
@@ -181,8 +221,8 @@ function renderProductionTable(title, unit, rows, type) {
   const totalChangeStr = isCapacity ? formatNum(totalC) : (totalC <= 0 ? formatNum(Math.round(totalC * 10) / 10) : '+' + formatNum(totalC));
 
   return `
-    <div class="bg-white rounded-xl border border-navy-200 overflow-hidden">
-      <div class="px-4 py-3 border-b border-navy-200 bg-navy-50">
+    <div class="bg-white rounded-xl border border-navy-200/70 shadow-[0_1px_3px_rgba(10,25,41,0.04)] overflow-hidden">
+      <div class="px-4 py-3 border-b border-navy-200 bg-navy-50 border-l-4 border-l-amber-400">
         <h3 class="text-sm font-bold text-navy-900">${title}</h3>
         <span class="text-xs text-navy-600">${unit}</span>
       </div>
@@ -264,7 +304,7 @@ function renderKeyPortsTable() {
         <span class="text-xs text-navy-600">Export terminals and port infrastructure (synced daily)</span>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-2 p-3 border-b border-navy-200 bg-navy-50/30">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 p-3 border-b border-navy-200 bg-navy-50/30">
         <div class="stat-card bg-white rounded-lg p-2 border border-navy-200">
           <div class="text-lg font-extrabold text-blue-600">${total}</div>
           <div class="text-[10px] text-navy-600 mt-0.5">Tracked</div>
@@ -573,9 +613,12 @@ function renderExecSummary() {
   if (gccMapInstance) { gccMapInstance.remove(); gccMapInstance = null; gccMapLayers = { production: null, terminals: null, refining: null, pipelines: null }; }
 
   container.innerHTML = `
-    <div class="mb-5">
-      <h2 class="text-lg font-bold text-navy-900">Regional Production Impact Assessment</h2>
-      <p class="text-sm text-navy-600">Gulf Escalation: 28 Feb \u2013 ${new Date(LAST_UPDATED).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })} | Sources: IEA, OPEC, Bloomberg, Reuters, Argus</p>
+    <div class="flex items-start justify-between gap-4 mb-5">
+      <div>
+        <h2 class="text-lg font-bold text-navy-900">Regional Production Impact Assessment</h2>
+        <p class="text-sm text-navy-600">Gulf Escalation: 28 Feb \u2013 ${new Date(LAST_UPDATED).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })} | Sources: IEA, OPEC, Bloomberg, Reuters, Argus</p>
+      </div>
+      ${renderPipelineBadge('news_fm', LAST_UPDATED)}
     </div>
 
     <div class="mb-5">
@@ -784,7 +827,7 @@ function renderCountryMatrix() {
     <tr class="data-row cursor-pointer ${newRowClass}" onclick="toggleExpand('${country.id}')">
       <td class="px-3 py-2.5 sm:px-5 sm:py-3.5">
         <div class="flex items-center gap-2.5">
-          <span class="font-semibold text-navy-900">${country.country}</span>
+          <span class="font-semibold text-navy-900">${country.flag || ''} ${country.country}</span>
           ${newBadge}
         </div>
       </td>
@@ -819,6 +862,9 @@ function renderCountryMatrix() {
     </tr>
   `;
   }).join('');
+
+  // Populate badge above the table
+  updateStaticBadge('country-matrix-header', 'news_fm', LAST_UPDATED);
 }
 
 // ---------- FM Declarations Rendering ----------
@@ -883,12 +929,27 @@ function renderFMDeclarations() {
 
   const sorted = sortByDateDesc(FM_DECLARATIONS_DATA);
 
-  container.innerHTML = sorted.map(item => {
+  const activeCount = sorted.filter(d => d.status === 'active').length;
+  const partialCount = sorted.filter(d => ['partially_lifted', 'extended'].includes(d.status)).length;
+  const liftedCount = sorted.filter(d => d.status === 'lifted').length;
+
+  container.innerHTML = `<tr class="bg-navy-50/50">
+  <td colspan="7" class="px-3 py-2.5 sm:px-5">
+    <div class="flex items-center gap-4 text-xs font-medium">
+      <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-red-500"></span> ${activeCount} Active</span>
+      <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-amber-500"></span> ${partialCount} Partial</span>
+      <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> ${liftedCount} Lifted</span>
+    </div>
+  </td>
+</tr>` + sorted.map(item => {
     const newBadge = item.isNew ? renderNewBadge() : '';
     const newRowClass = item.isNew ? 'new-row border-l-4 border-l-sky-400' : '';
+    const leftBorder = item.status === 'active' ? 'border-l-4 border-l-red-500' :
+                   item.status === 'partially_lifted' ? 'border-l-4 border-l-amber-500' :
+                   item.status === 'lifted' ? 'border-l-4 border-l-emerald-500' : '';
 
     return `
-    <tr class="data-row cursor-pointer ${newRowClass}" onclick="toggleExpand('${item.id}')">
+    <tr class="data-row cursor-pointer ${newRowClass || leftBorder}" onclick="toggleExpand('${item.id}')">
       <td class="px-3 py-2.5 sm:px-5 sm:py-3.5">
         <span class="font-semibold text-navy-900">${item.company}</span>
         ${newBadge}
@@ -914,6 +975,9 @@ function renderFMDeclarations() {
     </tr>
   `;
   }).join('');
+
+  // Populate badge above the table
+  updateStaticBadge('fm-declarations-header', 'news_fm', LAST_UPDATED);
 }
 
 // ---------- Shutdowns Rendering ----------
@@ -924,12 +988,27 @@ function renderShutdowns() {
 
   const sorted = sortByDateDesc(SHUTDOWNS_NO_FM_DATA);
 
-  container.innerHTML = sorted.map(item => {
+  const ongoingCount = sorted.filter(d => ['shutdown', 'struck', 'ongoing', 'fm_declared'].includes(d.status)).length;
+  const suspendedCount = sorted.filter(d => ['halted', 'suspended', 'partial'].includes(d.status)).length;
+  const operationalCount = sorted.filter(d => ['operational', 'resumed', 'restarted', 'lifted'].includes(d.status)).length;
+
+  container.innerHTML = `<tr class="bg-navy-50/50">
+  <td colspan="7" class="px-3 py-2.5 sm:px-5">
+    <div class="flex items-center gap-4 text-xs font-medium">
+      <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-red-500"></span> ${ongoingCount} Active</span>
+      <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-amber-500"></span> ${suspendedCount} Partial</span>
+      <span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> ${operationalCount} Lifted</span>
+    </div>
+  </td>
+</tr>` + sorted.map(item => {
     const newBadge = item.isNew ? renderNewBadge() : '';
     const newRowClass = item.isNew ? 'new-row border-l-4 border-l-sky-400' : '';
+    const leftBorder = ['shutdown', 'struck', 'ongoing', 'fm_declared'].includes(item.status) ? 'border-l-4 border-l-red-500' :
+                   ['halted', 'suspended', 'partial'].includes(item.status) ? 'border-l-4 border-l-amber-500' :
+                   ['operational', 'resumed', 'restarted', 'lifted'].includes(item.status) ? 'border-l-4 border-l-emerald-500' : '';
 
     return `
-    <tr class="data-row cursor-pointer ${newRowClass}" onclick="toggleExpand('${item.id}')">
+    <tr class="data-row cursor-pointer ${newRowClass || leftBorder}" onclick="toggleExpand('${item.id}')">
       <td class="px-3 py-2.5 sm:px-5 sm:py-3.5">
         <span class="font-semibold text-navy-900">${item.company}</span>
         ${newBadge}
@@ -955,6 +1034,9 @@ function renderShutdowns() {
     </tr>
   `;
   }).join('');
+
+  // Populate badge above the table
+  updateStaticBadge('shutdowns-header', 'news_fm', LAST_UPDATED);
 }
 
 // ---------- Market News / SPR ----------
@@ -1003,18 +1085,21 @@ function renderMarketNews() {
 
   container.innerHTML = `
     <div class="flow-fade-in">
-      <div class="mb-5">
-        <h2 class="text-lg font-bold text-navy-900 flex items-center gap-2">
-          <svg class="w-5 h-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6V7.5z" />
-          </svg>
-          SPR Status — IEA Emergency Release ${sprFreshBadge}
-        </h2>
-        <p class="text-sm text-navy-500 mt-0.5">Coordinated release of strategic petroleum reserves by 30 IEA member countries | Announced ${new Date(d.announced).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</p>
+      <div class="flex items-start justify-between gap-4 mb-5">
+        <div>
+          <h2 class="text-lg font-bold text-navy-900 flex items-center gap-2">
+            <svg class="w-5 h-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6V7.5z" />
+            </svg>
+            SPR Status — IEA Emergency Release
+          </h2>
+          <p class="text-sm text-navy-500 mt-0.5">Coordinated release of strategic petroleum reserves by 30 IEA member countries | Announced ${new Date(d.announced).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</p>
+        </div>
+        ${renderPipelineBadge('spr', d.asOf)}
       </div>
 
       <!-- Summary Cards -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
         <div class="bg-white rounded-xl p-4 border border-navy-200 shadow-sm">
           <div class="text-xs font-semibold text-navy-500 uppercase tracking-wider mb-1">Total Committed</div>
           <div class="text-3xl font-extrabold text-navy-900">${d.totalCommitted}</div>
@@ -1263,7 +1348,14 @@ function initTabs() {
 
       const target = tab.dataset.tab;
       panels.forEach(p => {
-        p.classList.toggle('hidden', p.dataset.panel !== target);
+        const isTarget = p.dataset.panel === target;
+        p.classList.toggle('hidden', !isTarget);
+        // Apply fade-in animation on tab switch
+        if (isTarget) {
+          p.classList.remove('flow-fade-in');
+          void p.offsetWidth; // trigger reflow
+          p.classList.add('flow-fade-in');
+        }
       });
 
       // Invalidate Leaflet map size when Production Overview tab becomes visible
@@ -1343,13 +1435,28 @@ function updateStats(activeTab) {
       return;
   }
 
+  const borderMap = {
+    'text-red-600': 'border-l-red-500', 'text-amber-600': 'border-l-amber-500',
+    'text-orange-600': 'border-l-orange-500', 'text-blue-600': 'border-l-sky-400', 'text-emerald-600': 'border-l-emerald-500',
+  };
+  const iconMap = {
+    'text-red-600': '<svg class="w-4 h-4 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" /></svg>',
+    'text-amber-600': '<svg class="w-4 h-4 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" /></svg>',
+    'text-orange-600': '<svg class="w-4 h-4 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21" /></svg>',
+    'text-blue-600': '<svg class="w-4 h-4 text-sky-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582" /></svg>',
+    'text-emerald-600': '<svg class="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>',
+  };
+
   container.innerHTML = stats.map(s => {
+    const borderClass = borderMap[s.color] || 'border-l-navy-300';
+    const icon = iconMap[s.color] || '';
     const changeColor = s.change > 0 ? 'text-emerald-600' : 'text-navy-400';
-    const changeText = s.change > 0 ? `↑ +${s.change} from yesterday` : '— No change';
+    const changeText = s.change > 0 ? `+${s.change} new` : 'Steady';
     return `
-      <div class="stat-card bg-white rounded-xl p-3 sm:p-4 border border-navy-200">
-        <div class="text-2xl sm:text-3xl font-extrabold ${s.color}">${s.value}</div>
-        <div class="text-sm text-navy-500 mt-1">${s.label}</div>
+      <div class="stat-card bg-white rounded-xl p-3 sm:p-4 border border-navy-200/70 border-l-4 ${borderClass} shadow-[0_1px_3px_rgba(10,25,41,0.04)]">
+        <div class="mb-1.5">${icon}</div>
+        <div class="text-xl sm:text-2xl md:text-3xl font-extrabold tabular-nums ${s.color}">${s.value}</div>
+        <div class="text-xs sm:text-sm text-navy-500 mt-1">${s.label}</div>
         <div class="text-xs mt-1.5 ${changeColor}">${changeText}</div>
       </div>
     `;
@@ -1461,6 +1568,12 @@ function verifyData() {
 // ---------- Initialization ----------
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Load sync-status.json for per-tab freshness badges
+  fetch('sync-status.json')
+    .then(r => r.ok ? r.json() : null)
+    .then(d => { syncStatus = d; })
+    .catch(() => {});
+
   const lastUpdatedEl = document.getElementById('last-updated');
   if (lastUpdatedEl && typeof LAST_UPDATED !== 'undefined') {
     lastUpdatedEl.textContent = new Date(LAST_UPDATED).toLocaleDateString('en-GB', {

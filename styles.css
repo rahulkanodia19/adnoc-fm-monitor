@@ -16,17 +16,22 @@
 
 /* Smooth expand/collapse animation */
 .detail-row {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease-out, opacity 0.25s ease-out;
+  opacity: 0;
+}
+.detail-row > div {
   overflow: hidden;
-  transition: max-height 0.35s ease-out, opacity 0.25s ease-out;
 }
 
 .detail-row.collapsed {
-  max-height: 0;
+  grid-template-rows: 0fr;
   opacity: 0;
 }
 
 .detail-row.expanded {
-  max-height: 3000px;
+  grid-template-rows: 1fr;
   opacity: 1;
 }
 
@@ -52,12 +57,14 @@
 .tab-btn {
   transition: all 0.2s ease;
   position: relative;
+  min-height: 44px;
 }
 .tab-btn:hover {
   background-color: rgba(16, 42, 67, 0.04);
 }
 .tab-btn.active {
-  background-color: rgba(16, 42, 67, 0.06);
+  background-color: rgba(16, 42, 67, 0.04);
+  border-bottom-width: 3px;
 }
 
 /* Source link styling */
@@ -203,38 +210,52 @@ a.source-link:hover {
   .stat-card {
     padding: 0.75rem;
   }
-  /* Hide tab bar scrollbar on mobile */
+  /* Hide tab bar scrollbar on mobile + scroll snap */
   nav > div {
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
+    scroll-snap-type: x mandatory;
   }
   nav > div::-webkit-scrollbar {
     display: none;
+  }
+  .tab-btn {
+    scroll-snap-align: center;
   }
 }
 
 /* Responsive chart containers */
 .chart-container {
   position: relative;
-  height: 260px;
+  height: 280px;
+  max-height: 55vh;
 }
 .chart-container-sm {
-  height: 220px;
+  height: 240px;
+  max-height: 45vh;
 }
 @media (min-width: 640px) {
   .chart-container {
-    height: 320px;
+    height: 340px;
   }
   .chart-container-sm {
-    height: 260px;
+    height: 270px;
+  }
+}
+@media (min-width: 768px) {
+  .chart-container {
+    height: 380px;
+  }
+  .chart-container-sm {
+    height: 300px;
   }
 }
 @media (min-width: 1024px) {
   .chart-container {
-    height: 360px;
+    height: 400px;
   }
   .chart-container-sm {
-    height: 300px;
+    height: 320px;
   }
 }
 
@@ -330,10 +351,64 @@ a.source-link:hover {
 #gcc-overview-map .leaflet-interactive { cursor: pointer !important; }
 #gcc-overview-map .leaflet-marker-icon { cursor: pointer !important; }
 
+/* Scroll shadow for overflow tables */
+.scroll-shadow {
+  background:
+    linear-gradient(to right, white 30%, rgba(255,255,255,0)) left / 40px 100% no-repeat local,
+    linear-gradient(to left, white 30%, rgba(255,255,255,0)) right / 40px 100% no-repeat local,
+    linear-gradient(to right, rgba(16,42,67,0.06), transparent) left / 14px 100% no-repeat scroll,
+    linear-gradient(to left, rgba(16,42,67,0.06), transparent) right / 14px 100% no-repeat scroll;
+}
+
+/* Momentum scrolling for touch */
+.touch-scroll {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 40;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f59e0b;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.25s, transform 0.25s;
+  pointer-events: none;
+  cursor: pointer;
+  border: none;
+}
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* SOH mix bar upgrade */
+.soh-mix-bar {
+  height: 18px;
+  border-radius: 9px;
+}
+@media (min-width: 640px) {
+  .soh-mix-bar {
+    height: 22px;
+    border-radius: 11px;
+  }
+}
+
 /* === SOH Tracker === */
 .soh-matrix-row { cursor: pointer; transition: background 0.15s; }
 .soh-matrix-row:hover { background: #f0f4f8; }
-.soh-mix-bar { height: 12px; border-radius: 6px; overflow: hidden; display: flex; background: #e5e7eb; }
+.soh-mix-bar { height: 18px; border-radius: 9px; overflow: hidden; display: flex; background: #e5e7eb; }
 .soh-map-sidebar { position: absolute; top: 12px; right: 12px; z-index: 1000; max-width: 280px; }
 .soh-kpi-card { transition: transform 0.15s, box-shadow 0.15s; cursor: pointer; }
 .soh-kpi-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
