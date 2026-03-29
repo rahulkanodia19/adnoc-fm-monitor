@@ -46,12 +46,18 @@ For each dataset key in your batch file, write 2-4 CEO-level insight bullets.
 
 ### Rules
 
+- **UNITS (CRITICAL)**:
+  - The `total` and `allCountries` fields are WEEKLY SUMS — do NOT cite them as daily rates.
+  - Use `dailyAvg` and `allCountriesDaily` for daily rates (what the chart shows).
+  - Display crude/products in **mb/d** (million barrels/day): divide `dailyAvg` kbd by 1000. Example: 4,519 kbd → "4.5 mb/d".
+  - Display LNG/LPG/sulphur in **Mt/d** or **ktons/d**: use `dailyAvg` directly for ktons/d, or divide by 1000 for Mt/d.
+  - NEVER cite weekly sums as daily rates. "44,659 kbd" is WRONG for Saudi daily exports.
+- **Concise**: Each bullet is 1-2 sentences max. Lead with the insight, not setup. No padding.
 - **Date ranges**: Use "23–28 Mar" format (from `start`/`end` fields). NEVER use "W13" or week numbers.
-- **Causal**: Don't just state what happened — explain WHY using FM declarations, country status, and market events.
-- **Connect dots**: If Iraq disappeared from India's suppliers, say "consistent with BP/Eni Basra shutdowns under active FM" — don't just say "Iraq dropped out."
-- **Web search context**: If you found relevant fresh news, weave it in naturally (e.g., "Reuters reports..." or "according to Kpler tracking data...").
-- **Forward-looking**: End with trajectory, risks, or what to watch.
-- **Specific numbers**: Volume in kbd or ktons, share percentages, % changes.
+- **Causal**: Explain WHY using FM declarations, country status, market events. Don't just restate numbers.
+- **Connect dots**: "Iraq disappeared — consistent with Basra FM shutdowns" not just "Iraq dropped out."
+- **Web search context**: Weave fresh news naturally (e.g., "per Reuters" or "Kpler tracking shows").
+- **Forward-looking**: End with trajectory or risks where relevant.
 - **No source citations as separate bullets** — weave them into the narrative.
 
 ### For low-volume datasets
@@ -65,9 +71,9 @@ Write results to the output file specified (e.g., `flow-insights-batch-1.json`):
 ```json
 {
   "saudi_arabia_crude": [
-    "Saudi crude exports dropped 39% from 44,659 kbd (2–8 Mar) to 27,115 kbd (23–28 Mar)...",
-    "The East-West Pipeline to Yanbu has become Saudi's critical lifeline...",
-    "..."
+    "Saudi crude exports fell 39% to ~4.5 mb/d (23–28 Mar) from 6.4 mb/d pre-crisis, with East-West Pipeline to Yanbu running at max 7 mb/d capacity.",
+    "Customer mix reshuffled: China surged to 28% (1.3 mb/d), India to 27% (1.2 mb/d). Japan, S. Korea, and Egypt disappeared — drawing on SPR instead.",
+    "Pipeline bypass is working but capped — Yanbu at maximum throughput limits further recovery unless Hormuz reopens."
   ],
   ...
 }

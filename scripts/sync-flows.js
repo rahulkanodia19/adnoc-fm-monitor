@@ -571,9 +571,19 @@ async function main() {
         for (const gc of GULF_COUNTRIES) { gulfTotal += allCountries[gc] || 0; }
         const gulfShare = w._t > 0 ? Math.round(gulfTotal / w._t * 1000) / 10 : 0;
         const sorted = Object.entries(allCountries).sort((a, b) => b[1] - a[1]);
+        // Compute daily averages (what the frontend chart shows)
+        const days = w.d || 1;
+        const dailyAvg = Math.round(w._t / days * 10) / 10;
+        const allCountriesDaily = {};
+        for (const [name, val] of Object.entries(allCountries)) {
+          allCountriesDaily[name] = Math.round(val / days * 10) / 10;
+        }
+        const gulfDailyAvg = Math.round(gulfTotal / days * 10) / 10;
+
         return {
-          period: w.p, start: w.s, end: w.e, total: Math.round(w._t), days: w.d,
-          allCountries, gulfTotal: Math.round(gulfTotal), gulfShare,
+          period: w.p, start: w.s, end: w.e, total: Math.round(w._t), days,
+          dailyAvg, allCountries, allCountriesDaily,
+          gulfTotal: Math.round(gulfTotal), gulfDailyAvg, gulfShare,
           top5: sorted.slice(0, 5).map(([name]) => name),
         };
       });
