@@ -92,7 +92,7 @@
 
   // ---------- State ----------
   let state = {
-    country: '_all',
+    country: 'china',
     commodity: 'crude',
     view: 'weekly',
     topN: 10,
