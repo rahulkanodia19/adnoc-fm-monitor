@@ -18,6 +18,19 @@ echo "[insights] =========================================="
 
 cd "$PROJECT_DIR"
 
+# Split flow-summary.json into batch files + fm-context.json
+echo "[insights] Splitting flow-summary.json into batches..."
+if [ -f flow-summary.json ]; then
+  node "$SCRIPT_DIR/split-flow-summary.js"
+else
+  echo "[insights] WARNING: flow-summary.json not found. Run sync:flows first."
+  echo "[insights] Checking for existing batch files..."
+  if [ ! -f flow-summary-batch1-gulf-exporters.json ]; then
+    echo "[insights] ERROR: No batch files found. Cannot generate insights."
+    exit 1
+  fi
+fi
+
 PROMPT=$(cat scripts/sync-flow-insights-prompt.md)
 TOOLS="Read,Glob,Grep,Write,WebSearch,WebFetch"
 
@@ -98,15 +111,17 @@ if [ "$KEY_COUNT" -lt 50 ]; then
   echo "[insights] WARNING: Low key count ($KEY_COUNT). Some batches may have failed."
 fi
 
-# Commit
-if ! git -C "$PROJECT_DIR" diff --quiet flow-insights.json 2>/dev/null; then
-  TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
-  git -C "$PROJECT_DIR" add flow-insights.json
-  git -C "$PROJECT_DIR" commit -m "chore: flow insights sync ($TIMESTAMP)"
-  git -C "$PROJECT_DIR" push
-  echo "[insights] Pushed."
-else
-  echo "[insights] No changes."
+# Commit (only when run standalone)
+if [ -z "$MASTER_SYNC" ]; then
+  if ! git -C "$PROJECT_DIR" diff --quiet flow-insights.json 2>/dev/null; then
+    TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
+    git -C "$PROJECT_DIR" add flow-insights.json
+    git -C "$PROJECT_DIR" commit -m "chore: flow insights sync ($TIMESTAMP)"
+    git -C "$PROJECT_DIR" push
+    echo "[insights] Pushed."
+  else
+    echo "[insights] No changes."
+  fi
 fi
 
 echo "[insights] Done."

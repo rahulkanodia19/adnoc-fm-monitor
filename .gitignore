@@ -4,3 +4,8 @@ node_modules/
 Screenshot_*
 .vercel
 .platts-token.json
+sync-log-master.txt
+flow-summary-batch*.json
+flow-insights-batch-*.json
+flow-insights-zeros.json
+fm-context.json
