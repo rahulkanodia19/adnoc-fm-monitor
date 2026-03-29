@@ -132,6 +132,100 @@ function updateStaticBadge(elementId, pipelineKey, fallbackDate) {
   if (el) el.innerHTML = renderPipelineBadge(pipelineKey, fallbackDate);
 }
 
+// ---------- Sync Progress Banner ----------
+
+const PIPELINE_LABELS = {
+  news_fm: 'News/FM', soh: 'SOH', prices: 'Prices',
+  flows: 'Flows', spr: 'SPR', insights: 'Insights'
+};
+
+function renderProgressBanner(progress) {
+  if (!progress || !progress.pipelines) return '';
+
+  const started = new Date(progress.started);
+  const ageMs = Date.now() - started.getTime();
+  // Ignore stale progress (> 1 hour = crashed sync)
+  if (ageMs > 3600000) return '';
+
+  const elapsedMin = Math.floor(ageMs / 60000);
+  const elapsedSec = Math.floor((ageMs % 60000) / 1000);
+  const elapsedStr = elapsedMin > 0 ? `${elapsedMin}m ${elapsedSec}s` : `${elapsedSec}s`;
+
+  let doneCount = 0;
+  const total = Object.keys(progress.pipelines).length;
+  const indicators = Object.entries(progress.pipelines).map(([key, p]) => {
+    const label = PIPELINE_LABELS[key] || key;
+    switch (p.status) {
+      case 'ok': doneCount++; return `<span class="text-emerald-600">✓ ${label}</span>`;
+      case 'failed': doneCount++; return `<span class="text-red-600">✗ ${label}</span>`;
+      case 'running': return `<span class="text-sky-600 font-medium">⏳ ${label}</span>`;
+      case 'retrying': return `<span class="text-amber-600 font-medium">↻ ${label}${p.attempt ? ' (' + p.attempt + '/3)' : ''}</span>`;
+      case 'skipped': doneCount++; return `<span class="text-navy-400">○ ${label}</span>`;
+      default: return `<span class="text-navy-300">○ ${label}</span>`;
+    }
+  }).join('<span class="text-navy-200 mx-1">·</span>');
+
+  // Action required banner (amber)
+  if (progress.action_required) {
+    return `<div class="bg-amber-50 border-b border-amber-200 px-4 py-2.5 text-sm text-amber-800">
+      <div class="max-w-[1440px] mx-auto flex items-center justify-between gap-4">
+        <div class="flex items-center gap-2 font-medium">
+          <svg class="w-4 h-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+          </svg>
+          ${progress.action_required.title}: ${progress.action_required.message}
+        </div>
+      </div>
+    </div>`;
+  }
+
+  // Normal progress banner
+  return `<div class="bg-sky-50 border-b border-sky-200 px-4 py-2 text-sm text-sky-700">
+    <div class="max-w-[1440px] mx-auto flex items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <svg class="w-4 h-4 animate-spin text-sky-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182M2.985 19.644l3.181-3.182" />
+        </svg>
+        Sync in progress — ${doneCount}/${total} complete (${elapsedStr})
+      </div>
+      <div class="flex flex-wrap gap-1.5 text-xs">${indicators}</div>
+    </div>
+  </div>`;
+}
+
+let _progressInterval = null;
+
+function pollSyncProgress() {
+  fetch('sync-progress.json')
+    .then(r => r.ok ? r.json() : null)
+    .then(progress => {
+      const banner = document.getElementById('sync-progress-banner');
+      if (!banner) return;
+      if (progress) {
+        const html = renderProgressBanner(progress);
+        if (html) {
+          banner.innerHTML = html;
+          banner.classList.remove('hidden');
+        } else {
+          banner.innerHTML = '';
+          banner.classList.add('hidden');
+        }
+      } else {
+        banner.innerHTML = '';
+        banner.classList.add('hidden');
+      }
+    })
+    .catch(() => {
+      const banner = document.getElementById('sync-progress-banner');
+      if (banner) { banner.innerHTML = ''; banner.classList.add('hidden'); }
+    });
+}
+
+function startProgressPolling() {
+  pollSyncProgress();
+  _progressInterval = setInterval(pollSyncProgress, 10000);
+}
+
 function sortByDateDesc(arr) {
   return [...arr].sort((a, b) => new Date(b.date) - new Date(a.date));
 }
@@ -1573,6 +1667,9 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(r => r.ok ? r.json() : null)
     .then(d => { syncStatus = d; })
     .catch(() => {});
+
+  // Start polling for sync progress (shows banner during active sync)
+  startProgressPolling();
 
   const lastUpdatedEl = document.getElementById('last-updated');
   if (lastUpdatedEl && typeof LAST_UPDATED !== 'undefined') {

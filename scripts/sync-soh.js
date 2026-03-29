@@ -292,7 +292,14 @@ async function main() {
   let vessels;
   try {
     vessels = await kplerGet(`/api/vessels?zones=${HORMUZ_ZONE_ID}&size=10000`);
-    console.log(`     → ${vessels.length} vessels fetched`);
+    console.log(`     → ${vessels.length} vessels fetched from API`);
+    // Filter to Gulf/Hormuz/Oman bounding box (matches S&P MINT bounds)
+    vessels = vessels.filter(v => {
+      const lat = v.lastPosition?.geo?.lat;
+      const lng = v.lastPosition?.geo?.lon;
+      return lat && lng && lat >= 22 && lat <= 32 && lng >= 46 && lng <= 60;
+    });
+    console.log(`     → ${vessels.length} vessels in Hormuz monitoring zone (22-32°N, 46-60°E)`);
     // Save raw vessels (large file — only save summary fields)
     const vesselsSummary = vessels.map(v => ({
       name: v.name, imo: v.imo, mmsi: v.mmsi,
