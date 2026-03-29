@@ -1,12 +1,19 @@
 {
-  "insideTotal": 1083,
-  "insideBallast": 584,
-  "insideLaden": 498,
-  "outsideTotal": 16,
-  "outsideBallast": 10,
-  "outsideLaden": 6,
-  "adnocCount": 13,
-  "totalVessels": 1099,
-  "syncTimestamp": "2026-03-26T21:20:17.889Z",
-  "deltas": null
+  "insideTotal": 14882,
+  "insideBallast": 6889,
+  "insideLaden": 7970,
+  "outsideTotal": 13162,
+  "outsideBallast": 6425,
+  "outsideLaden": 6508,
+  "adnocCount": 66,
+  "syncTimestamp": "2026-03-29T19:41:41.266Z",
+  "deltas": {
+    "insideDelta": 13799,
+    "outsideDelta": 13146,
+    "adnocDelta": 53,
+    "insideBallastDelta": 6305,
+    "insideLadenDelta": 7472,
+    "outsideBallastDelta": 6415,
+    "outsideLadenDelta": 6502
+  }
 }

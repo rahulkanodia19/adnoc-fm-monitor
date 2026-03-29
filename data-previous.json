@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-29T22:00:00Z",
+  "lastUpdated": "2026-03-30T06:00:00Z",
   "countryStatus": [
     {
       "id": "qatar",
@@ -328,15 +328,15 @@
         "notes": {
           "oil": "KPC FM on crude; ~500 kb/d cut; storage filling; tankers blocked at Hormuz",
           "gas": "Associated gas drops with crude output cuts; domestic supply prioritized for power",
-          "refining": "Al-Ahmadi (466k) struck & shut; Abdullah + Al-Zour at reduced rates; 3-4 months repair",
+          "refining": "Al-Ahmadi (466k) struck & shut; Abdullah (454k) also struck with unit fire; Al-Zour at reduced rates; 3-4 months repair",
           "ports": "Mina Al-Ahmadi shut after FM on crude exports; Al-Zour LNG import at partial ops for domestic gas"
         }
       },
       "events": [
         {
           "date": "2026-03-19",
-          "title": "Iranian drones strike Mina Al-Ahmadi refinery",
-          "description": "Two consecutive days of drone attacks on Kuwait's largest refinery (730,000 bpd). Fires across multiple units. Additional sections shut as precaution. KPC expects 3-4 months to restore full capacity post-war."
+          "title": "Iranian drones strike Mina Al-Ahmadi and Mina Abdullah refineries",
+          "description": "Two consecutive days of drone attacks hit Kuwait's two largest refineries. Mina Al-Ahmadi (466 kb/d) suffered fires across multiple units; Mina Abdullah (454 kb/d) also struck with one unit catching fire. KPC expects 3-4 months to restore full capacity post-war. Combined ~920 kb/d refining capacity attacked."
         },
         {
           "date": "2026-03-09",
@@ -351,8 +351,8 @@
       ],
       "oilGasImpact": {
         "severity": "critical",
-        "summary": "FM on crude exports, refineries reduced",
-        "details": "KPC declared FM on all crude exports. Al-Ahmadi refinery offline (466k) after drone strikes. Mina Abdullah and Al-Zour at reduced rates. ~900 kb/d refining affected; ~500 kb/d available. Kafco fuel storage tanks struck. Subiya power plant fire from intercepted drone debris. Export via Hormuz severely disrupted."
+        "summary": "FM on crude exports, both major refineries struck",
+        "details": "KPC declared FM on all crude exports. Al-Ahmadi (466k bpd) offline after drone strikes Mar 19-20. Mina Abdullah (454k bpd) also struck Mar 19 with unit fire. Al-Zour at reduced rates. ~900 kb/d refining affected; ~500 kb/d available. Kafco fuel storage tanks struck. Subiya power plant fire from intercepted drone debris. Export via Hormuz severely disrupted."
       },
       "infrastructure": [
         {
@@ -395,7 +395,8 @@
           "name": "Mina Abdullah Refinery",
           "type": "Refinery",
           "capacity": "270,000 bpd",
-          "status": "partial"
+          "status": "partial",
+          "notes": "One unit struck by drone Mar 19; fire contained; operating at reduced rates"
         },
         {
           "name": "Al-Zour Refinery",
@@ -465,6 +466,18 @@
           "id": 6,
           "title": "Al Ahmadi shutdown - Dawn",
           "url": "https://www.dawn.com/news/1984011/kuwait-shuts-down-parts-of-al-ahmadi-refinery-after-drone-attack",
+          "date": "2026-03-20"
+        },
+        {
+          "id": 7,
+          "title": "Mina Abdullah refinery also struck by drone - Kuwait Times",
+          "url": "https://kuwaittimes.com/article/41285/kuwait/kpc-drone-targets-mina-abdullah-refinery-causes-fire/",
+          "date": "2026-03-19"
+        },
+        {
+          "id": 8,
+          "title": "Kuwait refineries hit by drones - Argus Media",
+          "url": "https://www.argusmedia.com/en/news-and-insights/latest-market-news/2803125-refineries-in-kuwait-saudi-arabia-hit-by-drones",
           "date": "2026-03-20"
         }
       ]
@@ -760,11 +773,11 @@
           "unit": "Mtpa"
         },
         "notes": {
-          "oil": "Offshore offline; ADCOP at 1.62M bpd (record); maintenance deferred to keep Murban flowing; >50% crude shut-in",
+          "oil": "Offshore offline; ADCOP at 1.62M bpd (record); Fujairah loadings avg 1.9M bpd Mar 20-24 (up 57% YoY); maintenance deferred; >50% crude shut-in",
           "gas": "Habshan resumed Mar 23; Shah still shut (~1 Bcf/d); offshore associated gas reduced",
           "refining": "Ruwais-2 shut (417 kb/d); 805 kb/d available; Jebel Ali operational",
           "lng": "Das Island LNG at minimal capacity; Hormuz blocked; transaction-by-transaction basis",
-          "ports": "Fujairah loading suspended after repeated drone attacks; Musaffah at partial ops; DXB fuel terminal shut; ADCOP pipeline bypassing Hormuz"
+          "ports": "Fujairah loadings partially resumed at 1.9M bpd Mar 20-24 via ADCOP; Musaffah at partial ops; DXB fuel terminal shut; ADCOP pipeline bypassing Hormuz at record 1.62M bpd"
         }
       },
       "events": [
@@ -954,8 +967,8 @@
           "name": "Fujairah Oil Terminal",
           "type": "Export Terminal",
           "capacity": "~1M bpd Murban crude",
-          "status": "shutdown",
-          "notes": "Loading suspended after repeated drone attacks (14-17 Mar); ADCOP pipeline bypass active"
+          "status": "partial",
+          "notes": "Loadings partially resumed; avg 1.9M bpd Mar 20-24 (up 57% YoY) via ADCOP pipeline bypass; earlier drone attacks 14-17 Mar"
         },
         {
           "name": "Das Island LNG/LPG (ADGAS)",
@@ -1846,7 +1859,7 @@
       "flag": "🇮🇷",
       "status": "critical",
       "statusLabel": "Struck / Disrupted",
-      "summary": "Israeli strikes hit South Pars gas field (Phases 3-6, 14, 17-18). USAF raids on Kharg Island. Tehran fuel depots and refinery destroyed. IRGC formally closed Hormuz to US/allied vessels Mar 27 with tolled passage for 'non-hostile' nations. Commander Tangsiri killed Mar 26. Houthis joined war Mar 28; Bab al-Mandeb closure threatened. Bandar Khamir port struck Mar 29 (5 killed). Pentagon readying ground operations. Pakistan hosting ceasefire talks.",
+      "summary": "Israeli strikes hit South Pars gas field (Phases 3-6, 14, 17-18). USAF raids on Kharg Island. Tehran fuel depots and refinery destroyed. IRGC tolled passage: 142 transits since Mar 1 (95% drop). Tangsiri killed Mar 26. Houthis launched 2nd operation Mar 29. Bandar Khamir struck Mar 29 (5 killed). Pentagon readying ground ops. Pakistan hosted 4-nation ceasefire talks Mar 29; Iran dismissed.",
       "metrics": {
         "headline": "~476 kb/d crude + ~3.3 Bcf/d gas offline",
         "productionOffline": "South Pars phases + 14 oil fields reduced",
@@ -1886,8 +1899,8 @@
         },
         {
           "date": "2026-03-29",
-          "title": "Pakistan diplomatic track advances; NPR reports Islamabad hosting ceasefire talks",
-          "description": "Pakistan hosting diplomatic discussions on ending the war, serving as intermediary between Iran and US. FM Dar posted on X tagging VP Vance, Rubio, Witkoff, and Araghchi — signaling the 20-ship transit deal (Mar 28) is linked to broader peace efforts. Houthi deputy info minister warned closing Bab al-Mandeb is 'among our options'. — NPR, Al Jazeera",
+          "title": "Pakistan hosts 4-nation talks (Turkey, Egypt, Saudi) to broker end to Iran war",
+          "description": "Pakistan hosted foreign ministers from Turkey, Egypt, and Saudi Arabia to discuss 'possible ways to bring an early and permanent end to the war.' Pakistan facilitating indirect US-Iran talks; US 15-point ceasefire plan being deliberated by Iran. Houthis launched 2nd military operation against Israel (cruise missiles + drones) on Mar 29. Iran dismissed diplomatic overtures, warning any US troops 'would be on fire.' Next 48-72 hours considered critical. — NPR, Al Jazeera, US News, Fortune",
           "isNew": true
         },
         {
@@ -1941,8 +1954,8 @@
       ],
       "oilGasImpact": {
         "severity": "critical",
-        "summary": "~476 kb/d crude + ~3.3 Bcf/d gas offline; Houthis join war; Bandar Khamir struck",
-        "details": "South Pars Phases 3-6, 14, 17-18 struck at Asaluyeh on 18 Mar (~12% of Iran's gas output offline). Tehran Refinery (250 kb/d) destroyed on 8 Mar. Bandar Abbas Refinery curtailed. 30+ fuel depots destroyed across Tehran. Kharg Island raided 13 Mar - exports disrupted but Iran still loaded avg 1.84 mb/d crude in March (84% from Kharg per Kpler). Southern oil fields ~30% shut-in. IRGC created tolled passage system Mar 27 — only 144 commodity crossings since Mar 1 (95% drop). Houthis joined war Mar 28 with missile attack on Israel; Bab al-Mandeb closure threatened. Pakistan secured 20-ship transit deal Mar 28. US-Israeli strikes hit Bandar Khamir port city on Mar 29 (5 killed). Pentagon readying weeks of ground operations in Iran (WaPo)."
+        "summary": "~476 kb/d crude + ~3.3 Bcf/d gas offline; Houthis launch 2nd operation; Pakistan hosts 4-nation talks",
+        "details": "South Pars Phases 3-6, 14, 17-18 struck at Asaluyeh on 18 Mar (~12% of Iran's gas output offline). Tehran Refinery (250 kb/d) destroyed on 8 Mar. Bandar Abbas Refinery curtailed. 30+ fuel depots destroyed across Tehran. Kharg Island raided 13 Mar - exports disrupted but Iran still loaded avg 1.84 mb/d crude in March (84% from Kharg per Kpler). Southern oil fields ~30% shut-in. IRGC tolled passage system: 142 transits since Mar 1 (95% drop from 2,652 same period 2025); tolls ~$2M per transit. Houthis joined war Mar 28 with missile on Israel; 2nd operation Mar 29 (cruise missiles + drones). Pakistan hosted Turkey/Egypt/Saudi talks Mar 29 to broker ceasefire. Bandar Khamir struck Mar 29 (5 killed). Pentagon readying weeks of ground operations including Kharg Island seizure (WaPo). Iran dismissed diplomatic talks, warning US troops 'would be on fire.'"
       },
       "infrastructure": [
         {
@@ -2248,6 +2261,30 @@
           "id": 20,
           "title": "Iran-backed Houthis enter war, could further threaten global shipping - AP/Boston Globe",
           "url": "https://www.boston.com/news/world-news/2026/03/29/iran-backed-houthis-enter-the-monthlong-war-and-could-further-threaten-global-shipping/",
+          "date": "2026-03-29"
+        },
+        {
+          "id": 21,
+          "title": "Pakistan hosts 4-nation bid to encourage US-Iran diplomacy - Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/3/29/pakistan-hosts-four-nation-bid-to-encourage-us-iran-towards-diplomacy",
+          "date": "2026-03-29"
+        },
+        {
+          "id": 22,
+          "title": "Iran dismisses diplomatic talks, warns US troops 'on fire' - Fortune",
+          "url": "https://fortune.com/2026/03/29/iran-dismisses-diplomatic-talks-pakistan-ceasefire-us-troops/",
+          "date": "2026-03-29"
+        },
+        {
+          "id": 23,
+          "title": "Houthi attacks open new front, threaten Red Sea shipping - France 24",
+          "url": "https://www.france24.com/en/middle-east/20260329-yemen-houthi-attacks-on-israel-open-new-front-mideast-war-threaten-red-sea-shipping",
+          "date": "2026-03-29"
+        },
+        {
+          "id": 24,
+          "title": "Pakistan hosts regional powers for Iran talks with Hormuz focus - US News",
+          "url": "https://www.usnews.com/news/world/articles/2026-03-29/pakistan-hosts-regional-powers-for-iran-talks-with-focus-on-hormuz-proposals",
           "date": "2026-03-29"
         }
       ]
@@ -3143,15 +3180,15 @@
       "country": "UAE",
       "flag": "🇦🇪",
       "date": "2026-03-16",
-      "status": "shutdown",
-      "statusLabel": "Shutdown",
-      "summary": "ADNOC suspended crude loading at Fujairah after repeated drone attacks. ~1M bpd Murban crude export capacity halted.",
+      "status": "partially_resumed",
+      "statusLabel": "Partially Resumed",
+      "summary": "Fujairah crude loading partially resumed ~Mar 20. Loadings avg 1.9M bpd Mar 20-24 (up 57% YoY) via ADCOP pipeline. Earlier suspended after 3 drone attacks (14-17 Mar).",
       "details": {
-        "volumeAffected": "~1 million bpd Murban crude loading (~1% of global demand)",
+        "volumeAffected": "Loadings partially restored; avg 1.9M bpd Mar 20-24 via ADCOP pipeline bypass",
         "commodity": "Crude Oil (Murban)",
-        "duration": "Loading suspended 16 Mar, 3rd attack 17 Mar - ongoing",
-        "reason": "Repeated drone attacks on Fujairah oil terminal (14, 16, 17 Mar). ADNOC suspended all crude loading operations.",
-        "financialImpact": "Murban crude buyers scrambling for alternatives. Fujairah storage at capacity."
+        "duration": "Suspended 16-~20 Mar; partially resumed ~Mar 20 via ADCOP",
+        "reason": "Repeated drone attacks on Fujairah oil terminal (14, 16, 17 Mar). Loading partially resumed via ADCOP pipeline bypass to Fujairah.",
+        "financialImpact": "ADCOP pipeline at record 1.62M bpd in March; Fujairah regaining strategic role as Hormuz bypass."
       },
       "sources": [
         {
@@ -3627,373 +3664,5 @@
         }
       ]
     }
-  ],
-  "sprRelease": {
-    "announced": "2026-03-11",
-    "asOf": "2026-03-29",
-    "trigger": "Strait of Hormuz disruption / Iran conflict — ~20% of global oil supply at risk",
-    "totalCommitted": 426,
-    "totalCrude": 301,
-    "totalProducts": 125,
-    "totalReleased": 34.5,
-    "releasePeriodDays": 120,
-    "keyInsights": [
-      "Japan PM Takaichi asked IEA chief Birol on Mar 25 to prepare a second coordinated release if Hormuz disruption persists",
-      "14 European IEA members with 114.5 mb combined commitment began oil stock releases on Mar 28 per end-of-March schedule",
-      "US SPR deliveries ongoing at ~1.4 mb/day from 3 Gulf Coast sites — ~12.5 mb delivered (~7.3% of 172.2 mb commitment)",
-      "South Korea enforced naphtha export ban from Mar 27 alongside 6.0 mb already released from 22.5 mb commitment",
-      "Overall release at ~34.5 of 426.0 mb (~8.1%) on Day 18 of 120-day window; next EIA weekly data expected Apr 1",
-      "Brent $112.57/bbl, WTI $99.64 as of Mar 28 — 51% monthly surge; Goldman warns $135 if Hormuz + Bab al-Mandeb both close",
-      "Houthis entered war Mar 28 with missile attack on Israel; Bab al-Mandeb closure 'among our options' per deputy info minister — dual chokepoint risk now real"
-    ],
-    "sources": [
-      {
-        "title": "Japan PM Takaichi asks IEA chief to prepare second coordinated oil release",
-        "url": "https://www.japantimes.co.jp/news/2026/03/25/japan/sanae-takaichi-iea-chief/",
-        "date": "2026-03-25"
-      },
-      {
-        "title": "South Korea restricts naphtha exports amid supply disruptions",
-        "url": "https://www.icis.com/explore/resources/news/2026/03/27/11192891/south-korea-restricts-naphtha-exports-for-five-months-from-27-mar",
-        "date": "2026-03-27"
-      },
-      {
-        "title": "Japan begins first release of state oil reserves in 4 years",
-        "url": "https://www.nippon.com/en/news/yjj2026032600175/",
-        "date": "2026-03-26"
-      },
-      {
-        "title": "Which countries have strategic oil reserves and how much — Al Jazeera",
-        "url": "https://www.aljazeera.com/news/2026/3/23/which-countries-have-strategic-oil-reserves-and-how-much",
-        "date": "2026-03-23"
-      },
-      {
-        "title": "DOE begins delivering SPR barrels at record speeds",
-        "url": "https://www.energy.gov/hgeo/articles/energy-department-begins-delivering-spr-barrels-record-speeds",
-        "date": "2026-03-20"
-      },
-      {
-        "title": "IEA confirms member country contributions",
-        "url": "https://www.iea.org/news/iea-confirms-member-country-contributions-to-collective-action-to-release-oil-stocks-in-response-to-middle-east-disruptions",
-        "date": "2026-03-19"
-      },
-      {
-        "title": "IEA collective action decision",
-        "url": "https://www.iea.org/news/update-on-iea-collective-action-decision-of-11-march-2026",
-        "date": "2026-03-15"
-      },
-      {
-        "title": "US DOE SPR release announcement",
-        "url": "https://www.energy.gov/articles/united-states-release-172-million-barrels-oil-strategic-petroleum-reserve",
-        "date": "2026-03-11"
-      },
-      {
-        "title": "IEA 400m barrels release — Al Jazeera",
-        "url": "https://www.aljazeera.com/news/2026/3/11/iea-proposes-release-of-400m-barrels-of-oil-from-strategic-reserves",
-        "date": "2026-03-11"
-      }
-    ],
-    "countries": [
-      {
-        "country": "United States",
-        "flag": "🇺🇸",
-        "committed": 172.2,
-        "crude": 172.2,
-        "products": 0,
-        "startDate": "2026-03-20",
-        "released": 12.5,
-        "region": "Americas"
-      },
-      {
-        "country": "Japan",
-        "flag": "🇯🇵",
-        "committed": 79.8,
-        "crude": 54,
-        "products": 25.8,
-        "startDate": "2026-03-16",
-        "released": 11,
-        "region": "Asia-Oceania"
-      },
-      {
-        "country": "Canada",
-        "flag": "🇨🇦",
-        "committed": 23.6,
-        "crude": 23.6,
-        "products": 0,
-        "startDate": "2026-03-24",
-        "released": 1,
-        "region": "Americas"
-      },
-      {
-        "country": "South Korea",
-        "flag": "🇰🇷",
-        "committed": 22.5,
-        "crude": 22.5,
-        "products": 0,
-        "startDate": "2026-03-16",
-        "released": 6,
-        "region": "Asia-Oceania"
-      },
-      {
-        "country": "Germany",
-        "flag": "🇩🇪",
-        "committed": 19.5,
-        "crude": 0,
-        "products": 19.5,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Europe"
-      },
-      {
-        "country": "France",
-        "flag": "🇫🇷",
-        "committed": 14.6,
-        "crude": 0,
-        "products": 14.6,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Europe"
-      },
-      {
-        "country": "United Kingdom",
-        "flag": "🇬🇧",
-        "committed": 14,
-        "crude": 4.3,
-        "products": 9.7,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Europe"
-      },
-      {
-        "country": "Türkiye",
-        "flag": "🇹🇷",
-        "committed": 11.7,
-        "crude": 3.6,
-        "products": 8.1,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Europe"
-      },
-      {
-        "country": "Spain",
-        "flag": "🇪🇸",
-        "committed": 11.6,
-        "crude": 0,
-        "products": 11.6,
-        "startDate": "2026-03-16",
-        "released": 2.5,
-        "region": "Europe"
-      },
-      {
-        "country": "Italy",
-        "flag": "🇮🇹",
-        "committed": 10,
-        "crude": 0,
-        "products": 10,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Europe"
-      },
-      {
-        "country": "Poland",
-        "flag": "🇵🇱",
-        "committed": 7.5,
-        "crude": 6,
-        "products": 1.5,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Europe"
-      },
-      {
-        "country": "Hungary",
-        "flag": "🇭🇺",
-        "committed": 6.1,
-        "crude": 0,
-        "products": 6.1,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Europe"
-      },
-      {
-        "country": "Netherlands",
-        "flag": "🇳🇱",
-        "committed": 5.4,
-        "crude": 0,
-        "products": 5.4,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Europe"
-      },
-      {
-        "country": "Australia",
-        "flag": "🇦🇺",
-        "committed": 4.8,
-        "crude": 0,
-        "products": 4.8,
-        "startDate": "2026-03-16",
-        "released": 2,
-        "region": "Asia-Oceania"
-      },
-      {
-        "country": "Mexico",
-        "flag": "🇲🇽",
-        "committed": 3.9,
-        "crude": 3.9,
-        "products": 0,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Americas"
-      },
-      {
-        "country": "Austria",
-        "flag": "🇦🇹",
-        "committed": 2.4,
-        "crude": 2.4,
-        "products": 0,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Europe"
-      },
-      {
-        "country": "Czech Republic",
-        "flag": "🇨🇿",
-        "committed": 2.2,
-        "crude": 2.2,
-        "products": 0,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Europe"
-      },
-      {
-        "country": "Sweden",
-        "flag": "🇸🇪",
-        "committed": 2.1,
-        "crude": 0,
-        "products": 2.1,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Europe"
-      },
-      {
-        "country": "Greece",
-        "flag": "🇬🇷",
-        "committed": 2,
-        "crude": 0,
-        "products": 2,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Europe"
-      },
-      {
-        "country": "Portugal",
-        "flag": "🇵🇹",
-        "committed": 2,
-        "crude": 0,
-        "products": 2,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Europe"
-      },
-      {
-        "country": "Finland",
-        "flag": "🇫🇮",
-        "committed": 1.8,
-        "crude": 0,
-        "products": 1.8,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Europe"
-      },
-      {
-        "country": "Ireland",
-        "flag": "🇮🇪",
-        "committed": 1.7,
-        "crude": 0.2,
-        "products": 1.5,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Europe"
-      },
-      {
-        "country": "New Zealand",
-        "flag": "🇳🇿",
-        "committed": 1.6,
-        "crude": 1.3,
-        "products": 0.3,
-        "startDate": "2026-03-16",
-        "released": 0,
-        "region": "Asia-Oceania"
-      },
-      {
-        "country": "Denmark",
-        "flag": "🇩🇰",
-        "committed": 1.2,
-        "crude": 0,
-        "products": 1.2,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Europe"
-      },
-      {
-        "country": "Lithuania",
-        "flag": "🇱🇹",
-        "committed": 0.6,
-        "crude": 0,
-        "products": 0.6,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Europe"
-      },
-      {
-        "country": "Norway",
-        "flag": "🇳🇴",
-        "committed": 0.4,
-        "crude": 0,
-        "products": 0.4,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Europe"
-      },
-      {
-        "country": "Latvia",
-        "flag": "🇱🇻",
-        "committed": 0.3,
-        "crude": 0,
-        "products": 0.3,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Europe"
-      },
-      {
-        "country": "Belgium",
-        "flag": "🇧🇪",
-        "committed": 0.3,
-        "crude": 0,
-        "products": 0.3,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Europe"
-      },
-      {
-        "country": "Estonia",
-        "flag": "🇪🇪",
-        "committed": 0.3,
-        "crude": 0,
-        "products": 0.3,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Europe"
-      },
-      {
-        "country": "Luxembourg",
-        "flag": "🇱🇺",
-        "committed": 0.1,
-        "crude": 0.1,
-        "products": 0,
-        "startDate": "2026-03-28",
-        "released": 0,
-        "region": "Europe"
-      }
-    ]
-  }
+  ]
 }

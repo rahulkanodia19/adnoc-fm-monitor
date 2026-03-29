@@ -1,33 +1,6 @@
 {
   "vessels": [
     {
-      "name": "Mab 5",
-      "imo": "9013701",
-      "mmsi": "611000243",
-      "vesselTypeClass": "SGC",
-      "state": "ballast",
-      "flagName": "Antigua and Barbuda",
-      "deadWeight": 7598,
-      "commodityTypes": [
-        "lpg"
-      ],
-      "capacity": 7434,
-      "speed": 5.2,
-      "course": 327,
-      "lat": 26.681126,
-      "lng": 56.644779,
-      "destination": "Sharjah",
-      "destinationEta": "2026-03-30T09:00:06.401635",
-      "aisDestination": null,
-      "product": "LPG",
-      "lastPortCall": {
-        "start": "2026-02-13T19:58:34",
-        "end": "2026-02-13T19:58:34"
-      },
-      "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
       "name": "BLOOMING DALE",
       "imo": "9125724",
       "mmsi": "307111000",
@@ -79,60 +52,6 @@
       "isTransiting": true
     },
     {
-      "name": "Gas Fate",
-      "imo": "9147394",
-      "mmsi": "632001167",
-      "vesselTypeClass": "Handy",
-      "state": "ballast",
-      "flagName": "Panama",
-      "deadWeight": 17779,
-      "commodityTypes": [
-        "lpg"
-      ],
-      "capacity": 17865,
-      "speed": 12,
-      "course": 216,
-      "lat": 26.725334,
-      "lng": 56.118168,
-      "aisDestination": null,
-      "product": "Grey Ammonia",
-      "controller": "Geogas",
-      "lastPortCall": {
-        "start": "2026-02-27T21:58:57",
-        "end": "2026-02-27T21:58:57"
-      },
-      "transitDirection": "unknown",
-      "isTransiting": true
-    },
-    {
-      "name": "Jawhart Berlin",
-      "imo": "9163506",
-      "mmsi": "371036000",
-      "vesselTypeClass": "Handymax",
-      "state": "ballast",
-      "flagName": "Panama",
-      "deadWeight": 45588,
-      "commodityTypes": [
-        "dry"
-      ],
-      "capacity": 44607,
-      "speed": 6.5,
-      "course": 273,
-      "lat": 26.029684,
-      "lng": 55.854786,
-      "destination": "Mina' Saqr",
-      "destinationEta": "2026-03-29T12:00:00",
-      "aisDestination": null,
-      "product": "Limestone",
-      "controller": "Terra Marine Shipmanagement",
-      "lastPortCall": {
-        "start": "2026-03-18T11:55:33",
-        "end": "2026-03-18T16:56:09"
-      },
-      "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
       "name": "Sinopa",
       "imo": "9172038",
       "mmsi": "422153000",
@@ -154,6 +73,88 @@
       "lastPortCall": {
         "start": "2026-03-15T00:00:00",
         "end": "2026-03-15T00:00:00"
+      },
+      "transitDirection": "entering",
+      "isTransiting": true
+    },
+    {
+      "name": "Liao Fan",
+      "imo": "9228021",
+      "mmsi": "372468000",
+      "vesselTypeClass": "Supramax",
+      "state": "ballast",
+      "flagName": "Panama",
+      "deadWeight": 50949,
+      "commodityTypes": [
+        "dry"
+      ],
+      "capacity": 49895,
+      "speed": 3.2,
+      "course": 137,
+      "lat": 25.607454,
+      "lng": 56.440807,
+      "destination": "Mundra",
+      "destinationEta": "2026-03-30T03:00:06.337989",
+      "aisDestination": null,
+      "product": "Steel Pipes",
+      "controller": "Portline",
+      "lastPortCall": {
+        "start": "2026-03-11T08:19:16",
+        "end": "2026-03-17T21:59:19"
+      },
+      "transitDirection": "exiting",
+      "isTransiting": true
+    },
+    {
+      "name": "Manali",
+      "imo": "9268916",
+      "mmsi": "352002387",
+      "vesselTypeClass": "Handysize",
+      "state": "loaded",
+      "flagName": "Panama",
+      "deadWeight": 33745,
+      "commodityTypes": [
+        "dry"
+      ],
+      "capacity": 33019,
+      "speed": 10,
+      "course": 291,
+      "lat": 26.432817,
+      "lng": 55.871609,
+      "aisDestination": null,
+      "product": "Alumina",
+      "controller": "S-Bulkers",
+      "lastPortCall": {
+        "start": "2026-01-19T12:33:35",
+        "end": "2026-01-19T12:33:35"
+      },
+      "transitDirection": "entering",
+      "isTransiting": true
+    },
+    {
+      "name": "Green Asha",
+      "imo": "9326598",
+      "mmsi": "419001795",
+      "vesselTypeClass": "MGC",
+      "state": "loaded",
+      "flagName": "India",
+      "deadWeight": 26424,
+      "commodityTypes": [
+        "lpg"
+      ],
+      "capacity": 35220,
+      "speed": 3.5,
+      "course": 70,
+      "lat": 25.885752,
+      "lng": 56.009647,
+      "destination": "India",
+      "destinationEta": "2026-04-01T17:19:48.950112",
+      "aisDestination": null,
+      "product": "LPG",
+      "controller": "BPCL",
+      "lastPortCall": {
+        "start": "2026-03-29T10:58:51",
+        "end": "2026-03-29T17:52:18"
       },
       "transitDirection": "entering",
       "isTransiting": true
@@ -184,6 +185,62 @@
       "isTransiting": true
     },
     {
+      "name": "Rui Ning 7",
+      "imo": "9538335",
+      "mmsi": "412392000",
+      "vesselTypeClass": "Supramax",
+      "state": "loaded",
+      "flagName": "China",
+      "deadWeight": 53478,
+      "commodityTypes": [
+        "dry"
+      ],
+      "capacity": 52328,
+      "speed": 8.1,
+      "course": 0,
+      "lat": 25.981501,
+      "lng": 55.765167,
+      "destination": "Fujairah Light.",
+      "destinationEta": "2026-03-31T12:00:05.957157",
+      "aisDestination": null,
+      "product": "Steel",
+      "controller": "China Huaneng",
+      "lastPortCall": {
+        "start": "2026-03-16T00:53:18",
+        "end": "2026-03-20T08:39:38"
+      },
+      "transitDirection": "entering",
+      "isTransiting": true
+    },
+    {
+      "name": "Ksl Laiyang",
+      "imo": "9555163",
+      "mmsi": "538003815",
+      "vesselTypeClass": "Supramax",
+      "state": "loaded",
+      "flagName": "Marshall Islands",
+      "deadWeight": 56617,
+      "commodityTypes": [
+        "dry"
+      ],
+      "capacity": 55399,
+      "speed": 8.4,
+      "course": 273,
+      "lat": 25.61433,
+      "lng": 56.45076,
+      "destination": "Dibba Port",
+      "destinationEta": "2026-04-01T18:00:06.657144",
+      "aisDestination": null,
+      "product": "Minerals",
+      "controller": "Nanjing King Ship Management",
+      "lastPortCall": {
+        "start": "2026-03-23T10:58:54",
+        "end": "2026-03-26T00:19:13"
+      },
+      "transitDirection": "entering",
+      "isTransiting": true
+    },
+    {
       "name": "Propel Grace",
       "imo": "9605023",
       "mmsi": "563189200",
@@ -205,6 +262,56 @@
         "start": "2026-03-11T11:59:06",
         "end": "2026-03-23T03:38:43"
       },
+      "transitDirection": "entering",
+      "isTransiting": true
+    },
+    {
+      "name": "Desh Vibhor",
+      "imo": "9610298",
+      "mmsi": "419000479",
+      "vesselTypeClass": "VLCC",
+      "state": "loaded",
+      "flagName": "India",
+      "deadWeight": 316635,
+      "commodityTypes": [
+        "liquids"
+      ],
+      "capacity": 342668,
+      "speed": 23.4,
+      "course": 4,
+      "lat": 25.885307,
+      "lng": 56.009701,
+      "aisDestination": null,
+      "product": "kuwait export",
+      "controller": "SCI",
+      "lastPortCall": {
+        "start": "2026-03-29T10:59:27",
+        "end": "2026-03-29T13:57:47"
+      },
+      "transitDirection": "entering",
+      "isTransiting": true
+    },
+    {
+      "name": "CSCL INDIAN OCEAN",
+      "imo": "9695157",
+      "mmsi": "477476800",
+      "vesselTypeClass": "Container Ship",
+      "state": "ballast",
+      "flagName": "",
+      "deadWeight": 184320,
+      "commodityTypes": [
+        "container"
+      ],
+      "capacity": null,
+      "speed": 4.6,
+      "course": 266,
+      "lat": 25.8857233,
+      "lng": 56.00976,
+      "destination": "CHINESE OWNER_CREW",
+      "product": null,
+      "controller": null,
+      "lastPortCall": null,
+      "dataSource": "mint",
       "transitDirection": "entering",
       "isTransiting": true
     },
@@ -233,8 +340,8 @@
       "isTransiting": true
     }
   ],
-  "exitingCount": 2,
-  "enteringCount": 6,
-  "totalTransiting": 9,
-  "syncTimestamp": "2026-03-29T15:55:12.903Z"
+  "exitingCount": 3,
+  "enteringCount": 10,
+  "totalTransiting": 13,
+  "syncTimestamp": "2026-03-29T19:42:19.791Z"
 }

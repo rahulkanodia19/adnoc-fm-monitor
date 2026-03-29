@@ -5,22 +5,7 @@
     "commodity": "crude",
     "unit": "kbd",
     "hasPipeline": true,
-    "pipelineNote": "ESPO ~600, Kazakhstan ~220, Myanmar ~200 kbd pipeline",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -50.4,
-    "activeFMs": [
-      "Iraq",
-      "Kuwait",
-      "Indonesia"
-    ],
-    "supplierDisappeared": [
-      "Iraq",
-      "Saudi Arabia"
-    ],
-    "supplierAppeared": [
-      "Oman",
-      "Angola"
-    ],
+    "pipelineNote": "Includes ESPO Russia→China (~600 kbd), Kazakhstan-China (~220 kbd), Myanmar-China (~200 kbd) — ~1,020 kbd Hormuz-independent",
     "weeks": [
       {
         "period": "2026-W10",
@@ -198,9 +183,9 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-28",
-        "total": 50334,
+        "total": 50870,
         "days": 6,
-        "dailyAvg": 8389,
+        "dailyAvg": 8478.4,
         "allCountries": {
           "Oman": 10788.6,
           "Iran": 3425.3,
@@ -210,7 +195,7 @@
           "Kazakhstan": 1320,
           "Myanmar": 1200,
           "Angola": 1785.3,
-          "Cameroon": 461.2,
+          "Cameroon": 997.5,
           "Panama": 538.9,
           "Saudi-Kuwaiti Neutral Zone": 858.4,
           "Republic of the Congo": 981.8,
@@ -231,7 +216,7 @@
           "Kazakhstan": 220,
           "Myanmar": 200,
           "Angola": 297.6,
-          "Cameroon": 76.9,
+          "Cameroon": 166.3,
           "Panama": 89.8,
           "Saudi-Kuwaiti Neutral Zone": 143.1,
           "Republic of the Congo": 163.6,
@@ -245,7 +230,7 @@
         },
         "gulfTotal": 14725,
         "gulfDailyAvg": 2454.2,
-        "gulfShare": 29.3,
+        "gulfShare": 28.9,
         "top5": [
           "Russian Federation",
           "Oman",
@@ -263,19 +248,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -36.3,
-    "activeFMs": [
-      "Qatar",
-      "Indonesia"
-    ],
-    "supplierDisappeared": [
-      "Qatar",
-      "Canada"
-    ],
-    "supplierAppeared": [
-      "Indonesia"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -384,13 +356,13 @@
         "dailyAvg": 80.8,
         "allCountries": {
           "Australia": 260.6,
-          "Malaysia": 99.4,
+          "Malaysia": 99.2,
           "Indonesia": 61.1,
           "Russian Federation": 63.9
         },
         "allCountriesDaily": {
           "Australia": 43.4,
-          "Malaysia": 16.6,
+          "Malaysia": 16.5,
           "Indonesia": 10.2,
           "Russian Federation": 10.7
         },
@@ -413,19 +385,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -16,
-    "activeFMs": [
-      "Qatar",
-      "Kuwait"
-    ],
-    "supplierDisappeared": [
-      "Qatar",
-      "Kuwait"
-    ],
-    "supplierAppeared": [
-      "Australia"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -575,15 +534,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -100,
-    "activeFMs": [
-      "South Korea"
-    ],
-    "supplierDisappeared": [
-      "South Korea"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -662,16 +612,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -88.1,
-    "activeFMs": [
-      "South Korea"
-    ],
-    "supplierDisappeared": [
-      "Japan",
-      "Chile"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -771,15 +711,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -100,
-    "activeFMs": [
-      "South Korea"
-    ],
-    "supplierDisappeared": [
-      "Singapore Republic"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -858,28 +789,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -30.7,
-    "activeFMs": [
-      "Qatar",
-      "Bahrain",
-      "Kuwait",
-      "India",
-      "South Korea"
-    ],
-    "supplierDisappeared": [
-      "Qatar",
-      "Saudi Arabia",
-      "India",
-      "United Arab Emirates",
-      "Georgia"
-    ],
-    "supplierAppeared": [
-      "Russian Federation",
-      "Norway",
-      "South Korea",
-      "Thailand"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -1019,16 +928,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -66,
-    "activeFMs": [
-      "Qatar",
-      "Kuwait"
-    ],
-    "supplierDisappeared": [
-      "Saudi Arabia"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -1128,23 +1027,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -6.5,
-    "activeFMs": [
-      "Iraq",
-      "Qatar",
-      "Kuwait"
-    ],
-    "supplierDisappeared": [
-      "Iraq",
-      "Angola",
-      "Saudi-Kuwaiti Neutral Zone"
-    ],
-    "supplierAppeared": [
-      "United Arab Emirates",
-      "Nigeria",
-      "Ecuador"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -1315,18 +1197,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 19.7,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "United Arab Emirates",
-      "Mozambique"
-    ],
-    "supplierAppeared": [
-      "United States",
-      "Angola",
-      "Nigeria"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -1444,19 +1314,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -61.9,
-    "activeFMs": [
-      "Qatar",
-      "Bahrain",
-      "Kuwait"
-    ],
-    "supplierDisappeared": [
-      "United Arab Emirates",
-      "Bahrain",
-      "Saudi Arabia"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -1557,20 +1414,20 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-28",
-        "total": 80,
+        "total": 97,
         "days": 6,
-        "dailyAvg": 13.3,
+        "dailyAvg": 16.2,
         "allCountries": {
           "United States": 52,
-          "Qatar": 28
+          "Qatar": 45.4
         },
         "allCountriesDaily": {
           "United States": 8.7,
-          "Qatar": 4.7
+          "Qatar": 7.6
         },
-        "gulfTotal": 28,
-        "gulfDailyAvg": 4.7,
-        "gulfShare": 35,
+        "gulfTotal": 45,
+        "gulfDailyAvg": 7.6,
+        "gulfShare": 46.6,
         "top5": [
           "United States",
           "Qatar"
@@ -1585,11 +1442,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -1656,15 +1508,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 86.4,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "United Arab Emirates"
-    ],
-    "supplierAppeared": [
-      "Russian Federation"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -1749,13 +1592,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -40,
-    "activeFMs": [
-      "South Korea"
-    ],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -1840,20 +1676,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -40.8,
-    "activeFMs": [
-      "Kuwait"
-    ],
-    "supplierDisappeared": [
-      "United Arab Emirates",
-      "Kuwait",
-      "Iran"
-    ],
-    "supplierAppeared": [
-      "Oman",
-      "Russian Federation"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -1956,16 +1778,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 0,
-    "activeFMs": [
-      "Qatar"
-    ],
-    "supplierDisappeared": [],
-    "supplierAppeared": [
-      "Canada",
-      "Jordan"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -2047,19 +1859,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -60.7,
-    "activeFMs": [
-      "Qatar",
-      "Kuwait"
-    ],
-    "supplierDisappeared": [
-      "Kuwait"
-    ],
-    "supplierAppeared": [
-      "Malaysia",
-      "Qatar"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -2189,17 +1988,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -35.6,
-    "activeFMs": [
-      "Qatar",
-      "China",
-      "Indonesia"
-    ],
-    "supplierDisappeared": [
-      "Brunei"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -2349,13 +2137,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 35.1,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "Australia"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -2449,16 +2230,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -25.5,
-    "activeFMs": [
-      "China",
-      "South Korea"
-    ],
-    "supplierDisappeared": [
-      "China"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -2552,13 +2323,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 0,
-    "activeFMs": [
-      "South Korea"
-    ],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -2640,13 +2404,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "rising",
-    "fourWeekChangePct": 504,
-    "activeFMs": [
-      "South Korea"
-    ],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -2737,23 +2494,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -12.5,
-    "activeFMs": [
-      "Qatar",
-      "Kuwait",
-      "India",
-      "South Korea"
-    ],
-    "supplierDisappeared": [
-      "Qatar",
-      "Kuwait"
-    ],
-    "supplierAppeared": [
-      "South Korea",
-      "Peru",
-      "Algeria"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -2873,11 +2613,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -2944,40 +2679,25 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -61.6,
-    "activeFMs": [
-      "Iraq",
-      "Qatar",
-      "Kuwait"
-    ],
-    "supplierDisappeared": [
-      "Kuwait",
-      "Ecuador"
-    ],
-    "supplierAppeared": [
-      "Algeria",
-      "Iraq"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
         "start": "2026-03-02",
         "end": "2026-03-08",
-        "total": 23961,
+        "total": 24391,
         "days": 7,
-        "dailyAvg": 3423,
+        "dailyAvg": 3484.5,
         "allCountries": {
           "Ecuador": 2013.7,
           "United States": 3893.8,
           "United Arab Emirates": 2263,
           "Australia": 570,
-          "Saudi Arabia": 6507.7,
+          "Saudi Arabia": 6722.7,
           "Kuwait": 4000,
           "Panama": 524.9,
           "Republic of the Congo": 1298,
           "Iraq": 956.5,
-          "Saudi-Kuwaiti Neutral Zone": 920.8,
+          "Saudi-Kuwaiti Neutral Zone": 1135.8,
           "Equatorial Guinea": 507.8,
           "Qatar": 505
         },
@@ -2986,18 +2706,18 @@
           "United States": 556.3,
           "United Arab Emirates": 323.3,
           "Australia": 81.4,
-          "Saudi Arabia": 929.7,
+          "Saudi Arabia": 960.4,
           "Kuwait": 571.4,
           "Panama": 75,
           "Republic of the Congo": 185.4,
           "Iraq": 136.6,
-          "Saudi-Kuwaiti Neutral Zone": 131.5,
+          "Saudi-Kuwaiti Neutral Zone": 162.3,
           "Equatorial Guinea": 72.5,
           "Qatar": 72.1
         },
-        "gulfTotal": 14232,
-        "gulfDailyAvg": 2033.2,
-        "gulfShare": 59.4,
+        "gulfTotal": 14447,
+        "gulfDailyAvg": 2063.9,
+        "gulfShare": 59.2,
         "top5": [
           "Saudi Arabia",
           "Kuwait",
@@ -3010,11 +2730,11 @@
         "period": "2026-W11",
         "start": "2026-03-09",
         "end": "2026-03-15",
-        "total": 22575,
+        "total": 22360,
         "days": 7,
-        "dailyAvg": 3225,
+        "dailyAvg": 3194.3,
         "allCountries": {
-          "Saudi Arabia": 8661.6,
+          "Saudi Arabia": 8446.6,
           "Iraq": 3848,
           "Kuwait": 1516.4,
           "United Arab Emirates": 2187,
@@ -3024,7 +2744,7 @@
           "Malaysia": 402.5
         },
         "allCountriesDaily": {
-          "Saudi Arabia": 1237.4,
+          "Saudi Arabia": 1206.7,
           "Iraq": 549.7,
           "Kuwait": 216.6,
           "United Arab Emirates": 312.4,
@@ -3033,9 +2753,9 @@
           "Australia": 27.8,
           "Malaysia": 57.5
         },
-        "gulfTotal": 17241,
-        "gulfDailyAvg": 2463,
-        "gulfShare": 76.4,
+        "gulfTotal": 17026,
+        "gulfDailyAvg": 2432.3,
+        "gulfShare": 76.1,
         "top5": [
           "Saudi Arabia",
           "United States",
@@ -3090,7 +2810,7 @@
           "Iraq": 951,
           "United States": 1050,
           "United Arab Emirates": 4120.1,
-          "Algeria": 1077.6,
+          "Algeria": 1077.7,
           "Australia": 479
         },
         "allCountriesDaily": {
@@ -3121,21 +2841,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -32.9,
-    "activeFMs": [
-      "Qatar",
-      "China",
-      "Indonesia"
-    ],
-    "supplierDisappeared": [
-      "Qatar",
-      "Peru"
-    ],
-    "supplierAppeared": [
-      "Indonesia",
-      "China"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -3294,13 +2999,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -54.8,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "Canada"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -3400,13 +3098,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 0,
-    "activeFMs": [
-      "China"
-    ],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -3479,16 +3170,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 0,
-    "activeFMs": [
-      "China"
-    ],
-    "supplierDisappeared": [],
-    "supplierAppeared": [
-      "Russian Federation",
-      "China"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -3579,13 +3260,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -100,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "Japan"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -3670,25 +3344,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -48.3,
-    "activeFMs": [
-      "Iraq",
-      "Qatar",
-      "Bahrain",
-      "Kuwait",
-      "India"
-    ],
-    "supplierDisappeared": [
-      "United Arab Emirates",
-      "Bahrain",
-      "India"
-    ],
-    "supplierAppeared": [
-      "Greece",
-      "Peru",
-      "Egypt"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -3855,11 +3510,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -3926,21 +3576,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -23.1,
-    "activeFMs": [
-      "Kuwait",
-      "Indonesia"
-    ],
-    "supplierDisappeared": [
-      "Indonesia",
-      "Saudi Arabia",
-      "United States",
-      "Saudi-Kuwaiti Neutral Zone"
-    ],
-    "supplierAppeared": [
-      "Malaysia"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -4080,19 +3715,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -42,
-    "activeFMs": [
-      "Qatar",
-      "China"
-    ],
-    "supplierDisappeared": [
-      "Qatar",
-      "Malaysia"
-    ],
-    "supplierAppeared": [
-      "Oman"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -4210,11 +3832,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -4287,11 +3904,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -4358,18 +3970,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 50,
-    "activeFMs": [
-      "China",
-      "India"
-    ],
-    "supplierDisappeared": [
-      "China"
-    ],
-    "supplierAppeared": [
-      "Malaysia"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -4460,13 +4060,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -100,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "Singapore Republic"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -4551,18 +4144,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -97.2,
-    "activeFMs": [
-      "Bahrain"
-    ],
-    "supplierDisappeared": [
-      "Bahrain",
-      "United States"
-    ],
-    "supplierAppeared": [
-      "Singapore Republic"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -4650,13 +4231,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -100,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "Russian Federation"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -4729,15 +4303,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -100,
-    "activeFMs": [
-      "Kuwait"
-    ],
-    "supplierDisappeared": [
-      "Kuwait"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -4822,13 +4387,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 0,
-    "activeFMs": [
-      "Qatar"
-    ],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -4901,17 +4459,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "rising",
-    "fourWeekChangePct": 2266.7,
-    "activeFMs": [
-      "China"
-    ],
-    "supplierDisappeared": [
-      "China"
-    ],
-    "supplierAppeared": [
-      "United States"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -5011,16 +4558,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -59.9,
-    "activeFMs": [
-      "China"
-    ],
-    "supplierDisappeared": [
-      "Thailand",
-      "China"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -5117,15 +4654,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 49.9,
-    "activeFMs": [
-      "South Korea"
-    ],
-    "supplierDisappeared": [
-      "Malaysia"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -5228,13 +4756,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -81.4,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "Malaysia"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -5331,11 +4852,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -5402,15 +4918,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -100,
-    "activeFMs": [
-      "Qatar"
-    ],
-    "supplierDisappeared": [
-      "Qatar"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -5489,41 +4996,31 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -67,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "Brazil",
-      "Turkey"
-    ],
-    "supplierAppeared": [
-      "Netherlands"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
         "start": "2026-03-02",
         "end": "2026-03-08",
-        "total": 3047,
+        "total": 4102,
         "days": 7,
-        "dailyAvg": 435.3,
+        "dailyAvg": 586,
         "allCountries": {
           "Finland": 598.5,
           "Brazil": 2132.3,
-          "Turkey": 124.6
+          "Turkey": 1179.6
         },
         "allCountriesDaily": {
           "Finland": 85.5,
           "Brazil": 304.6,
-          "Turkey": 17.8
+          "Turkey": 168.5
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
           "Brazil",
-          "Finland",
-          "Turkey"
+          "Turkey",
+          "Finland"
         ]
       },
       {
@@ -5604,13 +5101,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -100,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "Italy"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -5683,21 +5173,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -62.5,
-    "activeFMs": [
-      "France",
-      "Germany",
-      "Denmark"
-    ],
-    "supplierDisappeared": [
-      "Lebanon",
-      "Spain",
-      "Turkey"
-    ],
-    "supplierAppeared": [
-      "France"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -5830,17 +5305,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -85.7,
-    "activeFMs": [
-      "France",
-      "Denmark"
-    ],
-    "supplierDisappeared": [
-      "Denmark",
-      "Albania"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -5901,14 +5365,15 @@
         "period": "2026-W12",
         "start": "2026-03-16",
         "end": "2026-03-22",
-        "total": 621,
+        "total": 892,
         "days": 7,
-        "dailyAvg": 88.7,
+        "dailyAvg": 127.4,
         "allCountries": {
           "Norway": 49.2,
           "Cyprus": 117.9,
           "Albania": 71.8,
           "Spain": 175.3,
+          "United Kingdom": 270.7,
           "Malta": 37.3,
           "South Africa": 169.4
         },
@@ -5917,6 +5382,7 @@
           "Cyprus": 16.8,
           "Albania": 10.3,
           "Spain": 25,
+          "United Kingdom": 38.7,
           "Malta": 5.3,
           "South Africa": 24.2
         },
@@ -5924,11 +5390,11 @@
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
+          "United Kingdom",
           "Spain",
           "South Africa",
           "Cyprus",
-          "Albania",
-          "Norway"
+          "Albania"
         ]
       },
       {
@@ -5960,25 +5426,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -51,
-    "activeFMs": [
-      "France",
-      "Germany",
-      "Denmark"
-    ],
-    "supplierDisappeared": [
-      "United Kingdom",
-      "Germany",
-      "Romania",
-      "Portugal"
-    ],
-    "supplierAppeared": [
-      "Croatia",
-      "Slovenia",
-      "Ireland",
-      "Italy"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -6050,9 +5497,9 @@
         "period": "2026-W11",
         "start": "2026-03-09",
         "end": "2026-03-15",
-        "total": 7696,
+        "total": 7587,
         "days": 7,
-        "dailyAvg": 1099.5,
+        "dailyAvg": 1083.9,
         "allCountries": {
           "Germany": 469.1,
           "Italy": 165.1,
@@ -6120,9 +5567,9 @@
         "period": "2026-W12",
         "start": "2026-03-16",
         "end": "2026-03-22",
-        "total": 7600,
+        "total": 7537,
         "days": 7,
-        "dailyAvg": 1085.7,
+        "dailyAvg": 1076.7,
         "allCountries": {
           "Finland": 105.6,
           "United Kingdom": 1430.7,
@@ -6134,12 +5581,12 @@
           "Latvia": 117.8,
           "Sweden": 38.9,
           "Western Sahara": 28.1,
+          "Romania": 544.1,
           "Croatia": 279.1,
           "Egypt": 92.9,
           "Lebanon": 113.1,
           "Libya": 264.8,
           "Poland": 902.9,
-          "Romania": 544.1,
           "Cyprus": 259.8,
           "France": 265,
           "Lithuania": 118.7,
@@ -6160,12 +5607,12 @@
           "Latvia": 16.8,
           "Sweden": 5.6,
           "Western Sahara": 4,
+          "Romania": 77.7,
           "Croatia": 39.9,
           "Egypt": 13.3,
           "Lebanon": 16.2,
           "Libya": 37.8,
           "Poland": 129,
-          "Romania": 77.7,
           "Cyprus": 37.1,
           "France": 37.9,
           "Lithuania": 17,
@@ -6190,38 +5637,36 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-28",
-        "total": 2582,
+        "total": 2542,
         "days": 6,
-        "dailyAvg": 430.3,
+        "dailyAvg": 423.6,
         "allCountries": {
-          "Croatia": 543.6,
+          "Croatia": 683.2,
           "Ireland": 295.1,
           "Slovenia": 355.5,
           "Georgia": 33.8,
           "Mauritania": 25.9,
           "Netherlands": 29.3,
-          "Turkey": 97.8,
           "Belgium": 24.9,
           "Italy": 169.2,
           "Poland": 345.4,
-          "Spain": 38.5,
+          "Turkey": 95.9,
           "Denmark": 110.4,
           "Sweden": 78.1,
           "France": 162.7,
           "Latvia": 132.2
         },
         "allCountriesDaily": {
-          "Croatia": 90.6,
+          "Croatia": 113.9,
           "Ireland": 49.2,
           "Slovenia": 59.3,
           "Georgia": 5.6,
           "Mauritania": 4.3,
           "Netherlands": 4.9,
-          "Turkey": 16.3,
           "Belgium": 4.1,
           "Italy": 28.2,
           "Poland": 57.6,
-          "Spain": 6.4,
+          "Turkey": 16,
           "Denmark": 18.4,
           "Sweden": 13,
           "France": 27.1,
@@ -6247,41 +5692,21 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 4.8,
-    "activeFMs": [
-      "France",
-      "Germany"
-    ],
-    "supplierDisappeared": [
-      "Libya",
-      "Netherlands",
-      "Belgium",
-      "United States",
-      "France"
-    ],
-    "supplierAppeared": [
-      "Spain",
-      "Morocco",
-      "Ghana",
-      "Senegal",
-      "Mauritania"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
         "start": "2026-03-02",
         "end": "2026-03-08",
-        "total": 6555,
+        "total": 6398,
         "days": 7,
-        "dailyAvg": 936.4,
+        "dailyAvg": 914,
         "allCountries": {
           "Canada": 316.8,
           "Belgium": 476.3,
           "Namibia": 289.8,
           "Portugal": 71.4,
           "United Kingdom": 294.6,
-          "United States": 430.9,
+          "United States": 274.2,
           "Libya": 912.1,
           "Netherlands": 509.5,
           "Finland": 158.6,
@@ -6305,7 +5730,7 @@
           "Namibia": 41.4,
           "Portugal": 10.2,
           "United Kingdom": 42.1,
-          "United States": 61.6,
+          "United States": 39.2,
           "Libya": 130.3,
           "Netherlands": 72.8,
           "Finland": 22.7,
@@ -6330,8 +5755,8 @@
           "Libya",
           "Netherlands",
           "Belgium",
-          "United States",
-          "France"
+          "France",
+          "Canada"
         ]
       },
       {
@@ -6414,9 +5839,9 @@
         "period": "2026-W12",
         "start": "2026-03-16",
         "end": "2026-03-22",
-        "total": 8570,
+        "total": 8702,
         "days": 7,
-        "dailyAvg": 1224.3,
+        "dailyAvg": 1243.1,
         "allCountries": {
           "Belgium": 68.8,
           "Georgia": 62.9,
@@ -6430,10 +5855,10 @@
           "Latvia": 237.2,
           "United Kingdom": 691.5,
           "United States": 634.4,
-          "France": 174.7,
+          "France": 191.4,
           "Morocco": 291.9,
           "Egypt": 160.6,
-          "Spain": 215.4,
+          "Spain": 198.7,
           "Poland": 64.2,
           "Slovenia": 36.7,
           "Canada": 313.3,
@@ -6453,10 +5878,10 @@
           "Latvia": 33.9,
           "United Kingdom": 98.8,
           "United States": 90.6,
-          "France": 25,
+          "France": 27.3,
           "Morocco": 41.7,
           "Egypt": 22.9,
-          "Spain": 30.8,
+          "Spain": 28.4,
           "Poland": 9.2,
           "Slovenia": 5.2,
           "Canada": 44.8,
@@ -6478,14 +5903,13 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-28",
-        "total": 6867,
+        "total": 7063,
         "days": 6,
-        "dailyAvg": 1144.5,
+        "dailyAvg": 1177.2,
         "allCountries": {
           "United Kingdom": 244.3,
           "France": 214.5,
           "Mauritania": 318.9,
-          "Finland": 70.4,
           "Morocco": 346.8,
           "Spain": 413.5,
           "Tunisia": 273,
@@ -6501,7 +5925,6 @@
           "United Kingdom": 40.7,
           "France": 35.8,
           "Mauritania": 53.2,
-          "Finland": 11.7,
           "Morocco": 57.8,
           "Spain": 68.9,
           "Tunisia": 45.5,
@@ -6533,24 +5956,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -31.7,
-    "activeFMs": [
-      "France",
-      "China",
-      "Taiwan",
-      "Germany"
-    ],
-    "supplierDisappeared": [
-      "Belgium",
-      "Netherlands",
-      "Argentina",
-      "Spain"
-    ],
-    "supplierAppeared": [
-      "Italy",
-      "China"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -6601,9 +6006,9 @@
           "United Kingdom": 177,
           "Italy": 420,
           "Netherlands": 173.1,
+          "Bahamas": 345.4,
           "Brazil": 512,
           "Taiwan": 319.2,
-          "Bahamas": 345.4,
           "Sweden": 74.9
         },
         "allCountriesDaily": {
@@ -6614,9 +6019,9 @@
           "United Kingdom": 25.3,
           "Italy": 60,
           "Netherlands": 24.7,
+          "Bahamas": 49.3,
           "Brazil": 73.1,
           "Taiwan": 45.6,
-          "Bahamas": 49.3,
           "Sweden": 10.7
         },
         "gulfTotal": 0,
@@ -6674,16 +6079,18 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-28",
-        "total": 1409,
+        "total": 1632,
         "days": 6,
-        "dailyAvg": 234.8,
+        "dailyAvg": 272,
         "allCountries": {
           "Italy": 501.8,
+          "Turkey": 1.9,
           "China": 345.4,
           "Germany": 282
         },
         "allCountriesDaily": {
           "Italy": 83.6,
+          "Turkey": 0.3,
           "China": 57.6,
           "Germany": 47
         },
@@ -6693,7 +6100,8 @@
         "top5": [
           "Italy",
           "China",
-          "Germany"
+          "Germany",
+          "Turkey"
         ]
       }
     ]
@@ -6705,11 +6113,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -6776,17 +6179,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -38.7,
-    "activeFMs": [
-      "Iraq"
-    ],
-    "supplierDisappeared": [
-      "Iraq"
-    ],
-    "supplierAppeared": [
-      "Bahamas"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -6944,36 +6336,38 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-28",
-        "total": 11794,
+        "total": 12015,
         "days": 6,
-        "dailyAvg": 1965.7,
+        "dailyAvg": 2002.5,
         "allCountries": {
           "Bahamas": 917.9,
           "Venezuela": 2319.3,
           "Mexico": 1552.9,
-          "Saudi Arabia": 2994.9,
+          "Saudi Arabia": 3425.6,
           "Panama": 1032.1,
           "Ecuador": 608.2,
           "Argentina": 724.4,
           "Iraq": 279.2,
-          "Canada": 766,
-          "Colombia": 599.4
+          "Canada": 383,
+          "Colombia": 599.4,
+          "Libya": 173
         },
         "allCountriesDaily": {
           "Bahamas": 153,
           "Venezuela": 386.6,
           "Mexico": 258.8,
-          "Saudi Arabia": 499.2,
+          "Saudi Arabia": 570.9,
           "Panama": 172,
           "Ecuador": 101.4,
           "Argentina": 120.7,
           "Iraq": 46.5,
-          "Canada": 127.7,
-          "Colombia": 99.9
+          "Canada": 63.8,
+          "Colombia": 99.9,
+          "Libya": 28.8
         },
-        "gulfTotal": 3274,
-        "gulfDailyAvg": 545.7,
-        "gulfShare": 27.8,
+        "gulfTotal": 3705,
+        "gulfDailyAvg": 617.5,
+        "gulfShare": 30.8,
         "top5": [
           "Saudi Arabia",
           "Venezuela",
@@ -6991,11 +6385,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -7062,11 +6451,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -7139,20 +6523,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 469.2,
-    "activeFMs": [
-      "China",
-      "Taiwan",
-      "South Korea"
-    ],
-    "supplierDisappeared": [
-      "Canada"
-    ],
-    "supplierAppeared": [
-      "South Korea",
-      "Taiwan"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -7255,15 +6625,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -57.6,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "Turkey"
-    ],
-    "supplierAppeared": [
-      "Argentina"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -7366,20 +6727,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -46.5,
-    "activeFMs": [
-      "India",
-      "South Korea"
-    ],
-    "supplierDisappeared": [
-      "Netherlands",
-      "Belgium"
-    ],
-    "supplierAppeared": [
-      "United States Virgin Islands",
-      "United Kingdom"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -7446,13 +6793,11 @@
         "period": "2026-W12",
         "start": "2026-03-16",
         "end": "2026-03-22",
-        "total": 2550,
+        "total": 2365,
         "days": 7,
-        "dailyAvg": 364.2,
+        "dailyAvg": 337.8,
         "allCountries": {
           "Canada": 682.6,
-          "Netherlands": 28.5,
-          "Spain": 156.7,
           "Bahamas": 453.6,
           "Brazil": 305.7,
           "United Kingdom": 404.5,
@@ -7461,8 +6806,6 @@
         },
         "allCountriesDaily": {
           "Canada": 97.5,
-          "Netherlands": 4.1,
-          "Spain": 22.4,
           "Bahamas": 64.8,
           "Brazil": 43.7,
           "United Kingdom": 57.8,
@@ -7488,13 +6831,13 @@
         "days": 6,
         "dailyAvg": 208.9,
         "allCountries": {
-          "Canada": 764.7,
+          "Canada": 764.6,
           "United Kingdom": 84.6,
           "United States Virgin Islands": 292,
           "Bahamas": 112.3
         },
         "allCountriesDaily": {
-          "Canada": 127.5,
+          "Canada": 127.4,
           "United Kingdom": 14.1,
           "United States Virgin Islands": 48.7,
           "Bahamas": 18.7
@@ -7518,22 +6861,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -34.6,
-    "activeFMs": [
-      "France"
-    ],
-    "supplierDisappeared": [
-      "France",
-      "Netherlands",
-      "Belgium",
-      "Peru"
-    ],
-    "supplierAppeared": [
-      "Angola",
-      "Argentina",
-      "Brazil"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -7645,11 +6972,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -7716,19 +7038,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -29.7,
-    "activeFMs": [
-      "Kuwait"
-    ],
-    "supplierDisappeared": [
-      "Saudi Arabia",
-      "United Arab Emirates",
-      "Republic of the Congo"
-    ],
-    "supplierAppeared": [
-      "United States"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -7834,20 +7143,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 43.4,
-    "activeFMs": [
-      "Qatar"
-    ],
-    "supplierDisappeared": [
-      "Papua New Guinea",
-      "United States",
-      "Qatar"
-    ],
-    "supplierAppeared": [
-      "Equatorial Guinea",
-      "Brunei"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -7977,13 +7272,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -100,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "Australia"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -8062,11 +7350,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -8133,17 +7416,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 0,
-    "activeFMs": [
-      "China",
-      "South Korea"
-    ],
-    "supplierDisappeared": [],
-    "supplierAppeared": [
-      "South Korea",
-      "China"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -8234,11 +7506,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -8311,16 +7578,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -100,
-    "activeFMs": [
-      "Iraq"
-    ],
-    "supplierDisappeared": [
-      "Singapore Republic",
-      "United States"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -8411,11 +7668,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -8482,11 +7734,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -8553,11 +7800,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -8624,11 +7866,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -8695,13 +7932,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -100,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "United Arab Emirates"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -8774,11 +8004,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -8845,11 +8070,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -8916,13 +8136,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -100,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "Japan"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -8995,19 +8208,14 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
         "start": "2026-03-02",
         "end": "2026-03-08",
-        "total": 0,
+        "total": 12,
         "days": 7,
-        "dailyAvg": 0,
+        "dailyAvg": 1.7,
         "allCountries": {},
         "allCountriesDaily": {},
         "gulfTotal": 0,
@@ -9047,9 +8255,9 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-28",
-        "total": 0,
+        "total": 6,
         "days": 6,
-        "dailyAvg": 0,
+        "dailyAvg": 1,
         "allCountries": {},
         "allCountriesDaily": {},
         "gulfTotal": 0,
@@ -9066,15 +8274,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -38.1,
-    "activeFMs": [
-      "China"
-    ],
-    "supplierDisappeared": [
-      "China"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -9147,11 +8346,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -9218,17 +8412,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -34.9,
-    "activeFMs": [
-      "China",
-      "India"
-    ],
-    "supplierDisappeared": [
-      "China",
-      "India"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -9310,11 +8493,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -9381,11 +8559,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -9452,11 +8625,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -9523,11 +8691,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -100,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -9600,11 +8763,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -9670,22 +8828,7 @@
     "commodity": "crude",
     "unit": "kbd",
     "hasPipeline": true,
-    "pipelineNote": "Kirkuk-Ceyhan ~250 kbd pipeline since Mar 17",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -90.2,
-    "activeFMs": [
-      "China",
-      "India"
-    ],
-    "supplierDisappeared": [
-      "China",
-      "India",
-      "Italy",
-      "Malaysia"
-    ],
-    "supplierAppeared": [
-      "Turkey"
-    ],
+    "pipelineNote": "Includes Kirkuk-Ceyhan pipeline (~250 kbd) to Turkey since Mar 17 2026",
     "weeks": [
       {
         "period": "2026-W10",
@@ -9779,11 +8922,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -9850,11 +8988,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -100,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -9921,11 +9054,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -9992,11 +9120,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -10063,11 +9186,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -10134,11 +9252,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -10205,11 +9318,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -10276,15 +9384,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -100,
-    "activeFMs": [
-      "China"
-    ],
-    "supplierDisappeared": [
-      "China"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -10294,16 +9393,19 @@
         "days": 7,
         "dailyAvg": 1162.1,
         "allCountries": {
-          "China": 2000
+          "China": 2000,
+          "India": 65.8
         },
         "allCountriesDaily": {
-          "China": 285.7
+          "China": 285.7,
+          "India": 9.4
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
-          "China"
+          "China",
+          "India"
         ]
       },
       {
@@ -10357,11 +9459,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -10428,11 +9525,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -100,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -10499,13 +9591,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -100,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "United Arab Emirates"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -10578,17 +9663,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -100,
-    "activeFMs": [
-      "Qatar",
-      "China"
-    ],
-    "supplierDisappeared": [
-      "United Arab Emirates",
-      "China"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -10673,11 +9747,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -10750,11 +9819,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -10821,11 +9885,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -10892,14 +9951,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -2.2,
-    "activeFMs": [
-      "China",
-      "Taiwan"
-    ],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -10968,14 +10019,14 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-28",
-        "total": 7632,
+        "total": 7597,
         "days": 6,
-        "dailyAvg": 1271.9,
+        "dailyAvg": 1266.1,
         "allCountries": {
-          "China": 7631.5
+          "China": 7596.5
         },
         "allCountriesDaily": {
-          "China": 1271.9
+          "China": 1266.1
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -10993,21 +10044,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -51.2,
-    "activeFMs": [
-      "China",
-      "Taiwan",
-      "India",
-      "South Korea"
-    ],
-    "supplierDisappeared": [
-      "South Korea",
-      "Taiwan"
-    ],
-    "supplierAppeared": [
-      "Thailand"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -11119,11 +10155,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -11190,13 +10221,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -100,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "Mauritius"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -11275,18 +10299,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -32.1,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "Namibia",
-      "Argentina",
-      "Madagascar",
-      "South Africa"
-    ],
-    "supplierAppeared": [
-      "Pakistan"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -11395,16 +10407,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 15.8,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "Madagascar",
-      "Mauritius"
-    ],
-    "supplierAppeared": [
-      "Saudi Arabia"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -11510,17 +10512,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -100,
-    "activeFMs": [
-      "India",
-      "South Korea"
-    ],
-    "supplierDisappeared": [
-      "South Korea",
-      "India"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -11602,11 +10593,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -11673,11 +10659,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -100,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -11750,18 +10731,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -65.1,
-    "activeFMs": [
-      "China",
-      "Kuwait"
-    ],
-    "supplierDisappeared": [
-      "China"
-    ],
-    "supplierAppeared": [
-      "Kuwait"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -11846,15 +10815,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -100,
-    "activeFMs": [
-      "India"
-    ],
-    "supplierDisappeared": [
-      "India"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -11927,11 +10887,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -11998,11 +10953,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -12069,11 +11019,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -12140,13 +11085,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -100,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "Japan"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -12219,11 +11157,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -100,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -12232,12 +11165,18 @@
         "total": 72,
         "days": 7,
         "dailyAvg": 10.2,
-        "allCountries": {},
-        "allCountriesDaily": {},
+        "allCountries": {
+          "Bangladesh": 36
+        },
+        "allCountriesDaily": {
+          "Bangladesh": 5.1
+        },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
-        "top5": []
+        "top5": [
+          "Bangladesh"
+        ]
       },
       {
         "period": "2026-W11",
@@ -12285,28 +11224,11 @@
   },
   "russia_crude": {
     "direction": "export",
-    "country": "Russia",
+    "country": "Russian Federation",
     "commodity": "crude",
     "unit": "kbd",
     "hasPipeline": true,
-    "pipelineNote": "ESPO ~600 kbd pipeline to China",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -14.3,
-    "activeFMs": [
-      "France",
-      "China",
-      "Israel",
-      "India",
-      "South Korea"
-    ],
-    "supplierDisappeared": [
-      "Israel",
-      "South Korea"
-    ],
-    "supplierAppeared": [
-      "Turkey",
-      "France"
-    ],
+    "pipelineNote": "Includes ESPO pipeline (~600 kbd) to China",
     "weeks": [
       {
         "period": "2026-W10",
@@ -12360,7 +11282,7 @@
         "days": 7,
         "dailyAvg": 6759.1,
         "allCountries": {
-          "China": 18027.1,
+          "China": 16975.9,
           "Cuba": 730,
           "India": 10020.6,
           "Israel": 737.4,
@@ -12373,7 +11295,7 @@
           "Romania": 621.9
         },
         "allCountriesDaily": {
-          "China": 2575.3,
+          "China": 2425.1,
           "Cuba": 104.3,
           "India": 1431.5,
           "Israel": 105.3,
@@ -12404,7 +11326,7 @@
         "days": 7,
         "dailyAvg": 6505.3,
         "allCountries": {
-          "India": 8502.2,
+          "India": 9130.3,
           "Turkey": 3630.3,
           "Italy": 3189.3,
           "Netherlands": 3047.2,
@@ -12416,7 +11338,7 @@
           "France": 2118.7
         },
         "allCountriesDaily": {
-          "India": 1214.6,
+          "India": 1304.3,
           "Turkey": 518.6,
           "Italy": 455.6,
           "Netherlands": 435.3,
@@ -12442,11 +11364,11 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-28",
-        "total": 28658,
+        "total": 29118,
         "days": 6,
-        "dailyAvg": 4776.4,
+        "dailyAvg": 4853.1,
         "allCountries": {
-          "China": 6953.9,
+          "China": 7686.9,
           "Hong Kong": 509.5,
           "India": 2726.6,
           "Netherlands": 1767,
@@ -12457,7 +11379,7 @@
           "Georgia": 628.1
         },
         "allCountriesDaily": {
-          "China": 1159,
+          "China": 1281.1,
           "Hong Kong": 84.9,
           "India": 454.4,
           "Netherlands": 294.5,
@@ -12482,25 +11404,11 @@
   },
   "russia_lng": {
     "direction": "export",
-    "country": "Russia",
+    "country": "Russian Federation",
     "commodity": "lng",
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -37.7,
-    "activeFMs": [
-      "France",
-      "China",
-      "South Korea"
-    ],
-    "supplierDisappeared": [
-      "France",
-      "Netherlands"
-    ],
-    "supplierAppeared": [
-      "Japan"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -12637,16 +11545,11 @@
   },
   "russia_lpg": {
     "direction": "export",
-    "country": "Russia",
+    "country": "Russian Federation",
     "commodity": "lpg",
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -12720,16 +11623,11 @@
   },
   "russia_kero_jet": {
     "direction": "export",
-    "country": "Russia",
+    "country": "Russian Federation",
     "commodity": "kero_jet",
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -12791,26 +11689,11 @@
   },
   "russia_gasoil_diesel": {
     "direction": "export",
-    "country": "Russia",
+    "country": "Russian Federation",
     "commodity": "gasoil_diesel",
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -70.1,
-    "activeFMs": [
-      "Taiwan"
-    ],
-    "supplierDisappeared": [
-      "Brazil",
-      "Ghana",
-      "Sudan",
-      "Senegal"
-    ],
-    "supplierAppeared": [
-      "Egypt",
-      "Togo"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -12860,20 +11743,20 @@
         "allCountries": {
           "Egypt": 1268.9,
           "Turkey": 2876.3,
+          "Brazil": 746.2,
           "Ghana": 231.3,
           "Morocco": 313.4,
           "Togo": 345.4,
-          "Sudan": 223.8,
-          "Brazil": 447.7
+          "Sudan": 223.8
         },
         "allCountriesDaily": {
           "Egypt": 181.3,
           "Turkey": 410.9,
+          "Brazil": 106.6,
           "Ghana": 33,
           "Morocco": 44.8,
           "Togo": 49.3,
-          "Sudan": 32,
-          "Brazil": 64
+          "Sudan": 32
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -12924,17 +11807,15 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-28",
-        "total": 1675,
+        "total": 1414,
         "days": 6,
-        "dailyAvg": 279.2,
+        "dailyAvg": 235.6,
         "allCountries": {
-          "Turkey": 349.3,
-          "Egypt": 261.8,
+          "Turkey": 666.9,
           "Togo": 260.2
         },
         "allCountriesDaily": {
-          "Turkey": 58.2,
-          "Egypt": 43.6,
+          "Turkey": 111.2,
           "Togo": 43.4
         },
         "gulfTotal": 0,
@@ -12942,7 +11823,6 @@
         "gulfShare": 0,
         "top5": [
           "Turkey",
-          "Egypt",
           "Togo"
         ]
       }
@@ -12950,18 +11830,11 @@
   },
   "russia_gasoline": {
     "direction": "export",
-    "country": "Russia",
+    "country": "Russian Federation",
     "commodity": "gasoline",
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -100,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "Libya"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -13035,26 +11908,11 @@
   },
   "russia_naphtha": {
     "direction": "export",
-    "country": "Russia",
+    "country": "Russian Federation",
     "commodity": "naphtha",
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -61.4,
-    "activeFMs": [
-      "China",
-      "India",
-      "South Korea",
-      "Indonesia"
-    ],
-    "supplierDisappeared": [
-      "China",
-      "India",
-      "Senegal",
-      "South Korea"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -13184,22 +12042,11 @@
   },
   "russia_sulphur": {
     "direction": "export",
-    "country": "Russia",
+    "country": "Russian Federation",
     "commodity": "sulphur",
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 151.6,
-    "activeFMs": [
-      "China"
-    ],
-    "supplierDisappeared": [
-      "Brazil"
-    ],
-    "supplierAppeared": [
-      "China"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -13284,21 +12131,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -39.3,
-    "activeFMs": [
-      "China",
-      "India",
-      "South Korea"
-    ],
-    "supplierDisappeared": [
-      "Egypt",
-      "South Korea",
-      "Japan"
-    ],
-    "supplierAppeared": [
-      "Myanmar"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -13312,7 +12144,7 @@
           "China": 2554.7,
           "India": 5171.4,
           "Pakistan": 442.4,
-          "South Korea": 4000,
+          "South Korea": 2000,
           "Japan": 2000,
           "Malaysia": 1022.8
         },
@@ -13321,7 +12153,7 @@
           "China": 365,
           "India": 738.8,
           "Pakistan": 63.2,
-          "South Korea": 571.4,
+          "South Korea": 285.7,
           "Japan": 285.7,
           "Malaysia": 146.1
         },
@@ -13331,8 +12163,8 @@
         "top5": [
           "Egypt",
           "India",
-          "South Korea",
           "China",
+          "South Korea",
           "Japan"
         ]
       },
@@ -13437,11 +12269,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -13508,15 +12335,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "rising",
-    "fourWeekChangePct": 0,
-    "activeFMs": [
-      "India"
-    ],
-    "supplierDisappeared": [],
-    "supplierAppeared": [
-      "India"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -13601,14 +12419,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -100,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "United Kingdom",
-      "Jordan"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -13690,22 +12500,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -31.6,
-    "activeFMs": [
-      "France"
-    ],
-    "supplierDisappeared": [
-      "France",
-      "Albania",
-      "Spain",
-      "Italy"
-    ],
-    "supplierAppeared": [
-      "Belgium",
-      "Pakistan",
-      "Sudan"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -13755,18 +12549,20 @@
         "days": 7,
         "dailyAvg": 666.5,
         "allCountries": {
-          "Egypt": 1345.9,
+          "Egypt": 1335.1,
           "Italy": 688.9,
           "Kenya": 751.2,
+          "Pakistan": 257.9,
           "Jordan": 118.2,
           "Malaysia": 335.8,
           "Slovenia": 145.1,
           "Spain": 532.9
         },
         "allCountriesDaily": {
-          "Egypt": 192.3,
+          "Egypt": 190.7,
           "Italy": 98.4,
           "Kenya": 107.3,
+          "Pakistan": 36.8,
           "Jordan": 16.9,
           "Malaysia": 48,
           "Slovenia": 20.7,
@@ -13793,12 +12589,14 @@
         "allCountries": {
           "Egypt": 981.2,
           "Malaysia": 335.7,
+          "Italy": 285.8,
           "Singapore Republic": 767.5,
           "Belgium": 603.5
         },
         "allCountriesDaily": {
           "Egypt": 140.2,
           "Malaysia": 48,
+          "Italy": 40.8,
           "Singapore Republic": 109.6,
           "Belgium": 86.2
         },
@@ -13809,7 +12607,8 @@
           "Egypt",
           "Singapore Republic",
           "Belgium",
-          "Malaysia"
+          "Malaysia",
+          "Italy"
         ]
       },
       {
@@ -13820,13 +12619,13 @@
         "days": 6,
         "dailyAvg": 593.1,
         "allCountries": {
-          "Egypt": 762.3,
+          "Egypt": 480,
           "Belgium": 744.1,
           "Pakistan": 306.4,
           "Sudan": 132.8
         },
         "allCountriesDaily": {
-          "Egypt": 127.1,
+          "Egypt": 80,
           "Belgium": 124,
           "Pakistan": 51.1,
           "Sudan": 22.1
@@ -13835,8 +12634,8 @@
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
-          "Egypt",
           "Belgium",
+          "Egypt",
           "Pakistan",
           "Sudan"
         ]
@@ -13850,18 +12649,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -60.8,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "Malaysia",
-      "South Africa",
-      "Pakistan",
-      "Jordan"
-    ],
-    "supplierAppeared": [
-      "Kenya"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -13872,14 +12659,12 @@
         "dailyAvg": 223.6,
         "allCountries": {
           "Malaysia": 324.7,
-          "South Africa": 300,
           "Jordan": 46.3,
           "Singapore Republic": 345.4,
           "Pakistan": 248.2
         },
         "allCountriesDaily": {
           "Malaysia": 46.4,
-          "South Africa": 42.9,
           "Jordan": 6.6,
           "Singapore Republic": 49.3,
           "Pakistan": 35.5
@@ -13890,7 +12675,6 @@
         "top5": [
           "Singapore Republic",
           "Malaysia",
-          "South Africa",
           "Pakistan",
           "Jordan"
         ]
@@ -13934,13 +12718,13 @@
         "allCountries": {
           "Jordan": 118.2,
           "Malaysia": 315.9,
-          "Singapore Republic": 1011.4,
+          "Singapore Republic": 692.3,
           "Sudan": 132.8
         },
         "allCountriesDaily": {
           "Jordan": 16.9,
           "Malaysia": 45.1,
-          "Singapore Republic": 144.5,
+          "Singapore Republic": 98.9,
           "Sudan": 19
         },
         "gulfTotal": 0,
@@ -13985,17 +12769,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 442.6,
-    "activeFMs": [
-      "Indonesia"
-    ],
-    "supplierDisappeared": [
-      "Japan"
-    ],
-    "supplierAppeared": [
-      "Indonesia"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -14092,17 +12865,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -100,
-    "activeFMs": [
-      "China",
-      "Indonesia"
-    ],
-    "supplierDisappeared": [
-      "Indonesia",
-      "Lithuania"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -14179,29 +12941,11 @@
   },
   "uae_crude": {
     "direction": "export",
-    "country": "Uae",
+    "country": "United Arab Emirates",
     "commodity": "crude",
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -13.9,
-    "activeFMs": [
-      "China",
-      "India",
-      "South Korea"
-    ],
-    "supplierDisappeared": [
-      "Thailand",
-      "Singapore Republic",
-      "China",
-      "Malaysia"
-    ],
-    "supplierAppeared": [
-      "India",
-      "Japan",
-      "Philippines"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -14307,15 +13051,15 @@
         "end": "2026-03-28",
         "total": 19227,
         "days": 6,
-        "dailyAvg": 3204.5,
+        "dailyAvg": 3204.6,
         "allCountries": {
-          "India": 5595,
+          "India": 6612.8,
           "Philippines": 1000,
           "South Korea": 3850,
           "Japan": 1900
         },
         "allCountriesDaily": {
-          "India": 932.5,
+          "India": 1102.1,
           "Philippines": 166.7,
           "South Korea": 641.7,
           "Japan": 316.7
@@ -14334,20 +13078,11 @@
   },
   "uae_lng": {
     "direction": "export",
-    "country": "Uae",
+    "country": "United Arab Emirates",
     "commodity": "lng",
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -100,
-    "activeFMs": [
-      "India"
-    ],
-    "supplierDisappeared": [
-      "India"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -14415,20 +13150,11 @@
   },
   "uae_lpg": {
     "direction": "export",
-    "country": "Uae",
+    "country": "United Arab Emirates",
     "commodity": "lpg",
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -100,
-    "activeFMs": [
-      "India"
-    ],
-    "supplierDisappeared": [
-      "India"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -14438,10 +13164,10 @@
         "days": 7,
         "dailyAvg": 7.8,
         "allCountries": {
-          "India": 31.7
+          "India": 29.3
         },
         "allCountriesDaily": {
-          "India": 4.5
+          "India": 4.2
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -14454,9 +13180,9 @@
         "period": "2026-W11",
         "start": "2026-03-09",
         "end": "2026-03-15",
-        "total": 10,
+        "total": 7,
         "days": 7,
-        "dailyAvg": 1.4,
+        "dailyAvg": 1.1,
         "allCountries": {},
         "allCountriesDaily": {},
         "gulfTotal": 0,
@@ -14496,16 +13222,11 @@
   },
   "uae_kero_jet": {
     "direction": "export",
-    "country": "Uae",
+    "country": "United Arab Emirates",
     "commodity": "kero_jet",
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -14567,16 +13288,11 @@
   },
   "uae_gasoil_diesel": {
     "direction": "export",
-    "country": "Uae",
+    "country": "United Arab Emirates",
     "commodity": "gasoil_diesel",
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -100,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -14644,19 +13360,11 @@
   },
   "uae_gasoline": {
     "direction": "export",
-    "country": "Uae",
+    "country": "United Arab Emirates",
     "commodity": "gasoline",
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": -100,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "Pakistan",
-      "Singapore Republic"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -14727,23 +13435,11 @@
   },
   "uae_naphtha": {
     "direction": "export",
-    "country": "Uae",
+    "country": "United Arab Emirates",
     "commodity": "naphtha",
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -42,
-    "activeFMs": [
-      "China",
-      "Taiwan"
-    ],
-    "supplierDisappeared": [
-      "China"
-    ],
-    "supplierAppeared": [
-      "Taiwan"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -14817,16 +13513,11 @@
   },
   "uae_sulphur": {
     "direction": "export",
-    "country": "Uae",
+    "country": "United Arab Emirates",
     "commodity": "sulphur",
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -14888,31 +13579,11 @@
   },
   "us_crude": {
     "direction": "export",
-    "country": "Us",
+    "country": "United States",
     "commodity": "crude",
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 1.7,
-    "activeFMs": [
-      "France",
-      "Taiwan",
-      "India",
-      "South Korea",
-      "Germany",
-      "Denmark"
-    ],
-    "supplierDisappeared": [
-      "Nigeria",
-      "Italy",
-      "France"
-    ],
-    "supplierAppeared": [
-      "South Korea",
-      "India",
-      "Spain"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -14923,9 +13594,9 @@
         "dailyAvg": 3650.8,
         "allCountries": {
           "Denmark": 700,
-          "Netherlands": 2858,
+          "Netherlands": 2158,
           "Uruguay": 924,
-          "France": 2107,
+          "France": 2807,
           "Italy": 3156.5,
           "Nigeria": 4126.8,
           "Canada": 1780,
@@ -14939,9 +13610,9 @@
         },
         "allCountriesDaily": {
           "Denmark": 100,
-          "Netherlands": 408.3,
+          "Netherlands": 308.3,
           "Uruguay": 132,
-          "France": 301,
+          "France": 401,
           "Italy": 450.9,
           "Nigeria": 589.5,
           "Canada": 254.3,
@@ -14959,9 +13630,9 @@
         "top5": [
           "Nigeria",
           "Italy",
-          "Netherlands",
+          "France",
           "United Kingdom",
-          "France"
+          "Netherlands"
         ]
       },
       {
@@ -14978,9 +13649,9 @@
           "Poland": 700,
           "Canada": 980,
           "India": 1207,
-          "United Kingdom": 1915,
+          "United Kingdom": 2615,
           "South Korea": 4114,
-          "Netherlands": 4920,
+          "Netherlands": 4220,
           "Singapore Republic": 735,
           "Nicaragua": 305,
           "Taiwan": 2094,
@@ -14996,9 +13667,9 @@
           "Poland": 100,
           "Canada": 140,
           "India": 172.4,
-          "United Kingdom": 273.6,
+          "United Kingdom": 373.6,
           "South Korea": 587.7,
-          "Netherlands": 702.9,
+          "Netherlands": 602.9,
           "Singapore Republic": 105,
           "Nicaragua": 43.6,
           "Taiwan": 299.1,
@@ -15013,9 +13684,9 @@
         "top5": [
           "Netherlands",
           "South Korea",
+          "United Kingdom",
           "France",
-          "Taiwan",
-          "Italy"
+          "Taiwan"
         ]
       },
       {
@@ -15035,8 +13706,8 @@
           "Netherlands": 2113,
           "Thailand": 770,
           "Ireland": 500,
-          "Italy": 1206.5,
-          "France": 900
+          "France": 1604,
+          "Italy": 1206.5
         },
         "allCountriesDaily": {
           "South Korea": 806.7,
@@ -15048,8 +13719,8 @@
           "Netherlands": 301.9,
           "Thailand": 110,
           "Ireland": 71.4,
-          "Italy": 172.4,
-          "France": 128.6
+          "France": 229.1,
+          "Italy": 172.4
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -15078,6 +13749,7 @@
           "Brazil": 700,
           "India": 1741,
           "Canada": 700,
+          "Japan": 1916.6,
           "Peru": 500,
           "Bahamas": 599
         },
@@ -15090,6 +13762,7 @@
           "Brazil": 116.7,
           "India": 290.2,
           "Canada": 116.7,
+          "Japan": 319.4,
           "Peru": 83.3,
           "Bahamas": 99.8
         },
@@ -15099,38 +13772,20 @@
         "top5": [
           "Netherlands",
           "South Korea",
+          "Japan",
           "India",
-          "Spain",
-          "United Kingdom"
+          "Spain"
         ]
       }
     ]
   },
   "us_lng": {
     "direction": "export",
-    "country": "Us",
+    "country": "United States",
     "commodity": "lng",
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -10.9,
-    "activeFMs": [
-      "France",
-      "China",
-      "Taiwan",
-      "India",
-      "South Korea",
-      "Germany"
-    ],
-    "supplierDisappeared": [
-      "Italy",
-      "United Kingdom"
-    ],
-    "supplierAppeared": [
-      "Netherlands",
-      "Thailand"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -15153,7 +13808,6 @@
           "Spain": 126.8,
           "Egypt": 286.2,
           "Turkey": 153,
-          "India": 71.1,
           "Taiwan": 72.8,
           "Jamaica": 10.8,
           "Senegal": 45.7
@@ -15172,7 +13826,6 @@
           "Spain": 18.1,
           "Egypt": 40.9,
           "Turkey": 21.9,
-          "India": 10.2,
           "Taiwan": 10.4,
           "Jamaica": 1.5,
           "Senegal": 6.5
@@ -15308,36 +13961,34 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-28",
-        "total": 2204,
+        "total": 2201,
         "days": 6,
-        "dailyAvg": 367.3,
+        "dailyAvg": 366.8,
         "allCountries": {
+          "South Korea": 145.5,
           "France": 148,
-          "South Korea": 72.7,
           "Thailand": 239.9,
           "Spain": 144.8,
-          "Belgium": 72.7,
           "Dominican Republic": 72.5,
-          "Egypt": 148.1,
-          "India": 72.7,
+          "Belgium": 72.7,
+          "Egypt": 221.2,
           "Netherlands": 284.9,
           "Bangladesh": 72.7,
-          "Germany": 145.2,
-          "Italy": 144.9
+          "Italy": 144.9,
+          "Germany": 72.7
         },
         "allCountriesDaily": {
+          "South Korea": 24.3,
           "France": 24.7,
-          "South Korea": 12.1,
           "Thailand": 40,
           "Spain": 24.1,
-          "Belgium": 12.1,
           "Dominican Republic": 12.1,
-          "Egypt": 24.7,
-          "India": 12.1,
+          "Belgium": 12.1,
+          "Egypt": 36.9,
           "Netherlands": 47.5,
           "Bangladesh": 12.1,
-          "Germany": 24.2,
-          "Italy": 24.2
+          "Italy": 24.2,
+          "Germany": 12.1
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -15347,34 +13998,18 @@
           "Thailand",
           "Egypt",
           "France",
-          "Germany"
+          "South Korea"
         ]
       }
     ]
   },
   "us_lpg": {
     "direction": "export",
-    "country": "Us",
+    "country": "United States",
     "commodity": "lpg",
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 4.2,
-    "activeFMs": [
-      "France",
-      "China",
-      "Taiwan",
-      "India",
-      "South Korea",
-      "Indonesia"
-    ],
-    "supplierDisappeared": [
-      "South Korea"
-    ],
-    "supplierAppeared": [
-      "Netherlands"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -15400,8 +14035,7 @@
           "Latvia": 21.9,
           "South Korea": 99.8,
           "Peru": 21.8,
-          "Egypt": 2.2,
-          "Italy": 25
+          "Italy": 27.2
         },
         "allCountriesDaily": {
           "Japan": 33.9,
@@ -15420,8 +14054,7 @@
           "Latvia": 3.1,
           "South Korea": 14.3,
           "Peru": 3.1,
-          "Egypt": 0.3,
-          "Italy": 3.6
+          "Italy": 3.9
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -15449,14 +14082,14 @@
           "Panama": 6.3,
           "Peru": 14.9,
           "France": 64.7,
-          "Guatemala": 23.3,
           "Honduras": 35.8,
+          "Mexico": 92.4,
           "Turkey": 17.4,
           "China": 49.9,
+          "Guatemala": 11.8,
           "Indonesia": 39.7,
           "Italy": 8.6,
           "Jamaica": 1.5,
-          "Mexico": 80.9,
           "Portugal": 13.4,
           "India": 34,
           "Dominican Republic": 61.9,
@@ -15473,14 +14106,14 @@
           "Panama": 0.9,
           "Peru": 2.1,
           "France": 9.2,
-          "Guatemala": 3.3,
           "Honduras": 5.1,
+          "Mexico": 13.2,
           "Turkey": 2.5,
           "China": 7.1,
+          "Guatemala": 1.7,
           "Indonesia": 5.7,
           "Italy": 1.2,
           "Jamaica": 0.2,
-          "Mexico": 11.6,
           "Portugal": 1.9,
           "India": 4.9,
           "Dominican Republic": 8.8,
@@ -15522,7 +14155,7 @@
           "Honduras": 1.7,
           "South Korea": 67.9,
           "United States Virgin Islands": 6,
-          "Morocco": 11.8,
+          "Egypt": 11.8,
           "Indonesia": 23
         },
         "allCountriesDaily": {
@@ -15540,7 +14173,7 @@
           "Honduras": 0.2,
           "South Korea": 9.7,
           "United States Virgin Islands": 0.9,
-          "Morocco": 1.7,
+          "Egypt": 1.7,
           "Indonesia": 3.3
         },
         "gulfTotal": 0,
@@ -15558,9 +14191,9 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-28",
-        "total": 1042,
+        "total": 1054,
         "days": 6,
-        "dailyAvg": 173.7,
+        "dailyAvg": 175.7,
         "allCountries": {
           "Honduras": 37.6,
           "Japan": 67.5,
@@ -15602,24 +14235,11 @@
   },
   "us_kero_jet": {
     "direction": "export",
-    "country": "Us",
+    "country": "United States",
     "commodity": "kero_jet",
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 48.2,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "Trinidad and Tobago",
-      "Mexico",
-      "United States Virgin Islands"
-    ],
-    "supplierAppeared": [
-      "United Kingdom",
-      "Netherlands",
-      "Jamaica"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -15674,7 +14294,7 @@
           "Mexico": 269.9,
           "Peru": 111.8,
           "Honduras": 90.4,
-          "Netherlands": 330
+          "France": 330
         },
         "allCountriesDaily": {
           "Brazil": 45,
@@ -15682,13 +14302,13 @@
           "Mexico": 38.6,
           "Peru": 16,
           "Honduras": 12.9,
-          "Netherlands": 47.1
+          "France": 47.1
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
-          "Netherlands",
+          "France",
           "Brazil",
           "Mexico",
           "Peru",
@@ -15739,9 +14359,9 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-28",
-        "total": 1592,
+        "total": 1313,
         "days": 6,
-        "dailyAvg": 265.3,
+        "dailyAvg": 218.9,
         "allCountries": {
           "United Kingdom": 608.7,
           "Jamaica": 33.3,
@@ -15771,25 +14391,11 @@
   },
   "us_gasoil_diesel": {
     "direction": "export",
-    "country": "Us",
+    "country": "United States",
     "commodity": "gasoil_diesel",
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 30.2,
-    "activeFMs": [
-      "France",
-      "Germany"
-    ],
-    "supplierDisappeared": [
-      "Chile",
-      "Guatemala"
-    ],
-    "supplierAppeared": [
-      "Netherlands",
-      "Morocco"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -15921,14 +14527,14 @@
         "allCountries": {
           "Australia": 300,
           "Guatemala": 450,
-          "Mexico": 550,
-          "Netherlands": 1036.4,
+          "Mexico": 613.2,
+          "Netherlands": 1336.4,
           "Cayman Islands": 54.4,
           "Costa Rica": 304,
           "Honduras": 430.7,
           "United Kingdom": 888.9,
           "Belize": 55,
-          "Ecuador": 899.6,
+          "Ecuador": 836.4,
           "Belgium": 297.2,
           "Panama": 121.6,
           "South Africa": 300,
@@ -15939,14 +14545,14 @@
         "allCountriesDaily": {
           "Australia": 42.9,
           "Guatemala": 64.3,
-          "Mexico": 78.6,
-          "Netherlands": 148.1,
+          "Mexico": 87.6,
+          "Netherlands": 190.9,
           "Cayman Islands": 7.8,
           "Costa Rica": 43.4,
           "Honduras": 61.5,
           "United Kingdom": 127,
           "Belize": 7.9,
-          "Ecuador": 128.5,
+          "Ecuador": 119.5,
           "Belgium": 42.5,
           "Panama": 17.4,
           "South Africa": 42.9,
@@ -15959,8 +14565,8 @@
         "gulfShare": 0,
         "top5": [
           "Netherlands",
-          "Ecuador",
           "United Kingdom",
+          "Ecuador",
           "Mexico",
           "Guatemala"
         ]
@@ -15977,9 +14583,9 @@
           "Netherlands": 2801.7,
           "Australia": 304,
           "Colombia": 280.2,
-          "Mexico": 424.5,
+          "Mexico": 228.3,
+          "Panama": 722.5,
           "Jamaica": 66.7,
-          "Panama": 122.5,
           "United Kingdom": 903.4,
           "Chile": 304,
           "Costa Rica": 151.9,
@@ -15991,9 +14597,9 @@
           "Netherlands": 467,
           "Australia": 50.7,
           "Colombia": 46.7,
-          "Mexico": 70.8,
+          "Mexico": 38.1,
+          "Panama": 120.4,
           "Jamaica": 11.1,
-          "Panama": 20.4,
           "United Kingdom": 150.6,
           "Chile": 50.7,
           "Costa Rica": 25.3,
@@ -16006,7 +14612,7 @@
         "top5": [
           "Netherlands",
           "United Kingdom",
-          "Mexico",
+          "Panama",
           "Peru",
           "Morocco"
         ]
@@ -16015,24 +14621,11 @@
   },
   "us_gasoline": {
     "direction": "export",
-    "country": "Us",
+    "country": "United States",
     "commodity": "gasoline",
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 11.9,
-    "activeFMs": [],
-    "supplierDisappeared": [
-      "Ecuador",
-      "Guatemala",
-      "Peru"
-    ],
-    "supplierAppeared": [
-      "Australia",
-      "Dominican Republic",
-      "Jamaica"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -16130,38 +14723,36 @@
         "period": "2026-W12",
         "start": "2026-03-16",
         "end": "2026-03-22",
-        "total": 5203,
+        "total": 5336,
         "days": 7,
-        "dailyAvg": 743.3,
+        "dailyAvg": 762.3,
         "allCountries": {
           "Dominican Republic": 144.6,
-          "Mexico": 1673.6,
+          "Mexico": 1988.6,
           "El Salvador": 107.1,
           "Guatemala": 347.9,
           "Honduras": 372.9,
-          "Bahamas": 153.9,
+          "Bahamas": 287,
           "Costa Rica": 315.3,
           "Peru": 5,
           "Trinidad and Tobago": 325,
           "Australia": 450,
           "Panama": 121.6,
-          "Ecuador": 300,
-          "Netherlands": 315
+          "Ecuador": 300
         },
         "allCountriesDaily": {
           "Dominican Republic": 20.7,
-          "Mexico": 239.1,
+          "Mexico": 284.1,
           "El Salvador": 15.3,
           "Guatemala": 49.7,
           "Honduras": 53.3,
-          "Bahamas": 22,
+          "Bahamas": 41,
           "Costa Rica": 45,
           "Peru": 0.7,
           "Trinidad and Tobago": 46.4,
           "Australia": 64.3,
           "Panama": 17.4,
-          "Ecuador": 42.9,
-          "Netherlands": 45
+          "Ecuador": 42.9
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -16183,11 +14774,11 @@
         "dailyAvg": 923.4,
         "allCountries": {
           "Colombia": 426,
+          "Mexico": 1662.8,
           "Nigeria": 78.6,
           "Bahamas": 119.2,
           "Cayman Islands": 9.8,
           "Jamaica": 200,
-          "Mexico": 1065.5,
           "Dominican Republic": 300,
           "Panama": 122.5,
           "Argentina": 174,
@@ -16195,11 +14786,11 @@
         },
         "allCountriesDaily": {
           "Colombia": 71,
+          "Mexico": 277.1,
           "Nigeria": 13.1,
           "Bahamas": 19.9,
           "Cayman Islands": 1.6,
           "Jamaica": 33.3,
-          "Mexico": 177.6,
           "Dominican Republic": 50,
           "Panama": 20.4,
           "Argentina": 29,
@@ -16220,24 +14811,11 @@
   },
   "us_naphtha": {
     "direction": "export",
-    "country": "Us",
+    "country": "United States",
     "commodity": "naphtha",
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 12.6,
-    "activeFMs": [
-      "South Korea"
-    ],
-    "supplierDisappeared": [
-      "Brazil",
-      "Curacao"
-    ],
-    "supplierAppeared": [
-      "Colombia",
-      "Japan"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -16365,16 +14943,11 @@
   },
   "us_sulphur": {
     "direction": "export",
-    "country": "Us",
+    "country": "United States",
     "commodity": "sulphur",
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -16453,20 +15026,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -31.6,
-    "activeFMs": [
-      "South Korea",
-      "Indonesia"
-    ],
-    "supplierDisappeared": [
-      "Indonesia",
-      "Singapore Republic",
-      "Thailand"
-    ],
-    "supplierAppeared": [
-      "South Korea"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -16575,22 +15134,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -32.7,
-    "activeFMs": [
-      "China",
-      "Taiwan",
-      "India",
-      "South Korea"
-    ],
-    "supplierDisappeared": [
-      "Singapore Republic",
-      "Taiwan"
-    ],
-    "supplierAppeared": [
-      "Thailand",
-      "India"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -16741,15 +15284,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": -100,
-    "activeFMs": [
-      "China"
-    ],
-    "supplierDisappeared": [
-      "China"
-    ],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -16837,11 +15371,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -16908,11 +15437,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -16979,11 +15503,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",
@@ -17050,13 +15569,6 @@
     "unit": "kbd",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "volatile",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [
-      "Malaysia"
-    ],
     "weeks": [
       {
         "period": "2026-W10",
@@ -17135,11 +15647,6 @@
     "unit": "ktons",
     "hasPipeline": false,
     "pipelineNote": "",
-    "fourWeekTrend": "declining",
-    "fourWeekChangePct": 0,
-    "activeFMs": [],
-    "supplierDisappeared": [],
-    "supplierAppeared": [],
     "weeks": [
       {
         "period": "2026-W10",

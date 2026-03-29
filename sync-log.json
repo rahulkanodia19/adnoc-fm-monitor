@@ -1,56 +1,61 @@
 {
-  "timestamp": "2026-03-29T22:00:00Z",
+  "timestamp": "2026-03-30T04:00:00Z",
   "success": true,
-  "changes": "Added 2 new Iran events (Bandar Khamir port struck Mar 29 killing 5, Pentagon readying ground operations). Enhanced Oman Salalah event with crane destruction details and Saudi Gazette source. Updated Saudi pipeline event with Fortune-confirmed 7M bpd capacity and Yanbu loading bottleneck (4.5M bpd port capacity). Updated Iran summary, oilGasImpact, and production notes for Bandar Khamir strike. Added Houthi dual-chokepoint risk to SPR insights. Updated energy-news-data.json with latest headlines across all 48 keys including Russia EU LNG ban (Apr 25), Vietnam tariff cut details, South Korea naphtha export ban. All isNew flags corrected for 48hr recency (Mar 26 Tangsiri event moved to false). No new FM declarations found in last 48 hours.",
+  "changes": "Added 5 new events across Iran/UAE/Bahrain/Saudi: IRGC strikes on EGA Al Taweelah (UAE, 6 injured) and Alba (Bahrain, 2 injured) aluminium plants Mar 29; Houthi Bab al-Mandeb closure threat endangering Saudi Yanbu Red Sea workaround; 31st MEU (3,500 troops, USS Tripoli, F-35Bs) arrived for potential Kharg Island seizure; IRGC tolling at $2M/vessel in yuan with COSCO vessels turned back despite China friendly status; Thailand/Malaysia secured bilateral Hormuz transit deals. Added 2 new shutdown entries (sd-022 EGA Al Taweelah, sd-021 Alba 2nd strike). Updated Saudi Yanbu to 4.4M bpd (40+ VLCCs queued), Dubai physical at $126/bbl. Added Rystad $25B infrastructure repair estimate. Updated energy-news-data.json with 10 key country-commodity entries. No new FM declarations found.",
   "countriesCount": 9,
   "fmCount": 24,
-  "shutdownsCount": 20,
+  "shutdownsCount": 22,
+  "newEvents": [
+    "IRGC struck EGA Al Taweelah aluminium (UAE) — 6 injured, significant damage (Mar 29)",
+    "IRGC struck Alba smelter (Bahrain) — 2 injured, third attack on Bahrain (Mar 29)",
+    "Houthi Bab al-Mandeb closure 'among our options' — threatens Saudi Yanbu Red Sea exports (Mar 29)",
+    "3,500 US troops (31st MEU/USS Tripoli/F-35Bs) arrived for potential Kharg Island raids (Mar 29)",
+    "IRGC tolls at $2M/vessel in Chinese yuan; COSCO ships turned back; Thailand/Malaysia granted access (Mar 27-28)",
+    "Saudi Yanbu exports at 4.4M bpd with 40+ VLCCs queued (Mar 28-29)",
+    "Dubai physical crude at $126/bbl — 76% above pre-war (Mar 28)",
+    "Rystad estimates $25B Gulf infrastructure repair bill, >12M boe/d offline (Mar 26)",
+    "India's Operation Urja Suraksha: naval escort of LPG/crude tankers through Hormuz (Mar 26-28)",
+    "Sinopec cutting refinery runs 10%; China banned fuel exports Mar 11",
+    "55 VLCCs in region (18 above pre-war baseline); 14 staging at Khor Fakkan STS (Kpler)"
+  ],
+  "noNewFmReason": "No new FM declarations found in last 48 hours. All 24 existing FMs remain active. Crisis has shifted from FM/commercial phase to military escalation phase — IRGC expanding strikes to Gulf state industrial targets (aluminium plants), Houthis threatening Bab al-Mandeb closure, US 31st MEU positioned for potential ground operations including Kharg Island seizure.",
   "sourcesChecked": {
     "tier1": [
-      "Kpler (vessel tracking data cited by CNBC, Wikipedia, Insurance Journal — 144 commodity crossings since Mar 1, 1.84 mb/d Iran loadings)",
-      "S&P Global / Platts (Hormuz transit tracking via CAS, 4 ships Mar 24 with 2 Iran-linked)",
-      "Bloomberg (Goldman forecast $135 dual-chokepoint, pipeline bypass feature, Asia worst-case scenarios, tanker chaos)",
-      "Reuters (QatarEnergy Edison FM extension via TradingView wire, Goldman price forecast)",
-      "Argus Media (Kharg Island explainer, Salalah Mar 29 strike, insurance costs surge to 5%)",
-      "ICIS (South Korea naphtha ban, EU Russian LNG ban Apr 25)",
+      "Bloomberg (Yanbu export surge, Saudi pipeline bypass, Goldman $135 dual-chokepoint forecast)",
+      "S&P Global / Platts (QatarEnergy Edison FM extension confirmation)",
+      "Argus Media (ADNOC flow adjustments, GCC declares IRGC tolls illegal, refinery strikes)",
+      "Kpler (Iran 1.84M bpd loadings, 144 commodity crossings, 55 VLCCs in region, Saudi flows)",
+      "Rystad Energy ($25B infrastructure repair estimate, >12M boe/d offline, 70% worst-case)",
       "MEES (ADNOC Onshore maintenance deferral, Murban availability forecast)",
-      "Oxford Institute for Energy Studies (Russia sanctions analysis, Hormuz disruption comment Mar 2026)",
-      "Vortexa (Iran LPG exports via ship-to-ship cited)",
-      "Rystad Energy (OPEC response insufficient quote from Jorge Leon)"
+      "Energy Intelligence (Aramco Hormuz bypass flows, supply scramble limits)",
+      "ICIS (South Korea naphtha ban, China fuel export ban)",
+      "Vortexa (Iran LPG via STS, crude flow analysis)"
     ],
     "tier2": [
-      "Al Jazeera (Houthi new front Mar 29, Bab al-Mandeb closure threat, pipeline bypass 9M vs 20M bpd, FM explainer)",
-      "CNBC (oil price analysis Mar 28, Hormuz traffic tracker, Houthi Red Sea threat, OPEC 206k bpd response, insurance crisis)",
-      "Washington Post (Pentagon ground operations planning, Marine raids on Kharg/coastal sites)",
-      "CNN (Day 29-30 conflict liveblog)",
-      "NPR (Pakistan ceasefire talks Mar 29, Iran deadline to Apr 6, IEA reserve release)",
-      "France 24 (Houthi Red Sea shipping threat)",
-      "Fox News (Tangsiri killed, ceasefire conditions, UN Security Council vote)",
-      "Gulf News (Day 30: Houthis, Pentagon, UAE/Qatar intercept Iranian drones)",
-      "Fortune (Saudi pipeline hits 7M bpd goal, Yanbu port constraints)",
-      "MarketScreener (Edison FM extension 10 cargoes through mid-June)",
-      "Saudi Gazette (Salalah drone attack details, 1 worker moderate injuries)",
-      "CGTN (Iran Kharg exports proceeding normally, Bandar Khamir strike report)",
-      "The National (Houthi mystery pre-Mar 28, OPEC compensation cuts)"
+      "Al Jazeera (IRGC strikes UAE/Bahrain aluminium, Houthi new front, Bab al-Mandeb threat, pipeline bypass)",
+      "CNBC (oil prices $112.57 Brent/$126 Dubai physical, mid-April deadline warning)",
+      "Washington Post (Pentagon 31st MEU ground ops planning, Kharg Island seizure)",
+      "NBC News (IRGC $2M tolls in yuan, 3,500 US troops arrive)",
+      "NPR (Pakistan 4-nation ceasefire talks, Trump Apr 6 deadline)",
+      "France 24 (Houthi Red Sea shipping threat, new front)",
+      "Middle East Eye (France: 11M bpd missing, 30-40% refining damaged)",
+      "Gulf News (UAE/Qatar intercept Iranian drones Day 30)",
+      "Middle East Monitor (Houthi Bab al-Mandeb closure 'among our options')",
+      "The National UAE (UAE fuel prices rising April, Shah gas still offline)",
+      "Hellenic Shipping News (4 AIS transits Mar 24, tanker rates multi-decade highs)",
+      "Business Today India (Operation Urja Suraksha naval escorts)"
     ],
     "tier3": [
-      "OilPrice.com (Goldman forecast hike, Saudi output cuts, Chevron Leviathan FM)",
-      "Maritime Executive (Salalah port suspension Mar 29, Aramco offshore shutdown)",
-      "World Oil (Shah Gas Field strike, Israel gas field shutdowns)",
-      "gCaptain (Russia Arctic LNG 3M tonnes via Arctic shortcut)",
-      "Rigzone (ADNOC CEO economic terrorism, Iran oil revenue soars)",
-      "MARAD (2026-006 Bab el-Mandeb Strait Houthi advisory)",
-      "Defense News (Pentagon ground operations report)",
-      "Insurance Journal (war risk premiums surged to 5% of hull value)",
-      "BOE Report (Iraq oil plunge to 800k bpd, Kharg Island hub)",
-      "Turkiye Today (Maersk Salalah halt ~48hrs)",
-      "Iran International (Salalah worker injury, Iran Hormuz dependence despite workarounds)",
-      "NBC News (Red Sea next choke point analysis)",
-      "urgewald (100% Russian Yamal LNG to EU in Feb 2026)",
-      "Atlantic Council (ME oil/LNG crisis implications for China/East Asia)",
-      "Columbia CGEP (China 1.39B bbl storage, 120 days cover)",
-      "Daiwa Institute (Japan GDP negative if 10% ME import cut)",
-      "Nation Thailand / VietnamNet (Vietnam MFN tariff cut to 0%)"
+      "OilPrice.com (Goldman forecast, Saudi spot crude tenders)",
+      "gCaptain (Iranian shadow fleet + Greek ships leading Hormuz transits)",
+      "Splash247 (3,200 ships trapped in Gulf, 4% global tonnage)",
+      "Lloyd's List (Dynacom dark transits, 200 compliant tankers stranded)",
+      "Hydrocarbon Engineering (Rystad $25B repair bill)",
+      "Offshore Energy (Gulf shut-ins could reduce output 70%)",
+      "Maritime Executive (Salalah Port Mar 29 strike details)",
+      "Malay Mail (Thailand Hormuz transit deal)",
+      "Maritime Gateway India (India crude imports crashed, $4B deficit widening)",
+      "Carnegie (Russia oil windfall from crisis)"
     ]
   },
   "validationChecklist": {
@@ -63,5 +68,11 @@
     "statusEnumsValid": true,
     "lngNotesWhereApplicable": true
   },
-  "noNewFmReason": "No new FM declarations found in the last 48 hours (Mar 28-29). Most recent was QatarEnergy/Edison FM extension on Mar 27. Crisis in steady-state phase — existing 24 FMs cover ongoing disruptions. Key new developments are military (Bandar Khamir strike, Pentagon ground ops, Houthi entry into war) and diplomatic (Pakistan ceasefire talks) rather than commercial."
+  "keyRisks": [
+    "DUAL CHOKEPOINT: Houthi Bab al-Mandeb closure threat + Hormuz = near-total ME export blockade. Goldman warns $135 Brent.",
+    "GROUND OPS: 31st MEU positioned for Kharg Island seizure — Trump April 6 deadline.",
+    "INDUSTRIAL TARGETING: IRGC expanding strikes to Gulf state civilian/industrial infrastructure (aluminium plants).",
+    "IRGC INCONSISTENCY: Chinese vessels turned back despite friendly status — undermines trust in tolled passage system.",
+    "YANBU BOTTLENECK: 40+ VLCCs queued at Yanbu; port capacity ~4.5M bpd vs pipeline delivering 7M bpd."
+  ]
 }
