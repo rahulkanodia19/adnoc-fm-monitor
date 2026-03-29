@@ -11,6 +11,7 @@
     "sync:force": "bash scripts/sync-force.sh",
     "sync:spr": "bash scripts/sync-spr.sh",
     "sync:flows": "bash scripts/sync-flows.sh",
+    "sync:flow-insights": "bash scripts/sync-flow-insights.sh",
     "scrape:murban": "node scripts/scrape-murban.js",
     "sync:soh": "bash scripts/sync-soh.sh",
     "merge:containers": "node scripts/merge-containers.js"

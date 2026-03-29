@@ -609,11 +609,24 @@
     return insights;
   }
 
+  // LLM-generated insights (loaded from flow-insights.json)
+  let flowInsightsCache = null;
+  async function loadFlowInsights() {
+    if (!flowInsightsCache) {
+      try {
+        const resp = await fetch('/flow-insights.json');
+        if (resp.ok) flowInsightsCache = await resp.json();
+      } catch {}
+    }
+    const key = state.country + '_' + state.commodity;
+    return flowInsightsCache?.[key] || [];
+  }
+
   function renderInsights(timeline, kpis) {
     const el = document.getElementById('if-insights');
     if (!el) return;
-    const insights = generateInsights(timeline, kpis);
-    if (insights.length === 0) { el.innerHTML = ''; return; }
+
+    // Show loading state
     el.innerHTML = `
       <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-6">
         <div class="flex items-center gap-2 mb-2">
@@ -622,9 +635,30 @@
           </svg>
           <h4 class="text-base font-bold text-amber-900">Key Insights</h4>
         </div>
-        <ul class="space-y-3">
-          ${insights.map(text => `<li class="text-sm text-amber-900 leading-relaxed">${text}</li>`).join('')}
-          <li id="if-insight-news" class="text-sm text-amber-900 leading-relaxed opacity-60">
+        <ul class="space-y-3" id="if-insight-list">
+          <li class="text-sm text-amber-900 leading-relaxed opacity-60">Loading insights...</li>
+        </ul>
+      </div>`;
+
+    // Load LLM insights, fall back to algorithmic
+    loadFlowInsights().then(llmInsights => {
+      const listEl = document.getElementById('if-insight-list');
+      if (!listEl) return;
+
+      let insights = llmInsights;
+      if (!insights || insights.length === 0) {
+        // Fallback: use algorithmic insights
+        insights = generateInsights(timeline, kpis);
+      }
+
+      if (insights.length === 0) {
+        el.innerHTML = '';
+        return;
+      }
+
+      listEl.innerHTML = insights.map(text =>
+        `<li class="text-sm text-amber-900 leading-relaxed">${text}</li>`
+      ).join('') + `<li id="if-insight-news" class="text-sm text-amber-900 leading-relaxed opacity-60">
             <span class="inline-flex items-center gap-1.5">
               <svg class="w-3.5 h-3.5 animate-spin text-amber-500" fill="none" viewBox="0 0 24 24">
                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
@@ -632,10 +666,11 @@
               </svg>
               Loading market context...
             </span>
-          </li>
-        </ul>
-      </div>
-    `;
+          </li>`;
+
+      // Fetch news context
+      fetchNewsInsight();
+    });
   }
 
   // Async Bullet 5: Live market context from web sources

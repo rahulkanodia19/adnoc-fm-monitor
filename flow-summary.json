@@ -1,0 +1,5978 @@
+{
+  "china_crude": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 101417,
+        "days": 7,
+        "top5": {
+          "Russian Federation": 18828,
+          "Iraq": 11829,
+          "Brazil": 11078,
+          "Saudi Arabia": 10846,
+          "Iran": 10000
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 78598,
+        "days": 7,
+        "top5": {
+          "Russian Federation": 15402,
+          "Saudi Arabia": 12107,
+          "Iran": 7247,
+          "Iraq": 5470,
+          "Brazil": 4340
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 75183,
+        "days": 7,
+        "top5": {
+          "Russian Federation": 16283,
+          "Brazil": 11399,
+          "Iraq": 9230,
+          "Saudi Arabia": 8806,
+          "United Arab Emirates": 4995
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 50334,
+        "days": 6,
+        "top5": {
+          "Russian Federation": 14142,
+          "Oman": 10789,
+          "Brazil": 6503,
+          "Iran": 3425,
+          "Angola": 1785
+        }
+      }
+    ]
+  },
+  "china_lng": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 761,
+        "days": 7,
+        "top5": {
+          "Qatar": 362,
+          "Australia": 201,
+          "Malaysia": 93,
+          "Russian Federation": 77,
+          "Canada": 29
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 937,
+        "days": 7,
+        "top5": {
+          "Qatar": 316,
+          "Australia": 179,
+          "Russian Federation": 169,
+          "Malaysia": 135,
+          "Papua New Guinea": 77
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 982,
+        "days": 7,
+        "top5": {
+          "Australia": 286,
+          "Malaysia": 225,
+          "Qatar": 209,
+          "Russian Federation": 202,
+          "Indonesia": 61
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 485,
+        "days": 6,
+        "top5": {
+          "Australia": 261,
+          "Malaysia": 99,
+          "Russian Federation": 64,
+          "Indonesia": 61
+        }
+      }
+    ]
+  },
+  "china_lpg": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 544,
+        "days": 7,
+        "top5": {
+          "United States": 285,
+          "Canada": 92,
+          "Iran": 86,
+          "Qatar": 46,
+          "Kuwait": 18
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 433,
+        "days": 7,
+        "top5": {
+          "United States": 185,
+          "Iran": 71,
+          "Canada": 44,
+          "Kuwait": 28,
+          "Australia": 24
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 319,
+        "days": 7,
+        "top5": {
+          "Iran": 148,
+          "United States": 85,
+          "Canada": 50,
+          "Nigeria": 19,
+          "Angola": 12
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 457,
+        "days": 6,
+        "top5": {
+          "United States": 235,
+          "Iran": 107,
+          "Canada": 92,
+          "Australia": 23
+        }
+      }
+    ]
+  },
+  "china_kero_jet": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 345,
+        "days": 7,
+        "top5": {
+          "South Korea": 345
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 168,
+        "days": 7,
+        "top5": {
+          "South Korea": 168
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "china_gasoil_diesel": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 690,
+        "days": 7,
+        "top5": {
+          "South Korea": 332,
+          "Japan": 185,
+          "Chile": 173
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 103,
+        "days": 7,
+        "top5": {
+          "South Korea": 53,
+          "Japan": 51
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 75,
+        "days": 7,
+        "top5": {
+          "South Korea": 75
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 82,
+        "days": 6,
+        "top5": {
+          "South Korea": 82
+        }
+      }
+    ]
+  },
+  "china_gasoline": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 178,
+        "days": 7,
+        "top5": {
+          "Singapore Republic": 178
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 44,
+        "days": 7,
+        "top5": {
+          "South Korea": 44
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "china_naphtha": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 2821,
+        "days": 7,
+        "top5": {
+          "Qatar": 1201,
+          "Saudi Arabia": 512,
+          "India": 506,
+          "United Arab Emirates": 318,
+          "Georgia": 148
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 2611,
+        "days": 7,
+        "top5": {
+          "Kuwait": 866,
+          "India": 684,
+          "Algeria": 361,
+          "Qatar": 265,
+          "Russian Federation": 249
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 1647,
+        "days": 7,
+        "top5": {
+          "United Arab Emirates": 687,
+          "Russian Federation": 260,
+          "Bahrain": 257,
+          "Qatar": 249,
+          "Australia": 193
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 1956,
+        "days": 6,
+        "top5": {
+          "Russian Federation": 742,
+          "Norway": 536,
+          "South Korea": 345,
+          "Thailand": 332
+        }
+      }
+    ]
+  },
+  "china_sulphur": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 94,
+        "days": 7,
+        "top5": {
+          "Saudi Arabia": 55,
+          "Canada": 39
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 60,
+        "days": 7,
+        "top5": {
+          "United Arab Emirates": 51,
+          "Qatar": 9
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 78,
+        "days": 7,
+        "top5": {
+          "Russian Federation": 59,
+          "Kuwait": 19
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 32,
+        "days": 6,
+        "top5": {
+          "Canada": 32
+        }
+      }
+    ]
+  },
+  "india_crude": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 32549,
+        "days": 7,
+        "top5": {
+          "Russian Federation": 8263,
+          "Iraq": 4574,
+          "Saudi Arabia": 3800,
+          "Angola": 3464,
+          "Saudi-Kuwaiti Neutral Zone": 2108
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 25069,
+        "days": 7,
+        "top5": {
+          "Russian Federation": 13293,
+          "Angola": 4038,
+          "Colombia": 1997,
+          "United States": 1975,
+          "Republic of the Congo": 1870
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 29705,
+        "days": 7,
+        "top5": {
+          "Russian Federation": 18281,
+          "Saudi Arabia": 5965,
+          "Angola": 1855,
+          "United Arab Emirates": 1600,
+          "Gabon": 950
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 30440,
+        "days": 6,
+        "top5": {
+          "Russian Federation": 11558,
+          "Saudi Arabia": 6660,
+          "United Arab Emirates": 3400,
+          "Nigeria": 2888,
+          "Ecuador": 2111
+        }
+      }
+    ]
+  },
+  "india_lng": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 407,
+        "days": 7,
+        "top5": {
+          "Oman": 231,
+          "United Arab Emirates": 101,
+          "Mozambique": 75
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 246,
+        "days": 7,
+        "top5": {
+          "Oman": 77,
+          "United States": 71,
+          "Angola": 67,
+          "United Arab Emirates": 31
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 218,
+        "days": 7,
+        "top5": {
+          "Nigeria": 145,
+          "Angola": 74
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 487,
+        "days": 6,
+        "top5": {
+          "Oman": 225,
+          "United States": 135,
+          "Angola": 67,
+          "Nigeria": 60
+        }
+      }
+    ]
+  },
+  "india_lpg": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 210,
+        "days": 7,
+        "top5": {
+          "United Arab Emirates": 83,
+          "Qatar": 53,
+          "United States": 47,
+          "Bahrain": 11,
+          "Saudi Arabia": 10
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 102,
+        "days": 7,
+        "top5": {
+          "United States": 59,
+          "Saudi Arabia": 16,
+          "Kuwait": 11,
+          "Qatar": 11,
+          "United Arab Emirates": 6
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 73,
+        "days": 7,
+        "top5": {
+          "United States": 23,
+          "Kuwait": 22,
+          "Saudi Arabia": 17,
+          "Qatar": 11
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 80,
+        "days": 6,
+        "top5": {
+          "United States": 52,
+          "Qatar": 28
+        }
+      }
+    ]
+  },
+  "india_kero_jet": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "india_gasoil_diesel": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 59,
+        "days": 7,
+        "top5": {
+          "United Arab Emirates": 59
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 237,
+        "days": 7,
+        "top5": {
+          "Russian Federation": 237
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 110,
+        "days": 6,
+        "top5": {
+          "Russian Federation": 110
+        }
+      }
+    ]
+  },
+  "india_gasoline": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 75,
+        "days": 7,
+        "top5": {
+          "South Korea": 75
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 30,
+        "days": 7,
+        "top5": {
+          "South Korea": 30
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 45,
+        "days": 6,
+        "top5": {
+          "South Korea": 45
+        }
+      }
+    ]
+  },
+  "india_naphtha": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 1060,
+        "days": 7,
+        "top5": {
+          "United Arab Emirates": 511,
+          "Kuwait": 506,
+          "Iran": 44
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 710,
+        "days": 7,
+        "top5": {
+          "Russian Federation": 373,
+          "United Arab Emirates": 337
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 321,
+        "days": 7,
+        "top5": {
+          "Russian Federation": 321
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 628,
+        "days": 6,
+        "top5": {
+          "Oman": 324,
+          "Russian Federation": 304
+        }
+      }
+    ]
+  },
+  "india_sulphur": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 33,
+        "days": 7,
+        "top5": {
+          "Qatar": 33
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 74,
+        "days": 6,
+        "top5": {
+          "Canada": 61,
+          "Jordan": 12
+        }
+      }
+    ]
+  },
+  "japan_crude": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 14653,
+        "days": 7,
+        "top5": {
+          "Saudi Arabia": 8929,
+          "United Arab Emirates": 4475,
+          "Kuwait": 1250
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 14754,
+        "days": 7,
+        "top5": {
+          "Saudi Arabia": 6807,
+          "United Arab Emirates": 5738,
+          "United States": 1018,
+          "Ecuador": 650,
+          "Malaysia": 542
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 14953,
+        "days": 7,
+        "top5": {
+          "Saudi Arabia": 7922,
+          "United Arab Emirates": 5024,
+          "Kuwait": 1070,
+          "Qatar": 637,
+          "Oman": 300
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 5754,
+        "days": 6,
+        "top5": {
+          "United Arab Emirates": 2764,
+          "Saudi Arabia": 2421,
+          "Malaysia": 345,
+          "Qatar": 224
+        }
+      }
+    ]
+  },
+  "japan_lng": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 1305,
+        "days": 7,
+        "top5": {
+          "Australia": 667,
+          "Malaysia": 294,
+          "Russian Federation": 198,
+          "Papua New Guinea": 77,
+          "Brunei": 69
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 1407,
+        "days": 7,
+        "top5": {
+          "Australia": 566,
+          "Indonesia": 204,
+          "Oman": 145,
+          "Malaysia": 129,
+          "Papua New Guinea": 79
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 1234,
+        "days": 7,
+        "top5": {
+          "Australia": 393,
+          "China": 147,
+          "Canada": 141,
+          "Malaysia": 135,
+          "Papua New Guinea": 135
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 840,
+        "days": 6,
+        "top5": {
+          "Australia": 516,
+          "Malaysia": 207,
+          "Papua New Guinea": 70,
+          "Russian Federation": 47
+        }
+      }
+    ]
+  },
+  "japan_lpg": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 154,
+        "days": 7,
+        "top5": {
+          "United States": 149,
+          "Australia": 5
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 186,
+        "days": 7,
+        "top5": {
+          "United States": 186
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 117,
+        "days": 7,
+        "top5": {
+          "United States": 117
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 208,
+        "days": 6,
+        "top5": {
+          "United States": 208
+        }
+      }
+    ]
+  },
+  "japan_kero_jet": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 658,
+        "days": 7,
+        "top5": {
+          "South Korea": 342,
+          "China": 316
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 216,
+        "days": 7,
+        "top5": {
+          "South Korea": 216
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 511,
+        "days": 7,
+        "top5": {
+          "South Korea": 511
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 490,
+        "days": 6,
+        "top5": {
+          "South Korea": 490
+        }
+      }
+    ]
+  },
+  "japan_gasoil_diesel": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 115,
+        "days": 7,
+        "top5": {
+          "South Korea": 115
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 369,
+        "days": 7,
+        "top5": {
+          "Brunei": 347,
+          "South Korea": 22
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "japan_gasoline": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 99,
+        "days": 7,
+        "top5": {
+          "South Korea": 99
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 191,
+        "days": 7,
+        "top5": {
+          "South Korea": 191
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 250,
+        "days": 7,
+        "top5": {
+          "South Korea": 250
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 598,
+        "days": 6,
+        "top5": {
+          "South Korea": 598
+        }
+      }
+    ]
+  },
+  "japan_naphtha": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 1510,
+        "days": 7,
+        "top5": {
+          "United Arab Emirates": 811,
+          "Qatar": 451,
+          "Kuwait": 247
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 2021,
+        "days": 7,
+        "top5": {
+          "Kuwait": 488,
+          "United Arab Emirates": 345,
+          "Peru": 343,
+          "South Korea": 327,
+          "United States": 312
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 605,
+        "days": 7,
+        "top5": {
+          "Qatar": 605
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 1322,
+        "days": 6,
+        "top5": {
+          "United Arab Emirates": 935,
+          "South Korea": 165,
+          "Peru": 131,
+          "Algeria": 90
+        }
+      }
+    ]
+  },
+  "japan_sulphur": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "south_korea_crude": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 23961,
+        "days": 7,
+        "top5": {
+          "Saudi Arabia": 6508,
+          "Kuwait": 4000,
+          "United States": 3894,
+          "United Arab Emirates": 2263,
+          "Ecuador": 2014
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 22575,
+        "days": 7,
+        "top5": {
+          "Saudi Arabia": 8662,
+          "United States": 4737,
+          "Iraq": 3848,
+          "United Arab Emirates": 2187,
+          "Kuwait": 1516
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 15104,
+        "days": 7,
+        "top5": {
+          "United States": 5645,
+          "Saudi Arabia": 4799,
+          "Iraq": 1404,
+          "Kuwait": 1248,
+          "Saudi-Kuwaiti Neutral Zone": 1197
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 9206,
+        "days": 6,
+        "top5": {
+          "United Arab Emirates": 4120,
+          "Saudi Arabia": 1528,
+          "Algeria": 1078,
+          "United States": 1050,
+          "Iraq": 951
+        }
+      }
+    ]
+  },
+  "south_korea_lng": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 949,
+        "days": 7,
+        "top5": {
+          "Australia": 344,
+          "Malaysia": 142,
+          "Qatar": 75,
+          "Peru": 72,
+          "United States": 71
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 1403,
+        "days": 7,
+        "top5": {
+          "Australia": 473,
+          "Malaysia": 266,
+          "Canada": 257,
+          "China": 150,
+          "Qatar": 117
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 829,
+        "days": 7,
+        "top5": {
+          "Australia": 197,
+          "Malaysia": 142,
+          "Oman": 76,
+          "Nigeria": 74,
+          "Peru": 71
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 637,
+        "days": 6,
+        "top5": {
+          "Australia": 335,
+          "Indonesia": 119,
+          "Malaysia": 68,
+          "United States": 58,
+          "China": 58
+        }
+      }
+    ]
+  },
+  "south_korea_lpg": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 104,
+        "days": 7,
+        "top5": {
+          "United States": 92,
+          "Canada": 12
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 125,
+        "days": 7,
+        "top5": {
+          "United States": 113,
+          "Canada": 12
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 106,
+        "days": 7,
+        "top5": {
+          "United States": 94,
+          "Canada": 12
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 47,
+        "days": 6,
+        "top5": {
+          "United States": 47
+        }
+      }
+    ]
+  },
+  "south_korea_kero_jet": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 89,
+        "days": 7,
+        "top5": {
+          "China": 89
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "south_korea_gasoil_diesel": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 47,
+        "days": 7,
+        "top5": {
+          "Japan": 47
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 436,
+        "days": 7,
+        "top5": {
+          "Japan": 345,
+          "China": 91
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 72,
+        "days": 6,
+        "top5": {
+          "Russian Federation": 53,
+          "China": 20
+        }
+      }
+    ]
+  },
+  "south_korea_gasoline": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 535,
+        "days": 7,
+        "top5": {
+          "Japan": 535
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 756,
+        "days": 7,
+        "top5": {
+          "Japan": 756
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 167,
+        "days": 7,
+        "top5": {
+          "Singapore Republic": 167
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "south_korea_naphtha": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 4655,
+        "days": 7,
+        "top5": {
+          "United Arab Emirates": 731,
+          "Oman": 716,
+          "Algeria": 664,
+          "Bahrain": 515,
+          "India": 345
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 3431,
+        "days": 7,
+        "top5": {
+          "United Arab Emirates": 1609,
+          "Qatar": 1199,
+          "Bahrain": 255,
+          "Saudi Arabia": 218,
+          "India": 150
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 4005,
+        "days": 7,
+        "top5": {
+          "Kuwait": 1302,
+          "India": 985,
+          "Oman": 448,
+          "Qatar": 426,
+          "Italy": 338
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 2408,
+        "days": 6,
+        "top5": {
+          "Oman": 489,
+          "Greece": 436,
+          "Algeria": 372,
+          "Peru": 345,
+          "Egypt": 330
+        }
+      }
+    ]
+  },
+  "south_korea_sulphur": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "thailand_crude": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 6840,
+        "days": 7,
+        "top5": {
+          "United Arab Emirates": 2275,
+          "Indonesia": 1321,
+          "Saudi Arabia": 1100,
+          "United States": 1000,
+          "Saudi-Kuwaiti Neutral Zone": 514
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 8963,
+        "days": 7,
+        "top5": {
+          "United States": 3140,
+          "United Arab Emirates": 2074,
+          "Brazil": 1113,
+          "Libya": 1054,
+          "Australia": 723
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 7206,
+        "days": 7,
+        "top5": {
+          "United Arab Emirates": 5343,
+          "Malaysia": 709,
+          "Saudi Arabia": 637,
+          "Australia": 292,
+          "Libya": 226
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 5261,
+        "days": 6,
+        "top5": {
+          "United Arab Emirates": 4905,
+          "Malaysia": 357
+        }
+      }
+    ]
+  },
+  "thailand_lng": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 367,
+        "days": 7,
+        "top5": {
+          "Qatar": 192,
+          "Malaysia": 65,
+          "Australia": 63,
+          "China": 48
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 176,
+        "days": 7,
+        "top5": {
+          "Australia": 142,
+          "China": 35
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 302,
+        "days": 7,
+        "top5": {
+          "Mozambique": 78,
+          "Malaysia": 77,
+          "Australia": 76,
+          "Canada": 72
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 213,
+        "days": 6,
+        "top5": {
+          "Australia": 76,
+          "Oman": 70,
+          "China": 68
+        }
+      }
+    ]
+  },
+  "thailand_lpg": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 7,
+        "days": 7,
+        "top5": {
+          "Malaysia": 7
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "thailand_kero_jet": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "thailand_gasoil_diesel": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 38,
+        "days": 7,
+        "top5": {
+          "China": 38
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 57,
+        "days": 7,
+        "top5": {
+          "Malaysia": 57
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 319,
+        "days": 7,
+        "top5": {
+          "India": 319
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 57,
+        "days": 6,
+        "top5": {
+          "Malaysia": 57
+        }
+      }
+    ]
+  },
+  "thailand_gasoline": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 50,
+        "days": 7,
+        "top5": {
+          "Singapore Republic": 50
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 38,
+        "days": 7,
+        "top5": {
+          "Singapore Republic": 38
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 63,
+        "days": 7,
+        "top5": {
+          "Singapore Republic": 63
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "thailand_naphtha": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 796,
+        "days": 7,
+        "top5": {
+          "Bahrain": 503,
+          "United States": 293
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 257,
+        "days": 7,
+        "top5": {
+          "Bahrain": 257
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 22,
+        "days": 6,
+        "top5": {
+          "Singapore Republic": 22
+        }
+      }
+    ]
+  },
+  "thailand_sulphur": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 19,
+        "days": 7,
+        "top5": {
+          "Russian Federation": 19
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "vietnam_crude": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 2000,
+        "days": 7,
+        "top5": {
+          "Kuwait": 2000
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 2000,
+        "days": 7,
+        "top5": {
+          "Kuwait": 2000
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 618,
+        "days": 7,
+        "top5": {
+          "Nigeria": 618
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "vietnam_lng": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 62,
+        "days": 7,
+        "top5": {
+          "Qatar": 62
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "vietnam_lpg": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 3,
+        "days": 7,
+        "top5": {
+          "China": 3
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 3,
+        "days": 7,
+        "top5": {
+          "China": 3
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 59,
+        "days": 7,
+        "top5": {
+          "United States": 46,
+          "China": 7,
+          "Saudi Arabia": 6,
+          "Malaysia": 1
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 71,
+        "days": 6,
+        "top5": {
+          "United States": 71
+        }
+      }
+    ]
+  },
+  "vietnam_kero_jet": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 232,
+        "days": 7,
+        "top5": {
+          "Thailand": 102,
+          "Singapore Republic": 90,
+          "China": 40
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 142,
+        "days": 7,
+        "top5": {
+          "China": 142
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 66,
+        "days": 7,
+        "top5": {
+          "China": 66
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 93,
+        "days": 6,
+        "top5": {
+          "Singapore Republic": 93
+        }
+      }
+    ]
+  },
+  "vietnam_gasoil_diesel": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 672,
+        "days": 7,
+        "top5": {
+          "South Korea": 433,
+          "Singapore Republic": 134,
+          "Malaysia": 106
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 541,
+        "days": 7,
+        "top5": {
+          "South Korea": 459,
+          "Singapore Republic": 83
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 1187,
+        "days": 7,
+        "top5": {
+          "South Korea": 1187
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 1007,
+        "days": 6,
+        "top5": {
+          "South Korea": 920,
+          "Singapore Republic": 87
+        }
+      }
+    ]
+  },
+  "vietnam_gasoline": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 442,
+        "days": 7,
+        "top5": {
+          "Malaysia": 324,
+          "Singapore Republic": 119
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 303,
+        "days": 7,
+        "top5": {
+          "Singapore Republic": 206,
+          "Japan": 96
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 119,
+        "days": 7,
+        "top5": {
+          "Singapore Republic": 119
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 82,
+        "days": 6,
+        "top5": {
+          "Singapore Republic": 82
+        }
+      }
+    ]
+  },
+  "vietnam_naphtha": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "vietnam_sulphur": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 17,
+        "days": 7,
+        "top5": {
+          "Qatar": 17
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 19,
+        "days": 7,
+        "top5": {
+          "Jordan": 19
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "eu_27_crude": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 3047,
+        "days": 7,
+        "top5": {
+          "Brazil": 2132,
+          "Finland": 599,
+          "Turkey": 125
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 1384,
+        "days": 7,
+        "top5": {
+          "United Kingdom": 778,
+          "Finland": 599,
+          "Belgium": 7
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 324,
+        "days": 7,
+        "top5": {
+          "Turkey": 324
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 1006,
+        "days": 6,
+        "top5": {
+          "Finland": 599,
+          "Netherlands": 407
+        }
+      }
+    ]
+  },
+  "eu_27_lng": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 13,
+        "days": 7,
+        "top5": {
+          "Italy": 13
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "eu_27_lpg": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 32,
+        "days": 7,
+        "top5": {
+          "Poland": 11,
+          "Spain": 5,
+          "Lebanon": 5,
+          "Turkey": 4,
+          "Ireland": 3
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 16,
+        "days": 7,
+        "top5": {
+          "Poland": 12,
+          "Morocco": 2,
+          "United Kingdom": 2
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 20,
+        "days": 7,
+        "top5": {
+          "Poland": 11,
+          "Italy": 3,
+          "Ireland": 2,
+          "Portugal": 2,
+          "Germany": 2
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 12,
+        "days": 6,
+        "top5": {
+          "Poland": 7,
+          "Ireland": 4,
+          "France": 1
+        }
+      }
+    ]
+  },
+  "eu_27_kero_jet": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 483,
+        "days": 7,
+        "top5": {
+          "United Kingdom": 322,
+          "Denmark": 133,
+          "Albania": 28
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 1025,
+        "days": 7,
+        "top5": {
+          "France": 356,
+          "Spain": 271,
+          "United Kingdom": 270,
+          "Belgium": 128
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 621,
+        "days": 7,
+        "top5": {
+          "Spain": 175,
+          "South Africa": 169,
+          "Cyprus": 118,
+          "Albania": 72,
+          "Norway": 49
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 69,
+        "days": 6,
+        "top5": {
+          "United Kingdom": 69
+        }
+      }
+    ]
+  },
+  "eu_27_gasoil_diesel": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 5267,
+        "days": 7,
+        "top5": {
+          "United Kingdom": 967,
+          "Germany": 781,
+          "Poland": 587,
+          "Romania": 412,
+          "Portugal": 277
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 7696,
+        "days": 7,
+        "top5": {
+          "Poland": 1714,
+          "United Kingdom": 596,
+          "Malta": 529,
+          "Germany": 469,
+          "Morocco": 461
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 7600,
+        "days": 7,
+        "top5": {
+          "United Kingdom": 1431,
+          "Poland": 903,
+          "Romania": 544,
+          "Slovenia": 459,
+          "Morocco": 384
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 2582,
+        "days": 6,
+        "top5": {
+          "Croatia": 544,
+          "Slovenia": 356,
+          "Poland": 345,
+          "Ireland": 295,
+          "Italy": 169
+        }
+      }
+    ]
+  },
+  "eu_27_gasoline": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 6555,
+        "days": 7,
+        "top5": {
+          "Libya": 912,
+          "Netherlands": 510,
+          "Belgium": 476,
+          "United States": 431,
+          "France": 339
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 7861,
+        "days": 7,
+        "top5": {
+          "Libya": 778,
+          "Egypt": 543,
+          "Saudi Arabia": 522,
+          "Lebanon": 464,
+          "Cyprus": 397
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 8570,
+        "days": 7,
+        "top5": {
+          "Kenya": 776,
+          "United Kingdom": 692,
+          "Ghana": 691,
+          "Netherlands": 690,
+          "South Africa": 687
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 6867,
+        "days": 6,
+        "top5": {
+          "Spain": 414,
+          "Morocco": 347,
+          "Ghana": 345,
+          "Senegal": 345,
+          "Mauritania": 319
+        }
+      }
+    ]
+  },
+  "eu_27_naphtha": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 2064,
+        "days": 7,
+        "top5": {
+          "Belgium": 817,
+          "Netherlands": 532,
+          "Argentina": 176,
+          "Germany": 35,
+          "Spain": 35
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 2888,
+        "days": 7,
+        "top5": {
+          "Brazil": 512,
+          "China": 511,
+          "Italy": 420,
+          "Bahamas": 345,
+          "Taiwan": 319
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 2959,
+        "days": 7,
+        "top5": {
+          "Spain": 1260,
+          "Belgium": 647,
+          "Japan": 352,
+          "France": 263,
+          "Latvia": 133
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 1409,
+        "days": 6,
+        "top5": {
+          "Italy": 502,
+          "China": 345,
+          "Germany": 282
+        }
+      }
+    ]
+  },
+  "eu_27_sulphur": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "united_states_crude": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 19240,
+        "days": 7,
+        "top5": {
+          "Venezuela": 3054,
+          "Saudi Arabia": 2719,
+          "Iraq": 2574,
+          "Mexico": 1907,
+          "Panama": 1489
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 21930,
+        "days": 7,
+        "top5": {
+          "Saudi Arabia": 4121,
+          "Mexico": 3943,
+          "Venezuela": 2825,
+          "Canada": 1705,
+          "Guyana": 1385
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 19488,
+        "days": 7,
+        "top5": {
+          "Venezuela": 3451,
+          "Canada": 3366,
+          "Saudi Arabia": 2410,
+          "Mexico": 1762,
+          "Brazil": 1497
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 11794,
+        "days": 6,
+        "top5": {
+          "Saudi Arabia": 2995,
+          "Venezuela": 2319,
+          "Mexico": 1553,
+          "Panama": 1032,
+          "Bahamas": 918
+        }
+      }
+    ]
+  },
+  "united_states_lng": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "united_states_lpg": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 12,
+        "days": 7,
+        "top5": {
+          "Canada": 12
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "united_states_kero_jet": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 91,
+        "days": 7,
+        "top5": {
+          "Canada": 91
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 1428,
+        "days": 7,
+        "top5": {
+          "South Korea": 957,
+          "China": 307,
+          "Canada": 165
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 611,
+        "days": 7,
+        "top5": {
+          "South Korea": 419,
+          "Canada": 193
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 518,
+        "days": 6,
+        "top5": {
+          "South Korea": 403,
+          "Taiwan": 115
+        }
+      }
+    ]
+  },
+  "united_states_gasoil_diesel": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 1256,
+        "days": 7,
+        "top5": {
+          "Canada": 883,
+          "Turkey": 373
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 1694,
+        "days": 7,
+        "top5": {
+          "Canada": 1248,
+          "Turkey": 446
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 720,
+        "days": 7,
+        "top5": {
+          "Canada": 621,
+          "Mexico": 99
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 533,
+        "days": 6,
+        "top5": {
+          "Canada": 477,
+          "Argentina": 56
+        }
+      }
+    ]
+  },
+  "united_states_gasoline": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 2343,
+        "days": 7,
+        "top5": {
+          "Canada": 852,
+          "Netherlands": 615,
+          "Bahamas": 599,
+          "Belgium": 278
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 2598,
+        "days": 7,
+        "top5": {
+          "Canada": 930,
+          "Bahamas": 750,
+          "United Kingdom": 345,
+          "United States Virgin Islands": 299,
+          "Portugal": 274
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 2550,
+        "days": 7,
+        "top5": {
+          "Canada": 683,
+          "Bahamas": 454,
+          "United Kingdom": 405,
+          "India": 345,
+          "Brazil": 306
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 1254,
+        "days": 6,
+        "top5": {
+          "Canada": 765,
+          "United States Virgin Islands": 292,
+          "Bahamas": 112,
+          "United Kingdom": 85
+        }
+      }
+    ]
+  },
+  "united_states_naphtha": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 844,
+        "days": 7,
+        "top5": {
+          "France": 352,
+          "Netherlands": 235,
+          "Belgium": 173,
+          "Peru": 84
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 470,
+        "days": 7,
+        "top5": {
+          "Belgium": 218,
+          "Netherlands": 147,
+          "France": 106
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 321,
+        "days": 7,
+        "top5": {
+          "Netherlands": 321
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 552,
+        "days": 6,
+        "top5": {
+          "Angola": 345,
+          "Argentina": 106,
+          "Brazil": 101
+        }
+      }
+    ]
+  },
+  "united_states_sulphur": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "taiwan_crude": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 2931,
+        "days": 7,
+        "top5": {
+          "Saudi Arabia": 2600,
+          "United Arab Emirates": 311,
+          "Republic of the Congo": 20
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 6050,
+        "days": 7,
+        "top5": {
+          "United States": 2050,
+          "Kuwait": 2000,
+          "Saudi Arabia": 2000
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 4095,
+        "days": 7,
+        "top5": {
+          "United States": 2095,
+          "Saudi Arabia": 2000
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 2061,
+        "days": 6,
+        "top5": {
+          "United States": 2061
+        }
+      }
+    ]
+  },
+  "taiwan_lng": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 350,
+        "days": 7,
+        "top5": {
+          "Papua New Guinea": 79,
+          "Oman": 77,
+          "United States": 71,
+          "Australia": 63,
+          "Qatar": 62
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 475,
+        "days": 7,
+        "top5": {
+          "Qatar": 183,
+          "Australia": 155,
+          "Canada": 72,
+          "Brunei": 66
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 424,
+        "days": 7,
+        "top5": {
+          "Australia": 218,
+          "Canada": 72,
+          "Oman": 70,
+          "United States": 65
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 502,
+        "days": 6,
+        "top5": {
+          "Australia": 290,
+          "Equatorial Guinea": 73,
+          "Oman": 70,
+          "Brunei": 69
+        }
+      }
+    ]
+  },
+  "taiwan_lpg": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 17,
+        "days": 7,
+        "top5": {
+          "Australia": 17
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 6,
+        "days": 7,
+        "top5": {
+          "Australia": 6
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "taiwan_kero_jet": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "taiwan_gasoil_diesel": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 675,
+        "days": 7,
+        "top5": {
+          "South Korea": 675
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 254,
+        "days": 7,
+        "top5": {
+          "China": 228,
+          "Russian Federation": 26
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 211,
+        "days": 6,
+        "top5": {
+          "South Korea": 129,
+          "China": 82
+        }
+      }
+    ]
+  },
+  "taiwan_gasoline": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 176,
+        "days": 7,
+        "top5": {
+          "Japan": 176
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "taiwan_naphtha": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 1231,
+        "days": 7,
+        "top5": {
+          "Singapore Republic": 776,
+          "United States": 455
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 1031,
+        "days": 7,
+        "top5": {
+          "United Arab Emirates": 892,
+          "Iraq": 139
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 664,
+        "days": 7,
+        "top5": {
+          "United Arab Emirates": 664
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "taiwan_sulphur": {
+    "direction": "import",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "bahrain_crude": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "bahrain_lng": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "bahrain_lpg": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "bahrain_kero_jet": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 503,
+        "days": 7,
+        "top5": {
+          "United Arab Emirates": 503
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "bahrain_gasoil_diesel": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "bahrain_gasoline": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "bahrain_naphtha": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 512,
+        "days": 7,
+        "top5": {
+          "Japan": 512
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "bahrain_sulphur": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "iran_crude": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 12920,
+        "days": 7,
+        "top5": {
+          "China": 4604
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 14083,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 12028,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 8000,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "iran_lng": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "iran_lpg": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 63,
+        "days": 7,
+        "top5": {
+          "China": 41,
+          "India": 22
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 23,
+        "days": 7,
+        "top5": {
+          "Pakistan": 2
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 23,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 41,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "iran_kero_jet": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "iran_gasoil_diesel": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "iran_gasoline": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "iran_naphtha": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 89,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 320,
+        "days": 7,
+        "top5": {
+          "United Arab Emirates": 211
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "iran_sulphur": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "iraq_crude": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 15283,
+        "days": 7,
+        "top5": {
+          "China": 4841,
+          "India": 1179,
+          "Italy": 998,
+          "Malaysia": 998
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 209,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 1500,
+        "days": 7,
+        "top5": {
+          "Turkey": 1500
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 1500,
+        "days": 6,
+        "top5": {
+          "Turkey": 1500
+        }
+      }
+    ]
+  },
+  "iraq_lng": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "iraq_lpg": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 11,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "iraq_kero_jet": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "iraq_gasoil_diesel": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "iraq_gasoline": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "iraq_naphtha": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 104,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 91,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "iraq_sulphur": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "kuwait_crude": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 8135,
+        "days": 7,
+        "top5": {
+          "China": 2000
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 546,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "kuwait_lng": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "kuwait_lpg": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 23,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "kuwait_kero_jet": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 64,
+        "days": 7,
+        "top5": {
+          "United Arab Emirates": 64
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "kuwait_gasoil_diesel": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 941,
+        "days": 7,
+        "top5": {
+          "United Arab Emirates": 102,
+          "China": 68
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 714,
+        "days": 7,
+        "top5": {
+          "United Arab Emirates": 375,
+          "Qatar": 339
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "kuwait_gasoline": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 448,
+        "days": 7,
+        "top5": {
+          "Saudi Arabia": 448
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "kuwait_naphtha": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "kuwait_sulphur": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 18,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 18,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "oman_crude": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 7800,
+        "days": 7,
+        "top5": {
+          "China": 7800
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 3850,
+        "days": 7,
+        "top5": {
+          "China": 3850
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 5720,
+        "days": 7,
+        "top5": {
+          "China": 3835,
+          "Taiwan": 1885
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 7632,
+        "days": 6,
+        "top5": {
+          "China": 7632
+        }
+      }
+    ]
+  },
+  "oman_lng": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 303,
+        "days": 7,
+        "top5": {
+          "India": 154,
+          "South Korea": 77,
+          "Taiwan": 71
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 210,
+        "days": 7,
+        "top5": {
+          "Thailand": 71,
+          "Taiwan": 71,
+          "Japan": 68
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 303,
+        "days": 7,
+        "top5": {
+          "India": 149,
+          "China": 78,
+          "Japan": 77
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 148,
+        "days": 6,
+        "top5": {
+          "India": 77,
+          "Thailand": 35
+        }
+      }
+    ]
+  },
+  "oman_lpg": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "oman_kero_jet": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 58,
+        "days": 7,
+        "top5": {
+          "Mauritius": 58
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 172,
+        "days": 7,
+        "top5": {
+          "Djibouti": 172
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "oman_gasoil_diesel": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 1005,
+        "days": 7,
+        "top5": {
+          "Namibia": 345,
+          "Argentina": 320,
+          "Madagascar": 167,
+          "South Africa": 115,
+          "Mauritius": 58
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 346,
+        "days": 7,
+        "top5": {
+          "Pakistan": 346
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 685,
+        "days": 7,
+        "top5": {
+          "South Africa": 345,
+          "Pakistan": 339
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 682,
+        "days": 6,
+        "top5": {
+          "Pakistan": 351,
+          "Mauritius": 331
+        }
+      }
+    ]
+  },
+  "oman_gasoline": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 728,
+        "days": 7,
+        "top5": {
+          "Pakistan": 504,
+          "Madagascar": 167,
+          "Mauritius": 58
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 300,
+        "days": 7,
+        "top5": {
+          "Argentina": 150,
+          "Tanzania": 150
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 491,
+        "days": 7,
+        "top5": {
+          "Sudan": 317,
+          "South Africa": 173
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 843,
+        "days": 6,
+        "top5": {
+          "Pakistan": 511,
+          "Saudi Arabia": 332
+        }
+      }
+    ]
+  },
+  "oman_naphtha": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 813,
+        "days": 7,
+        "top5": {
+          "South Korea": 489,
+          "India": 324
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 506,
+        "days": 7,
+        "top5": {
+          "South Korea": 506
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "oman_sulphur": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "qatar_crude": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 2047,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 822,
+        "days": 7,
+        "top5": {
+          "United Arab Emirates": 449
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "qatar_lng": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 370,
+        "days": 7,
+        "top5": {
+          "China": 95
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 46,
+        "days": 7,
+        "top5": {
+          "Kuwait": 46
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 129,
+        "days": 6,
+        "top5": {
+          "Kuwait": 68
+        }
+      }
+    ]
+  },
+  "qatar_lpg": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 32,
+        "days": 7,
+        "top5": {
+          "India": 23
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "qatar_kero_jet": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "qatar_gasoil_diesel": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "qatar_gasoline": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "qatar_naphtha": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 116,
+        "days": 7,
+        "top5": {
+          "Japan": 116
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "qatar_sulphur": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 72,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 37,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "russia_crude": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 33451,
+        "days": 7,
+        "top5": {
+          "China": 12051,
+          "India": 7550,
+          "Netherlands": 1791,
+          "Israel": 1084,
+          "South Korea": 1061
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 47314,
+        "days": 7,
+        "top5": {
+          "China": 18027,
+          "India": 10021,
+          "Italy": 4803,
+          "France": 3183,
+          "Netherlands": 1499
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 45537,
+        "days": 7,
+        "top5": {
+          "China": 10415,
+          "India": 8502,
+          "Turkey": 3630,
+          "Italy": 3189,
+          "Netherlands": 3047
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 28658,
+        "days": 6,
+        "top5": {
+          "China": 6954,
+          "India": 2727,
+          "Turkey": 2163,
+          "Netherlands": 1767,
+          "France": 1078
+        }
+      }
+    ]
+  },
+  "russia_lng": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 779,
+        "days": 7,
+        "top5": {
+          "Spain": 220,
+          "Belgium": 147,
+          "France": 74,
+          "Netherlands": 73,
+          "Japan": 64
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 567,
+        "days": 7,
+        "top5": {
+          "France": 221,
+          "Japan": 135,
+          "Belgium": 74,
+          "Spain": 73,
+          "China": 64
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 776,
+        "days": 7,
+        "top5": {
+          "China": 194,
+          "Spain": 147,
+          "France": 74,
+          "Netherlands": 74,
+          "Belgium": 73
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 485,
+        "days": 6,
+        "top5": {
+          "Japan": 127,
+          "Spain": 74,
+          "Belgium": 73,
+          "South Korea": 64
+        }
+      }
+    ]
+  },
+  "russia_lpg": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 19,
+        "days": 7,
+        "top5": {
+          "Turkey": 19
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 21,
+        "days": 7,
+        "top5": {
+          "Turkey": 21
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "russia_kero_jet": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "russia_gasoil_diesel": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 5610,
+        "days": 7,
+        "top5": {
+          "Turkey": 2043,
+          "Brazil": 1157,
+          "Ghana": 425,
+          "Sudan": 276,
+          "Senegal": 275
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 6525,
+        "days": 7,
+        "top5": {
+          "Turkey": 2876,
+          "Egypt": 1269,
+          "Brazil": 448,
+          "Togo": 345,
+          "Morocco": 313
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 5184,
+        "days": 7,
+        "top5": {
+          "Turkey": 2332,
+          "Brazil": 994,
+          "Morocco": 373,
+          "Benin": 352,
+          "Ghana": 299
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 1675,
+        "days": 6,
+        "top5": {
+          "Turkey": 349,
+          "Egypt": 262,
+          "Togo": 260
+        }
+      }
+    ]
+  },
+  "russia_gasoline": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 269,
+        "days": 7,
+        "top5": {
+          "Libya": 269
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 263,
+        "days": 7,
+        "top5": {
+          "Libya": 263
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "russia_naphtha": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 3925,
+        "days": 7,
+        "top5": {
+          "China": 1336,
+          "Turkey": 590,
+          "India": 321,
+          "Senegal": 268,
+          "South Korea": 234
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 4420,
+        "days": 7,
+        "top5": {
+          "China": 1619,
+          "India": 1084,
+          "Egypt": 495,
+          "Spain": 126,
+          "Brazil": 98
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 2885,
+        "days": 7,
+        "top5": {
+          "Brazil": 607,
+          "China": 511,
+          "Turkey": 347,
+          "Morocco": 338,
+          "Indonesia": 321
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 1514,
+        "days": 6,
+        "top5": {
+          "Turkey": 321
+        }
+      }
+    ]
+  },
+  "russia_sulphur": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 31,
+        "days": 7,
+        "top5": {
+          "Brazil": 31
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 71,
+        "days": 7,
+        "top5": {
+          "Morocco": 71
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 78,
+        "days": 6,
+        "top5": {
+          "China": 78
+        }
+      }
+    ]
+  },
+  "saudi_arabia_crude": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 44659,
+        "days": 7,
+        "top5": {
+          "Egypt": 16191,
+          "India": 5171,
+          "South Korea": 4000,
+          "China": 2555,
+          "Japan": 2000
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 19880,
+        "days": 7,
+        "top5": {
+          "China": 5990,
+          "India": 5965,
+          "South Korea": 2772,
+          "Egypt": 2010,
+          "Jordan": 1040
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 26953,
+        "days": 7,
+        "top5": {
+          "China": 12154,
+          "India": 6594,
+          "Egypt": 2067,
+          "Myanmar": 2010,
+          "Thailand": 1996
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 27115,
+        "days": 6,
+        "top5": {
+          "China": 7706,
+          "India": 7201,
+          "Myanmar": 2010
+        }
+      }
+    ]
+  },
+  "saudi_arabia_lng": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "saudi_arabia_lpg": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 17,
+        "days": 7,
+        "top5": {
+          "Jordan": 17
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 23,
+        "days": 7,
+        "top5": {
+          "India": 23
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 23,
+        "days": 6,
+        "top5": {
+          "India": 23
+        }
+      }
+    ]
+  },
+  "saudi_arabia_kero_jet": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 698,
+        "days": 7,
+        "top5": {
+          "United Kingdom": 667,
+          "Jordan": 31
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 325,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 665,
+        "days": 7,
+        "top5": {
+          "Netherlands": 320
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "saudi_arabia_gasoil_diesel": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 5201,
+        "days": 7,
+        "top5": {
+          "France": 988,
+          "Albania": 822,
+          "Spain": 741,
+          "Italy": 680,
+          "Egypt": 657
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 4665,
+        "days": 7,
+        "top5": {
+          "Egypt": 1346,
+          "Kenya": 751,
+          "Italy": 689,
+          "Spain": 533,
+          "Malaysia": 336
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 3432,
+        "days": 7,
+        "top5": {
+          "Egypt": 981,
+          "Singapore Republic": 768,
+          "Belgium": 604,
+          "Malaysia": 336
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 3559,
+        "days": 6,
+        "top5": {
+          "Egypt": 762,
+          "Belgium": 744,
+          "Pakistan": 306,
+          "Sudan": 133
+        }
+      }
+    ]
+  },
+  "saudi_arabia_gasoline": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 1565,
+        "days": 7,
+        "top5": {
+          "Singapore Republic": 345,
+          "Malaysia": 325,
+          "South Africa": 300,
+          "Pakistan": 248,
+          "Jordan": 46
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 963,
+        "days": 7,
+        "top5": {
+          "Oman": 330,
+          "Djibouti": 301,
+          "Egypt": 217,
+          "Pakistan": 67
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 1924,
+        "days": 7,
+        "top5": {
+          "Singapore Republic": 1011,
+          "Malaysia": 316,
+          "Sudan": 133,
+          "Jordan": 118
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 613,
+        "days": 6,
+        "top5": {
+          "Kenya": 313,
+          "Singapore Republic": 300
+        }
+      }
+    ]
+  },
+  "saudi_arabia_naphtha": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 94,
+        "days": 7,
+        "top5": {
+          "Japan": 94
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 837,
+        "days": 7,
+        "top5": {
+          "Indonesia": 514,
+          "Singapore Republic": 323
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 698,
+        "days": 7,
+        "top5": {
+          "Egypt": 501,
+          "Japan": 197
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 510,
+        "days": 6,
+        "top5": {
+          "Indonesia": 510
+        }
+      }
+    ]
+  },
+  "saudi_arabia_sulphur": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 74,
+        "days": 7,
+        "top5": {
+          "Indonesia": 52,
+          "Lithuania": 23
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 86,
+        "days": 7,
+        "top5": {
+          "China": 32
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 55,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "uae_crude": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 22343,
+        "days": 7,
+        "top5": {
+          "Thailand": 3850,
+          "South Korea": 3120,
+          "Singapore Republic": 2608,
+          "China": 1800,
+          "Malaysia": 1054
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 16505,
+        "days": 7,
+        "top5": {
+          "Thailand": 5800,
+          "South Korea": 4000,
+          "China": 1900,
+          "India": 1300,
+          "Japan": 1200
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 9265,
+        "days": 7,
+        "top5": {
+          "India": 4000,
+          "Pakistan": 1135,
+          "China": 300
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 19227,
+        "days": 6,
+        "top5": {
+          "India": 5595,
+          "South Korea": 3850,
+          "Japan": 1900,
+          "Philippines": 1000
+        }
+      }
+    ]
+  },
+  "uae_lng": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 63,
+        "days": 7,
+        "top5": {
+          "India": 63
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "uae_lpg": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 55,
+        "days": 7,
+        "top5": {
+          "India": 32
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 10,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "uae_kero_jet": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "uae_gasoil_diesel": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 280,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 511,
+        "days": 7,
+        "top5": {
+          "Pakistan": 511
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "uae_gasoline": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 982,
+        "days": 7,
+        "top5": {
+          "Pakistan": 512,
+          "Singapore Republic": 470
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "uae_naphtha": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 557,
+        "days": 7,
+        "top5": {
+          "China": 557
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 323,
+        "days": 6,
+        "top5": {
+          "Taiwan": 323
+        }
+      }
+    ]
+  },
+  "uae_sulphur": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "us_crude": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 25556,
+        "days": 7,
+        "top5": {
+          "Nigeria": 4127,
+          "Italy": 3157,
+          "Netherlands": 2858,
+          "United Kingdom": 2407,
+          "France": 2107
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 26902,
+        "days": 7,
+        "top5": {
+          "Netherlands": 4920,
+          "South Korea": 4114,
+          "France": 2120,
+          "Taiwan": 2094,
+          "Italy": 2059
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 27503,
+        "days": 7,
+        "top5": {
+          "South Korea": 5647,
+          "Canada": 3625,
+          "United Kingdom": 2607,
+          "Netherlands": 2113,
+          "Japan": 2089
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 25991,
+        "days": 6,
+        "top5": {
+          "Netherlands": 3500,
+          "South Korea": 3344,
+          "India": 1741,
+          "Spain": 1406,
+          "United Kingdom": 1400
+        }
+      }
+    ]
+  },
+  "us_lng": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 2475,
+        "days": 7,
+        "top5": {
+          "France": 362,
+          "Italy": 358,
+          "Germany": 287,
+          "Egypt": 286,
+          "United Kingdom": 215
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 2600,
+        "days": 7,
+        "top5": {
+          "Egypt": 322,
+          "Netherlands": 289,
+          "Spain": 286,
+          "United Kingdom": 213,
+          "Italy": 145
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 2572,
+        "days": 7,
+        "top5": {
+          "France": 514,
+          "Netherlands": 226,
+          "Germany": 215,
+          "Taiwan": 146,
+          "Poland": 145
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 2204,
+        "days": 6,
+        "top5": {
+          "Netherlands": 285,
+          "Thailand": 240,
+          "France": 148,
+          "Egypt": 148,
+          "Spain": 145
+        }
+      }
+    ]
+  },
+  "us_lpg": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 1000,
+        "days": 7,
+        "top5": {
+          "Japan": 237,
+          "Mexico": 121,
+          "South Korea": 100,
+          "Indonesia": 72,
+          "China": 70
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 1033,
+        "days": 7,
+        "top5": {
+          "Japan": 233,
+          "Mexico": 81,
+          "South Korea": 70,
+          "France": 65,
+          "Dominican Republic": 62
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 893,
+        "days": 7,
+        "top5": {
+          "Japan": 171,
+          "Taiwan": 75,
+          "South Korea": 68,
+          "Mexico": 48,
+          "Netherlands": 46
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 1042,
+        "days": 6,
+        "top5": {
+          "Indonesia": 80,
+          "Mexico": 71,
+          "Japan": 68,
+          "Netherlands": 61,
+          "China": 51
+        }
+      }
+    ]
+  },
+  "us_kero_jet": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 1074,
+        "days": 7,
+        "top5": {
+          "Panama": 275,
+          "Trinidad and Tobago": 258,
+          "Mexico": 145,
+          "Costa Rica": 137,
+          "United States Virgin Islands": 90
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 1498,
+        "days": 7,
+        "top5": {
+          "Netherlands": 330,
+          "Brazil": 315,
+          "Mexico": 270,
+          "Peru": 112,
+          "Honduras": 90
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 2424,
+        "days": 7,
+        "top5": {
+          "United Kingdom": 585,
+          "Canada": 363,
+          "Mexico": 270,
+          "Ecuador": 225,
+          "Aruba": 219
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 1592,
+        "days": 6,
+        "top5": {
+          "United Kingdom": 609,
+          "Netherlands": 302,
+          "Costa Rica": 152,
+          "Panama": 61,
+          "Jamaica": 33
+        }
+      }
+    ]
+  },
+  "us_gasoil_diesel": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 6360,
+        "days": 7,
+        "top5": {
+          "Peru": 672,
+          "Chile": 626,
+          "Mexico": 528,
+          "United Kingdom": 516,
+          "Guatemala": 496
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 8405,
+        "days": 7,
+        "top5": {
+          "Peru": 1134,
+          "Chile": 1095,
+          "South Africa": 948,
+          "Mexico": 927,
+          "Colombia": 640
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 7723,
+        "days": 7,
+        "top5": {
+          "Netherlands": 1036,
+          "Ecuador": 900,
+          "United Kingdom": 889,
+          "Mexico": 550,
+          "Guatemala": 450
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 8279,
+        "days": 6,
+        "top5": {
+          "Netherlands": 2802,
+          "United Kingdom": 903,
+          "Mexico": 425,
+          "Peru": 306,
+          "Morocco": 304
+        }
+      }
+    ]
+  },
+  "us_gasoline": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 4952,
+        "days": 7,
+        "top5": {
+          "Mexico": 1829,
+          "Ecuador": 606,
+          "Guatemala": 487,
+          "Peru": 334,
+          "Colombia": 330
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 6004,
+        "days": 7,
+        "top5": {
+          "Mexico": 2213,
+          "Colombia": 972,
+          "Ecuador": 643,
+          "Honduras": 331,
+          "Dominican Republic": 321
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 5203,
+        "days": 7,
+        "top5": {
+          "Mexico": 1674,
+          "Australia": 450,
+          "Honduras": 373,
+          "Guatemala": 348,
+          "Trinidad and Tobago": 325
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 5540,
+        "days": 6,
+        "top5": {
+          "Mexico": 1066,
+          "Colombia": 426,
+          "Australia": 303,
+          "Dominican Republic": 300,
+          "Jamaica": 200
+        }
+      }
+    ]
+  },
+  "us_naphtha": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 2337,
+        "days": 7,
+        "top5": {
+          "Venezuela": 1538,
+          "Brazil": 495,
+          "Curacao": 46
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 2931,
+        "days": 7,
+        "top5": {
+          "Japan": 797,
+          "Venezuela": 465,
+          "Brazil": 403,
+          "Colombia": 300,
+          "Mexico": 275
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 5169,
+        "days": 7,
+        "top5": {
+          "South Korea": 1421,
+          "Japan": 883,
+          "Brazil": 611,
+          "Mexico": 611,
+          "Venezuela": 508
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 2631,
+        "days": 6,
+        "top5": {
+          "Venezuela": 504,
+          "Colombia": 320,
+          "Japan": 227
+        }
+      }
+    ]
+  },
+  "us_sulphur": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 14,
+        "days": 7,
+        "top5": {
+          "Mexico": 14
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 44,
+        "days": 7,
+        "top5": {
+          "Belgium": 44
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "australia_crude": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 1867,
+        "days": 7,
+        "top5": {
+          "Indonesia": 650,
+          "Singapore Republic": 647,
+          "Thailand": 570
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 1962,
+        "days": 7,
+        "top5": {
+          "South Korea": 929,
+          "Brunei": 650,
+          "Thailand": 292,
+          "Canada": 91
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 2178,
+        "days": 7,
+        "top5": {
+          "Singapore Republic": 650,
+          "South Korea": 649
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 1277,
+        "days": 6,
+        "top5": {
+          "South Korea": 743
+        }
+      }
+    ]
+  },
+  "australia_lng": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 1397,
+        "days": 7,
+        "top5": {
+          "Japan": 583,
+          "China": 404,
+          "South Korea": 200,
+          "Singapore Republic": 74,
+          "Taiwan": 73
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 1760,
+        "days": 7,
+        "top5": {
+          "Japan": 499,
+          "Taiwan": 371,
+          "China": 262,
+          "Singapore Republic": 208,
+          "South Korea": 132
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 1659,
+        "days": 7,
+        "top5": {
+          "South Korea": 343,
+          "Taiwan": 341,
+          "Japan": 339,
+          "China": 312,
+          "Thailand": 114
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 940,
+        "days": 6,
+        "top5": {
+          "Japan": 422,
+          "China": 143,
+          "Thailand": 139,
+          "South Korea": 104,
+          "India": 56
+        }
+      }
+    ]
+  },
+  "australia_lpg": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 24,
+        "days": 7,
+        "top5": {
+          "China": 24
+        }
+      },
+      {
+        "period": "2026-W11",
+        "total": 1,
+        "days": 7,
+        "top5": {
+          "Fiji": 1,
+          "Solomon Islands": 1
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 45,
+        "days": 7,
+        "top5": {
+          "China": 45
+        }
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "australia_kero_jet": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "australia_gasoil_diesel": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "australia_gasoline": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  },
+  "australia_naphtha": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 345,
+        "days": 7,
+        "top5": {
+          "Singapore Republic": 345
+        }
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 345,
+        "days": 6,
+        "top5": {
+          "Malaysia": 345
+        }
+      }
+    ]
+  },
+  "australia_sulphur": {
+    "direction": "export",
+    "weeks": [
+      {
+        "period": "2026-W10",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W11",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W12",
+        "total": 0,
+        "days": 7,
+        "top5": {}
+      },
+      {
+        "period": "2026-W13",
+        "total": 0,
+        "days": 6,
+        "top5": {}
+      }
+    ]
+  }
+}

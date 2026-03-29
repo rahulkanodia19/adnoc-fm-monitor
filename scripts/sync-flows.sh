@@ -163,4 +163,8 @@ if [ -n "$CHROME_PID" ]; then
   kill "$CHROME_PID" 2>/dev/null || true
 fi
 
+# 6. Generate LLM insights
+echo "[sync-flows] Generating flow insights..."
+bash "$SCRIPT_DIR/sync-flow-insights.sh"
+
 echo "[sync-flows] Done."
