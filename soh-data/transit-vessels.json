@@ -106,60 +106,6 @@
       "isTransiting": true
     },
     {
-      "name": "Manali",
-      "imo": "9268916",
-      "mmsi": "352002387",
-      "vesselTypeClass": "Handysize",
-      "state": "loaded",
-      "flagName": "Panama",
-      "deadWeight": 33745,
-      "commodityTypes": [
-        "dry"
-      ],
-      "capacity": 33019,
-      "speed": 10,
-      "course": 291,
-      "lat": 26.432817,
-      "lng": 55.871609,
-      "aisDestination": null,
-      "product": "Alumina",
-      "controller": "S-Bulkers",
-      "lastPortCall": {
-        "start": "2026-01-19T12:33:35",
-        "end": "2026-01-19T12:33:35"
-      },
-      "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
-      "name": "Green Asha",
-      "imo": "9326598",
-      "mmsi": "419001795",
-      "vesselTypeClass": "MGC",
-      "state": "loaded",
-      "flagName": "India",
-      "deadWeight": 26424,
-      "commodityTypes": [
-        "lpg"
-      ],
-      "capacity": 35220,
-      "speed": 3.5,
-      "course": 70,
-      "lat": 25.885752,
-      "lng": 56.009647,
-      "destination": "India",
-      "destinationEta": "2026-04-01T17:19:48.950112",
-      "aisDestination": null,
-      "product": "LPG",
-      "controller": "BPCL",
-      "lastPortCall": {
-        "start": "2026-03-29T10:58:51",
-        "end": "2026-03-29T17:52:18"
-      },
-      "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
       "name": "Ariana",
       "imo": "9500132",
       "mmsi": "374186000",
@@ -266,56 +212,6 @@
       "isTransiting": true
     },
     {
-      "name": "Desh Vibhor",
-      "imo": "9610298",
-      "mmsi": "419000479",
-      "vesselTypeClass": "VLCC",
-      "state": "loaded",
-      "flagName": "India",
-      "deadWeight": 316635,
-      "commodityTypes": [
-        "liquids"
-      ],
-      "capacity": 342668,
-      "speed": 23.4,
-      "course": 4,
-      "lat": 25.885307,
-      "lng": 56.009701,
-      "aisDestination": null,
-      "product": "kuwait export",
-      "controller": "SCI",
-      "lastPortCall": {
-        "start": "2026-03-29T10:59:27",
-        "end": "2026-03-29T13:57:47"
-      },
-      "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
-      "name": "CSCL INDIAN OCEAN",
-      "imo": "9695157",
-      "mmsi": "477476800",
-      "vesselTypeClass": "Container Ship",
-      "state": "ballast",
-      "flagName": "",
-      "deadWeight": 184320,
-      "commodityTypes": [
-        "container"
-      ],
-      "capacity": null,
-      "speed": 4.6,
-      "course": 266,
-      "lat": 25.8857233,
-      "lng": 56.00976,
-      "destination": "CHINESE OWNER_CREW",
-      "product": null,
-      "controller": null,
-      "lastPortCall": null,
-      "dataSource": "mint",
-      "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
       "name": "BASHT",
       "imo": "9346536",
       "mmsi": "422032700",
@@ -341,7 +237,7 @@
     }
   ],
   "exitingCount": 3,
-  "enteringCount": 10,
-  "totalTransiting": 13,
-  "syncTimestamp": "2026-03-29T19:42:19.791Z"
+  "enteringCount": 6,
+  "totalTransiting": 9,
+  "syncTimestamp": "2026-03-29T20:53:58.337Z"
 }

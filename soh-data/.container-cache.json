@@ -25,40 +25,52 @@
       "heading": 261
     },
     {
-      "name": "MARSA ZENITH",
-      "imo": 9238698,
-      "mmsi": 352003810,
-      "lng": 58.84122,
-      "lat": 24.2801233,
-      "laden": false,
-      "dwt": 16824,
-      "destination": "MUNDRA",
-      "speed": 11.7,
-      "heading": 297
-    },
-    {
-      "name": "SPIL CITRA",
-      "imo": 9392559,
-      "mmsi": 373459000,
-      "lng": 54.2399567,
-      "lat": 24.3263933,
+      "name": "SOUL OF KOLKATA",
+      "imo": 9813838,
+      "mmsi": 563299300,
+      "lng": 59.1984333,
+      "lat": 23.7418117,
       "laden": true,
-      "dwt": 42004,
-      "destination": "IQUQR",
-      "speed": 18.2,
-      "heading": 231
+      "dwt": 15356,
+      "destination": "OMSOH",
+      "speed": 11.8,
+      "heading": 303
     },
     {
       "name": "HUA CHUANG 66",
       "imo": 1033602,
       "mmsi": 413572220,
-      "lng": 57.5135167,
-      "lat": 24.3614417,
+      "lng": 57.722315,
+      "lat": 24.30179,
       "laden": true,
       "dwt": 29165,
       "destination": "IN MUN",
-      "speed": 13.5,
-      "heading": 103
+      "speed": 13.4,
+      "heading": 101
+    },
+    {
+      "name": "MARSA ZENITH",
+      "imo": 9238698,
+      "mmsi": 352003810,
+      "lng": 58.6294933,
+      "lat": 24.3821983,
+      "laden": false,
+      "dwt": 16824,
+      "destination": "MUNDRA",
+      "speed": 11.6,
+      "heading": 295
+    },
+    {
+      "name": "SPIL CITRA",
+      "imo": 9392559,
+      "mmsi": 373459000,
+      "lng": 54.5098217,
+      "lat": 24.406985,
+      "laden": true,
+      "dwt": 42004,
+      "destination": "IQUQR",
+      "speed": 27,
+      "heading": 231
     },
     {
       "name": "CMA CGM GALAPAGOS",
@@ -76,8 +88,8 @@
       "name": "ELENI T",
       "imo": 9397585,
       "mmsi": 538007684,
-      "lng": 56.6116117,
-      "lat": 24.5134483,
+      "lng": 56.6116383,
+      "lat": 24.5135167,
       "laden": true,
       "dwt": 50848,
       "destination": "OMSOH",
@@ -88,8 +100,8 @@
       "name": "HONG DA XIN 768",
       "imo": 1027469,
       "mmsi": 352004254,
-      "lng": 56.6085267,
-      "lat": 24.5171417,
+      "lng": 56.60856,
+      "lat": 24.5170817,
       "laden": false,
       "dwt": 51087,
       "destination": "OM SOH",
@@ -100,13 +112,13 @@
       "name": "MK STAR",
       "imo": 9153123,
       "mmsi": 620999357,
-      "lng": 56.80118,
-      "lat": 24.5459067,
+      "lng": 56.8015933,
+      "lat": 24.5463833,
       "laden": true,
       "dwt": 4245,
       "destination": "ORDER",
-      "speed": 0.5,
-      "heading": 235.5
+      "speed": 0.3,
+      "heading": 19.2
     },
     {
       "name": "CMA CGM SAIGON",
@@ -184,13 +196,13 @@
       "name": "COSCO SHIPPING AQUARIUS",
       "imo": 9789623,
       "mmsi": 477308100,
-      "lng": 57.065305,
-      "lat": 24.6934117,
+      "lng": 57.09408,
+      "lat": 24.6826083,
       "laden": false,
       "dwt": 197049,
       "destination": "OMSOH",
-      "speed": 1.8,
-      "heading": 10
+      "speed": 1.6,
+      "heading": 18
     },
     {
       "name": "MSC MARIA LAURA II",
@@ -241,6 +253,18 @@
       "heading": 230
     },
     {
+      "name": "SM KAVERI",
+      "imo": 9236042,
+      "mmsi": 419001574,
+      "lng": 57.6218667,
+      "lat": 24.8867683,
+      "laden": true,
+      "dwt": 35971,
+      "destination": "FOR ORDER",
+      "speed": 12,
+      "heading": 90
+    },
+    {
       "name": "CMA CGM SAN ANTONIO",
       "imo": 9294173,
       "mmsi": 229734000,
@@ -251,18 +275,6 @@
       "destination": "SHARJAH ANCH",
       "speed": 0,
       "heading": 235
-    },
-    {
-      "name": "SM KAVERI",
-      "imo": 9236042,
-      "mmsi": 419001574,
-      "lng": 57.4106667,
-      "lat": 24.911385,
-      "laden": true,
-      "dwt": 35971,
-      "destination": "FOR ORDER",
-      "speed": 16.3,
-      "heading": 102
     },
     {
       "name": "SAFEEN PRINCIPAL",
@@ -304,12 +316,12 @@
       "name": "MILAHA 1",
       "imo": 9535307,
       "mmsi": 466073000,
-      "lng": 51.5758917,
-      "lat": 24.9273717,
+      "lng": 51.5759167,
+      "lat": 24.927455,
       "laden": false,
       "dwt": 25985,
       "destination": "MESAIEED",
-      "speed": 0.1,
+      "speed": 0.4,
       "heading": 30
     },
     {
@@ -373,18 +385,6 @@
       "heading": 277
     },
     {
-      "name": "FAN YA NING DE",
-      "imo": 9302554,
-      "mmsi": 414328000,
-      "lng": 56.7215717,
-      "lat": 25.0566683,
-      "laden": true,
-      "dwt": 68080,
-      "destination": "AEFJR CHINASHIP_CREW",
-      "speed": 2.7,
-      "heading": 94
-    },
-    {
       "name": "AL REEM I",
       "imo": 9300984,
       "mmsi": 470752000,
@@ -395,6 +395,18 @@
       "destination": "J.ALI",
       "speed": 1.3,
       "heading": 282
+    },
+    {
+      "name": "FAN YA NING DE",
+      "imo": 9302554,
+      "mmsi": 414328000,
+      "lng": 56.7436117,
+      "lat": 25.061705,
+      "laden": true,
+      "dwt": 68080,
+      "destination": "AEFJR CHINASHIP_CREW",
+      "speed": 0.8,
+      "heading": 356
     },
     {
       "name": "ESL WAFA",
@@ -569,24 +581,24 @@
       "imo": 9215323,
       "mmsi": 538009144,
       "lng": 55.2222183,
-      "lat": 25.293345,
+      "lat": 25.2933433,
       "laden": false,
       "dwt": 93552,
       "destination": "LKCMB",
       "speed": 0,
-      "heading": 324
+      "heading": 322
     },
     {
       "name": "SPIRIT OF CHENNAI",
       "imo": 9813840,
       "mmsi": 563299200,
-      "lng": 51.7780533,
-      "lat": 25.2935183,
+      "lng": 51.77794,
+      "lat": 25.2935917,
       "laden": false,
       "dwt": 15362,
       "destination": "QAUMS",
       "speed": 0,
-      "heading": 38
+      "heading": 43
     },
     {
       "name": "CMA CGM EVERGLADE",
@@ -769,6 +781,18 @@
       "heading": 120
     },
     {
+      "name": "GFS GENESIS",
+      "imo": 9704659,
+      "mmsi": 566446000,
+      "lng": 53.7705867,
+      "lat": 25.361235,
+      "laden": false,
+      "dwt": 54285,
+      "destination": "AEKHL",
+      "speed": 10.4,
+      "heading": 111
+    },
+    {
       "name": "H CYGNUS",
       "imo": 9946233,
       "mmsi": 563231800,
@@ -827,18 +851,6 @@
       "destination": "AE DXB",
       "speed": 0.7,
       "heading": 285
-    },
-    {
-      "name": "GFS GENESIS",
-      "imo": 9704659,
-      "mmsi": 566446000,
-      "lng": 53.5978067,
-      "lat": 25.4410217,
-      "laden": false,
-      "dwt": 54285,
-      "destination": "AEKHL",
-      "speed": 10.9,
-      "heading": 113
     },
     {
       "name": "J. PIONEER",
@@ -901,6 +913,18 @@
       "heading": 311
     },
     {
+      "name": "CHI QIANG CHENG XING",
+      "imo": 1028475,
+      "mmsi": 352004383,
+      "lng": 55.04888,
+      "lat": 25.5433633,
+      "laden": false,
+      "dwt": 29370,
+      "destination": "SA JED",
+      "speed": 1.1,
+      "heading": 330
+    },
+    {
       "name": "D ANGELS",
       "imo": 9252357,
       "mmsi": 372762000,
@@ -910,18 +934,6 @@
       "dwt": 37115,
       "destination": "INMUN",
       "speed": 4.5,
-      "heading": 319
-    },
-    {
-      "name": "CHI QIANG CHENG XING",
-      "imo": 1028475,
-      "mmsi": 352004383,
-      "lng": 55.0522183,
-      "lat": 25.59437,
-      "laden": false,
-      "dwt": 29370,
-      "destination": "SA JED",
-      "speed": 2.9,
       "heading": 319
     },
     {
@@ -997,6 +1009,18 @@
       "heading": 279
     },
     {
+      "name": "X-PRESS KOHIMA",
+      "imo": 9155016,
+      "mmsi": 572158220,
+      "lng": 53.5345133,
+      "lat": 25.6854333,
+      "laden": false,
+      "dwt": 21470,
+      "destination": "KHALIFA",
+      "speed": 5.7,
+      "heading": 103
+    },
+    {
       "name": "MSC FLOSTA III",
       "imo": 9232395,
       "mmsi": 352001244,
@@ -1021,28 +1045,16 @@
       "heading": 45
     },
     {
-      "name": "X-PRESS KOHIMA",
-      "imo": 9155016,
-      "mmsi": 572158220,
-      "lng": 53.44428,
-      "lat": 25.7278717,
-      "laden": false,
-      "dwt": 21470,
-      "destination": "KHALIFA",
-      "speed": 5.4,
-      "heading": 105
-    },
-    {
       "name": "AL RUMEILA",
       "imo": 9416006,
       "mmsi": 466057000,
-      "lng": 51.790685,
-      "lat": 25.773135,
+      "lng": 51.7904767,
+      "lat": 25.7731633,
       "laden": true,
       "dwt": 12524,
       "destination": "RAS LAFFAN",
       "speed": 0,
-      "heading": 11
+      "heading": 20
     },
     {
       "name": "AL HUSSEIN",
@@ -1060,13 +1072,13 @@
       "name": "YOGI",
       "imo": 9307009,
       "mmsi": 636020609,
-      "lng": 54.4486433,
-      "lat": 25.8766667,
-      "laden": false,
+      "lng": 54.4498717,
+      "lat": 25.87763,
+      "laden": true,
       "dwt": 66940,
       "destination": "AEMZD",
-      "speed": 0.2,
-      "heading": 318
+      "speed": 0.4,
+      "heading": 316
     },
     {
       "name": "CMA CGM KRIBI",
@@ -1084,25 +1096,25 @@
       "name": "CSCL INDIAN OCEAN",
       "imo": 9695157,
       "mmsi": 477476800,
-      "lng": 56.00976,
-      "lat": 25.8857233,
+      "lng": 56.009745,
+      "lat": 25.8857917,
       "laden": false,
       "dwt": 184320,
       "destination": "CHINESE OWNER_CREW",
-      "speed": 4.6,
-      "heading": 266
+      "speed": 1.7,
+      "heading": 272
     },
     {
       "name": "CSCL ARCTIC OCEAN",
       "imo": 9695169,
       "mmsi": 477967700,
-      "lng": 56.0097317,
-      "lat": 25.8858367,
+      "lng": 56.00973,
+      "lat": 25.8858217,
       "laden": false,
       "dwt": 184320,
-      "destination": "CHINESE OWNER_CR",
-      "speed": 0.9,
-      "heading": 272
+      "destination": "CHINESE OWNER_CREW",
+      "speed": 0,
+      "heading": 294
     },
     {
       "name": "RAMA 3",
@@ -1132,13 +1144,13 @@
       "name": "AS CLEMENTINA",
       "imo": 9314959,
       "mmsi": 255806125,
-      "lng": 52.1286717,
-      "lat": 26.019825,
+      "lng": 52.0001933,
+      "lat": 26.1055483,
       "laden": false,
       "dwt": 39159,
       "destination": "FOR ORDER",
-      "speed": 8.4,
-      "heading": 307
+      "speed": 8.6,
+      "heading": 313
     },
     {
       "name": "MSC ISHYKA",
@@ -1192,8 +1204,8 @@
       "name": "DSL MARINER",
       "imo": 9138745,
       "mmsi": 370031000,
-      "lng": 53.63907,
-      "lat": 26.2943367,
+      "lng": 53.6391033,
+      "lat": 26.29425,
       "laden": true,
       "dwt": 3931,
       "destination": "ABU AL FELOOS",
@@ -1228,13 +1240,13 @@
       "name": "SEPEHR PAYAM",
       "imo": 9110535,
       "mmsi": 422058200,
-      "lng": 55.58942,
-      "lat": 26.50697,
+      "lng": 55.5894867,
+      "lat": 26.5070767,
       "laden": false,
       "dwt": 3908,
       "destination": "BND",
-      "speed": 0,
-      "heading": 220.5
+      "speed": 0.1,
+      "heading": 55.3
     },
     {
       "name": "RANTANPLAN",
@@ -1252,12 +1264,12 @@
       "name": "EXPRESS ROME",
       "imo": 9484936,
       "mmsi": 636015019,
-      "lng": 52.4463383,
-      "lat": 26.5646683,
+      "lng": 52.35797,
+      "lat": 26.660735,
       "laden": false,
       "dwt": 122961,
       "destination": "AEKHL_SADMM",
-      "speed": 10.9,
+      "speed": 11.2,
       "heading": 321
     },
     {
@@ -1300,37 +1312,49 @@
       "name": "WAN HAI A07",
       "imo": 9555096,
       "mmsi": 563170300,
-      "lng": 50.5059367,
-      "lat": 26.8127233,
+      "lng": 50.5060083,
+      "lat": 26.8125733,
       "laden": false,
       "dwt": 144572,
       "destination": "SGSIN",
-      "speed": 0.5,
-      "heading": 44
+      "speed": 0.1,
+      "heading": 41
     },
     {
       "name": "KOTA RAHMAT",
       "imo": 9359674,
       "mmsi": 565730000,
-      "lng": 50.5140883,
-      "lat": 26.8266733,
+      "lng": 50.51415,
+      "lat": 26.8266,
       "laden": true,
       "dwt": 12985,
       "destination": "UMM QASR",
       "speed": 0,
-      "heading": 37
+      "heading": 32
     },
     {
       "name": "HELLA",
       "imo": 9535137,
       "mmsi": 255805589,
-      "lng": 50.5314133,
-      "lat": 26.8398517,
+      "lng": 50.53187,
+      "lat": 26.8396467,
       "laden": false,
       "dwt": 73195,
       "destination": "SADMN OPL",
-      "speed": 2.7,
-      "heading": 42
+      "speed": 0,
+      "heading": 33
+    },
+    {
+      "name": "MAO GANG XIA MEN",
+      "imo": 9992775,
+      "mmsi": 352004509,
+      "lng": 51.2971683,
+      "lat": 26.8398883,
+      "laden": false,
+      "dwt": 38384,
+      "destination": "QA HMD_CHINA OWNER",
+      "speed": 13.1,
+      "heading": 151
     },
     {
       "name": "ARTENOS",
@@ -1384,25 +1408,13 @@
       "name": "KASHAN",
       "imo": 9270696,
       "mmsi": 422068100,
-      "lng": 56.24134,
-      "lat": 27.0487733,
+      "lng": 56.2416367,
+      "lat": 27.0492417,
       "laden": false,
       "dwt": 29870,
       "destination": "IRBND",
       "speed": 0,
-      "heading": 273
-    },
-    {
-      "name": "MAO GANG XIA MEN",
-      "imo": 9992775,
-      "mmsi": 352004509,
-      "lng": 51.1588483,
-      "lat": 27.052665,
-      "laden": false,
-      "dwt": 38384,
-      "destination": "QA HMD_CHINA OWNER",
-      "speed": 17.9,
-      "heading": 148
+      "heading": 266
     },
     {
       "name": "BEHTA",
@@ -1432,8 +1444,8 @@
       "name": "FLORA",
       "imo": 9349576,
       "mmsi": 468426000,
-      "lng": 56.0503183,
-      "lat": 27.09546,
+      "lng": 56.05036,
+      "lat": 27.0954167,
       "laden": true,
       "dwt": 86018,
       "destination": "BANDAR ABBAS",
@@ -1492,13 +1504,13 @@
       "name": "GAUJA",
       "imo": 9348493,
       "mmsi": 0,
-      "lng": 56.4624933,
-      "lat": 27.1282517,
+      "lng": 56.462505,
+      "lat": 27.1282283,
       "laden": false,
       "dwt": 20643,
       "destination": "ASALUYEH_IRAM",
       "speed": 0,
-      "heading": 306
+      "heading": 308
     },
     {
       "name": "AISANA",
@@ -1528,25 +1540,25 @@
       "name": "EVER UNICORN",
       "imo": 9196967,
       "mmsi": 564995000,
-      "lng": 50.8049883,
-      "lat": 27.3621883,
+      "lng": 50.8044817,
+      "lat": 27.3619917,
       "laden": false,
       "dwt": 63400,
       "destination": "WAITING FOR ORDER",
-      "speed": 0.3,
+      "speed": 1.7,
       "heading": 161
     },
     {
       "name": "HMM DAON",
       "imo": 9869227,
       "mmsi": 440880000,
-      "lng": 50.2430183,
-      "lat": 27.38048,
+      "lng": 50.2922783,
+      "lat": 27.3898583,
       "laden": false,
       "dwt": 160927,
       "destination": "SAJUB_OPL",
-      "speed": 5.9,
-      "heading": 87
+      "speed": 0.2,
+      "heading": 316
     },
     {
       "name": "TAVANGAR",
@@ -1576,25 +1588,13 @@
       "name": "EVER LOVELY",
       "imo": 9629110,
       "mmsi": 563033000,
-      "lng": 50.6435633,
-      "lat": 27.7460917,
+      "lng": 50.663865,
+      "lat": 27.7383183,
       "laden": false,
       "dwt": 104357,
       "destination": "IQ UQS _ OPEN SEA",
-      "speed": 0.9,
+      "speed": 35.1,
       "heading": 159
-    },
-    {
-      "name": "QINGDAO STAR",
-      "imo": 9318163,
-      "mmsi": 538010837,
-      "lng": 50.462495,
-      "lat": 27.7726067,
-      "laden": false,
-      "dwt": 50689,
-      "destination": "SHUAIBA",
-      "speed": 9.2,
-      "heading": 335
     },
     {
       "name": "ILDA 2",
@@ -1609,40 +1609,52 @@
       "heading": 226.2
     },
     {
+      "name": "QINGDAO STAR",
+      "imo": 9318163,
+      "mmsi": 538010837,
+      "lng": 50.38192,
+      "lat": 27.9156667,
+      "laden": false,
+      "dwt": 50689,
+      "destination": "SHUAIBA",
+      "speed": 8.9,
+      "heading": 331
+    },
+    {
       "name": "EVER LOTUS",
       "imo": 9604122,
       "mmsi": 352135000,
-      "lng": 50.357245,
-      "lat": 28.211305,
+      "lng": 50.359835,
+      "lat": 28.1943,
       "laden": false,
       "dwt": 103668,
       "destination": "IQUQR_SADMM",
       "speed": 0.9,
-      "heading": 327
-    },
-    {
-      "name": "JASMIN",
-      "imo": 9179919,
-      "mmsi": 620999341,
-      "lng": 50.70847,
-      "lat": 28.9898517,
-      "laden": true,
-      "dwt": 4986,
-      "destination": "_BUSHEHR",
-      "speed": 0,
-      "heading": 141.3
+      "heading": 333
     },
     {
       "name": "SSF VALENCE",
       "imo": 9304693,
       "mmsi": 377482000,
-      "lng": 49.8363383,
-      "lat": 28.99674,
+      "lng": 49.9868233,
+      "lat": 28.8127283,
       "laden": false,
       "dwt": 37921,
       "destination": "AE KHALIFA",
       "speed": 13.8,
       "heading": 144
+    },
+    {
+      "name": "JASMIN",
+      "imo": 9179919,
+      "mmsi": 620999341,
+      "lng": 50.7085567,
+      "lat": 28.9898617,
+      "laden": true,
+      "dwt": 4986,
+      "destination": "_BUSHEHR",
+      "speed": 0,
+      "heading": 314
     },
     {
       "name": "MSC SARISKA V",
@@ -1708,16 +1720,16 @@
       "name": "MSC MOON F",
       "imo": 9366421,
       "mmsi": 636021247,
-      "lng": 47.9358067,
-      "lat": 30.0527067,
+      "lng": 47.9358333,
+      "lat": 30.0526567,
       "laden": true,
       "dwt": 12545,
       "destination": "AEAUH_IQUQR",
-      "speed": 0,
+      "speed": 0.1,
       "heading": 323
     }
   ],
-  "total": 143,
+  "total": 144,
   "source": "S&P MINT (direct API)",
-  "timestamp": "2026-03-29T19:42:12.637Z"
+  "timestamp": "2026-03-29T20:53:58.103Z"
 }

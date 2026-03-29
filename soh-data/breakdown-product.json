@@ -1,3097 +1,469 @@
 {
   "data": [
     {
-      "label": "Dry Bulk",
-      "total": 1725,
-      "ballast": 634,
-      "laden": 1082
-    },
-    {
-      "label": "Clean petroleum products",
-      "total": 1214,
-      "ballast": 547,
-      "laden": 667
-    },
-    {
-      "label": "lng",
-      "total": 882,
-      "ballast": 576,
-      "laden": 304
-    },
-    {
-      "label": "Thermal Coal",
-      "total": 875,
-      "ballast": 456,
-      "laden": 419
-    },
-    {
-      "label": "Unknown",
-      "total": 839,
-      "ballast": 606,
-      "laden": 16
-    },
-    {
-      "label": "Minor Bulks",
-      "total": 808,
-      "ballast": 309,
-      "laden": 498
-    },
-    {
-      "label": "Steel",
-      "total": 786,
-      "ballast": 307,
-      "laden": 475
-    },
-    {
-      "label": "Iron Ore",
-      "total": 654,
-      "ballast": 264,
-      "laden": 390
-    },
-    {
-      "label": "Low CV",
-      "total": 588,
-      "ballast": 253,
-      "laden": 335
-    },
-    {
-      "label": "Chem/Bio",
-      "total": 567,
-      "ballast": 202,
-      "laden": 365
-    },
-    {
-      "label": "Soybean",
-      "total": 563,
-      "ballast": 145,
-      "laden": 418
-    },
-    {
-      "label": "Bauxite",
-      "total": 515,
-      "ballast": 190,
-      "laden": 325
-    },
-    {
-      "label": "Fuel Oils",
-      "total": 487,
-      "ballast": 240,
-      "laden": 247
-    },
-    {
-      "label": "Coal",
-      "total": 465,
-      "ballast": 203,
-      "laden": 262
-    },
-    {
-      "label": "LPG",
-      "total": 443,
-      "ballast": 230,
-      "laden": 213
-    },
-    {
-      "label": "Grains/Oilseeds",
-      "total": 433,
-      "ballast": 185,
-      "laden": 247
-    },
-    {
-      "label": "Gasoline",
-      "total": 425,
-      "ballast": 229,
-      "laden": 196
-    },
-    {
-      "label": "Metallurgical Coal",
-      "total": 420,
-      "ballast": 192,
-      "laden": 226
-    },
-    {
-      "label": "Ultra Low Sulfur Diesel",
-      "total": 412,
-      "ballast": 196,
-      "laden": 216
-    },
-    {
-      "label": "Propane",
-      "total": 382,
-      "ballast": 235,
-      "laden": 146
-    },
-    {
-      "label": "Cement",
-      "total": 379,
-      "ballast": 164,
-      "laden": 215
-    },
-    {
-      "label": "Corn",
-      "total": 368,
-      "ballast": 164,
-      "laden": 204
-    },
-    {
-      "label": "Naphtha",
-      "total": 360,
-      "ballast": 186,
-      "laden": 174
-    },
-    {
-      "label": "Wheat",
-      "total": 334,
-      "ballast": 148,
-      "laden": 186
-    },
-    {
-      "label": "High Sulfur Fuel Oil",
-      "total": 327,
-      "ballast": 193,
-      "laden": 134
-    },
-    {
-      "label": "Butane",
-      "total": 235,
-      "ballast": 137,
-      "laden": 97
-    },
-    {
-      "label": "Chemicals",
-      "total": 231,
-      "ballast": 91,
-      "laden": 140
-    },
-    {
-      "label": "Bitumen/Asphalt",
-      "total": 229,
-      "ballast": 128,
-      "laden": 101
-    },
-    {
-      "label": "urals",
-      "total": 221,
-      "ballast": 133,
-      "laden": 88
-    },
-    {
-      "label": "Gasoil",
-      "total": 216,
-      "ballast": 142,
-      "laden": 74
-    },
-    {
-      "label": "Hard Wheat",
-      "total": 210,
-      "ballast": 100,
-      "laden": 110
-    },
-    {
-      "label": "Olefins",
-      "total": 209,
-      "ballast": 95,
-      "laden": 114
-    },
-    {
-      "label": "Fertilizer",
-      "total": 208,
-      "ballast": 52,
-      "laden": 156
-    },
-    {
-      "label": "Clinker",
-      "total": 191,
-      "ballast": 59,
-      "laden": 132
-    },
-    {
-      "label": "Iran",
-      "total": 181,
-      "ballast": 115,
-      "laden": 66
-    },
-    {
-      "label": "Ferrous Scrap",
-      "total": 170,
-      "ballast": 69,
-      "laden": 101
-    },
-    {
-      "label": "Soybean Meal",
-      "total": 169,
-      "ballast": 58,
-      "laden": 111
-    },
-    {
-      "label": "Copper Concentrate",
-      "total": 166,
-      "ballast": 58,
-      "laden": 108
-    },
-    {
-      "label": "High CV",
-      "total": 162,
-      "ballast": 72,
-      "laden": 90
-    },
-    {
-      "label": "Iron Ore Concentrate",
-      "total": 161,
-      "ballast": 69,
-      "laden": 92
-    },
-    {
-      "label": "Wood chips",
-      "total": 153,
-      "ballast": 65,
-      "laden": 88
-    },
-    {
-      "label": "Arab",
-      "total": 147,
-      "ballast": 70,
+      "label": "Container Cargo",
+      "total": 144,
+      "ballast": 67,
       "laden": 77
     },
     {
-      "label": "Methanol",
-      "total": 144,
-      "ballast": 69,
-      "laden": 75
-    },
-    {
-      "label": "Manganese Ore",
-      "total": 143,
-      "ballast": 45,
-      "laden": 98
-    },
-    {
-      "label": "Container Cargo",
-      "total": 143,
-      "ballast": 68,
-      "laden": 75
-    },
-    {
-      "label": "Alumina",
-      "total": 142,
-      "ballast": 50,
-      "laden": 92
-    },
-    {
-      "label": "Yellow Corn",
-      "total": 141,
-      "ballast": 80,
-      "laden": 61
-    },
-    {
-      "label": "Iron Ore Fines",
-      "total": 139,
-      "ballast": 77,
-      "laden": 62
-    },
-    {
-      "label": "Palm Oil",
-      "total": 134,
-      "ballast": 51,
-      "laden": 83
-    },
-    {
-      "label": "Iron Ore Pellets",
-      "total": 130,
-      "ballast": 70,
-      "laden": 60
-    },
-    {
-      "label": "Crude Oil/Condensate",
-      "total": 128,
-      "ballast": 66,
-      "laden": 62
-    },
-    {
-      "label": "Urea",
-      "total": 127,
-      "ballast": 43,
-      "laden": 83
-    },
-    {
-      "label": "Sugar",
-      "total": 127,
-      "ballast": 64,
-      "laden": 63
-    },
-    {
-      "label": "WTI midland",
-      "total": 124,
-      "ballast": 63,
-      "laden": 61
-    },
-    {
-      "label": "Salt",
-      "total": 120,
-      "ballast": 65,
-      "laden": 55
-    },
-    {
-      "label": "Jet A-1",
-      "total": 119,
-      "ballast": 75,
+      "label": "Clean petroleum products",
+      "total": 76,
+      "ballast": 32,
       "laden": 44
     },
     {
-      "label": "Potash (MOP)",
-      "total": 108,
-      "ballast": 44,
-      "laden": 64
+      "label": "Naphtha",
+      "total": 57,
+      "ballast": 41,
+      "laden": 16
     },
     {
-      "label": "Green Petcoke",
-      "total": 105,
-      "ballast": 25,
-      "laden": 80
+      "label": "Dry Bulk",
+      "total": 55,
+      "ballast": 32,
+      "laden": 23
     },
     {
-      "label": "Barley",
-      "total": 102,
+      "label": "Unknown",
+      "total": 52,
       "ballast": 51,
-      "laden": 51
-    },
-    {
-      "label": "Low Sulfur Fuel Oil",
-      "total": 96,
-      "ballast": 53,
-      "laden": 43
-    },
-    {
-      "label": "Very Low Sulphur Fuel Oil",
-      "total": 92,
-      "ballast": 48,
-      "laden": 44
-    },
-    {
-      "label": "Limestone",
-      "total": 90,
-      "ballast": 60,
-      "laden": 30
-    },
-    {
-      "label": "Diesel",
-      "total": 86,
-      "ballast": 39,
-      "laden": 47
-    },
-    {
-      "label": "Nickel Ore",
-      "total": 86,
-      "ballast": 21,
-      "laden": 65
-    },
-    {
-      "label": "Phosrock",
-      "total": 84,
-      "ballast": 28,
-      "laden": 56
+      "laden": 0
     },
     {
       "label": "High Sulphur Straight Run Fuel Oil",
-      "total": 79,
-      "ballast": 29,
-      "laden": 50
-    },
-    {
-      "label": "Sulphur",
-      "total": 78,
-      "ballast": 43,
-      "laden": 35
-    },
-    {
-      "label": "Pilbara Blend Fines",
-      "total": 77,
-      "ballast": 54,
-      "laden": 23
-    },
-    {
-      "label": "Gasoil/Diesel",
-      "total": 74,
-      "ballast": 44,
-      "laden": 30
-    },
-    {
-      "label": "Carajas Fines",
-      "total": 72,
-      "ballast": 50,
-      "laden": 22
-    },
-    {
-      "label": "Rice",
-      "total": 68,
-      "ballast": 40,
-      "laden": 28
-    },
-    {
-      "label": "Murban",
-      "total": 68,
-      "ballast": 47,
-      "laden": 21
-    },
-    {
-      "label": "Ethane",
-      "total": 68,
-      "ballast": 31,
+      "total": 48,
+      "ballast": 11,
       "laden": 37
     },
     {
-      "label": "Soft Wheat",
-      "total": 66,
-      "ballast": 34,
-      "laden": 32
-    },
-    {
-      "label": "Middle Distillates",
-      "total": 64,
-      "ballast": 41,
-      "laden": 23
-    },
-    {
-      "label": "Forest Products",
-      "total": 62,
-      "ballast": 16,
-      "laden": 46
-    },
-    {
-      "label": "merey",
-      "total": 61,
-      "ballast": 32,
-      "laden": 29
-    },
-    {
-      "label": "Grains",
-      "total": 61,
+      "label": "Bitumen/Asphalt",
+      "total": 46,
       "ballast": 28,
-      "laden": 33
+      "laden": 18
     },
     {
-      "label": "Middle East",
-      "total": 61,
-      "ballast": 48,
-      "laden": 13
-    },
-    {
-      "label": "Wood pulp",
-      "total": 61,
-      "ballast": 11,
-      "laden": 50
-    },
-    {
-      "label": "Sulphuric Acid",
-      "total": 59,
-      "ballast": 34,
-      "laden": 25
-    },
-    {
-      "label": "Medium CV",
-      "total": 59,
-      "ballast": 28,
-      "laden": 31
-    },
-    {
-      "label": "Major Bulks",
-      "total": 58,
-      "ballast": 38,
-      "laden": 19
-    },
-    {
-      "label": "Newman Blend Lump",
-      "total": 57,
-      "ballast": 30,
-      "laden": 27
-    },
-    {
-      "label": "Logs/Timber",
-      "total": 57,
+      "label": "High Sulfur Fuel Oil",
+      "total": 43,
       "ballast": 17,
-      "laden": 40
-    },
-    {
-      "label": "Jet",
-      "total": 56,
-      "ballast": 27,
-      "laden": 29
-    },
-    {
-      "label": "MAC Fines",
-      "total": 56,
-      "ballast": 36,
-      "laden": 20
-    },
-    {
-      "label": "CPC Kazakhstan",
-      "total": 54,
-      "ballast": 24,
-      "laden": 30
-    },
-    {
-      "label": "Paraxylene",
-      "total": 54,
-      "ballast": 32,
-      "laden": 22
-    },
-    {
-      "label": "Metallurgical Coke",
-      "total": 53,
-      "ballast": 28,
-      "laden": 25
-    },
-    {
-      "label": "Ethylene",
-      "total": 53,
-      "ballast": 31,
-      "laden": 22
-    },
-    {
-      "label": "Liquids",
-      "total": 53,
-      "ballast": 21,
       "laden": 26
     },
     {
-      "label": "Crude Oil",
-      "total": 52,
-      "ballast": 28,
-      "laden": 24
+      "label": "Iran",
+      "total": 40,
+      "ballast": 30,
+      "laden": 10
     },
     {
-      "label": "Caustic Soda",
-      "total": 52,
-      "ballast": 28,
-      "laden": 24
-    },
-    {
-      "label": "Grey Ammonia",
-      "total": 50,
-      "ballast": 32,
-      "laden": 18
-    },
-    {
-      "label": "Rapeseed (Canola)",
-      "total": 50,
-      "ballast": 19,
-      "laden": 31
-    },
-    {
-      "label": "Chrome Ore",
-      "total": 49,
+      "label": "Steel",
+      "total": 32,
       "ballast": 22,
-      "laden": 27
+      "laden": 10
     },
     {
-      "label": "Vinyl Chloride Monomer",
-      "total": 48,
-      "ballast": 24,
-      "laden": 24
+      "label": "Corn",
+      "total": 32,
+      "ballast": 22,
+      "laden": 10
     },
     {
-      "label": "EOPL",
-      "total": 48,
-      "ballast": 33,
+      "label": "Arab",
+      "total": 29,
+      "ballast": 3,
+      "laden": 26
+    },
+    {
+      "label": "Fuel Oils",
+      "total": 29,
+      "ballast": 14,
       "laden": 15
     },
     {
-      "label": "Steel Coils",
-      "total": 47,
-      "ballast": 23,
-      "laden": 24
+      "label": "Methanol",
+      "total": 28,
+      "ballast": 12,
+      "laden": 16
     },
     {
-      "label": "Crude Palm Oil",
-      "total": 47,
-      "ballast": 30,
-      "laden": 17
+      "label": "Butane",
+      "total": 28,
+      "ballast": 19,
+      "laden": 9
+    },
+    {
+      "label": "Chem/Bio",
+      "total": 23,
+      "ballast": 11,
+      "laden": 12
+    },
+    {
+      "label": "lng",
+      "total": 20,
+      "ballast": 6,
+      "laden": 14
+    },
+    {
+      "label": "Propane",
+      "total": 20,
+      "ballast": 15,
+      "laden": 5
+    },
+    {
+      "label": "Urea",
+      "total": 19,
+      "ballast": 1,
+      "laden": 18
+    },
+    {
+      "label": "Minor Bulks",
+      "total": 18,
+      "ballast": 9,
+      "laden": 9
+    },
+    {
+      "label": "Iron Ore Pellets",
+      "total": 18,
+      "ballast": 12,
+      "laden": 6
+    },
+    {
+      "label": "Gasoil",
+      "total": 15,
+      "ballast": 11,
+      "laden": 4
+    },
+    {
+      "label": "Chemicals",
+      "total": 13,
+      "ballast": 5,
+      "laden": 8
+    },
+    {
+      "label": "LPG",
+      "total": 13,
+      "ballast": 9,
+      "laden": 4
     },
     {
       "label": "Basrah Medium",
-      "total": 46,
-      "ballast": 30,
-      "laden": 16
-    },
-    {
-      "label": "US Light Sweet",
-      "total": 46,
-      "ballast": 7,
-      "laden": 39
-    },
-    {
-      "label": "Sunflower Oil",
-      "total": 46,
-      "ballast": 25,
-      "laden": 21
-    },
-    {
-      "label": "Thermal Bituminous",
-      "total": 45,
-      "ballast": 29,
-      "laden": 16
-    },
-    {
-      "label": "Low Sulphur Straight Run Fuel Oil",
-      "total": 44,
-      "ballast": 20,
-      "laden": 24
-    },
-    {
-      "label": "Petcoke",
-      "total": 44,
-      "ballast": 20,
-      "laden": 24
-    },
-    {
-      "label": "95 Gasoline",
-      "total": 43,
-      "ballast": 26,
-      "laden": 17
-    },
-    {
-      "label": "Granular Urea",
-      "total": 41,
-      "ballast": 24,
-      "laden": 17
-    },
-    {
-      "label": "Ammonium Sulphates",
-      "total": 41,
-      "ballast": 20,
-      "laden": 20
-    },
-    {
-      "label": "Propylene",
-      "total": 41,
-      "ballast": 25,
-      "laden": 16
-    },
-    {
-      "label": "Base Oil",
-      "total": 41,
-      "ballast": 21,
-      "laden": 20
-    },
-    {
-      "label": "Pilbara Blend Lump",
-      "total": 41,
-      "ballast": 27,
-      "laden": 14
-    },
-    {
-      "label": "espo",
-      "total": 41,
-      "ballast": 31,
-      "laden": 10
-    },
-    {
-      "label": "Gypsum",
-      "total": 40,
-      "ballast": 16,
-      "laden": 24
-    },
-    {
-      "label": "Minerals",
-      "total": 39,
-      "ballast": 10,
-      "laden": 29
-    },
-    {
-      "label": "Wood pellets",
-      "total": 36,
-      "ballast": 15,
-      "laden": 21
-    },
-    {
-      "label": "Soybean Oil",
-      "total": 36,
-      "ballast": 11,
-      "laden": 25
-    },
-    {
-      "label": "Benzene",
-      "total": 36,
-      "ballast": 15,
-      "laden": 21
-    },
-    {
-      "label": "Biodiesel (FAME)",
-      "total": 36,
-      "ballast": 14,
-      "laden": 22
-    },
-    {
-      "label": "Durum",
-      "total": 36,
-      "ballast": 14,
-      "laden": 22
-    },
-    {
-      "label": "FerroNickel",
-      "total": 36,
-      "ballast": 10,
-      "laden": 25
-    },
-    {
-      "label": "Vegoils",
-      "total": 36,
-      "ballast": 22,
-      "laden": 14
-    },
-    {
-      "label": "Sorghum",
-      "total": 35,
-      "ballast": 7,
-      "laden": 28
-    },
-    {
-      "label": "Vegoils/Biofuels",
-      "total": 35,
-      "ballast": 11,
-      "laden": 24
-    },
-    {
-      "label": "Coke",
-      "total": 35,
-      "ballast": 12,
-      "laden": 23
-    },
-    {
-      "label": "Medium Fines",
-      "total": 34,
-      "ballast": 13,
-      "laden": 21
-    },
-    {
-      "label": "Slag",
-      "total": 34,
-      "ballast": 18,
-      "laden": 16
-    },
-    {
-      "label": "Molten Sulphur",
-      "total": 34,
-      "ballast": 17,
-      "laden": 17
-    },
-    {
-      "label": "MTBE",
-      "total": 33,
-      "ballast": 17,
-      "laden": 16
-    },
-    {
-      "label": "Cracked Fuel Oil",
-      "total": 33,
-      "ballast": 18,
-      "laden": 15
-    },
-    {
-      "label": "Zinc Concentrate",
-      "total": 32,
-      "ballast": 14,
-      "laden": 17
-    },
-    {
-      "label": "oman export",
-      "total": 32,
-      "ballast": 23,
-      "laden": 9
-    },
-    {
-      "label": "Monoethylene Glycol",
-      "total": 31,
-      "ballast": 16,
-      "laden": 15
-    },
-    {
-      "label": "mero",
-      "total": 30,
-      "ballast": 9,
-      "laden": 21
-    },
-    {
-      "label": "Ethanol",
-      "total": 30,
-      "ballast": 11,
-      "laden": 19
-    },
-    {
-      "label": "Butadiene",
-      "total": 30,
-      "ballast": 20,
-      "laden": 10
-    },
-    {
-      "label": "Sand",
-      "total": 30,
-      "ballast": 12,
-      "laden": 18
-    },
-    {
-      "label": "Phosphoric Acid",
-      "total": 30,
-      "ballast": 16,
-      "laden": 14
-    },
-    {
-      "label": "arab light",
-      "total": 29,
-      "ballast": 25,
-      "laden": 4
-    },
-    {
-      "label": "Newman High Grade Fines",
-      "total": 29,
-      "ballast": 13,
-      "laden": 16
-    },
-    {
-      "label": "Gasoil 500ppm",
-      "total": 28,
-      "ballast": 15,
-      "laden": 13
-    },
-    {
-      "label": "Brazil Crude",
-      "total": 28,
-      "ballast": 26,
-      "laden": 2
-    },
-    {
-      "label": "RBD Palm Olein",
-      "total": 28,
-      "ballast": 19,
-      "laden": 9
-    },
-    {
-      "label": "Phosphorus Fertilizers",
-      "total": 28,
-      "ballast": 13,
-      "laden": 15
-    },
-    {
-      "label": "Monoammonium Phosphates",
-      "total": 27,
-      "ballast": 12,
-      "laden": 15
-    },
-    {
-      "label": "Tupi",
-      "total": 27,
-      "ballast": 13,
-      "laden": 14
-    },
-    {
-      "label": "Soda Ash",
-      "total": 26,
-      "ballast": 10,
-      "laden": 15
-    },
-    {
-      "label": "Clean",
-      "total": 26,
-      "ballast": 15,
+      "total": 12,
+      "ballast": 1,
       "laden": 11
     },
     {
-      "label": "Low Fines",
-      "total": 26,
-      "ballast": 13,
-      "laden": 13
-    },
-    {
-      "label": "TMX Canada",
-      "total": 25,
+      "label": "Gasoline",
+      "total": 12,
       "ballast": 9,
-      "laden": 16
+      "laden": 3
     },
     {
-      "label": "Ammonia",
-      "total": 25,
-      "ballast": 10,
-      "laden": 15
-    },
-    {
-      "label": "Sunflowerseed Meal",
-      "total": 25,
-      "ballast": 9,
-      "laden": 16
-    },
-    {
-      "label": "Venezuela Crude",
-      "total": 25,
-      "ballast": 16,
-      "laden": 9
-    },
-    {
-      "label": "Steel Slabs",
-      "total": 24,
-      "ballast": 9,
-      "laden": 15
-    },
-    {
-      "label": "Polymer Grade Propylene",
-      "total": 24,
-      "ballast": 11,
-      "laden": 13
-    },
-    {
-      "label": "Pulverized Coal Injection",
-      "total": 23,
-      "ballast": 14,
-      "laden": 9
-    },
-    {
-      "label": "Buzios",
-      "total": 23,
-      "ballast": 11,
-      "laden": 12
-    },
-    {
-      "label": "Roy Hill Fines",
-      "total": 23,
-      "ballast": 19,
-      "laden": 4
-    },
-    {
-      "label": "Urea Ammonium Nitrate",
-      "total": 23,
-      "ballast": 9,
-      "laden": 14
-    },
-    {
-      "label": "92 Gasoline",
-      "total": 22,
-      "ballast": 18,
-      "laden": 4
-    },
-    {
-      "label": "Used Cooking Oil",
-      "total": 22,
+      "label": "Alumina",
+      "total": 11,
       "ballast": 8,
-      "laden": 14
+      "laden": 3
+    },
+    {
+      "label": "Limestone",
+      "total": 10,
+      "ballast": 6,
+      "laden": 4
+    },
+    {
+      "label": "Ultra Low Sulfur Diesel",
+      "total": 9,
+      "ballast": 4,
+      "laden": 5
     },
     {
       "label": "kuwait export",
-      "total": 22,
-      "ballast": 15,
+      "total": 9,
+      "ballast": 2,
       "laden": 7
     },
     {
-      "label": "Diammonium Phosphates",
-      "total": 22,
-      "ballast": 10,
-      "laden": 12
-    },
-    {
-      "label": "Yandicoogina Fines",
-      "total": 22,
-      "ballast": 11,
-      "laden": 11
-    },
-    {
-      "label": "Western Russia Crude",
-      "total": 22,
-      "ballast": 7,
-      "laden": 15
-    },
-    {
-      "label": "boscan",
-      "total": 21,
-      "ballast": 12,
+      "label": "Sulphur",
+      "total": 9,
+      "ballast": 0,
       "laden": 9
     },
     {
-      "label": "Upper Zakum",
-      "total": 21,
-      "ballast": 15,
+      "label": "Cement",
+      "total": 9,
+      "ballast": 2,
+      "laden": 7
+    },
+    {
+      "label": "Barley",
+      "total": 9,
+      "ballast": 8,
+      "laden": 1
+    },
+    {
+      "label": "Grains/Oilseeds",
+      "total": 8,
+      "ballast": 7,
+      "laden": 1
+    },
+    {
+      "label": "Wheat",
+      "total": 8,
+      "ballast": 5,
+      "laden": 3
+    },
+    {
+      "label": "Crude Oil/Condensate",
+      "total": 7,
+      "ballast": 1,
       "laden": 6
-    },
-    {
-      "label": "Finished Steel",
-      "total": 21,
-      "ballast": 10,
-      "laden": 11
-    },
-    {
-      "label": "Triple Superphosphates",
-      "total": 20,
-      "ballast": 6,
-      "laden": 14
-    },
-    {
-      "label": "Iron Ore Lump",
-      "total": 20,
-      "ballast": 12,
-      "laden": 8
-    },
-    {
-      "label": "Lithium",
-      "total": 20,
-      "ballast": 6,
-      "laden": 14
     },
     {
       "label": "basrah heavy",
-      "total": 20,
-      "ballast": 15,
-      "laden": 5
+      "total": 7,
+      "ballast": 3,
+      "laden": 4
     },
     {
-      "label": "Granite",
-      "total": 20,
-      "ballast": 7,
-      "laden": 13
-    },
-    {
-      "label": "Gasoline/Naphtha",
-      "total": 19,
-      "ballast": 7,
-      "laden": 12
-    },
-    {
-      "label": "Styrene",
-      "total": 19,
-      "ballast": 13,
+      "label": "Upper Zakum",
+      "total": 7,
+      "ballast": 1,
       "laden": 6
     },
     {
-      "label": "Sokol",
-      "total": 19,
+      "label": "Jet A-1",
+      "total": 7,
+      "ballast": 6,
+      "laden": 1
+    },
+    {
+      "label": "Grey Ammonia",
+      "total": 7,
+      "ballast": 5,
+      "laden": 2
+    },
+    {
+      "label": "Iron Ore",
+      "total": 7,
       "ballast": 7,
-      "laden": 12
+      "laden": 0
     },
     {
       "label": "Das",
-      "total": 18,
-      "ballast": 12,
+      "total": 6,
+      "ballast": 1,
+      "laden": 5
+    },
+    {
+      "label": "Soybean",
+      "total": 6,
+      "ballast": 5,
+      "laden": 1
+    },
+    {
+      "label": "Minerals",
+      "total": 6,
+      "ballast": 0,
       "laden": 6
     },
     {
-      "label": "91 Gasoline",
-      "total": 18,
-      "ballast": 9,
-      "laden": 9
+      "label": "Phosphorus Fertilizers",
+      "total": 5,
+      "ballast": 0,
+      "laden": 5
     },
     {
-      "label": "WTI",
-      "total": 18,
-      "ballast": 10,
-      "laden": 8
-    },
-    {
-      "label": "Super Special Fines",
-      "total": 18,
-      "ballast": 15,
-      "laden": 3
-    },
-    {
-      "label": "Raw Sugar",
-      "total": 18,
-      "ballast": 16,
+      "label": "Hard Wheat",
+      "total": 5,
+      "ballast": 3,
       "laden": 2
     },
     {
-      "label": "Oilseeds",
-      "total": 18,
-      "ballast": 7,
-      "laden": 11
+      "label": "Very Low Sulphur Fuel Oil",
+      "total": 5,
+      "ballast": 3,
+      "laden": 2
     },
     {
-      "label": "SFGB Fines",
-      "total": 18,
-      "ballast": 14,
-      "laden": 4
+      "label": "Murban",
+      "total": 5,
+      "ballast": 3,
+      "laden": 2
     },
     {
-      "label": "Medanito",
-      "total": 18,
-      "ballast": 8,
-      "laden": 10
+      "label": "Bauxite",
+      "total": 5,
+      "ballast": 4,
+      "laden": 1
     },
     {
-      "label": "Aluminium products",
-      "total": 18,
-      "ballast": 7,
-      "laden": 11
+      "label": "Middle Distillates",
+      "total": 4,
+      "ballast": 1,
+      "laden": 3
     },
     {
-      "label": "Marine Diesel",
-      "total": 18,
-      "ballast": 7,
-      "laden": 11
+      "label": "Clean",
+      "total": 4,
+      "ballast": 2,
+      "laden": 2
     },
     {
-      "label": "Azeri BTC",
-      "total": 17,
-      "ballast": 7,
-      "laden": 10
+      "label": "Gasoil/Diesel",
+      "total": 4,
+      "ballast": 3,
+      "laden": 1
     },
     {
-      "label": "Varandey",
-      "total": 17,
-      "ballast": 10,
-      "laden": 7
+      "label": "Soybean Meal",
+      "total": 4,
+      "ballast": 1,
+      "laden": 3
     },
     {
       "label": "Steel Pipes",
-      "total": 17,
-      "ballast": 6,
-      "laden": 11
-    },
-    {
-      "label": "Peas",
-      "total": 16,
-      "ballast": 11,
-      "laden": 5
-    },
-    {
-      "label": "Vacuum Gasoil",
-      "total": 16,
-      "ballast": 10,
-      "laden": 6
-    },
-    {
-      "label": "Renewable Diesel",
-      "total": 16,
-      "ballast": 5,
-      "laden": 11
-    },
-    {
-      "label": "Concentration Feed Fines Tubarao",
-      "total": 16,
-      "ballast": 9,
-      "laden": 7
-    },
-    {
-      "label": "SP10 Lump",
-      "total": 16,
-      "ballast": 8,
-      "laden": 8
-    },
-    {
-      "label": "Cape Preston Concentrate",
-      "total": 16,
-      "ballast": 9,
-      "laden": 7
-    },
-    {
-      "label": "Norway Crude",
-      "total": 15,
-      "ballast": 7,
-      "laden": 8
-    },
-    {
-      "label": "Other Chemicals",
-      "total": 15,
-      "ballast": 7,
-      "laden": 8
-    },
-    {
-      "label": "IOC6 Fines",
-      "total": 15,
-      "ballast": 10,
-      "laden": 5
-    },
-    {
-      "label": "Hard Red Winter",
-      "total": 15,
-      "ballast": 6,
-      "laden": 9
-    },
-    {
-      "label": "Coal Tar",
-      "total": 15,
-      "ballast": 7,
-      "laden": 8
-    },
-    {
-      "label": "Steel Plates",
-      "total": 15,
-      "ballast": 7,
-      "laden": 8
-    },
-    {
-      "label": "Western Africa",
-      "total": 14,
-      "ballast": 10,
-      "laden": 4
-    },
-    {
-      "label": "Acetic Acid",
-      "total": 14,
+      "total": 4,
       "ballast": 4,
-      "laden": 10
+      "laden": 0
     },
     {
-      "label": "RBD Palm Oil",
-      "total": 14,
-      "ballast": 5,
-      "laden": 9
-    },
-    {
-      "label": "Bitumen PEN 60-70",
-      "total": 14,
-      "ballast": 6,
-      "laden": 8
-    },
-    {
-      "label": "Steel Billets",
-      "total": 13,
-      "ballast": 8,
-      "laden": 5
-    },
-    {
-      "label": "Pig Iron",
-      "total": 13,
-      "ballast": 5,
-      "laden": 8
-    },
-    {
-      "label": "Calcined Petcoke",
-      "total": 13,
+      "label": "Sugar",
+      "total": 4,
       "ballast": 3,
-      "laden": 10
-    },
-    {
-      "label": "djeno blend",
-      "total": 13,
-      "ballast": 3,
-      "laden": 10
-    },
-    {
-      "label": "NPK",
-      "total": 13,
-      "ballast": 7,
-      "laden": 6
-    },
-    {
-      "label": "Sunflowerseed",
-      "total": 13,
-      "ballast": 1,
-      "laden": 12
-    },
-    {
-      "label": "arab medium",
-      "total": 13,
-      "ballast": 12,
       "laden": 1
+    },
+    {
+      "label": "Coal",
+      "total": 4,
+      "ballast": 2,
+      "laden": 2
+    },
+    {
+      "label": "Olefins",
+      "total": 4,
+      "ballast": 2,
+      "laden": 2
     },
     {
       "label": "Stone",
-      "total": 13,
-      "ballast": 5,
-      "laden": 8
-    },
-    {
-      "label": "Base Oil Group III",
-      "total": 13,
-      "ballast": 6,
-      "laden": 7
-    },
-    {
-      "label": "saharan blend",
-      "total": 12,
-      "ballast": 6,
-      "laden": 6
-    },
-    {
-      "label": "Palm Kernel Meal",
-      "total": 12,
-      "ballast": 4,
-      "laden": 8
-    },
-    {
-      "label": "Crude Soybean Oil",
-      "total": 12,
-      "ballast": 8,
-      "laden": 4
-    },
-    {
-      "label": "Gasoline Blendstock",
-      "total": 12,
-      "ballast": 7,
-      "laden": 5
-    },
-    {
-      "label": "Maya",
-      "total": 12,
-      "ballast": 8,
-      "laden": 4
-    },
-    {
-      "label": "Kumba Lump",
-      "total": 12,
-      "ballast": 5,
-      "laden": 7
-    },
-    {
-      "label": "Sarir/Mesla",
-      "total": 12,
-      "ballast": 7,
-      "laden": 5
-    },
-    {
-      "label": "Soft Red Winter",
-      "total": 12,
-      "ballast": 9,
-      "laden": 3
-    },
-    {
-      "label": "Novy Port",
-      "total": 12,
-      "ballast": 4,
-      "laden": 8
-    },
-    {
-      "label": "Hard Coking Coal",
-      "total": 12,
-      "ballast": 6,
-      "laden": 6
-    },
-    {
-      "label": "Nitrogen Fertilizers",
-      "total": 12,
-      "ballast": 4,
-      "laden": 8
-    },
-    {
-      "label": "Cement/Clinker",
-      "total": 12,
-      "ballast": 4,
-      "laden": 8
-    },
-    {
-      "label": "Other Minor Bulks",
-      "total": 12,
-      "ballast": 9,
-      "laden": 3
-    },
-    {
-      "label": "bonny light",
-      "total": 12,
-      "ballast": 4,
-      "laden": 8
-    },
-    {
-      "label": "Hard Red Spring",
-      "total": 12,
-      "ballast": 9,
-      "laden": 3
-    },
-    {
-      "label": "arco",
-      "total": 12,
-      "ballast": 6,
-      "laden": 6
-    },
-    {
-      "label": "oriente",
-      "total": 11,
-      "ballast": 7,
-      "laden": 4
-    },
-    {
-      "label": "Soybean Hull Pellets",
-      "total": 11,
-      "ballast": 5,
-      "laden": 6
-    },
-    {
-      "label": "Blue Creek",
-      "total": 11,
-      "ballast": 3,
-      "laden": 8
-    },
-    {
-      "label": "Alkylate",
-      "total": 11,
-      "ballast": 5,
-      "laden": 6
-    },
-    {
-      "label": "arab heavy",
-      "total": 11,
-      "ballast": 8,
-      "laden": 3
-    },
-    {
-      "label": "West Texas Light Sweet",
-      "total": 11,
-      "ballast": 8,
-      "laden": 3
-    },
-    {
-      "label": "Golden Arrowhead",
-      "total": 11,
-      "ballast": 8,
-      "laden": 3
-    },
-    {
-      "label": "es sider",
-      "total": 11,
-      "ballast": 9,
+      "total": 4,
+      "ballast": 2,
       "laden": 2
-    },
-    {
-      "label": "Coconut Oil",
-      "total": 11,
-      "ballast": 1,
-      "laden": 10
-    },
-    {
-      "label": "Metals",
-      "total": 11,
-      "ballast": 4,
-      "laden": 7
-    },
-    {
-      "label": "Bitumen PEN 60-80",
-      "total": 11,
-      "ballast": 8,
-      "laden": 3
-    },
-    {
-      "label": "Molasses",
-      "total": 10,
-      "ballast": 7,
-      "laden": 3
-    },
-    {
-      "label": "White Corn",
-      "total": 10,
-      "ballast": 5,
-      "laden": 5
-    },
-    {
-      "label": "Canada Crude",
-      "total": 10,
-      "ballast": 7,
-      "laden": 3
-    },
-    {
-      "label": "SFHT Fines",
-      "total": 10,
-      "ballast": 8,
-      "laden": 2
-    },
-    {
-      "label": "Low Sulphur Vacuum Gasoil",
-      "total": 10,
-      "ballast": 6,
-      "laden": 4
-    },
-    {
-      "label": "Unity Gold",
-      "total": 10,
-      "ballast": 5,
-      "laden": 5
-    },
-    {
-      "label": "Toluene",
-      "total": 9,
-      "ballast": 6,
-      "laden": 3
-    },
-    {
-      "label": "Lentil",
-      "total": 9,
-      "ballast": 5,
-      "laden": 4
-    },
-    {
-      "label": "Fortescue Blend Fines",
-      "total": 9,
-      "ballast": 8,
-      "laden": 1
     },
     {
       "label": "Clean Condensate",
-      "total": 9,
-      "ballast": 3,
-      "laden": 6
-    },
-    {
-      "label": "Forties blend",
-      "total": 9,
-      "ballast": 6,
+      "total": 4,
+      "ballast": 1,
       "laden": 3
     },
     {
-      "label": "Crude Sunflower Oil",
-      "total": 9,
-      "ballast": 9,
+      "label": "Thermal Coal",
+      "total": 4,
+      "ballast": 4,
       "laden": 0
     },
     {
-      "label": "Yandi Fines",
-      "total": 9,
-      "ballast": 4,
-      "laden": 5
-    },
-    {
-      "label": "Payara Gold",
-      "total": 9,
-      "ballast": 4,
-      "laden": 5
-    },
-    {
-      "label": "Rapeseed (Canola) Oil",
-      "total": 9,
-      "ballast": 4,
-      "laden": 5
-    },
-    {
-      "label": "High Sulphur Vacuum Gasoil",
-      "total": 9,
+      "label": "91 Gasoline",
+      "total": 3,
       "ballast": 2,
-      "laden": 7
-    },
-    {
-      "label": "Rapeseed (Canola) Meal",
-      "total": 9,
-      "ballast": 5,
-      "laden": 4
-    },
-    {
-      "label": "Jones Creek Blend",
-      "total": 9,
-      "ballast": 4,
-      "laden": 5
-    },
-    {
-      "label": "90 Gasoline",
-      "total": 9,
-      "ballast": 8,
       "laden": 1
     },
     {
-      "label": "Slurry",
-      "total": 9,
-      "ballast": 4,
-      "laden": 5
-    },
-    {
-      "label": "Hot Bricketed Iron",
-      "total": 9,
-      "ballast": 7,
-      "laden": 2
-    },
-    {
-      "label": "Bohai",
-      "total": 9,
-      "ballast": 4,
-      "laden": 5
-    },
-    {
-      "label": "isthmus",
-      "total": 9,
-      "ballast": 5,
-      "laden": 4
-    },
-    {
-      "label": "Magnetite",
-      "total": 9,
-      "ballast": 0,
-      "laden": 9
-    },
-    {
-      "label": "agbami",
-      "total": 8,
-      "ballast": 4,
-      "laden": 4
-    },
-    {
-      "label": "Palm Fatty Acid Distillate",
-      "total": 8,
-      "ballast": 4,
-      "laden": 4
-    },
-    {
-      "label": "Malting Barley",
-      "total": 8,
-      "ballast": 4,
-      "laden": 4
-    },
-    {
-      "label": "peregrino",
-      "total": 8,
-      "ballast": 3,
-      "laden": 5
-    },
-    {
-      "label": "condensate",
-      "total": 8,
-      "ballast": 7,
-      "laden": 1
-    },
-    {
-      "label": "Single Superphosphates",
-      "total": 8,
-      "ballast": 6,
-      "laden": 2
-    },
-    {
-      "label": "Asia-Pacific",
-      "total": 8,
-      "ballast": 3,
-      "laden": 5
-    },
-    {
-      "label": "Carbon Black Feedstock",
-      "total": 8,
-      "ballast": 2,
-      "laden": 6
-    },
-    {
-      "label": "Group II Light",
-      "total": 8,
-      "ballast": 3,
-      "laden": 5
-    },
-    {
-      "label": "doba blend",
-      "total": 8,
-      "ballast": 3,
-      "laden": 5
-    },
-    {
-      "label": "Copper Cathodes",
-      "total": 8,
-      "ballast": 5,
-      "laden": 3
-    },
-    {
-      "label": "Ammonium Nitrates",
-      "total": 8,
-      "ballast": 4,
-      "laden": 4
-    },
-    {
-      "label": "okwuibome",
-      "total": 8,
-      "ballast": 4,
-      "laden": 4
-    },
-    {
-      "label": "ethylene dichloride",
-      "total": 8,
-      "ballast": 5,
-      "laden": 3
-    },
-    {
-      "label": "ANS",
-      "total": 8,
-      "ballast": 3,
-      "laden": 5
-    },
-    {
-      "label": "qua iboe",
-      "total": 7,
-      "ballast": 3,
-      "laden": 4
-    },
-    {
-      "label": "Lake Vermont",
-      "total": 7,
-      "ballast": 2,
-      "laden": 5
-    },
-    {
-      "label": "hibernia",
-      "total": 7,
-      "ballast": 4,
-      "laden": 3
-    },
-    {
-      "label": "87 Gasoline",
-      "total": 7,
-      "ballast": 3,
-      "laden": 4
-    },
-    {
-      "label": "Mellitah",
-      "total": 7,
-      "ballast": 0,
-      "laden": 7
-    },
-    {
-      "label": "CBOB Regular",
-      "total": 7,
-      "ballast": 3,
-      "laden": 4
-    },
-    {
-      "label": "Steel Bars",
-      "total": 7,
-      "ballast": 5,
-      "laden": 2
-    },
-    {
-      "label": "sakhalin blend",
-      "total": 7,
-      "ballast": 4,
-      "laden": 3
-    },
-    {
-      "label": "ETBE",
-      "total": 7,
-      "ballast": 2,
-      "laden": 5
-    },
-    {
-      "label": "Semi-finished Steel",
-      "total": 7,
-      "ballast": 6,
-      "laden": 1
-    },
-    {
-      "label": "98 Gasoline",
-      "total": 7,
-      "ballast": 3,
-      "laden": 4
-    },
-    {
-      "label": "Johan Sverdrup",
-      "total": 7,
-      "ballast": 4,
-      "laden": 3
-    },
-    {
-      "label": "RBD Palm Stearin",
-      "total": 7,
-      "ballast": 2,
-      "laden": 5
-    },
-    {
-      "label": "Dried Distiller Grains",
-      "total": 7,
-      "ballast": 4,
-      "laden": 3
-    },
-    {
-      "label": "Ex LPG",
-      "total": 7,
-      "ballast": 3,
-      "laden": 2
-    },
-    {
-      "label": "Hail Creek",
-      "total": 7,
-      "ballast": 2,
-      "laden": 5
-    },
-    {
-      "label": "Ilmenite",
-      "total": 6,
-      "ballast": 2,
-      "laden": 4
-    },
-    {
-      "label": "arab extra light",
-      "total": 6,
-      "ballast": 5,
-      "laden": 1
-    },
-    {
-      "label": "Diethylene Glycol",
-      "total": 6,
-      "ballast": 4,
-      "laden": 2
-    },
-    {
-      "label": "Propylene Oxide",
-      "total": 6,
-      "ballast": 2,
-      "laden": 4
-    },
-    {
-      "label": "Dirty",
-      "total": 6,
+      "label": "Iron Ore Concentrate",
+      "total": 3,
       "ballast": 1,
-      "laden": 5
+      "laden": 2
     },
     {
-      "label": "bonny condensate",
-      "total": 6,
+      "label": "Jet",
+      "total": 3,
       "ballast": 1,
-      "laden": 5
-    },
-    {
-      "label": "castilla blend",
-      "total": 6,
-      "ballast": 3,
-      "laden": 3
-    },
-    {
-      "label": "Roy Hill Lump",
-      "total": 6,
-      "ballast": 4,
       "laden": 2
     },
     {
-      "label": "forcados blend",
-      "total": 6,
+      "label": "92 Gasoline",
+      "total": 3,
       "ballast": 3,
-      "laden": 3
-    },
-    {
-      "label": "napo",
-      "total": 6,
-      "ballast": 4,
-      "laden": 2
-    },
-    {
-      "label": "vasconia",
-      "total": 6,
-      "ballast": 3,
-      "laden": 3
-    },
-    {
-      "label": "Fatty Acids",
-      "total": 6,
-      "ballast": 5,
-      "laden": 1
-    },
-    {
-      "label": "Fuel Ethanol",
-      "total": 6,
-      "ballast": 3,
-      "laden": 3
-    },
-    {
-      "label": "Kumba Fines",
-      "total": 6,
-      "ballast": 3,
-      "laden": 3
-    },
-    {
-      "label": "Soft White Wheat",
-      "total": 6,
-      "ballast": 3,
-      "laden": 3
-    },
-    {
-      "label": "Aluminium",
-      "total": 6,
-      "ballast": 3,
-      "laden": 3
-    },
-    {
-      "label": "Robe Valley Fines",
-      "total": 6,
-      "ballast": 3,
-      "laden": 3
-    },
-    {
-      "label": "Kazakhstan Export Blend Crude Oil",
-      "total": 6,
-      "ballast": 3,
-      "laden": 3
-    },
-    {
-      "label": "White Sugar",
-      "total": 6,
-      "ballast": 4,
-      "laden": 2
-    },
-    {
-      "label": "Cheleken",
-      "total": 6,
-      "ballast": 2,
-      "laden": 4
-    },
-    {
-      "label": "Nitric Acid",
-      "total": 6,
-      "ballast": 2,
-      "laden": 4
-    },
-    {
-      "label": "Linear Alkyl Benzene",
-      "total": 6,
-      "ballast": 5,
-      "laden": 1
-    },
-    {
-      "label": "RBD Palm Kernel Oil",
-      "total": 6,
-      "ballast": 2,
-      "laden": 4
-    },
-    {
-      "label": "Straight Run Fuel Oil",
-      "total": 6,
-      "ballast": 5,
-      "laden": 1
-    },
-    {
-      "label": "Industrial Ethanol",
-      "total": 6,
-      "ballast": 2,
-      "laden": 4
-    },
-    {
-      "label": "Simandou Fines",
-      "total": 6,
-      "ballast": 2,
-      "laden": 4
-    },
-    {
-      "label": "93 Gasoline",
-      "total": 6,
-      "ballast": 3,
-      "laden": 3
-    },
-    {
-      "label": "Feed Barley",
-      "total": 6,
-      "ballast": 5,
-      "laden": 1
-    },
-    {
-      "label": "Feldspar",
-      "total": 6,
-      "ballast": 2,
-      "laden": 4
-    },
-    {
-      "label": "Anthracite",
-      "total": 6,
-      "ballast": 1,
-      "laden": 5
-    },
-    {
-      "label": "Nickel",
-      "total": 6,
-      "ballast": 2,
-      "laden": 4
-    },
-    {
-      "label": "Sub-Bituminous",
-      "total": 6,
-      "ballast": 5,
-      "laden": 1
-    },
-    {
-      "label": "Sangomar",
-      "total": 6,
-      "ballast": 4,
-      "laden": 2
-    },
-    {
-      "label": "Petrochemical Naphtha",
-      "total": 6,
-      "ballast": 3,
-      "laden": 3
-    },
-    {
-      "label": "Foxleigh",
-      "total": 5,
-      "ballast": 0,
-      "laden": 5
-    },
-    {
-      "label": "Rabi Lt/Mandji Crude",
-      "total": 5,
-      "ballast": 2,
-      "laden": 3
-    },
-    {
-      "label": "Liza",
-      "total": 5,
-      "ballast": 4,
-      "laden": 1
-    },
-    {
-      "label": "el sharara",
-      "total": 5,
-      "ballast": 4,
-      "laden": 1
-    },
-    {
-      "label": "Kerosene",
-      "total": 5,
-      "ballast": 2,
-      "laden": 3
-    },
-    {
-      "label": "Angola Crude",
-      "total": 5,
-      "ballast": 4,
-      "laden": 1
-    },
-    {
-      "label": "iracema",
-      "total": 5,
-      "ballast": 2,
-      "laden": 3
-    },
-    {
-      "label": "Crude C4",
-      "total": 5,
-      "ballast": 4,
-      "laden": 1
-    },
-    {
-      "label": "Tallow",
-      "total": 5,
-      "ballast": 1,
-      "laden": 4
-    },
-    {
-      "label": "North America",
-      "total": 5,
-      "ballast": 1,
-      "laden": 4
-    },
-    {
-      "label": "algerian condensate",
-      "total": 5,
-      "ballast": 3,
-      "laden": 2
-    },
-    {
-      "label": "Assmang Fines",
-      "total": 5,
-      "ballast": 1,
-      "laden": 4
-    },
-    {
-      "label": "Shoal Creek",
-      "total": 5,
-      "ballast": 2,
-      "laden": 3
-    },
-    {
-      "label": "Atlanta",
-      "total": 5,
-      "ballast": 3,
-      "laden": 2
-    },
-    {
-      "label": "CBOB Premium",
-      "total": 5,
-      "ballast": 2,
-      "laden": 3
-    },
-    {
-      "label": "Pyrolysis Gasoline",
-      "total": 5,
-      "ballast": 2,
-      "laden": 3
-    },
-    {
-      "label": "Pacific Dilbit",
-      "total": 5,
-      "ballast": 5,
       "laden": 0
     },
     {
-      "label": "Wafra",
-      "total": 5,
-      "ballast": 4,
+      "label": "Palm Oil",
+      "total": 3,
+      "ballast": 2,
       "laden": 1
     },
     {
-      "label": "Carborough Downs",
-      "total": 5,
+      "label": "Liquids",
+      "total": 3,
+      "ballast": 1,
+      "laden": 2
+    },
+    {
+      "label": "oman export",
+      "total": 3,
+      "ballast": 1,
+      "laden": 2
+    },
+    {
+      "label": "Petcoke",
+      "total": 3,
       "ballast": 3,
+      "laden": 0
+    },
+    {
+      "label": "Caustic Soda",
+      "total": 3,
+      "ballast": 3,
+      "laden": 0
+    },
+    {
+      "label": "Monoethylene Glycol",
+      "total": 3,
+      "ballast": 1,
       "laden": 2
     },
     {
       "label": "al shaheen",
-      "total": 5,
-      "ballast": 2,
-      "laden": 3
-    },
-    {
-      "label": "Sururu",
-      "total": 5,
-      "ballast": 1,
-      "laden": 4
-    },
-    {
-      "label": "escravos",
-      "total": 5,
-      "ballast": 3,
-      "laden": 2
-    },
-    {
-      "label": "United States Medium Sour Crude",
-      "total": 5,
-      "ballast": 1,
-      "laden": 4
-    },
-    {
-      "label": "Vinyl Acetate Monomer",
-      "total": 5,
-      "ballast": 3,
-      "laden": 2
-    },
-    {
-      "label": "Calcium Nitrate Solution",
-      "total": 5,
-      "ballast": 1,
-      "laden": 4
-    },
-    {
-      "label": "Crude Palm Olein",
-      "total": 5,
-      "ballast": 1,
-      "laden": 4
-    },
-    {
-      "label": "Pitch",
-      "total": 5,
-      "ballast": 4,
-      "laden": 1
-    },
-    {
-      "label": "Meleck",
-      "total": 5,
-      "ballast": 3,
-      "laden": 2
-    },
-    {
-      "label": "Banyu Urip",
-      "total": 5,
-      "ballast": 3,
-      "laden": 2
-    },
-    {
-      "label": "Hot Rolled Coils",
-      "total": 5,
-      "ballast": 2,
-      "laden": 3
-    },
-    {
-      "label": "dar blend",
-      "total": 5,
-      "ballast": 3,
-      "laden": 2
-    },
-    {
-      "label": "German Creek",
-      "total": 5,
-      "ballast": 1,
-      "laden": 4
-    },
-    {
-      "label": "IOCP Fines",
-      "total": 5,
-      "ballast": 2,
-      "laden": 3
-    },
-    {
-      "label": "Direct Reduction Iron",
-      "total": 5,
-      "ballast": 3,
-      "laden": 2
-    },
-    {
-      "label": "Grane blend",
-      "total": 4,
-      "ballast": 2,
-      "laden": 2
-    },
-    {
-      "label": "Robe Valley Lump",
-      "total": 4,
-      "ballast": 1,
-      "laden": 3
-    },
-    {
-      "label": "clov",
-      "total": 4,
-      "ballast": 1,
-      "laden": 3
-    },
-    {
-      "label": "labuan blend",
-      "total": 4,
-      "ballast": 3,
-      "laden": 1
-    },
-    {
-      "label": "bu attifel",
-      "total": 4,
-      "ballast": 3,
-      "laden": 1
-    },
-    {
-      "label": "Gasoil 50ppm",
-      "total": 4,
-      "ballast": 2,
-      "laden": 2
-    },
-    {
-      "label": "Xi Jiang",
-      "total": 4,
-      "ballast": 3,
-      "laden": 1
-    },
-    {
-      "label": "Inorganic Chemicals",
-      "total": 4,
-      "ballast": 4,
-      "laden": 0
-    },
-    {
-      "label": "Yamal Condensate",
-      "total": 4,
-      "ballast": 2,
-      "laden": 2
-    },
-    {
-      "label": "Group I Heavy",
-      "total": 4,
-      "ballast": 1,
-      "laden": 3
-    },
-    {
-      "label": "khafji",
-      "total": 4,
-      "ballast": 3,
-      "laden": 1
-    },
-    {
-      "label": "Heavy Naphtha",
-      "total": 4,
-      "ballast": 1,
-      "laden": 3
-    },
-    {
-      "label": "Bitumen PEN 50-70",
-      "total": 4,
-      "ballast": 4,
-      "laden": 0
-    },
-    {
-      "label": "Apiay",
-      "total": 4,
-      "ballast": 2,
-      "laden": 2
-    },
-    {
-      "label": "olmeca",
-      "total": 4,
-      "ballast": 2,
-      "laden": 2
-    },
-    {
-      "label": "Iso Butane",
-      "total": 4,
-      "ballast": 2,
-      "laden": 2
-    },
-    {
-      "label": "nemba",
-      "total": 4,
-      "ballast": 2,
-      "laden": 2
-    },
-    {
-      "label": "Methyl Methacrylate",
-      "total": 4,
-      "ballast": 0,
-      "laden": 4
-    },
-    {
-      "label": "hamaca",
-      "total": 4,
-      "ballast": 2,
-      "laden": 2
-    },
-    {
-      "label": "Copper Slag",
-      "total": 4,
-      "ballast": 2,
-      "laden": 2
-    },
-    {
-      "label": "Middlemount",
-      "total": 4,
-      "ballast": 0,
-      "laden": 4
-    },
-    {
-      "label": "Steel Beams",
-      "total": 4,
-      "ballast": 0,
-      "laden": 4
-    },
-    {
-      "label": "Bacalhau",
-      "total": 4,
-      "ballast": 1,
-      "laden": 3
-    },
-    {
-      "label": "Steel Wire Rods",
-      "total": 4,
-      "ballast": 4,
-      "laden": 0
-    },
-    {
-      "label": "ekofisk",
-      "total": 4,
-      "ballast": 3,
-      "laden": 1
-    },
-    {
-      "label": "ardjuna",
-      "total": 4,
-      "ballast": 2,
-      "laden": 2
-    },
-    {
-      "label": "Itapu",
-      "total": 4,
-      "ballast": 1,
-      "laden": 3
-    },
-    {
-      "label": "Isomerate",
-      "total": 4,
-      "ballast": 3,
-      "laden": 1
-    },
-    {
-      "label": "Sugar Cane Molasses",
-      "total": 4,
-      "ballast": 4,
-      "laden": 0
-    },
-    {
-      "label": "Used Cooking Oil Methyl Ester",
-      "total": 4,
-      "ballast": 0,
-      "laden": 4
-    },
-    {
-      "label": "Fatty Alcohol",
-      "total": 4,
-      "ballast": 1,
-      "laden": 3
-    },
-    {
-      "label": "Soyo Condensate",
-      "total": 4,
-      "ballast": 2,
-      "laden": 2
-    },
-    {
-      "label": "amna",
-      "total": 4,
-      "ballast": 1,
-      "laden": 3
-    },
-    {
-      "label": "Blast Furnace Slag",
-      "total": 4,
-      "ballast": 3,
-      "laden": 1
-    },
-    {
-      "label": "Poitrel",
-      "total": 4,
-      "ballast": 1,
-      "laden": 3
-    },
-    {
-      "label": "Bentonite",
-      "total": 4,
-      "ballast": 2,
-      "laden": 2
-    },
-    {
-      "label": "Granulated Blast Furnace Slag",
-      "total": 4,
-      "ballast": 3,
-      "laden": 1
-    },
-    {
-      "label": "Rabi export blend",
-      "total": 4,
-      "ballast": 2,
-      "laden": 2
-    },
-    {
-      "label": "Sepia",
-      "total": 4,
-      "ballast": 2,
-      "laden": 2
-    },
-    {
-      "label": "Light Virgin Naphtha",
-      "total": 4,
-      "ballast": 2,
-      "laden": 2
-    },
-    {
-      "label": "erha",
-      "total": 4,
-      "ballast": 1,
-      "laden": 3
-    },
-    {
-      "label": "Refined Palm Oil Mill Effluent",
-      "total": 4,
-      "ballast": 1,
-      "laden": 3
-    },
-    {
-      "label": "Jimblebar Fines",
-      "total": 4,
-      "ballast": 3,
-      "laden": 1
-    },
-    {
-      "label": "Chim sao",
-      "total": 4,
-      "ballast": 3,
-      "laden": 1
-    },
-    {
-      "label": "soroosh oil",
-      "total": 4,
-      "ballast": 1,
-      "laden": 3
-    },
-    {
-      "label": "Mumbai High",
-      "total": 4,
-      "ballast": 2,
-      "laden": 2
-    },
-    {
-      "label": "Talara",
-      "total": 4,
-      "ballast": 1,
-      "laden": 3
-    },
-    {
-      "label": "eagle ford",
-      "total": 4,
-      "ballast": 2,
-      "laden": 2
-    },
-    {
-      "label": "Balder",
-      "total": 4,
-      "ballast": 3,
-      "laden": 1
-    },
-    {
-      "label": "Refinery Grade Propylene",
-      "total": 4,
-      "ballast": 2,
-      "laden": 2
-    },
-    {
-      "label": "Full Range Naphtha (FRN)",
-      "total": 3,
-      "ballast": 3,
-      "laden": 0
-    },
-    {
-      "label": "Mostarda",
-      "total": 3,
-      "ballast": 1,
-      "laden": 2
-    },
-    {
-      "label": "Kidurong",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "brega",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "Egina",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "Bintulu Condensate",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "Wheat Bran",
-      "total": 3,
-      "ballast": 1,
-      "laden": 2
-    },
-    {
-      "label": "Baleine",
-      "total": 3,
-      "ballast": 1,
-      "laden": 2
-    },
-    {
-      "label": "Johan Castberg",
-      "total": 3,
-      "ballast": 1,
-      "laden": 2
-    },
-    {
-      "label": "Paraffin Oil",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "NPSP Fines",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "dalia",
-      "total": 3,
-      "ballast": 1,
-      "laden": 2
-    },
-    {
-      "label": "albacora leste",
-      "total": 3,
-      "ballast": 1,
-      "laden": 2
-    },
-    {
-      "label": "Cold Lake Blend",
-      "total": 3,
-      "ballast": 1,
-      "laden": 2
-    },
-    {
-      "label": "IOH4 Fines",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "Goonyella",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "marlim",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "88 Gasoline",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "qinhuangdao",
-      "total": 3,
-      "ballast": 1,
-      "laden": 2
-    },
-    {
-      "label": "Animal Fats",
-      "total": 3,
-      "ballast": 3,
-      "laden": 0
-    },
-    {
-      "label": "Mixed Xylenes",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "Wind Blades",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "Aromatic Naphtha",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "Atapu",
       "total": 3,
       "ballast": 0,
       "laden": 3
     },
     {
-      "label": "Orthoxylene",
+      "label": "Finished Steel",
       "total": 3,
-      "ballast": 1,
-      "laden": 2
+      "ballast": 2,
+      "laden": 1
     },
     {
-      "label": "Lapa",
+      "label": "arab medium",
       "total": 3,
-      "ballast": 0,
-      "laden": 3
+      "ballast": 2,
+      "laden": 1
     },
     {
-      "label": "Lead Concentrate",
-      "total": 3,
-      "ballast": 1,
-      "laden": 2
-    },
-    {
-      "label": "Feed Wheat",
+      "label": "Middle East",
       "total": 3,
       "ballast": 3,
       "laden": 0
     },
     {
-      "label": "Dolomite",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "kimanis",
-      "total": 3,
-      "ballast": 0,
-      "laden": 3
-    },
-    {
-      "label": "Machinery and Equipment",
-      "total": 3,
-      "ballast": 1,
-      "laden": 2
-    },
-    {
-      "label": "Nigeria Crude",
-      "total": 3,
-      "ballast": 1,
-      "laden": 2
-    },
-    {
-      "label": "Phenol",
-      "total": 3,
-      "ballast": 1,
-      "laden": 2
-    },
-    {
-      "label": "Steel Sheets",
-      "total": 3,
-      "ballast": 1,
-      "laden": 2
-    },
-    {
-      "label": "Aniline",
-      "total": 3,
-      "ballast": 1,
-      "laden": 2
-    },
-    {
-      "label": "Castor Oil",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "palanca",
-      "total": 3,
-      "ballast": 1,
-      "laden": 2
-    },
-    {
-      "label": "Reformate",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "Solvent Naphtha",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "sapinhoa",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "western desert blend",
-      "total": 3,
-      "ballast": 1,
-      "laden": 2
-    },
-    {
-      "label": "Low Sulfur Diesel",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "AF08 Pellets",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "Palm Kernel",
-      "total": 3,
-      "ballast": 0,
-      "laden": 3
-    },
-    {
-      "label": "Sustainable Aviation Fuel",
-      "total": 3,
-      "ballast": 1,
-      "laden": 2
-    },
-    {
-      "label": "Palm Methyl Ester",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "Kaliningrad",
-      "total": 3,
-      "ballast": 0,
-      "laden": 3
-    },
-    {
-      "label": "Gasoil 2000ppm",
-      "total": 3,
-      "ballast": 1,
-      "laden": 2
-    },
-    {
-      "label": "siberian light",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "Silica Sand",
-      "total": 3,
-      "ballast": 1,
-      "laden": 2
-    },
-    {
-      "label": "dubai  fateh",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "South America",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "canadon seco",
-      "total": 3,
-      "ballast": 0,
-      "laden": 3
-    },
-    {
-      "label": "Light Cycle Oil",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "Basrah",
-      "total": 3,
-      "ballast": 3,
-      "laden": 0
-    },
-    {
-      "label": "Mill Scale",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "NPS",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "Raffinate",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "RM20 Pellets",
-      "total": 3,
-      "ballast": 3,
-      "laden": 0
-    },
-    {
-      "label": "nile blend",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "Sonoma",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "Pellet Feed Premium Tubarao",
-      "total": 3,
-      "ballast": 3,
-      "laden": 0
-    },
-    {
-      "label": "Granular MOP",
-      "total": 3,
-      "ballast": 1,
-      "laden": 2
-    },
-    {
-      "label": "Potassium Fertilizers",
-      "total": 3,
-      "ballast": 0,
-      "laden": 3
-    },
-    {
-      "label": "yoho",
+      "label": "WTI midland",
       "total": 2,
       "ballast": 2,
       "laden": 0
     },
     {
-      "label": "UAE Crude",
-      "total": 2,
-      "ballast": 2,
-      "laden": 0
-    },
-    {
-      "label": "United States Crude",
+      "label": "Aluminium",
       "total": 2,
       "ballast": 0,
       "laden": 2
     },
     {
-      "label": "F-76 Military Diesel",
-      "total": 2,
-      "ballast": 0,
-      "laden": 2
-    },
-    {
-      "label": "Bitumen AC-30",
+      "label": "Vegoils",
       "total": 2,
       "ballast": 2,
       "laden": 0
     },
     {
-      "label": "bakken",
-      "total": 2,
-      "ballast": 2,
-      "laden": 0
-    },
-    {
-      "label": "Solvent",
-      "total": 2,
-      "ballast": 0,
-      "laden": 2
-    },
-    {
-      "label": "Catalytic Cracked Gasoline",
-      "total": 2,
-      "ballast": 2,
-      "laden": 0
-    },
-    {
-      "label": "Bio Feedstocks",
-      "total": 2,
-      "ballast": 0,
-      "laden": 2
-    },
-    {
-      "label": "Methyl Ethyl Ketone",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "lokele",
-      "total": 2,
-      "ballast": 0,
-      "laden": 2
-    },
-    {
-      "label": "Kirkuk ITP",
-      "total": 2,
-      "ballast": 2,
-      "laden": 0
-    },
-    {
-      "label": "jubilee",
-      "total": 2,
-      "ballast": 0,
-      "laden": 2
-    },
-    {
-      "label": "frade",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Sankofa",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Diesel B5",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Ecuador Crude",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "plutonio",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "High Sulfur diesel",
-      "total": 2,
-      "ballast": 2,
-      "laden": 0
-    },
-    {
-      "label": "miri light",
-      "total": 2,
-      "ballast": 2,
-      "laden": 0
-    },
-    {
-      "label": "usan",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "High Fines",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Flat Steel",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Libya Crude",
-      "total": 2,
-      "ballast": 2,
-      "laden": 0
-    },
-    {
-      "label": "Bitumen PEN 80-100",
-      "total": 2,
-      "ballast": 2,
-      "laden": 0
-    },
-    {
-      "label": "Paraffin Wax",
-      "total": 2,
-      "ballast": 2,
-      "laden": 0
-    },
-    {
-      "label": "poleng",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Yuri Korchagin",
-      "total": 2,
-      "ballast": 0,
-      "laden": 2
-    },
-    {
-      "label": "Group I Brightstock",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Hexane",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Base Oil Group I",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Bitumen PG-64",
-      "total": 2,
-      "ballast": 2,
-      "laden": 0
-    },
-    {
-      "label": "Bitumen PEN 35-50",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Ichthys Condensate",
-      "total": 2,
-      "ballast": 0,
-      "laden": 2
-    },
-    {
-      "label": "Light Ends",
-      "total": 2,
-      "ballast": 2,
-      "laden": 0
-    },
-    {
-      "label": "Deodorized Field Condensate",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "sangos",
+      "label": "Base Oil Group III",
       "total": 2,
       "ballast": 0,
       "laden": 2
@@ -3103,406 +475,106 @@
       "laden": 1
     },
     {
-      "label": "bonga",
-      "total": 2,
-      "ballast": 2,
-      "laden": 0
-    },
-    {
-      "label": "girassol",
-      "total": 2,
-      "ballast": 0,
-      "laden": 2
-    },
-    {
-      "label": "bach ho",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
       "label": "Umm Lulu",
       "total": 2,
       "ballast": 0,
       "laden": 2
     },
     {
-      "label": "N+A Naphtha",
+      "label": "agbami",
       "total": 2,
       "ballast": 2,
       "laden": 0
     },
     {
-      "label": "tapis",
+      "label": "Major Bulks",
       "total": 2,
       "ballast": 1,
       "laden": 1
     },
     {
-      "label": "North Sea",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Jet JP5",
-      "total": 2,
-      "ballast": 0,
-      "laden": 2
-    },
-    {
-      "label": "Project Cargo",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Copper",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "SFCT Fines",
+      "label": "Crude Palm Oil",
       "total": 2,
       "ballast": 2,
       "laden": 0
     },
     {
-      "label": "amenam blend",
+      "label": "Forest Products",
       "total": 2,
       "ballast": 1,
       "laden": 1
     },
     {
-      "label": "85 Gasoline",
+      "label": "MTBE",
+      "total": 2,
+      "ballast": 1,
+      "laden": 1
+    },
+    {
+      "label": "Clinker",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
+    },
+    {
+      "label": "Fertilizer",
+      "total": 2,
+      "ballast": 1,
+      "laden": 1
+    },
+    {
+      "label": "Hot Bricketed Iron",
       "total": 2,
       "ballast": 2,
       "laden": 0
     },
     {
-      "label": "Eurobob",
+      "label": "Steel Plates",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
+    },
+    {
+      "label": "Vinyl Chloride Monomer",
       "total": 2,
       "ballast": 2,
       "laden": 0
     },
     {
-      "label": "Gasoil 1500 ppm",
+      "label": "Yellow Corn",
       "total": 2,
       "ballast": 0,
       "laden": 2
     },
     {
-      "label": "Acetone",
+      "label": "Rice",
       "total": 2,
       "ballast": 2,
       "laden": 0
     },
     {
-      "label": "south pars condensate",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "dai hung",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "2-Ethylhexanol",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Belanak",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Hexene",
-      "total": 2,
-      "ballast": 0,
-      "laden": 2
-    },
-    {
-      "label": "Lalang",
-      "total": 2,
-      "ballast": 0,
-      "laden": 2
-    },
-    {
-      "label": "Glycerine",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Ajapa",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "belayim",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Acrylonitrile",
-      "total": 2,
-      "ballast": 0,
-      "laden": 2
-    },
-    {
-      "label": "Molo",
-      "total": 2,
-      "ballast": 0,
-      "laden": 2
-    },
-    {
-      "label": "Penglai",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Light Naphtha",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "GTL Diesel",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Tall Oil",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Lufeng",
-      "total": 2,
-      "ballast": 0,
-      "laden": 2
-    },
-    {
-      "label": "geragai condensate",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "escalante",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Shengli",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "zarzaitine",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Ultra Low Sulfur Heating Oil",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Ground Granulated Blast Furnace Slag",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "cabinda",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "cpc blend",
-      "total": 2,
-      "ballast": 0,
-      "laden": 2
-    },
-    {
-      "label": "benchamas",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "sergipano",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "sirri",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Virgin Naphtha",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Assmang Lump",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Dry Chemicals",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Utapate",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Coker Gasoil",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "diluted crude oil",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Byerwen",
-      "total": 2,
-      "ballast": 0,
-      "laden": 2
-    },
-    {
-      "label": "Etame",
+      "label": "EOPL",
       "total": 2,
       "ballast": 2,
       "laden": 0
     },
     {
-      "label": "Southern Green Canyon",
+      "label": "95 Gasoline",
       "total": 2,
       "ballast": 1,
       "laden": 1
     },
     {
-      "label": "Steel Blooms",
-      "total": 2,
-      "ballast": 2,
-      "laden": 0
-    },
-    {
-      "label": "jubarte",
+      "label": "Granular Urea",
       "total": 2,
       "ballast": 0,
       "laden": 2
     },
     {
-      "label": "Dussafu",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Low Sulfur Condensate",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "bauna",
+      "label": "Lentil",
       "total": 2,
       "ballast": 2,
       "laden": 0
-    },
-    {
-      "label": "Isaac Plains",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Group I Light",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Propylene Glycol",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "Kuwait Super Light",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "zafiro",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Zinc Products",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "barrow island",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Qaiyarah",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Liu Hua",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Espirito Santo Blend",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
     },
     {
       "label": "Kuwait Crude",
@@ -3511,472 +583,106 @@
       "laden": 1
     },
     {
-      "label": "Nembe",
+      "label": "Steel Coils",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "Mellitah Condensate",
+      "label": "Vegoils/Biofuels",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Diammonium Phosphates",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "hungo",
+      "label": "Peas",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Aromatic Naphtha",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "brent blend",
+      "label": "Ammonia",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Ferrous Scrap",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "Kutubu blend",
+      "label": "Diethylene Glycol",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Molten Sulphur",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "Colombia Crude",
+      "label": "Low Sulfur Fuel Oil",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "seria light",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "mondo",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "C14+ (Heavy Paraffins)",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Papua New Guinea Condensate",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Mariner Blend",
+      "label": "Low Sulphur Straight Run Fuel Oil",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "norne",
+      "label": "arab extra light",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "asgaard blend",
+      "label": "Bitumen PEN 60-70",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "saturno",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "gullfaks",
+      "label": "Deodorized Field Condensate",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "statfjord",
+      "label": "Brazil Crude",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "kikeh",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "ebome",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Hydrogen",
+      "label": "Bentonite",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "Schiehallion",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "njord",
+      "label": "erha",
       "total": 1,
       "ballast": 1,
       "laden": 0
-    },
-    {
-      "label": "Aseng Condensate",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Panyu",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Mid Volatility Hard Coking Coal",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "GTAB Regular",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Temane Condensate",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "heidrun",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Lupin",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Wind Energy Components",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Moranbah North",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "clair",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "flotta",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Mexico Crude",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Dirty Petroleum Products",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "northwest shelf condensate",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Natural Gasoline",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Crude Rapeseed (Canola) Oil",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "ebok",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Heptane",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "senipah condensate",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Aromatics",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "1,4-Butanediol",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Ethyl Acetate",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "rong doi condensate",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Group II Heavy",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Hai Thach Condensate",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Syrian Crude",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Bitumen VG-40",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Base Oil Group II",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Fish Oil",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Gasoil 1000ppm",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Gasoil 2500ppm",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Crude Glycerine",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "oseberg",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Martin Linge",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Bitumen/Asphalt - Paving Grades",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Bitumen PEN 40-60",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Gorgon Condensate",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Khuff Condensate",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "mandji",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Bitumen PEN 40-50",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Wind Turbines",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Aviation Gasoline",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Tartaruga",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "TEN blend",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "antan",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Toluene Diisocyanate",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Brega Condensate",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Mizton Blend",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Palm Kernel Fatty Acid Distillate",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Fishmeal",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Copper Products",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Copper Anodes",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Crude Palm Oil Mill Effluent",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Palm Oil Mill Effluent",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Light Catalytic Naphtha",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Yombo",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "FerroManganese",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
     },
     {
       "label": "Kerosene/Jet",
@@ -3985,163 +691,79 @@
       "laden": 0
     },
     {
-      "label": "Propionic Acid",
+      "label": "Molasses",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "Oleic Acid",
+      "label": "Castor Oil",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "FerroNickel",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Blast Furnace Slag",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Inorganic Chemicals",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "south pars condensate",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "Soybean Methyl Ester",
+      "label": "Logs/Timber",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "SilicoManganese",
+      "label": "Sand",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "Linseed",
+      "label": "Ethylene",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "merey",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "RBD Palm Oil",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "Polymeric Polyol",
+      "label": "Ex LPG",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "Potassium Sulphate (SOP)",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "RBOB",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Tubular Steel",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Iran Condensate",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Okoro",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Banff",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Gina Krog",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Iran Light/Heavy",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Butyl Acrylate",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Basrah Light",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Raffinate-2",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "zeit bay",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Wassana",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "van gogh",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "dumbarton",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Nickel Matte",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "RBD Palm Kernel Stearin",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Glycols",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Penguins",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Corn Flour",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "bintulu",
+      "label": "Rabi export blend",
       "total": 1,
       "ballast": 1,
       "laden": 0
@@ -4153,103 +775,43 @@
       "laden": 1
     },
     {
-      "label": "n-Propanol",
+      "label": "Western Russia Crude",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "Masirah",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "belida",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Paraffins",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "lavan blend",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Dulang",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Culzean",
+      "label": "GTL Diesel",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "widuri",
+      "label": "Styrene",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "Lecithin",
+      "label": "Ground Granulated Blast Furnace Slag",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "belize light crude",
+      "label": "Soda Ash",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "Maarib Lt.",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Naphtha Diluent",
+      "label": "Carbon Black Feedstock",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "Gindungo",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "zaafarana",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Chemical Grade Propylene",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "rang dong",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Butylene",
+      "label": "Metallurgical Coal",
       "total": 1,
       "ballast": 1,
       "laden": 0
@@ -4261,19 +823,7 @@
       "laden": 0
     },
     {
-      "label": "ras gharib",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Val'd Agri",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "patos marinza",
+      "label": "Iron Ore Fines",
       "total": 1,
       "ballast": 1,
       "laden": 0
@@ -4285,94 +835,10 @@
       "laden": 1
     },
     {
-      "label": "Escravos Condensate",
+      "label": "Marine Diesel",
       "total": 1,
       "ballast": 0,
       "laden": 1
-    },
-    {
-      "label": "Cutter Stock",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Pacific Cold Lake",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Argentina Crude",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Su Tu Den",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Ravva",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Cumene",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Caustic Potash",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Synthetic",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Rabi Light",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Pargo Complex",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Distillate Blendstock",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Berantai",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "pazflor",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "te giac trang",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
     },
     {
       "label": "Low Sulfur Gasoil",
@@ -4381,366 +847,102 @@
       "laden": 0
     },
     {
-      "label": "Dar/Nile Crude",
+      "label": "Hot Rolled Coils",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "Catcher",
+      "label": "Green Petcoke",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "Thailand Crude",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Hydrocracker Bottoms",
+      "label": "Medium CV",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "Dipropylene Glycol",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "BRBF Fines",
+      "label": "High CV",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "LONS Fines",
+      "label": "khafji",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "alvheim",
+      "label": "Vinyl Acetate Monomer",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "Refined Used Cooking Oil",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Atlas Fines",
+      "label": "Apiay",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "Food Waste Oil (FWO)",
+      "label": "arab heavy",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "Oats",
+      "label": "Coal Tar",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "En Ping",
+      "label": "Gasoil 50ppm",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "beryl",
+      "label": "Metallurgical Coke",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "triton",
+      "label": "usan",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "Intermediate Iron Products",
+      "label": "Low Sulfur Condensate",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "Bergading Condensate",
+      "label": "dubai  fateh",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "ketapang",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "brass river",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "mars",
+      "label": "Buzios",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "coco",
+      "label": "Copper Concentrate",
       "total": 1,
       "ballast": 1,
       "laden": 0
-    },
-    {
-      "label": "Low Volatility Hard Coking Coal",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Nitrate",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Isoprene Monomer",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "CJ Blend",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Corn Oil",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "eagle ford condensate",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "akpo",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "altamira",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "pennington",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "terra nova",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Talc",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "kissanje",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "CBOB",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Specialities",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Alba Condensate",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Ags Byproduct",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Complex Fertilizers",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Goliat blend",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Benzene Toluene Xylene",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Agogo",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "cossack",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Light Diesel Oil",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "80 Gasoline",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Heavy Virgin Naphtha",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Alcohol",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Blending Components",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "stag",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Empty Fruit Bunch Oil",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Koolan Fines",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "n-Butanol",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "DUC",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Brown Sugar",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "ostra",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Bethioua Condensate",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Lead Products",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Isononyl Alcohol",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "senoro condensate",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "84 Gasoline",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Diethanolamine",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
     }
   ],
-  "total": 28187,
-  "syncTimestamp": "2026-03-29T19:42:19.791Z"
+  "total": 1280,
+  "syncTimestamp": "2026-03-29T20:53:58.337Z"
 }
