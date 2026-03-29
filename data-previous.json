@@ -3339,5 +3339,371 @@
         }
       ]
     }
-  ]
+  ],
+  "sprRelease": {
+    "announced": "2026-03-11",
+    "asOf": "2026-03-28",
+    "trigger": "Strait of Hormuz disruption / Iran conflict — ~20% of global oil supply at risk",
+    "totalCommitted": 426,
+    "totalCrude": 301,
+    "totalProducts": 125,
+    "totalReleased": 33,
+    "releasePeriodDays": 120,
+    "keyInsights": [
+      "Japan PM Takaichi asked IEA chief Birol on Mar 25 to prepare a second coordinated release if Hormuz disruption persists",
+      "14 European IEA members with 114.5 mb combined commitment begin oil stock releases today (Mar 28) per end-of-March schedule",
+      "US SPR deliveries ongoing at ~1.4 mb/day from 3 Gulf Coast sites — 11.0 mb delivered (6.4% of 172.2 mb commitment)",
+      "South Korea enforced naphtha export ban from Mar 27 alongside 6.0 mb already released from 22.5 mb commitment",
+      "Overall release at 33.0 of 426.0 mb (7.7%) on Day 17 of 120-day window; next EIA weekly data expected Apr 1"
+    ],
+    "sources": [
+      {
+        "title": "Japan PM Takaichi asks IEA chief to prepare second coordinated oil release",
+        "url": "https://www.japantimes.co.jp/news/2026/03/25/japan/sanae-takaichi-iea-chief/",
+        "date": "2026-03-25"
+      },
+      {
+        "title": "South Korea restricts naphtha exports amid supply disruptions",
+        "url": "https://www.icis.com/explore/resources/news/2026/03/27/11192891/south-korea-restricts-naphtha-exports-for-five-months-from-27-mar",
+        "date": "2026-03-27"
+      },
+      {
+        "title": "Japan begins first release of state oil reserves in 4 years",
+        "url": "https://www.nippon.com/en/news/yjj2026032600175/",
+        "date": "2026-03-26"
+      },
+      {
+        "title": "Which countries have strategic oil reserves and how much — Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/3/23/which-countries-have-strategic-oil-reserves-and-how-much",
+        "date": "2026-03-23"
+      },
+      {
+        "title": "DOE begins delivering SPR barrels at record speeds",
+        "url": "https://www.energy.gov/hgeo/articles/energy-department-begins-delivering-spr-barrels-record-speeds",
+        "date": "2026-03-20"
+      },
+      {
+        "title": "IEA confirms member country contributions",
+        "url": "https://www.iea.org/news/iea-confirms-member-country-contributions-to-collective-action-to-release-oil-stocks-in-response-to-middle-east-disruptions",
+        "date": "2026-03-19"
+      },
+      {
+        "title": "IEA collective action decision",
+        "url": "https://www.iea.org/news/update-on-iea-collective-action-decision-of-11-march-2026",
+        "date": "2026-03-15"
+      },
+      {
+        "title": "US DOE SPR release announcement",
+        "url": "https://www.energy.gov/articles/united-states-release-172-million-barrels-oil-strategic-petroleum-reserve",
+        "date": "2026-03-11"
+      },
+      {
+        "title": "IEA 400m barrels release — Al Jazeera",
+        "url": "https://www.aljazeera.com/news/2026/3/11/iea-proposes-release-of-400m-barrels-of-oil-from-strategic-reserves",
+        "date": "2026-03-11"
+      }
+    ],
+    "countries": [
+      {
+        "country": "United States",
+        "flag": "🇺🇸",
+        "committed": 172.2,
+        "crude": 172.2,
+        "products": 0,
+        "startDate": "2026-03-20",
+        "released": 11,
+        "region": "Americas"
+      },
+      {
+        "country": "Japan",
+        "flag": "🇯🇵",
+        "committed": 79.8,
+        "crude": 54,
+        "products": 25.8,
+        "startDate": "2026-03-16",
+        "released": 10.5,
+        "region": "Asia-Oceania"
+      },
+      {
+        "country": "Canada",
+        "flag": "🇨🇦",
+        "committed": 23.6,
+        "crude": 23.6,
+        "products": 0,
+        "startDate": "2026-03-24",
+        "released": 1,
+        "region": "Americas"
+      },
+      {
+        "country": "South Korea",
+        "flag": "🇰🇷",
+        "committed": 22.5,
+        "crude": 22.5,
+        "products": 0,
+        "startDate": "2026-03-16",
+        "released": 6,
+        "region": "Asia-Oceania"
+      },
+      {
+        "country": "Germany",
+        "flag": "🇩🇪",
+        "committed": 19.5,
+        "crude": 0,
+        "products": 19.5,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Europe"
+      },
+      {
+        "country": "France",
+        "flag": "🇫🇷",
+        "committed": 14.6,
+        "crude": 0,
+        "products": 14.6,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Europe"
+      },
+      {
+        "country": "United Kingdom",
+        "flag": "🇬🇧",
+        "committed": 14,
+        "crude": 4.3,
+        "products": 9.7,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Europe"
+      },
+      {
+        "country": "Türkiye",
+        "flag": "🇹🇷",
+        "committed": 11.7,
+        "crude": 3.6,
+        "products": 8.1,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Europe"
+      },
+      {
+        "country": "Spain",
+        "flag": "🇪🇸",
+        "committed": 11.6,
+        "crude": 0,
+        "products": 11.6,
+        "startDate": "2026-03-16",
+        "released": 2.5,
+        "region": "Europe"
+      },
+      {
+        "country": "Italy",
+        "flag": "🇮🇹",
+        "committed": 10,
+        "crude": 0,
+        "products": 10,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Europe"
+      },
+      {
+        "country": "Poland",
+        "flag": "🇵🇱",
+        "committed": 7.5,
+        "crude": 6,
+        "products": 1.5,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Europe"
+      },
+      {
+        "country": "Hungary",
+        "flag": "🇭🇺",
+        "committed": 6.1,
+        "crude": 0,
+        "products": 6.1,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Europe"
+      },
+      {
+        "country": "Netherlands",
+        "flag": "🇳🇱",
+        "committed": 5.4,
+        "crude": 0,
+        "products": 5.4,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Europe"
+      },
+      {
+        "country": "Australia",
+        "flag": "🇦🇺",
+        "committed": 4.8,
+        "crude": 0,
+        "products": 4.8,
+        "startDate": "2026-03-16",
+        "released": 2,
+        "region": "Asia-Oceania"
+      },
+      {
+        "country": "Mexico",
+        "flag": "🇲🇽",
+        "committed": 3.9,
+        "crude": 3.9,
+        "products": 0,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Americas"
+      },
+      {
+        "country": "Austria",
+        "flag": "🇦🇹",
+        "committed": 2.4,
+        "crude": 2.4,
+        "products": 0,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Europe"
+      },
+      {
+        "country": "Czech Republic",
+        "flag": "🇨🇿",
+        "committed": 2.2,
+        "crude": 2.2,
+        "products": 0,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Europe"
+      },
+      {
+        "country": "Sweden",
+        "flag": "🇸🇪",
+        "committed": 2.1,
+        "crude": 0,
+        "products": 2.1,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Europe"
+      },
+      {
+        "country": "Greece",
+        "flag": "🇬🇷",
+        "committed": 2,
+        "crude": 0,
+        "products": 2,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Europe"
+      },
+      {
+        "country": "Portugal",
+        "flag": "🇵🇹",
+        "committed": 2,
+        "crude": 0,
+        "products": 2,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Europe"
+      },
+      {
+        "country": "Finland",
+        "flag": "🇫🇮",
+        "committed": 1.8,
+        "crude": 0,
+        "products": 1.8,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Europe"
+      },
+      {
+        "country": "Ireland",
+        "flag": "🇮🇪",
+        "committed": 1.7,
+        "crude": 0.2,
+        "products": 1.5,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Europe"
+      },
+      {
+        "country": "New Zealand",
+        "flag": "🇳🇿",
+        "committed": 1.6,
+        "crude": 1.3,
+        "products": 0.3,
+        "startDate": "2026-03-16",
+        "released": 0,
+        "region": "Asia-Oceania"
+      },
+      {
+        "country": "Denmark",
+        "flag": "🇩🇰",
+        "committed": 1.2,
+        "crude": 0,
+        "products": 1.2,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Europe"
+      },
+      {
+        "country": "Lithuania",
+        "flag": "🇱🇹",
+        "committed": 0.6,
+        "crude": 0,
+        "products": 0.6,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Europe"
+      },
+      {
+        "country": "Norway",
+        "flag": "🇳🇴",
+        "committed": 0.4,
+        "crude": 0,
+        "products": 0.4,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Europe"
+      },
+      {
+        "country": "Latvia",
+        "flag": "🇱🇻",
+        "committed": 0.3,
+        "crude": 0,
+        "products": 0.3,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Europe"
+      },
+      {
+        "country": "Belgium",
+        "flag": "🇧🇪",
+        "committed": 0.3,
+        "crude": 0,
+        "products": 0.3,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Europe"
+      },
+      {
+        "country": "Estonia",
+        "flag": "🇪🇪",
+        "committed": 0.3,
+        "crude": 0,
+        "products": 0.3,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Europe"
+      },
+      {
+        "country": "Luxembourg",
+        "flag": "🇱🇺",
+        "committed": 0.1,
+        "crude": 0.1,
+        "products": 0,
+        "startDate": "2026-03-28",
+        "released": 0,
+        "region": "Europe"
+      }
+    ]
+  }
 }

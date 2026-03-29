@@ -1,12 +1,12 @@
 // ============================================================
 // data.js -- ADNOC Force Majeure & Geopolitical Monitor
 // Pre-populated monitoring data from verified intelligence
-// Last updated: 2026-03-28T12:00:00Z
-// Period: 28 February - 28 March 2026
+// Last updated: 2026-03-29T15:00:00Z
+// Period: 28 February - 29 March 2026
 // Context: Strait of Hormuz / Gulf military escalation
 // ============================================================
 
-const LAST_UPDATED = "2026-03-28T12:00:00Z";
+const LAST_UPDATED = "2026-03-29T15:00:00Z";
 
 // ---------- TABLE 1: Country Status Matrix ----------
 const COUNTRY_STATUS_DATA = [
@@ -28,13 +28,19 @@ const COUNTRY_STATUS_DATA = [
       refining: { capacity: 443, affected: 443, available: 0, unit: "kb/d" },
       lng: { preWar: 77.0, current: 0.0, unit: "Mtpa" },
       notes: {
-        oil: "Ras Laffan offline; all downstream halted",
-        gas: "North Field shut; all processing halted",
-        refining: "Laffan 1+2 offline with Ras Laffan",
-        lng: "Ras Laffan LNG fully offline; 77 Mtpa halted"
+        oil: "All offshore fields shut since early Mar; Ras Laffan complex offline",
+        gas: "North Field shut; all processing halted; no restart until conflict ends",
+        refining: "Laffan 1+2 offline with Ras Laffan; 443 kb/d at zero",
+        lng: "All 77 Mtpa halted; FM extended to Edison (10 cargoes Apr-mid Jun); 12.8 Mtpa damaged 3-5 yrs"
       }
     },
     events: [
+      {
+        date: "2026-03-27",
+        title: "QatarEnergy notifies Edison of FM on 10 LNG cargoes through mid-June",
+        description: "QatarEnergy notified Italian utility Edison that it cannot fulfil contractual obligations for 10 LNG cargoes from April through mid-June 2026 at the Adriatic LNG terminal. Final March cargo expected to deliver by 30 Mar. FM scope now covers all major long-term buyers globally.",
+        isNew: true
+      },
       {
         date: "2026-03-24",
         title: "QatarEnergy extends FM to Italy, Belgium, South Korea, China",
@@ -110,7 +116,8 @@ const COUNTRY_STATUS_DATA = [
       { id: 7, title: "Iran attacks cut 17% of Qatar LNG - Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/19/iran-attacks-cut-17-of-qatars-lng-capacity-for-up-to-5-years-qatarenergy", date: "2026-03-19" },
       { id: 8, title: "QatarEnergy: $20B annual revenue loss - Kathmandu Post", url: "https://kathmandupost.com/world/2026/03/20/iran-attacks-wipe-out-17-of-qatar-s-lng-capacity-for-up-to-five-years-qatarenergy-ceo-says", date: "2026-03-20" },
       { id: 9, title: "QatarEnergy extends FM to Italy, Belgium, S. Korea, China - Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/24/qatarenergy-declares-force-majeure-on-some-lng-contracts", date: "2026-03-24" },
-      { id: 10, title: "Qatar LNG restart impossible until conflict ends - Yahoo/FT", url: "https://finance.yahoo.com/news/quickly-qatar-restart-world-largest-010000527.html", date: "2026-03-24" }
+      { id: 10, title: "Qatar LNG restart impossible until conflict ends - Yahoo/FT", url: "https://finance.yahoo.com/news/quickly-qatar-restart-world-largest-010000527.html", date: "2026-03-24" },
+      { id: 11, title: "QatarEnergy extends FM to Edison through mid-June - MarketScreener", url: "https://www.marketscreener.com/news/edison-s-p-a-qatarenergy-extends-force-majeure-until-mid-june-2026-ce7e51d8d989f524", date: "2026-03-27" }
     ]
   },
   {
@@ -130,9 +137,9 @@ const COUNTRY_STATUS_DATA = [
       gas: { preWar: 1.7, current: 1.3, unit: "Bcf/d" },
       refining: { capacity: 1400, affected: 900, available: 500, unit: "kb/d" },
       notes: {
-        oil: "KPC FM declared; tankers blocked",
-        gas: "Associated gas drops with crude output cuts; domestic supply prioritized",
-        refining: "Ahmadi + Abdullah hit by drones"
+        oil: "KPC FM on crude; ~500 kb/d cut; storage filling; tankers blocked at Hormuz",
+        gas: "Associated gas drops with crude output cuts; domestic supply prioritized for power",
+        refining: "Al-Ahmadi (466k) struck & shut; Abdullah + Al-Zour at reduced rates; 3-4 months repair"
       }
     },
     events: [
@@ -197,12 +204,18 @@ const COUNTRY_STATUS_DATA = [
       gas: { preWar: 11.3, current: 9.0, unit: "Bcf/d" },
       refining: { capacity: 3291, affected: 0, available: 3291, unit: "kb/d" },
       notes: {
-        oil: "Offshore fields shut; rerouting to Yanbu via East-West Pipeline",
-        gas: "Master Gas System reduced; offshore associated gas offline",
-        refining: "Ras Tanura shut then reopened"
+        oil: "4 offshore mega-fields shut (~2.5M bpd); March exports ~4.4 mb/d (down from 7.1 Feb); Yanbu at record ~3.8M bpd",
+        gas: "Master Gas System reduced; offshore associated gas offline; onshore maintenance deferred",
+        refining: "Ras Tanura reopened Mar 13; all onshore refineries operational; throughput constrained by crude routing"
       }
     },
     events: [
+      {
+        date: "2026-03-28",
+        title: "Yanbu exports set to hit record 3.8M bpd; March crude exports drop sharply",
+        description: "Saudi Aramco March crude exports averaged ~4.355 mb/d per Kpler, well below 7.1 mb/d in February, despite Yanbu expected to hit record 3.8M bpd throughput. Brent surged to $112.57/bbl. P. Aliki crude carrier loaded at Ras Tanura for Pakistan transited Hormuz under IRGC tolled passage on Mar 28. — Kpler, AGBI, Bloomberg",
+        isNew: true
+      },
       {
         date: "2026-03-27",
         title: "East-West Pipeline flow triples to bypass Hormuz",
@@ -251,7 +264,10 @@ const COUNTRY_STATUS_DATA = [
       { id: 2, title: "Aramco reroute to Yanbu - Argus", url: "https://www.argusmedia.com", date: "2026-03-02" },
       { id: 3, title: "Offshore fields shut - Maritime Executive", url: "https://maritime-executive.com", date: "2026-03-09" },
       { id: 4, title: "Safaniya/Zuluf/Marjan shutdown - Splash247", url: "https://splash247.com", date: "2026-03-09" },
-      { id: 5, title: "Ras Tanura restarted - Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-03-18/saudi-arabia-s-ras-tanura-refinery-has-restarted-operations", date: "2026-03-18" }
+      { id: 5, title: "Ras Tanura restarted - Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-03-18/saudi-arabia-s-ras-tanura-refinery-has-restarted-operations", date: "2026-03-18" },
+      { id: 6, title: "Saudi slashes oil supply to Asia - OilPrice.com", url: "https://oilprice.com/Latest-Energy-News/World-News/Saudi-Arabia-Slashes-Oil-Supply-to-Asia-as-War-Chokes-Export-Route.html", date: "2026-03-28" },
+      { id: 7, title: "Aramco oil exports spike after Red Sea shift - AGBI", url: "https://www.agbi.com/oil-and-gas/2026/03/aramco-oil-exports-spike-as-it-diverts-away-from-red-sea-ports/", date: "2026-03-27" },
+      { id: 8, title: "Pipeline bypass capacity only 9M bpd vs Strait's 20M - Al Jazeera", url: "https://www.aljazeera.com/economy/2026/3/27/saudi-uae-iraq-can-three-pipelines-help-oil-escape-strait-of-hormuz", date: "2026-03-27" }
     ]
   },
   {
@@ -272,17 +288,23 @@ const COUNTRY_STATUS_DATA = [
       refining: { capacity: 1222, affected: 417, available: 805, unit: "kb/d" },
       lng: { preWar: 6.0, current: 0.0, unit: "Mtpa" },
       notes: {
-        oil: "Offshore offline; Fujairah suspended; >50% crude shut-in",
-        gas: "Habshan resumed Mar 23; offshore associated gas reduced",
-        refining: "Ruwais-2 shut (417 kb/d); 805 kb/d available",
-        lng: "Das Island LNG at minimal capacity; Hormuz blocked"
+        oil: "Offshore offline; ADCOP at 1.62M bpd (record); maintenance deferred to keep Murban flowing; >50% crude shut-in",
+        gas: "Habshan resumed Mar 23; Shah still shut (~1 Bcf/d); offshore associated gas reduced",
+        refining: "Ruwais-2 shut (417 kb/d); 805 kb/d available; Jebel Ali operational",
+        lng: "Das Island LNG at minimal capacity; Hormuz blocked; transaction-by-transaction basis"
       }
     },
     events: [
       {
-        date: "2026-03-29",
-        title: "ADNOC Safeen container ship hit by projectile in Hormuz",
-        description: "ADNOC's Safeen shipping line vessel hit by projectile while transiting the Strait of Hormuz. Reported by The Loadstar, flagged as critical by Kpler intelligence. Highlights continued risk to ADNOC maritime operations despite pipeline bypass efforts.",
+        date: "2026-03-28",
+        title: "Indian LPG tankers and Pakistan crude carrier transit Hormuz under IRGC tollbooth",
+        description: "Two Indian-flagged LPG carriers (BW Tyr and BW Elm) and a Greek crude tanker P. Aliki (chartered by Pakistan, loaded at Ras Tanura) transited the Strait under IRGC-controlled tolled passage. Iran is screening vessels by flag, cargo, and destination — allowing 'non-hostile' nations passage for a fee. Only 144 commodity crossings since Mar 1 (95% drop from peacetime) per Kpler.",
+        isNew: true
+      },
+      {
+        date: "2026-03-27",
+        title: "ADNOC defers onshore maintenance to keep Murban flowing",
+        description: "ADNOC Onshore deferred planned maintenance at onshore fields from May to September, prioritizing maximum Murban crude output for export via the ADCOP/Habshan-Fujairah pipeline which bypasses Hormuz. ADCOP averaging 1.62M bpd in March vs 1.17M bpd in February. First Murban Crude Oil Availability Forecast since conflict began released Mar 27. — MEES",
         isNew: true
       },
       {
@@ -338,6 +360,11 @@ const COUNTRY_STATUS_DATA = [
         description: "ADNOC announced monitoring offshore production levels for 'operational flexibility'. Onshore operations continue. Has not declared formal FM despite Hormuz closure."
       },
       {
+        date: "2026-03-04",
+        title: "Safeen Prestige container ship hit by projectile in Hormuz",
+        description: "Malta-flagged containership Safeen Prestige (Safeen Feeders/AD Ports Group, 1,740 TEU) hit by unknown projectile while transiting eastbound near Oman. Fire in engine room; all 24 crew abandoned safely, rescued by Royal Navy of Oman. First container ship casualty of the conflict. Tug Mussafah 2 later struck by two missiles while attempting salvage — at least 4 seafarers killed. — The Loadstar, gCaptain, Seatrade Maritime"
+      },
+      {
         date: "2026-03-02",
         title: "Fujairah bunker suppliers declare FM",
         description: "MEE and Pearl Marine declared FM on marine fuel deliveries at Fujairah bunkering hub. World's 2nd largest bunkering hub disrupted."
@@ -390,7 +417,11 @@ const COUNTRY_STATUS_DATA = [
       { id: 11, title: "ADNOC extraordinary measures - Al Arabiya", url: "https://english.alarabiya.net/business/energy/2026/03/23/uae-s-adnoc-deploying-extraordinary-measures-to-ensure-stakeholders-get-needs-ceo", date: "2026-03-23" },
       { id: 12, title: "UAE restarts Habshan gas complex - Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-03-23/uae-restarts-main-gas-supply-plant-while-idling-most-lng-output", date: "2026-03-23" },
       { id: 13, title: "ADNOC Gas adjusts LNG output - Arab News", url: "https://www.arabnews.com/node/2637337/business-economy", date: "2026-03-23" },
-      { id: 14, title: "ADNOC CEO calls Hormuz weaponization economic terrorism - Rigzone", url: "https://www.rigzone.com/news/adnoc_ceo_says_weaponizing_hormuz_is_economic_terrorism-25-mar-2026-183294-article/", date: "2026-03-25" }
+      { id: 14, title: "ADNOC CEO calls Hormuz weaponization economic terrorism - Rigzone", url: "https://www.rigzone.com/news/adnoc_ceo_says_weaponizing_hormuz_is_economic_terrorism-25-mar-2026-183294-article/", date: "2026-03-25" },
+      { id: 15, title: "ADNOC Onshore defers maintenance to keep Murban flowing - MEES", url: "https://www.mees.com/2026/3/27/news-in-brief/adnoc-onshore-defers-maintenance-to-keep-murban-flowing/5fa21940-29ed-11f1-9d5d-dfe0aaa64dd7", date: "2026-03-27" },
+      { id: 16, title: "Indian LPG tankers cross Hormuz - The Week India", url: "https://www.theweek.in/news/middle-east/2026/03/28/2-indian-lpg-tankers-cross-hormuz-strait-a-day-after-irgc-turned-back-chinese-linked-vessels.html", date: "2026-03-28" },
+      { id: 17, title: "Safeen Prestige hit by projectile - The Loadstar", url: "https://theloadstar.com/safeen-ship-hit-by-projectile-in-strait-of-hormuz/", date: "2026-03-04" },
+      { id: 18, title: "Tug struck assisting Safeen Prestige, 4 killed - Seatrade Maritime", url: "https://www.seatrade-maritime.com/security/tug-struck-assisting-abandoned-container-ship-in-strait-of-hormuz", date: "2026-03-04" }
     ]
   },
   {
@@ -410,9 +441,9 @@ const COUNTRY_STATUS_DATA = [
       gas: { preWar: 3.0, current: 0.8, unit: "Bcf/d" },
       refining: { capacity: 1300, affected: 400, available: 900, unit: "kb/d" },
       notes: {
-        oil: "Basra 3.3M\u21920.9M; FM on foreign fields",
-        gas: "Associated gas collapses with 70% crude cuts; flaring reduced",
-        refining: "Lanaz struck; storage-constrained throughput"
+        oil: "Basra output ~800k bpd (from 3.3M); storage at max capacity; BP Rumaila cut to 350k; Eni Zubair cut 70k",
+        gas: "Associated gas collapses with ~76% crude cuts; Khor Mor (Kurdistan) halted",
+        refining: "Lanaz struck; Baiji/Basra at reduced throughput; Daura/Karbala operational for domestic"
       }
     },
     events: [
@@ -604,7 +635,10 @@ const COUNTRY_STATUS_DATA = [
       { id: 1, title: "Duqm/Salalah struck - Anadolu", url: "https://www.aa.com.tr", date: "2026-03-01" },
       { id: 2, title: "Salalah tanks hit - Al Jazeera", url: "https://www.aljazeera.com", date: "2026-03-11" },
       { id: 3, title: "Salalah fire - Argus", url: "https://www.argusmedia.com", date: "2026-03-11" },
-      { id: 4, title: "Maersk suspends Salalah - Maersk", url: "https://www.maersk.com", date: "2026-03-11" }
+      { id: 4, title: "Maersk suspends Salalah - Maersk", url: "https://www.maersk.com", date: "2026-03-11" },
+      { id: 5, title: "Salalah port suspended after drone attack - Maritime Executive", url: "https://maritime-executive.com/article/oman-suspends-operations-at-key-arabian-sea-port-after-drone-strike", date: "2026-03-29" },
+      { id: 6, title: "Maersk halts Salalah after drone attack - Turkiye Today", url: "https://www.turkiyetoday.com/business/maersk-halts-operations-at-omans-salalah-port-after-drone-attack-3217067", date: "2026-03-29" },
+      { id: 7, title: "Worker injured in Salalah drone strike - Iran International", url: "https://www.iranintl.com/en/202603286245", date: "2026-03-29" }
     ]
   },
   {
@@ -674,7 +708,7 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1EE}\u{1F1F7}",
     status: "critical",
     statusLabel: "Struck / Disrupted",
-    summary: "Israeli strikes hit South Pars gas field (Phases 3-6, 14, 17-18). USAF raids on Kharg Island. Tehran fuel depots and refinery destroyed. IRGC formally closed Hormuz to US/allied vessels Mar 27. Commander Tangsiri killed by airstrike Mar 26. Houthis joined war Mar 28 with missile attack on Israel.",
+    summary: "Israeli strikes hit South Pars gas field (Phases 3-6, 14, 17-18). USAF raids on Kharg Island. Tehran fuel depots and refinery destroyed. IRGC formally closed Hormuz to US/allied vessels Mar 27 with tolled passage for 'non-hostile' nations. Commander Tangsiri killed Mar 26. Houthis joined war Mar 28; Bab al-Mandeb closure threatened. Pakistan 20-ship Hormuz deal Mar 28; hosting ceasefire talks.",
     metrics: {
       headline: "~476 kb/d crude + ~3.3 Bcf/d gas offline",
       productionOffline: "South Pars phases + 14 oil fields reduced",
@@ -685,29 +719,35 @@ const COUNTRY_STATUS_DATA = [
       gas: { preWar: 25.8, current: 22.5, unit: "Bcf/d" },
       refining: { capacity: 2600, affected: 410, available: 2190, unit: "kb/d" },
       notes: {
-        oil: "South Pars struck; fields ~30% shut-in",
-        gas: "Asaluyeh processing hit; ~100 MMcm/d offline (~14% of South Pars)",
-        refining: "Tehran Refinery destroyed; BA curtailed",
-        lng: "South Pars disrupted; LNG minimal"
+        oil: "Southern fields ~30% shut-in; Kharg still loading avg 1.84 mb/d in March (Kpler); tolled Hormuz passage generating revenue",
+        gas: "Asaluyeh processing hit; ~100 MMcm/d offline (~12% of South Pars); Fajr Jam fire",
+        refining: "Tehran Refinery (250 kb/d) destroyed; Bandar Abbas curtailed; Siraf condensate operational",
+        lng: "No LNG export capacity; South Pars disruption affects domestic supply"
       }
     },
     events: [
       {
+        date: "2026-03-29",
+        title: "Pakistan diplomatic track advances; NPR reports Islamabad hosting ceasefire talks",
+        description: "Pakistan hosting diplomatic discussions on ending the war, serving as intermediary between Iran and US. FM Dar posted on X tagging VP Vance, Rubio, Witkoff, and Araghchi — signaling the 20-ship transit deal (Mar 28) is linked to broader peace efforts. Houthi deputy info minister warned closing Bab al-Mandeb is 'among our options'. — NPR, Al Jazeera",
+        isNew: true
+      },
+      {
         date: "2026-03-28",
-        title: "Houthis join war — missile attack on Israel",
-        description: "Yemen's Houthis launched ballistic missiles at 'sensitive military targets' in southern Israel, their first attack since the war began. Israel intercepted one missile. Attack stokes fears of renewed Red Sea shipping disruption. Brent crude closed at $112.57/bbl, WTI at $99.64.",
+        title: "Houthis join war — missile attack on Israel; Pakistan secures 20-ship Hormuz deal",
+        description: "Yemen's Houthis launched ballistic missiles at 'sensitive military targets' in southern Israel, their first attack since the war began. Israel intercepted one missile. Attack stokes fears of renewed Red Sea shipping disruption and potential Bab al-Mandeb closure. Separately, Pakistan FM Ishaq Dar announced Iran agreed to allow 20 Pakistani-flagged vessels through Hormuz (2/day). Brent $112.57/bbl, WTI $99.64. — Washington Post, PBS, Bloomberg, Al Jazeera",
         isNew: true
       },
       {
         date: "2026-03-27",
-        title: "IRGC formally closes Hormuz to US/allied vessels",
-        description: "IRGC Navy turned back 3 container ships including 2 COSCO vessels (CSCL Indian Ocean, CSCL Arctic Ocean). Officially proclaimed all movement prohibited for ships going to/from US, Israeli, and allied-nation ports. Thailand-flagged Mayuree Naree ran aground on Qeshm Island. Brent rose to $114/bbl.",
+        title: "IRGC formally closes Hormuz to US/allied vessels; tolled passage system created",
+        description: "IRGC Navy turned back 3 container ships including 2 COSCO vessels (CSCL Indian Ocean, CSCL Arctic Ocean) and Marshall Islands-flagged Lotus Rising near Larak Island. Officially proclaimed all movement prohibited for ships going to/from US, Israeli, and allied-nation ports. Vessel operators must submit details to IRGC intermediaries for vetting and clearance code. Thailand-flagged Mayuree Naree ran aground on Qeshm Island. Brent rose to $114/bbl. — USNI News, FDD, Al Jazeera",
         isNew: true
       },
       {
         date: "2026-03-26",
-        title: "Israeli airstrike kills IRGC Navy commander Tangsiri",
-        description: "Israel announced IRGC Navy commander Alireza Tangsiri killed in airstrike, accusing him of being directly responsible for the Strait closure. Iran allows vessels from China, Russia, India, Iraq, Pakistan, Malaysia, Thailand to pass. Trump extends pause on striking Iranian power plants until April 6.",
+        title: "Israeli airstrike kills IRGC Navy commander Tangsiri; Trump extends deadline to Apr 6",
+        description: "Israel announced IRGC Navy commander Alireza Tangsiri killed in airstrike, accusing him of being directly responsible for the Strait closure. Iran allows vessels from China, Russia, India, Iraq, Pakistan, Malaysia, Thailand to pass. Trump extends pause on striking Iranian power plants until April 6 'as per Iranian Government request'. — Fox News, NPR",
         isNew: true
       },
       {
@@ -743,8 +783,8 @@ const COUNTRY_STATUS_DATA = [
     ],
     oilGasImpact: {
       severity: "critical",
-      summary: "~476 kb/d crude + ~3.3 Bcf/d gas offline",
-      details: "South Pars Phases 3-6, 14, 17-18 struck at Asaluyeh on 18 Mar (~12% of Iran's gas output offline). Tehran Refinery (250 kb/d) destroyed on 8 Mar. Bandar Abbas Refinery curtailed. 30+ fuel depots destroyed across Tehran. Kharg Island raided 13 Mar - exports disrupted. Southern oil fields (Ahwaz, Marun, Gachsaran) ~30% shut-in due to Hormuz closure and storage constraints."
+      summary: "~476 kb/d crude + ~3.3 Bcf/d gas offline; Houthis join war",
+      details: "South Pars Phases 3-6, 14, 17-18 struck at Asaluyeh on 18 Mar (~12% of Iran's gas output offline). Tehran Refinery (250 kb/d) destroyed on 8 Mar. Bandar Abbas Refinery curtailed. 30+ fuel depots destroyed across Tehran. Kharg Island raided 13 Mar - exports disrupted but Iran still loaded avg 1.84 mb/d crude in March (84% from Kharg per Kpler). Southern oil fields ~30% shut-in. IRGC created tolled passage system Mar 27 — only 144 commodity crossings since Mar 1 (95% drop). Houthis joined war Mar 28 with missile attack on Israel; Bab al-Mandeb closure threatened. Pakistan secured 20-ship transit deal Mar 28."
     },
     infrastructure: [
       { name: "South Pars Phases 2-3", type: "Gas Field", capacity: "~50 MMcm/d", status: "shutdown" },
@@ -786,7 +826,12 @@ const COUNTRY_STATUS_DATA = [
       { id: 8, title: "Iran rejects US ceasefire, demands Hormuz sovereignty - CNBC", url: "https://www.cnbc.com/2026/03/25/iran-war-us-trump.html", date: "2026-03-25" },
       { id: 9, title: "IRGC opens tolled passage, turns back 3 ships - USNI News", url: "https://news.usni.org/2026/03/27/irgc-opens-tolled-passage-for-merchant-ships-in-strait-of-hormuz-transit-continues-to-trickle-through", date: "2026-03-27" },
       { id: 10, title: "Houthis launch missile at Israel, join Iran war - Axios", url: "https://www.axios.com/2026/03/28/houthis-iran-war-israel-missile", date: "2026-03-28" },
-      { id: 11, title: "Iran kills IRGC Navy commander Tangsiri - Fox News", url: "https://www.foxnews.com/live-news/us-israel-iran-war-strait-hormuz-updates-march-26", date: "2026-03-26" }
+      { id: 11, title: "Iran kills IRGC Navy commander Tangsiri - Fox News", url: "https://www.foxnews.com/live-news/us-israel-iran-war-strait-hormuz-updates-march-26", date: "2026-03-26" },
+      { id: 12, title: "Pakistan secures Iran deal for 20 ships through Hormuz - Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/28/pakistan-secures-iran-deal-to-send-20-ships-through-strait-of-hormuz", date: "2026-03-28" },
+      { id: 13, title: "Houthi attack stokes Red Sea shipping fears - Washington Post", url: "https://www.washingtonpost.com/business/2026/03/28/iran-israel-us-houthis-yemen/9d6c5e52-2ac3-11f1-a0f2-3ba4c9fe08ac_story.html", date: "2026-03-28" },
+      { id: 14, title: "IRGC tolled passage for merchant ships - USNI News", url: "https://news.usni.org/2026/03/27/irgc-opens-tolled-passage-for-merchant-ships-in-strait-of-hormuz-transit-continues-to-trickle-through", date: "2026-03-27" },
+      { id: 15, title: "Trump extends Iran deadline to April 6 - NPR", url: "https://www.npr.org/2026/03/26/nx-s1-5761882/iran-war-peace-conditions", date: "2026-03-26" },
+      { id: 16, title: "Pakistan hosts diplomatic discussions on ending war - NPR", url: "https://www.npr.org/2026/03/29/nx-s1-5765344/pakistan-diplomatic-discussions-iran-war", date: "2026-03-29" }
     ]
   }
 ];
@@ -822,13 +867,13 @@ const FM_DECLARATIONS_DATA = [
     date: "2026-03-04",
     status: "active",
     statusLabel: "Active",
-    summary: "FM on all LNG exports globally. Extended Mar 24 to Italy, Belgium, South Korea, China contracts. All downstream halted. ~20% of global LNG supply removed. Restart impossible until conflict ends.",
+    summary: "FM on all LNG exports globally. Extended Mar 24 to Italy, Belgium, South Korea, China. Mar 27: Edison notified of 10-cargo FM through mid-June. All downstream halted. ~20% of global LNG supply removed. Restart impossible until conflict ends.",
     details: {
-      volumeAffected: "~7 million tonnes/month (~20% global LNG supply); all downstream halted. Mar 24: FM extended to Italy, Belgium, South Korea, China contracts.",
+      volumeAffected: "~7 million tonnes/month (~20% global LNG supply); all downstream halted. Mar 24: FM extended to Italy, Belgium, South Korea, China. Mar 27: Edison notified of FM on 10 LNG cargoes Apr-mid Jun 2026.",
       commodity: "LNG, Polymers, Methanol, Urea, Aluminium",
-      duration: "Indefinite - all production halted since 2 Mar. Mar 18 missile strikes knocked out 12.8 Mtpa (17%) for 3-5 years. CEO: no restart until conflict ends + 2 weeks minimum.",
+      duration: "Indefinite - all production halted since 2 Mar. Mar 18 missile strikes knocked out 12.8 Mtpa (17%) for 3-5 years. CEO: no restart until conflict ends + 2 weeks minimum. Final March cargo expected by 30 Mar.",
       reason: "Iranian drone strikes on Ras Laffan and Mesaieed facilities; Strait of Hormuz blocked. Mar 18 follow-up missile attack destroyed 2 LNG trains and Pearl GTL Train 2.",
-      financialImpact: "Brent surged to $104/bbl. Dutch/British gas prices surged ~50%. Asian LNG spot prices jumped ~39%. $20B annual revenue loss confirmed by QatarEnergy CEO."
+      financialImpact: "Brent surged to $112.57/bbl (Mar 28). Dutch/British gas prices surged ~50%. Asian LNG spot prices jumped ~39%. $20B annual revenue loss confirmed by QatarEnergy CEO."
     },
     sources: [
       { id: 1, title: "QatarEnergy halts LNG - Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/2/qatarenergy-worlds-largest-lng-firm-halts-production-after-iran-attacks", date: "2026-03-02" },
@@ -1732,19 +1777,20 @@ const SHUTDOWNS_NO_FM_DATA = [
 
 const SPR_RELEASE_DATA = {
   announced: "2026-03-11",
-  asOf: "2026-03-28",
+  asOf: "2026-03-29",
   trigger: "Strait of Hormuz disruption / Iran conflict — ~20% of global oil supply at risk",
   totalCommitted: 426.0,
   totalCrude: 301,
   totalProducts: 125,
-  totalReleased: 33.0,
+  totalReleased: 34.5,
   releasePeriodDays: 120,
   keyInsights: [
     "Japan PM Takaichi asked IEA chief Birol on Mar 25 to prepare a second coordinated release if Hormuz disruption persists",
-    "14 European IEA members with 114.5 mb combined commitment begin oil stock releases today (Mar 28) per end-of-March schedule",
-    "US SPR deliveries ongoing at ~1.4 mb/day from 3 Gulf Coast sites — 11.0 mb delivered (6.4% of 172.2 mb commitment)",
+    "14 European IEA members with 114.5 mb combined commitment began oil stock releases on Mar 28 per end-of-March schedule",
+    "US SPR deliveries ongoing at ~1.4 mb/day from 3 Gulf Coast sites — ~12.5 mb delivered (~7.3% of 172.2 mb commitment)",
     "South Korea enforced naphtha export ban from Mar 27 alongside 6.0 mb already released from 22.5 mb commitment",
-    "Overall release at 33.0 of 426.0 mb (7.7%) on Day 17 of 120-day window; next EIA weekly data expected Apr 1",
+    "Overall release at ~34.5 of 426.0 mb (~8.1%) on Day 18 of 120-day window; next EIA weekly data expected Apr 1",
+    "Brent $112.57/bbl, WTI $99.64 as of Mar 28 — 51% monthly surge; Goldman warns $130 if Hormuz + Bab al-Mandeb both close"
   ],
   sources: [
     { title: "Japan PM Takaichi asks IEA chief to prepare second coordinated oil release", url: "https://www.japantimes.co.jp/news/2026/03/25/japan/sanae-takaichi-iea-chief/", date: "2026-03-25" },
@@ -1758,8 +1804,8 @@ const SPR_RELEASE_DATA = {
     { title: "IEA 400m barrels release — Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/11/iea-proposes-release-of-400m-barrels-of-oil-from-strategic-reserves", date: "2026-03-11" },
   ],
   countries: [
-    { country: "United States",   flag: "🇺🇸", committed: 172.2, crude: 172.2, products: 0,    startDate: "2026-03-20", released: 11.0, region: "Americas" },
-    { country: "Japan",           flag: "🇯🇵", committed: 79.8,  crude: 54.0,  products: 25.8, startDate: "2026-03-16", released: 10.5, region: "Asia-Oceania" },
+    { country: "United States",   flag: "🇺🇸", committed: 172.2, crude: 172.2, products: 0,    startDate: "2026-03-20", released: 12.5, region: "Americas" },
+    { country: "Japan",           flag: "🇯🇵", committed: 79.8,  crude: 54.0,  products: 25.8, startDate: "2026-03-16", released: 11.0, region: "Asia-Oceania" },
     { country: "Canada",          flag: "🇨🇦", committed: 23.6,  crude: 23.6,  products: 0,    startDate: "2026-03-24", released: 1.0,  region: "Americas" },
     { country: "South Korea",     flag: "🇰🇷", committed: 22.5,  crude: 22.5,  products: 0,    startDate: "2026-03-16", released: 6.0,  region: "Asia-Oceania" },
     { country: "Germany",         flag: "🇩🇪", committed: 19.5,  crude: 0,     products: 19.5, startDate: "2026-03-28", released: 0,    region: "Europe" },
