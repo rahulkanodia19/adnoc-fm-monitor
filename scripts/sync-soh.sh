@@ -115,8 +115,8 @@ if [ -z "$MASTER_SYNC" ]; then
     TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
     git -C "$PROJECT_DIR" add soh-data/
     git -C "$PROJECT_DIR" commit -m "chore: SOH tracker data sync ($TIMESTAMP)"
-    git -C "$PROJECT_DIR" push
-    echo "[sync-soh] Pushed to GitHub successfully."
+    git -C "$PROJECT_DIR" push origin master && echo "[sync-soh] Pushed to origin/master" || echo "[sync-soh] ⚠ Push to master failed"
+    git -C "$PROJECT_DIR" push origin master:main && echo "[sync-soh] Pushed to origin/main" || echo "[sync-soh] ⚠ Push to main failed"
   else
     echo "[sync-soh] No changes detected."
   fi

@@ -117,8 +117,8 @@ if [ -z "$MASTER_SYNC" ]; then
     TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
     git -C "$PROJECT_DIR" add flow-insights.json
     git -C "$PROJECT_DIR" commit -m "chore: flow insights sync ($TIMESTAMP)"
-    git -C "$PROJECT_DIR" push
-    echo "[insights] Pushed."
+    git -C "$PROJECT_DIR" push origin master && echo "[insights] Pushed to origin/master" || echo "[insights] ⚠ Push to master failed"
+    git -C "$PROJECT_DIR" push origin master:main && echo "[insights] Pushed to origin/main" || echo "[insights] ⚠ Push to main failed"
   else
     echo "[insights] No changes."
   fi

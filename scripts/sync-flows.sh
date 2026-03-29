@@ -152,8 +152,8 @@ if ! git -C "$PROJECT_DIR" diff --quiet import-data.js export-data.js 2>/dev/nul
   TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
   git -C "$PROJECT_DIR" add import-data.js export-data.js
   git -C "$PROJECT_DIR" commit -m "chore: flow data sync ($TIMESTAMP)"
-  git -C "$PROJECT_DIR" push
-  echo "[sync-flows] Pushed."
+  git -C "$PROJECT_DIR" push origin master && echo "[sync-flows] Pushed to origin/master" || echo "[sync-flows] ⚠ Push to master failed"
+  git -C "$PROJECT_DIR" push origin master:main && echo "[sync-flows] Pushed to origin/main" || echo "[sync-flows] ⚠ Push to main failed"
 else
   echo "[sync-flows] No changes."
 fi

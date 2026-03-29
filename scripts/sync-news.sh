@@ -57,8 +57,8 @@ if [ -z "$MASTER_SYNC" ]; then
     TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
     git -C "$PROJECT_DIR" add data.js data-previous.json sync-log.json energy-news-data.json
     git -C "$PROJECT_DIR" commit -m "chore: news/fm data sync ($TIMESTAMP)"
-    git -C "$PROJECT_DIR" push
-    echo "[sync-news] Pushed."
+    git -C "$PROJECT_DIR" push origin master && echo "[sync-news] Pushed to origin/master" || echo "[sync-news] ⚠ Push to master failed"
+    git -C "$PROJECT_DIR" push origin master:main && echo "[sync-news] Pushed to origin/main" || echo "[sync-news] ⚠ Push to main failed"
   else
     echo "[sync-news] No changes detected."
   fi

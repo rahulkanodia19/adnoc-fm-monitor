@@ -49,8 +49,8 @@ if ! git -C "$PROJECT_DIR" diff --quiet data.js data-previous.json sync-log.json
   TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
   git -C "$PROJECT_DIR" add data.js data-previous.json sync-log.json energy-news-data.json
   git -C "$PROJECT_DIR" commit -m "chore: daily data sync ($TIMESTAMP)"
-  git -C "$PROJECT_DIR" push
-  echo "[sync] Pushed to GitHub successfully."
+  git -C "$PROJECT_DIR" push origin master && echo "[sync] Pushed to origin/master" || echo "[sync] ⚠ Push to master failed"
+  git -C "$PROJECT_DIR" push origin master:main && echo "[sync] Pushed to origin/main" || echo "[sync] ⚠ Push to main failed"
 else
   echo "[sync] No changes detected."
 fi
@@ -68,8 +68,8 @@ if ! git -C "$PROJECT_DIR" diff --quiet market-prices-seed.json 2>/dev/null; the
   TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
   git -C "$PROJECT_DIR" add market-prices-seed.json
   git -C "$PROJECT_DIR" commit -m "chore: daily price sync ($TIMESTAMP)"
-  git -C "$PROJECT_DIR" push
-  echo "[sync] Price data pushed to GitHub."
+  git -C "$PROJECT_DIR" push origin master && echo "[sync] Prices pushed to origin/master" || echo "[sync] ⚠ Push to master failed"
+  git -C "$PROJECT_DIR" push origin master:main && echo "[sync] Prices pushed to origin/main" || echo "[sync] ⚠ Push to main failed"
 else
   echo "[sync] No price changes detected."
 fi

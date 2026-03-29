@@ -35,8 +35,8 @@ if ! git -C "$PROJECT_DIR" diff --quiet data.js spr-seed.json 2>/dev/null; then
   TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
   git -C "$PROJECT_DIR" add data.js spr-seed.json
   git -C "$PROJECT_DIR" commit -m "chore: SPR data sync ($TIMESTAMP)"
-  git -C "$PROJECT_DIR" push
-  echo "[sync-spr] Pushed to GitHub successfully."
+  git -C "$PROJECT_DIR" push origin master && echo "[sync-spr] Pushed to origin/master" || echo "[sync-spr] ⚠ Push to master failed"
+  git -C "$PROJECT_DIR" push origin master:main && echo "[sync-spr] Pushed to origin/main" || echo "[sync-spr] ⚠ Push to main failed"
 else
   echo "[sync-spr] No SPR changes detected."
 fi
