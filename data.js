@@ -1906,11 +1906,11 @@ const SPR_RELEASE_DATA = {
   totalReleased: 67.7,
   releasePeriodDays: 120,
   keyInsights: [
-    "Houthis launched 2nd operation against Israel on Mar 29 with cruise missiles and drones; Bab al-Mandeb closure 'among our options' — dual chokepoint risk escalating",
-    "14 European countries began drawing down 114.5 mb combined commitment on Mar 28, completing global release mobilization across all 30 IEA members",
-    "Overall release at 67.7 of 426.0 mb (15.9%) on Day 19; US 45.2 mb first tranche accounts for 66.8% of total released so far",
-    "Brent $112.60, WTI $99.64 as of Mar 28 — prices hold near highs despite largest-ever coordinated reserve release",
-    "Next EIA weekly report (Apr 1) will be first to capture US SPR physical drawdown from 3 Gulf Coast delivery sites"
+    "Dual chokepoint risk rising: Houthis threaten Bab al-Mandeb closure after Mar 29 strike on Israel — Saudi crude rerouted through Red Sea now also at risk",
+    "European release mobilization enters Day 2 with all 14 IEA members drawing from 114.5 mb combined commitment; no individual country volumes reported yet",
+    "Global release progress: 67.7 of 426.0 mb (15.9%) on Day 19 of 120; US first tranche (45.2 mb) accounts for two-thirds of total released",
+    "Brent $112.57, WTI $99.64 (Mar 28 close); Goldman Sachs estimates $14-18/bbl geopolitical premium with Iran rejecting direct US talks",
+    "Key data ahead: EIA weekly report Apr 1 to show first US SPR drawdown; Japan JOGMEC expanding from 8 to 10 active release bases this week"
   ],
   sources: [
     { title: "Houthis open new front in Iran war — will they block Bab al-Mandeb?", url: "https://www.aljazeera.com/news/2026/3/29/houthis-open-new-front-in-iran-war-will-yemeni-group-block-bab-al-mandeb", date: "2026-03-29" },
