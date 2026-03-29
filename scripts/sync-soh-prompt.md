@@ -104,23 +104,9 @@ async () => {
 
 Save each key as `soh-data/<key>.json`.
 
-## Step 3.5: Merge Container Ships from als-monitor
+## Step 4: Verify (processing happens after agent completes)
 
-Kpler doesn't track container ships. Run the merge script to add container ship data from als-monitor (MarineTraffic source):
-
-```bash
-node scripts/merge-containers.js
-```
-
-This reads `soh-data/.container-cache.json` (122 inside + 23 outside containers) and appends them to `vessels.json`. The cache is pre-populated from als-monitor source data. If it fails, proceed anyway.
-
-## Step 4: Process Data
-
-Run the processing script to classify vessels, build matrices, compute deltas:
-
-```bash
-node scripts/process-soh.js
-```
+Note: Container ship merging (S&P MINT) and full data processing (process-soh.js) are handled by the sync-soh.sh shell wrapper after this agent completes. The agent only needs to fetch Kpler vessels and flows.
 
 ## Step 5: Verify
 
@@ -133,7 +119,7 @@ Read `soh-data/summary.json` and check:
 
 Also check `soh-data/crisis-transits.json` has `totalVessels` > 0.
 
-Note: 3 ADNOC container ships (AL BAZM-II, AL REEM I, AL SADR-I) are not tracked by Kpler.
-`process-soh.js` fills them from a static fallback (source: als-monitor). This is expected — do not retry Kpler for these.
+Note: 3 ADNOC container ships (AL BAZM-II, AL REEM I, AL SADR-I) are tracked via S&P MINT (not Kpler).
+They are merged into vessels.json by the shell wrapper and appear with `dataSource: 'mint'`.
 
 Report the key numbers: Inside, Outside, ADNOC count, Total, Transit, Crisis transits.

@@ -149,7 +149,7 @@ function main() {
   console.log(`Vessel matrix: Inside ${insideMatrix.grandTotal.total} (${insideMatrix.matrix.length} classes), Outside ${outsideMatrix.grandTotal.total} (${outsideMatrix.matrix.length} classes)`);
   console.log(`Product volumes: Inside ${insideMatrix.productVolumes.length} products, Outside ${outsideMatrix.productVolumes.length} products`);
 
-  // --- Extract ADNOC vessels by IMO (from als-monitor VesselTracker.tsx) ---
+  // --- Extract ADNOC vessels by IMO (11 vessel fleet) ---
   const ADNOC_FLEET = [
     { imo: '9592898', name: 'GHANTOUT' },
     { imo: '9380324', name: 'AL SAMHA' },
@@ -191,10 +191,10 @@ function main() {
         departed: v.lastPortCall?.end ? v.lastPortCall.end.replace('T', ' ').substring(0, 16) : null,
         isInside: v.lat && v.lng ? isInsideGulf(v.lat, v.lng) : null,
         marineTrafficUrl: `https://www.marinetraffic.com/en/ais/details/ships/imo:${ref.imo}`,
-        dataSource: 'kpler',
+        dataSource: v.dataSource || 'kpler',
       };
     }
-    // Not found in Kpler — use static fallback from als-monitor (container ships not tracked by Kpler)
+    // Not found in Kpler or MINT — use static fallback as last resort (container ships)
     const STATIC_FALLBACK = {
       '9573505': { name: 'AL BAZM-II', type: 'Container Ship (Fully Cellular)', size: 'Small Handy', state: 'ballast', status: 'Under way using engine', previousPort: 'Ruwais', departed: '03 Mar 2026 09:14', deadWeight: 13944, flagName: 'United Arab Emirates' },
       '9300984': { name: 'AL REEM I', type: 'Container Ship (Fully Cellular)', size: 'Large Handy', state: 'loaded', status: 'Under way using engine', previousPort: 'Ruwais', departed: '03 Mar 2026 18:47', deadWeight: 38686, flagName: 'United Arab Emirates' },
@@ -231,6 +231,8 @@ function main() {
     for (const v of vesselList) {
       // For destination, fall back to AIS-reported destination if Kpler destination is missing
       let key = v[field] || (field === 'destination' ? v.aisDestination : null) || 'Unknown';
+      // Container ships have product: null — label them distinctly instead of "Unknown"
+      if (field === 'product' && key === 'Unknown' && v.commodityTypes?.[0] === 'container') key = 'Container Cargo';
       // Normalize AIS destination text (crews type freeform, e.g. "FUJAIRAH" vs "Fujairah")
       if (field === 'destination' && key !== 'Unknown') {
         key = key.trim().split(/\s+/).map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join(' ');
@@ -278,26 +280,72 @@ function main() {
 
   // --- Crisis transit log (vessels that crossed out during crisis) ---
   const CRISIS_START = '2026-02-28';
-  const crisisTransitVessels = allVesselsWithPos.filter(v => {
-    if (!v.lastPortCall?.end || v.lastPortCall.end < CRISIS_START) return false;
-    return !isInsideGulf(v.lat, v.lng); // Currently outside Gulf = crossed the strait
-  }).map(v => ({
-    name: v.name, imo: v.imo, vesselTypeClass: v.vesselTypeClass, state: v.state,
-    flagName: v.flagName, product: v.product, destination: v.destination || v.aisDestination,
-    deadWeight: v.deadWeight, speed: v.speed,
-    departureDate: (v.lastPortCall?.end || '').substring(0, 10),
-    commodity: v.commodityTypes?.[0] || 'other',
-  })).sort((a, b) => b.departureDate.localeCompare(a.departureDate));
+
+  // Detect MINT container transits by comparing with previous sync snapshot
+  const CONTAINER_POS_FILE = path.join(SOH_DIR, '.container-positions-prev.json');
+  let prevContainerPositions = {};
+  try { prevContainerPositions = JSON.parse(fs.readFileSync(CONTAINER_POS_FILE, 'utf-8')); } catch {}
+
+  // Build current container position map and detect inside→outside transitions
+  const containerTransitLog = path.join(SOH_DIR, '.container-transit-log.json');
+  let transitLog = [];
+  try { transitLog = JSON.parse(fs.readFileSync(containerTransitLog, 'utf-8')); } catch {}
+
+  const currentContainerPositions = {};
+  for (const v of allVesselsWithPos) {
+    if (v.dataSource !== 'mint' || v.commodityTypes?.[0] !== 'container') continue;
+    const imo = v.imo;
+    if (!imo) continue;
+    const nowInside = isInsideGulf(v.lat, v.lng);
+    currentContainerPositions[imo] = nowInside ? 'inside' : 'outside';
+
+    // Detect transit: was inside, now outside
+    if (prevContainerPositions[imo] === 'inside' && !nowInside) {
+      // Check if already logged for this vessel
+      if (!transitLog.find(t => t.imo === imo && t.departureDate === today)) {
+        transitLog.push({
+          name: v.name, imo, vesselTypeClass: v.vesselTypeClass, state: v.state,
+          flagName: v.flagName || '', product: v.product, destination: v.destination,
+          deadWeight: v.deadWeight, speed: v.speed,
+          departureDate: today,
+          commodity: 'container',
+        });
+      }
+    }
+  }
+
+  // Save snapshots for next run
+  fs.writeFileSync(CONTAINER_POS_FILE, JSON.stringify(currentContainerPositions, null, 2));
+  fs.writeFileSync(containerTransitLog, JSON.stringify(transitLog, null, 2));
+
+  const detectedContainerTransits = transitLog.filter(t => t.departureDate >= CRISIS_START);
+
+  const crisisTransitVessels = [
+    // Kpler vessels: use lastPortCall date
+    ...allVesselsWithPos.filter(v => {
+      if (!v.lastPortCall?.end || v.lastPortCall.end < CRISIS_START) return false;
+      return !isInsideGulf(v.lat, v.lng);
+    }).map(v => ({
+      name: v.name, imo: v.imo, vesselTypeClass: v.vesselTypeClass, state: v.state,
+      flagName: v.flagName, product: v.product, destination: v.destination || v.aisDestination,
+      deadWeight: v.deadWeight, speed: v.speed,
+      departureDate: (v.lastPortCall?.end || '').substring(0, 10),
+      commodity: v.commodityTypes?.[0] || 'other',
+    })),
+    // MINT containers: detected inside→outside transitions
+    ...detectedContainerTransits,
+  ].sort((a, b) => b.departureDate.localeCompare(a.departureDate));
 
   // Group by date
   const dailyCrisis = {};
   for (const v of crisisTransitVessels) {
     const d = v.departureDate;
-    if (!dailyCrisis[d]) dailyCrisis[d] = { date: d, count: 0, tankers: 0, bulk: 0, other: 0 };
+    if (!dailyCrisis[d]) dailyCrisis[d] = { date: d, count: 0, tankers: 0, bulk: 0, container: 0, other: 0 };
     dailyCrisis[d].count++;
     const c = v.commodity;
     if (c === 'liquids' || c === 'lng' || c === 'lpg') dailyCrisis[d].tankers++;
     else if (c === 'dry') dailyCrisis[d].bulk++;
+    else if (c === 'container') dailyCrisis[d].container++;
     else dailyCrisis[d].other++;
   }
 

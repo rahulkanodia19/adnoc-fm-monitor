@@ -1,7 +1,7 @@
 // ============================================================
 // market-prices.js -- Market Prices Dashboard
-// Crude grades (WTI, Brent, Murban) & Refined products
-// Data source: OilPriceAPI with seed-data fallback
+// Crude grades, Refined products, LNG & Gas benchmarks
+// Data source: S&P Global Platts (daily sync)
 // ============================================================
 
 (function () {
@@ -17,6 +17,9 @@
     jetfuel:  { label: 'Jet Kero',        category: 'product', unit: '$/bbl',   color: '#ec4899' },
     gasoil:   { label: 'Gasoil 10 ppm',   category: 'product', unit: '$/bbl',   color: '#8b5cf6' },
     lng:      { label: 'LNG JKM Spot',    category: 'lng',     unit: '$/MMBtu', color: '#06b6d4' },
+    lng_nwe:  { label: 'LNG NWE DES',     category: 'lng',     unit: '$/MMBtu', color: '#3b82f6' },
+    ttf:      { label: 'Dutch TTF',        category: 'lng',     unit: '$/MMBtu', color: '#f97316' },
+    henry_hub:{ label: 'Henry Hub',        category: 'lng',     unit: '$/MMBtu', color: '#22c55e' },
   };
 
   const SHARED_LEGEND = {
@@ -43,7 +46,7 @@
   // ---------- State ----------
 
   let state = {
-    category: 'crude',    // 'crude' | 'product' | 'all'
+    category: 'crude',    // 'crude' | 'product' | 'lng' | 'all'
     timeRange: '3m',      // '1w' | '1m' | '3m' | '6m' | '1y' | '5y'
     data: null,
     loading: false,
@@ -350,7 +353,7 @@
           <div class="bg-white rounded-xl border border-navy-200 shadow-sm p-3 sm:p-5">
             <div class="flex items-center gap-2 mb-3">
               <span class="w-1.5 h-5 rounded-full bg-cyan-500"></span>
-              <h3 class="text-sm sm:text-base font-bold text-navy-800">LNG Japan/Korea (JKM) Spot Price</h3>
+              <h3 class="text-sm sm:text-base font-bold text-navy-800">LNG & Natural Gas Benchmarks</h3>
               <span class="text-[10px] text-navy-400 ml-auto">$/MMBtu</span>
             </div>
             <div id="mp-lng-kpis"></div>
@@ -480,48 +483,64 @@
   function drawLngChart(prices) {
     const lngCanvas = document.getElementById('mp-chart-lng');
     if (!lngCanvas) return;
-    const lngData = prices.lng;
-    if (!lngData || !lngData.history) return;
 
-    const hist = filterHistoryByRange(lngData.history);
-    if (hist.length === 0) return;
+    const lngKeys = Object.entries(COMMODITIES)
+      .filter(([, cfg]) => cfg.category === 'lng')
+      .map(([key]) => key);
 
-    const labels = hist.map(h => formatDate(h.date));
-    const data = hist.map(h => h.price);
+    // Collect filtered history per commodity
+    const histMap = {};
+    const allDates = new Set();
+    for (const key of lngKeys) {
+      const d = prices[key];
+      if (!d || !d.history) continue;
+      const hist = filterHistoryByRange(d.history);
+      if (hist.length === 0) continue;
+      histMap[key] = {};
+      for (const h of hist) { histMap[key][h.date] = h.price; allDates.add(h.date); }
+    }
+
+    // Build shared date axis (sorted)
+    const sortedDates = [...allDates].sort();
+    if (sortedDates.length === 0) return;
+    const labels = sortedDates.map(d => formatDate(d));
+
+    // Build datasets aligned to shared dates (null where no data)
+    const datasets = [];
+    for (const key of lngKeys) {
+      if (!histMap[key]) continue;
+      const cfg = COMMODITIES[key];
+      const dataPoints = Object.keys(histMap[key]).length;
+      datasets.push({
+        label: cfg.label,
+        data: sortedDates.map(d => histMap[key][d] ?? null),
+        borderColor: cfg.color,
+        backgroundColor: cfg.color + '15',
+        borderWidth: 2,
+        pointRadius: dataPoints < 5 ? 4 : 0,
+        pointHoverRadius: 4,
+        tension: 0.2,
+        fill: false,
+        spanGaps: false,
+      });
+    }
+    if (datasets.length === 0) return;
+
     const skipFactor = labels.length > 60 ? Math.ceil(labels.length / 30) : 1;
-
-    const cfg = COMMODITIES.lng;
-    const gradient = lngCanvas.getContext('2d').createLinearGradient(0, 0, 0, lngCanvas.parentElement.clientHeight || 260);
-    gradient.addColorStop(0, cfg.color + '30');
-    gradient.addColorStop(1, cfg.color + '02');
 
     charts.lng = new Chart(lngCanvas.getContext('2d'), {
       type: 'line',
-      data: {
-        labels,
-        datasets: [{
-          label: cfg.label,
-          data,
-          borderColor: cfg.color,
-          backgroundColor: gradient,
-          borderWidth: 2,
-          pointRadius: 0,
-          pointHoverRadius: 4,
-          tension: 0.2,
-          fill: true,
-          spanGaps: true,
-        }],
-      },
+      data: { labels, datasets },
       options: {
         responsive: true, maintainAspectRatio: false,
         animation: { duration: 600, easing: 'easeOutQuart' },
         plugins: {
-          legend: { display: false },
+          legend: SHARED_LEGEND,
           tooltip: {
             backgroundColor: '#102a43', titleColor: '#fff', bodyColor: '#d9e2ec',
             borderColor: '#334e68', borderWidth: 1, padding: 10,
             callbacks: {
-              label: ctx => cfg.label + ': $' + ctx.parsed.y.toFixed(3) + '/MMBtu'
+              label: ctx => ctx.dataset.label + ': $' + ctx.parsed.y.toFixed(3) + '/MMBtu'
             }
           },
           datalabels: { display: false },
@@ -537,7 +556,7 @@
           y: {
             position: 'left',
             grid: { color: 'rgba(16,42,67,0.06)' },
-            ticks: { color: '#627d98', font: { size: 10 }, callback: v => '$' + v.toFixed(0) },
+            ticks: { color: '#627d98', font: { size: 10 }, callback: v => '$' + v.toFixed(1) },
             title: { display: true, text: '$/MMBtu', color: '#627d98', font: { size: 10 } },
           },
         },
@@ -612,22 +631,32 @@
     const kpisEl = document.getElementById('mp-kpis');
     if (kpisEl) kpisEl.innerHTML = renderKPICards(kpis);
 
-    // LNG mini KPIs
+    // LNG & Gas mini KPIs — show all LNG-category commodities
     const lngKpisEl = document.getElementById('mp-lng-kpis');
-    if (lngKpisEl && state.data?.prices?.lng) {
-      const p = state.data.prices.lng;
-      const current = p.current;
-      const prev = p.previousClose || current;
-      const change = current - prev;
-      const changePct = prev !== 0 ? (change / prev) * 100 : 0;
-      const up = change >= 0;
-      const cc = up ? 'text-emerald-600' : 'text-red-600';
-      const arrow = up ? '&#9650;' : '&#9660;';
+    if (lngKpisEl && state.data?.prices) {
+      const lngKeys = Object.entries(COMMODITIES).filter(([, cfg]) => cfg.category === 'lng');
       lngKpisEl.innerHTML = `
-        <div class="flex flex-wrap items-center gap-4 mb-3 text-sm">
-          <span class="font-bold text-navy-900 text-lg">$${current.toFixed(3)}</span>
-          <span class="${cc} font-medium">${fmtChange(change)} (${arrow} ${fmtPct(changePct)})</span>
-          <span class="text-navy-400 text-xs">52W: <span class="text-navy-600 font-medium">$${p.low52w.toFixed(2)}</span> – <span class="text-navy-600 font-medium">$${p.high52w.toFixed(2)}</span></span>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-3">
+          ${lngKeys.map(([key, cfg]) => {
+            const p = state.data.prices[key];
+            if (!p) return '';
+            const current = p.current;
+            const prev = p.previousClose || current;
+            const change = current - prev;
+            const changePct = prev !== 0 ? (change / prev) * 100 : 0;
+            const up = change >= 0;
+            const cc = up ? 'text-emerald-600' : 'text-red-600';
+            const arrow = up ? '&#9650;' : '&#9660;';
+            return `
+              <div class="bg-navy-50/50 rounded-lg p-2.5 border border-navy-100">
+                <div class="flex items-center gap-1.5 mb-1">
+                  <span class="w-1.5 h-3 rounded-full" style="background:${cfg.color}"></span>
+                  <span class="text-[10px] text-navy-500 font-medium uppercase">${cfg.label}</span>
+                </div>
+                <div class="font-bold text-navy-900 text-base">$${current.toFixed(current < 10 ? 3 : 2)}</div>
+                <div class="${cc} text-xs font-medium">${fmtChange(change)} (${arrow} ${fmtPct(changePct)})</div>
+              </div>`;
+          }).join('')}
         </div>
       `;
     }

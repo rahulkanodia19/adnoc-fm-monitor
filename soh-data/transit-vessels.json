@@ -207,10 +207,34 @@
       },
       "transitDirection": "entering",
       "isTransiting": true
+    },
+    {
+      "name": "BASHT",
+      "imo": "9346536",
+      "mmsi": "422032700",
+      "vesselTypeClass": "Container Ship",
+      "state": "loaded",
+      "flagName": "",
+      "deadWeight": 66441,
+      "commodityTypes": [
+        "container"
+      ],
+      "capacity": null,
+      "speed": 15.8,
+      "course": 323,
+      "lat": 26.7830083,
+      "lng": 56.610685,
+      "destination": "IR BND",
+      "product": null,
+      "controller": null,
+      "lastPortCall": null,
+      "dataSource": "mint",
+      "transitDirection": "entering",
+      "isTransiting": true
     }
   ],
   "exitingCount": 2,
-  "enteringCount": 5,
-  "totalTransiting": 8,
-  "syncTimestamp": "2026-03-28T21:21:39.376Z"
+  "enteringCount": 6,
+  "totalTransiting": 9,
+  "syncTimestamp": "2026-03-29T15:55:12.903Z"
 }

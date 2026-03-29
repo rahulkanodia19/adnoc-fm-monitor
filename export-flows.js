@@ -21,6 +21,10 @@
     { key: 'uae', label: 'UAE' }, { key: 'us', label: 'United States' },
     { key: 'australia', label: 'Australia' }, { key: 'eu_27', label: 'EU-27' },
   ];
+  const EXPORT_GROUPS = [
+    { key: '_gulf', label: 'Gulf Total', members: ['bahrain', 'iran', 'iraq', 'kuwait', 'oman', 'qatar', 'saudi_arabia', 'uae'] },
+    { key: '_all', label: 'All Tracked', members: ['bahrain', 'iran', 'iraq', 'kuwait', 'oman', 'qatar', 'saudi_arabia', 'uae', 'russia', 'us', 'australia', 'eu_27'] },
+  ];
   const COMMODITIES_META = [
     { key: 'crude', label: 'Crude', unit: 'mbbl' },
     { key: 'lng', label: 'LNG', unit: 'Mt' },
@@ -91,7 +95,7 @@
 
   // ---------- State ----------
   let state = {
-    exporter: 'saudi_arabia',
+    exporter: '_gulf',
     commodity: 'crude',
     view: 'weekly',
     topN: 10,
@@ -103,15 +107,29 @@
 
   // ---------- Data Helpers ----------
 
+  function isGroupSelected() { return state.exporter.startsWith('_'); }
+  function getGroupDef() { return EXPORT_GROUPS.find(g => g.key === state.exporter); }
+
+  function getDataKeys() {
+    if (isGroupSelected()) {
+      return getGroupDef().members.map(m => m + '_' + state.commodity);
+    }
+    return [state.exporter + '_' + state.commodity];
+  }
+
   function getDataKey() {
     return state.exporter + '_' + state.commodity;
   }
 
-  function getAggData() {
-    const src = EXPORT_FLOW_DATA[getDataKey()];
+  function getAggDataForKey(key) {
+    const src = EXPORT_FLOW_DATA[key];
     if (!src) return [];
     if (state.view === 'daily') return src.daily || [];
     return state.view === 'weekly' ? src.weekly : src.monthly;
+  }
+
+  function getAggData() {
+    return getAggDataForKey(getDataKey());
   }
 
   function filterByTimeRange(records) {
@@ -154,26 +172,28 @@
   }
 
   function getLastUpdatedDate() {
-    const src = EXPORT_FLOW_DATA[getDataKey()];
-    if (!src) return null;
-    const daily = src.daily;
-    if (daily && daily.length > 0) {
-      return daily[daily.length - 1].e;
-    }
-    const weekly = src.weekly;
-    if (weekly && weekly.length > 0) {
-      return weekly[weekly.length - 1].e;
+    const keys = getDataKeys();
+    for (const key of keys) {
+      const src = EXPORT_FLOW_DATA[key];
+      if (!src) continue;
+      const daily = src.daily;
+      if (daily && daily.length > 0) return daily[daily.length - 1].e;
+      const weekly = src.weekly;
+      if (weekly && weekly.length > 0) return weekly[weekly.length - 1].e;
     }
     return null;
   }
 
   function getMergedTimeline() {
-    const dataKey = getDataKey();
-    const src = EXPORT_FLOW_DATA[dataKey];
-    if (!src) return { labels: [], periods: [], totals: [], topDestinations: [], countrySeriesData: {}, others: [], perPeriod: {}, countryTotals: {}, base: [] };
+    const EMPTY = { labels: [], periods: [], totals: [], topDestinations: [], countrySeriesData: {}, others: [], perPeriod: {}, countryTotals: {}, base: [] };
+    const dataKeys = getDataKeys();
+    const allSrc = dataKeys.map(k => EXPORT_FLOW_DATA[k]).filter(Boolean);
+    if (allSrc.length === 0) return EMPTY;
 
-    const base = filterByTimeRange(getAggData());
-    const periodSet = base.map(r => r.p);
+    // Use first available source to get period list (all sources share same periods from sync)
+    const firstRecords = filterByTimeRange(getAggDataForKey(dataKeys.find(k => EXPORT_FLOW_DATA[k])));
+    if (firstRecords.length === 0) return EMPTY;
+    const periodSet = firstRecords.map(r => r.p);
 
     const allCountries = new Set();
     const perPeriod = {};
@@ -182,16 +202,25 @@
       perPeriod[period] = { total: 0, countries: {} };
     }
 
-    for (const r of base) {
-      if (!perPeriod[r.p]) continue;
-      perPeriod[r.p].total += r._t || 0;
-      for (const c of src.countries) {
-        if (r[c] && r[c] > 0) {
-          allCountries.add(c);
-          perPeriod[r.p].countries[c] = (perPeriod[r.p].countries[c] || 0) + r[c];
+    // Aggregate across all data sources
+    for (const key of dataKeys) {
+      const src = EXPORT_FLOW_DATA[key];
+      if (!src) continue;
+      const records = filterByTimeRange(getAggDataForKey(key));
+      for (const r of records) {
+        if (!perPeriod[r.p]) continue;
+        perPeriod[r.p].total += r._t || 0;
+        for (const c of src.countries) {
+          if (r[c] && r[c] > 0) {
+            allCountries.add(c);
+            perPeriod[r.p].countries[c] = (perPeriod[r.p].countries[c] || 0) + r[c];
+          }
         }
       }
     }
+
+    // Use firstRecords as base for period metadata (d, s, e)
+    const base = firstRecords;
 
     const countryTotals = {};
     for (const c of allCountries) {
@@ -268,6 +297,7 @@
   }
 
   function getExporterLabel() {
+    if (isGroupSelected()) return getGroupDef().label;
     const ds = DATASETS[getDataKey()];
     return ds ? ds.label : state.exporter;
   }
@@ -306,6 +336,7 @@
   }
 
   function renderExporterToggle() {
+    const groups = [['_gulf', 'Gulf Total'], ['_all', 'All']];
     const gulf = [
       ['bahrain', 'Bahrain'], ['iran', 'Iran'], ['iraq', 'Iraq'],
       ['kuwait', 'Kuwait'], ['oman', 'Oman'], ['qatar', 'Qatar'],
@@ -323,6 +354,7 @@
       <div class="flex items-start bg-white rounded-lg border border-navy-200 shadow-sm overflow-hidden">
         <span class="px-2 py-1.5 sm:px-3 sm:py-2 text-xs font-semibold text-navy-500 bg-navy-50 border-r border-navy-200 self-stretch flex items-center">Exporter</span>
         <div class="flex flex-col">
+          <div class="flex flex-wrap bg-amber-50/50 border-b border-amber-200">${groups.map(([v, t]) => btn(v, t)).join('')}</div>
           <div class="flex flex-wrap">${gulf.map(([v, t]) => btn(v, t)).join('')}</div>
           <div class="flex flex-wrap border-t border-navy-100">${other.map(([v, t]) => btn(v, t)).join('')}</div>
         </div>
@@ -402,10 +434,13 @@
 
     // Gulf exporter set and conflict context from data.js
     const GULF_EXPORTERS = ['saudi_arabia', 'uae', 'iraq', 'qatar', 'kuwait', 'bahrain', 'iran', 'oman'];
-    const isGulfExporter = GULF_EXPORTERS.includes(state.exporter);
-    const exporterStatus = (typeof COUNTRY_STATUS_DATA !== 'undefined')
+    const isGroup = isGroupSelected();
+    const isGulfExporter = isGroup ? (state.exporter === '_gulf') : GULF_EXPORTERS.includes(state.exporter);
+    const exporterStatus = (!isGroup && typeof COUNTRY_STATUS_DATA !== 'undefined')
       ? COUNTRY_STATUS_DATA.find(c => c.id === state.exporter) : null;
-    const isConflictAffected = exporterStatus && ['critical', 'high'].includes(exporterStatus.status);
+    const isConflictAffected = isGroup
+      ? (typeof COUNTRY_STATUS_DATA !== 'undefined' && COUNTRY_STATUS_DATA.some(c => ['critical', 'high'].includes(c.status)))
+      : (exporterStatus && ['critical', 'high'].includes(exporterStatus.status));
     const statusSummary = exporterStatus ? exporterStatus.summary : '';
 
     // Helper: friendly period label (no week numbers)
@@ -435,7 +470,8 @@
     // Zero-volume edge case
     if (refVal === 0 && prevVal === 0) {
       let msg = `No ${commodityLabel} exports recorded for ${exporterLabel} in the latest two full periods.`;
-      if (isConflictAffected) msg += ` ${statusSummary.split('.')[0]}.`;
+      if (isConflictAffected && statusSummary) msg += ` ${statusSummary.split('.')[0]}.`;
+      else if (isConflictAffected) msg += ' This is consistent with ongoing regional conflict and infrastructure disruption.';
       else msg += ' This may reflect data lag or minimal participation in this commodity market.';
       return [msg];
     }
@@ -472,8 +508,8 @@
     // --- Bullet 1: Headline with conflict context ---
     const changePct = prevVal > 0 ? ((refVal - prevVal) / prevVal * 100) : 0;
     const absChange = Math.abs(changePct);
-    const flowType = (state.commodity === 'crude' && ['iraq', 'russia'].includes(state.exporter)) ? 'seaborne + pipeline' : 'seaborne';
-    let b1 = `${exporterLabel}'s ${flowType} ${commodityLabel} exports averaged <strong>${refVal.toFixed(1)} ${unit}</strong> in ${refLabel}`;
+    const flowType = isGroup ? 'seaborne + pipeline' : ((state.commodity === 'crude' && ['iraq', 'russia'].includes(state.exporter)) ? 'seaborne + pipeline' : 'seaborne');
+    let b1 = `${exporterLabel} ${flowType} ${commodityLabel} exports averaged <strong>${refVal.toFixed(1)} ${unit}</strong> in ${refLabel}`;
 
     // Change framing — conflict-aware for Gulf exporters
     if (absChange < 2) {
@@ -572,7 +608,9 @@
 
     // Forward-looking with conflict specifics
     if (isConflictAffected && devFromAvg < -10) {
-      if (state.exporter === 'saudi_arabia') {
+      if (isGroup) {
+        assessParts.push(`aggregate exports remain constrained by regional conflict — recovery depends on Hormuz reopening and restoration of damaged infrastructure across multiple Gulf producers`);
+      } else if (state.exporter === 'saudi_arabia') {
         assessParts.push(`exports cannot return to pre-crisis levels (~${displayAvg.toFixed(1)} ${unit}) until Hormuz reopens or additional offshore fields restart — the East-West Pipeline to Yanbu provides partial but not full compensation`);
       } else if (state.exporter === 'qatar') {
         assessParts.push(`with 12.8 Mtpa of LNG capacity damaged for 3-5 years and all production halted since Mar 2, recovery will be protracted even after the conflict ends`);
@@ -599,12 +637,14 @@
       insights.push(b3);
     }
 
-    // Pipeline flow annotations (condensed)
-    if (state.exporter === 'iraq' && state.commodity === 'crude') {
-      insights.push('<strong>Pipeline flows included:</strong> Kirkuk-Ceyhan to Turkey (~250 kb/d, restarted Mar 17) — Iraq\'s only remaining viable export route. Contract expires Jul 2026.');
-    }
-    if (state.exporter === 'russia' && state.commodity === 'crude') {
-      insights.push('<strong>Pipeline flows included:</strong> ESPO to China (~600 kb/d via Skovorodino-Mohe) — bypasses Hormuz, operates at full capacity.');
+    // Pipeline flow annotations (condensed) — skip for aggregate views
+    if (!isGroup) {
+      if (state.exporter === 'iraq' && state.commodity === 'crude') {
+        insights.push('<strong>Pipeline flows included:</strong> Kirkuk-Ceyhan to Turkey (~250 kb/d, restarted Mar 17) — Iraq\'s only remaining viable export route. Contract expires Jul 2026.');
+      }
+      if (state.exporter === 'russia' && state.commodity === 'crude') {
+        insights.push('<strong>Pipeline flows included:</strong> ESPO to China (~600 kb/d via Skovorodino-Mohe) — bypasses Hormuz, operates at full capacity.');
+      }
     }
 
     return insights;
@@ -613,6 +653,7 @@
   // LLM-generated insights (loaded from flow-insights.json)
   let flowInsightsCache = null;
   async function loadFlowInsights() {
+    if (isGroupSelected()) return []; // No LLM insights for aggregate views
     if (!flowInsightsCache) {
       try {
         const resp = await fetch('/flow-insights.json');

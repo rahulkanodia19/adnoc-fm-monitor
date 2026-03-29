@@ -19,6 +19,9 @@
     { key: 'south_korea', label: 'S. Korea' }, { key: 'thailand', label: 'Thailand' }, { key: 'vietnam', label: 'Vietnam' },
     { key: 'eu_27', label: 'EU-27' }, { key: 'united_states', label: 'United States' }, { key: 'taiwan', label: 'Taiwan' },
   ];
+  const IMPORT_GROUPS = [
+    { key: '_all', label: 'All Importers', members: ['china', 'india', 'japan', 'south_korea', 'thailand', 'vietnam', 'eu_27', 'united_states', 'taiwan'] },
+  ];
   const COMMODITIES_META = [
     { key: 'crude', label: 'Crude', unit: 'mbbl' },
     { key: 'lng', label: 'LNG', unit: 'Mt' },
@@ -89,7 +92,7 @@
 
   // ---------- State ----------
   let state = {
-    country: 'china',
+    country: '_all',
     commodity: 'crude',
     view: 'weekly',
     topN: 10,
@@ -101,7 +104,13 @@
 
   // ---------- Data Helpers ----------
 
+  function isGroupSelected() { return state.country.startsWith('_'); }
+  function getGroupDef() { return IMPORT_GROUPS.find(g => g.key === state.country); }
+
   function getActiveKeys() {
+    if (isGroupSelected()) {
+      return getGroupDef().members.map(m => m + '_' + state.commodity);
+    }
     const keys = [];
     for (const [k, meta] of Object.entries(DATASETS)) {
       if (meta.country !== state.country) continue;
@@ -158,24 +167,27 @@
 
   function getLastUpdatedDate() {
     const keys = getActiveKeys();
-    if (keys.length === 0) return null;
-    const data = IMPORT_FLOW_DATA[keys[0]];
-    const daily = data.daily;
-    if (daily && daily.length > 0) {
-      return daily[daily.length - 1].e;
-    }
-    const weekly = data.weekly;
-    if (weekly && weekly.length > 0) {
-      return weekly[weekly.length - 1].e;
+    for (const key of keys) {
+      const data = IMPORT_FLOW_DATA[key];
+      if (!data) continue;
+      const daily = data.daily;
+      if (daily && daily.length > 0) return daily[daily.length - 1].e;
+      const weekly = data.weekly;
+      if (weekly && weekly.length > 0) return weekly[weekly.length - 1].e;
     }
     return null;
   }
 
   function getMergedTimeline() {
     const keys = getActiveKeys();
-    if (keys.length === 0) return { labels: [], periods: [], totals: [], topSuppliers: [], countrySeriesData: {}, others: [], perPeriod: {}, countryTotals: {}, base: [] };
+    const EMPTY = { labels: [], periods: [], totals: [], topSuppliers: [], countrySeriesData: {}, others: [], perPeriod: {}, countryTotals: {}, base: [] };
+    if (keys.length === 0) return EMPTY;
 
-    const base = filterByTimeRange(getAggData(keys[0]));
+    // Find first available key for period metadata
+    const firstKey = keys.find(k => IMPORT_FLOW_DATA[k]);
+    if (!firstKey) return EMPTY;
+    const base = filterByTimeRange(getAggData(firstKey));
+    if (base.length === 0) return EMPTY;
     const periodSet = base.map(r => r.p);
 
     const allCountries = new Set();
@@ -186,8 +198,9 @@
     }
 
     for (const key of keys) {
-      const records = filterByTimeRange(getAggData(key));
       const src = IMPORT_FLOW_DATA[key];
+      if (!src) continue;
+      const records = filterByTimeRange(getAggData(key));
       for (const r of records) {
         if (!perPeriod[r.p]) continue;
         perPeriod[r.p].total += r._t || 0;
@@ -299,10 +312,7 @@
       <div class="flex flex-col gap-3 mb-6">
         <div class="flex flex-wrap items-center justify-between gap-2">
           <div class="flex flex-wrap items-center gap-2">
-            ${renderToggle('Importer', 'country', [
-              ['india', 'India'], ['china', 'China'], ['japan', 'Japan'], ['south_korea', 'S. Korea'], ['thailand', 'Thailand'], ['vietnam', 'Vietnam'],
-              ['eu_27', 'EU-27'], ['united_states', 'US'], ['taiwan', 'Taiwan']
-            ])}
+            ${renderImporterToggle()}
             ${renderToggle('Commodity', 'commodity', [
               ['crude', 'Crude'], ['lng', 'LNG'], ['lpg', 'LPG'],
               ['kero_jet', 'Kero/Jet'], ['gasoil_diesel', 'Gasoil/Diesel'], ['gasoline', 'Gasoline'], ['naphtha', 'Naphtha'], ['sulphur', 'Sulphur']
@@ -322,6 +332,30 @@
           ${renderToggle('Range', 'timeRange', [
             ['1w', '1W'], ['2w', '2W'], ['3w', '3W'], ['1m', '1M'], ['3m', '3M'], ['6m', '6M'], ['12m', '12M'], ['all', 'All']
           ])}
+        </div>
+      </div>
+    `;
+  }
+
+  function renderImporterToggle() {
+    const groups = [['_all', 'All']];
+    const countries = [
+      ['india', 'India'], ['china', 'China'], ['japan', 'Japan'], ['south_korea', 'S. Korea'],
+      ['thailand', 'Thailand'], ['vietnam', 'Vietnam'], ['eu_27', 'EU-27'], ['united_states', 'US'], ['taiwan', 'Taiwan'],
+    ];
+
+    function btn(v, text) {
+      return `<button data-control="country" data-value="${v}"
+        class="px-2 py-1.5 text-xs sm:px-3 sm:py-2 sm:text-sm font-medium transition-all ${state.country === v ? 'bg-amber-500 text-white shadow-inner' : 'text-navy-600 hover:bg-navy-100'}"
+      >${text}</button>`;
+    }
+
+    return `
+      <div class="flex items-start bg-white rounded-lg border border-navy-200 shadow-sm overflow-hidden">
+        <span class="px-2 py-1.5 sm:px-3 sm:py-2 text-xs font-semibold text-navy-500 bg-navy-50 border-r border-navy-200 self-stretch flex items-center">Importer</span>
+        <div class="flex flex-col">
+          <div class="flex flex-wrap bg-amber-50/50 border-b border-amber-200">${groups.map(([v, t]) => btn(v, t)).join('')}</div>
+          <div class="flex flex-wrap">${countries.map(([v, t]) => btn(v, t)).join('')}</div>
         </div>
       </div>
     `;
@@ -399,7 +433,8 @@
     const unit = crude ? getRateUnit() : getUnit();
     const isPartial = kpis.lastIsPartial;
     const insights = [];
-    const countryLabel = state.country.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    const isGroup = isGroupSelected();
+    const countryLabel = isGroup ? getGroupDef().label : state.country.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
     const commodityLabel = state.commodity === 'crude' ? 'crude oil' : state.commodity.toUpperCase();
     const rangeLabel = state.timeRange === 'all' ? 'all-time' : state.timeRange.toUpperCase();
 
@@ -484,8 +519,8 @@
     // --- Bullet 1: Headline with crisis context ---
     const changePct = prevVal > 0 ? ((refVal - prevVal) / prevVal * 100) : 0;
     const absChange = Math.abs(changePct);
-    const flowType = (state.commodity === 'crude' && state.country === 'china') ? 'seaborne + pipeline' : 'seaborne';
-    let b1 = `${countryLabel}'s ${flowType} ${commodityLabel} imports averaged <strong>${refVal.toFixed(1)} ${unit}</strong> in ${refLabel}`;
+    const flowType = isGroup ? 'seaborne + pipeline' : ((state.commodity === 'crude' && state.country === 'china') ? 'seaborne + pipeline' : 'seaborne');
+    let b1 = `${countryLabel} ${flowType} ${commodityLabel} imports averaged <strong>${refVal.toFixed(1)} ${unit}</strong> in ${refLabel}`;
 
     // Change framing — crisis-aware when Gulf supply is disrupted
     const gulfDropping = gulfInConflict && gulfChangeCombined < -0.1;
@@ -601,8 +636,8 @@
       insights.push(b3);
     }
 
-    // Pipeline flow annotation for China crude (condensed)
-    if (state.country === 'china' && state.commodity === 'crude') {
+    // Pipeline flow annotation for China crude (condensed) — skip for aggregate views
+    if (!isGroup && state.country === 'china' && state.commodity === 'crude') {
       insights.push('<strong>Pipeline flows included:</strong> ESPO Russia→China (~600 kb/d), Kazakhstan-China (~220 kb/d), Myanmar-China (~200 kb/d) — combined ~1,020 kb/d of Hormuz-independent supply.');
     }
 
@@ -612,6 +647,7 @@
   // LLM-generated insights (loaded from flow-insights.json)
   let flowInsightsCache = null;
   async function loadFlowInsights() {
+    if (isGroupSelected()) return []; // No LLM insights for aggregate views
     if (!flowInsightsCache) {
       try {
         const resp = await fetch('/flow-insights.json');

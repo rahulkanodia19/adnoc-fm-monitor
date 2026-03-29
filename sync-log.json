@@ -1,44 +1,67 @@
 {
-  "timestamp": "2026-03-29T08:00:00Z",
+  "timestamp": "2026-03-29T22:00:00Z",
   "success": true,
-  "mode": "web-search + browser-premium (Kpler + Rystad)",
-  "changes": "Updated LAST_UPDATED to Mar 28. Added 7 new events total: Iran — Houthis joined war with missile attack on Israel (Mar 28), IRGC formally closed Hormuz to US/allied vessels (Mar 27), Israeli airstrike killed IRGC Navy commander Tangsiri (Mar 26). Saudi Arabia — East-West Pipeline flow tripled to 2.9M bpd (Mar 27). UAE — ADCOP pipeline exports rise to 1.62M bpd (Mar 27), ADNOC Safeen ship hit by projectile in Hormuz (Mar 29, from Kpler/The Loadstar). Oman — Salalah Port struck again by 2 Iranian drones, operations suspended (Mar 29, from Kpler/Maritime Executive). Gas production notes made commodity-specific for all 9 countries. All isNew flags recalculated. Rystad confirms Tropical Cyclone Narelle hit Australian LNG (~29 Mtpa offline) compounding Qatar shutdown. No new FM declarations found since Mar 20.",
+  "changes": "Added 2 new Iran events (Bandar Khamir port struck Mar 29 killing 5, Pentagon readying ground operations). Enhanced Oman Salalah event with crane destruction details and Saudi Gazette source. Updated Saudi pipeline event with Fortune-confirmed 7M bpd capacity and Yanbu loading bottleneck (4.5M bpd port capacity). Updated Iran summary, oilGasImpact, and production notes for Bandar Khamir strike. Added Houthi dual-chokepoint risk to SPR insights. Updated energy-news-data.json with latest headlines across all 48 keys including Russia EU LNG ban (Apr 25), Vietnam tariff cut details, South Korea naphtha export ban. All isNew flags corrected for 48hr recency (Mar 26 Tangsiri event moved to false). No new FM declarations found in last 48 hours.",
   "countriesCount": 9,
   "fmCount": 24,
   "shutdownsCount": 20,
   "sourcesChecked": {
-    "tier1": ["Kpler (authenticated terminal)", "Rystad Energy (authenticated portal)", "Bloomberg", "Wood Mackenzie"],
-    "tier2": ["Al Jazeera", "CNBC", "NPR", "CBS News", "Fox News", "Washington Post", "Axios", "Fortune"],
-    "tier3": ["OilPrice.com", "USNI News", "Euronews", "Argus Media", "Maritime Executive", "The Loadstar", "gCaptain"]
+    "tier1": [
+      "Kpler (vessel tracking data cited by CNBC, Wikipedia, Insurance Journal — 144 commodity crossings since Mar 1, 1.84 mb/d Iran loadings)",
+      "S&P Global / Platts (Hormuz transit tracking via CAS, 4 ships Mar 24 with 2 Iran-linked)",
+      "Bloomberg (Goldman forecast $135 dual-chokepoint, pipeline bypass feature, Asia worst-case scenarios, tanker chaos)",
+      "Reuters (QatarEnergy Edison FM extension via TradingView wire, Goldman price forecast)",
+      "Argus Media (Kharg Island explainer, Salalah Mar 29 strike, insurance costs surge to 5%)",
+      "ICIS (South Korea naphtha ban, EU Russian LNG ban Apr 25)",
+      "MEES (ADNOC Onshore maintenance deferral, Murban availability forecast)",
+      "Oxford Institute for Energy Studies (Russia sanctions analysis, Hormuz disruption comment Mar 2026)",
+      "Vortexa (Iran LPG exports via ship-to-ship cited)",
+      "Rystad Energy (OPEC response insufficient quote from Jorge Leon)"
+    ],
+    "tier2": [
+      "Al Jazeera (Houthi new front Mar 29, Bab al-Mandeb closure threat, pipeline bypass 9M vs 20M bpd, FM explainer)",
+      "CNBC (oil price analysis Mar 28, Hormuz traffic tracker, Houthi Red Sea threat, OPEC 206k bpd response, insurance crisis)",
+      "Washington Post (Pentagon ground operations planning, Marine raids on Kharg/coastal sites)",
+      "CNN (Day 29-30 conflict liveblog)",
+      "NPR (Pakistan ceasefire talks Mar 29, Iran deadline to Apr 6, IEA reserve release)",
+      "France 24 (Houthi Red Sea shipping threat)",
+      "Fox News (Tangsiri killed, ceasefire conditions, UN Security Council vote)",
+      "Gulf News (Day 30: Houthis, Pentagon, UAE/Qatar intercept Iranian drones)",
+      "Fortune (Saudi pipeline hits 7M bpd goal, Yanbu port constraints)",
+      "MarketScreener (Edison FM extension 10 cargoes through mid-June)",
+      "Saudi Gazette (Salalah drone attack details, 1 worker moderate injuries)",
+      "CGTN (Iran Kharg exports proceeding normally, Bandar Khamir strike report)",
+      "The National (Houthi mystery pre-Mar 28, OPEC compensation cuts)"
+    ],
+    "tier3": [
+      "OilPrice.com (Goldman forecast hike, Saudi output cuts, Chevron Leviathan FM)",
+      "Maritime Executive (Salalah port suspension Mar 29, Aramco offshore shutdown)",
+      "World Oil (Shah Gas Field strike, Israel gas field shutdowns)",
+      "gCaptain (Russia Arctic LNG 3M tonnes via Arctic shortcut)",
+      "Rigzone (ADNOC CEO economic terrorism, Iran oil revenue soars)",
+      "MARAD (2026-006 Bab el-Mandeb Strait Houthi advisory)",
+      "Defense News (Pentagon ground operations report)",
+      "Insurance Journal (war risk premiums surged to 5% of hull value)",
+      "BOE Report (Iraq oil plunge to 800k bpd, Kharg Island hub)",
+      "Turkiye Today (Maersk Salalah halt ~48hrs)",
+      "Iran International (Salalah worker injury, Iran Hormuz dependence despite workarounds)",
+      "NBC News (Red Sea next choke point analysis)",
+      "urgewald (100% Russian Yamal LNG to EU in Feb 2026)",
+      "Atlantic Council (ME oil/LNG crisis implications for China/East Asia)",
+      "Columbia CGEP (China 1.39B bbl storage, 120 days cover)",
+      "Daiwa Institute (Japan GDP negative if 10% ME import cut)",
+      "Nation Thailand / VietnamNet (Vietnam MFN tariff cut to 0%)"
+    ]
   },
-  "premiumBrowserSync": {
-    "kpler": "Authenticated (rkanodia@adnoc.ae). Accessed Insight > US & Israel - Iran War signal. Found 6 CRITICAL alerts: Oman Salalah Port drone strike (Mar 29), Safeen ship hit by projectile in Hormuz, Houthis threaten Red Sea escalation, $200 oil forecast. Cumulative oil losses reach 213+ million barrels.",
-    "rystad": "Authenticated. Read Alert: Tropical Cyclone Narelle (Mar 28) — ~29 Mtpa Australian LNG capacity affected (Gorgon, Wheatstone, NWS). Edition 22 Iran conflict alert previously captured. Crude Flow Signals Report Mar 2026 available.",
-    "spglobal": "Authenticated (after MFA). Read CERA Upstream Intelligence Week of Mar 23-27: Brent ~$105, WTI ~$95, OPEC basket ~$120. SAMREF Yanbu refinery hit by drone (damage unclear, status updated to partial). ADNOC Das Island LNG adjusting production. Haifa refinery back online after Mar 20 strike. Energy infrastructure attacks paused amid negotiations. Also found 'Qatari LNG ships head to US' article."
+  "validationChecklist": {
+    "allCountriesPresent": true,
+    "preWarBaselinesLocked": true,
+    "refiningMathCorrect": true,
+    "productionNotesComplete": true,
+    "isNewFlagsAccurate": true,
+    "syntaxValid": true,
+    "statusEnumsValid": true,
+    "lngNotesWhereApplicable": true
   },
-  "keyFindings": {
-    "omanSalalahStruck": "Salalah Port hit by 2 Iranian drones Mar 29. Crane damaged, 1 worker injured. Maersk ~48hr downtime. Critical: this is Oman's key alternative to Gulf routes.",
-    "adnocSafeenHit": "ADNOC Safeen container ship hit by projectile in Strait of Hormuz. Reported by The Loadstar via Kpler.",
-    "houthiAttack": "Houthis launched ballistic missiles at Israel Mar 28 — first attack since war began. Fears of Red Sea shipping disruption renewal.",
-    "irgcHormuzClosure": "IRGC formally declared Hormuz closed to US/allied vessels Mar 27. Turned back 3 ships including 2 COSCO vessels.",
-    "pipelineBypass": "Saudi East-West at 2.9M bpd, UAE ADCOP at 1.62M bpd. Combined ~9M vs 20M bpd Strait capacity.",
-    "australianLNG": "Cyclone Narelle hit 29 Mtpa Australian LNG (Gorgon, Wheatstone, NWS) Mar 26 — compounds Qatar 77 Mtpa shutdown.",
-    "oilPrices": "Brent $112.57 (+4.22%), WTI $99.64 (+5.46%) Mar 28. Analysts warn $200 possible.",
-    "samrefYanbu": "S&P Global CERA confirms SAMREF Yanbu refinery (400k bpd) hit by drone — damage unclear, status updated to partial.",
-    "dasIslandLNG": "ADNOC Gas adjusting LNG production at 6 Mtpa Das Island facility due to shipping disruptions — S&P Global CERA Mar 27."
-  },
-  "noNewFMs": true,
-  "noNewFMsReason": "No new FM declarations found since Iraq Oil Ministry (fm-024, Mar 20). Most FMs declared in weeks 1-2 (Mar 1-11) when disruptions began. By week 4, situation is entrenched — existing FMs cover ongoing disruptions. QatarEnergy Mar 24 extension already captured.",
-  "gasNotesFixed": true,
-  "gasNotesFixReason": "All 9 countries now have commodity-specific gas notes (previously oil and gas notes were identical). Gas notes describe gas-specific impacts: associated gas, gas processing, pipeline status.",
-  "verification": {
-    "jsSyntax": "PASS",
-    "preWarLock": "PASS — all 9 countries unchanged",
-    "refiningMath": "PASS",
-    "currentLePreWar": "PASS",
-    "countriesCount": "9/9",
-    "fmCount": "24",
-    "shutdownsCount": "20",
-    "validationScript": "PASS — 109/109 checks"
-  }
+  "noNewFmReason": "No new FM declarations found in the last 48 hours (Mar 28-29). Most recent was QatarEnergy/Edison FM extension on Mar 27. Crisis in steady-state phase — existing 24 FMs cover ongoing disruptions. Key new developments are military (Bandar Khamir strike, Pentagon ground ops, Houthi entry into war) and diplomatic (Pakistan ceasefire talks) rather than commercial."
 }

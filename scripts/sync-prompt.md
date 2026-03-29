@@ -214,18 +214,20 @@ Update the `data.js` file with any new findings. Preserve the exact same schema 
 
 - `LAST_UPDATED` — set to current ISO timestamp
 - `COUNTRY_STATUS_DATA` — array of 9 countries (Qatar, Kuwait, Saudi Arabia, UAE, Iraq, Bahrain, Oman, Israel, Iran). Each has: id, country, flag, status (stable|elevated|high|critical|conflict), statusLabel, isNew, summary, metrics, production, events, oilGasImpact, infrastructure, sources
-- Each country's `production` object must include a `notes` sub-object with keys: oil, gas, refining, lng (only where applicable). These are short operational status notes shown in the Production Overview tables. Update them to reflect the current situation for each commodity.
+- Each country's `production` object must include a `notes` sub-object with keys: oil, gas, refining, lng, ports (only where applicable). These are short operational status notes shown in the Production Overview tables. Update them to reflect the current situation for each commodity.
+- Each infrastructure item (especially terminals/ports) should include a `notes` field with a short terminal-specific status note (e.g., "Loading suspended after drone strikes Mar 14-17"). Schema: `{ name, type, capacity, status, notes }`
 - `FM_DECLARATIONS_DATA` — array of force majeure declarations. Each has: id, company, country, flag, date, status (active|partially_lifted|lifted), statusLabel, isNew, summary, details, sources
 - `SHUTDOWNS_NO_FM_DATA` — array of non-FM shutdowns. Each has: id, company, country, flag, date, status, statusLabel, isNew, summary, details, sources
 
 ### Rules
 - Pre-war baseline values (`preWar` fields in production objects) must NEVER change — these are fixed reference points
 - Production notes (`production.notes`) MUST be updated to reflect current operational status each sync
-- production.notes.oil, .gas, .refining, .lng MUST each describe commodity-specific impacts — do NOT copy the same text across commodities:
+- production.notes.oil, .gas, .refining, .lng, .ports MUST each describe commodity-specific impacts — do NOT copy the same text across commodities:
   - Oil notes: crude oil field shutdowns, export disruptions, storage constraints
   - Gas notes: gas field/processing disruptions, associated gas impacts, pipeline status
   - Refining notes: refinery-specific damage, throughput, capacity status
   - LNG notes: liquefaction plant status, LNG export disruptions
+  - Ports notes: export terminal status, loading operations, pipeline bypass routes, port disruptions
 - If no new FM declarations are found in the last 7 days, note this in sync-log.json with a reason
 - Mark items as `isNew: true` if they occurred in the last 48 hours, otherwise `isNew: false`
 - Keep all existing entries, update their status if changed
@@ -266,7 +268,7 @@ Update the `data.js` file with any new findings. Preserve the exact same schema 
 - [ ] No schema changes to variable names or structure
 - [ ] All preWar values match the locked baselines table above exactly
 - [ ] All status values use valid enum values from the list above
-- [ ] Each country has production.notes with oil, gas, refining keys (and lng where applicable)
+- [ ] Each country has production.notes with oil, gas, refining, ports keys (and lng where applicable)
 - [ ] Refining math: capacity - affected = available (within rounding)
 
 ## Step 4b: Self-validate before finishing
@@ -276,7 +278,7 @@ After writing data.js, verify:
 2. All 9 countries are present in COUNTRY_STATUS_DATA
 3. All preWar values match the locked baselines table above
 4. Every FM/shutdown entry has id, company, date, status, details.volumeAffected, details.commodity, sources
-5. Every country has production.notes with at least oil, gas, refining keys
+5. Every country has production.notes with at least oil, gas, refining, ports keys
 6. Refining math: capacity - affected = available (within rounding)
 7. All status values are valid enum values
 

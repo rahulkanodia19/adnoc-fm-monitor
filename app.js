@@ -173,7 +173,7 @@ function renderProductionTable(title, unit, rows, type) {
       <td class="px-2 py-1.5 sm:px-3 sm:py-2 text-sm text-right tabular-nums text-navy-900 font-medium">${formatNum(a)}</td>
       <td class="px-2 py-1.5 sm:px-3 sm:py-2 text-sm text-right tabular-nums ${isCapacity ? 'text-red-600' : ''} font-medium">${formatNum(b)}</td>
       <td class="px-2 py-1.5 sm:px-3 sm:py-2 text-sm text-right tabular-nums ${changeClass}">${changeStr}</td>
-      <td class="px-2 py-1.5 sm:px-3 sm:py-2 text-xs text-navy-500 hidden sm:table-cell">${r.notes || ''}</td>
+      <td class="px-2 py-1.5 sm:px-3 sm:py-2 text-xs text-navy-700 hidden sm:table-cell">${r.notes || ''}</td>
     </tr>`;
   }).join('');
 
@@ -184,7 +184,7 @@ function renderProductionTable(title, unit, rows, type) {
     <div class="bg-white rounded-xl border border-navy-200 overflow-hidden">
       <div class="px-4 py-3 border-b border-navy-200 bg-navy-50">
         <h3 class="text-sm font-bold text-navy-900">${title}</h3>
-        <span class="text-xs text-navy-500">${unit}</span>
+        <span class="text-xs text-navy-600">${unit}</span>
       </div>
       <div class="overflow-x-auto">
         <table class="w-full text-left production-table">
@@ -209,6 +209,334 @@ function renderProductionTable(title, unit, rows, type) {
       </div>
     </div>
   `;
+}
+
+// ---------- Key Ports Table (5th table) ----------
+
+function renderKeyPortsTable() {
+  const statusBg = { shutdown: 'bg-red-50 text-red-700 border-red-200', partial: 'bg-amber-50 text-amber-700 border-amber-200', operational: 'bg-emerald-50 text-emerald-700 border-emerald-200' };
+  const statusLabel = { shutdown: 'Shutdown', partial: 'Partial', operational: 'Operational' };
+
+  // Extract port/terminal infrastructure from COUNTRY_STATUS_DATA (same sync source as production tables)
+  const portTypeKeywords = ['Terminal', 'Port', 'Import'];
+  const portsByCountry = [];
+  let allTerminals = [];
+
+  COUNTRY_STATUS_DATA.forEach(c => {
+    if (!c.infrastructure) return;
+    const terminals = c.infrastructure.filter(inf =>
+      portTypeKeywords.some(kw => inf.type.includes(kw))
+    );
+    if (terminals.length > 0) {
+      portsByCountry.push({ country: c.country, terminals });
+      allTerminals = allTerminals.concat(terminals);
+    }
+  });
+
+  // Aggregates
+  const total = allTerminals.length;
+  const shutdownCount = allTerminals.filter(t => t.status === 'shutdown').length;
+  const partialCount = allTerminals.filter(t => t.status === 'partial').length;
+  const operationalCount = allTerminals.filter(t => t.status === 'operational').length;
+
+  // Render rows grouped by country
+  let rowsHtml = '';
+  let rowIdx = 0;
+  portsByCountry.forEach(({ country, terminals }) => {
+    terminals.forEach(t => {
+      const rowBg = rowIdx % 2 === 1 ? 'bg-navy-50/50' : '';
+      rowsHtml += `<tr class="${rowBg}">
+        <td class="px-2 py-1 sm:px-3 sm:py-1.5 text-sm text-navy-700">${country}</td>
+        <td class="px-2 py-1 sm:px-3 sm:py-1.5 text-sm font-medium text-navy-900">${t.name}</td>
+        <td class="px-2 py-1 sm:px-3 sm:py-1.5 text-right">
+          <span class="text-[10px] font-semibold uppercase px-2 py-0.5 rounded border ${statusBg[t.status] || 'bg-navy-100 text-navy-600 border-navy-300'}">${statusLabel[t.status] || t.status}</span>
+        </td>
+        <td class="px-2 py-1 sm:px-3 sm:py-1.5 text-xs text-navy-700 hidden sm:table-cell">${t.notes || ''}</td>
+      </tr>`;
+      rowIdx++;
+    });
+  });
+
+  return `
+    <div class="bg-white rounded-xl border border-navy-200 overflow-hidden max-w-4xl">
+      <div class="px-4 py-2.5 border-b border-navy-200 bg-navy-50">
+        <h3 class="text-sm font-bold text-navy-900">Key Ports & Terminal Status</h3>
+        <span class="text-xs text-navy-600">Export terminals and port infrastructure (synced daily)</span>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-2 p-3 border-b border-navy-200 bg-navy-50/30">
+        <div class="stat-card bg-white rounded-lg p-2 border border-navy-200">
+          <div class="text-lg font-extrabold text-blue-600">${total}</div>
+          <div class="text-[10px] text-navy-600 mt-0.5">Tracked</div>
+        </div>
+        <div class="stat-card bg-white rounded-lg p-2 border border-navy-200">
+          <div class="text-lg font-extrabold text-red-600">${shutdownCount}</div>
+          <div class="text-[10px] text-navy-600 mt-0.5">Shutdown</div>
+        </div>
+        <div class="stat-card bg-white rounded-lg p-2 border border-navy-200">
+          <div class="text-lg font-extrabold text-amber-600">${partialCount}</div>
+          <div class="text-[10px] text-navy-600 mt-0.5">Partial</div>
+        </div>
+        <div class="stat-card bg-white rounded-lg p-2 border border-navy-200">
+          <div class="text-lg font-extrabold text-emerald-600">${operationalCount}</div>
+          <div class="text-[10px] text-navy-600 mt-0.5">Operational</div>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left production-table">
+          <thead>
+            <tr class="border-b border-navy-200 bg-navy-100/50">
+              <th class="px-2 py-2 sm:px-3 sm:py-2.5 text-xs text-navy-600 font-semibold uppercase tracking-wider">Country</th>
+              <th class="px-2 py-2 sm:px-3 sm:py-2.5 text-xs text-navy-600 font-semibold uppercase tracking-wider">Terminal</th>
+              <th class="px-2 py-2 sm:px-3 sm:py-2.5 text-xs text-navy-600 font-semibold uppercase tracking-wider text-right">Status</th>
+              <th class="px-2 py-2 sm:px-3 sm:py-2.5 text-xs text-navy-600 font-semibold uppercase tracking-wider hidden sm:table-cell">Notes</th>
+            </tr>
+          </thead>
+          <tbody>${rowsHtml}</tbody>
+        </table>
+      </div>
+
+      <div class="px-4 py-2 border-t border-navy-200 bg-navy-50/50 text-[10px] text-navy-600">
+        Data sourced from country infrastructure assessments (same sync as production tables). Click any row for details. Updated ${new Date(LAST_UPDATED).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}.
+      </div>
+    </div>
+  `;
+}
+
+
+// ---------- GCC Interactive Map ----------
+
+function renderGccOverviewMap() {
+  const pillCls = 'gcc-filter-pill text-[10px] sm:text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-lg border border-navy-300 bg-white text-navy-600 hover:bg-navy-100 whitespace-nowrap transition-all min-h-[36px]';
+  return `
+    <div class="bg-white rounded-xl border border-navy-200 overflow-hidden">
+      <div class="px-4 py-3 border-b border-navy-200 bg-navy-50 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+        <div>
+          <h3 class="text-sm font-bold text-navy-900">GCC Energy Infrastructure Map</h3>
+          <span class="text-xs text-navy-600">Oil/gas fields, terminals, refineries, LNG plants, and key pipelines</span>
+        </div>
+        <div id="gcc-map-filters" class="flex gap-1.5 overflow-x-auto flex-nowrap pb-1 sm:pb-0">
+          <button data-map-filter="all" class="gcc-filter-pill active text-[10px] sm:text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-lg border border-navy-300 bg-navy-800 text-white whitespace-nowrap transition-all min-h-[36px]">All</button>
+          <button data-map-filter="production" class="${pillCls}">Oil/Gas Fields</button>
+          <button data-map-filter="terminals" class="${pillCls}">Terminals</button>
+          <button data-map-filter="refining" class="${pillCls}">Refineries & LNG</button>
+          <button data-map-filter="pipelines" class="${pillCls}">Pipelines</button>
+        </div>
+      </div>
+      <div id="gcc-overview-map" class="h-[280px] sm:h-[360px] lg:h-[460px] w-full"></div>
+    </div>
+  `;
+}
+
+let gccMapInstance = null;
+let gccMapLayers = { production: null, terminals: null, refining: null, pipelines: null };
+
+function initGccOverviewMap() {
+  const container = document.getElementById('gcc-overview-map');
+  if (!container || gccMapInstance) return;
+
+  gccMapInstance = L.map(container, { center: [27, 50], zoom: 6, minZoom: 4, maxZoom: 14, zoomControl: false });
+  L.control.zoom({ position: 'bottomright' }).addTo(gccMapInstance);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>',
+    maxZoom: 19
+  }).addTo(gccMapInstance);
+
+  const statusColor = { shutdown: '#dc2626', partial: '#d97706', operational: '#059669' };
+  const popupStatusColor = { shutdown: '#f87171', partial: '#fbbf24', operational: '#34d399' };
+  const fieldTypes = ['Oil Field', 'Gas Field', 'Offshore Oil', 'Oil/Gas Field'];
+  const terminalTypes = ['Terminal', 'Port', 'Import'];
+  const refLngTypes = ['Refinery', 'LNG Train', 'LNG Plant', 'LNG/LPG', 'GTL', 'LNG Expansion', 'Smelter', 'Petrochemical'];
+
+  function isType(infType, keywords) { return keywords.some(kw => infType.includes(kw)); }
+
+  // --- Oil/Gas Fields Layer (circle markers) ---
+  gccMapLayers.production = L.layerGroup();
+  COUNTRY_STATUS_DATA.forEach(c => {
+    if (!c.infrastructure) return;
+    c.infrastructure.forEach(inf => {
+      if (!isType(inf.type, fieldTypes)) return;
+      const coords = INFRA_COORDS[inf.name];
+      if (!coords) return;
+      const color = statusColor[inf.status] || '#6b7280';
+      L.circleMarker([coords.lat, coords.lng], {
+        radius: 8, color: '#1e293b', weight: 1.5, fillColor: color, fillOpacity: 0.7
+      }).bindPopup(`
+        <div style="min-width:160px">
+          <div style="font-weight:700;font-size:12px;color:#fff;margin-bottom:2px">${inf.name}</div>
+          <div style="font-size:10px;color:#829ab1;margin-bottom:4px">${inf.type} — ${c.country}</div>
+          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Capacity</span><span style="font-weight:600;color:#fff">${inf.capacity}</span></div>
+          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Status</span><span style="font-weight:600;color:${popupStatusColor[inf.status] || '#fff'}">${inf.status}</span></div>
+          ${inf.notes ? `<div style="font-size:10px;color:#bcccdc;margin-top:4px;border-top:1px solid #334e68;padding-top:3px">${inf.notes}</div>` : ''}
+        </div>
+      `, { maxWidth: 240 }).addTo(gccMapLayers.production);
+    });
+  });
+  gccMapLayers.production.addTo(gccMapInstance);
+
+  // --- Terminals Layer (square markers) ---
+  gccMapLayers.terminals = L.layerGroup();
+  COUNTRY_STATUS_DATA.forEach(c => {
+    if (!c.infrastructure) return;
+    c.infrastructure.forEach(inf => {
+      if (!isType(inf.type, terminalTypes)) return;
+      const coords = INFRA_COORDS[inf.name];
+      if (!coords) return;
+      const color = statusColor[inf.status] || '#6b7280';
+      const icon = L.divIcon({
+        className: '',
+        html: `<div style="width:16px;height:16px;background:${color};border:2px solid #1e293b;box-shadow:0 1px 4px rgba(0,0,0,0.3);cursor:pointer"></div>`,
+        iconSize: [16, 16],
+        iconAnchor: [8, 8]
+      });
+      L.marker([coords.lat, coords.lng], { icon }).bindPopup(`
+        <div style="min-width:180px">
+          <div style="font-weight:700;font-size:12px;color:#fff;margin-bottom:2px">${inf.name}</div>
+          <div style="font-size:10px;color:#829ab1;margin-bottom:4px">${inf.type} — ${c.country}</div>
+          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Capacity</span><span style="font-weight:600;color:#fff">${inf.capacity}</span></div>
+          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Status</span><span style="font-weight:600;color:${popupStatusColor[inf.status] || '#fff'}">${inf.status}</span></div>
+          ${inf.notes ? `<div style="font-size:10px;color:#bcccdc;margin-top:4px;border-top:1px solid #334e68;padding-top:3px">${inf.notes}</div>` : ''}
+        </div>
+      `, { maxWidth: 240 }).addTo(gccMapLayers.terminals);
+    });
+  });
+  gccMapLayers.terminals.addTo(gccMapInstance);
+
+  // --- Refineries & LNG Layer (diamond markers) ---
+  gccMapLayers.refining = L.layerGroup();
+  COUNTRY_STATUS_DATA.forEach(c => {
+    if (!c.infrastructure) return;
+    c.infrastructure.forEach(inf => {
+      if (!isType(inf.type, refLngTypes)) return;
+      const coords = INFRA_COORDS[inf.name];
+      if (!coords) return;
+      const color = statusColor[inf.status] || '#6b7280';
+      const icon = L.divIcon({
+        className: '',
+        html: `<div style="width:15px;height:15px;background:${color};border:2px solid #1e293b;transform:rotate(45deg);cursor:pointer"></div>`,
+        iconSize: [15, 15],
+        iconAnchor: [7.5, 7.5]
+      });
+      L.marker([coords.lat, coords.lng], { icon }).bindPopup(`
+        <div style="min-width:180px">
+          <div style="font-weight:700;font-size:12px;color:#fff;margin-bottom:2px">${inf.name}</div>
+          <div style="font-size:10px;color:#829ab1;margin-bottom:4px">${inf.type} — ${c.country}</div>
+          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Capacity</span><span style="font-weight:600;color:#fff">${inf.capacity}</span></div>
+          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Status</span><span style="font-weight:600;color:${popupStatusColor[inf.status] || '#fff'}">${inf.status}</span></div>
+        </div>
+      `, { maxWidth: 240 }).addTo(gccMapLayers.refining);
+    });
+  });
+  gccMapLayers.refining.addTo(gccMapInstance);
+
+  // --- Pipelines Layer (dashed polylines) ---
+  gccMapLayers.pipelines = L.layerGroup();
+  if (typeof PIPELINE_ROUTES !== 'undefined') {
+    PIPELINE_ROUTES.forEach(pipe => {
+      const color = statusColor[pipe.status] || '#6b7280';
+      L.polyline(pipe.coords, {
+        color, weight: 3, dashArray: '8 5', opacity: 0.8
+      }).bindPopup(`
+        <div style="min-width:180px">
+          <div style="font-weight:700;font-size:12px;color:#fff;margin-bottom:2px">${pipe.name}</div>
+          <div style="font-size:10px;color:#829ab1;margin-bottom:4px">${pipe.country}</div>
+          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Capacity</span><span style="font-weight:600;color:#fff">${pipe.capacity}</span></div>
+          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Status</span><span style="font-weight:600;color:${popupStatusColor[pipe.status] || '#fff'}">${pipe.status}</span></div>
+          ${pipe.notes ? `<div style="font-size:10px;color:#bcccdc;margin-top:4px;border-top:1px solid #334e68;padding-top:3px">${pipe.notes}</div>` : ''}
+        </div>
+      `, { maxWidth: 260 }).addTo(gccMapLayers.pipelines);
+
+      // Endpoint labels
+      const labelStyle = 'display:inline-block;background:#102a43;color:#d9e2ec;font-size:9px;font-weight:700;font-family:Inter,sans-serif;padding:1px 5px;border-radius:3px;white-space:nowrap;box-shadow:0 1px 3px rgba(0,0,0,0.3);border:1px solid ' + color;
+      if (pipe.startLabel) {
+        const startCoord = pipe.coords[0];
+        L.marker(startCoord, { icon: L.divIcon({ className: '', html: `<div style="${labelStyle}">● ${pipe.startLabel}</div>`, iconSize: [0, 0], iconAnchor: [-4, 8] }) }).addTo(gccMapLayers.pipelines);
+      }
+      if (pipe.endLabel) {
+        const endCoord = pipe.coords[pipe.coords.length - 1];
+        L.marker(endCoord, { icon: L.divIcon({ className: '', html: `<div style="${labelStyle}">● ${pipe.endLabel}</div>`, iconSize: [0, 0], iconAnchor: [-4, 8] }) }).addTo(gccMapLayers.pipelines);
+      }
+    });
+  }
+  gccMapLayers.pipelines.addTo(gccMapInstance);
+
+  // --- Legend ---
+  const legend = L.control({ position: 'bottomleft' });
+  legend.onAdd = function () {
+    const div = L.DomUtil.create('div', 'bg-white/95 backdrop-blur p-3 rounded-lg border border-navy-200 text-[10px] text-navy-700 shadow-md');
+    div.style.lineHeight = '1.8';
+    div.style.minWidth = '140px';
+    div.innerHTML = `
+      <div class="font-bold text-[11px] text-navy-900 mb-1">Legend</div>
+      <div class="flex items-center gap-1.5"><span style="width:10px;height:10px;border-radius:50%;background:#059669;border:1.5px solid #1e293b;display:inline-block"></span> Oil/Gas Field</div>
+      <div class="flex items-center gap-1.5"><span style="width:10px;height:10px;background:#059669;border:1.5px solid #1e293b;display:inline-block"></span> Terminal</div>
+      <div class="flex items-center gap-1.5"><span style="width:10px;height:10px;background:#059669;border:1.5px solid #1e293b;display:inline-block;transform:rotate(45deg)"></span> Refinery / LNG</div>
+      <div class="flex items-center gap-1.5"><span style="width:16px;height:0;border-top:3px dashed #059669;display:inline-block"></span> Pipeline</div>
+      <div class="border-t border-navy-200 my-1"></div>
+      <div class="flex items-center gap-1.5"><span style="width:8px;height:8px;border-radius:50%;background:#059669;display:inline-block"></span> Operational</div>
+      <div class="flex items-center gap-1.5"><span style="width:8px;height:8px;border-radius:50%;background:#d97706;display:inline-block"></span> Partial</div>
+      <div class="flex items-center gap-1.5"><span style="width:8px;height:8px;border-radius:50%;background:#dc2626;display:inline-block"></span> Shutdown</div>
+    `;
+    return div;
+  };
+  legend.addTo(gccMapInstance);
+
+  // --- Filter pill interactions ---
+  document.querySelectorAll('.gcc-filter-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.mapFilter;
+      document.querySelectorAll('.gcc-filter-pill').forEach(b => {
+        b.classList.remove('active', 'bg-navy-800', 'text-white');
+        b.classList.add('bg-white', 'text-navy-600');
+      });
+      btn.classList.add('active', 'bg-navy-800', 'text-white');
+      btn.classList.remove('bg-white', 'text-navy-600');
+
+      const show = (layer, visible) => {
+        if (visible) { if (!gccMapInstance.hasLayer(layer)) gccMapInstance.addLayer(layer); }
+        else { if (gccMapInstance.hasLayer(layer)) gccMapInstance.removeLayer(layer); }
+      };
+      show(gccMapLayers.production, filter === 'all' || filter === 'production');
+      show(gccMapLayers.terminals, filter === 'all' || filter === 'terminals');
+      show(gccMapLayers.refining, filter === 'all' || filter === 'refining');
+      show(gccMapLayers.pipelines, filter === 'all' || filter === 'pipelines');
+    });
+  });
+
+  // Reset view control (next to zoom +/-)
+  const resetControl = L.control({ position: 'bottomright' });
+  resetControl.onAdd = function () {
+    const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control');
+    const btn = L.DomUtil.create('a', '', container);
+    btn.href = '#';
+    btn.title = 'Reset view';
+    btn.innerHTML = '↺';
+    btn.style.cssText = 'display:flex;align-items:center;justify-content:center;width:36px;height:36px;font-size:18px;font-weight:700;color:#334e68;text-decoration:none;background:#fff;';
+    L.DomEvent.on(btn, 'click', function (e) {
+      L.DomEvent.preventDefault(e);
+      gccMapInstance.flyTo([27, 50], 6, { duration: 0.8 });
+    });
+    L.DomEvent.disableClickPropagation(container);
+    return container;
+  };
+  resetControl.addTo(gccMapInstance);
+
+  setTimeout(() => gccMapInstance.invalidateSize(), 100);
+}
+
+function highlightPortRow(name) {
+  // Remove previous highlights
+  document.querySelectorAll('[data-port-row]').forEach(r => r.classList.remove('bg-amber-50'));
+  document.querySelectorAll('[data-port-detail]').forEach(d => { d.classList.remove('expanded'); d.classList.add('collapsed'); });
+  // Highlight and expand
+  const row = document.querySelector(`[data-port-row="${name}"]`);
+  const detail = document.querySelector(`[data-port-detail="${name}"]`);
+  if (row) {
+    row.classList.add('bg-amber-50');
+    row.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+  if (detail) { detail.classList.remove('collapsed'); detail.classList.add('expanded'); }
 }
 
 function renderExecSummary() {
@@ -241,10 +569,17 @@ function renderExecSummary() {
   refiningData.sort((a, b) => b.capacity - a.capacity);
   lngData.sort((a, b) => b.preWar - a.preWar);
 
+  // Reset map instance if re-rendering
+  if (gccMapInstance) { gccMapInstance.remove(); gccMapInstance = null; gccMapLayers = { production: null, terminals: null, refining: null, pipelines: null }; }
+
   container.innerHTML = `
     <div class="mb-5">
       <h2 class="text-lg font-bold text-navy-900">Regional Production Impact Assessment</h2>
-      <p class="text-sm text-navy-500">Gulf Escalation: 28 Feb \u2013 ${new Date(LAST_UPDATED).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })} | Sources: IEA, OPEC, Bloomberg, Reuters, Argus</p>
+      <p class="text-sm text-navy-600">Gulf Escalation: 28 Feb \u2013 ${new Date(LAST_UPDATED).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })} | Sources: IEA, OPEC, Bloomberg, Reuters, Argus</p>
+    </div>
+
+    <div class="mb-5">
+      ${renderGccOverviewMap()}
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
@@ -252,11 +587,18 @@ function renderExecSummary() {
       ${renderProductionTable('Refining Capacity', 'kb/d', refiningData, 'capacity')}
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
       ${renderProductionTable('Gas Production', 'Bcf/d', gasData, 'production')}
       ${renderProductionTable('LNG Production', 'Mtpa', lngData, 'production')}
     </div>
+
+    ${renderKeyPortsTable()}
   `;
+
+  // Initialize map and port table interactions after DOM renders
+  setTimeout(() => {
+    initGccOverviewMap();
+  }, 50);
 }
 
 // ---------- Country Matrix Rendering ----------
@@ -923,6 +1265,11 @@ function initTabs() {
       panels.forEach(p => {
         p.classList.toggle('hidden', p.dataset.panel !== target);
       });
+
+      // Invalidate Leaflet map size when Production Overview tab becomes visible
+      if (target === 'exec-summary' && gccMapInstance) {
+        setTimeout(() => gccMapInstance.invalidateSize(), 100);
+      }
 
       updateStats(target);
     });

@@ -55,7 +55,26 @@ else
   echo "[sync] No changes detected."
 fi
 
-# 5. Run SPR sync
+# 5. Fetch Platts market prices (all 7 commodities)
+echo "[sync] Fetching Platts market prices..."
+if node "$SCRIPT_DIR/fetch-platts-prices.js"; then
+  echo "[sync] Platts prices updated."
+else
+  echo "[sync] WARNING: Platts price fetch failed (continuing)."
+fi
+
+# 6. Commit and push price data if changed
+if ! git -C "$PROJECT_DIR" diff --quiet market-prices-seed.json 2>/dev/null; then
+  TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
+  git -C "$PROJECT_DIR" add market-prices-seed.json
+  git -C "$PROJECT_DIR" commit -m "chore: daily price sync ($TIMESTAMP)"
+  git -C "$PROJECT_DIR" push
+  echo "[sync] Price data pushed to GitHub."
+else
+  echo "[sync] No price changes detected."
+fi
+
+# 7. Run SPR sync
 echo "[sync] Running SPR data sync..."
 bash "$SCRIPT_DIR/sync-spr.sh"
 

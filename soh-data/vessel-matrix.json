@@ -3,10 +3,10 @@
     "matrix": [
       {
         "label": "Container Ship",
-        "ballast": 55,
-        "laden": 67,
+        "ballast": 60,
+        "laden": 60,
         "unknown": 0,
-        "total": 122
+        "total": 120
       },
       {
         "label": "VLCC",
@@ -199,10 +199,10 @@
       }
     ],
     "grandTotal": {
-      "ballast": 385,
-      "laden": 436,
+      "ballast": 390,
+      "laden": 429,
       "unknown": 1,
-      "total": 822
+      "total": 820
     },
     "productVolumes": [
       {
@@ -396,16 +396,16 @@
       },
       {
         "commodity": "container",
-        "vesselCount": 67,
+        "vesselCount": 60,
         "totalCapacity": 0,
         "unit": "mmt",
         "products": {
-          "Unknown": 67
+          "Unknown": 60
         },
         "topProducts": [
           {
             "name": "Unknown",
-            "count": 67
+            "count": 60
           }
         ]
       }
@@ -450,8 +450,8 @@
       },
       {
         "label": "Container Ship",
-        "ballast": 7,
-        "laden": 16,
+        "ballast": 6,
+        "laden": 17,
         "unknown": 0,
         "total": 23
       },
@@ -576,8 +576,8 @@
       }
     ],
     "grandTotal": {
-      "ballast": 277,
-      "laden": 150,
+      "ballast": 276,
+      "laden": 151,
       "unknown": 0,
       "total": 427
     },
@@ -702,20 +702,20 @@
       },
       {
         "commodity": "container",
-        "vesselCount": 16,
+        "vesselCount": 17,
         "totalCapacity": 0,
         "unit": "mmt",
         "products": {
-          "Unknown": 16
+          "Unknown": 17
         },
         "topProducts": [
           {
             "name": "Unknown",
-            "count": 16
+            "count": 17
           }
         ]
       }
     ]
   },
-  "syncTimestamp": "2026-03-28T21:21:39.376Z"
+  "syncTimestamp": "2026-03-29T15:55:12.903Z"
 }

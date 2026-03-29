@@ -3,3 +3,4 @@ node_modules/
 .claude/
 Screenshot_*
 .vercel
+.platts-token.json

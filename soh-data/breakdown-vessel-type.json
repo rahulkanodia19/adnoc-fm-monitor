@@ -8,9 +8,9 @@
     },
     {
       "label": "Container Ship",
-      "total": 145,
-      "ballast": 62,
-      "laden": 83
+      "total": 143,
+      "ballast": 66,
+      "laden": 77
     },
     {
       "label": "MR",
@@ -169,6 +169,6 @@
       "laden": 1
     }
   ],
-  "total": 1249,
-  "syncTimestamp": "2026-03-28T21:21:39.376Z"
+  "total": 1247,
+  "syncTimestamp": "2026-03-29T15:55:12.903Z"
 }

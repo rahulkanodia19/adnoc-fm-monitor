@@ -80,9 +80,15 @@ if [ "$VESSEL_COUNT" -lt 500 ]; then
 fi
 echo "[sync-soh] Validated: $VESSEL_COUNT vessels fetched."
 
-# 3.5 Merge container ships from als-monitor
+# 3.5 Fetch container ships from S&P MINT (replaces als-monitor dependency)
+echo "[sync-soh] Fetching container data from S&P MINT..."
+node scripts/fetch-mint-containers.js || echo "[sync-soh] MINT container fetch failed (non-fatal, using cached data)"
 echo "[sync-soh] Merging container ship data..."
 node scripts/merge-containers.js || echo "[sync-soh] Container merge failed (non-fatal, continuing)"
+
+# 3.6 Re-process SOH data with all containers included
+echo "[sync-soh] Processing SOH data (with containers)..."
+node scripts/process-soh.js || echo "[sync-soh] SOH processing failed (non-fatal)"
 
 # 4. Commit and push if SOH data changed
 echo "[sync-soh] Checking for changes..."

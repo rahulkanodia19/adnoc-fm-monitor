@@ -223,7 +223,7 @@
     <div class="soh-section" id="soh-kpis">
       <div class="mb-4">
         <h2 class="text-lg sm:text-xl font-extrabold text-navy-900 tracking-tight">STRAIT OF HORMUZ TRACKER</h2>
-        <p class="text-xs text-navy-500 mt-0.5">Data: Kpler Terminal (commodity vessels) | Last synced: ${fmtDate(summary.syncTimestamp)}</p>
+        <p class="text-xs text-navy-500 mt-0.5">Data: Kpler Terminal + S&amp;P MINT (containers) | Last synced: ${fmtDate(summary.syncTimestamp)}</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">${cardHtml}</div>
     </div>`;
@@ -466,7 +466,7 @@
 
   function renderADNOCVessels(adnocData) {
     const vessels = adnocData.vessels || [];
-    const tracked = vessels.filter(v => v.dataSource === 'kpler' || v.dataSource === 'als-monitor');
+    const tracked = vessels.filter(v => v.dataSource === 'kpler' || v.dataSource === 'mint');
     const anchored = tracked.filter(v => v.status === 'Anchored').length;
     const moored = tracked.filter(v => v.status === 'Moored').length;
     const underway = tracked.filter(v => v.status === 'Under way using engine').length;
@@ -476,7 +476,7 @@
       if (v.dataSource === 'unavailable') {
         return `<tr class="border-t border-navy-200 bg-navy-50 text-xs">
           <td class="px-3 py-2.5 font-semibold"><a href="${v.marineTrafficUrl}" target="_blank" rel="noreferrer" class="text-sky-700 hover:underline">${v.name} &#8599;</a></td>
-          <td colspan="8" class="px-3 py-2.5 text-navy-400 italic">Not tracked in Kpler (container ship) — check MarineTraffic for live status</td>
+          <td colspan="8" class="px-3 py-2.5 text-navy-400 italic">Vessel data unavailable — check MarineTraffic for live status</td>
         </tr>`;
       }
       const statusIcon = v.status === 'Under way using engine' ? '&#9654;' : v.status === 'Anchored' ? '&#9875;' : '&#9875;';
@@ -531,7 +531,7 @@
           <tbody>${rows}</tbody>
         </table>
       </div>
-      ${unavailable > 0 ? `<p class="text-[10px] text-navy-400 mt-2">${unavailable} vessel(s) not tracked in Kpler commodity database (container ships). Check MarineTraffic for live data.</p>` : ''}
+      ${unavailable > 0 ? `<p class="text-[10px] text-navy-400 mt-2">${unavailable} vessel(s) with data unavailable. Check MarineTraffic for live data.</p>` : ''}
     </div>`;
   }
 
@@ -722,7 +722,7 @@
     return `
     <div class="soh-section mt-6" id="soh-transit">
       <h3 class="text-sm font-bold text-navy-900 uppercase tracking-wider mb-3">Vessels In Transit</h3>
-      <p class="text-xs text-navy-500 mb-3">Commodity vessels actively transiting the Strait (speed &gt; 3 kn) — Source: Kpler AIS (excludes container ships)</p>
+      <p class="text-xs text-navy-500 mb-3">Commodity vessels actively transiting the Strait (speed &gt; 3 kn) — Source: Kpler AIS + S&amp;P MINT</p>
       <div class="grid grid-cols-3 gap-3 mb-4">
         <div class="bg-white border border-navy-200 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Exiting Gulf</div><div class="text-2xl font-extrabold text-red-600">${exiting}</div></div>
         <div class="bg-white border border-navy-200 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Entering Gulf</div><div class="text-2xl font-extrabold text-emerald-600">${entering}</div></div>
@@ -786,6 +786,7 @@
             <div class="flex items-center gap-3 text-xs text-navy-500">
               <span>Tankers: ${d.tankers}</span>
               <span>Bulk: ${d.bulk}</span>
+              ${d.container ? `<span>Container: ${d.container}</span>` : ''}
               ${imfCount !== '-' ? `<span class="text-sky-600">IMF: ${imfCount}</span>` : ''}
             </div>
           </button>

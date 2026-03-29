@@ -1,0 +1,13 @@
+var insights = require('../flow-insights.json')
+var summary = require('../flow-summary.json')
+var ik = Object.keys(insights).filter(function(k) { return k !== 'lastUpdated' })
+var sk = Object.keys(summary)
+console.log('Insights keys:', ik.length)
+console.log('Summary keys:', sk.length)
+var missing = sk.filter(function(k) { return !insights[k] })
+console.log('Missing from insights:', missing.length, missing.join(', '))
+var extra = ik.filter(function(k) { return !summary[k] })
+console.log('Extra in insights:', extra.length, extra.join(', '))
+var totalBullets = 0
+ik.forEach(function(k) { totalBullets += insights[k].length })
+console.log('Total insight bullets:', totalBullets)

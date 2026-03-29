@@ -22,5 +22,17 @@
     "adnocCount": 11,
     "totalVessels": 1249,
     "transitCount": 8
+  },
+  {
+    "date": "2026-03-29",
+    "insideTotal": 820,
+    "insideBallast": 390,
+    "insideLaden": 429,
+    "outsideTotal": 427,
+    "outsideBallast": 276,
+    "outsideLaden": 151,
+    "adnocCount": 11,
+    "totalVessels": 1247,
+    "transitCount": 9
   }
 ]

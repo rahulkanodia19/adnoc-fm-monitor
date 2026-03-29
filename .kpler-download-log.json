@@ -1,0 +1,283 @@
+{
+  "timestamp": "2026-03-29T08:26:29.128Z",
+  "success": 35,
+  "failed": 13,
+  "total": 48,
+  "results": [
+    {
+      "key": "Iraq_crude_export",
+      "status": "OK",
+      "file": "Iraq daily exports (Crude_Co, by destination country) — 2026-03-29 03h20.xlsx",
+      "size": 22692
+    },
+    {
+      "key": "Qatar_crude_export",
+      "status": "OK",
+      "file": "Qatar daily exports (Crude_Co, by destination country) — 2026-03-29 03h21.xlsx",
+      "size": 20462
+    },
+    {
+      "key": "Saudi Arabia_crude_export",
+      "status": "OK",
+      "file": "Saudi Arabia daily exports (Crude_Co, by destination country) — 2026-03-29 03h21.xlsx",
+      "size": 27006
+    },
+    {
+      "key": "United Arab Emirates_crude_export",
+      "status": "OK",
+      "file": "United Arab Emirates daily exports (Crude_Co, by destination country) — 2026-03-29 03h21.xlsx",
+      "size": 26011
+    },
+    {
+      "key": "China_crude_import",
+      "status": "OK",
+      "file": "China daily imports (Crude_Co, by origin country) — 2026-03-29 03h22.xlsx",
+      "size": 39622
+    },
+    {
+      "key": "India_crude_import",
+      "status": "FAILED",
+      "reason": "no blob captured"
+    },
+    {
+      "key": "Russian Federation_crude_export",
+      "status": "OK",
+      "file": "Russian Federation daily exports (Crude_Co, by destination country) — 2026-03-29 03h23.xlsx",
+      "size": 34045
+    },
+    {
+      "key": "United States_crude_export",
+      "status": "OK",
+      "file": "United States daily exports (Crude_Co, by destination country) — 2026-03-29 03h23.xlsx",
+      "size": 38851
+    },
+    {
+      "key": "Japan_crude_import",
+      "status": "OK",
+      "file": "Japan daily imports (Crude_Co, by origin country) — 2026-03-29 03h24.xlsx",
+      "size": 23857
+    },
+    {
+      "key": "South Korea_crude_import",
+      "status": "OK",
+      "file": "South Korea daily imports (Crude_Co, by origin country) — 2026-03-29 03h24.xlsx",
+      "size": 28957
+    },
+    {
+      "key": "Russian Federation_lng_export",
+      "status": "OK",
+      "file": "Russian Federation daily exports (lng, by destination country) — 2026-03-29 03h24.xlsx",
+      "size": 23650
+    },
+    {
+      "key": "United States_lng_export",
+      "status": "OK",
+      "file": "United States daily exports (lng, by destination country) — 2026-03-29 03h25.xlsx",
+      "size": 39505
+    },
+    {
+      "key": "Japan_lng_import",
+      "status": "OK",
+      "file": "Japan daily imports (lng, by origin country) — 2026-03-29 03h26.xlsx",
+      "size": 26718
+    },
+    {
+      "key": "South Korea_lng_import",
+      "status": "OK",
+      "file": "South Korea daily imports (lng, by origin country) — 2026-03-29 03h27.xlsx",
+      "size": 26469
+    },
+    {
+      "key": "Bahrain_crude_export",
+      "status": "OK",
+      "file": "Bahrain daily exports (Crude_Co, by destination country) — 2026-03-29 03h28.xlsx",
+      "size": 18247
+    },
+    {
+      "key": "Iran_crude_export",
+      "status": "OK",
+      "file": "Iran daily exports (Crude_Co, by destination country) — 2026-03-29 03h28.xlsx",
+      "size": 19283
+    },
+    {
+      "key": "Kuwait_crude_export",
+      "status": "OK",
+      "file": "Kuwait daily exports (Crude_Co, by destination country) — 2026-03-29 03h29.xlsx",
+      "size": 19054
+    },
+    {
+      "key": "Oman_crude_export",
+      "status": "OK",
+      "file": "Oman daily exports (Crude_Co, by destination country) — 2026-03-29 03h30.xlsx",
+      "size": 19798
+    },
+    {
+      "key": "Thailand_crude_import",
+      "status": "OK",
+      "file": "Thailand daily imports (Crude_Co, by origin country) — 2026-03-29 03h31.xlsx",
+      "size": 26657
+    },
+    {
+      "key": "Vietnam_crude_import",
+      "status": "FAILED",
+      "reason": "no export button"
+    },
+    {
+      "key": "Bahrain_lng_export",
+      "status": "OK",
+      "file": "Bahrain daily exports (lng, by destination country) — 2026-03-29 03h31.xlsx",
+      "size": 18247
+    },
+    {
+      "key": "Iran_lng_export",
+      "status": "OK",
+      "file": "Iran daily exports (lng, by destination country) — 2026-03-29 03h32.xlsx",
+      "size": 18247
+    },
+    {
+      "key": "Iraq_lng_export",
+      "status": "OK",
+      "file": "Iraq daily exports (lng, by destination country) — 2026-03-29 03h32.xlsx",
+      "size": 18247
+    },
+    {
+      "key": "Kuwait_lng_export",
+      "status": "OK",
+      "file": "Kuwait daily exports (lng, by destination country) — 2026-03-29 03h33.xlsx",
+      "size": 18247
+    },
+    {
+      "key": "Oman_lng_export",
+      "status": "OK",
+      "file": "Oman daily exports (lng, by destination country) — 2026-03-29 03h34.xlsx",
+      "size": 22560
+    },
+    {
+      "key": "Qatar_lng_export",
+      "status": "FAILED",
+      "reason": "Timeout: Runtime.evaluate"
+    },
+    {
+      "key": "Saudi Arabia_lng_export",
+      "status": "FAILED",
+      "reason": "no export button"
+    },
+    {
+      "key": "United Arab Emirates_lng_export",
+      "status": "FAILED",
+      "reason": "no export button"
+    },
+    {
+      "key": "China_lng_import",
+      "status": "OK",
+      "file": "China daily imports (lng, by origin country) — 2026-03-29 03h39.xlsx",
+      "size": 23024
+    },
+    {
+      "key": "India_lng_import",
+      "status": "OK",
+      "file": "India daily imports (lng, by origin country) — 2026-03-29 03h39.xlsx",
+      "size": 22691
+    },
+    {
+      "key": "Thailand_lng_import",
+      "status": "OK",
+      "file": "Thailand daily imports (lng, by origin country) — 2026-03-29 03h40.xlsx",
+      "size": 22572
+    },
+    {
+      "key": "Vietnam_lng_import",
+      "status": "FAILED",
+      "reason": "Timeout: Runtime.evaluate"
+    },
+    {
+      "key": "Bahrain_lpg_export",
+      "status": "OK",
+      "file": "Bahrain daily exports (propane, by destination country) — 2026-03-29 03h43.xlsx",
+      "size": 18247
+    },
+    {
+      "key": "Iran_lpg_export",
+      "status": "OK",
+      "file": "Iran daily exports (propane, by destination country) — 2026-03-29 03h44.xlsx",
+      "size": 21160
+    },
+    {
+      "key": "Iraq_lpg_export",
+      "status": "OK",
+      "file": "Iraq daily exports (propane, by destination country) — 2026-03-29 03h45.xlsx",
+      "size": 18255
+    },
+    {
+      "key": "Kuwait_lpg_export",
+      "status": "OK",
+      "file": "Kuwait daily exports (propane, by destination country) — 2026-03-29 03h45.xlsx",
+      "size": 18956
+    },
+    {
+      "key": "Oman_lpg_export",
+      "status": "OK",
+      "file": "Oman daily exports (propane, by destination country) — 2026-03-29 03h46.xlsx",
+      "size": 18247
+    },
+    {
+      "key": "Qatar_lpg_export",
+      "status": "OK",
+      "file": "Qatar daily exports (propane, by destination country) — 2026-03-29 03h46.xlsx",
+      "size": 20391
+    },
+    {
+      "key": "Russian Federation_lpg_export",
+      "status": "OK",
+      "file": "Russian Federation daily exports (propane, by destination country) — 2026-03-29 03h46.xlsx",
+      "size": 18263
+    },
+    {
+      "key": "Saudi Arabia_lpg_export",
+      "status": "OK",
+      "file": "Saudi Arabia daily exports (propane, by destination country) — 2026-03-29 03h47.xlsx",
+      "size": 21074
+    },
+    {
+      "key": "United Arab Emirates_lpg_export",
+      "status": "OK",
+      "file": "United Arab Emirates daily exports (propane, by destination country) — 2026-03-29 03h47.xlsx",
+      "size": 19015
+    },
+    {
+      "key": "United States_lpg_export",
+      "status": "FAILED",
+      "reason": "Timeout: Runtime.evaluate"
+    },
+    {
+      "key": "China_lpg_import",
+      "status": "FAILED",
+      "reason": "Timeout: Page.navigate"
+    },
+    {
+      "key": "India_lpg_import",
+      "status": "FAILED",
+      "reason": "Timeout: Page.navigate"
+    },
+    {
+      "key": "Japan_lpg_import",
+      "status": "FAILED",
+      "reason": "Timeout: Page.navigate"
+    },
+    {
+      "key": "South Korea_lpg_import",
+      "status": "FAILED",
+      "reason": "Timeout: Page.navigate"
+    },
+    {
+      "key": "Thailand_lpg_import",
+      "status": "FAILED",
+      "reason": "Timeout: Page.navigate"
+    },
+    {
+      "key": "Vietnam_lpg_import",
+      "status": "FAILED",
+      "reason": "Timeout: Page.navigate"
+    }
+  ]
+}

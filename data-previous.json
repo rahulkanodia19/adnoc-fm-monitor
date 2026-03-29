@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-28T12:00:00Z",
+  "lastUpdated": "2026-03-29T22:00:00Z",
   "countryStatus": [
     {
       "id": "qatar",
@@ -36,13 +36,20 @@
           "unit": "Mtpa"
         },
         "notes": {
-          "oil": "Ras Laffan offline; all downstream halted",
-          "gas": "North Field shut; all processing halted",
-          "refining": "Laffan 1+2 offline with Ras Laffan",
-          "lng": "Ras Laffan LNG fully offline; 77 Mtpa halted"
+          "oil": "All offshore fields shut since early Mar; Ras Laffan complex offline",
+          "gas": "North Field shut; all processing halted; no restart until conflict ends",
+          "refining": "Laffan 1+2 offline with Ras Laffan; 443 kb/d at zero",
+          "lng": "All 77 Mtpa halted; FM extended to Edison (10 cargoes Apr-mid Jun); 12.8 Mtpa damaged 3-5 yrs",
+          "ports": "Ras Laffan LNG port offline; Mesaieed at minimal ops; Hormuz closure blocks all seaborne exports"
         }
       },
       "events": [
+        {
+          "date": "2026-03-27",
+          "title": "QatarEnergy notifies Edison of FM on 10 LNG cargoes through mid-June",
+          "description": "QatarEnergy notified Italian utility Edison that it cannot fulfil contractual obligations for 10 LNG cargoes from April through mid-June 2026 at the Adriatic LNG terminal. Final March cargo expected to deliver by 30 Mar. FM scope now covers all major long-term buyers globally.",
+          "isNew": true
+        },
         {
           "date": "2026-03-24",
           "title": "QatarEnergy extends FM to Italy, Belgium, South Korea, China",
@@ -211,6 +218,13 @@
           "type": "Aluminium",
           "capacity": "585,000 tpa",
           "status": "shutdown"
+        },
+        {
+          "name": "Hamad Port",
+          "type": "Port",
+          "capacity": "Qatar's main commercial port",
+          "status": "partial",
+          "notes": "Commercial port south of Doha; limited container/cargo ops amid Hormuz closure"
         }
       ],
       "sources": [
@@ -273,6 +287,12 @@
           "title": "Qatar LNG restart impossible until conflict ends - Yahoo/FT",
           "url": "https://finance.yahoo.com/news/quickly-qatar-restart-world-largest-010000527.html",
           "date": "2026-03-24"
+        },
+        {
+          "id": 11,
+          "title": "QatarEnergy extends FM to Edison through mid-June - MarketScreener",
+          "url": "https://www.marketscreener.com/news/edison-s-p-a-qatarenergy-extends-force-majeure-until-mid-june-2026-ce7e51d8d989f524",
+          "date": "2026-03-27"
         }
       ]
     },
@@ -306,9 +326,10 @@
           "unit": "kb/d"
         },
         "notes": {
-          "oil": "KPC FM declared; tankers blocked",
-          "gas": "Associated gas drops with crude output cuts; domestic supply prioritized",
-          "refining": "Ahmadi + Abdullah hit by drones"
+          "oil": "KPC FM on crude; ~500 kb/d cut; storage filling; tankers blocked at Hormuz",
+          "gas": "Associated gas drops with crude output cuts; domestic supply prioritized for power",
+          "refining": "Al-Ahmadi (466k) struck & shut; Abdullah + Al-Zour at reduced rates; 3-4 months repair",
+          "ports": "Mina Al-Ahmadi shut after FM on crude exports; Al-Zour LNG import at partial ops for domestic gas"
         }
       },
       "events": [
@@ -386,13 +407,15 @@
           "name": "Mina Al-Ahmadi Terminal",
           "type": "Export Terminal",
           "capacity": "~1.5 mb/d",
-          "status": "shutdown"
+          "status": "shutdown",
+          "notes": "FM declared on crude exports; refinery adjacent struck by drones Mar 19-20"
         },
         {
           "name": "Al-Zour LNG Import Terminal",
           "type": "LNG Import",
           "capacity": "22 Mtpa",
-          "status": "partial"
+          "status": "partial",
+          "notes": "Receiving reduced LNG cargoes for domestic power; partial ops"
         },
         {
           "name": "Kafco Fuel Storage",
@@ -476,16 +499,23 @@
           "unit": "kb/d"
         },
         "notes": {
-          "oil": "Offshore fields shut; rerouting to Yanbu via East-West Pipeline",
-          "gas": "Master Gas System reduced; offshore associated gas offline",
-          "refining": "Ras Tanura shut then reopened"
+          "oil": "4 offshore mega-fields shut (~2.5M bpd); March exports avg ~4.4 mb/d (down from 7.1 Feb); East-West Pipeline at full 7M bpd capacity",
+          "gas": "Master Gas System reduced; offshore associated gas offline; onshore maintenance deferred",
+          "refining": "Ras Tanura reopened Mar 13; all onshore refineries operational; throughput constrained by crude routing",
+          "ports": "Yanbu at record ~5M bpd crude + 700-900k bpd products; Yanbu port loading bottleneck (~4.5M bpd capacity); Ras Tanura at partial ops"
         }
       },
       "events": [
         {
+          "date": "2026-03-28",
+          "title": "Yanbu exports set to hit record 3.8M bpd; March crude exports drop sharply",
+          "description": "Saudi Aramco March crude exports averaged ~4.355 mb/d per Kpler, well below 7.1 mb/d in February, despite Yanbu expected to hit record 3.8M bpd throughput. Brent surged to $112.57/bbl. P. Aliki crude carrier loaded at Ras Tanura for Pakistan transited Hormuz under IRGC tolled passage on Mar 28. — Kpler, AGBI, Bloomberg",
+          "isNew": true
+        },
+        {
           "date": "2026-03-27",
-          "title": "East-West Pipeline flow triples to bypass Hormuz",
-          "description": "Saudi Aramco's East-West Pipeline (Petroline) flow averaged 2.9M bpd by Mar 27, up from 770k bpd pre-war. Aramco rerouting crude from Abqaiq to Yanbu on Red Sea, exporting ~5M bpd via bypass. Al Jazeera reports combined pipeline capacity (Saudi + UAE + Iraq) only 9M bpd vs Strait's 20M bpd.",
+          "title": "East-West Pipeline hits 7M bpd capacity; Yanbu loading at record throughput",
+          "description": "Saudi Aramco's East-West Pipeline (Petroline) confirmed at full 7M bpd capacity after conversion completed Mar 11. Crude exports via Yanbu reached ~5M bpd with 700k-900k bpd refined products. However Yanbu port terminals (North + South) have combined loading capacity of only ~4.5M bpd, constraining throughput. Combined pipeline bypass (Saudi + UAE + Iraq) only 9M bpd vs Strait's 20M bpd. — Fortune, Al Jazeera, Bloomberg",
           "isNew": true
         },
         {
@@ -556,7 +586,8 @@
           "name": "Ras Tanura Terminal",
           "type": "Export Terminal",
           "capacity": "~6 mb/d",
-          "status": "partial"
+          "status": "partial",
+          "notes": "Reopened Mar 13 after drone repair; storage near limits; loadings at reduced rates"
         },
         {
           "name": "Yanbu Refinery Complex",
@@ -593,6 +624,48 @@
           "type": "Offshore Oil",
           "capacity": "~300,000 bpd",
           "status": "shutdown"
+        },
+        {
+          "name": "Khurais Field",
+          "type": "Oil Field",
+          "capacity": "1,500,000 bpd",
+          "status": "operational",
+          "notes": "Saudi's 2nd largest field; onshore, unaffected by offshore shutdowns"
+        },
+        {
+          "name": "Jafurah Gas Field",
+          "type": "Gas Field",
+          "capacity": "450 mmscf/d (Phase 1)",
+          "status": "operational",
+          "notes": "Saudi's first unconventional gas; Phase 1 started 2025; inland, unaffected"
+        },
+        {
+          "name": "Jubail Industrial Port",
+          "type": "Port",
+          "capacity": "Major petrochemical/export hub",
+          "status": "partial",
+          "notes": "World's largest petrochemical complex; exports constrained by Hormuz"
+        },
+        {
+          "name": "Jazan Refinery",
+          "type": "Refinery",
+          "capacity": "400,000 bpd",
+          "status": "operational",
+          "notes": "Red Sea coast; unaffected by Hormuz; processing southern crude"
+        },
+        {
+          "name": "Jeddah Refinery",
+          "type": "Refinery",
+          "capacity": "90,000 bpd",
+          "status": "operational",
+          "notes": "Western coast; domestic supply"
+        },
+        {
+          "name": "Riyadh Refinery",
+          "type": "Refinery",
+          "capacity": "126,000 bpd",
+          "status": "operational",
+          "notes": "Domestic supply for central region"
         }
       ],
       "sources": [
@@ -625,6 +698,30 @@
           "title": "Ras Tanura restarted - Bloomberg",
           "url": "https://www.bloomberg.com/news/articles/2026-03-18/saudi-arabia-s-ras-tanura-refinery-has-restarted-operations",
           "date": "2026-03-18"
+        },
+        {
+          "id": 6,
+          "title": "Saudi slashes oil supply to Asia - OilPrice.com",
+          "url": "https://oilprice.com/Latest-Energy-News/World-News/Saudi-Arabia-Slashes-Oil-Supply-to-Asia-as-War-Chokes-Export-Route.html",
+          "date": "2026-03-28"
+        },
+        {
+          "id": 7,
+          "title": "Aramco oil exports spike after Red Sea shift - AGBI",
+          "url": "https://www.agbi.com/oil-and-gas/2026/03/aramco-oil-exports-spike-as-it-diverts-away-from-red-sea-ports/",
+          "date": "2026-03-27"
+        },
+        {
+          "id": 8,
+          "title": "Pipeline bypass capacity only 9M bpd vs Strait's 20M - Al Jazeera",
+          "url": "https://www.aljazeera.com/economy/2026/3/27/saudi-uae-iraq-can-three-pipelines-help-oil-escape-strait-of-hormuz",
+          "date": "2026-03-27"
+        },
+        {
+          "id": 9,
+          "title": "Saudi pipeline to bypass Hormuz hits 7M barrel goal - Fortune",
+          "url": "https://fortune.com/2026/03/28/saudi-arabia-east-west-oil-pipeline-strait-hormuz-bypass-7-million-barrels-yanbu-red-sea/",
+          "date": "2026-03-28"
         }
       ]
     },
@@ -663,17 +760,24 @@
           "unit": "Mtpa"
         },
         "notes": {
-          "oil": "Offshore offline; Fujairah suspended; >50% crude shut-in",
-          "gas": "Habshan resumed Mar 23; offshore associated gas reduced",
-          "refining": "Ruwais-2 shut (417 kb/d); 805 kb/d available",
-          "lng": "Das Island LNG at minimal capacity; Hormuz blocked"
+          "oil": "Offshore offline; ADCOP at 1.62M bpd (record); maintenance deferred to keep Murban flowing; >50% crude shut-in",
+          "gas": "Habshan resumed Mar 23; Shah still shut (~1 Bcf/d); offshore associated gas reduced",
+          "refining": "Ruwais-2 shut (417 kb/d); 805 kb/d available; Jebel Ali operational",
+          "lng": "Das Island LNG at minimal capacity; Hormuz blocked; transaction-by-transaction basis",
+          "ports": "Fujairah loading suspended after repeated drone attacks; Musaffah at partial ops; DXB fuel terminal shut; ADCOP pipeline bypassing Hormuz"
         }
       },
       "events": [
         {
-          "date": "2026-03-29",
-          "title": "ADNOC Safeen container ship hit by projectile in Hormuz",
-          "description": "ADNOC's Safeen shipping line vessel hit by projectile while transiting the Strait of Hormuz. Reported by The Loadstar, flagged as critical by Kpler intelligence. Highlights continued risk to ADNOC maritime operations despite pipeline bypass efforts.",
+          "date": "2026-03-28",
+          "title": "Indian LPG tankers and Pakistan crude carrier transit Hormuz under IRGC tollbooth",
+          "description": "Two Indian-flagged LPG carriers (BW Tyr and BW Elm) and a Greek crude tanker P. Aliki (chartered by Pakistan, loaded at Ras Tanura) transited the Strait under IRGC-controlled tolled passage. Iran is screening vessels by flag, cargo, and destination — allowing 'non-hostile' nations passage for a fee. Only 144 commodity crossings since Mar 1 (95% drop from peacetime) per Kpler.",
+          "isNew": true
+        },
+        {
+          "date": "2026-03-27",
+          "title": "ADNOC defers onshore maintenance to keep Murban flowing",
+          "description": "ADNOC Onshore deferred planned maintenance at onshore fields from May to September, prioritizing maximum Murban crude output for export via the ADCOP/Habshan-Fujairah pipeline which bypasses Hormuz. ADCOP averaging 1.62M bpd in March vs 1.17M bpd in February. First Murban Crude Oil Availability Forecast since conflict began released Mar 27. — MEES",
           "isNew": true
         },
         {
@@ -727,6 +831,11 @@
           "date": "2026-03-07",
           "title": "ADNOC managing offshore output, onshore continues",
           "description": "ADNOC announced monitoring offshore production levels for 'operational flexibility'. Onshore operations continue. Has not declared formal FM despite Hormuz closure."
+        },
+        {
+          "date": "2026-03-04",
+          "title": "Safeen Prestige container ship hit by projectile in Hormuz",
+          "description": "Malta-flagged containership Safeen Prestige (Safeen Feeders/AD Ports Group, 1,740 TEU) hit by unknown projectile while transiting eastbound near Oman. Fire in engine room; all 24 crew abandoned safely, rescued by Royal Navy of Oman. First container ship casualty of the conflict. Tug Mussafah 2 later struck by two missiles while attempting salvage — at least 4 seafarers killed. — The Loadstar, gCaptain, Seatrade Maritime"
         },
         {
           "date": "2026-03-02",
@@ -845,7 +954,8 @@
           "name": "Fujairah Oil Terminal",
           "type": "Export Terminal",
           "capacity": "~1M bpd Murban crude",
-          "status": "shutdown"
+          "status": "shutdown",
+          "notes": "Loading suspended after repeated drone attacks (14-17 Mar); ADCOP pipeline bypass active"
         },
         {
           "name": "Das Island LNG/LPG (ADGAS)",
@@ -863,13 +973,36 @@
           "name": "Dubai Airport Fuel Terminal",
           "type": "Fuel Terminal",
           "capacity": "Major hub",
-          "status": "shutdown"
+          "status": "shutdown",
+          "notes": "DXB operations suspended; aviation fuel supply disrupted"
         },
         {
           "name": "ADNOC Musaffah Terminal",
           "type": "Fuel/LPG Terminal",
           "capacity": "Distribution hub",
-          "status": "partial"
+          "status": "partial",
+          "notes": "Domestic fuel/LPG distribution at reduced capacity"
+        },
+        {
+          "name": "Jebel Ali Port",
+          "type": "Port",
+          "capacity": "Largest ME port; 22M+ TEU",
+          "status": "partial",
+          "notes": "Container ops at reduced capacity; oil/fuel bunkering disrupted; DP World managing diversions"
+        },
+        {
+          "name": "Jebel Dhanna Terminal",
+          "type": "Export Terminal",
+          "capacity": "Crude loading terminal",
+          "status": "partial",
+          "notes": "Crude loadings curtailed; onshore field production cuts limit available volumes"
+        },
+        {
+          "name": "Khalifa Port",
+          "type": "Port",
+          "capacity": "Abu Dhabi deep-water; 5M+ TEU",
+          "status": "partial",
+          "notes": "Container & cargo ops continue at reduced capacity; customs arrangements in place"
         }
       ],
       "sources": [
@@ -956,6 +1089,30 @@
           "title": "ADNOC CEO calls Hormuz weaponization economic terrorism - Rigzone",
           "url": "https://www.rigzone.com/news/adnoc_ceo_says_weaponizing_hormuz_is_economic_terrorism-25-mar-2026-183294-article/",
           "date": "2026-03-25"
+        },
+        {
+          "id": 15,
+          "title": "ADNOC Onshore defers maintenance to keep Murban flowing - MEES",
+          "url": "https://www.mees.com/2026/3/27/news-in-brief/adnoc-onshore-defers-maintenance-to-keep-murban-flowing/5fa21940-29ed-11f1-9d5d-dfe0aaa64dd7",
+          "date": "2026-03-27"
+        },
+        {
+          "id": 16,
+          "title": "Indian LPG tankers cross Hormuz - The Week India",
+          "url": "https://www.theweek.in/news/middle-east/2026/03/28/2-indian-lpg-tankers-cross-hormuz-strait-a-day-after-irgc-turned-back-chinese-linked-vessels.html",
+          "date": "2026-03-28"
+        },
+        {
+          "id": 17,
+          "title": "Safeen Prestige hit by projectile - The Loadstar",
+          "url": "https://theloadstar.com/safeen-ship-hit-by-projectile-in-strait-of-hormuz/",
+          "date": "2026-03-04"
+        },
+        {
+          "id": 18,
+          "title": "Tug struck assisting Safeen Prestige, 4 killed - Seatrade Maritime",
+          "url": "https://www.seatrade-maritime.com/security/tug-struck-assisting-abandoned-container-ship-in-strait-of-hormuz",
+          "date": "2026-03-04"
         }
       ]
     },
@@ -989,9 +1146,10 @@
           "unit": "kb/d"
         },
         "notes": {
-          "oil": "Basra 3.3M→0.9M; FM on foreign fields",
-          "gas": "Associated gas collapses with 70% crude cuts; flaring reduced",
-          "refining": "Lanaz struck; storage-constrained throughput"
+          "oil": "Basra output ~800k bpd (from 3.3M); storage at max capacity; BP Rumaila cut to 350k; Eni Zubair cut 70k",
+          "gas": "Associated gas collapses with ~76% crude cuts; Khor Mor (Kurdistan) halted",
+          "refining": "Lanaz struck; Baiji/Basra at reduced throughput; Daura/Karbala operational for domestic",
+          "ports": "Basra Oil Terminal shut; Khor Al-Amaya shut; tanker shortage critical; no loadings since early Mar"
         }
       },
       "events": [
@@ -1128,13 +1286,15 @@
           "name": "Basra Oil Terminal",
           "type": "Export Terminal",
           "capacity": "~1.8 mb/d",
-          "status": "shutdown"
+          "status": "shutdown",
+          "notes": "No loadings since early Mar; tanker shortage critical; storage at max"
         },
         {
           "name": "Khor Al-Amaya Terminal",
           "type": "Export Terminal",
           "capacity": "~600,000 bpd",
-          "status": "shutdown"
+          "status": "shutdown",
+          "notes": "Halted with Basra terminals; no tanker access"
         },
         {
           "name": "Baiji Refinery",
@@ -1177,6 +1337,13 @@
           "type": "Refinery",
           "capacity": "56,000 bpd",
           "status": "partial"
+        },
+        {
+          "name": "Umm Qasr Port",
+          "type": "Port",
+          "capacity": "Iraq's primary deep-water port; 21 berths",
+          "status": "partial",
+          "notes": "Commercial cargo ops continue; oil loading halted at nearby ABOT/KAAOT"
         }
       ],
       "sources": [
@@ -1274,7 +1441,8 @@
         "notes": {
           "oil": "Abu Safa shut; Sitra FM declared",
           "gas": "Bahrain Field gas stable; Abu Safa associated gas offline",
-          "refining": "Sitra FM; fully offline"
+          "refining": "Sitra FM; fully offline",
+          "ports": "Sitra Marine Terminal shut after missile strikes; LNG import at partial for domestic gas"
         }
       },
       "events": [
@@ -1317,7 +1485,8 @@
           "name": "Bahrain LNG Import",
           "type": "LNG Import",
           "capacity": "~800 mmscf/d",
-          "status": "partial"
+          "status": "partial",
+          "notes": "Receiving limited cargoes for domestic gas supply"
         },
         {
           "name": "Alba Aluminium Smelter",
@@ -1329,7 +1498,8 @@
           "name": "Sitra Marine Terminal",
           "type": "Export Terminal",
           "capacity": "~200,000 bpd",
-          "status": "shutdown"
+          "status": "shutdown",
+          "notes": "Shut after Iranian missile strikes on 5 & 9 Mar; BAPCO FM"
         }
       ],
       "sources": [
@@ -1397,14 +1567,15 @@
           "oil": "Outside Hormuz; crude production intact",
           "gas": "Outside Hormuz; gas processing unaffected",
           "refining": "Outside Hormuz; operational",
-          "lng": "Outside Hormuz; LNG operational"
+          "lng": "Outside Hormuz; LNG operational",
+          "ports": "Mina Al-Fahal operational; Duqm at partial ops (receiving diverted cargoes); Salalah storage disrupted"
         }
       },
       "events": [
         {
           "date": "2026-03-29",
-          "title": "Salalah Port struck again — operations suspended",
-          "description": "Two Iranian drones hit Salalah Port on Saturday morning, damaging a large container crane. One foreign worker injured. Maersk estimated ~48 hours downtime. Iran claimed it targeted a US support ship. Port handles 3.3M+ TEU annually and serves as critical alternative to Persian Gulf routes. — Kpler citing Maritime Executive",
+          "title": "Salalah Port struck again — crane destroyed, operations suspended ~48hrs",
+          "description": "Two Iranian drones hit Salalah Port on Saturday morning, destroying a large container crane (arm broken and hanging into water). One foreign worker injured with moderate injuries. No vessels at berth at time of strike. Maersk estimated ~48 hours downtime. Iran claimed it targeted a US support ship. Port handles 3.3M+ TEU annually and has served as vital overland link to Gulf states since Hormuz closure. — Maritime Executive, Saudi Gazette, Turkiye Today",
           "isNew": true
         },
         {
@@ -1464,19 +1635,29 @@
           "name": "Mina Al-Fahal Terminal",
           "type": "Export Terminal",
           "capacity": "~900,000 bpd",
-          "status": "operational"
+          "status": "operational",
+          "notes": "Outside Hormuz; fully operational; receiving diverted cargoes"
         },
         {
           "name": "Salalah Port / Oil Storage",
           "type": "Port/Storage",
           "capacity": "Major storage",
-          "status": "shutdown"
+          "status": "shutdown",
+          "notes": "Struck by Iranian drones 11 & 29 Mar; Maersk suspended ops; oil tanks fire"
         },
         {
           "name": "Duqm Port & SEZ",
           "type": "Port",
           "capacity": "Multi-purpose",
-          "status": "partial"
+          "status": "partial",
+          "notes": "Struck 1 Mar; partial ops; receiving diverted traffic from Gulf"
+        },
+        {
+          "name": "Sohar Port",
+          "type": "Port",
+          "capacity": "Major industrial port",
+          "status": "operational",
+          "notes": "Outside Hormuz; operational; handling increased diversions from Gulf"
         }
       ],
       "sources": [
@@ -1503,6 +1684,24 @@
           "title": "Maersk suspends Salalah - Maersk",
           "url": "https://www.maersk.com",
           "date": "2026-03-11"
+        },
+        {
+          "id": 5,
+          "title": "Salalah port suspended after drone attack - Maritime Executive",
+          "url": "https://maritime-executive.com/article/oman-suspends-operations-at-key-arabian-sea-port-after-drone-strike",
+          "date": "2026-03-29"
+        },
+        {
+          "id": 6,
+          "title": "Maersk halts Salalah after drone attack - Turkiye Today",
+          "url": "https://www.turkiyetoday.com/business/maersk-halts-operations-at-omans-salalah-port-after-drone-attack-3217067",
+          "date": "2026-03-29"
+        },
+        {
+          "id": 7,
+          "title": "Worker injured in Salalah drone strike - Iran International",
+          "url": "https://www.iranintl.com/en/202603286245",
+          "date": "2026-03-29"
         }
       ]
     },
@@ -1538,7 +1737,8 @@
         "notes": {
           "oil": "Leviathan+Karish shut; Tamar domestic",
           "gas": "Leviathan+Karish gas offline; Tamar supplying domestic only",
-          "refining": "Haifa damaged but mostly online"
+          "refining": "Haifa damaged but mostly online",
+          "ports": "No major oil/LNG export terminals"
         }
       },
       "events": [
@@ -1646,7 +1846,7 @@
       "flag": "🇮🇷",
       "status": "critical",
       "statusLabel": "Struck / Disrupted",
-      "summary": "Israeli strikes hit South Pars gas field (Phases 3-6, 14, 17-18). USAF raids on Kharg Island. Tehran fuel depots and refinery destroyed. IRGC formally closed Hormuz to US/allied vessels Mar 27. Commander Tangsiri killed by airstrike Mar 26. Houthis joined war Mar 28 with missile attack on Israel.",
+      "summary": "Israeli strikes hit South Pars gas field (Phases 3-6, 14, 17-18). USAF raids on Kharg Island. Tehran fuel depots and refinery destroyed. IRGC formally closed Hormuz to US/allied vessels Mar 27 with tolled passage for 'non-hostile' nations. Commander Tangsiri killed Mar 26. Houthis joined war Mar 28; Bab al-Mandeb closure threatened. Bandar Khamir port struck Mar 29 (5 killed). Pentagon readying ground operations. Pakistan hosting ceasefire talks.",
       "metrics": {
         "headline": "~476 kb/d crude + ~3.3 Bcf/d gas offline",
         "productionOffline": "South Pars phases + 14 oil fields reduced",
@@ -1670,30 +1870,43 @@
           "unit": "kb/d"
         },
         "notes": {
-          "oil": "South Pars struck; fields ~30% shut-in",
-          "gas": "Asaluyeh processing hit; ~100 MMcm/d offline (~14% of South Pars)",
-          "refining": "Tehran Refinery destroyed; BA curtailed",
-          "lng": "South Pars disrupted; LNG minimal"
+          "oil": "Southern fields ~30% shut-in; Kharg still loading avg 1.84 mb/d in March (Kpler); Bandar Khamir port struck Mar 29 (5 killed)",
+          "gas": "Asaluyeh processing hit; ~100 MMcm/d offline (~12% of South Pars); Fajr Jam fire",
+          "refining": "Tehran Refinery (250 kb/d) destroyed; Bandar Abbas curtailed; Siraf condensate operational",
+          "lng": "No LNG export capacity; South Pars disruption affects domestic supply",
+          "ports": "Kharg loading normally; Jask bypass at ~300k bpd; Bandar Khamir struck Mar 29; tolled Hormuz passage system operational"
         }
       },
       "events": [
         {
+          "date": "2026-03-29",
+          "title": "US-Israeli strikes hit Bandar Khamir port; Pentagon readies ground operations in Iran",
+          "description": "US-Israeli strikes bombed the port city of Bandar Khamir in southern Iran, killing at least 5 people and injuring 4 (IRNA). Pentagon preparing for weeks of limited ground operations including raids on Kharg Island and coastal sites near Hormuz — plans short of full invasion but could involve thousands of troops. Trump has not greenlit ground ops yet. Separately, UAE and Qatar intercepted Iranian drones on Day 30 of conflict. — Washington Post, Al Jazeera, Gulf News",
+          "isNew": true
+        },
+        {
+          "date": "2026-03-29",
+          "title": "Pakistan diplomatic track advances; NPR reports Islamabad hosting ceasefire talks",
+          "description": "Pakistan hosting diplomatic discussions on ending the war, serving as intermediary between Iran and US. FM Dar posted on X tagging VP Vance, Rubio, Witkoff, and Araghchi — signaling the 20-ship transit deal (Mar 28) is linked to broader peace efforts. Houthi deputy info minister warned closing Bab al-Mandeb is 'among our options'. — NPR, Al Jazeera",
+          "isNew": true
+        },
+        {
           "date": "2026-03-28",
-          "title": "Houthis join war — missile attack on Israel",
-          "description": "Yemen's Houthis launched ballistic missiles at 'sensitive military targets' in southern Israel, their first attack since the war began. Israel intercepted one missile. Attack stokes fears of renewed Red Sea shipping disruption. Brent crude closed at $112.57/bbl, WTI at $99.64.",
+          "title": "Houthis join war — missile attack on Israel; Pakistan secures 20-ship Hormuz deal",
+          "description": "Yemen's Houthis launched ballistic missiles at 'sensitive military targets' in southern Israel, their first attack since the war began. Israel intercepted one missile. Attack stokes fears of renewed Red Sea shipping disruption and potential Bab al-Mandeb closure. Separately, Pakistan FM Ishaq Dar announced Iran agreed to allow 20 Pakistani-flagged vessels through Hormuz (2/day). Brent $112.57/bbl, WTI $99.64. — Washington Post, PBS, Bloomberg, Al Jazeera",
           "isNew": true
         },
         {
           "date": "2026-03-27",
-          "title": "IRGC formally closes Hormuz to US/allied vessels",
-          "description": "IRGC Navy turned back 3 container ships including 2 COSCO vessels (CSCL Indian Ocean, CSCL Arctic Ocean). Officially proclaimed all movement prohibited for ships going to/from US, Israeli, and allied-nation ports. Thailand-flagged Mayuree Naree ran aground on Qeshm Island. Brent rose to $114/bbl.",
+          "title": "IRGC formally closes Hormuz to US/allied vessels; tolled passage system created",
+          "description": "IRGC Navy turned back 3 container ships including 2 COSCO vessels (CSCL Indian Ocean, CSCL Arctic Ocean) and Marshall Islands-flagged Lotus Rising near Larak Island. Officially proclaimed all movement prohibited for ships going to/from US, Israeli, and allied-nation ports. Vessel operators must submit details to IRGC intermediaries for vetting and clearance code. Thailand-flagged Mayuree Naree ran aground on Qeshm Island. Brent rose to $114/bbl. — USNI News, FDD, Al Jazeera",
           "isNew": true
         },
         {
           "date": "2026-03-26",
-          "title": "Israeli airstrike kills IRGC Navy commander Tangsiri",
-          "description": "Israel announced IRGC Navy commander Alireza Tangsiri killed in airstrike, accusing him of being directly responsible for the Strait closure. Iran allows vessels from China, Russia, India, Iraq, Pakistan, Malaysia, Thailand to pass. Trump extends pause on striking Iranian power plants until April 6.",
-          "isNew": true
+          "title": "Israeli airstrike kills IRGC Navy commander Tangsiri; Trump extends deadline to Apr 6",
+          "description": "Israel announced IRGC Navy commander Alireza Tangsiri killed in airstrike, accusing him of being directly responsible for the Strait closure. Iran allows vessels from China, Russia, India, Iraq, Pakistan, Malaysia, Thailand to pass. Trump extends pause on striking Iranian power plants until April 6 'as per Iranian Government request'. — Fox News, NPR",
+          "isNew": false
         },
         {
           "date": "2026-03-25",
@@ -1728,8 +1941,8 @@
       ],
       "oilGasImpact": {
         "severity": "critical",
-        "summary": "~476 kb/d crude + ~3.3 Bcf/d gas offline",
-        "details": "South Pars Phases 3-6, 14, 17-18 struck at Asaluyeh on 18 Mar (~12% of Iran's gas output offline). Tehran Refinery (250 kb/d) destroyed on 8 Mar. Bandar Abbas Refinery curtailed. 30+ fuel depots destroyed across Tehran. Kharg Island raided 13 Mar - exports disrupted. Southern oil fields (Ahwaz, Marun, Gachsaran) ~30% shut-in due to Hormuz closure and storage constraints."
+        "summary": "~476 kb/d crude + ~3.3 Bcf/d gas offline; Houthis join war; Bandar Khamir struck",
+        "details": "South Pars Phases 3-6, 14, 17-18 struck at Asaluyeh on 18 Mar (~12% of Iran's gas output offline). Tehran Refinery (250 kb/d) destroyed on 8 Mar. Bandar Abbas Refinery curtailed. 30+ fuel depots destroyed across Tehran. Kharg Island raided 13 Mar - exports disrupted but Iran still loaded avg 1.84 mb/d crude in March (84% from Kharg per Kpler). Southern oil fields ~30% shut-in. IRGC created tolled passage system Mar 27 — only 144 commodity crossings since Mar 1 (95% drop). Houthis joined war Mar 28 with missile attack on Israel; Bab al-Mandeb closure threatened. Pakistan secured 20-ship transit deal Mar 28. US-Israeli strikes hit Bandar Khamir port city on Mar 29 (5 killed). Pentagon readying weeks of ground operations in Iran (WaPo)."
       },
       "infrastructure": [
         {
@@ -1893,6 +2106,27 @@
           "type": "Fuel Depot",
           "capacity": "Major depot",
           "status": "shutdown"
+        },
+        {
+          "name": "Kharg Island Terminal",
+          "type": "Export Terminal",
+          "capacity": "~7M bpd loading; 90% of Iran exports",
+          "status": "operational",
+          "notes": "Averaging 1.84M bpd loadings in Mar (Kpler); spared from strikes so far"
+        },
+        {
+          "name": "Jask Oil Terminal",
+          "type": "Export Terminal",
+          "capacity": "~300,000 bpd",
+          "status": "operational",
+          "notes": "Iran's Hormuz bypass; restarted Mar 7 after hiatus; 2M bbl loaded (Kpler)"
+        },
+        {
+          "name": "Goreh-Jask Pipeline",
+          "type": "Pipeline",
+          "capacity": "300,000 bpd (1M design)",
+          "status": "operational",
+          "notes": "Iran's only Hormuz bypass pipeline; connects southern fields to Gulf of Oman"
         }
       ],
       "sources": [
@@ -1961,6 +2195,60 @@
           "title": "Iran kills IRGC Navy commander Tangsiri - Fox News",
           "url": "https://www.foxnews.com/live-news/us-israel-iran-war-strait-hormuz-updates-march-26",
           "date": "2026-03-26"
+        },
+        {
+          "id": 12,
+          "title": "Pakistan secures Iran deal for 20 ships through Hormuz - Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/3/28/pakistan-secures-iran-deal-to-send-20-ships-through-strait-of-hormuz",
+          "date": "2026-03-28"
+        },
+        {
+          "id": 13,
+          "title": "Houthi attack stokes Red Sea shipping fears - Washington Post",
+          "url": "https://www.washingtonpost.com/business/2026/03/28/iran-israel-us-houthis-yemen/9d6c5e52-2ac3-11f1-a0f2-3ba4c9fe08ac_story.html",
+          "date": "2026-03-28"
+        },
+        {
+          "id": 14,
+          "title": "IRGC tolled passage for merchant ships - USNI News",
+          "url": "https://news.usni.org/2026/03/27/irgc-opens-tolled-passage-for-merchant-ships-in-strait-of-hormuz-transit-continues-to-trickle-through",
+          "date": "2026-03-27"
+        },
+        {
+          "id": 15,
+          "title": "Trump extends Iran deadline to April 6 - NPR",
+          "url": "https://www.npr.org/2026/03/26/nx-s1-5761882/iran-war-peace-conditions",
+          "date": "2026-03-26"
+        },
+        {
+          "id": 16,
+          "title": "Pakistan hosts diplomatic discussions on ending war - NPR",
+          "url": "https://www.npr.org/2026/03/29/nx-s1-5765344/pakistan-diplomatic-discussions-iran-war",
+          "date": "2026-03-29"
+        },
+        {
+          "id": 17,
+          "title": "Pentagon readies weeks of ground operations in Iran - Washington Post",
+          "url": "https://www.washingtonpost.com/national-security/2026/03/28/trump-iran-ground-troops-marines/",
+          "date": "2026-03-29"
+        },
+        {
+          "id": 18,
+          "title": "Houthis open new front in Iran war - Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/3/29/as-war-on-iran-enters-second-month-yemens-houthis-open-new-front",
+          "date": "2026-03-29"
+        },
+        {
+          "id": 19,
+          "title": "US-Israeli strikes hit Bandar Khamir - CGTN",
+          "url": "https://news.cgtn.com/news/2026-03-28/Iran-Oil-exports-from-Kharg-Island-proceeding-normally-1LSNSMLqdEY/p.html",
+          "date": "2026-03-29"
+        },
+        {
+          "id": 20,
+          "title": "Iran-backed Houthis enter war, could further threaten global shipping - AP/Boston Globe",
+          "url": "https://www.boston.com/news/world-news/2026/03/29/iran-backed-houthis-enter-the-monthlong-war-and-could-further-threaten-global-shipping/",
+          "date": "2026-03-29"
         }
       ]
     }
@@ -2005,13 +2293,13 @@
       "date": "2026-03-04",
       "status": "active",
       "statusLabel": "Active",
-      "summary": "FM on all LNG exports globally. Extended Mar 24 to Italy, Belgium, South Korea, China contracts. All downstream halted. ~20% of global LNG supply removed. Restart impossible until conflict ends.",
+      "summary": "FM on all LNG exports globally. Extended Mar 24 to Italy, Belgium, South Korea, China. Mar 27: Edison notified of 10-cargo FM through mid-June. All downstream halted. ~20% of global LNG supply removed. Restart impossible until conflict ends.",
       "details": {
-        "volumeAffected": "~7 million tonnes/month (~20% global LNG supply); all downstream halted. Mar 24: FM extended to Italy, Belgium, South Korea, China contracts.",
+        "volumeAffected": "~7 million tonnes/month (~20% global LNG supply); all downstream halted. Mar 24: FM extended to Italy, Belgium, South Korea, China. Mar 27: Edison notified of FM on 10 LNG cargoes Apr-mid Jun 2026.",
         "commodity": "LNG, Polymers, Methanol, Urea, Aluminium",
-        "duration": "Indefinite - all production halted since 2 Mar. Mar 18 missile strikes knocked out 12.8 Mtpa (17%) for 3-5 years. CEO: no restart until conflict ends + 2 weeks minimum.",
+        "duration": "Indefinite - all production halted since 2 Mar. Mar 18 missile strikes knocked out 12.8 Mtpa (17%) for 3-5 years. CEO: no restart until conflict ends + 2 weeks minimum. Final March cargo expected by 30 Mar.",
         "reason": "Iranian drone strikes on Ras Laffan and Mesaieed facilities; Strait of Hormuz blocked. Mar 18 follow-up missile attack destroyed 2 LNG trains and Pearl GTL Train 2.",
-        "financialImpact": "Brent surged to $104/bbl. Dutch/British gas prices surged ~50%. Asian LNG spot prices jumped ~39%. $20B annual revenue loss confirmed by QatarEnergy CEO."
+        "financialImpact": "Brent surged to $112.57/bbl (Mar 28). Dutch/British gas prices surged ~50%. Asian LNG spot prices jumped ~39%. $20B annual revenue loss confirmed by QatarEnergy CEO."
       },
       "sources": [
         {
@@ -3342,19 +3630,21 @@
   ],
   "sprRelease": {
     "announced": "2026-03-11",
-    "asOf": "2026-03-28",
+    "asOf": "2026-03-29",
     "trigger": "Strait of Hormuz disruption / Iran conflict — ~20% of global oil supply at risk",
     "totalCommitted": 426,
     "totalCrude": 301,
     "totalProducts": 125,
-    "totalReleased": 33,
+    "totalReleased": 34.5,
     "releasePeriodDays": 120,
     "keyInsights": [
       "Japan PM Takaichi asked IEA chief Birol on Mar 25 to prepare a second coordinated release if Hormuz disruption persists",
-      "14 European IEA members with 114.5 mb combined commitment begin oil stock releases today (Mar 28) per end-of-March schedule",
-      "US SPR deliveries ongoing at ~1.4 mb/day from 3 Gulf Coast sites — 11.0 mb delivered (6.4% of 172.2 mb commitment)",
+      "14 European IEA members with 114.5 mb combined commitment began oil stock releases on Mar 28 per end-of-March schedule",
+      "US SPR deliveries ongoing at ~1.4 mb/day from 3 Gulf Coast sites — ~12.5 mb delivered (~7.3% of 172.2 mb commitment)",
       "South Korea enforced naphtha export ban from Mar 27 alongside 6.0 mb already released from 22.5 mb commitment",
-      "Overall release at 33.0 of 426.0 mb (7.7%) on Day 17 of 120-day window; next EIA weekly data expected Apr 1"
+      "Overall release at ~34.5 of 426.0 mb (~8.1%) on Day 18 of 120-day window; next EIA weekly data expected Apr 1",
+      "Brent $112.57/bbl, WTI $99.64 as of Mar 28 — 51% monthly surge; Goldman warns $135 if Hormuz + Bab al-Mandeb both close",
+      "Houthis entered war Mar 28 with missile attack on Israel; Bab al-Mandeb closure 'among our options' per deputy info minister — dual chokepoint risk now real"
     ],
     "sources": [
       {
@@ -3411,7 +3701,7 @@
         "crude": 172.2,
         "products": 0,
         "startDate": "2026-03-20",
-        "released": 11,
+        "released": 12.5,
         "region": "Americas"
       },
       {
@@ -3421,7 +3711,7 @@
         "crude": 54,
         "products": 25.8,
         "startDate": "2026-03-16",
-        "released": 10.5,
+        "released": 11,
         "region": "Asia-Oceania"
       },
       {
