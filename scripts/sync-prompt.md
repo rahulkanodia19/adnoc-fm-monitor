@@ -100,7 +100,7 @@ Focus on events from the last 48 hours. Search for:
 - Country-level status changes for: Qatar, Kuwait, Saudi Arabia, UAE, Iraq, Bahrain, Oman, Israel, Iran
 - Production volume impacts (kb/d, Mtpa, Bcf/d) and infrastructure damage
 - Shipping disruptions through Strait of Hormuz
-- Tanker diversions, insurance rate changes, war risk premiums
+- Tanker diversions, insurance rate changes, war risk premiums (update WAR_RISK_PREMIUM_DATA — see Step 4)
 - OPEC/OPEC+ emergency responses
 
 ### Source attribution
@@ -212,7 +212,7 @@ If you have access to Chrome DevTools MCP tools (mcp__chrome-devtools__*), use t
 
 Update the `data.js` file with any new findings. Preserve the exact same schema and variable structure:
 
-- `LAST_UPDATED` — set to current ISO timestamp
+- `LAST_UPDATED` — set to the ACTUAL current ISO timestamp (e.g., `new Date().toISOString()`). This must reflect the real time the sync completed. Do NOT manually set a future time, round to the next hour, or use any time other than the current moment.
 - `COUNTRY_STATUS_DATA` — array of 9 countries (Qatar, Kuwait, Saudi Arabia, UAE, Iraq, Bahrain, Oman, Israel, Iran). Each has: id, country, flag, status (stable|elevated|high|critical|conflict), statusLabel, isNew, summary, metrics, production, events, oilGasImpact, infrastructure, sources
 - Each country's `production` object must include a `notes` sub-object with keys: oil, gas, refining, lng, ports (only where applicable). These are short operational status notes shown in the Production Overview tables. Update them to reflect the current situation for each commodity.
 - Each infrastructure item (especially terminals/ports) should include a `notes` field with a short terminal-specific status note (e.g., "Loading suspended after drone strikes Mar 14-17"). Schema: `{ name, type, capacity, status, notes }`
@@ -237,6 +237,25 @@ Update the `data.js` file with any new findings. Preserve the exact same schema 
 - The file must use `const` declarations (not export)
 - Preserve the production object structure on country entries if present
 
+### WAR_RISK_PREMIUM_DATA — Update hull % war risk premium
+
+Also update `WAR_RISK_PREMIUM_DATA` in data.js with the latest Strait of Hormuz war-risk insurance premium (% of hull value):
+
+1. Search these FREE sources for the latest rate:
+   - hormuztracker.com (look for "War Risk Premiums" section)
+   - insurancejournal.com (search "Hormuz war risk premium")
+   - splash247.com (search "Hormuz insurance premium")
+   - gcaptain.com (search "Hormuz war risk")
+2. Extract the current rate as % of hull value for a standard 7-day policy
+3. Update `WAR_RISK_PREMIUM_DATA.current.rate` with the latest value
+4. Update `WAR_RISK_PREMIUM_DATA.lastUpdated` to current ISO date (YYYY-MM-DD)
+5. Append a new entry to `WAR_RISK_PREMIUM_DATA.history`:
+   ```javascript
+   { date: "YYYY-MM-DD", rate: <number>, event: "<brief context>", source: "<source name>" }
+   ```
+6. Do NOT remove or modify existing history entries — only append today's data point
+7. If no new rate is found, keep the previous day's rate and note "No update found" as event
+
 ### Pre-war baselines (LOCKED — never modify these values)
 
 | Country | Oil (kb/d) | Gas (Bcf/d) | Refining Cap (kb/d) | LNG (Mtpa) |
@@ -250,6 +269,22 @@ Update the `data.js` file with any new findings. Preserve the exact same schema 
 | Oman | 1024 | 4.2 | 222 | 10.4 |
 | Israel | 0 | 3.0 | 197 | — |
 | Iran | 3176 | 25.8 | 2600 | — |
+
+### Infrastructure baselines (LOCKED — never remove these items)
+
+Each country's `infrastructure[]` array MUST always include at least these critical items. You may update their `status` and `notes` based on current events, but never remove an item from this list. You may ADD new items beyond these if found in sources.
+
+| Country | Required infrastructure items |
+|---------|------------------------------|
+| Qatar | North Field, Qatargas 1-4, RasGas 1-3, Pearl GTL, Al Shaheen Field, Dukhan Field, Laffan Refinery 1 & 2, Mesaieed Refinery, Mesaieed Industrial City, Qatalum Smelter, QAFCO Fertilizer Complex, Umm Al Houl Power, Hamad Port |
+| Kuwait | Greater Burgan, Mina Al-Ahmadi Refinery, Mina Abdullah Refinery, Al-Zour Refinery, Mina Al-Ahmadi Terminal, Al-Zour LNG Import Terminal, Kafco Fuel Storage, Subiya Power Plant, EQUATE Petrochemical Complex, Az-Zour South Power & Desalination |
+| Saudi Arabia | Ghawar Field, Safaniya Field, Abqaiq Processing, Ras Tanura Refinery, Ras Tanura Terminal, Yanbu Refinery Complex, YASREF, East-West Pipeline, SABIC Yanbu Complex, SABIC Jubail Petrochemical Complex, Ma'aden Aluminium Complex, Ras Al-Khair IWPP, Jubail Industrial Port |
+| UAE | Upper Zakum Field, Bu Hasa Field, Murban Field, Habshan Gas Processing, Shah Gas Field (ADNOC/Oxy), Ruwais Refinery Complex, Fujairah Oil Terminal, Das Island LNG/LPG (ADGAS), Habshan-Fujairah Pipeline, EGA Al Taweelah Smelter, EGA Jebel Ali Smelter, Borouge Petrochemical Complex, Jebel Ali Power & Desalination Complex, Taweelah Power & Desalination Complex, Jebel Ali Port, Khalifa Port |
+| Iraq | Rumaila Field, West Qurna 1 & 2, Basra Oil Terminal, Khor Al-Amaya Terminal, Baiji Refinery, Basra Refinery, Umm Qasr Port, Besmaya Power Plant |
+| Bahrain | Bahrain Field (Awali), BAPCO Sitra Refinery, Alba Aluminium Smelter, Sitra Marine Terminal, Al Dur IWPP |
+| Oman | PDO Fields (Block 6), Khazzan Gas Field (BP), Oman LNG (Qalhat), Sohar Refinery, Duqm Refinery, Sohar Aluminium, Barka IWPP, Mina Al-Fahal Terminal |
+| Israel | Leviathan Gas Field, Tamar Gas Field, Karish Gas Field, Ashdod Refinery (Bazan) |
+| Iran | South Pars Phases 2-3/4-5/6-8, Ahwaz Asmari/Bangestan, Persian Gulf Star Refinery, Abadan Refinery, Tehran Refinery, Bandar Imam Petrochemical Complex, Isfahan Thermal Power Plant, Kharg Island Terminal, Jask Oil Terminal, Goreh-Jask Pipeline |
 
 ### Valid status values
 

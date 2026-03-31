@@ -8,15 +8,15 @@
   "adnocCount": 11,
   "totalVessels": 1280,
   "transitCount": 9,
-  "syncTimestamp": "2026-03-31T05:39:18.139Z",
-  "deltaLabel": "24h",
+  "syncTimestamp": "2026-03-31T18:10:01.678Z",
+  "deltaLabel": "vs 29 Mar",
   "deltas": {
     "insideDelta": 0,
-    "outsideDelta": 31,
+    "outsideDelta": 0,
     "adnocDelta": 0,
-    "insideBallastDelta": 4,
-    "insideLadenDelta": -4,
-    "outsideBallastDelta": 19,
-    "outsideLadenDelta": 12
+    "insideBallastDelta": 0,
+    "insideLadenDelta": 0,
+    "outsideBallastDelta": 0,
+    "outsideLadenDelta": 0
   }
 }

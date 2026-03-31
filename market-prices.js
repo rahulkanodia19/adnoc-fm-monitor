@@ -74,7 +74,7 @@
 
   function filterHistoryByRange(history) {
     if (!history || history.length === 0) return [];
-    const now = new Date('2026-03-27');
+    const now = new Date('2026-03-31');
     const cutoff = new Date(now);
     const ranges = { '1w': 7, '1m': 30, '3m': 90, '6m': 180, '1y': 365 };
     cutoff.setDate(cutoff.getDate() - (ranges[state.timeRange] || 90));
@@ -244,7 +244,7 @@
 
   function renderControls() {
     const lastUpdated = state.data?.lastUpdated;
-    const dateStr = lastUpdated ? new Date(lastUpdated).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) : '';
+    const dateStr = lastUpdated ? (typeof formatDateTimeGST === 'function' ? formatDateTimeGST(lastUpdated) : new Date(lastUpdated).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Dubai' }) + ' GST') : '';
 
     return `
       <div class="flex flex-col gap-3 mb-6">
@@ -392,6 +392,21 @@
           </div>
         </div>
 
+        <div class="mb-6">
+          <div class="bg-white rounded-xl border border-navy-200 shadow-sm p-3 sm:p-5">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-1.5 h-5 rounded-full bg-red-500"></span>
+              <h3 class="text-sm sm:text-base font-bold text-navy-800">War Risk Premium — Strait of Hormuz</h3>
+              <span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-sky-100 text-sky-700 border border-sky-200 ml-1.5">NEW</span>
+              <span class="text-[10px] text-navy-400 ml-auto">$/bbl (Platts) + % hull value</span>
+            </div>
+            <div id="mp-awrp-kpis"></div>
+            <div class="chart-container">
+              <canvas id="mp-chart-awrp"></canvas>
+            </div>
+          </div>
+        </div>
+
         <div class="bg-white rounded-xl border border-navy-200 shadow-sm overflow-hidden mb-6">
           <div class="px-3 py-3 sm:px-5 sm:py-4 border-b border-navy-100">
             <h3 class="text-sm sm:text-base font-bold text-navy-800">Price Comparison</h3>
@@ -511,6 +526,9 @@
 
     // --- Separate LNG chart ---
     drawLngChart(prices);
+
+    // --- War Risk Premium dual-axis chart ---
+    drawAwrpChart(prices);
   }
 
   function drawLngChart(prices) {
@@ -600,6 +618,179 @@
         interaction: { intersect: false, mode: 'index' },
       },
     });
+  }
+
+  // ---------- AWRP Dual-Axis Chart ----------
+
+  function drawAwrpChart(prices) {
+    const canvas = document.getElementById('mp-chart-awrp');
+    if (!canvas) return;
+
+    // $/bbl series from Platts AWARA00
+    const awrpPlatts = prices?.awrp;
+    const plattsHist = awrpPlatts?.history ? filterHistoryByRange(awrpPlatts.history) : [];
+    const plattsMap = new Map(plattsHist.map(h => [h.date, h.price]));
+
+    // % hull value series from WAR_RISK_PREMIUM_DATA (global from data.js)
+    const hullData = (typeof WAR_RISK_PREMIUM_DATA !== 'undefined') ? WAR_RISK_PREMIUM_DATA : null;
+    const hullHist = hullData?.history ? filterHistoryByRange(hullData.history.map(h => ({ date: h.date, price: h.rate }))) : [];
+    const hullMap = new Map(hullHist.map(h => [h.date, h.price]));
+
+    // Merge date axes
+    const allDates = new Set([...plattsMap.keys(), ...hullMap.keys()]);
+    const sortedDates = [...allDates].sort();
+    if (sortedDates.length === 0) return;
+
+    const labels = sortedDates.map(d => formatDate(d));
+    const skipFactor = labels.length > 60 ? Math.ceil(labels.length / 30) : 1;
+
+    const datasets = [];
+
+    // $/bbl line (left axis)
+    if (plattsMap.size > 0) {
+      datasets.push({
+        label: 'AWRP ($/bbl)',
+        data: sortedDates.map(d => plattsMap.get(d) ?? null),
+        borderColor: '#ef4444',
+        backgroundColor: '#ef444420',
+        borderWidth: 2.5,
+        pointRadius: plattsMap.size < 20 ? 3 : 0,
+        pointHoverRadius: 5,
+        pointHoverBorderColor: '#fff',
+        pointHoverBorderWidth: 2,
+        tension: 0.2,
+        fill: true,
+        spanGaps: true,
+        yAxisID: 'y',
+      });
+    }
+
+    // % hull value line (right axis)
+    if (hullMap.size > 0) {
+      datasets.push({
+        label: '% Hull Value',
+        data: sortedDates.map(d => hullMap.get(d) ?? null),
+        borderColor: '#8b5cf6',
+        backgroundColor: '#8b5cf620',
+        borderWidth: 2.5,
+        pointRadius: 4,
+        pointBackgroundColor: '#8b5cf6',
+        pointHoverRadius: 6,
+        pointHoverBorderColor: '#fff',
+        pointHoverBorderWidth: 2,
+        tension: 0.2,
+        fill: false,
+        spanGaps: true,
+        yAxisID: 'y2',
+      });
+    }
+
+    if (datasets.length === 0) return;
+
+    charts.awrp = new Chart(canvas.getContext('2d'), {
+      type: 'line',
+      data: { labels, datasets },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        animation: { duration: 600, easing: 'easeOutQuart' },
+        plugins: {
+          legend: SHARED_LEGEND,
+          tooltip: {
+            backgroundColor: '#0a1929', titleColor: '#f0f4f8', bodyColor: '#d9e2ec',
+            borderColor: '#334e68', borderWidth: 1, cornerRadius: 8,
+            titleFont: { size: 12, weight: '600' }, bodyFont: { size: 11 },
+            padding: 10,
+            mode: 'index', intersect: false,
+            callbacks: {
+              label: function (ctx) {
+                if (ctx.dataset.yAxisID === 'y2') {
+                  return ctx.dataset.label + ': ' + ctx.parsed.y.toFixed(2) + '%';
+                }
+                return ctx.dataset.label + ': $' + ctx.parsed.y.toFixed(2);
+              }
+            }
+          },
+          datalabels: { display: false },
+        },
+        scales: {
+          x: {
+            grid: { color: 'rgba(16,42,67,0.06)' },
+            ticks: {
+              color: '#627d98', font: { size: 10 }, maxRotation: 45,
+              callback: function (val, idx) { return idx % skipFactor === 0 ? this.getLabelForValue(val) : ''; }
+            },
+          },
+          y: {
+            position: 'left',
+            grid: { color: 'rgba(16,42,67,0.06)' },
+            ticks: { color: '#ef4444', font: { size: 10 }, callback: v => '$' + v.toFixed(2) },
+            title: { display: true, text: '$/bbl (Platts AWRP)', color: '#ef4444', font: { size: 10, weight: '600' } },
+          },
+          y2: {
+            position: 'right',
+            grid: { drawOnChartArea: false },
+            ticks: { color: '#8b5cf6', font: { size: 10 }, callback: v => v.toFixed(1) + '%' },
+            title: { display: true, text: '% of hull value', color: '#8b5cf6', font: { size: 10, weight: '600' } },
+          },
+        },
+        interaction: { intersect: false, mode: 'index' },
+      },
+    });
+  }
+
+  function renderAwrpKpis() {
+    const el = document.getElementById('mp-awrp-kpis');
+    if (!el) return;
+
+    const hullData = (typeof WAR_RISK_PREMIUM_DATA !== 'undefined') ? WAR_RISK_PREMIUM_DATA : null;
+    const awrpPlatts = state.data?.prices?.awrp;
+
+    const plattsPrice = awrpPlatts?.current;
+    const plattsPrev = awrpPlatts?.previousClose || plattsPrice;
+    const plattsChange = plattsPrice && plattsPrev ? plattsPrice - plattsPrev : 0;
+
+    const hullRate = hullData?.current?.rate;
+    const hullBaseline = hullData?.preConflictBaseline || 0.2;
+    const hullMultiple = hullRate && hullBaseline ? Math.round(hullRate / hullBaseline) : 0;
+
+    el.innerHTML = `
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-3">
+        ${plattsPrice != null ? `
+        <div class="bg-red-50/50 rounded-lg p-2.5 border border-red-100">
+          <div class="flex items-center gap-1.5 mb-1">
+            <span class="w-1.5 h-3 rounded-full bg-red-500"></span>
+            <span class="text-[10px] text-navy-500 font-medium uppercase">AWRP (Platts)</span>
+          </div>
+          <div class="font-bold text-navy-900 text-base">$${plattsPrice.toFixed(2)}/bbl</div>
+          <div class="${plattsChange >= 0 ? 'text-red-600' : 'text-emerald-600'} text-xs font-medium">${plattsChange >= 0 ? '+' : ''}${plattsChange.toFixed(2)} today</div>
+        </div>` : ''}
+        ${hullRate != null ? `
+        <div class="bg-violet-50/50 rounded-lg p-2.5 border border-violet-100">
+          <div class="flex items-center gap-1.5 mb-1">
+            <span class="w-1.5 h-3 rounded-full bg-violet-500"></span>
+            <span class="text-[10px] text-navy-500 font-medium uppercase">Hull Value Premium</span>
+          </div>
+          <div class="font-bold text-navy-900 text-base">${hullRate.toFixed(1)}%</div>
+          <div class="text-red-600 text-xs font-medium">${hullMultiple}x pre-conflict</div>
+        </div>` : ''}
+        <div class="bg-navy-50/50 rounded-lg p-2.5 border border-navy-100">
+          <div class="flex items-center gap-1.5 mb-1">
+            <span class="w-1.5 h-3 rounded-full bg-navy-400"></span>
+            <span class="text-[10px] text-navy-500 font-medium uppercase">Pre-Conflict</span>
+          </div>
+          <div class="font-bold text-navy-900 text-base">0.20%</div>
+          <div class="text-navy-400 text-xs font-medium">Baseline (Feb 27)</div>
+        </div>
+        <div class="bg-amber-50/50 rounded-lg p-2.5 border border-amber-100">
+          <div class="flex items-center gap-1.5 mb-1">
+            <span class="w-1.5 h-3 rounded-full bg-amber-500"></span>
+            <span class="text-[10px] text-navy-500 font-medium uppercase">Peak</span>
+          </div>
+          <div class="font-bold text-navy-900 text-base">10.0%</div>
+          <div class="text-red-600 text-xs font-medium">50x baseline (Mar 11)</div>
+        </div>
+      </div>
+    `;
   }
 
   // ---------- Price Table ----------
@@ -701,6 +892,7 @@
       `;
     }
 
+    renderAwrpKpis();
     drawCharts();
     renderPriceTable();
     bindControlEvents();

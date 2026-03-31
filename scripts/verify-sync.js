@@ -32,7 +32,11 @@ function formatDate(isoStr) {
   if (!isoStr) return null;
   const d = new Date(isoStr);
   if (isNaN(d.getTime())) return null;
-  return d.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+  // Include time in GST (UTC+4) for leadership visibility
+  return d.toLocaleDateString('en-GB', {
+    day: '2-digit', month: 'short', year: 'numeric',
+    hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Dubai'
+  }) + ' GST';
 }
 
 function freshness(hours, okThresh, staleThresh) {
@@ -159,6 +163,43 @@ function checkPrices() {
   }
 
   pipeline.details = `${symbols.size} symbols${latestDate ? ', latest ' + formatDate(latestDate) : ''}`;
+
+  return pipeline;
+}
+
+// ---------- Pipeline 2b: War Risk Premium (Hull %) ----------
+
+function checkWarRiskPremium() {
+  const pipeline = { status: 'failed', dataAsOf: null, lastUpdated: null, details: '' };
+
+  const code = readFile('data.js');
+  if (!code) {
+    pipeline.details = 'data.js not found';
+    return pipeline;
+  }
+
+  // Extract WAR_RISK_PREMIUM_DATA.lastUpdated
+  const luMatch = code.match(/WAR_RISK_PREMIUM_DATA[\s\S]*?lastUpdated:\s*"([^"]+)"/);
+  if (!luMatch) {
+    pipeline.details = 'WAR_RISK_PREMIUM_DATA.lastUpdated not found';
+    return pipeline;
+  }
+
+  const lastUpdated = luMatch[1];
+  pipeline.lastUpdated = lastUpdated;
+  pipeline.dataAsOf = formatDate(lastUpdated);
+
+  const hours = hoursAgo(lastUpdated);
+  pipeline.status = freshness(hours, 26, 72);
+
+  // Count history entries
+  const histCount = (code.match(/{ date: "20\d{2}-\d{2}-\d{2}", rate:/g) || []).length;
+
+  // Extract current rate
+  const rateMatch = code.match(/WAR_RISK_PREMIUM_DATA[\s\S]*?current:\s*\{[\s\S]*?rate:\s*([\d.]+)/);
+  const currentRate = rateMatch ? rateMatch[1] + '%' : '?';
+
+  pipeline.details = `${histCount} data points, current ${currentRate} hull value`;
 
   return pipeline;
 }
@@ -402,6 +443,7 @@ console.log('\n===== SYNC STATUS VERIFICATION =====\n');
 
 status.pipelines.news_fm = checkNewsFM();
 status.pipelines.prices = checkPrices();
+status.pipelines.war_risk = checkWarRiskPremium();
 status.pipelines.spr = checkSPR();
 status.pipelines.soh = checkSOH();
 status.pipelines.import_flows = checkImportFlows();
@@ -422,6 +464,7 @@ const reset = '\x1b[0m';
 const pipelineLabels = {
   news_fm: 'News/FM/Production',
   prices: 'Platts Prices',
+  war_risk: 'War Risk Premium',
   spr: 'SPR Releases',
   soh: 'SOH Vessels',
   import_flows: 'Import Flows',

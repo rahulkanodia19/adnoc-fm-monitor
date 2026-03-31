@@ -46,11 +46,11 @@ const GCC_KEY_PORTS = [
     flag: "\u{1F1F8}\u{1F1E6}",
     lat: 24.09, lng: 38.06,
     type: "crude",
-    capacity: "2.0 mb/d",
-    throughput: "~1.6 mb/d",
-    utilizationPct: 80,
+    capacity: "~4.5 mb/d",
+    throughput: "~4.4 mb/d",
+    utilizationPct: 98,
     status: "operational",
-    notes: "Red Sea terminal — unaffected by Hormuz closure. SAMREF refinery operational. Key alternative route."
+    notes: "Red Sea terminal (North + South) — unaffected by Hormuz closure. Record throughput via East-West Pipeline; 40+ VLCCs queued. Port bottleneck constraining Petroline's 7M bpd capacity."
   },
   {
     name: "Mina Al Ahmadi",
@@ -199,6 +199,8 @@ const INFRA_COORDS = {
   "Mesaieed Industrial City": { lat: 24.97, lng: 51.56 },
   "North Field East Expansion": { lat: 26.05, lng: 51.90 },
   "Qatalum Smelter":          { lat: 24.96, lng: 51.58 },
+  "QAFCO Fertilizer Complex": { lat: 24.96, lng: 51.56 },
+  "Umm Al Houl Power":        { lat: 25.12, lng: 51.61 },
   "Hamad Port":               { lat: 25.02, lng: 51.54 },
   // Kuwait
   "Greater Burgan (Burgan/Magwa/Ahmadi)": { lat: 29.00, lng: 47.91 },
@@ -213,6 +215,8 @@ const INFRA_COORDS = {
   "Al-Zour LNG Import Terminal": { lat: 28.73, lng: 48.42 },
   "Kafco Fuel Storage":       { lat: 29.05, lng: 48.05 },
   "Subiya Power Plant":       { lat: 29.70, lng: 48.10 },
+  "EQUATE Petrochemical Complex": { lat: 29.04, lng: 48.14 },
+  "Az-Zour South Power & Desalination": { lat: 28.71, lng: 48.37 },
   // Saudi Arabia — Fields
   "Safaniya Field":           { lat: 28.10, lng: 48.90 },
   "Marjan Field":             { lat: 27.60, lng: 49.50 },
@@ -234,6 +238,9 @@ const INFRA_COORDS = {
   "Khurais Field":            { lat: 24.15, lng: 48.15 },
   "Jafurah Gas Field":        { lat: 24.80, lng: 49.50 },
   "Jubail Industrial Port":   { lat: 27.00, lng: 49.66 },
+  "SABIC Jubail Petrochemical Complex": { lat: 27.02, lng: 49.58 },
+  "Ma'aden Aluminium Complex": { lat: 27.52, lng: 49.17 },
+  "Ras Al-Khair IWPP":        { lat: 27.54, lng: 49.14 },
   "Jazan Refinery":           { lat: 16.90, lng: 42.58 },
   "Jeddah Refinery":          { lat: 21.42, lng: 39.17 },
   "Riyadh Refinery":          { lat: 24.63, lng: 46.80 },
@@ -270,6 +277,12 @@ const INFRA_COORDS = {
   "Jebel Ali Port":           { lat: 25.00, lng: 55.06 },
   "Jebel Dhanna Terminal":    { lat: 24.19, lng: 52.58 },
   "Khalifa Port":             { lat: 24.83, lng: 54.63 },
+  // UAE — Industrial
+  "EGA Al Taweelah Smelter":  { lat: 24.83, lng: 54.65 },
+  "EGA Jebel Ali Smelter":    { lat: 25.01, lng: 55.06 },
+  "Borouge Petrochemical Complex": { lat: 24.10, lng: 52.72 },
+  "Jebel Ali Power & Desalination Complex": { lat: 25.06, lng: 55.10 },
+  "Taweelah Power & Desalination Complex": { lat: 24.77, lng: 54.68 },
   // Iraq — Fields
   "Rumaila (North + South)":  { lat: 30.60, lng: 47.35 },
   "Rumaila Field":            { lat: 30.60, lng: 47.35 },
@@ -305,6 +318,7 @@ const INFRA_COORDS = {
   "Lanaz Refinery":           { lat: 36.19, lng: 44.01 },
   "Kirkuk Refinery":          { lat: 35.44, lng: 44.36 },
   "Umm Qasr Port":            { lat: 30.03, lng: 47.95 },
+  "Besmaya Power Plant":      { lat: 33.17, lng: 44.62 },
   // Iran — Fields
   "Kharg Island Terminal":    { lat: 29.23, lng: 50.32 },
   "South Pars Gas":           { lat: 26.60, lng: 52.20 },
@@ -332,6 +346,8 @@ const INFRA_COORDS = {
   "Arak/Shazand Refinery":   { lat: 34.05, lng: 49.70 },
   "Tabriz Refinery":          { lat: 38.00, lng: 46.25 },
   "Siraf Condensate Refinery": { lat: 27.60, lng: 52.35 },
+  "Bandar Imam Petrochemical Complex": { lat: 30.43, lng: 49.00 },
+  "Isfahan Thermal Power Plant": { lat: 32.62, lng: 51.72 },
   "Jask Oil Terminal":        { lat: 25.64, lng: 57.77 },
   "Goreh-Jask Pipeline":      { lat: 27.50, lng: 54.00 },
   "Shahran Oil Depot":        { lat: 35.72, lng: 51.39 },
@@ -346,6 +362,7 @@ const INFRA_COORDS = {
   "Alba Aluminium Smelter":   { lat: 26.03, lng: 50.58 },
   "Bahrain LNG Import":       { lat: 26.14, lng: 50.64 },
   "Sitra Marine Terminal":    { lat: 26.14, lng: 50.62 },
+  "Al Dur IWPP":              { lat: 25.97, lng: 50.61 },
   // Israel
   "Leviathan Phase 1A":       { lat: 33.25, lng: 33.26 },
   "Karish":                   { lat: 32.90, lng: 33.50 },
@@ -368,6 +385,8 @@ const INFRA_COORDS = {
   "Salalah Port / Oil Storage": { lat: 16.94, lng: 54.01 },
   "Duqm Port & SEZ":         { lat: 19.51, lng: 57.70 },
   "Sohar Port":               { lat: 24.37, lng: 56.73 },
+  "Sohar Aluminium":          { lat: 24.47, lng: 56.63 },
+  "Barka IWPP":               { lat: 23.71, lng: 57.98 },
   "Mukhaizna Field":          { lat: 19.80, lng: 56.30 },
 };
 
@@ -375,11 +394,15 @@ const PIPELINE_ROUTES = [
   {
     name: "East-West Pipeline (Petroline)",
     country: "Saudi Arabia",
+    type: "oil",
     capacity: "~7 mb/d",
+    currentFlow: "~5 mb/d",
+    fromCountry: "Saudi Arabia",
+    toCountry: "Saudi Arabia (Red Sea)",
     status: "operational",
     startLabel: "Abqaiq",
     endLabel: "Yanbu",
-    notes: "Rerouting crude Abqaiq→Yanbu via Red Sea; converted to full capacity Mar 11; ~2.9M bpd in Mar",
+    notes: "Rerouting crude Abqaiq→Yanbu via Red Sea; converted to full capacity Mar 11; ~5M bpd crude in Mar",
     // 1,201 km across Saudi Arabia: Abqaiq → central desert (11 pump stations) → Hijas Mountains → Yanbu
     coords: [
       [25.94, 49.68],  // Abqaiq
@@ -400,7 +423,11 @@ const PIPELINE_ROUTES = [
   {
     name: "Habshan-Fujairah (ADCOP)",
     country: "UAE",
+    type: "oil",
     capacity: "1.5 mb/d",
+    currentFlow: "~1.62 mb/d",
+    fromCountry: "UAE (Abu Dhabi)",
+    toCountry: "UAE (Fujairah)",
     status: "operational",
     startLabel: "Habshan",
     endLabel: "Fujairah",
@@ -422,7 +449,11 @@ const PIPELINE_ROUTES = [
   {
     name: "Iraq-Turkey Pipeline (Kirkuk-Ceyhan)",
     country: "Iraq/Turkey",
-    capacity: "~900,000 bpd",
+    type: "oil",
+    capacity: "0.9 mb/d",
+    currentFlow: "~0.25 mb/d",
+    fromCountry: "Iraq",
+    toCountry: "Turkey",
     status: "operational",
     startLabel: "Kirkuk",
     endLabel: "Ceyhan",
@@ -447,7 +478,11 @@ const PIPELINE_ROUTES = [
   {
     name: "Goreh-Jask Pipeline",
     country: "Iran",
-    capacity: "300,000 bpd (1M design)",
+    type: "oil",
+    capacity: "0.3 mb/d (1 mb/d design)",
+    currentFlow: "~0.1 mb/d",
+    fromCountry: "Iran",
+    toCountry: "Iran (Gulf of Oman)",
     status: "operational",
     startLabel: "Goreh",
     endLabel: "Jask",
@@ -461,6 +496,124 @@ const PIPELINE_ROUTES = [
       [26.50, 56.00],  // Inland route
       [26.00, 57.00],  // Approaching Makran coast
       [25.64, 57.77]   // Jask terminal (Gulf of Oman)
+    ]
+  },
+  // ── Cross-country pipelines ──
+  {
+    name: "Dolphin Gas Pipeline",
+    country: "Qatar/UAE",
+    type: "gas",
+    capacity: "3.2 bcf/d",
+    currentFlow: "~2 bcf/d",
+    fromCountry: "Qatar",
+    toCountry: "UAE",
+    status: "operational",
+    startLabel: "Ras Laffan",
+    endLabel: "Taweelah",
+    notes: "GCC's only cross-border gas pipeline; subsea Qatar→UAE since 2007; ~2 bcf/d to UAE, remainder to Oman. Operator: Dolphin Energy (Mubadala 51%, Total 24.5%, Oxy 24.5%)",
+    // 364 km subsea: Ras Laffan → Persian Gulf → Taweelah (Abu Dhabi)
+    coords: [
+      [25.89, 51.54],  // Ras Laffan LNG complex, Qatar
+      [26.05, 52.10],  // Offshore Qatar
+      [25.90, 52.80],  // Mid-Gulf
+      [25.50, 53.50],  // UAE waters
+      [25.10, 54.10],  // Approaching Abu Dhabi
+      [24.72, 54.65]   // Taweelah, Abu Dhabi
+    ]
+  },
+  {
+    name: "Saudi Arabia → Egypt (Yanbu–SUMED)",
+    country: "Saudi Arabia/Egypt",
+    type: "oil",
+    capacity: "2.5 mb/d (SUMED)",
+    currentFlow: "~1.5 mb/d",
+    fromCountry: "Saudi Arabia",
+    toCountry: "Egypt (Mediterranean)",
+    status: "operational",
+    startLabel: "Yanbu",
+    endLabel: "Sidi Kerir",
+    notes: "No direct pipeline — tanker from Yanbu across Red Sea to Ain Sokhna, then 320 km SUMED to Mediterranean. Egypt offered route Mar 2026. SUMED ownership: EGPC 50%, Aramco 15%, Kuwait 15%, Mubadala 15%, QatarEnergy 5%",
+    // Yanbu → Red Sea (tanker) → Ain Sokhna → SUMED overland → Sidi Kerir (Mediterranean)
+    coords: [
+      [24.09, 38.06],  // Yanbu (Red Sea) — connects to Petroline
+      [24.50, 37.50],  // Red Sea open water
+      [25.50, 36.50],  // Red Sea mid-crossing
+      [26.80, 35.50],  // Northern Red Sea
+      [28.20, 34.00],  // Approaching Gulf of Suez
+      [29.10, 33.00],  // Gulf of Suez entrance
+      [29.60, 32.35],  // Ain Sokhna (SUMED start)
+      [29.85, 31.80],  // Desert crossing
+      [30.15, 31.20],  // Central Egypt
+      [30.50, 30.60],  // Western desert
+      [30.85, 30.10],  // Approaching coast
+      [31.13, 29.77]   // Sidi Kerir (Mediterranean)
+    ]
+  },
+  {
+    name: "Abu Safa–Bahrain Pipeline",
+    country: "Saudi Arabia/Bahrain",
+    type: "oil",
+    capacity: "~0.23 mb/d",
+    currentFlow: "~0 mb/d",
+    fromCountry: "Saudi Arabia",
+    toCountry: "Bahrain",
+    status: "shutdown",
+    startLabel: "Abu Safa Field",
+    endLabel: "Sitra Refinery",
+    notes: "Shut: Abu Safa field shut in by Saudi + Bapco Sitra refinery (405 kb/d) struck by Iranian missiles, FM declared Mar 9. Pipeline capacity ~0.23 mb/d when operational",
+    // ~115 km subsea: Abu Safa offshore field → Bahrain
+    coords: [
+      [26.05, 50.25],  // Abu Safa offshore field
+      [26.08, 50.42],  // Mid-channel
+      [26.13, 50.60]   // Sitra refinery, Bahrain
+    ]
+  },
+  {
+    name: "Iran–Iraq Gas Pipeline",
+    country: "Iran/Iraq",
+    type: "gas",
+    capacity: "~1.7 bcf/d",
+    currentFlow: "~0 bcf/d",
+    fromCountry: "Iran",
+    toCountry: "Iraq",
+    status: "shutdown",
+    startLabel: "South Pars",
+    endLabel: "Baghdad",
+    notes: "Halted after Israeli strike on South Pars Mar 18; Iran diverted gas for domestic use. Iraq lost ~3,100 MW power capacity. Supplied ~30-40% of Iraq electricity (~18 bcm/yr contracted)",
+    // Southern route: South Pars → Basra region → Baghdad
+    coords: [
+      [27.50, 52.50],  // South Pars / Assaluyeh, Iran
+      [28.50, 51.50],  // Southwest Iran
+      [30.00, 49.50],  // Approaching Iraqi border
+      [30.50, 48.50],  // Basra region, Iraq
+      [31.50, 47.50],  // Southern Iraq
+      [32.50, 46.50],  // Central Iraq
+      [33.35, 44.40]   // Baghdad
+    ]
+  },
+  {
+    name: "Tabriz–Ankara Gas Pipeline",
+    country: "Iran/Turkey",
+    type: "gas",
+    capacity: "~1.4 bcf/d",
+    currentFlow: "~0 bcf/d",
+    fromCountry: "Iran",
+    toCountry: "Turkey",
+    status: "shutdown",
+    startLabel: "Tabriz",
+    endLabel: "Ankara",
+    notes: "Halted after South Pars strike Mar 18 (Bloomberg Mar 24). Iran's largest gas export (~14 bcm/yr). Turkey sourced ~14% of gas from Iran; now relying on Russia/Azerbaijan. Contract expires Jul 2026",
+    // ~2,577 km: Tabriz (NW Iran) → eastern Turkey → Ankara
+    coords: [
+      [38.07, 46.30],  // Tabriz, Iran
+      [38.50, 44.80],  // Iranian border region
+      [38.90, 43.50],  // Eastern Turkey
+      [39.20, 42.00],  // Continuing west
+      [39.40, 40.50],  // Central eastern Turkey
+      [39.60, 39.00],  // Near Erzincan
+      [39.70, 37.50],  // Central Turkey
+      [39.80, 36.00],  // Approaching Ankara
+      [39.93, 32.87]   // Ankara
     ]
   }
 ];

@@ -304,7 +304,7 @@
 
   function renderControls() {
     const lastDate = getLastUpdatedDate();
-    const dateStr = lastDate ? new Date(lastDate).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) : '';
+    const dateStr = lastDate ? (typeof formatDateTimeGST === 'function' ? formatDateTimeGST(lastDate) : new Date(lastDate).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Dubai' }) + ' GST') : '';
 
     return `
       <div class="flex flex-col gap-3 mb-6">
@@ -1208,7 +1208,7 @@
     const dateBadgeEl = document.getElementById('ef-date-badge');
     if (dateBadgeEl) {
       const lastDate = getLastUpdatedDate();
-      const dateStr = lastDate ? new Date(lastDate).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }) : '';
+      const dateStr = lastDate ? (typeof formatDateTimeGST === 'function' ? formatDateTimeGST(lastDate) : new Date(lastDate).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Dubai' }) + ' GST') : '';
       dateBadgeEl.innerHTML = typeof renderPipelineBadge === 'function' ? renderPipelineBadge('export_flows', lastDate) : (dateStr ? `<div class="flex items-center gap-1.5 text-xs text-navy-500 bg-white px-3 py-2 rounded-lg border border-navy-200 shadow-sm whitespace-nowrap">
         <svg class="w-3.5 h-3.5 text-navy-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />

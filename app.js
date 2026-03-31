@@ -92,6 +92,16 @@ function formatDateShort(dateStr) {
   return d.toLocaleDateString('en-GB', { day: '2-digit', month: 'short' });
 }
 
+function formatDateTimeGST(isoStr) {
+  if (!isoStr) return '';
+  const d = new Date(isoStr);
+  if (isNaN(d.getTime())) return isoStr;
+  return d.toLocaleDateString('en-GB', {
+    day: '2-digit', month: 'short', year: 'numeric',
+    hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Dubai'
+  }) + ' GST';
+}
+
 // ---------- Sync Status + Data-as-of Badges ----------
 
 let syncStatus = null;
@@ -123,7 +133,7 @@ function getSyncPipeline(key) {
 function renderPipelineBadge(pipelineKey, fallbackDate) {
   const p = getSyncPipeline(pipelineKey);
   if (p) return renderDataAsOfBadge(p.dataAsOf, p.status);
-  if (fallbackDate) return renderDataAsOfBadge(formatDate(fallbackDate), 'ok');
+  if (fallbackDate) return renderDataAsOfBadge(formatDateTimeGST(fallbackDate), 'ok');
   return '';
 }
 
@@ -439,6 +449,97 @@ function renderKeyPortsTable() {
 }
 
 
+// ---------- Pipeline Summary Table ----------
+
+function renderPipelineTable() {
+  if (typeof PIPELINE_ROUTES === 'undefined' || !PIPELINE_ROUTES.length) return '';
+
+  const statusBg = { shutdown: 'bg-red-50 text-red-700 border-red-200', partial: 'bg-amber-50 text-amber-700 border-amber-200', operational: 'bg-emerald-50 text-emerald-700 border-emerald-200' };
+  const statusLabel = { shutdown: 'Shutdown', partial: 'Partial', operational: 'Operational' };
+  const typeBg = { oil: 'bg-emerald-50 text-emerald-700 border-emerald-200', gas: 'bg-blue-50 text-blue-700 border-blue-200' };
+
+  const total = PIPELINE_ROUTES.length;
+  const oilCount = PIPELINE_ROUTES.filter(p => p.type !== 'gas').length;
+  const gasCount = PIPELINE_ROUTES.filter(p => p.type === 'gas').length;
+  const operationalCount = PIPELINE_ROUTES.filter(p => p.status === 'operational').length;
+
+  // Sort: oil first, then gas
+  const sorted = [...PIPELINE_ROUTES].sort((a, b) => {
+    if (a.type === 'gas' && b.type !== 'gas') return 1;
+    if (a.type !== 'gas' && b.type === 'gas') return -1;
+    return 0;
+  });
+
+  let rowsHtml = '';
+  sorted.forEach((p, i) => {
+    const rowBg = i % 2 === 1 ? 'bg-navy-50/50' : '';
+    const typeLabel = p.type === 'gas' ? 'Gas' : 'Oil';
+    const unitLabel = p.type === 'gas' ? 'bcf/d' : 'mb/d';
+    rowsHtml += `<tr class="${rowBg}">
+      <td class="px-2 py-1.5 sm:px-3 text-sm font-medium text-navy-900">${p.name}</td>
+      <td class="px-2 py-1.5 sm:px-3 text-sm text-navy-700">${p.fromCountry || ''} \u2192 ${p.toCountry || ''}</td>
+      <td class="px-2 py-1.5 sm:px-3 text-center">
+        <span class="text-[10px] font-semibold uppercase px-2 py-0.5 rounded border ${typeBg[p.type] || typeBg.oil}">${typeLabel}</span>
+      </td>
+      <td class="px-2 py-1.5 sm:px-3 text-sm text-navy-700 text-right">${p.capacity}</td>
+      <td class="px-2 py-1.5 sm:px-3 text-sm text-navy-700 text-right font-medium">${p.currentFlow || '\u2014'}</td>
+      <td class="px-2 py-1.5 sm:px-3 text-right">
+        <span class="text-[10px] font-semibold uppercase px-2 py-0.5 rounded border ${statusBg[p.status] || 'bg-navy-100 text-navy-600 border-navy-300'}">${statusLabel[p.status] || p.status}</span>
+      </td>
+      <td class="px-2 py-1.5 sm:px-3 text-xs text-navy-700 leading-relaxed">${p.notes || ''}</td>
+    </tr>`;
+  });
+
+  return `
+    <div class="bg-white rounded-xl border border-navy-200 overflow-hidden mt-5">
+      <div class="px-4 py-2.5 border-b border-navy-200 bg-navy-50">
+        <h3 class="text-sm font-bold text-navy-900">Pipeline Infrastructure</h3>
+        <span class="text-xs text-navy-600">Cross-country and strategic bypass pipelines across the region</span>
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 p-3 border-b border-navy-200 bg-navy-50/30">
+        <div class="stat-card bg-white rounded-lg p-2 border border-navy-200">
+          <div class="text-lg font-extrabold text-blue-600">${total}</div>
+          <div class="text-[10px] text-navy-600 mt-0.5">Total Pipelines</div>
+        </div>
+        <div class="stat-card bg-white rounded-lg p-2 border border-navy-200">
+          <div class="text-lg font-extrabold text-emerald-600">${oilCount}</div>
+          <div class="text-[10px] text-navy-600 mt-0.5">Oil Pipelines</div>
+        </div>
+        <div class="stat-card bg-white rounded-lg p-2 border border-navy-200">
+          <div class="text-lg font-extrabold text-blue-500">${gasCount}</div>
+          <div class="text-[10px] text-navy-600 mt-0.5">Gas Pipelines</div>
+        </div>
+        <div class="stat-card bg-white rounded-lg p-2 border border-navy-200">
+          <div class="text-lg font-extrabold text-emerald-600">${operationalCount}</div>
+          <div class="text-[10px] text-navy-600 mt-0.5">Operational</div>
+        </div>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-left production-table">
+          <thead>
+            <tr class="border-b border-navy-200 bg-navy-100/50">
+              <th class="px-2 py-2 sm:px-3 text-xs text-navy-600 font-semibold uppercase tracking-wider">Pipeline</th>
+              <th class="px-2 py-2 sm:px-3 text-xs text-navy-600 font-semibold uppercase tracking-wider">From \u2192 To</th>
+              <th class="px-2 py-2 sm:px-3 text-xs text-navy-600 font-semibold uppercase tracking-wider text-center">Type</th>
+              <th class="px-2 py-2 sm:px-3 text-xs text-navy-600 font-semibold uppercase tracking-wider text-right">Capacity</th>
+              <th class="px-2 py-2 sm:px-3 text-xs text-navy-600 font-semibold uppercase tracking-wider text-right">Current Flow</th>
+              <th class="px-2 py-2 sm:px-3 text-xs text-navy-600 font-semibold uppercase tracking-wider text-right">Status</th>
+              <th class="px-2 py-2 sm:px-3 text-xs text-navy-600 font-semibold uppercase tracking-wider">Notes</th>
+            </tr>
+          </thead>
+          <tbody>${rowsHtml}</tbody>
+        </table>
+      </div>
+
+      <div class="px-4 py-2 border-t border-navy-200 bg-navy-50/50 text-[10px] text-navy-600">
+        Sources: IEA, Kpler, Bloomberg, Reuters, operator disclosures. Updated ${new Date(LAST_UPDATED).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}.
+      </div>
+    </div>
+  `;
+}
+
 // ---------- GCC Interactive Map ----------
 
 function renderGccOverviewMap() {
@@ -448,13 +549,14 @@ function renderGccOverviewMap() {
       <div class="px-4 py-3 border-b border-navy-200 bg-navy-50 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
         <div>
           <h3 class="text-sm font-bold text-navy-900">GCC Energy Infrastructure Map</h3>
-          <span class="text-xs text-navy-600">Oil/gas fields, terminals, refineries, LNG plants, and key pipelines</span>
+          <span class="text-xs text-navy-600">Oil/gas fields, terminals, refineries, LNG plants, industrial installations, and key pipelines</span>
         </div>
         <div id="gcc-map-filters" class="flex gap-1.5 overflow-x-auto flex-nowrap pb-1 sm:pb-0">
           <button data-map-filter="all" class="gcc-filter-pill active text-[10px] sm:text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-lg border border-navy-300 bg-navy-800 text-white whitespace-nowrap transition-all min-h-[36px]">All</button>
           <button data-map-filter="production" class="${pillCls}">Oil/Gas Fields</button>
           <button data-map-filter="terminals" class="${pillCls}">Terminals</button>
           <button data-map-filter="refining" class="${pillCls}">Refineries & LNG</button>
+          <button data-map-filter="industrial" class="${pillCls}">Industrial</button>
           <button data-map-filter="pipelines" class="${pillCls}">Pipelines</button>
         </div>
       </div>
@@ -464,7 +566,7 @@ function renderGccOverviewMap() {
 }
 
 let gccMapInstance = null;
-let gccMapLayers = { production: null, terminals: null, refining: null, pipelines: null };
+let gccMapLayers = { production: null, terminals: null, refining: null, industrial: null, pipelines: null };
 
 function initGccOverviewMap() {
   const container = document.getElementById('gcc-overview-map');
@@ -481,7 +583,8 @@ function initGccOverviewMap() {
   const popupStatusColor = { shutdown: '#f87171', partial: '#fbbf24', operational: '#34d399' };
   const fieldTypes = ['Oil Field', 'Gas Field', 'Offshore Oil', 'Oil/Gas Field'];
   const terminalTypes = ['Terminal', 'Port', 'Import'];
-  const refLngTypes = ['Refinery', 'LNG Train', 'LNG Plant', 'LNG/LPG', 'GTL', 'LNG Expansion', 'Smelter', 'Petrochemical'];
+  const refLngTypes = ['Refinery', 'LNG Train', 'LNG Plant', 'LNG/LPG', 'LNG Expansion'];
+  const industrialTypes = ['Aluminium', 'Smelter', 'Petrochemical', 'GTL', 'Power Plant', 'Fuel Storage', 'Fuel Depot', 'Gas Processing', 'Sour Gas', 'Fertilizer', 'Desalination'];
 
   function isType(infType, keywords) { return keywords.some(kw => infType.includes(kw)); }
 
@@ -564,22 +667,59 @@ function initGccOverviewMap() {
   });
   gccMapLayers.refining.addTo(gccMapInstance);
 
+  // --- Industrial Installations Layer (triangle markers) ---
+  gccMapLayers.industrial = L.layerGroup();
+  COUNTRY_STATUS_DATA.forEach(c => {
+    if (!c.infrastructure) return;
+    c.infrastructure.forEach(inf => {
+      if (!isType(inf.type, industrialTypes)) return;
+      const coords = INFRA_COORDS[inf.name];
+      if (!coords) return;
+      const color = statusColor[inf.status] || '#6b7280';
+      const icon = L.divIcon({
+        className: '',
+        html: `<svg width="18" height="18" viewBox="0 0 18 18" style="cursor:pointer;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.3))"><polygon points="9,1 17,16 1,16" fill="${color}" stroke="#1e293b" stroke-width="1.5"/></svg>`,
+        iconSize: [18, 18],
+        iconAnchor: [9, 16]
+      });
+      L.marker([coords.lat, coords.lng], { icon }).bindPopup(`
+        <div style="min-width:180px">
+          <div style="font-weight:700;font-size:12px;color:#fff;margin-bottom:2px">${inf.name}</div>
+          <div style="font-size:10px;color:#829ab1;margin-bottom:4px">${inf.type} — ${c.country}</div>
+          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Capacity</span><span style="font-weight:600;color:#fff">${inf.capacity}</span></div>
+          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Status</span><span style="font-weight:600;color:${popupStatusColor[inf.status] || '#fff'}">${inf.status}</span></div>
+          ${inf.notes ? `<div style="font-size:10px;color:#bcccdc;margin-top:4px;border-top:1px solid #334e68;padding-top:3px">${inf.notes}</div>` : ''}
+        </div>
+      `, { maxWidth: 240 }).addTo(gccMapLayers.industrial);
+    });
+  });
+  gccMapLayers.industrial.addTo(gccMapInstance);
+
   // --- Pipelines Layer (dashed polylines) ---
   gccMapLayers.pipelines = L.layerGroup();
   if (typeof PIPELINE_ROUTES !== 'undefined') {
     PIPELINE_ROUTES.forEach(pipe => {
-      const color = statusColor[pipe.status] || '#6b7280';
-      L.polyline(pipe.coords, {
-        color, weight: 3, dashArray: '8 5', opacity: 0.8
-      }).bindPopup(`
+      const isGas = pipe.type === 'gas';
+      const color = isGas ? '#3b82f6' : (statusColor[pipe.status] || '#6b7280');
+      const popColor = isGas ? '#60a5fa' : (popupStatusColor[pipe.status] || '#fff');
+      const popupHtml = `
         <div style="min-width:180px">
           <div style="font-weight:700;font-size:12px;color:#fff;margin-bottom:2px">${pipe.name}</div>
-          <div style="font-size:10px;color:#829ab1;margin-bottom:4px">${pipe.country}</div>
+          <div style="font-size:10px;color:#829ab1;margin-bottom:4px">${pipe.country}${pipe.type ? ` — ${pipe.type.charAt(0).toUpperCase() + pipe.type.slice(1)}` : ''}</div>
           <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Capacity</span><span style="font-weight:600;color:#fff">${pipe.capacity}</span></div>
-          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Status</span><span style="font-weight:600;color:${popupStatusColor[pipe.status] || '#fff'}">${pipe.status}</span></div>
+          ${pipe.currentFlow ? `<div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Current Flow</span><span style="font-weight:600;color:#fff">${pipe.currentFlow}</span></div>` : ''}
+          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Status</span><span style="font-weight:600;color:${popColor}">${pipe.status}</span></div>
           ${pipe.notes ? `<div style="font-size:10px;color:#bcccdc;margin-top:4px;border-top:1px solid #334e68;padding-top:3px">${pipe.notes}</div>` : ''}
         </div>
-      `, { maxWidth: 260 }).addTo(gccMapLayers.pipelines);
+      `;
+      // Invisible wide hit area (20px) for easy clicking
+      L.polyline(pipe.coords, {
+        color: 'transparent', weight: 20, opacity: 0, interactive: true
+      }).bindPopup(popupHtml, { maxWidth: 260 }).addTo(gccMapLayers.pipelines);
+      // Visible thin dashed line (non-interactive — clicks pass through to hit area)
+      L.polyline(pipe.coords, {
+        color, weight: isGas ? 2.5 : 3, dashArray: isGas ? '4 6' : '8 5', opacity: 0.8, interactive: false
+      }).addTo(gccMapLayers.pipelines);
 
       // Endpoint labels
       const labelStyle = 'display:inline-block;background:#102a43;color:#d9e2ec;font-size:9px;font-weight:700;font-family:Inter,sans-serif;padding:1px 5px;border-radius:3px;white-space:nowrap;box-shadow:0 1px 3px rgba(0,0,0,0.3);border:1px solid ' + color;
@@ -606,7 +746,9 @@ function initGccOverviewMap() {
       <div class="flex items-center gap-1.5"><span style="width:10px;height:10px;border-radius:50%;background:#059669;border:1.5px solid #1e293b;display:inline-block"></span> Oil/Gas Field</div>
       <div class="flex items-center gap-1.5"><span style="width:10px;height:10px;background:#059669;border:1.5px solid #1e293b;display:inline-block"></span> Terminal</div>
       <div class="flex items-center gap-1.5"><span style="width:10px;height:10px;background:#059669;border:1.5px solid #1e293b;display:inline-block;transform:rotate(45deg)"></span> Refinery / LNG</div>
-      <div class="flex items-center gap-1.5"><span style="width:16px;height:0;border-top:3px dashed #059669;display:inline-block"></span> Pipeline</div>
+      <div class="flex items-center gap-1.5"><svg width="12" height="12" viewBox="0 0 12 12" style="display:inline-block;flex-shrink:0"><polygon points="6,1 11,11 1,11" fill="#059669" stroke="#1e293b" stroke-width="1.2"/></svg> Industrial</div>
+      <div class="flex items-center gap-1.5"><span style="width:16px;height:0;border-top:3px dashed #059669;display:inline-block"></span> Oil Pipeline</div>
+      <div class="flex items-center gap-1.5"><span style="width:16px;height:0;border-top:2.5px dashed #3b82f6;display:inline-block"></span> Gas Pipeline</div>
       <div class="border-t border-navy-200 my-1"></div>
       <div class="flex items-center gap-1.5"><span style="width:8px;height:8px;border-radius:50%;background:#059669;display:inline-block"></span> Operational</div>
       <div class="flex items-center gap-1.5"><span style="width:8px;height:8px;border-radius:50%;background:#d97706;display:inline-block"></span> Partial</div>
@@ -634,6 +776,7 @@ function initGccOverviewMap() {
       show(gccMapLayers.production, filter === 'all' || filter === 'production');
       show(gccMapLayers.terminals, filter === 'all' || filter === 'terminals');
       show(gccMapLayers.refining, filter === 'all' || filter === 'refining');
+      show(gccMapLayers.industrial, filter === 'all' || filter === 'industrial');
       show(gccMapLayers.pipelines, filter === 'all' || filter === 'pipelines');
     });
   });
@@ -704,7 +847,7 @@ function renderExecSummary() {
   lngData.sort((a, b) => b.preWar - a.preWar);
 
   // Reset map instance if re-rendering
-  if (gccMapInstance) { gccMapInstance.remove(); gccMapInstance = null; gccMapLayers = { production: null, terminals: null, refining: null, pipelines: null }; }
+  if (gccMapInstance) { gccMapInstance.remove(); gccMapInstance = null; gccMapLayers = { production: null, terminals: null, refining: null, industrial: null, pipelines: null }; }
 
   container.innerHTML = `
     <div class="flex items-start justify-between gap-4 mb-5">
@@ -730,6 +873,8 @@ function renderExecSummary() {
     </div>
 
     ${renderKeyPortsTable()}
+
+    ${renderPipelineTable()}
   `;
 
   // Initialize map and port table interactions after DOM renders
@@ -1673,10 +1818,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const lastUpdatedEl = document.getElementById('last-updated');
   if (lastUpdatedEl && typeof LAST_UPDATED !== 'undefined') {
-    lastUpdatedEl.textContent = new Date(LAST_UPDATED).toLocaleDateString('en-GB', {
-      day: '2-digit', month: 'short', year: 'numeric',
-      hour: '2-digit', minute: '2-digit', timeZoneName: 'short'
-    });
+    lastUpdatedEl.textContent = formatDateTimeGST(LAST_UPDATED);
   }
 
   // Freshness indicator: warn if data is more than 26 hours old

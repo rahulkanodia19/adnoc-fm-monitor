@@ -416,12 +416,17 @@ function main() {
     history.unshift({ date: yesterday, ...summaryData });
     fs.writeFileSync(historyPath, JSON.stringify(history, null, 2));
   }
-  const prevDay = history.find(h => h.date === yesterday) || history.find(h => h.date < today);
+  const prevDay = history.find(h => h.date === yesterday) || [...history].reverse().find(h => h.date < today);
+
+  // Dynamic delta label: "24h" if comparing yesterday, "vs 29 Mar" if comparing older
+  const deltaLabel = !prevDay ? '24h'
+    : prevDay.date === yesterday ? '24h'
+    : `vs ${new Date(prevDay.date + 'T00:00:00Z').toLocaleDateString('en-GB', { day: '2-digit', month: 'short' })}`;
 
   const summary = {
     ...summaryData,
     syncTimestamp: now,
-    deltaLabel: '24h',
+    deltaLabel,
     deltas: prevDay ? {
       insideDelta: summaryData.insideTotal - (prevDay.insideTotal || 0),
       outsideDelta: summaryData.outsideTotal - (prevDay.outsideTotal || 0),

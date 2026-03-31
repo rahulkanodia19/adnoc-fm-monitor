@@ -112,7 +112,10 @@ const COUNTRY_STATUS_DATA = [
       { name: "Mesaieed Industrial City", type: "Petrochemical Complex", capacity: "Various", status: "shutdown" },
       { name: "North Field East Expansion", type: "LNG Expansion", capacity: "32 Mtpa (construction)", status: "shutdown" },
       { name: "Qatalum Smelter", type: "Aluminium", capacity: "585,000 tpa", status: "shutdown" },
-      { name: "Hamad Port", type: "Port", capacity: "Qatar's main commercial port", status: "partial", notes: "Commercial port south of Doha; limited container/cargo ops amid Hormuz closure" }
+      { name: "Hamad Port", type: "Port", capacity: "Qatar's main commercial port", status: "partial", notes: "Commercial port south of Doha; limited container/cargo ops amid Hormuz closure" },
+      { name: "Dolphin Gas Pipeline", type: "Gas Pipeline", capacity: "3.2 bcf/d", status: "operational", notes: "Subsea to UAE; GCC's only cross-border gas pipeline" },
+      { name: "QAFCO Fertilizer Complex", type: "Fertilizer Plant", capacity: "~5.6 Mtpa urea (world's largest single-site)", status: "shutdown", notes: "All downstream halted since 3 Mar; urea production suspended; Mesaieed industrial shutdown" },
+      { name: "Umm Al Houl Power", type: "Power/Desalination Plant", capacity: "2,520 MW + 614k m³/day (40% of Qatar water)", status: "operational", notes: "Domestic power/water supply; distinct from struck Mesaieed power plant; Qatar 100% desal-dependent" }
     ],
     sources: [
       { id: 1, title: "QatarEnergy halts LNG production after attacks - Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/2/qatarenergy-worlds-largest-lng-firm-halts-production-after-iran-attacks", date: "2026-03-02" },
@@ -191,7 +194,9 @@ const COUNTRY_STATUS_DATA = [
       { name: "Mina Al-Ahmadi Terminal", type: "Export Terminal", capacity: "~1.5 mb/d", status: "shutdown", notes: "FM declared on crude exports; refinery adjacent struck by drones Mar 19-20" },
       { name: "Al-Zour LNG Import Terminal", type: "LNG Import", capacity: "22 Mtpa", status: "partial", notes: "Receiving reduced LNG cargoes for domestic power; partial ops" },
       { name: "Kafco Fuel Storage", type: "Fuel Storage", capacity: "N/A", status: "shutdown" },
-      { name: "Subiya Power Plant", type: "Power Plant", capacity: "2,400 MW", status: "shutdown" }
+      { name: "Subiya Power Plant", type: "Power Plant", capacity: "2,400 MW", status: "shutdown" },
+      { name: "EQUATE Petrochemical Complex", type: "Petrochemical Complex", capacity: "Major PE/EG producer", status: "partial", notes: "Near struck refineries; running on stored feedstock; Shuaiba industrial area" },
+      { name: "Az-Zour South Power & Desalination", type: "Power/Desalination Plant", capacity: "2,400 MW + 423 MIGD water", status: "operational", notes: "Kuwait's largest complex; distinct from Subiya (hit 9 Mar); Kuwait 100% desal-dependent" }
     ],
     sources: [
       { id: 1, title: "KPC FM on crude - Express Tribune", url: "https://tribune.com.pk", date: "2026-03-07" },
@@ -295,7 +300,13 @@ const COUNTRY_STATUS_DATA = [
       { name: "Jubail Industrial Port", type: "Port", capacity: "Major petrochemical/export hub", status: "partial", notes: "World's largest petrochemical complex; exports constrained by Hormuz" },
       { name: "Jazan Refinery", type: "Refinery", capacity: "400,000 bpd", status: "operational", notes: "Red Sea coast; unaffected by Hormuz; processing southern crude" },
       { name: "Jeddah Refinery", type: "Refinery", capacity: "90,000 bpd", status: "operational", notes: "Western coast; domestic supply" },
-      { name: "Riyadh Refinery", type: "Refinery", capacity: "126,000 bpd", status: "operational", notes: "Domestic supply for central region" }
+      { name: "Riyadh Refinery", type: "Refinery", capacity: "126,000 bpd", status: "operational", notes: "Domestic supply for central region" },
+      { name: "Abu Safa–Bahrain Pipeline", type: "Pipeline", capacity: "~0.23 mb/d", status: "operational", notes: "Aramco-operated subsea to Bahrain Sitra refinery" },
+      { name: "Yanbu–SUMED Route", type: "Pipeline/Tanker", capacity: "2.5 mb/d (SUMED)", status: "operational", notes: "Tanker from Yanbu to Egypt Ain Sokhna, then SUMED to Mediterranean" },
+      { name: "Abqaiq Processing", type: "Gas Processing", capacity: "~7 mb/d crude stabilization", status: "operational", notes: "World's largest oil processing facility; feeding East-West Pipeline to Yanbu; onshore, not struck" },
+      { name: "SABIC Jubail Petrochemical Complex", type: "Petrochemical Complex", capacity: "World's largest petrochemical cluster", status: "partial", notes: "Feedstock curtailed from offshore field shut-ins; ethylene crackers at reduced rates; exports constrained by Hormuz" },
+      { name: "Ma'aden Aluminium Complex", type: "Aluminium Smelter", capacity: "~740,000 tpa + 1.8 Mtpa alumina refinery", status: "partial", notes: "Smelter operational (grid-powered); Gulf coast exports constrained by Hormuz closure" },
+      { name: "Ras Al-Khair IWPP", type: "Power/Desalination Plant", capacity: "2,400 MW + 1.03M m³/day (world's largest hybrid desal)", status: "operational", notes: "Gulf coast Eastern Province; serves Ras Al Khair industrial city and regional water supply" }
     ],
     sources: [
       { id: 1, title: "Ras Tanura shutdown - Bloomberg", url: "https://www.bloomberg.com", date: "2026-03-02" },
@@ -463,7 +474,12 @@ const COUNTRY_STATUS_DATA = [
       { name: "Jebel Ali Port", type: "Port", capacity: "Largest ME port; 22M+ TEU", status: "partial", notes: "Container ops at reduced capacity; oil/fuel bunkering disrupted; DP World managing diversions" },
       { name: "Jebel Dhanna Terminal", type: "Export Terminal", capacity: "Crude loading terminal", status: "partial", notes: "Crude loadings curtailed; onshore field production cuts limit available volumes" },
       { name: "Khalifa Port", type: "Port", capacity: "Abu Dhabi deep-water; 5M+ TEU", status: "partial", notes: "Container & cargo ops continue at reduced capacity; customs arrangements in place" },
-      { name: "EGA Al Taweelah Smelter", type: "Aluminium Smelter", capacity: "~2.5 Mtpa", status: "partial", notes: "IRGC drone/missile strike Mar 29; 6 injured, significant damage; one of world's largest smelters" }
+      { name: "EGA Al Taweelah Smelter", type: "Aluminium Smelter", capacity: "~2.5 Mtpa", status: "partial", notes: "IRGC drone/missile strike Mar 29; 6 injured, significant damage; one of world's largest smelters" },
+      { name: "Dolphin Gas Pipeline (receiving)", type: "Gas Pipeline", capacity: "~2 bcf/d received", status: "operational", notes: "From Qatar via subsea; ~2 bcf/d for UAE power generation" },
+      { name: "EGA Jebel Ali Smelter", type: "Aluminium Smelter", capacity: "~1.0 Mtpa", status: "operational", notes: "Not directly struck; sister plant Al Taweelah hit Mar 29. Near Jebel Ali Port (partial ops). Combined EGA ~3.5 Mtpa" },
+      { name: "Borouge Petrochemical Complex", type: "Petrochemical Complex", capacity: "~4.5 Mtpa polyolefins", status: "partial", notes: "Feedstock disrupted by Ruwais Refinery-2 shutdown (Mar 10 drone strike); output reduced ~40%; ADNOC subsidiary" },
+      { name: "Jebel Ali Power & Desalination Complex", type: "Power/Desalination Plant", capacity: "8,695 MW + 2.2M m³/day water", status: "operational", notes: "World's largest gas-fired plant; 40% of Dubai power; explicitly noted as operational in crisis data" },
+      { name: "Taweelah Power & Desalination Complex", type: "Power/Desalination Plant", capacity: "3,725 MW + 160+ MIGD water", status: "operational", notes: "Adjacent to struck EGA Al Taweelah smelter (Mar 29); power plant itself not targeted; Abu Dhabi grid anchor" }
     ],
     sources: [
       { id: 1, title: "UAE precautionary status - Euronews", url: "https://www.euronews.com", date: "2026-03-01" },
@@ -575,7 +591,10 @@ const COUNTRY_STATUS_DATA = [
       { name: "Kalak (KAR) Refinery", type: "Refinery", capacity: "110,000 bpd", status: "shutdown" },
       { name: "Lanaz Refinery", type: "Refinery", capacity: "80,000 bpd", status: "partial" },
       { name: "Kirkuk Refinery", type: "Refinery", capacity: "56,000 bpd", status: "partial" },
-      { name: "Umm Qasr Port", type: "Port", capacity: "Iraq's primary deep-water port; 21 berths", status: "partial", notes: "Commercial cargo ops continue; oil loading halted at nearby ABOT/KAAOT" }
+      { name: "Umm Qasr Port", type: "Port", capacity: "Iraq's primary deep-water port; 21 berths", status: "partial", notes: "Commercial cargo ops continue; oil loading halted at nearby ABOT/KAAOT" },
+      { name: "Kirkuk-Ceyhan Pipeline", type: "Pipeline", capacity: "~0.9 mb/d", status: "operational", notes: "Restarted Sep 2025; ~0.25 mb/d to Turkey; only non-Hormuz export route" },
+      { name: "Iran–Iraq Gas Pipeline", type: "Gas Pipeline", capacity: "~1.7 bcf/d", status: "shutdown", notes: "Halted after South Pars strike Mar 18; Iraq lost ~3,100 MW. Supplied ~30-40% of Iraq electricity (~18 bcm/yr contracted)" },
+      { name: "Besmaya Power Plant", type: "Power Plant", capacity: "~4,500 MW (Iraq's largest)", status: "partial", notes: "Iraq's largest plant; Iranian gas supply halted after South Pars strike Mar 18 — ~3,100 MW offline" }
     ],
     sources: [
       { id: 1, title: "Rumaila shut - Bloomberg", url: "https://www.bloomberg.com", date: "2026-03-01" },
@@ -642,7 +661,9 @@ const COUNTRY_STATUS_DATA = [
       { name: "BAPCO Sitra Refinery", type: "Refinery", capacity: "405,000 bpd", status: "shutdown" },
       { name: "Bahrain LNG Import", type: "LNG Import", capacity: "~800 mmscf/d", status: "partial", notes: "Receiving limited cargoes for domestic gas supply" },
       { name: "Alba Aluminium Smelter", type: "Smelter", capacity: "~1.56 Mtpa", status: "partial" },
-      { name: "Sitra Marine Terminal", type: "Export Terminal", capacity: "~200,000 bpd", status: "shutdown", notes: "Shut after Iranian missile strikes on 5 & 9 Mar; BAPCO FM" }
+      { name: "Sitra Marine Terminal", type: "Export Terminal", capacity: "~200,000 bpd", status: "shutdown", notes: "Shut after Iranian missile strikes on 5 & 9 Mar; BAPCO FM" },
+      { name: "Abu Safa–Bahrain Pipeline", type: "Pipeline", capacity: "~0.23 mb/d", status: "shutdown", notes: "Shut: Abu Safa field shut in + Sitra refinery struck/FM declared Mar 9" },
+      { name: "Al Dur IWPP", type: "Power/Desalination Plant", capacity: "2,734 MW + 268k m³/day", status: "operational", notes: "Bahrain 100% desalination-dependent; not targeted; critical civilian water supply" }
     ],
     sources: [
       { id: 1, title: "Alba FM - Bloomberg", url: "https://www.bloomberg.com", date: "2026-03-04" },
@@ -716,7 +737,9 @@ const COUNTRY_STATUS_DATA = [
       { name: "Mina Al-Fahal Terminal", type: "Export Terminal", capacity: "~900,000 bpd", status: "operational", notes: "Outside Hormuz; fully operational; receiving diverted cargoes" },
       { name: "Salalah Port / Oil Storage", type: "Port/Storage", capacity: "Major storage", status: "partial", notes: "Struck by Iranian drones 11 & 29 Mar; Maersk announced gradual resumption Mar 31; crane destroyed; oil tanks damaged" },
       { name: "Duqm Port & SEZ", type: "Port", capacity: "Multi-purpose", status: "partial", notes: "Struck 1 Mar; partial ops; receiving diverted traffic from Gulf" },
-      { name: "Sohar Port", type: "Port", capacity: "Major industrial port", status: "operational", notes: "Outside Hormuz; operational; handling increased diversions from Gulf" }
+      { name: "Sohar Port", type: "Port", capacity: "Major industrial port", status: "operational", notes: "Outside Hormuz; operational; handling increased diversions from Gulf" },
+      { name: "Sohar Aluminium", type: "Aluminium Smelter", capacity: "~395,000 tpa", status: "operational", notes: "Outside Hormuz; Sohar industrial area unaffected by conflict" },
+      { name: "Barka IWPP", type: "Power/Desalination Plant", capacity: "1,115 MW + 413k m³/day (24% of Oman water)", status: "operational", notes: "Outside Hormuz; Al Batinah coast; unaffected by conflict" }
     ],
     sources: [
       { id: 1, title: "Duqm/Salalah struck - Anadolu", url: "https://www.aa.com.tr", date: "2026-03-01" },
@@ -782,7 +805,7 @@ const COUNTRY_STATUS_DATA = [
       { name: "EMG Pipeline (Israel-Egypt)", type: "Subsea Pipeline", capacity: "~700 mmscf/d", status: "shutdown" },
       { name: "JNGET Pipeline (Israel-Jordan)", type: "Gas Pipeline", capacity: "~300 mmscf/d", status: "shutdown" },
       { name: "Ashdod Refinery (Bazan)", type: "Refinery", capacity: "~100,000 bpd", status: "partial" },
-      { name: "EAPC Pipeline", type: "Pipeline", capacity: "~600,000 bpd", status: "partial" },
+      { name: "EAPC Pipeline", type: "Pipeline", capacity: "~0.6 mb/d", status: "partial" },
       { name: "Karish North Gas Field", type: "Offshore Gas", capacity: "~0.3 Bcf/d", status: "shutdown" }
     ],
     sources: [
@@ -931,7 +954,11 @@ const COUNTRY_STATUS_DATA = [
       { name: "Shahr-e Rey Oil Depot", type: "Fuel Depot", capacity: "Major depot", status: "shutdown" },
       { name: "Kharg Island Terminal", type: "Export Terminal", capacity: "~7M bpd loading; 90% of Iran exports", status: "operational", notes: "Averaging 1.84M bpd loadings in Mar (Kpler); spared from strikes so far" },
       { name: "Jask Oil Terminal", type: "Export Terminal", capacity: "~300,000 bpd", status: "operational", notes: "Iran's Hormuz bypass; restarted Mar 7 after hiatus; 2M bbl loaded (Kpler)" },
-      { name: "Goreh-Jask Pipeline", type: "Pipeline", capacity: "300,000 bpd (1M design)", status: "operational", notes: "Iran's only Hormuz bypass pipeline; connects southern fields to Gulf of Oman" }
+      { name: "Goreh-Jask Pipeline", type: "Pipeline", capacity: "0.3 mb/d (1 mb/d design)", status: "operational", notes: "Iran's only Hormuz bypass pipeline; connects southern fields to Gulf of Oman" },
+      { name: "Iran–Iraq Gas Pipeline", type: "Gas Pipeline", capacity: "~1.7 bcf/d", status: "shutdown", notes: "Halted after South Pars strike Mar 18; gas diverted for domestic use (~18 bcm/yr contracted)" },
+      { name: "Tabriz–Ankara Gas Pipeline", type: "Gas Pipeline", capacity: "~1.4 bcf/d", status: "shutdown", notes: "Halted after South Pars strike Mar 18 (Bloomberg Mar 24). ~14 bcm/yr capacity; contract expires Jul 2026" },
+      { name: "Bandar Imam Petrochemical Complex", type: "Petrochemical Complex", capacity: "~7 Mtpa (70% of Iran petrochem)", status: "partial", notes: "Khuzestan region; feedstock reduced from ~30% southern field shut-ins; not directly struck" },
+      { name: "Isfahan Thermal Power Plant", type: "Power Plant", capacity: "2,500 MW (Iran's largest thermal)", status: "operational", notes: "On US/Israeli target list; Trump paused power plant strikes until Apr 6; not yet struck" }
     ],
     sources: [
       { id: 1, title: "Israeli strikes hit South Pars - CBS News", url: "https://www.cbsnews.com", date: "2026-03-18" },
@@ -2044,5 +2071,51 @@ const SPR_RELEASE_DATA = {
     { country: "Belgium",         flag: "🇧🇪", committed: 0.3,   crude: 0,     products: 0.3,  startDate: "2026-03-28", released: 0,    region: "Europe" },
     { country: "Estonia",         flag: "🇪🇪", committed: 0.3,   crude: 0,     products: 0.3,  startDate: "2026-03-28", released: 0,    region: "Europe" },
     { country: "Luxembourg",      flag: "🇱🇺", committed: 0.1,   crude: 0.1,   products: 0,    startDate: "2026-03-28", released: 0,    region: "Europe" },
+  ]
+};
+
+// ============================================================
+// WAR RISK PREMIUM — Strait of Hormuz (% of hull value)
+// Source: Backfilled from news articles + daily HormuzTracker.com scrape
+// ============================================================
+const WAR_RISK_PREMIUM_DATA = {
+  lastUpdated: "2026-03-31",
+  metric: "Additional War Risk Premium (AWRP) — Strait of Hormuz",
+  unit: "% of hull value (7-day policy)",
+  preConflictBaseline: 0.20,
+  current: {
+    rate: 5.0,
+    min: 1.0,
+    max: 10.0,
+    source: "HormuzTracker.com / Insurance Journal"
+  },
+  history: [
+    { date: "2026-01-01", rate: 0.15, event: "Stable pre-crisis baseline", source: "S&P Global / Lloyd's List" },
+    { date: "2026-01-06", rate: 0.15, event: "Stable — Red Sea premiums softening", source: "S&P Global" },
+    { date: "2026-01-13", rate: 0.15, event: "Stable", source: "S&P Global" },
+    { date: "2026-01-20", rate: 0.15, event: "Stable", source: "S&P Global" },
+    { date: "2026-01-27", rate: 0.15, event: "Stable", source: "S&P Global" },
+    { date: "2026-02-03", rate: 0.15, event: "Stable — competitive capacity softening premiums", source: "Modern Diplomacy" },
+    { date: "2026-02-10", rate: 0.15, event: "Stable", source: "S&P Global" },
+    { date: "2026-02-17", rate: 0.15, event: "Stable", source: "S&P Global" },
+    { date: "2026-02-24", rate: 0.18, event: "Slight uptick on escalating tensions", source: "S&P Global" },
+    { date: "2026-02-27", rate: 0.20, event: "Pre-conflict baseline", source: "Al Jazeera / Euronews" },
+    { date: "2026-02-28", rate: 0.35, event: "Post-strike escalation", source: "S&P Global" },
+    { date: "2026-03-01", rate: 0.50, event: "Gard cancels war-risk cover", source: "Gard P&I" },
+    { date: "2026-03-03", rate: 1.00, event: "Strait declared closed — 48hr surge", source: "Al Jazeera" },
+    { date: "2026-03-04", rate: 1.00, event: "48-hour spike confirmed", source: "S&P Global" },
+    { date: "2026-03-07", rate: 1.00, event: "New 7-day contracts formalized at 1%", source: "Caixin Global" },
+    { date: "2026-03-08", rate: 1.00, event: "JWLA-033 effective", source: "S&P Global" },
+    { date: "2026-03-09", rate: 1.00, event: "Only 4 vessels transit Strait", source: "S&P Global" },
+    { date: "2026-03-10", rate: 7.50, event: "High-risk quotes jump", source: "Wikipedia / Multiple" },
+    { date: "2026-03-11", rate: 10.00, event: "Ship attack wave — peak", source: "Wikipedia" },
+    { date: "2026-03-13", rate: 7.50, event: "+300% vs Jan 2025 baseline", source: "Middle East Insider" },
+    { date: "2026-03-16", rate: 7.50, event: "+300% surge confirmed", source: "Euronews" },
+    { date: "2026-03-17", rate: 5.00, event: "Market stabilizing", source: "Freightos" },
+    { date: "2026-03-18", rate: 5.00, event: "Post-attack sustained level", source: "P&C 360" },
+    { date: "2026-03-26", rate: 7.50, event: "Sustained 5-10% range", source: "Euronews" },
+    { date: "2026-03-27", rate: 5.00, event: "US insurance program announced", source: "Insurance Journal" },
+    { date: "2026-03-30", rate: 5.00, event: "Volatile 1-10% range", source: "Insurance Journal" },
+    { date: "2026-03-31", rate: 5.00, event: "Stable at crisis levels", source: "House of Saud" }
   ]
 };

@@ -34,6 +34,7 @@ const REDIRECT_URI = 'https://core.spglobal.com/web/index.html';
 const SCOPES = 'openid profile email offline_access plattsconnect';
 
 const SEARCH_URL = 'https://api.platts.com/platts-platform/search/v2/symbol/search';
+const HISTORY_URL = 'https://api.platts.com/platts-platform/search/v2/symbol/history';
 
 const SYMBOLS = {
   PCAAS00: { key: 'brent',    label: 'Dated Brent',                bate: 'Close' },
@@ -46,6 +47,7 @@ const SYMBOLS = {
   AASXU00: { key: 'lng_nwe',  label: 'LNG NWE DES',               bate: 'Close' },
   DTMSC01: { key: 'ttf',      label: 'Dutch TTF Mo01',             bate: 'Close' },
   AASYN00: { key: 'henry_hub',label: 'Henry Hub $/MMBtu',           bate: 'Close' },
+  AWARA00: { key: 'awrp',     label: 'Crude Oil AWRP (War Risk)',   bate: 'Close' },
 };
 
 const PROJECT_DIR = path.join(__dirname, '..');
@@ -302,12 +304,48 @@ function updateSeed(priceItems) {
   console.log(`\n  Wrote ${SEED_FILE} (${(size / 1024).toFixed(1)} KB)`);
 }
 
+// ---------- History Backfill ----------
+async function backfillHistory(token, symbols) {
+  const resp = await fetch(HISTORY_URL, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${token}`,
+      'Content-Type': 'application/json',
+      'appkey': 'realtime',
+      'x-origin-app': 'Web',
+    },
+    body: JSON.stringify({
+      Symbols: symbols,
+      startDate: '2025-01-01',
+      endDate: new Date().toISOString().substring(0, 10),
+    }),
+  });
+
+  if (!resp.ok) {
+    console.log(`  History API: HTTP ${resp.status} (skipping backfill)`);
+    return {};
+  }
+
+  const data = await resp.json();
+  const result = {};
+  for (const entry of (data.Results || [])) {
+    const sym = entry.Symbol;
+    const config = SYMBOLS[sym];
+    if (!config) continue;
+    result[config.key] = (entry.Data || [])
+      .filter(d => d.Bate === 'c' && d.Value)
+      .map(d => ({ date: d.AssessDate.substring(0, 10), price: parseFloat(d.Value) }))
+      .sort((a, b) => a.date.localeCompare(b.date));
+  }
+  return result;
+}
+
 // ---------- Main ----------
 async function main() {
-  console.log('[1/3] Obtaining Platts Platform token...');
+  console.log('[1/4] Obtaining Platts Platform token...');
   const token = await getOktaToken();
 
-  console.log('\n[2/3] Fetching current prices...');
+  console.log('\n[2/4] Fetching current prices...');
   const items = await fetchCurrentPrices(token);
   console.log(`  Found ${items.length} of ${Object.keys(SYMBOLS).length} symbols\n`);
 
@@ -316,8 +354,31 @@ async function main() {
     process.exit(1);
   }
 
-  console.log('[3/3] Updating seed data...');
+  console.log('[3/4] Updating seed data...');
   updateSeed(items);
+
+  // Backfill AWRP history if seed has < 30 data points
+  let seed;
+  try { seed = JSON.parse(fs.readFileSync(SEED_FILE, 'utf-8')); } catch { seed = null; }
+  const awrpHist = seed?.prices?.awrp?.history || [];
+  if (awrpHist.length < 30) {
+    console.log('\n[4/4] Backfilling AWRP history...');
+    const histories = await backfillHistory(token, ['AWARA00']);
+    if (histories.awrp && histories.awrp.length > 0) {
+      seed.prices.awrp.history = histories.awrp;
+      const recent = histories.awrp.slice(-260);
+      const prices = recent.map(h => h.price);
+      seed.prices.awrp.high52w = Math.max(...prices);
+      seed.prices.awrp.low52w = Math.min(...prices);
+      if (histories.awrp.length >= 2) {
+        seed.prices.awrp.previousClose = histories.awrp[histories.awrp.length - 2].price;
+      }
+      fs.writeFileSync(SEED_FILE, JSON.stringify(seed, null, 2));
+      console.log(`  Backfilled ${histories.awrp.length} AWRP data points (${histories.awrp[0].date} → ${histories.awrp[histories.awrp.length - 1].date})`);
+    }
+  } else {
+    console.log('\n[4/4] AWRP history OK (' + awrpHist.length + ' points, skipping backfill)');
+  }
 
   console.log('\nDone.');
 }
