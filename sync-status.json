@@ -1,47 +1,47 @@
 {
-  "timestamp": "2026-03-29T20:28:20.214Z",
+  "timestamp": "2026-03-31T06:26:53.322Z",
   "overall": "ok",
   "pipelines": {
     "news_fm": {
       "status": "ok",
-      "dataAsOf": "30 Mar 2026",
-      "lastUpdated": "2026-03-30T04:00:00Z",
-      "details": "9/9 countries, 24 FMs, 22 shutdowns"
+      "dataAsOf": "31 Mar 2026",
+      "lastUpdated": "2026-03-31T16:00:00Z",
+      "details": "9/9 countries, 24 FMs, 23 shutdowns"
     },
     "prices": {
       "status": "ok",
-      "dataAsOf": "27 Mar 2026",
-      "lastUpdated": "2026-03-27T00:00:00Z",
-      "details": "10 symbols, latest 27 Mar 2026"
+      "dataAsOf": "30 Mar 2026",
+      "lastUpdated": "2026-03-30T00:00:00Z",
+      "details": "10 symbols, latest 30 Mar 2026"
     },
     "spr": {
       "status": "ok",
-      "dataAsOf": "30 Mar 2026",
-      "lastUpdated": "2026-03-30",
+      "dataAsOf": "31 Mar 2026",
+      "lastUpdated": "2026-03-31",
       "details": "30 countries, 67.7 mb released"
     },
     "soh": {
       "status": "ok",
-      "dataAsOf": "29 Mar 2026",
-      "lastUpdated": "2026-03-29T19:42:19.791Z",
-      "details": "31398 vessels, 15002 inside, 11 ADNOC"
+      "dataAsOf": "31 Mar 2026",
+      "lastUpdated": "2026-03-31T05:39:18.139Z",
+      "details": "1280 vessels, 822 inside, 11 ADNOC"
     },
     "import_flows": {
       "status": "ok",
-      "dataAsOf": "28 Mar 2026",
-      "lastUpdated": "2026-03-28",
+      "dataAsOf": "30 Mar 2026",
+      "lastUpdated": "2026-03-30",
       "details": "64 datasets, 6.4 MB"
     },
     "export_flows": {
       "status": "ok",
-      "dataAsOf": "28 Mar 2026",
-      "lastUpdated": "2026-03-28",
+      "dataAsOf": "30 Mar 2026",
+      "lastUpdated": "2026-03-30",
       "details": "88 datasets, 8.1 MB"
     },
     "flow_insights": {
       "status": "ok",
-      "dataAsOf": "30 Mar 2026",
-      "lastUpdated": "2026-03-29T20:28:19.482Z",
+      "dataAsOf": "31 Mar 2026",
+      "lastUpdated": "2026-03-31T06:26:52.072Z",
       "details": "160 datasets"
     }
   }

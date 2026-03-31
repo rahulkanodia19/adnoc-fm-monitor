@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-30T06:00:00Z",
+  "lastUpdated": "2026-03-30T04:00:00Z",
   "countryStatus": [
     {
       "id": "qatar",
@@ -488,7 +488,7 @@
       "flag": "🇸🇦",
       "status": "critical",
       "statusLabel": "Shutdown",
-      "summary": "Ras Tanura refinery restarted Mar 13. 4 offshore mega-fields still shut (~2.5M bpd). Crude rerouted to Yanbu via East-West Pipeline (7M bpd capacity). No formal FM.",
+      "summary": "Ras Tanura refinery restarted Mar 13. 4 offshore mega-fields still shut (~2.5M bpd). East-West Pipeline at max 7M bpd; Yanbu exports at 4.4M bpd with 40+ VLCCs queued. March exports avg ~4.355 mb/d (down from 7.1 Feb). New risk: Houthi Bab al-Mandeb closure threat would endanger Yanbu/Red Sea route. No formal FM.",
       "metrics": {
         "headline": "~2.5-3.0 mb/d offline",
         "productionOffline": "4 offshore fields + Ras Tanura",
@@ -512,17 +512,23 @@
           "unit": "kb/d"
         },
         "notes": {
-          "oil": "4 offshore mega-fields shut (~2.5M bpd); March exports avg ~4.4 mb/d (down from 7.1 Feb); East-West Pipeline at full 7M bpd capacity",
-          "gas": "Master Gas System reduced; offshore associated gas offline; onshore maintenance deferred",
-          "refining": "Ras Tanura reopened Mar 13; all onshore refineries operational; throughput constrained by crude routing",
-          "ports": "Yanbu at record ~5M bpd crude + 700-900k bpd products; Yanbu port loading bottleneck (~4.5M bpd capacity); Ras Tanura at partial ops"
+          "oil": "4 offshore mega-fields shut (~2.5M bpd); March exports avg ~4.355 mb/d (from 7.1 Feb); East-West Pipeline at max 7M bpd; Yanbu at 4.4M bpd with 40+ VLCCs queued",
+          "gas": "Master Gas System reduced; offshore associated gas offline; onshore maintenance deferred; Jafurah Phase 1 unaffected",
+          "refining": "Ras Tanura reopened Mar 13; all onshore refineries operational; throughput constrained by crude routing to Yanbu",
+          "ports": "Yanbu at ~4.4M bpd crude + 700-900k products; port bottleneck (~4.5M bpd capacity); Houthi Bab al-Mandeb closure threat endangers Red Sea route; Ras Tanura at partial ops"
         }
       },
       "events": [
         {
+          "date": "2026-03-29",
+          "title": "Houthi Bab al-Mandeb closure threat endangers Yanbu Red Sea exports",
+          "description": "Senior Houthi official Mohammed Mansour stated closing Bab al-Mandeb strait is 'among our options,' to be implemented 'in stages.' If executed, would directly threaten Saudi Yanbu Red Sea exports (currently 4.4M bpd crude + products) — the primary Hormuz bypass route. 40+ VLCCs anchored near Yanbu waiting to load; flows headed to China, India, S. Korea, Pakistan, Thailand. Goldman Sachs warns Brent could hit $135 if both Hormuz and Bab al-Mandeb close simultaneously. — Middle East Monitor, Al Jazeera, Bloomberg",
+          "isNew": true
+        },
+        {
           "date": "2026-03-28",
-          "title": "Yanbu exports set to hit record 3.8M bpd; March crude exports drop sharply",
-          "description": "Saudi Aramco March crude exports averaged ~4.355 mb/d per Kpler, well below 7.1 mb/d in February, despite Yanbu expected to hit record 3.8M bpd throughput. Brent surged to $112.57/bbl. P. Aliki crude carrier loaded at Ras Tanura for Pakistan transited Hormuz under IRGC tolled passage on Mar 28. — Kpler, AGBI, Bloomberg",
+          "title": "Yanbu exports at 4.4M bpd; March crude exports drop sharply to ~4.355M bpd",
+          "description": "Saudi Aramco March crude exports averaged ~4.355 mb/d per Kpler, well below 7.1 mb/d in February, despite Yanbu reaching ~4.4M bpd throughput (up from 760k Jan-Feb avg). Dubai physical crude surged to $126/bbl (76% above pre-war). P. Aliki crude carrier loaded at Ras Tanura for Pakistan transited Hormuz under IRGC tolled passage (~$2M fee). — Kpler, AGBI, Bloomberg, CNBC",
           "isNew": true
         },
         {
@@ -549,8 +555,8 @@
       ],
       "oilGasImpact": {
         "severity": "critical",
-        "summary": "~2.5-3.0 mb/d offline",
-        "details": "Ras Tanura refinery (550 kb/d) restarted Mar 13 after 11-day shutdown. Four major offshore fields (Safaniya, Zuluf, Marjan, Abu Safa) still shut since 9 Mar totaling 2-2.5M bpd. Crude rerouted via East-West Pipeline (converted to ~7M bpd capacity) to Yanbu. SABIC Yanbu plants operating via Red Sea route. ~20-25% of Saudi production capacity offline."
+        "summary": "~2.5-3.0 mb/d offline; Yanbu at 4.4M bpd but Bab al-Mandeb closure threatened",
+        "details": "Ras Tanura refinery (550 kb/d) restarted Mar 13. Four offshore fields (Safaniya, Zuluf, Marjan, Abu Safa) still shut since 9 Mar (~2-2.5M bpd). March crude exports avg 4.355 mb/d (down from 7.1 Feb). East-West Pipeline at max 7M bpd; Yanbu exports hit 4.4M bpd with 40+ VLCCs queued. Dubai physical at $126/bbl (76% premium). New risk: Houthis threaten Bab al-Mandeb closure ('among our options'); Goldman Sachs warns $135 Brent if both chokepoints blocked. Rystad estimates $25B total Gulf infrastructure repair bill."
       },
       "infrastructure": [
         {
@@ -735,6 +741,24 @@
           "title": "Saudi pipeline to bypass Hormuz hits 7M barrel goal - Fortune",
           "url": "https://fortune.com/2026/03/28/saudi-arabia-east-west-oil-pipeline-strait-hormuz-bypass-7-million-barrels-yanbu-red-sea/",
           "date": "2026-03-28"
+        },
+        {
+          "id": 10,
+          "title": "Houthi Bab al-Mandeb closure among our options - Middle East Monitor",
+          "url": "https://www.middleeastmonitor.com/20260329-closure-of-bab-al-mandeb-likely-amid-iran-us-war-houthi-official/",
+          "date": "2026-03-29"
+        },
+        {
+          "id": 11,
+          "title": "Saudi Yanbu exports surging to 4.4M bpd, 40+ VLCCs queued - Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-25/saudi-surges-oil-exports-from-yanbu-toward-5-million-target",
+          "date": "2026-03-25"
+        },
+        {
+          "id": 12,
+          "title": "Dubai physical crude at $126/bbl, 76% above pre-war - CNBC",
+          "url": "https://www.cnbc.com/2026/03/28/oil-gas-prices-iran-war-hormuz.html",
+          "date": "2026-03-28"
         }
       ]
     },
@@ -744,7 +768,7 @@
       "flag": "🇦🇪",
       "status": "critical",
       "statusLabel": "Escalated",
-      "summary": "Habshan gas complex resumed Mar 23. Shah Gas Field still shut. Ruwais Refinery-2 (417 kb/d) shut. Fujairah crude loading suspended. Das Island LNG at minimal capacity. >50% crude offline. ADNOC CEO calls Hormuz weaponization 'economic terrorism'.",
+      "summary": "IRGC struck EGA Al Taweelah aluminium Mar 29 (6 injured). Habshan resumed Mar 23. Shah Gas Field still shut. Ruwais Refinery-2 (417 kb/d) shut. Das Island LNG at minimal capacity. >50% crude offline. ADCOP at 71% utilization (1.62M bpd); 440k bpd spare. Houthi Bab al-Mandeb threat endangers Red Sea workaround.",
       "metrics": {
         "headline": "Shah + Ruwais + Fujairah offline; Habshan resumed",
         "productionOffline": "1+ Bcf/d gas + 417 kb/d refining + 1M bpd exports",
@@ -782,9 +806,15 @@
       },
       "events": [
         {
+          "date": "2026-03-29",
+          "title": "IRGC strikes EGA Al Taweelah aluminium complex — 6 injured, significant damage",
+          "description": "IRGC claimed drone/missile strikes on Emirates Global Aluminium (EGA) Al Taweelah complex in Abu Dhabi, injuring 6 workers and causing significant damage. IRGC stated attack was retaliation for UAE hosting US military bases. EGA Al Taweelah is one of the world's largest aluminium smelters (~2.5 Mtpa). Houthi Bab al-Mandeb closure threat ('among our options' per senior official) now endangers Saudi Yanbu Red Sea exports — the last major Gulf export workaround. — Al Jazeera, Gulf News",
+          "isNew": true
+        },
+        {
           "date": "2026-03-28",
           "title": "Indian LPG tankers and Pakistan crude carrier transit Hormuz under IRGC tollbooth",
-          "description": "Two Indian-flagged LPG carriers (BW Tyr and BW Elm) and a Greek crude tanker P. Aliki (chartered by Pakistan, loaded at Ras Tanura) transited the Strait under IRGC-controlled tolled passage. Iran is screening vessels by flag, cargo, and destination — allowing 'non-hostile' nations passage for a fee. Only 144 commodity crossings since Mar 1 (95% drop from peacetime) per Kpler.",
+          "description": "Two Indian-flagged LPG carriers (BW Tyr and BW Elm) transited under India's Operation Urja Suraksha naval escort program, and Greek tanker P. Aliki (chartered by Pakistan, loaded at Ras Tanura) transited the Strait under IRGC-controlled tolled passage. Iran charging ~$2M/vessel in Chinese yuan. COSCO vessels turned back despite China being listed as 'friendly.' Only ~144 commodity crossings since Mar 1 (95% drop) per Kpler. — The Week India, NBC News, Kpler",
           "isNew": true
         },
         {
@@ -863,8 +893,8 @@
       ],
       "oilGasImpact": {
         "severity": "critical",
-        "summary": "Habshan resumed; Shah + Ruwais + Fujairah + Das Island still offline",
-        "details": "Gas production down 1.0 Bcf/d (6.5 → 5.5): Habshan gas complex resumed Mar 23 after 4-day shutdown, restoring ~1 Bcf/d. Shah Gas Field still shut since 16 Mar (~1 Bcf/d offline). LNG exports near zero — Das Island LNG/LPG (ADGAS, 5.8 Mtpa) at minimal capacity due to Hormuz blockage. Ruwais Refinery-2 (417 kb/d) shut 10 Mar. Fujairah terminal attacked 3 times (14, 16, 17 Mar) — ADNOC crude loading halted (~1M bpd). All offshore production offline. >50% of UAE crude output disrupted. ADNOC CEO at CERAWeek Mar 25 called weaponizing Hormuz 'economic terrorism'."
+        "summary": "EGA Al Taweelah struck Mar 29; Shah + Ruwais + Das Island still offline; ADCOP at record 1.62M bpd",
+        "details": "IRGC struck EGA Al Taweelah aluminium complex Mar 29 (6 injured, significant damage). Gas production down 1.0 Bcf/d (6.5 → 5.5): Habshan resumed Mar 23; Shah still shut since 16 Mar (~1 Bcf/d offline). LNG near zero — Das Island at minimal capacity. Ruwais-2 (417 kb/d) shut 10 Mar. Fujairah partially resumed via ADCOP (avg 1.9M bpd Mar 20-24, up 57% YoY). ADCOP pipeline at 71% utilization (1.62M bpd in March) with ~440k bpd spare capacity. >50% of UAE crude output disrupted. New risk: Houthi threat to close Bab al-Mandeb would endanger Red Sea export corridor."
       },
       "infrastructure": [
         {
@@ -1016,6 +1046,13 @@
           "capacity": "Abu Dhabi deep-water; 5M+ TEU",
           "status": "partial",
           "notes": "Container & cargo ops continue at reduced capacity; customs arrangements in place"
+        },
+        {
+          "name": "EGA Al Taweelah Smelter",
+          "type": "Aluminium Smelter",
+          "capacity": "~2.5 Mtpa",
+          "status": "partial",
+          "notes": "IRGC drone/missile strike Mar 29; 6 injured, significant damage; one of world's largest smelters"
         }
       ],
       "sources": [
@@ -1126,6 +1163,24 @@
           "title": "Tug struck assisting Safeen Prestige, 4 killed - Seatrade Maritime",
           "url": "https://www.seatrade-maritime.com/security/tug-struck-assisting-abandoned-container-ship-in-strait-of-hormuz",
           "date": "2026-03-04"
+        },
+        {
+          "id": 19,
+          "title": "IRGC strikes EGA Al Taweelah aluminium in Abu Dhabi - Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/3/29/irans-irgc-claim-attacks-on-uae-bahrain-facilities-linked-to-us-war",
+          "date": "2026-03-29"
+        },
+        {
+          "id": 20,
+          "title": "India's Operation Urja Suraksha escorts tankers through Hormuz - Business Today",
+          "url": "https://www.businesstoday.in/india/story/operation-urja-suraksha-how-india-is-protecting-its-energy-lifelines-amid-west-asia-tensions-522705-2026-03-27",
+          "date": "2026-03-27"
+        },
+        {
+          "id": 21,
+          "title": "IRGC tolls at $2M/vessel; COSCO turned back - NBC News",
+          "url": "https://www.nbcnews.com/world/iran/irans-tehran-toll-booth-forces-tankers-pay-millions-leave-strait-hormu-rcna265258",
+          "date": "2026-03-28"
         }
       ]
     },
@@ -1428,7 +1483,7 @@
       "flag": "🇧🇭",
       "status": "critical",
       "statusLabel": "FM / Struck",
-      "summary": "Alba FM on aluminium. BAPCO Sitra refinery (405 kb/d) struck by missiles twice. Bapco Energies FM on all operations. Abu Safa shut.",
+      "summary": "IRGC struck Alba smelter again Mar 29 (2 injured). Alba FM on aluminium. BAPCO Sitra refinery (405 kb/d) struck by missiles twice. Bapco Energies FM on all operations. Abu Safa shut.",
       "metrics": {
         "headline": "405 kb/d refining offline",
         "productionOffline": "Sitra refinery + Abu Safa field",
@@ -1460,6 +1515,12 @@
       },
       "events": [
         {
+          "date": "2026-03-29",
+          "title": "IRGC strikes Alba aluminium smelter — 2 injured",
+          "description": "IRGC claimed drone/missile strike on Aluminium Bahrain (Alba) smelter, injuring 2 workers. IRGC stated attack was retaliation for Bahrain hosting US Navy 5th Fleet base. Alba already under FM for aluminium shipments since Mar 4. Third direct attack on Bahrain infrastructure since conflict began. — Al Jazeera",
+          "isNew": true
+        },
+        {
           "date": "2026-03-09",
           "title": "Bapco Energies FM on all group operations",
           "description": "Bapco Energies declared FM on all group operations. Sitra refinery struck for second time. 405 kb/d offline. Local fuel supply secured but exports halted."
@@ -1472,8 +1533,8 @@
       ],
       "oilGasImpact": {
         "severity": "critical",
-        "summary": "405 kb/d refining offline, FM declared",
-        "details": "BAPCO Sitra refinery (405 kb/d) struck by missiles on 4 Mar and 9 Mar. Bapco Energies declared FM on all group operations. Alba aluminium smelter FM - cannot ship via Hormuz. Abu Safa shared field (with Saudi) shut. UK evacuated personnel."
+        "summary": "405 kb/d refining offline, FM declared; Alba struck again Mar 29",
+        "details": "IRGC struck Alba smelter again on 29 Mar (2 injured) — third direct attack on Bahrain infrastructure. BAPCO Sitra refinery (405 kb/d) struck by missiles on 4 Mar and 9 Mar. Bapco Energies declared FM on all group operations. Alba aluminium smelter FM - cannot ship via Hormuz. Abu Safa shared field (with Saudi) shut. UK evacuated personnel."
       },
       "infrastructure": [
         {
@@ -1539,6 +1600,12 @@
           "title": "Sitra 2nd strike - Euronews",
           "url": "https://www.euronews.com",
           "date": "2026-03-09"
+        },
+        {
+          "id": 5,
+          "title": "IRGC strikes Alba smelter - Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/3/29/irans-irgc-claim-attacks-on-uae-bahrain-facilities-linked-to-us-war",
+          "date": "2026-03-29"
         }
       ]
     },
@@ -1859,7 +1926,7 @@
       "flag": "🇮🇷",
       "status": "critical",
       "statusLabel": "Struck / Disrupted",
-      "summary": "Israeli strikes hit South Pars gas field (Phases 3-6, 14, 17-18). USAF raids on Kharg Island. Tehran fuel depots and refinery destroyed. IRGC tolled passage: 142 transits since Mar 1 (95% drop). Tangsiri killed Mar 26. Houthis launched 2nd operation Mar 29. Bandar Khamir struck Mar 29 (5 killed). Pentagon readying ground ops. Pakistan hosted 4-nation ceasefire talks Mar 29; Iran dismissed.",
+      "summary": "Israeli strikes hit South Pars gas field (Phases 3-6, 14, 17-18). USAF raids on Kharg Island. Tehran fuel depots and refinery destroyed. IRGC tolled passage: ~$2M/vessel in yuan; COSCO ships turned back despite China 'friendly' status. Tangsiri killed Mar 26. Houthis launched 2nd operation Mar 29; Bab al-Mandeb closure 'among our options'. Bandar Khamir struck Mar 29. 3,500 US troops (31st MEU/USS Tripoli) arrived; Pentagon planning Kharg Island seizure raids. IRGC struck UAE/Bahrain aluminium plants Mar 29. Pakistan 4-nation talks; Iran dismissed.",
       "metrics": {
         "headline": "~476 kb/d crude + ~3.3 Bcf/d gas offline",
         "productionOffline": "South Pars phases + 14 oil fields reduced",
@@ -1893,14 +1960,20 @@
       "events": [
         {
           "date": "2026-03-29",
-          "title": "US-Israeli strikes hit Bandar Khamir port; Pentagon readies ground operations in Iran",
-          "description": "US-Israeli strikes bombed the port city of Bandar Khamir in southern Iran, killing at least 5 people and injuring 4 (IRNA). Pentagon preparing for weeks of limited ground operations including raids on Kharg Island and coastal sites near Hormuz — plans short of full invasion but could involve thousands of troops. Trump has not greenlit ground ops yet. Separately, UAE and Qatar intercepted Iranian drones on Day 30 of conflict. — Washington Post, Al Jazeera, Gulf News",
+          "title": "IRGC claims strikes on UAE and Bahrain aluminium plants; drones intercepted",
+          "description": "IRGC claimed responsibility for drone/missile strikes on EGA Al Taweelah aluminium complex in Abu Dhabi (6 injured, significant damage reported) and Alba smelter in Bahrain (2 injured). IRGC stated attacks were retaliation for Gulf states hosting US military bases. UAE and Qatar also intercepted additional Iranian drones on Day 30 of conflict. — Al Jazeera, Gulf News",
+          "isNew": true
+        },
+        {
+          "date": "2026-03-29",
+          "title": "US-Israeli strikes hit Bandar Khamir port; 31st MEU arrives for potential ground operations",
+          "description": "US-Israeli strikes bombed Bandar Khamir in southern Iran, killing at least 5 and injuring 4 (IRNA). ~3,500 US troops including 31st Marine Expeditionary Unit aboard USS Tripoli (with F-35Bs and MV-22 Ospreys) arrived in region. Pentagon planning 'weeks of limited ground operations' including raids on Kharg Island oil terminal and coastal sites near Hormuz to destroy anti-ship weapons. Trump has not greenlit ground ops yet. Iran aired unverified footage claiming to show captured US Marine from 'failed Kharg landing' — Pentagon has not confirmed. — Washington Post, Al Jazeera, NBC News",
           "isNew": true
         },
         {
           "date": "2026-03-29",
           "title": "Pakistan hosts 4-nation talks (Turkey, Egypt, Saudi) to broker end to Iran war",
-          "description": "Pakistan hosted foreign ministers from Turkey, Egypt, and Saudi Arabia to discuss 'possible ways to bring an early and permanent end to the war.' Pakistan facilitating indirect US-Iran talks; US 15-point ceasefire plan being deliberated by Iran. Houthis launched 2nd military operation against Israel (cruise missiles + drones) on Mar 29. Iran dismissed diplomatic overtures, warning any US troops 'would be on fire.' Next 48-72 hours considered critical. — NPR, Al Jazeera, US News, Fortune",
+          "description": "Pakistan hosted foreign ministers from Turkey, Egypt, and Saudi Arabia to discuss 'possible ways to bring an early and permanent end to the war.' Pakistan facilitating indirect US-Iran talks; US 15-point ceasefire plan rejected by Iran (counteroffer not ruled out). Houthis launched 2nd military operation against Israel (cruise missiles + drones) on Mar 29. Senior Houthi official: closing Bab al-Mandeb is 'among our options' — if implemented, would endanger Saudi Yanbu/Red Sea exports (currently 4.4M bpd), the last major Gulf export workaround. Iran dismissed diplomatic overtures, warning any US troops 'would be on fire.' — NPR, Al Jazeera, Middle East Monitor, Fortune",
           "isNew": true
         },
         {
@@ -1912,7 +1985,7 @@
         {
           "date": "2026-03-27",
           "title": "IRGC formally closes Hormuz to US/allied vessels; tolled passage system created",
-          "description": "IRGC Navy turned back 3 container ships including 2 COSCO vessels (CSCL Indian Ocean, CSCL Arctic Ocean) and Marshall Islands-flagged Lotus Rising near Larak Island. Officially proclaimed all movement prohibited for ships going to/from US, Israeli, and allied-nation ports. Vessel operators must submit details to IRGC intermediaries for vetting and clearance code. Thailand-flagged Mayuree Naree ran aground on Qeshm Island. Brent rose to $114/bbl. — USNI News, FDD, Al Jazeera",
+          "description": "IRGC Navy turned back 3 container ships including 2 COSCO vessels (CSCL Indian Ocean, CSCL Arctic Ocean) and Marshall Islands-flagged Lotus Rising near Larak Island — notably blocking Chinese vessels despite China being listed as 'friendly'. Tolled passage system charging ~$2M per vessel in Chinese yuan. Thailand-flagged Mayuree Naree ran aground on Qeshm Island. Thailand and Malaysia subsequently secured bilateral transit deals with Iran. GCC formally declared IRGC tolls illegal under UN conventions. Only ~144 commodity crossings since Mar 1 (95% drop from 2,652 in same period 2025). — USNI News, NBC News, Al Jazeera, Argus Media",
           "isNew": true
         },
         {
@@ -1954,8 +2027,8 @@
       ],
       "oilGasImpact": {
         "severity": "critical",
-        "summary": "~476 kb/d crude + ~3.3 Bcf/d gas offline; Houthis launch 2nd operation; Pakistan hosts 4-nation talks",
-        "details": "South Pars Phases 3-6, 14, 17-18 struck at Asaluyeh on 18 Mar (~12% of Iran's gas output offline). Tehran Refinery (250 kb/d) destroyed on 8 Mar. Bandar Abbas Refinery curtailed. 30+ fuel depots destroyed across Tehran. Kharg Island raided 13 Mar - exports disrupted but Iran still loaded avg 1.84 mb/d crude in March (84% from Kharg per Kpler). Southern oil fields ~30% shut-in. IRGC tolled passage system: 142 transits since Mar 1 (95% drop from 2,652 same period 2025); tolls ~$2M per transit. Houthis joined war Mar 28 with missile on Israel; 2nd operation Mar 29 (cruise missiles + drones). Pakistan hosted Turkey/Egypt/Saudi talks Mar 29 to broker ceasefire. Bandar Khamir struck Mar 29 (5 killed). Pentagon readying weeks of ground operations including Kharg Island seizure (WaPo). Iran dismissed diplomatic talks, warning US troops 'would be on fire.'"
+        "summary": "~476 kb/d crude + ~3.3 Bcf/d gas offline; IRGC struck UAE/Bahrain aluminium; Houthis threaten Bab al-Mandeb closure; 31st MEU arrives",
+        "details": "South Pars Phases 3-6, 14, 17-18 struck at Asaluyeh on 18 Mar (~12% of Iran's gas output offline). Tehran Refinery (250 kb/d) destroyed on 8 Mar. Bandar Abbas Refinery curtailed. 30+ fuel depots destroyed across Tehran. Kharg Island raided 13 Mar - exports disrupted but Iran still loaded avg 1.84 mb/d crude in March (84% from Kharg per Kpler); 55 VLCCs in region (18 above pre-war), 14 staging at Khor Fakkan STS. Southern oil fields ~30% shut-in. IRGC tolled passage system: ~144 transits since Mar 1 (95% drop); tolls ~$2M/vessel in yuan; COSCO vessels turned back despite China 'friendly' status; Thailand/Malaysia secured bilateral transit deals. IRGC struck EGA Al Taweelah (UAE) and Alba (Bahrain) aluminium plants Mar 29. Houthis joined war Mar 28; 2nd operation Mar 29 — senior official: Bab al-Mandeb closure 'among our options' (would endanger Saudi Yanbu workaround). Bandar Khamir struck Mar 29 (5 killed). 3,500 US troops (31st MEU/USS Tripoli with F-35Bs) arrived; Pentagon planning Kharg Island seizure raids. Pakistan hosted 4-nation talks; Iran dismissed, warning US troops 'would be on fire.' Rystad: $25B infrastructure repair bill across Gulf."
       },
       "infrastructure": [
         {
@@ -2286,6 +2359,42 @@
           "title": "Pakistan hosts regional powers for Iran talks with Hormuz focus - US News",
           "url": "https://www.usnews.com/news/world/articles/2026-03-29/pakistan-hosts-regional-powers-for-iran-talks-with-focus-on-hormuz-proposals",
           "date": "2026-03-29"
+        },
+        {
+          "id": 25,
+          "title": "IRGC claims strikes on UAE and Bahrain aluminium plants - Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/3/29/irans-irgc-claim-attacks-on-uae-bahrain-facilities-linked-to-us-war",
+          "date": "2026-03-29"
+        },
+        {
+          "id": 26,
+          "title": "Iran's Hormuz toll charging $2M per vessel in yuan - NBC News",
+          "url": "https://www.nbcnews.com/world/iran/irans-tehran-toll-booth-forces-tankers-pay-millions-leave-strait-hormu-rcna265258",
+          "date": "2026-03-28"
+        },
+        {
+          "id": 27,
+          "title": "Houthi official: Bab al-Mandeb closure among our options - Middle East Monitor",
+          "url": "https://www.middleeastmonitor.com/20260329-closure-of-bab-al-mandeb-likely-amid-iran-us-war-houthi-official/",
+          "date": "2026-03-29"
+        },
+        {
+          "id": 28,
+          "title": "3,500 US troops (31st MEU) arrive for potential Iran ground ops - NBC News",
+          "url": "https://www.nbcnews.com/world/iran/iran-waiting-possible-us-ground-assault-troops-rcna265665",
+          "date": "2026-03-29"
+        },
+        {
+          "id": 29,
+          "title": "Rystad: $25B Gulf infrastructure repair bill - Hydrocarbon Engineering",
+          "url": "https://www.hydrocarbonengineering.com/refining/26032026/rystad-energy-gulf-energy-infrastructure-left-facing-a-us25-billion-repair-bill/",
+          "date": "2026-03-26"
+        },
+        {
+          "id": 30,
+          "title": "GCC declares IRGC Hormuz tolls illegal - Argus Media",
+          "url": "https://www.argusmedia.com/en/news-and-insights/latest-market-news/2806424-iran-s-hormuz-transit-fee-illegal-gcc",
+          "date": "2026-03-28"
         }
       ]
     }
@@ -3049,6 +3158,58 @@
     }
   ],
   "shutdowns": [
+    {
+      "id": "sd-022",
+      "company": "EGA Al Taweelah (UAE Aluminium)",
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "date": "2026-03-29",
+      "status": "struck",
+      "statusLabel": "Struck",
+      "isNew": true,
+      "summary": "IRGC drone/missile strike on EGA Al Taweelah aluminium smelter. 6 workers injured. Significant damage reported. One of world's largest smelters (~2.5 Mtpa).",
+      "details": {
+        "volumeAffected": "~2.5 Mtpa aluminium smelting capacity partially disrupted",
+        "commodity": "Aluminium",
+        "duration": "Since 29 Mar 2026, damage assessment ongoing",
+        "reason": "IRGC claimed strikes were retaliation for UAE hosting US military bases. Simultaneous with strike on Alba smelter in Bahrain.",
+        "financialImpact": "EGA is world's largest premium aluminium producer. Production impact being assessed."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "IRGC strikes EGA Al Taweelah and Bahrain Alba - Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/3/29/irans-irgc-claim-attacks-on-uae-bahrain-facilities-linked-to-us-war",
+          "date": "2026-03-29"
+        }
+      ]
+    },
+    {
+      "id": "sd-021",
+      "company": "Alba Smelter (Bahrain) — 2nd Strike",
+      "country": "Bahrain",
+      "flag": "🇧🇭",
+      "date": "2026-03-29",
+      "status": "struck",
+      "statusLabel": "Struck",
+      "isNew": true,
+      "summary": "IRGC drone/missile strike on Alba aluminium smelter. 2 workers injured. Already under FM for aluminium shipments since Mar 4.",
+      "details": {
+        "volumeAffected": "~1.56 Mtpa aluminium capacity — already under FM; physical damage compounds export disruption",
+        "commodity": "Aluminium",
+        "duration": "Since 29 Mar 2026, damage assessment ongoing",
+        "reason": "IRGC claimed retaliation for Bahrain hosting US Navy 5th Fleet base. Third direct attack on Bahrain infrastructure since conflict began.",
+        "financialImpact": "Alba already under FM; strike adds physical damage to existing shipping disruption."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "IRGC strikes Alba and EGA aluminium - Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/3/29/irans-irgc-claim-attacks-on-uae-bahrain-facilities-linked-to-us-war",
+          "date": "2026-03-29"
+        }
+      ]
+    },
     {
       "id": "sd-020",
       "company": "Iraq (Rumaila/Zubair further cuts)",
