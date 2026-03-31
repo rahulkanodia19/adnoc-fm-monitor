@@ -1,12 +1,12 @@
 // ============================================================
 // data.js -- ADNOC Force Majeure & Geopolitical Monitor
 // Pre-populated monitoring data from verified intelligence
-// Last updated: 2026-03-31T16:00:00Z
-// Period: 28 February - 31 March 2026
+// Last updated: 2026-04-01T06:00:00Z
+// Period: 28 February - 1 April 2026
 // Context: Strait of Hormuz / Gulf military escalation
 // ============================================================
 
-const LAST_UPDATED = "2026-03-31T16:00:00Z";
+const LAST_UPDATED = "2026-04-01T06:00:00Z";
 
 // ---------- TABLE 1: Country Status Matrix ----------
 const COUNTRY_STATUS_DATA = [
@@ -245,7 +245,7 @@ const COUNTRY_STATUS_DATA = [
         date: "2026-03-29",
         title: "Houthi Bab al-Mandeb closure threat endangers Yanbu Red Sea exports",
         description: "Senior Houthi official Mohammed Mansour stated closing Bab al-Mandeb strait is 'among our options,' to be implemented 'in stages.' If executed, would directly threaten Saudi Yanbu Red Sea exports (currently 4.4M bpd crude + products) — the primary Hormuz bypass route. 40+ VLCCs anchored near Yanbu waiting to load; flows headed to China, India, S. Korea, Pakistan, Thailand. Goldman Sachs warns Brent could hit $135 if both Hormuz and Bab al-Mandeb close simultaneously. — Middle East Monitor, Al Jazeera, Bloomberg",
-        isNew: true
+        isNew: false
       },
       {
         date: "2026-03-28",
@@ -332,11 +332,11 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1E6}\u{1F1EA}",
     status: "critical",
     statusLabel: "Escalated",
-    summary: "VLCC Al Salmi struck by Iranian drone at Dubai port anchorage Mar 31 (fire, 2M bbl cargo). EGA Al Taweelah struck Mar 29. Shah still shut. Ruwais-2 (417 kb/d) shut. ADCOP at 71% utilization (1.62M bpd). >50% crude offline. S&P Platts bifurcating FOB Arab Gulf pricing (Inside/Outside Strait) from Apr 1.",
+    summary: "S&P Platts Inside/Outside Strait pricing bifurcation live Apr 1. VLCC Al Salmi struck at Dubai port Mar 31. EGA Al Taweelah struck Mar 29. Shah still shut. Ruwais-2 (417 kb/d) shut. ADCOP at 1.62M bpd (71% utilization). >50% crude offline. OPEC+ +206 kb/d effective Apr 1 (symbolic).",
     metrics: {
-      headline: "Al Salmi VLCC struck at Dubai port; Shah + Ruwais offline",
-      productionOffline: "1+ Bcf/d gas + 417 kb/d refining + tanker attacked",
-      keyFigure: ">50% of UAE crude output offline; WTI $106.70"
+      headline: "S&P Platts Inside/Outside Strait bifurcation live Apr 1",
+      productionOffline: "1+ Bcf/d gas + 417 kb/d refining; ADCOP at 1.62M bpd",
+      keyFigure: ">50% of UAE crude output offline; Brent ~$112/bbl"
     },
     production: {
       oil: { preWar: 3400, current: 1600, unit: "kb/d" },
@@ -348,10 +348,16 @@ const COUNTRY_STATUS_DATA = [
         gas: "Habshan resumed Mar 23; Shah still shut (~1 Bcf/d); offshore associated gas reduced",
         refining: "Ruwais-2 shut (417 kb/d); 805 kb/d available; Jebel Ali operational",
         lng: "Das Island LNG at minimal capacity; Hormuz blocked; transaction-by-transaction basis",
-        ports: "Fujairah loadings partially resumed at 1.9M bpd Mar 20-24 via ADCOP; Musaffah at partial ops; DXB fuel terminal shut; ADCOP pipeline bypassing Hormuz at record 1.62M bpd"
+        ports: "Fujairah loadings at 1.9M bpd via ADCOP; S&P Platts Inside/Outside Strait pricing bifurcation live Apr 1; DXB fuel terminal shut; ADCOP at record 1.62M bpd; Musaffah at partial ops"
       }
     },
     events: [
+      {
+        date: "2026-04-01",
+        title: "S&P Platts launches FOB Arab Gulf (Inside Strait) assessments — market bifurcation formalised",
+        description: "S&P Global Platts launched 9 new daily FOB Arab Gulf (Inside Strait) spot differential assessments for naphtha, gasoline, jet/kerosene, and gasoil, effective April 1. Assessments reflect value of cargoes loading at Inside Strait ports 20-40 days forward, published as premiums/discounts to MOPAG netback benchmarks. Existing FOB Arab Gulf differentials now reflect loadings at Outside Strait ports only (Fujairah, Sohar, Duqm). Formalises the market bifurcation between trapped Gulf barrels and those with safe Hormuz-free export access. OPEC+ April output increase of 206 kb/d takes effect — largely symbolic given Gulf-wide shut-ins. — S&P Global, OPEC",
+        isNew: true
+      },
       {
         date: "2026-03-31",
         title: "VLCC Al Salmi struck by Iranian drone at Dubai port anchorage — 2M bbl cargo, fire",
@@ -362,7 +368,7 @@ const COUNTRY_STATUS_DATA = [
         date: "2026-03-29",
         title: "IRGC strikes EGA Al Taweelah aluminium complex — 6 injured, significant damage",
         description: "IRGC claimed drone/missile strikes on Emirates Global Aluminium (EGA) Al Taweelah complex in Abu Dhabi, injuring 6 workers and causing significant damage. IRGC stated attack was retaliation for UAE hosting US military bases. EGA Al Taweelah is one of the world's largest aluminium smelters (~2.5 Mtpa). LME aluminium jumped 6% to $3,492/t (4-year high). — Al Jazeera, Gulf News, Bloomberg",
-        isNew: true
+        isNew: false
       },
       {
         date: "2026-03-28",
@@ -526,10 +532,10 @@ const COUNTRY_STATUS_DATA = [
       gas: { preWar: 3.0, current: 0.8, unit: "Bcf/d" },
       refining: { capacity: 1300, affected: 400, available: 900, unit: "kb/d" },
       notes: {
-        oil: "Basra output ~800k bpd (from 3.3M); storage at max capacity; BP Rumaila cut to 350k; Eni Zubair cut 70k",
-        gas: "Associated gas collapses with ~76% crude cuts; Khor Mor (Kurdistan) halted",
+        oil: "Basra output ~800k bpd (from 3.3M); storage at max; BP Rumaila cut to 350k; Kirkuk-Ceyhan pipeline at 250k bpd (aiming 300k) — Iraq's only non-Hormuz export route",
+        gas: "Associated gas collapses with ~76% crude cuts; Khor Mor (Kurdistan) halted; Iraq lost ~3,100 MW from halted Iran gas pipeline",
         refining: "Lanaz struck; Baiji/Basra at reduced throughput; Daura/Karbala operational for domestic",
-        ports: "Basra Oil Terminal shut; Khor Al-Amaya shut; tanker shortage critical; no loadings since early Mar"
+        ports: "Basra Oil Terminal shut; Khor Al-Amaya shut; Kirkuk-Ceyhan to Turkey at 250k bpd (only export route); tanker shortage critical"
       }
     },
     events: [
@@ -637,7 +643,7 @@ const COUNTRY_STATUS_DATA = [
         date: "2026-03-29",
         title: "IRGC strikes Alba aluminium smelter — 2 injured",
         description: "IRGC claimed drone/missile strike on Aluminium Bahrain (Alba) smelter, injuring 2 workers. IRGC stated attack was retaliation for Bahrain hosting US Navy 5th Fleet base. Alba already under FM for aluminium shipments since Mar 4. Third direct attack on Bahrain infrastructure since conflict began. — Al Jazeera",
-        isNew: true
+        isNew: false
       },
       {
         date: "2026-03-09",
@@ -709,7 +715,7 @@ const COUNTRY_STATUS_DATA = [
         date: "2026-03-29",
         title: "Salalah Port struck again — crane destroyed, operations suspended ~48hrs",
         description: "Two Iranian drones hit Salalah Port on Saturday morning, destroying a large container crane (arm broken and hanging into water). One foreign worker injured with moderate injuries. No vessels at berth at time of strike. Iran claimed it targeted a US support ship. Port handles 3.3M+ TEU annually. — Maritime Executive, Saudi Gazette, Turkiye Today",
-        isNew: true
+        isNew: false
       },
       {
         date: "2026-03-11",
@@ -821,11 +827,11 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1EE}\u{1F1F7}",
     status: "critical",
     statusLabel: "Struck / Disrupted",
-    summary: "IRGC drone struck VLCC Al Salmi at Dubai port Mar 31 (2M bbl cargo). Iran Parliament approved Hormuz toll plan Mar 31. Trump threatened to 'obliterate' Kharg Island + desalination Mar 30. Tangsiri death confirmed Mar 30. 82nd Airborne deploying. South Pars struck. 195 Hormuz crossings in March (95% drop). Iran suspended nuclear talks.",
+    summary: "Day 33: Trump Apr 6 deadline approaches — threat to destroy Kharg, power plants, desalination. China-Pakistan call for immediate ceasefire. OPEC+ +206 kb/d effective Apr 1 (symbolic). IRGC toll at $2M/vessel in yuan (Parliament approved). 195 Hormuz crossings in March (95% drop). 82nd Airborne deploying. South Pars struck. Nuclear talks suspended.",
     metrics: {
-      headline: "Al Salmi VLCC struck at Dubai; Hormuz toll plan approved",
+      headline: "Trump Apr 6 deadline; China-Pakistan ceasefire call; toll legalized",
       productionOffline: "South Pars phases + 14 oil fields reduced; 195 crossings in March",
-      keyFigure: "~15% crude, ~13% gas disrupted; toll plan legalized"
+      keyFigure: "~15% crude, ~13% gas disrupted; Kharg loading 1.84 mb/d"
     },
     production: {
       oil: { preWar: 3176, current: 2700, unit: "kb/d" },
@@ -836,10 +842,16 @@ const COUNTRY_STATUS_DATA = [
         gas: "Asaluyeh processing hit; ~100 MMcm/d offline (~12% of South Pars); Fajr Jam fire; Iran suspended nuclear talks",
         refining: "Tehran Refinery (250 kb/d) destroyed; Bandar Abbas curtailed; Siraf condensate operational",
         lng: "No LNG export capacity; South Pars disruption affects domestic supply",
-        ports: "Kharg loading; Jask bypass at ~300k bpd; Parliament approved Hormuz toll plan Mar 31; 195 crossings in March (95% drop)"
+        ports: "Kharg loading avg 1.84 mb/d (Kpler); Jask bypass at ~300k bpd; Parliament approved Hormuz toll plan; 195 crossings in March (95% drop); IRGC toll at $2M/vessel in yuan"
       }
     },
     events: [
+      {
+        date: "2026-04-01",
+        title: "Day 33: Trump Apr 6 deadline approaches; China-Pakistan call for immediate ceasefire; OPEC+ hike takes effect",
+        description: "OPEC+ April production increase of 206 kb/d takes effect (agreed Mar 1) — largely symbolic given Gulf-wide shut-ins. Trump's April 6 deadline for Iran to reopen Hormuz approaches (threat to destroy power plants, oil wells, Kharg, desalination). China and Pakistan called for 'immediate ceasefire' after FM Dar–Wang Yi Beijing meeting (Mar 31). US gas hit $4/gal (first since 2022). Houthis threatening Bab al-Mandeb closure but have not yet attacked Red Sea shipping. EIA weekly report expected to show first official SPR inventory drawdown. Next OPEC+ meeting Apr 5. Brent ~$112/bbl, WTI ~$102/bbl. — CNN, PBS, OPEC, NBC News, Fortune",
+        isNew: true
+      },
       {
         date: "2026-03-31",
         title: "Iran Parliament approves Hormuz toll plan; IRGC drone strikes VLCC Al Salmi at Dubai",
@@ -856,19 +868,19 @@ const COUNTRY_STATUS_DATA = [
         date: "2026-03-29",
         title: "IRGC claims strikes on UAE and Bahrain aluminium plants; drones intercepted",
         description: "IRGC claimed responsibility for drone/missile strikes on EGA Al Taweelah aluminium complex in Abu Dhabi (6 injured, significant damage) and Alba smelter in Bahrain (2 injured). IRGC stated attacks were retaliation for Gulf states hosting US military bases. LME aluminium jumped 6% to $3,492/t (4-year high). UAE and Qatar also intercepted additional Iranian drones on Day 30 of conflict. — Al Jazeera, Gulf News, Bloomberg",
-        isNew: true
+        isNew: false
       },
       {
         date: "2026-03-29",
         title: "US-Israeli strikes hit Bandar Khamir port; 31st MEU arrives for potential ground operations",
         description: "US-Israeli strikes bombed Bandar Khamir in southern Iran, killing at least 5 and injuring 4 (IRNA). ~3,500 US troops including 31st Marine Expeditionary Unit aboard USS Tripoli (with F-35Bs and MV-22 Ospreys) arrived in region. Pentagon planning 'weeks of limited ground operations' including raids on Kharg Island oil terminal and coastal sites near Hormuz to destroy anti-ship weapons. Trump has not greenlit ground ops yet. — Washington Post, Al Jazeera, NBC News",
-        isNew: true
+        isNew: false
       },
       {
         date: "2026-03-29",
         title: "Pakistan hosts 4-nation talks; Houthis launch 2nd operation against Israel",
         description: "Pakistan hosted foreign ministers from Turkey, Egypt, and Saudi Arabia. Pakistan FM visiting China Mar 31 for further coordination. Houthis launched 2nd military operation against Israel. Senior Houthi official: closing Bab al-Mandeb is 'among our options.' Iran dismissed diplomatic overtures, warning US troops 'would be on fire.' 195 total Hormuz commodity crossings in March (95% drop from 2,652 in same period 2025). — NPR, Al Jazeera, Middle East Monitor, UANI",
-        isNew: true
+        isNew: false
       },
       {
         date: "2026-03-28",
@@ -921,7 +933,7 @@ const COUNTRY_STATUS_DATA = [
     ],
     oilGasImpact: {
       severity: "critical",
-      summary: "Hormuz toll plan legalized Mar 31; VLCC Al Salmi struck at Dubai; Trump threatens Kharg obliteration; Tangsiri death confirmed; 82nd Airborne deploying",
+      summary: "Day 33: Trump Apr 6 deadline; China-Pakistan ceasefire call; OPEC+ +206 kb/d (symbolic); toll legalized; 82nd Airborne deploying; Kharg loading 1.84 mb/d",
       details: "Iran Parliament approved Hormuz toll plan Mar 31 (rial-based toll for all transits). IRGC drone struck VLCC Al Salmi (2M bbl crude) at Dubai port Mar 31. Trump threatened to 'obliterate' Kharg Island, oil wells, desalination plants (Mar 30). Iran confirmed Tangsiri death from Mar 26 strike. 82nd Airborne deploying; 31st MEU already in region. Iran suspended nuclear talks. 195 Hormuz commodity crossings in March (95% drop; UANI); 174.2M bbl floating storage. Kharg still loading avg 1.84 mb/d (Kpler). South Pars Phases 3-6, 14, 17-18 struck. Tehran Refinery destroyed. IRGC struck EGA/Alba aluminium plants Mar 29. Houthis joined war; Bab al-Mandeb closure 'among our options.' Pakistan hosted 4-nation talks; FM visiting China Mar 31. Rystad: $25B infrastructure repair bill."
     },
     infrastructure: [
@@ -1546,7 +1558,7 @@ const SHUTDOWNS_NO_FM_DATA = [
     date: "2026-03-29",
     status: "struck",
     statusLabel: "Struck",
-    isNew: true,
+    isNew: false,
     summary: "IRGC drone/missile strike on EGA Al Taweelah aluminium smelter. 6 workers injured. Significant damage reported. One of world's largest smelters (~2.5 Mtpa).",
     details: {
       volumeAffected: "~2.5 Mtpa aluminium smelting capacity partially disrupted",
@@ -1567,7 +1579,7 @@ const SHUTDOWNS_NO_FM_DATA = [
     date: "2026-03-29",
     status: "struck",
     statusLabel: "Struck",
-    isNew: true,
+    isNew: false,
     summary: "IRGC drone/missile strike on Alba aluminium smelter. 2 workers injured. Already under FM for aluminium shipments since Mar 4.",
     details: {
       volumeAffected: "~1.56 Mtpa aluminium capacity — already under FM; physical damage compounds export disruption",
@@ -2009,7 +2021,7 @@ const SHUTDOWNS_NO_FM_DATA = [
 
 const SPR_RELEASE_DATA = {
   announced: "2026-03-11",
-  asOf: "2026-03-31",
+  asOf: "2026-04-01",
   trigger: "Strait of Hormuz disruption / Iran conflict — ~20% of global oil supply at risk",
   totalCommitted: 426.0,
   totalCrude: 301,
@@ -2017,11 +2029,11 @@ const SPR_RELEASE_DATA = {
   totalReleased: 67.7,
   releasePeriodDays: 120,
   keyInsights: [
-    "South Korea launched strategic reserve swap Mar 31, supplying 20+ mb crude to refiners in Apr-May to bridge Middle Eastern supply gaps",
-    "IEA launched energy crisis policy tracker Mar 30, monitoring oil stock releases and consumer protection measures across 32 member nations",
-    "European releases (107.5 mb across 17 countries) began Mar 28; first actual volumes from EBV, CORES, and BEIS expected in data this week",
-    "US first tranche of 45.2 mb delivering from 3 SPR sites since Mar 20; EIA weekly report due Apr 1 will show first official inventory drawdown",
-    "Global release progress: 67.7 of 426.0 mb (15.9%) on Day 20 of 120; pace needs to accelerate to ~3.6 mb/day to meet 120-day target"
+    "EIA weekly report releasing today (Apr 1) for week ending Mar 27 — first official data showing US SPR drawdown from 415.4 mb baseline",
+    "Japan state reserves flowing from 11 bases since Mar 26, adding to private-sector releases since Mar 16; 11.0 mb released (13.8% of 79.8 mb)",
+    "South Korea swap program launched Mar 31 with initial 2 mb contract; 20+ mb crude to flow to refiners Apr-May alongside 6.0 mb direct releases",
+    "OPEC+ 206 kb/d output increase (8 countries led by Saudi +62, Russia +62 kb/d) took effect today; largely symbolic given Gulf shut-ins",
+    "Global release progress: 67.7 of 426.0 mb (15.9%) on Day 21 of 120; European volumes expected in data this week as 17 countries began Mar 28"
   ],
   sources: [
     { title: "South Korea launches strategic reserve swap to bridge oil supply gap", url: "https://en.sedaily.com/finance/2026/03/31/korea-launches-strategic-reserve-swap-to-bridge-oil-supply", date: "2026-03-31" },
@@ -2036,6 +2048,7 @@ const SPR_RELEASE_DATA = {
     { title: "Which countries have strategic oil reserves and how much — Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/23/which-countries-have-strategic-oil-reserves-and-how-much", date: "2026-03-23" },
     { title: "DOE begins delivering SPR barrels at record speeds", url: "https://www.energy.gov/hgeo/articles/energy-department-begins-delivering-spr-barrels-record-speeds", date: "2026-03-20" },
     { title: "IEA confirms member country contributions", url: "https://www.iea.org/news/iea-confirms-member-country-contributions-to-collective-action-to-release-oil-stocks-in-response-to-middle-east-disruptions", date: "2026-03-19" },
+    { title: "Spain authorizes release of oil reserves to mitigate Iran war impact", url: "https://www.lamoncloa.gob.es/lang/en/gobierno/councilministers/paginas/2026/20260317-council-press-conference.aspx", date: "2026-03-17" },
     { title: "IEA collective action decision", url: "https://www.iea.org/news/update-on-iea-collective-action-decision-of-11-march-2026", date: "2026-03-15" },
     { title: "US DOE SPR release announcement", url: "https://www.energy.gov/articles/united-states-release-172-million-barrels-oil-strategic-petroleum-reserve", date: "2026-03-11" },
     { title: "IEA 400m barrels release — Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/11/iea-proposes-release-of-400m-barrels-of-oil-from-strategic-reserves", date: "2026-03-11" },
@@ -2079,7 +2092,7 @@ const SPR_RELEASE_DATA = {
 // Source: Backfilled from news articles + daily HormuzTracker.com scrape
 // ============================================================
 const WAR_RISK_PREMIUM_DATA = {
-  lastUpdated: "2026-03-31",
+  lastUpdated: "2026-04-01",
   metric: "Additional War Risk Premium (AWRP) — Strait of Hormuz",
   unit: "% of hull value (7-day policy)",
   preConflictBaseline: 0.20,
@@ -2116,6 +2129,7 @@ const WAR_RISK_PREMIUM_DATA = {
     { date: "2026-03-26", rate: 7.50, event: "Sustained 5-10% range", source: "Euronews" },
     { date: "2026-03-27", rate: 5.00, event: "US insurance program announced", source: "Insurance Journal" },
     { date: "2026-03-30", rate: 5.00, event: "Volatile 1-10% range", source: "Insurance Journal" },
-    { date: "2026-03-31", rate: 5.00, event: "Stable at crisis levels", source: "House of Saud" }
+    { date: "2026-03-31", rate: 5.00, event: "Stable at crisis levels", source: "House of Saud" },
+    { date: "2026-04-01", rate: 5.00, event: "Stable at 5%; S&P Platts Inside/Outside Strait bifurcation launches; Lloyd's: double-digit millions per trip", source: "Lloyd's List / Insurance Journal" }
   ]
 };
