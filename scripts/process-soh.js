@@ -441,6 +441,90 @@ function main() {
   fs.writeFileSync(path.join(SOH_DIR, 'summary.json'), JSON.stringify(summary, null, 2));
   console.log(`Summary: Inside=${summary.insideTotal}, Outside=${summary.outsideTotal}, ADNOC=${summary.adnocCount}, Transit=${transitVessels.length}`);
 
+  // --- Daily vessel snapshot for transit detection ---
+  const snapshotDir = path.join(SOH_DIR, '.daily-vessel-snapshots');
+  if (!fs.existsSync(snapshotDir)) fs.mkdirSync(snapshotDir, { recursive: true });
+
+  // Build today's snapshot: IMO → { name, inside, type, commodity }
+  const todaySnapshot = {};
+  for (const v of allVesselsWithPos) {
+    if (!v.imo) continue;
+    todaySnapshot[v.imo] = {
+      name: v.name || '',
+      inside: isInsideGulf(v.lat, v.lng),
+      type: v.vesselTypeClass || 'Unknown',
+      commodity: v.commodityTypes?.[0] || 'other',
+    };
+  }
+  fs.writeFileSync(path.join(snapshotDir, `${today}.json`), JSON.stringify(todaySnapshot));
+  console.log(`Vessel snapshot: ${Object.keys(todaySnapshot).length} vessels saved to .daily-vessel-snapshots/${today}.json`);
+
+  // Find most recent previous snapshot (handles missed days)
+  const snapshotFiles = fs.readdirSync(snapshotDir)
+    .filter(f => f < `${today}.json` && f.endsWith('.json'))
+    .sort();
+  const prevSnapshotFile = snapshotFiles.length > 0 ? snapshotFiles[snapshotFiles.length - 1] : null;
+
+  if (prevSnapshotFile) {
+    const prevDate = prevSnapshotFile.replace('.json', '');
+    const gapDays = Math.round((new Date(today) - new Date(prevDate)) / 86400000);
+    const prevSnapshot = JSON.parse(fs.readFileSync(path.join(snapshotDir, prevSnapshotFile), 'utf-8'));
+
+    let exited = 0, entered = 0;
+    let tanker_exit = 0, bulk_exit = 0, container_exit = 0, other_exit = 0;
+    let tanker_enter = 0, bulk_enter = 0, container_enter = 0, other_enter = 0;
+
+    for (const [imo, curr] of Object.entries(todaySnapshot)) {
+      const prev = prevSnapshot[imo];
+      if (!prev) continue;
+      const t = (curr.type || '').toLowerCase();
+
+      if (prev.inside && !curr.inside) {
+        exited++;
+        if (t.includes('tanker')) tanker_exit++;
+        else if (t.includes('bulk')) bulk_exit++;
+        else if (t.includes('container')) container_exit++;
+        else other_exit++;
+      }
+      if (!prev.inside && curr.inside) {
+        entered++;
+        if (t.includes('tanker')) tanker_enter++;
+        else if (t.includes('bulk')) bulk_enter++;
+        else if (t.includes('container')) container_enter++;
+        else other_enter++;
+      }
+    }
+
+    // Append to transit history
+    const transitHistoryPath = path.join(SOH_DIR, 'daily-transit-history.json');
+    let transitHistory = [];
+    try { transitHistory = JSON.parse(fs.readFileSync(transitHistoryPath, 'utf-8')); } catch {}
+
+    const entry = {
+      date: today, comparedTo: prevDate, gapDays,
+      exited, entered,
+      tanker_exit, bulk_exit, container_exit, other_exit,
+      tanker_enter, bulk_enter, container_enter, other_enter,
+    };
+
+    const existingIdx = transitHistory.findIndex(h => h.date === today);
+    if (existingIdx >= 0) transitHistory[existingIdx] = entry;
+    else transitHistory.push(entry);
+    transitHistory = transitHistory.slice(-180); // 6 months
+    fs.writeFileSync(transitHistoryPath, JSON.stringify(transitHistory, null, 2));
+    console.log(`Transit detection: ${exited} exited, ${entered} entered (vs ${prevDate}, gap ${gapDays}d)`);
+  } else {
+    console.log('Transit detection: first snapshot — no comparison available yet');
+  }
+
+  // Clean up snapshots older than 90 days
+  const cutoffDate = new Date(Date.now() - 90 * 86400000).toISOString().split('T')[0];
+  for (const f of fs.readdirSync(snapshotDir)) {
+    if (f < `${cutoffDate}.json`) {
+      fs.unlinkSync(path.join(snapshotDir, f));
+    }
+  }
+
   // --- List output files ---
   console.log('\n=== Processing complete ===');
   console.log('Files:');

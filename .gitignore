@@ -8,6 +8,7 @@ sync-log-master.txt
 sync-progress.json
 sync-logs/
 .sync-backup/
+soh-data/.daily-vessel-snapshots/
 flow-summary-batch*.json
 flow-insights-batch-*.json
 flow-insights-zeros.json

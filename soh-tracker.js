@@ -56,6 +56,7 @@
       loadJSON('flows-crude-import.json'),   // 19
       loadJSON('flows-lng-import.json'),     // 20
       loadJSON('flows-lpg-import.json'),     // 21
+      loadJSON('daily-transit-history.json'), // 22
     ]);
     const get = (i) => results[i].status === 'fulfilled' ? results[i].value : null;
     return {
@@ -68,6 +69,7 @@
       flowsCrude: get(15), flowsLng: get(16), flowsLpg: get(17),
       crisisTransits: get(18),
       flowsCrudeImport: get(19), flowsLngImport: get(20), flowsLpgImport: get(21),
+      dailyTransitHistory: get(22),
     };
   }
 
@@ -304,15 +306,15 @@
       </div>
 
       <h3 class="text-sm font-bold text-navy-900 uppercase tracking-wider mt-6 mb-3">Vessel Transits via Hormuz</h3>
-      <p class="text-xs text-navy-500 mb-3">All vessel types transiting the Strait (not commodity-specific). View and Range toggles above also apply.</p>
+      <p class="text-xs text-navy-500 mb-3">Vessels transiting through the Strait of Hormuz by type. Dashed red line = crisis start (28 Feb). Range toggle applies.</p>
       <div class="bg-white rounded-xl border border-navy-200 p-3 sm:p-5">
         <p class="text-xs font-semibold text-navy-700 mb-1">Daily Vessel Transits by Type</p>
-        <p class="text-[10px] text-navy-400 mb-2">Vessel transits through Strait of Hormuz by vessel type (both directions) — Source: IMF PortWatch</p>
-        <div class="h-[260px] sm:h-[300px]"><canvas id="soh-vessel-stacked-chart"></canvas></div>
+        <p class="text-[10px] text-navy-400 mb-2">Sources: IMF PortWatch (pre-23 Mar) | Kpler crisis-transits (23-30 Mar) | Daily vessel snapshots (31 Mar+)</p>
+        <div class="h-[280px] sm:h-[320px]"><canvas id="soh-vessel-stacked-chart"></canvas></div>
       </div>
       <div class="bg-sky-50 border border-sky-200 rounded-lg px-4 py-2.5 mt-3 text-xs text-sky-800">
         <strong>Note:</strong> Volume chart: Crude/condensate &amp; Refined in bbl/day; LPG in mmt/day. Pre-crisis crude: ~15M bbl/day.
-        Vessel count chart: All vessel types from IMF PortWatch (~90-130/day pre-crisis). Commodity toggle does not affect vessel counts.
+        Vessel transits: ~96/day pre-crisis, collapsed to ~8/day during Hormuz disruption. Commodity toggle does not affect vessel counts.
       </div>
     </div>`;
   }
@@ -403,62 +405,162 @@
 
     flowChartExport = makeVolumeChart('soh-flow-export-chart', exportSeries, flowChartExport);
 
-    // IMF PortWatch vessel count charts
+    // Vessel transit chart — stitched from IMF + crisis-transits + daily snapshots
     const imf = data.imfTransit;
-    if (imf?.records) {
-      let imfRecords = imf.records.filter(r => r.date <= new Date().toISOString().split('T')[0]);
-      imfRecords = filterFlowsByRange(imfRecords.map(r => ({ date: r.date, _raw: r })), state.flowRange).map(r => r._raw);
-      // Aggregate by view (weekly/monthly)
-      const agg = (records, keyFn) => {
-        const groups = {};
-        for (const r of records) {
-          const k = keyFn(r);
-          if (!groups[k]) groups[k] = { date: k, n_tanker: 0, n_dry_bulk: 0, n_container: 0, n_other: 0, count: 0 };
-          groups[k].n_tanker += (r.n_tanker || 0);
-          groups[k].n_dry_bulk += (r.n_dry_bulk || 0);
-          groups[k].n_container += (r.n_container || 0);
-          groups[k].n_other += ((r.n_total || 0) - (r.n_tanker || 0) - (r.n_dry_bulk || 0) - (r.n_container || 0));
-          groups[k].count++;
-        }
-        return Object.values(groups).sort((a, b) => a.date.localeCompare(b.date)).map(g => ({
-          date: g.date, n_tanker: Math.round(g.n_tanker / g.count), n_dry_bulk: Math.round(g.n_dry_bulk / g.count),
-          n_container: Math.round(g.n_container / g.count), n_other: Math.round(g.n_other / g.count),
-        }));
-      };
-      if (state.flowView === 'weekly') {
-        imfRecords = agg(imfRecords, r => { const d = new Date(r.date); const mon = new Date(d); mon.setDate(mon.getDate() - ((d.getDay() + 6) % 7)); return mon.toISOString().split('T')[0]; });
-      } else if (state.flowView === 'monthly') {
-        imfRecords = agg(imfRecords, r => r.date.substring(0, 7));
-      } else {
-        imfRecords = imfRecords.map(r => ({ date: r.date, n_tanker: r.n_tanker || 0, n_dry_bulk: r.n_dry_bulk || 0, n_container: r.n_container || 0, n_other: (r.n_total || 0) - (r.n_tanker || 0) - (r.n_dry_bulk || 0) - (r.n_container || 0) }));
-      }
+    const crisisTransits = data.crisisTransits;
+    const dailyTransitHistory = data.dailyTransitHistory;
 
-      const canvas = document.getElementById('soh-vessel-stacked-chart');
-      if (canvas) {
-        if (vesselCountExportChart) vesselCountExportChart.destroy();
-        const labels = imfRecords.map(r => r.date);
-        vesselCountExportChart = new Chart(canvas, {
-          type: 'bar',
-          data: {
-            labels,
-            datasets: [
-              { label: 'Tankers', data: imfRecords.map(r => r.n_tanker), backgroundColor: '#ef4444', borderWidth: 0, borderRadius: 1 },
-              { label: 'Dry Bulk', data: imfRecords.map(r => r.n_dry_bulk), backgroundColor: '#06b6d4', borderWidth: 0, borderRadius: 1 },
-              { label: 'Container', data: imfRecords.map(r => r.n_container), backgroundColor: '#8b5cf6', borderWidth: 0, borderRadius: 1 },
-              { label: 'Other', data: imfRecords.map(r => r.n_other), backgroundColor: '#9ca3af', borderWidth: 0, borderRadius: 1 },
-            ],
-          },
-          options: {
-            responsive: true, maintainAspectRatio: false,
-            plugins: { legend: { position: 'top', labels: { font: { size: 10 } } }, datalabels: { display: false },
-              tooltip: { mode: 'index', intersect: false, callbacks: { label: (ctx) => `${ctx.dataset.label}: ${ctx.raw}` } } },
-            scales: {
-              x: { stacked: true, ticks: { maxTicksLimit: 10, font: { size: 9 }, color: '#627d98' }, grid: { display: false } },
-              y: { stacked: true, ticks: { font: { size: 9 }, color: '#627d98' }, grid: { color: '#e5e7eb' }, beginAtZero: true },
+    // Build unified timeseries from all sources
+    const merged = {};
+    const today = new Date().toISOString().split('T')[0];
+
+    // Source 1: IMF PortWatch (reliable historical)
+    if (imf?.records) {
+      for (const r of imf.records) {
+        if (r.date > today) continue;
+        merged[r.date] = {
+          tanker: r.n_tanker || 0,
+          bulk: r.n_dry_bulk || 0,
+          container: r.n_container || 0,
+          other: (r.n_total || 0) - (r.n_tanker || 0) - (r.n_dry_bulk || 0) - (r.n_container || 0),
+          source: 'imf',
+        };
+      }
+    }
+
+    // Source 2: crisis-transits dailyCounts (gap fill, only for dates after IMF ends)
+    const imfLastDate = imf?.records?.filter(r => r.date <= today).slice(-1)[0]?.date || '2000-01-01';
+    if (crisisTransits?.dailyCounts) {
+      for (const d of crisisTransits.dailyCounts) {
+        if (d.date > imfLastDate && d.date <= today) {
+          merged[d.date] = {
+            tanker: d.tankers || 0,
+            bulk: d.bulk || 0,
+            container: d.container || 0,
+            other: d.other || 0,
+            source: 'crisis',
+          };
+        }
+      }
+    }
+
+    // Source 3: daily-transit-history (snapshot-based, most accurate for recent days)
+    if (Array.isArray(dailyTransitHistory)) {
+      for (const d of dailyTransitHistory) {
+        merged[d.date] = {
+          tanker: d.tanker_exit || 0,
+          bulk: d.bulk_exit || 0,
+          container: d.container_exit || 0,
+          other: d.other_exit || 0,
+          source: 'snapshot',
+        };
+      }
+    }
+
+    // Sort and filter by range
+    let transitRecords = Object.entries(merged)
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([date, v]) => ({ date, ...v }));
+
+    // Default to Feb 1 2026 onwards (crisis context)
+    const rangeStart = state.flowRange === 'all' ? null : '2026-02-01';
+    if (rangeStart) {
+      transitRecords = transitRecords.filter(r => r.date >= rangeStart);
+    }
+    transitRecords = filterFlowsByRange(transitRecords, state.flowRange);
+
+    // Compute pre-crisis average for reference line
+    const preCrisisRecords = Object.entries(merged)
+      .filter(([d, v]) => d >= '2026-02-01' && d < '2026-02-28' && v.source === 'imf')
+      .map(([, v]) => v.tanker + v.bulk + v.container + v.other);
+    const preCrisisAvg = preCrisisRecords.length > 0
+      ? Math.round(preCrisisRecords.reduce((s, v) => s + v, 0) / preCrisisRecords.length)
+      : 96;
+
+    const canvas = document.getElementById('soh-vessel-stacked-chart');
+    if (canvas && transitRecords.length > 0) {
+      if (vesselCountExportChart) vesselCountExportChart.destroy();
+      const labels = transitRecords.map(r => r.date);
+
+      // Find crisis start index for annotation
+      const crisisIdx = labels.findIndex(d => d >= '2026-02-28');
+
+      vesselCountExportChart = new Chart(canvas, {
+        type: 'line',
+        data: {
+          labels,
+          datasets: [
+            { label: 'Tankers', data: transitRecords.map(r => r.tanker), backgroundColor: 'rgba(239,68,68,0.4)', borderColor: '#ef4444', borderWidth: 1.5, fill: true, tension: 0.3, pointRadius: 0 },
+            { label: 'Dry Bulk', data: transitRecords.map(r => r.bulk), backgroundColor: 'rgba(6,182,212,0.4)', borderColor: '#06b6d4', borderWidth: 1.5, fill: true, tension: 0.3, pointRadius: 0 },
+            { label: 'Container', data: transitRecords.map(r => r.container), backgroundColor: 'rgba(139,92,246,0.5)', borderColor: '#8b5cf6', borderWidth: 1.5, fill: true, tension: 0.3, pointRadius: 0 },
+            { label: 'Other', data: transitRecords.map(r => r.other), backgroundColor: 'rgba(156,163,175,0.3)', borderColor: '#9ca3af', borderWidth: 1, fill: true, tension: 0.3, pointRadius: 0 },
+            // Pre-crisis average reference line
+            { label: `Pre-crisis avg (${preCrisisAvg}/day)`, data: labels.map(() => preCrisisAvg), borderColor: '#334e68', borderWidth: 1, borderDash: [6, 3], pointRadius: 0, fill: false },
+          ],
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'top', labels: { font: { size: 10 }, usePointStyle: true, pointStyle: 'rect' } },
+            datalabels: { display: false },
+            tooltip: {
+              mode: 'index', intersect: false,
+              callbacks: {
+                title: (items) => {
+                  const d = items[0]?.label;
+                  const src = transitRecords.find(r => r.date === d)?.source;
+                  const srcLabel = src === 'imf' ? 'IMF PortWatch' : src === 'crisis' ? 'Kpler (approx)' : src === 'snapshot' ? 'Vessel Snapshot' : '';
+                  return `${d}${srcLabel ? ' — ' + srcLabel : ''}`;
+                },
+                label: (ctx) => ctx.dataset.borderDash ? null : `${ctx.dataset.label}: ${ctx.raw}`,
+                afterBody: (items) => {
+                  const total = items.filter(i => !i.dataset.borderDash).reduce((s, i) => s + (i.raw || 0), 0);
+                  return `Total: ${total}`;
+                },
+              },
             },
           },
-        });
-      }
+          scales: {
+            x: {
+              stacked: true,
+              ticks: { maxTicksLimit: 12, font: { size: 9 }, color: '#627d98' },
+              grid: { display: false },
+            },
+            y: {
+              stacked: true,
+              ticks: { font: { size: 9 }, color: '#627d98' },
+              grid: { color: '#e5e7eb' },
+              beginAtZero: true,
+            },
+          },
+        },
+        plugins: [{
+          // Custom plugin: crisis start vertical line
+          id: 'crisisLine',
+          afterDraw: (chart) => {
+            if (crisisIdx < 0) return;
+            const meta = chart.getDatasetMeta(0);
+            if (!meta.data[crisisIdx]) return;
+            const x = meta.data[crisisIdx].x;
+            const ctx = chart.ctx;
+            const yAxis = chart.scales.y;
+            ctx.save();
+            ctx.strokeStyle = '#ef4444';
+            ctx.lineWidth = 1.5;
+            ctx.setLineDash([4, 4]);
+            ctx.beginPath();
+            ctx.moveTo(x, yAxis.top);
+            ctx.lineTo(x, yAxis.bottom);
+            ctx.stroke();
+            ctx.fillStyle = '#ef4444';
+            ctx.font = '9px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Crisis Start', x, yAxis.top - 4);
+            ctx.restore();
+          },
+        }],
+      });
+    }
     }
   }
 

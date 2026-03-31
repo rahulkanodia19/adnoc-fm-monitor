@@ -605,7 +605,7 @@ function initGccOverviewMap() {
           <div style="font-size:10px;color:#829ab1;margin-bottom:4px">${inf.type} — ${c.country}</div>
           <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Capacity</span><span style="font-weight:600;color:#fff">${inf.capacity}</span></div>
           <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Status</span><span style="font-weight:600;color:${popupStatusColor[inf.status] || '#fff'}">${inf.status}</span></div>
-          ${inf.notes ? `<div style="font-size:10px;color:#bcccdc;margin-top:4px;border-top:1px solid #334e68;padding-top:3px">${inf.notes}</div>` : ''}
+          ${inf.notes ? `<div style="font-size:10px;color:#e2e8f0;margin-top:4px;border-top:1px solid #334e68;padding-top:3px">${inf.notes}</div>` : ''}
         </div>
       `, { maxWidth: 240 }).addTo(gccMapLayers.production);
     });
@@ -633,7 +633,7 @@ function initGccOverviewMap() {
           <div style="font-size:10px;color:#829ab1;margin-bottom:4px">${inf.type} — ${c.country}</div>
           <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Capacity</span><span style="font-weight:600;color:#fff">${inf.capacity}</span></div>
           <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Status</span><span style="font-weight:600;color:${popupStatusColor[inf.status] || '#fff'}">${inf.status}</span></div>
-          ${inf.notes ? `<div style="font-size:10px;color:#bcccdc;margin-top:4px;border-top:1px solid #334e68;padding-top:3px">${inf.notes}</div>` : ''}
+          ${inf.notes ? `<div style="font-size:10px;color:#e2e8f0;margin-top:4px;border-top:1px solid #334e68;padding-top:3px">${inf.notes}</div>` : ''}
         </div>
       `, { maxWidth: 240 }).addTo(gccMapLayers.terminals);
     });
@@ -661,6 +661,7 @@ function initGccOverviewMap() {
           <div style="font-size:10px;color:#829ab1;margin-bottom:4px">${inf.type} — ${c.country}</div>
           <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Capacity</span><span style="font-weight:600;color:#fff">${inf.capacity}</span></div>
           <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Status</span><span style="font-weight:600;color:${popupStatusColor[inf.status] || '#fff'}">${inf.status}</span></div>
+          ${inf.notes ? `<div style="font-size:10px;color:#e2e8f0;margin-top:4px;border-top:1px solid #334e68;padding-top:3px">${inf.notes}</div>` : ''}
         </div>
       `, { maxWidth: 240 }).addTo(gccMapLayers.refining);
     });
@@ -688,7 +689,7 @@ function initGccOverviewMap() {
           <div style="font-size:10px;color:#829ab1;margin-bottom:4px">${inf.type} — ${c.country}</div>
           <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Capacity</span><span style="font-weight:600;color:#fff">${inf.capacity}</span></div>
           <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Status</span><span style="font-weight:600;color:${popupStatusColor[inf.status] || '#fff'}">${inf.status}</span></div>
-          ${inf.notes ? `<div style="font-size:10px;color:#bcccdc;margin-top:4px;border-top:1px solid #334e68;padding-top:3px">${inf.notes}</div>` : ''}
+          ${inf.notes ? `<div style="font-size:10px;color:#e2e8f0;margin-top:4px;border-top:1px solid #334e68;padding-top:3px">${inf.notes}</div>` : ''}
         </div>
       `, { maxWidth: 240 }).addTo(gccMapLayers.industrial);
     });
@@ -709,7 +710,7 @@ function initGccOverviewMap() {
           <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Capacity</span><span style="font-weight:600;color:#fff">${pipe.capacity}</span></div>
           ${pipe.currentFlow ? `<div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Current Flow</span><span style="font-weight:600;color:#fff">${pipe.currentFlow}</span></div>` : ''}
           <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Status</span><span style="font-weight:600;color:${popColor}">${pipe.status}</span></div>
-          ${pipe.notes ? `<div style="font-size:10px;color:#bcccdc;margin-top:4px;border-top:1px solid #334e68;padding-top:3px">${pipe.notes}</div>` : ''}
+          ${pipe.notes ? `<div style="font-size:10px;color:#e2e8f0;margin-top:4px;border-top:1px solid #334e68;padding-top:3px">${pipe.notes}</div>` : ''}
         </div>
       `;
       // Invisible wide hit area (20px) for easy clicking
