@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-03-31T19:31:15.684Z",
+  "timestamp": "2026-03-31T21:50:07.845Z",
   "overall": "ok",
   "pipelines": {
     "news_fm": {
       "status": "ok",
-      "dataAsOf": "31 Mar 2026, 20:00 GST",
-      "lastUpdated": "2026-03-31T16:00:00Z",
+      "dataAsOf": "01 Apr 2026, 10:00 GST",
+      "lastUpdated": "2026-04-01T06:00:00Z",
       "details": "9/9 countries, 24 FMs, 23 shutdowns"
     },
     "prices": {
@@ -16,21 +16,21 @@
     },
     "war_risk": {
       "status": "ok",
-      "dataAsOf": "31 Mar 2026, 04:00 GST",
-      "lastUpdated": "2026-03-31",
-      "details": "27 data points, current 5.0% hull value"
+      "dataAsOf": "01 Apr 2026, 04:00 GST",
+      "lastUpdated": "2026-04-01",
+      "details": "28 data points, current 5.0% hull value"
     },
     "spr": {
       "status": "ok",
-      "dataAsOf": "31 Mar 2026, 04:00 GST",
-      "lastUpdated": "2026-03-31",
+      "dataAsOf": "01 Apr 2026, 04:00 GST",
+      "lastUpdated": "2026-04-01",
       "details": "30 countries, 67.7 mb released"
     },
     "soh": {
       "status": "ok",
-      "dataAsOf": "31 Mar 2026, 22:10 GST",
-      "lastUpdated": "2026-03-31T18:10:01.678Z",
-      "details": "1280 vessels, 822 inside, 11 ADNOC"
+      "dataAsOf": "01 Apr 2026, 00:09 GST",
+      "lastUpdated": "2026-03-31T20:09:13.272Z",
+      "details": "1320 vessels, 851 inside, 11 ADNOC"
     },
     "import_flows": {
       "status": "ok",
@@ -46,8 +46,8 @@
     },
     "flow_insights": {
       "status": "ok",
-      "dataAsOf": "31 Mar 2026, 10:26 GST",
-      "lastUpdated": "2026-03-31T06:26:52.072Z",
+      "dataAsOf": "01 Apr 2026, 01:50 GST",
+      "lastUpdated": "2026-03-31T21:50:06.208Z",
       "details": "160 datasets"
     }
   }

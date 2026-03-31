@@ -3,8 +3,8 @@
   "_source": "seed",
   "prices": {
     "wti": {
-      "current": 102.88,
-      "previousClose": 99.64,
+      "current": 101.38,
+      "previousClose": 102.88,
       "high52w": 102.88,
       "low52w": 55.27,
       "history": [
@@ -5003,6 +5003,10 @@
         {
           "date": "2026-03-30",
           "price": 102.88
+        },
+        {
+          "date": "2026-03-31",
+          "price": 101.38
         }
       ]
     },

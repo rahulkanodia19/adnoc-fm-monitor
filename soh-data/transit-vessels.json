@@ -1,27 +1,102 @@
 {
   "vessels": [
     {
-      "name": "BLOOMING DALE",
-      "imo": "9125724",
-      "mmsi": "307111000",
-      "vesselTypeClass": "Short Sea Tankers",
+      "name": "V Monoceros",
+      "imo": "9478470",
+      "mmsi": "563249500",
+      "vesselTypeClass": "Handysize",
       "state": "ballast",
-      "flagName": "Panama",
-      "deadWeight": 12083,
+      "flagName": "Singapore",
+      "deadWeight": 33145,
+      "commodityTypes": [
+        "dry"
+      ],
+      "capacity": 32432,
+      "speed": 16.7,
+      "course": 129,
+      "lat": 25.898268,
+      "lng": 55.720078,
+      "destination": "China",
+      "destinationEta": "2026-04-10T03:02:13.059034",
+      "aisDestination": null,
+      "product": "Dry Bulk",
+      "lastPortCall": {
+        "start": "2026-02-23T14:50:09",
+        "end": "2026-03-01T10:54:41"
+      },
+      "transitDirection": "exiting",
+      "isTransiting": true
+    },
+    {
+      "name": "Sea Wolf 10",
+      "imo": "9136761",
+      "mmsi": "613267705",
+      "vesselTypeClass": "Small Tankers",
+      "state": "loaded",
+      "flagName": null,
+      "deadWeight": 4999,
       "commodityTypes": [
         "liquids"
       ],
-      "capacity": 13305,
-      "speed": 12,
-      "course": 94,
-      "lat": 26.618427,
-      "lng": 56.518608,
+      "capacity": 5512,
+      "speed": 11.6,
+      "course": 333,
+      "lat": 26.667164,
+      "lng": 56.654957,
       "aisDestination": null,
-      "product": "High Sulfur Fuel Oil",
-      "controller": "Prime",
+      "product": "Clean petroleum products",
       "lastPortCall": {
-        "start": "2026-03-18T07:10:00",
-        "end": "2026-03-18T11:11:00"
+        "start": "2025-08-03T04:14:13",
+        "end": "2025-08-03T04:14:13"
+      },
+      "transitDirection": "entering",
+      "isTransiting": true
+    },
+    {
+      "name": "Rival",
+      "imo": "9117818",
+      "mmsi": "370859000",
+      "vesselTypeClass": "Small Tankers",
+      "state": "ballast",
+      "flagName": "Panama",
+      "deadWeight": 3275,
+      "commodityTypes": [
+        "liquids"
+      ],
+      "capacity": 3611,
+      "speed": 4.8,
+      "course": 52.4,
+      "lat": 26.70942,
+      "lng": 56.115525,
+      "aisDestination": null,
+      "product": "High Sulphur Straight Run Fuel Oil",
+      "lastPortCall": {
+        "start": "2018-03-30T13:13:22",
+        "end": "2018-04-09T09:16:46"
+      },
+      "transitDirection": "entering",
+      "isTransiting": true
+    },
+    {
+      "name": "Pacific Freedom",
+      "imo": "9032317",
+      "mmsi": "632097655",
+      "vesselTypeClass": "Small Tankers",
+      "state": "ballast",
+      "flagName": "Tanzania, United Republic of",
+      "deadWeight": 1150,
+      "commodityTypes": [
+        "liquids"
+      ],
+      "capacity": 1268,
+      "speed": 4.4,
+      "course": 156,
+      "lat": 26.246706,
+      "lng": 55.95208,
+      "aisDestination": null,
+      "lastPortCall": {
+        "start": "2025-12-11T23:14:03",
+        "end": "2025-12-11T23:14:03"
       },
       "transitDirection": "exiting",
       "isTransiting": true
@@ -52,27 +127,26 @@
       "isTransiting": true
     },
     {
-      "name": "Sinopa",
-      "imo": "9172038",
-      "mmsi": "422153000",
+      "name": "KYLO",
+      "imo": "9189146",
+      "mmsi": "620800028",
       "vesselTypeClass": "Suezmax/LR3",
-      "state": "ballast",
-      "flagName": "Iran (Islamic Republic of)",
-      "deadWeight": 159681,
+      "state": "loaded",
+      "flagName": "Cook Islands",
+      "deadWeight": 160573,
       "commodityTypes": [
         "liquids"
       ],
-      "capacity": 166683,
-      "speed": 12.2,
-      "course": 329,
-      "lat": 26.663675,
-      "lng": 56.742115,
+      "capacity": 167230,
+      "speed": 6.5,
+      "course": 48,
+      "lat": 26.635183,
+      "lng": 56.018341,
       "aisDestination": null,
       "product": "Iran",
-      "controller": "NIOC",
       "lastPortCall": {
-        "start": "2026-03-15T00:00:00",
-        "end": "2026-03-15T00:00:00"
+        "start": "2026-03-27T00:00:00",
+        "end": "2026-03-28T00:00:00"
       },
       "transitDirection": "entering",
       "isTransiting": true
@@ -94,7 +168,7 @@
       "lat": 25.607454,
       "lng": 56.440807,
       "destination": "Mundra",
-      "destinationEta": "2026-03-30T03:00:06.337989",
+      "destinationEta": "2026-04-02T03:00:06.328122",
       "aisDestination": null,
       "product": "Steel Pipes",
       "controller": "Portline",
@@ -131,31 +205,29 @@
       "isTransiting": true
     },
     {
-      "name": "Rui Ning 7",
-      "imo": "9538335",
-      "mmsi": "412392000",
+      "name": "Chang Chang Dong Hai",
+      "imo": "9535876",
+      "mmsi": "414374000",
       "vesselTypeClass": "Supramax",
       "state": "loaded",
       "flagName": "China",
-      "deadWeight": 53478,
+      "deadWeight": 57053,
       "commodityTypes": [
         "dry"
       ],
-      "capacity": 52328,
-      "speed": 8.1,
-      "course": 0,
-      "lat": 25.981501,
-      "lng": 55.765167,
-      "destination": "Fujairah Light.",
-      "destinationEta": "2026-03-31T12:00:05.957157",
+      "capacity": 55826,
+      "speed": 14.7,
+      "course": 191,
+      "lat": 25.890377,
+      "lng": 55.697247,
       "aisDestination": null,
-      "product": "Steel",
-      "controller": "China Huaneng",
+      "product": "Phosphorus Fertilizers",
+      "controller": "Zhejiang Changchang Shipping",
       "lastPortCall": {
-        "start": "2026-03-16T00:53:18",
-        "end": "2026-03-20T08:39:38"
+        "start": "2026-03-07T06:38:19",
+        "end": "2026-03-10T21:56:09"
       },
-      "transitDirection": "entering",
+      "transitDirection": "exiting",
       "isTransiting": true
     },
     {
@@ -187,6 +259,60 @@
       "isTransiting": true
     },
     {
+      "name": "Ksl Qingyang",
+      "imo": "9578050",
+      "mmsi": "538008668",
+      "vesselTypeClass": "Supramax",
+      "state": "loaded",
+      "flagName": "Marshall Islands",
+      "deadWeight": 56880,
+      "commodityTypes": [
+        "dry"
+      ],
+      "capacity": 55657,
+      "speed": 3.5,
+      "course": 268,
+      "lat": 26.127457,
+      "lng": 55.885372,
+      "destination": "China",
+      "destinationEta": "2026-04-05T04:00:00",
+      "aisDestination": null,
+      "product": "Dry Bulk",
+      "controller": "Nanjing King Ship Management",
+      "lastPortCall": {
+        "start": "2026-03-04T21:35:33",
+        "end": "2026-03-08T18:39:38"
+      },
+      "transitDirection": "entering",
+      "isTransiting": true
+    },
+    {
+      "name": "Jin Hai Hua",
+      "imo": "9591026",
+      "mmsi": "413697680",
+      "vesselTypeClass": "Handymax",
+      "state": "ballast",
+      "flagName": "China",
+      "deadWeight": 44968,
+      "commodityTypes": [
+        "dry"
+      ],
+      "capacity": 43782,
+      "speed": 16.3,
+      "course": 240,
+      "lat": 25.926304,
+      "lng": 55.718414,
+      "aisDestination": null,
+      "product": "Finished Steel",
+      "controller": "FUJIAN SHIPPING CO",
+      "lastPortCall": {
+        "start": "2026-02-28T12:19:23",
+        "end": "2026-03-02T05:59:32"
+      },
+      "transitDirection": "unknown",
+      "isTransiting": true
+    },
+    {
       "name": "Propel Grace",
       "imo": "9605023",
       "mmsi": "563189200",
@@ -209,6 +335,60 @@
         "end": "2026-03-23T03:38:43"
       },
       "transitDirection": "entering",
+      "isTransiting": true
+    },
+    {
+      "name": "Heilan Brother",
+      "imo": "9606792",
+      "mmsi": "372830000",
+      "vesselTypeClass": "Supramax",
+      "state": "loaded",
+      "flagName": "Panama",
+      "deadWeight": 56760,
+      "commodityTypes": [
+        "dry"
+      ],
+      "capacity": 55539,
+      "speed": 3.5,
+      "course": 206,
+      "lat": 26.097828,
+      "lng": 55.871498,
+      "aisDestination": null,
+      "product": "Sulphur",
+      "controller": "NASCO",
+      "lastPortCall": {
+        "start": "2026-03-09T23:57:25",
+        "end": "2026-03-16T20:58:44"
+      },
+      "transitDirection": "unknown",
+      "isTransiting": true
+    },
+    {
+      "name": "Glory Tom",
+      "imo": "9701360",
+      "mmsi": "352003139",
+      "vesselTypeClass": "Ultramax",
+      "state": "loaded",
+      "flagName": "Panama",
+      "deadWeight": 63696,
+      "commodityTypes": [
+        "dry"
+      ],
+      "capacity": 62326,
+      "speed": 8.2,
+      "course": 88,
+      "lat": 25.840029,
+      "lng": 55.666828,
+      "destination": "Jakarta",
+      "destinationEta": "2026-04-15T02:00:00",
+      "aisDestination": null,
+      "product": "Dry Bulk",
+      "controller": "Dato Marine",
+      "lastPortCall": {
+        "start": "2026-03-29T04:38:17",
+        "end": "2026-03-31T10:39:16"
+      },
+      "transitDirection": "exiting",
       "isTransiting": true
     },
     {
@@ -236,8 +416,8 @@
       "isTransiting": true
     }
   ],
-  "exitingCount": 3,
-  "enteringCount": 6,
-  "totalTransiting": 9,
-  "syncTimestamp": "2026-03-31T19:53:52.252Z"
+  "exitingCount": 6,
+  "enteringCount": 8,
+  "totalTransiting": 16,
+  "syncTimestamp": "2026-03-31T20:09:13.272Z"
 }
