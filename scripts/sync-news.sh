@@ -42,6 +42,10 @@ claude -p "$(cat scripts/sync-prompt.md)" \
 
 echo "[sync-news] Agent complete."
 
+# Fix LAST_UPDATED with actual machine time (rounded to previous hour)
+NOW=$(node -e "const d=new Date();d.setMinutes(0,0,0);process.stdout.write(d.toISOString())")
+sed -i "s|^const LAST_UPDATED = \".*\";|const LAST_UPDATED = \"$NOW\";|" "$PROJECT_DIR/data.js"
+
 # Validate
 echo "[sync-news] Validating data.js..."
 if ! node "$SCRIPT_DIR/validate-data.js"; then

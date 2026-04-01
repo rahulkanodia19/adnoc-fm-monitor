@@ -244,7 +244,7 @@
 
   function renderControls() {
     const lastUpdated = state.data?.lastUpdated;
-    const dateStr = lastUpdated ? (typeof formatDateTimeGST === 'function' ? formatDateTimeGST(lastUpdated) : new Date(lastUpdated).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Dubai' }) + ' GST') : '';
+    const dateStr = lastUpdated ? (typeof formatDateTimeGST === 'function' ? formatDateTimeGST(lastUpdated) : (function(x){const d=new Date(x);d.setMinutes(0,0,0);return d.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',timeZone:'Asia/Dubai'})+' GST'})(lastUpdated)) : '';
 
     return `
       <div class="flex flex-col gap-3 mb-6">

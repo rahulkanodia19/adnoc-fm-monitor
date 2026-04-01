@@ -97,6 +97,10 @@ Update LAST_UPDATED timestamp. Write sync-log.json noting this was a browser-enh
   echo "[sync-force] Browser sync complete."
 fi
 
+# Fix LAST_UPDATED with actual machine time (rounded to previous hour)
+NOW=$(node -e "const d=new Date();d.setMinutes(0,0,0);process.stdout.write(d.toISOString())")
+sed -i "s|^const LAST_UPDATED = \".*\";|const LAST_UPDATED = \"$NOW\";|" "$PROJECT_DIR/data.js"
+
 # ── Step 3: Validate and Commit ────────────────────────────────
 echo ""
 echo "[sync-force] ── Step 3/3: Validate and Commit ──"

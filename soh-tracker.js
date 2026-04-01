@@ -93,7 +93,9 @@
   }
   function fmtDate(iso) {
     if (!iso) return '-';
-    return new Date(iso).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+    const d = new Date(iso);
+    d.setMinutes(0, 0, 0);
+    return d.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
   }
   function cargoBadge(st) {
     const s = (st || '').toLowerCase();
@@ -561,7 +563,6 @@
         }],
       });
     }
-    }
   }
 
   // ---------- Section 4: ADNOC Vessels ----------
@@ -939,7 +940,7 @@
 
     // Add "Data as of" badge at top
     const syncDateStr = data.summary && data.summary.syncTimestamp
-      ? (typeof formatDateTimeGST === 'function' ? formatDateTimeGST(data.summary.syncTimestamp) : new Date(data.summary.syncTimestamp).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Dubai' }) + ' GST')
+      ? (typeof formatDateTimeGST === 'function' ? formatDateTimeGST(data.summary.syncTimestamp) : (function(x){const d=new Date(x);d.setMinutes(0,0,0);return d.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',timeZone:'Asia/Dubai'})+' GST'})(data.summary.syncTimestamp))
       : null;
     const badgeHtml = syncDateStr && typeof renderPipelineBadge === 'function'
       ? `<div class="flex justify-end mb-3">${renderPipelineBadge('soh', data.summary.syncTimestamp)}</div>`

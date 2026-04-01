@@ -96,6 +96,7 @@ function formatDateTimeGST(isoStr) {
   if (!isoStr) return '';
   const d = new Date(isoStr);
   if (isNaN(d.getTime())) return isoStr;
+  d.setMinutes(0, 0, 0);
   return d.toLocaleDateString('en-GB', {
     day: '2-digit', month: 'short', year: 'numeric',
     hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Dubai'

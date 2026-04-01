@@ -29,6 +29,10 @@ claude -p "$(cat scripts/sync-prompt.md)" \
 
 echo "[sync] Web search sync complete."
 
+# Fix LAST_UPDATED with actual machine time (rounded to previous hour)
+NOW=$(node -e "const d=new Date();d.setMinutes(0,0,0);process.stdout.write(d.toISOString())")
+sed -i "s|^const LAST_UPDATED = \".*\";|const LAST_UPDATED = \"$NOW\";|" "$PROJECT_DIR/data.js"
+
 # 2. Verify sync completed
 if [ ! -f "$PROJECT_DIR/sync-log.json" ]; then
   echo "[sync] ERROR: sync-log.json not written. Sync may be incomplete."
