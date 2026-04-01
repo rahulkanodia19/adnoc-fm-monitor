@@ -273,17 +273,32 @@
         .addTo(mapInstance);
     }
 
-    // Legend
+    // Legend (collapsible on mobile)
     const legend = L.control({ position: 'bottomleft' });
     legend.onAdd = function () {
-      const div = L.DomUtil.create('div', 'bg-white/90 backdrop-blur p-2 rounded-lg border border-navy-200 text-[10px] text-navy-700');
-      div.innerHTML = `<div class="font-bold mb-1">Vessel Type</div>
-        ${Object.entries(colorMap).map(([k, c]) => `<div class="flex items-center gap-1"><span class="inline-block w-2.5 h-2.5 rounded-full" style="background:${c}"></span>${k}</div>`).join('')}
-        <div class="mt-1 border-t border-navy-200 pt-1">
-          <span class="opacity-50">&#9679;</span> Ballast &nbsp; <span class="opacity-90">&#9679;</span> Laden
-          <br><span style="font-size:13px">&#9679;</span> = In Transit
+      const div = L.DomUtil.create('div', 'map-legend bg-white/90 backdrop-blur rounded-lg border border-navy-200 text-[10px] text-navy-700');
+      const isMobile = window.innerWidth < 640;
+      div.innerHTML = `
+        <div class="map-legend-toggle font-bold" style="cursor:pointer;display:flex;align-items:center;gap:4px;user-select:none">
+          <span class="map-legend-arrow" style="font-size:8px;transition:transform 0.2s">${isMobile ? '&#9654;' : '&#9660;'}</span> Vessel Type
         </div>
-`;
+        <div class="map-legend-body" style="${isMobile ? 'display:none' : ''}">
+          ${Object.entries(colorMap).map(([k, c]) => `<div class="flex items-center gap-1"><span class="inline-block w-2.5 h-2.5 rounded-full" style="background:${c}"></span>${k}</div>`).join('')}
+          <div class="mt-1 border-t border-navy-200 pt-1">
+            <span class="opacity-50">&#9679;</span> Ballast &nbsp; <span class="opacity-90">&#9679;</span> Laden
+            <br><span style="font-size:13px">&#9679;</span> = In Transit
+          </div>
+        </div>
+      `;
+      L.DomEvent.disableClickPropagation(div);
+      const toggle = div.querySelector('.map-legend-toggle');
+      const body = div.querySelector('.map-legend-body');
+      const arrow = div.querySelector('.map-legend-arrow');
+      toggle.addEventListener('click', () => {
+        const open = body.style.display !== 'none';
+        body.style.display = open ? 'none' : '';
+        arrow.innerHTML = open ? '&#9654;' : '&#9660;';
+      });
       return div;
     };
     legend.addTo(mapInstance);
@@ -371,7 +386,8 @@
         },
         options: {
           responsive: true, maintainAspectRatio: false,
-          plugins: { legend: { display: false }, datalabels: { display: false },
+          plugins: { legend: { display: false },
+            datalabels: { display: (ctx) => ctx.dataset.data[ctx.dataIndex] === 0, formatter: () => '0', color: '#94a3b8', font: { size: 8 }, anchor: 'end', align: 'top' },
             tooltip: { callbacks: { label: (ctx) => `${unitInfo.unit === 'bbl' ? fmtNum(ctx.raw) : ctx.raw.toFixed(2)} ${unitInfo.unit}`, title: (items) => items[0]?.label || '' } } },
           scales: {
             x: { ticks: { maxTicksLimit: 10, font: { size: 9 }, color: '#627d98' }, grid: { display: false } },
@@ -488,16 +504,16 @@
       const crisisIdx = labels.findIndex(d => d >= '2026-02-28');
 
       vesselCountExportChart = new Chart(canvas, {
-        type: 'line',
+        type: 'bar',
         data: {
           labels,
           datasets: [
-            { label: 'Tankers', data: transitRecords.map(r => r.tanker), backgroundColor: 'rgba(239,68,68,0.4)', borderColor: '#ef4444', borderWidth: 1.5, fill: true, tension: 0.3, pointRadius: 0 },
-            { label: 'Dry Bulk', data: transitRecords.map(r => r.bulk), backgroundColor: 'rgba(6,182,212,0.4)', borderColor: '#06b6d4', borderWidth: 1.5, fill: true, tension: 0.3, pointRadius: 0 },
-            { label: 'Container', data: transitRecords.map(r => r.container), backgroundColor: 'rgba(139,92,246,0.5)', borderColor: '#8b5cf6', borderWidth: 1.5, fill: true, tension: 0.3, pointRadius: 0 },
-            { label: 'Other', data: transitRecords.map(r => r.other), backgroundColor: 'rgba(156,163,175,0.3)', borderColor: '#9ca3af', borderWidth: 1, fill: true, tension: 0.3, pointRadius: 0 },
+            { label: 'Tankers', data: transitRecords.map(r => r.tanker), backgroundColor: 'rgba(239,68,68,0.6)', borderColor: '#ef4444', borderWidth: 1, stack: 'vessels' },
+            { label: 'Dry Bulk', data: transitRecords.map(r => r.bulk), backgroundColor: 'rgba(6,182,212,0.6)', borderColor: '#06b6d4', borderWidth: 1, stack: 'vessels' },
+            { label: 'Container', data: transitRecords.map(r => r.container), backgroundColor: 'rgba(139,92,246,0.6)', borderColor: '#8b5cf6', borderWidth: 1, stack: 'vessels' },
+            { label: 'Other', data: transitRecords.map(r => r.other), backgroundColor: 'rgba(156,163,175,0.4)', borderColor: '#9ca3af', borderWidth: 1, stack: 'vessels' },
             // Pre-crisis average reference line
-            { label: `Pre-crisis avg (${preCrisisAvg}/day)`, data: labels.map(() => preCrisisAvg), borderColor: '#334e68', borderWidth: 1, borderDash: [6, 3], pointRadius: 0, fill: false },
+            { label: `Pre-crisis avg (${preCrisisAvg}/day)`, data: labels.map(() => preCrisisAvg), type: 'line', borderColor: '#334e68', borderWidth: 1, borderDash: [6, 3], pointRadius: 0, fill: false },
           ],
         },
         options: {
