@@ -948,6 +948,25 @@
     </div>`;
   }
 
+  // ---------- Section 9: Small Vessels Summary ----------
+
+  function renderSmallVesselsSummary(summary) {
+    const sv = summary.smallVessels;
+    if (!sv) return '';
+    return `
+    <div class="soh-section mt-6" id="soh-small-vessels">
+      <div class="bg-navy-50 border border-navy-200 rounded-xl p-4">
+        <h3 class="text-xs font-bold text-navy-500 uppercase tracking-wider mb-2">Small / Coastal Vessels (Excluded from counts above)</h3>
+        <div class="flex items-center gap-6 text-sm">
+          <div><span class="font-bold text-navy-900">${fmtNum(sv.total)}</span> <span class="text-navy-500">total</span></div>
+          <div><span class="font-bold text-navy-900">${fmtNum(sv.inside)}</span> <span class="text-navy-500">inside Gulf</span></div>
+          <div><span class="font-bold text-navy-900">${fmtNum(sv.outside)}</span> <span class="text-navy-500">outside Gulf</span></div>
+        </div>
+        <p class="text-[10px] text-navy-400 mt-2">Types: ${(sv.types || []).join(', ')}</p>
+      </div>
+    </div>`;
+  }
+
   // ---------- Main Render ----------
 
   function render(data) {
@@ -973,6 +992,7 @@
       renderBreakdowns(data.breakdownProduct, data.breakdownVesselType, data.breakdownDest),
       renderTransitVessels(data.transitVessels),
       renderCrisisTransitLog(data.crisisTransits, data.imfTransit),
+      renderSmallVesselsSummary(data.summary || {}),
     ].join('');
 
     setTimeout(() => {

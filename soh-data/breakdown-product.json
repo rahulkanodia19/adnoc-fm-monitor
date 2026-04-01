@@ -7,46 +7,22 @@
       "laden": 77
     },
     {
-      "label": "Clean petroleum products",
-      "total": 84,
-      "ballast": 38,
-      "laden": 46
-    },
-    {
-      "label": "Unknown",
-      "total": 71,
-      "ballast": 70,
-      "laden": 0
-    },
-    {
-      "label": "Naphtha",
-      "total": 60,
-      "ballast": 44,
-      "laden": 16
-    },
-    {
       "label": "Dry Bulk",
-      "total": 55,
-      "ballast": 33,
+      "total": 52,
+      "ballast": 30,
       "laden": 22
     },
     {
-      "label": "High Sulphur Straight Run Fuel Oil",
-      "total": 51,
+      "label": "Naphtha",
+      "total": 45,
+      "ballast": 33,
+      "laden": 12
+    },
+    {
+      "label": "Clean petroleum products",
+      "total": 41,
       "ballast": 10,
-      "laden": 41
-    },
-    {
-      "label": "Bitumen/Asphalt",
-      "total": 47,
-      "ballast": 30,
-      "laden": 17
-    },
-    {
-      "label": "High Sulfur Fuel Oil",
-      "total": 43,
-      "ballast": 16,
-      "laden": 27
+      "laden": 31
     },
     {
       "label": "Iran",
@@ -55,22 +31,10 @@
       "laden": 10
     },
     {
-      "label": "Fuel Oils",
-      "total": 36,
-      "ballast": 19,
-      "laden": 17
-    },
-    {
-      "label": "Butane",
-      "total": 32,
-      "ballast": 21,
-      "laden": 11
-    },
-    {
-      "label": "Methanol",
-      "total": 30,
-      "ballast": 12,
-      "laden": 18
+      "label": "High Sulphur Straight Run Fuel Oil",
+      "total": 34,
+      "ballast": 6,
+      "laden": 28
     },
     {
       "label": "Corn",
@@ -79,22 +43,28 @@
       "laden": 9
     },
     {
-      "label": "Steel",
-      "total": 28,
-      "ballast": 19,
-      "laden": 9
+      "label": "High Sulfur Fuel Oil",
+      "total": 27,
+      "ballast": 14,
+      "laden": 13
     },
     {
-      "label": "Chem/Bio",
-      "total": 26,
-      "ballast": 13,
-      "laden": 13
+      "label": "Steel",
+      "total": 27,
+      "ballast": 18,
+      "laden": 9
     },
     {
       "label": "lng",
       "total": 21,
       "ballast": 7,
       "laden": 14
+    },
+    {
+      "label": "Butane",
+      "total": 21,
+      "ballast": 12,
+      "laden": 9
     },
     {
       "label": "Urea",
@@ -109,16 +79,10 @@
       "laden": 18
     },
     {
-      "label": "Propane",
-      "total": 19,
-      "ballast": 13,
-      "laden": 6
-    },
-    {
-      "label": "Chemicals",
+      "label": "Methanol",
       "total": 17,
-      "ballast": 7,
-      "laden": 10
+      "ballast": 10,
+      "laden": 7
     },
     {
       "label": "Iron Ore Pellets",
@@ -133,6 +97,12 @@
       "laden": 5
     },
     {
+      "label": "Propane",
+      "total": 14,
+      "ballast": 8,
+      "laden": 6
+    },
+    {
       "label": "Basrah Medium",
       "total": 12,
       "ballast": 1,
@@ -143,18 +113,6 @@
       "total": 12,
       "ballast": 0,
       "laden": 12
-    },
-    {
-      "label": "Gasoil",
-      "total": 12,
-      "ballast": 9,
-      "laden": 3
-    },
-    {
-      "label": "Gasoline",
-      "total": 12,
-      "ballast": 8,
-      "laden": 4
     },
     {
       "label": "Alumina",
@@ -169,10 +127,10 @@
       "laden": 7
     },
     {
-      "label": "LPG",
+      "label": "Fuel Oils",
       "total": 10,
-      "ballast": 8,
-      "laden": 2
+      "ballast": 3,
+      "laden": 7
     },
     {
       "label": "Grains/Oilseeds",
@@ -187,6 +145,18 @@
       "laden": 7
     },
     {
+      "label": "Unknown",
+      "total": 9,
+      "ballast": 8,
+      "laden": 0
+    },
+    {
+      "label": "Gasoline",
+      "total": 9,
+      "ballast": 6,
+      "laden": 3
+    },
+    {
       "label": "Grey Ammonia",
       "total": 9,
       "ballast": 5,
@@ -197,12 +167,6 @@
       "total": 9,
       "ballast": 1,
       "laden": 8
-    },
-    {
-      "label": "Ultra Low Sulfur Diesel",
-      "total": 8,
-      "ballast": 4,
-      "laden": 4
     },
     {
       "label": "basrah heavy",
@@ -229,16 +193,10 @@
       "laden": 0
     },
     {
-      "label": "Clean",
+      "label": "Ultra Low Sulfur Diesel",
       "total": 7,
-      "ballast": 2,
-      "laden": 5
-    },
-    {
-      "label": "Jet A-1",
-      "total": 7,
-      "ballast": 5,
-      "laden": 2
+      "ballast": 4,
+      "laden": 3
     },
     {
       "label": "Limestone",
@@ -277,28 +235,16 @@
       "laden": 0
     },
     {
-      "label": "Palm Oil",
+      "label": "Jet A-1",
       "total": 5,
-      "ballast": 2,
-      "laden": 3
-    },
-    {
-      "label": "Liquids",
-      "total": 5,
-      "ballast": 1,
-      "laden": 4
+      "ballast": 3,
+      "laden": 2
     },
     {
       "label": "Bauxite",
       "total": 5,
       "ballast": 4,
       "laden": 1
-    },
-    {
-      "label": "Middle Distillates",
-      "total": 4,
-      "ballast": 1,
-      "laden": 3
     },
     {
       "label": "Sugar",
@@ -325,18 +271,6 @@
       "laden": 1
     },
     {
-      "label": "Crude Oil/Condensate",
-      "total": 4,
-      "ballast": 1,
-      "laden": 3
-    },
-    {
-      "label": "Clean Condensate",
-      "total": 4,
-      "ballast": 1,
-      "laden": 3
-    },
-    {
       "label": "Very Low Sulphur Fuel Oil",
       "total": 4,
       "ballast": 3,
@@ -353,6 +287,18 @@
       "total": 3,
       "ballast": 2,
       "laden": 1
+    },
+    {
+      "label": "Chemicals",
+      "total": 3,
+      "ballast": 0,
+      "laden": 3
+    },
+    {
+      "label": "Middle Distillates",
+      "total": 3,
+      "ballast": 0,
+      "laden": 3
     },
     {
       "label": "arab heavy",
@@ -379,28 +325,22 @@
       "laden": 0
     },
     {
-      "label": "Crude Palm Oil",
-      "total": 3,
-      "ballast": 3,
-      "laden": 0
-    },
-    {
-      "label": "Caustic Soda",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
       "label": "Steel Pipes",
       "total": 3,
       "ballast": 3,
       "laden": 0
     },
     {
-      "label": "Monoethylene Glycol",
+      "label": "Clean Condensate",
       "total": 3,
-      "ballast": 1,
-      "laden": 2
+      "ballast": 0,
+      "laden": 3
+    },
+    {
+      "label": "Gasoil",
+      "total": 3,
+      "ballast": 2,
+      "laden": 1
     },
     {
       "label": "al shaheen",
@@ -433,10 +373,10 @@
       "laden": 1
     },
     {
-      "label": "Other Chemicals",
+      "label": "Chem/Bio",
       "total": 2,
-      "ballast": 0,
-      "laden": 2
+      "ballast": 1,
+      "laden": 1
     },
     {
       "label": "Monoammonium Phosphates",
@@ -449,30 +389,6 @@
       "total": 2,
       "ballast": 0,
       "laden": 2
-    },
-    {
-      "label": "Aluminium",
-      "total": 2,
-      "ballast": 0,
-      "laden": 2
-    },
-    {
-      "label": "Vegoils",
-      "total": 2,
-      "ballast": 2,
-      "laden": 0
-    },
-    {
-      "label": "Base Oil Group III",
-      "total": 2,
-      "ballast": 0,
-      "laden": 2
-    },
-    {
-      "label": "Gasoil/Diesel",
-      "total": 2,
-      "ballast": 2,
-      "laden": 0
     },
     {
       "label": "Deodorized Field Condensate",
@@ -497,18 +413,6 @@
       "total": 2,
       "ballast": 1,
       "laden": 1
-    },
-    {
-      "label": "Polymeric Polyol",
-      "total": 2,
-      "ballast": 0,
-      "laden": 2
-    },
-    {
-      "label": "Castor Oil",
-      "total": 2,
-      "ballast": 2,
-      "laden": 0
     },
     {
       "label": "Forest Products",
@@ -547,12 +451,6 @@
       "laden": 2
     },
     {
-      "label": "Vinyl Chloride Monomer",
-      "total": 2,
-      "ballast": 2,
-      "laden": 0
-    },
-    {
       "label": "Yellow Corn",
       "total": 2,
       "ballast": 0,
@@ -571,13 +469,37 @@
       "laden": 0
     },
     {
-      "label": "Ethylene",
+      "label": "Caustic Soda",
       "total": 2,
       "ballast": 2,
       "laden": 0
     },
     {
+      "label": "Crude Oil/Condensate",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
+    },
+    {
       "label": "EOPL",
+      "total": 2,
+      "ballast": 2,
+      "laden": 0
+    },
+    {
+      "label": "Crude Palm Oil",
+      "total": 2,
+      "ballast": 2,
+      "laden": 0
+    },
+    {
+      "label": "Monoethylene Glycol",
+      "total": 2,
+      "ballast": 1,
+      "laden": 1
+    },
+    {
+      "label": "Palm Oil",
       "total": 2,
       "ballast": 2,
       "laden": 0
@@ -649,6 +571,12 @@
       "laden": 0
     },
     {
+      "label": "Aluminium",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
       "label": "Ferrous Scrap",
       "total": 1,
       "ballast": 0,
@@ -659,30 +587,6 @@
       "total": 1,
       "ballast": 1,
       "laden": 0
-    },
-    {
-      "label": "Molten Sulphur",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Low Sulfur Fuel Oil",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Low Sulphur Straight Run Fuel Oil",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Bitumen PEN 60-70",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
     },
     {
       "label": "Brazil Crude",
@@ -697,49 +601,13 @@
       "laden": 0
     },
     {
-      "label": "Monoethanolamine",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Meleck",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Soybean Oil",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Molasses",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
       "label": "FerroNickel",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "Olefins",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
       "label": "Blast Furnace Slag",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Inorganic Chemicals",
       "total": 1,
       "ballast": 1,
       "laden": 0
@@ -787,16 +655,10 @@
       "laden": 0
     },
     {
-      "label": "Kerosene",
+      "label": "Bitumen/Asphalt",
       "total": 1,
       "ballast": 1,
       "laden": 0
-    },
-    {
-      "label": "2-Ethylhexanol",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
     },
     {
       "label": "Chrome Ore",
@@ -817,25 +679,19 @@
       "laden": 0
     },
     {
+      "label": "Other Chemicals",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
       "label": "Soda Ash",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "Carbon Black Feedstock",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
       "label": "Metallurgical Coal",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Qatar Condensate",
       "total": 1,
       "ballast": 1,
       "laden": 0
@@ -859,16 +715,10 @@
       "laden": 1
     },
     {
-      "label": "Marine Diesel",
+      "label": "LPG",
       "total": 1,
       "ballast": 0,
       "laden": 1
-    },
-    {
-      "label": "Low Sulfur Gasoil",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
     },
     {
       "label": "Hot Rolled Coils",
@@ -907,7 +757,13 @@
       "laden": 1
     },
     {
-      "label": "Coal Tar",
+      "label": "Gasoil/Diesel",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Clean",
       "total": 1,
       "ballast": 0,
       "laden": 1
@@ -943,6 +799,12 @@
       "laden": 1
     },
     {
+      "label": "Base Oil Group III",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
       "label": "dubai  fateh",
       "total": 1,
       "ballast": 0,
@@ -967,6 +829,6 @@
       "laden": 0
     }
   ],
-  "total": 1317,
-  "syncTimestamp": "2026-04-01T06:04:42.572Z"
+  "total": 945,
+  "syncTimestamp": "2026-04-01T12:37:32.316Z"
 }

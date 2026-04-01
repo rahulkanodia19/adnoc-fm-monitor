@@ -75,8 +75,10 @@ function main() {
     console.error('ERROR: vessels.json not found. Run sync or download from Kpler first.');
     process.exit(1);
   }
-  const vessels = JSON.parse(fs.readFileSync(vesselsPath, 'utf-8'));
-  console.log(`Loaded ${vessels.length} vessels`);
+  const EXCLUDED_VESSEL_TYPES = ['Short Sea Tankers', 'Intermediate Tankers', 'Small Tankers', 'SGC', 'Mini Bulker'];
+  const allVesselsRaw = JSON.parse(fs.readFileSync(vesselsPath, 'utf-8'));
+  const vessels = allVesselsRaw.filter(v => !EXCLUDED_VESSEL_TYPES.includes(v.vesselTypeClass));
+  console.log(`Loaded ${allVesselsRaw.length} vessels, excluded ${allVesselsRaw.length - vessels.length} small types → ${vessels.length} vessels`);
 
   const now = new Date().toISOString();
   const today = now.split('T')[0];
@@ -438,8 +440,20 @@ function main() {
     } : null,
   };
 
+  // Small vessels summary (excluded types — shown separately at bottom of dashboard)
+  const excludedVessels = allVesselsRaw.filter(v => EXCLUDED_VESSEL_TYPES.includes(v.vesselTypeClass) && v.lat && v.lng);
+  const smallInside = excludedVessels.filter(v => isInsideGulf(v.lat, v.lng)).length;
+  const smallOutside = excludedVessels.length - smallInside;
+  summary.smallVessels = {
+    inside: smallInside,
+    outside: smallOutside,
+    total: excludedVessels.length,
+    types: EXCLUDED_VESSEL_TYPES,
+  };
+
   fs.writeFileSync(path.join(SOH_DIR, 'summary.json'), JSON.stringify(summary, null, 2));
   console.log(`Summary: Inside=${summary.insideTotal}, Outside=${summary.outsideTotal}, ADNOC=${summary.adnocCount}, Transit=${transitVessels.length}`);
+  console.log(`Small vessels excluded: ${excludedVessels.length} (inside: ${smallInside}, outside: ${smallOutside})`);
 
   // --- Daily vessel snapshot for transit detection ---
   const snapshotDir = path.join(SOH_DIR, '.daily-vessel-snapshots');

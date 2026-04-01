@@ -54,107 +54,6 @@
       "isTransiting": true
     },
     {
-      "name": "Sun Rise I",
-      "imo": "9377585",
-      "mmsi": "355201000",
-      "vesselTypeClass": "Short Sea Tankers",
-      "state": "ballast",
-      "flagName": "Panama",
-      "deadWeight": 7695,
-      "commodityTypes": [
-        "liquids"
-      ],
-      "capacity": 10487,
-      "speed": 6.5,
-      "course": 330,
-      "lat": 26.669794,
-      "lng": 56.7953,
-      "destination": "Khor Al Zubair Port",
-      "destinationEta": "2026-04-03T18:00:00",
-      "aisDestination": null,
-      "product": "Chem/Bio",
-      "lastPortCall": {
-        "start": "2026-02-27T08:53:57",
-        "end": "2026-02-27T08:53:57"
-      },
-      "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
-      "name": "Sea Wolf 10",
-      "imo": "9136761",
-      "mmsi": "613267705",
-      "vesselTypeClass": "Small Tankers",
-      "state": "loaded",
-      "flagName": null,
-      "deadWeight": 4999,
-      "commodityTypes": [
-        "liquids"
-      ],
-      "capacity": 5512,
-      "speed": 11.6,
-      "course": 333,
-      "lat": 26.667164,
-      "lng": 56.654957,
-      "aisDestination": null,
-      "product": "Clean petroleum products",
-      "lastPortCall": {
-        "start": "2025-08-03T04:14:13",
-        "end": "2025-08-03T04:14:13"
-      },
-      "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
-      "name": "Rival",
-      "imo": "9117818",
-      "mmsi": "370859000",
-      "vesselTypeClass": "Small Tankers",
-      "state": "ballast",
-      "flagName": "Panama",
-      "deadWeight": 3275,
-      "commodityTypes": [
-        "liquids"
-      ],
-      "capacity": 3611,
-      "speed": 4.8,
-      "course": 52.4,
-      "lat": 26.70942,
-      "lng": 56.115525,
-      "aisDestination": null,
-      "product": "High Sulphur Straight Run Fuel Oil",
-      "lastPortCall": {
-        "start": "2018-03-30T13:13:22",
-        "end": "2018-04-09T09:16:46"
-      },
-      "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
-      "name": "Pacific Freedom",
-      "imo": "9032317",
-      "mmsi": "632097655",
-      "vesselTypeClass": "Small Tankers",
-      "state": "ballast",
-      "flagName": "Tanzania, United Republic of",
-      "deadWeight": 1150,
-      "commodityTypes": [
-        "liquids"
-      ],
-      "capacity": 1268,
-      "speed": 4.4,
-      "course": 156,
-      "lat": 26.246706,
-      "lng": 55.95208,
-      "aisDestination": null,
-      "lastPortCall": {
-        "start": "2025-12-11T23:14:03",
-        "end": "2025-12-11T23:14:03"
-      },
-      "transitDirection": "exiting",
-      "isTransiting": true
-    },
-    {
       "name": "Samanta",
       "imo": "9000297",
       "mmsi": "341107001",
@@ -337,31 +236,6 @@
         "end": "2026-03-28T23:17:39"
       },
       "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
-      "name": "Ariana",
-      "imo": "9500132",
-      "mmsi": "374186000",
-      "vesselTypeClass": "Intermediate Tankers",
-      "state": "ballast",
-      "flagName": "Panama",
-      "deadWeight": 17475,
-      "commodityTypes": [
-        "liquids"
-      ],
-      "capacity": 20128,
-      "speed": 6.9,
-      "course": 155.7,
-      "lat": 26.393008,
-      "lng": 56.197932,
-      "aisDestination": null,
-      "product": "Fuel Oils",
-      "lastPortCall": {
-        "start": "2022-08-16T22:05:48",
-        "end": "2022-08-16T22:05:48"
-      },
-      "transitDirection": "exiting",
       "isTransiting": true
     },
     {
@@ -550,8 +424,8 @@
       "isTransiting": true
     }
   ],
-  "exitingCount": 8,
-  "enteringCount": 11,
-  "totalTransiting": 21,
-  "syncTimestamp": "2026-04-01T06:04:42.572Z"
+  "exitingCount": 6,
+  "enteringCount": 8,
+  "totalTransiting": 16,
+  "syncTimestamp": "2026-04-01T12:37:32.316Z"
 }

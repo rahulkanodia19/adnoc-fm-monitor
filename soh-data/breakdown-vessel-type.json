@@ -1,12 +1,6 @@
 {
   "data": [
     {
-      "label": "Short Sea Tankers",
-      "total": 172,
-      "ballast": 110,
-      "laden": 62
-    },
-    {
       "label": "Container Ship",
       "total": 144,
       "ballast": 67,
@@ -25,12 +19,6 @@
       "laden": 71
     },
     {
-      "label": "Small Tankers",
-      "total": 106,
-      "ballast": 74,
-      "laden": 32
-    },
-    {
       "label": "Handysize",
       "total": 104,
       "ballast": 67,
@@ -41,12 +29,6 @@
       "total": 69,
       "ballast": 34,
       "laden": 35
-    },
-    {
-      "label": "Intermediate Tankers",
-      "total": 58,
-      "ballast": 18,
-      "laden": 40
     },
     {
       "label": "Panamax",
@@ -77,12 +59,6 @@
       "total": 39,
       "ballast": 28,
       "laden": 11
-    },
-    {
-      "label": "SGC",
-      "total": 30,
-      "ballast": 27,
-      "laden": 3
     },
     {
       "label": "Suezmax/LR3",
@@ -139,12 +115,6 @@
       "laden": 4
     },
     {
-      "label": "Mini Bulker",
-      "total": 6,
-      "ballast": 5,
-      "laden": 1
-    },
-    {
       "label": "Baby Capes",
       "total": 5,
       "ballast": 5,
@@ -169,6 +139,6 @@
       "laden": 1
     }
   ],
-  "total": 1317,
-  "syncTimestamp": "2026-04-01T06:04:42.572Z"
+  "total": 945,
+  "syncTimestamp": "2026-04-01T12:37:32.316Z"
 }

@@ -45,17 +45,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.543802,
-      "lng": 55.041222,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Bow Victory",
-      "speed": 0.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 25.965,
       "lng": 56.926666,
       "type": "Handy/MR1",
@@ -250,17 +239,6 @@
       "commodity": "lpg",
       "name": "Gaz Imperial",
       "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.142996,
-      "lng": 54.903854,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Bravonea",
-      "speed": 10.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -628,17 +606,6 @@
       "isTransiting": false
     },
     {
-      "lat": 23.642717,
-      "lng": 58.566425,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Southern Wolf",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 25.092291,
       "lng": 53.509354,
       "type": "Handysize",
@@ -711,17 +678,6 @@
       "state": "ballast",
       "commodity": "dry",
       "name": "Specter",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.352226,
-      "lng": 56.48,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "El Mar",
       "speed": 0,
       "isInside": false,
       "isTransiting": false
@@ -826,996 +782,6 @@
       "isTransiting": false
     },
     {
-      "lat": 24.72843,
-      "lng": 56.545952,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Brave",
-      "speed": 0.3,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.1374,
-      "lng": 56.516834,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Maturity Two",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.613684,
-      "lng": 55.099144,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Oceanjet",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.163961,
-      "lng": 56.529594,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Avatar",
-      "speed": 0.3,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.462349,
-      "lng": 55.12529,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Hercules Comet",
-      "speed": 6.5,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 27.16105,
-      "lng": 56.27646,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Fadak 6000",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 28.998434,
-      "lng": 48.480263,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Al Wataniah Iv",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 30.20434,
-      "lng": 47.876671,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Zatara",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.416235,
-      "lng": 56.932312,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Siya",
-      "speed": 7.2,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.377068,
-      "lng": 56.541401,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Madhuri",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.372168,
-      "lng": 56.56348,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Abc Sun",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 29.629999,
-      "lng": 48.755001,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Dignity",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.689116,
-      "lng": 55.257999,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Raffles Prosperity",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 27.41217,
-      "lng": 52.32377,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Narsis",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.373585,
-      "lng": 54.466194,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Al Jaber Ix",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.10594,
-      "lng": 52.93449,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Janana",
-      "speed": 0.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.2707,
-      "lng": 55.26136,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Ocean Fuel",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.457502,
-      "lng": 57.577148,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Tiber",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.332666,
-      "lng": 55.070309,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Monjasa Server",
-      "speed": 21,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.690968,
-      "lng": 57.068321,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Foshan",
-      "speed": 28.6,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.453934,
-      "lng": 56.613346,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Sea Shore",
-      "speed": 5.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 28.996866,
-      "lng": 48.467979,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Sedra Ii",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 26.991322,
-      "lng": 56.368073,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Ateela 2",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.287197,
-      "lng": 56.466702,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Daisy",
-      "speed": 0.5,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.812107,
-      "lng": 56.60532,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Sondos",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.300985,
-      "lng": 56.47308,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Fnsa 10",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 23.898333,
-      "lng": 58.251667,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Margherita Cosulich",
-      "speed": 7,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.32066,
-      "lng": 55.070816,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Monjasa Shaker",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.290823,
-      "lng": 56.467705,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Francie",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.348082,
-      "lng": 56.554218,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Eton",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.357998,
-      "lng": 56.481888,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Casper",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.157003,
-      "lng": 56.449394,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Heredia Sea",
-      "speed": 0.2,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.614836,
-      "lng": 57.067474,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Titan Wave",
-      "speed": 5.9,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.561239,
-      "lng": 57.459862,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Amber Ii",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.391762,
-      "lng": 56.474133,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Cavendish",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.149357,
-      "lng": 56.512241,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Falda",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.183893,
-      "lng": 56.479053,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Andes",
-      "speed": 0.2,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.397852,
-      "lng": 56.464161,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Kurt Mas",
-      "speed": 2.4,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 29.648283,
-      "lng": 48.693615,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Valencia",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.815397,
-      "lng": 56.944901,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Free Star",
-      "speed": 0.4,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.526987,
-      "lng": 55.40139,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Sara J",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.968903,
-      "lng": 56.804634,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Jovita",
-      "speed": 7.5,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.910315,
-      "lng": 55.05617,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Global Cherylyn",
-      "speed": 3.6,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.156511,
-      "lng": 56.54948,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Cecile",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.523306,
-      "lng": 55.363255,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Chemtrans",
-      "speed": 0.4,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.599211,
-      "lng": 55.058674,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Ocean Wave",
-      "speed": 0.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.37059,
-      "lng": 55.38445,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Mawuko",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.3665,
-      "lng": 55.377,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Tankoil",
-      "speed": 2.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.346016,
-      "lng": 56.516987,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Rhine",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.538595,
-      "lng": 54.952396,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Kronos",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.143133,
-      "lng": 56.508133,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Vemagrace",
-      "speed": 19.2,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.932484,
-      "lng": 57.157082,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Kassia",
-      "speed": 0.8,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.188334,
-      "lng": 56.574654,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Zhong Fa",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.855412,
-      "lng": 57.101952,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Arolia",
-      "speed": 0.8,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.487326,
-      "lng": 54.964237,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Quinn",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.751505,
-      "lng": 56.584545,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Zaya",
-      "speed": 2.7,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.403784,
-      "lng": 55.051472,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Vacamonte",
-      "speed": 2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.356462,
-      "lng": 56.46814,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Adria",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.338089,
-      "lng": 56.484215,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Monjasa Shipper",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.252129,
-      "lng": 56.514999,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Coya",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.464964,
-      "lng": 55.504734,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Arabian Energy",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.393497,
-      "lng": 55.079685,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Puffin Two",
-      "speed": 0.7,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.572016,
-      "lng": 56.675282,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Gaia",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 26.669794,
-      "lng": 56.7953,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Sun Rise I",
-      "speed": 6.5,
-      "isInside": false,
-      "isTransiting": true
-    },
-    {
-      "lat": 25.928921,
-      "lng": 51.60302,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Sidra Al Khor",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.772352,
-      "lng": 56.563747,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Alejandrina 1",
-      "speed": 6.5,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.45491,
-      "lng": 55.249203,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Chiron 7",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.162989,
-      "lng": 56.514973,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Zuma",
-      "speed": 0.8,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.892649,
-      "lng": 56.9189,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Ebado",
-      "speed": 10.5,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.37019,
-      "lng": 55.380569,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Starbound Explorer",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.157045,
-      "lng": 56.505226,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Verde",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 29.6504,
-      "lng": 48.67804,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Trend",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.879751,
-      "lng": 57.143707,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Emma",
-      "speed": 0.4,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.16543,
-      "lng": 56.464306,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Marine Xena",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.517517,
-      "lng": 55.024471,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Lilac",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 29.583126,
-      "lng": 48.903767,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Sudarshan",
-      "speed": 11.6,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.026825,
-      "lng": 56.753353,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Eclipse Wind",
-      "speed": 19.2,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.815001,
-      "lng": 57.291668,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Narsimhaa",
-      "speed": 1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.149025,
-      "lng": 56.505665,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "He Ping Zhi Lu",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.284788,
-      "lng": 56.587093,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Am Moon",
-      "speed": 6.3,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.337927,
-      "lng": 56.82708,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Celesta",
-      "speed": 18.2,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.26944,
-      "lng": 55.258259,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Fnsa 11",
-      "speed": 0.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.5054,
-      "lng": 55.19218,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Nova",
-      "speed": 0.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 27.123877,
-      "lng": 56.240505,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Harbour Phoenix",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.397686,
-      "lng": 56.437908,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Iconic 1",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.460157,
-      "lng": 55.300179,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Msg",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.31418,
-      "lng": 54.46741,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Shatt Alarab 1",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.749723,
-      "lng": 56.535141,
-      "type": "Mini Bulker",
-      "state": "ballast",
-      "commodity": "dry",
-      "name": "Liana",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 29.350082,
-      "lng": 47.919632,
-      "type": "Mini Bulker",
-      "state": "ballast",
-      "commodity": "dry",
-      "name": "Aurora",
-      "speed": 0.8,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.491877,
-      "lng": 52.380653,
-      "type": "Mini Bulker",
-      "state": "loaded",
-      "commodity": "dry",
-      "name": "De Jian",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 25.135174,
       "lng": 56.475307,
       "type": "Kamsarmax",
@@ -1849,28 +815,6 @@
       "isTransiting": false
     },
     {
-      "lat": 30.047701,
-      "lng": 47.958912,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Shoko",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.509962,
-      "lng": 54.924358,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Eva Fuji",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 25.159525,
       "lng": 52.931713,
       "type": "VLCC",
@@ -1878,17 +822,6 @@
       "commodity": "liquids",
       "name": "Daisen",
       "speed": 1.5,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 26.047358,
-      "lng": 55.700165,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Hercules Star",
-      "speed": 7.4,
       "isInside": true,
       "isTransiting": false
     },
@@ -1901,523 +834,6 @@
       "name": "Grand Bonanza",
       "speed": 0.1,
       "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.806667,
-      "lng": 57.371666,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Y L W",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.69659,
-      "lng": 56.9645,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Pacific Explorer",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 30.196697,
-      "lng": 47.882854,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Dustin",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.425623,
-      "lng": 51.74892,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Sidra Al Ghariya",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 26.211613,
-      "lng": 55.906975,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Rayan 02",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.400393,
-      "lng": 56.489815,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "R S G",
-      "speed": 1.3,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 23.713943,
-      "lng": 58.444759,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Courage 7",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.386208,
-      "lng": 56.455761,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Agrasen",
-      "speed": 18.2,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.511044,
-      "lng": 55.229275,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Noble One",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.4175,
-      "lng": 56.8927,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Black Maya",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.750027,
-      "lng": 56.766735,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Hemera",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.464863,
-      "lng": 55.504517,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Rms 1",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.788267,
-      "lng": 56.622452,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Padmanabh",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.365946,
-      "lng": 56.479614,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Chandrama",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.466681,
-      "lng": 55.282692,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "M M A",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.77895,
-      "lng": 56.935986,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Velix",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 29.396667,
-      "lng": 48.990238,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Bitu Ocean",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.628185,
-      "lng": 56.993198,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Anjaneya",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.45951,
-      "lng": 55.21261,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Kanha J",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.71595,
-      "lng": 56.923241,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Simran",
-      "speed": 3.6,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.469812,
-      "lng": 55.308578,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Ab Victory",
-      "speed": 0.3,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.688334,
-      "lng": 57.026669,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Jalveer",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.782682,
-      "lng": 56.531166,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "XARON",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.621584,
-      "lng": 56.673546,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Pontus",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.408884,
-      "lng": 56.470188,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "K R A",
-      "speed": 1.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.667002,
-      "lng": 56.926334,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Global Rani",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.108252,
-      "lng": 56.504162,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Pushpak",
-      "speed": 4.9,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.344982,
-      "lng": 56.474228,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Topaz Dream",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 26.68821,
-      "lng": 55.981239,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Bitumax",
-      "speed": 0.5,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.347069,
-      "lng": 56.462055,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Riva 3",
-      "speed": 10.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.41054,
-      "lng": 56.490372,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Bd 51",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 26.016508,
-      "lng": 56.993401,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Argo Maris",
-      "speed": 6.9,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 23.625,
-      "lng": 58.568333,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Prince Ix",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.368359,
-      "lng": 55.384121,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "B2 Ocean",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.187105,
-      "lng": 57.155025,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Athe Nova",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.369926,
-      "lng": 55.380035,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Ocean Prime",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 29.76606,
-      "lng": 48.697052,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Ramesses Ii",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.269304,
-      "lng": 55.260948,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Blue Majesty",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.918222,
-      "lng": 57.036739,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "M3S X",
-      "speed": 5.9,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.373665,
-      "lng": 54.466377,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Al Jaber X",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.370821,
-      "lng": 56.495655,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Victory 1",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.091146,
-      "lng": 54.429455,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Paritosh",
-      "speed": 19.9,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.43145,
-      "lng": 51.902672,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Fs Bitumen No. 2",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.473534,
-      "lng": 55.484116,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Alma Nova",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.482201,
-      "lng": 55.133801,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Northern Star",
-      "speed": 0.5,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.452019,
-      "lng": 56.636127,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "R Ocean",
-      "speed": 1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 23.649084,
-      "lng": 58.578606,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Mib-1",
-      "speed": 0.3,
-      "isInside": false,
       "isTransiting": false
     },
     {
@@ -2465,28 +881,6 @@
       "isTransiting": false
     },
     {
-      "lat": 27.38345,
-      "lng": 50.399704,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Oriental Gerbera",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.438747,
-      "lng": 55.06274,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Solar Roma",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 25.860092,
       "lng": 52.230133,
       "type": "VLCC",
@@ -2515,17 +909,6 @@
       "state": "loaded",
       "commodity": "dry",
       "name": "Leyla Aksoy",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.604866,
-      "lng": 54.594051,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Bow Mercury",
       "speed": 0,
       "isInside": true,
       "isTransiting": false
@@ -2575,17 +958,6 @@
       "isTransiting": false
     },
     {
-      "lat": 28.16667,
-      "lng": 48.67333,
-      "type": "Mini Bulker",
-      "state": "ballast",
-      "commodity": "dry",
-      "name": "Yan Tong",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 25.521282,
       "lng": 54.853401,
       "type": "VLCC",
@@ -2605,17 +977,6 @@
       "name": "Advantage Victory",
       "speed": 0.2,
       "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.283709,
-      "lng": 56.472427,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Pearl Kenzo",
-      "speed": 0.1,
-      "isInside": false,
       "isTransiting": false
     },
     {
@@ -2762,17 +1123,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.413385,
-      "lng": 55.026447,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Marine Charge",
-      "speed": 9.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 27.268162,
       "lng": 50.273727,
       "type": "MGC",
@@ -2792,39 +1142,6 @@
       "name": "Da Tong Yun",
       "speed": 0,
       "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 27.179457,
-      "lng": 52.184635,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Oak",
-      "speed": 7.3,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.286566,
-      "lng": 56.517433,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Carlyna",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.165169,
-      "lng": 56.569908,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Jasmina",
-      "speed": 3.4,
-      "isInside": false,
       "isTransiting": false
     },
     {
@@ -2890,17 +1207,6 @@
       "commodity": "liquids",
       "name": "Akkad",
       "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.562935,
-      "lng": 54.795399,
-      "type": "Intermediate Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Bow Lion",
-      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -3092,17 +1398,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.437363,
-      "lng": 55.104343,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Zonda",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 24.303637,
       "lng": 54.470379,
       "type": "Handysize",
@@ -3111,28 +1406,6 @@
       "name": "Jin Xu Xiang 88",
       "speed": 0,
       "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.588133,
-      "lng": 56.90588,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Shaun 2",
-      "speed": 6.5,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.142508,
-      "lng": 56.552208,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Salba",
-      "speed": 2,
-      "isInside": false,
       "isTransiting": false
     },
     {
@@ -3154,83 +1427,6 @@
       "commodity": "liquids",
       "name": "Advantage Passion",
       "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 30.4864,
-      "lng": 49.19828,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Raniah",
-      "speed": 0.4,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 27.412718,
-      "lng": 50.133221,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Saehan Marina",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 27.39492,
-      "lng": 50.086113,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Thetis Leona",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.885,
-      "lng": 56.941666,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Yu Tong",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.923227,
-      "lng": 56.717365,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Hawks Pride",
-      "speed": 2.2,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.920155,
-      "lng": 57.139519,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Hawks Javaahiru",
-      "speed": 0.5,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.333515,
-      "lng": 56.490002,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Enki",
-      "speed": 0.1,
       "isInside": false,
       "isTransiting": false
     },
@@ -3268,644 +1464,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.466667,
-      "lng": 55.505001,
-      "type": "Mini Bulker",
-      "state": "ballast",
-      "commodity": "dry",
-      "name": "Bestekar",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 26.385071,
-      "lng": 55.399612,
-      "type": "Mini Bulker",
-      "state": "ballast",
-      "commodity": "dry",
-      "name": "Lada",
-      "speed": 0.6,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.401072,
-      "lng": 56.477154,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Yongheng",
-      "speed": 0.6,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.527927,
-      "lng": 55.215912,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Majestic",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.967241,
-      "lng": 56.741245,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Panos- N",
-      "speed": 7.8,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 26.667164,
-      "lng": 56.654957,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Sea Wolf 10",
-      "speed": 11.6,
-      "isInside": false,
-      "isTransiting": true
-    },
-    {
-      "lat": 25.49473,
-      "lng": 55.355301,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Moana 99",
-      "speed": 0.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.470577,
-      "lng": 57.457401,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Ss Navigator",
-      "speed": 6.7,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.169512,
-      "lng": 56.485794,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Latona",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.292492,
-      "lng": 56.478134,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Lara",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 28.991573,
-      "lng": 50.70771,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Jasmin",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.385746,
-      "lng": 55.082516,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Blossom",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.366184,
-      "lng": 55.089981,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Phoenix",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.44257,
-      "lng": 56.639118,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Lilac",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.033684,
-      "lng": 57.114632,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Rina",
-      "speed": 0.2,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 28.377333,
-      "lng": 49.838799,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Margoal",
-      "speed": 0.6,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 26.631611,
-      "lng": 50.275028,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Dia",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.798853,
-      "lng": 56.540207,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Kawakawa",
-      "speed": 1.2,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.766449,
-      "lng": 56.535133,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Dft Long",
-      "speed": 1.7,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.276264,
-      "lng": 55.258942,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Phoenix",
-      "speed": 1.3,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.396235,
-      "lng": 56.522686,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Albi",
-      "speed": 4.9,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.061243,
-      "lng": 57.315567,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Astra",
-      "speed": 0.2,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.312845,
-      "lng": 54.467594,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Sana",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.547779,
-      "lng": 55.341282,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Fiora",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.778202,
-      "lng": 56.9856,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Kai",
-      "speed": 0.8,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.865047,
-      "lng": 57.084641,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Vega",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.799265,
-      "lng": 57.22411,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Zeal",
-      "speed": 11.4,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.576742,
-      "lng": 55.116898,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Hamdan Ab",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.502108,
-      "lng": 55.397797,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Twenty Seven",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 27.071547,
-      "lng": 50.860897,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Yahya",
-      "speed": 6.4,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.424995,
-      "lng": 56.991734,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Molly",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.372547,
-      "lng": 56.470627,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Atlantis Antao",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.472748,
-      "lng": 55.49366,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Fourace",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.423418,
-      "lng": 55.451859,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Franklin 1",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.466656,
-      "lng": 55.501354,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Sudarshan",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.061045,
-      "lng": 57.315575,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Eureka",
-      "speed": 0.3,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.981568,
-      "lng": 55.06627,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Silvia Xii",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 26.70942,
-      "lng": 56.115525,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Rival",
-      "speed": 4.8,
-      "isInside": true,
-      "isTransiting": true
-    },
-    {
-      "lat": 25.483025,
-      "lng": 55.163723,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Barakaale I",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.509012,
-      "lng": 57.148201,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Kyuseisen",
-      "speed": 1.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.037174,
-      "lng": 57.127041,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Chios",
-      "speed": 0.6,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.484482,
-      "lng": 55.152718,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Dharma",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.271633,
-      "lng": 55.259293,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Shreenath Ji",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.530285,
-      "lng": 55.1908,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "ELEGANCE",
-      "speed": 0.3,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.238815,
-      "lng": 54.59948,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Island Trader",
-      "speed": 0.3,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.4576,
-      "lng": 55.19212,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Al Khwaja",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 29.644186,
-      "lng": 48.762218,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Zara 17",
-      "speed": 0.7,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.375946,
-      "lng": 55.038532,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Tristar Triumph",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 30.458784,
-      "lng": 48.023071,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Al Qurna",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.407341,
-      "lng": 56.462585,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Cara",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.743134,
-      "lng": 56.579132,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Hana I",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 29.775667,
-      "lng": 48.707859,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Dracarys",
-      "speed": 0.5,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.527502,
-      "lng": 55.27485,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Betelgeuse",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.774033,
-      "lng": 56.594299,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Genesis Alpha",
-      "speed": 3.9,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.357677,
-      "lng": 56.846901,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Serendipity",
-      "speed": 3,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.288361,
-      "lng": 56.529667,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Malvina",
-      "speed": 1.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.487017,
-      "lng": 55.259785,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Amir",
-      "speed": 0.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 27.125,
-      "lng": 56.248333,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Rt 10",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 25.14114,
       "lng": 53.644859,
       "type": "Ultramax",
@@ -3928,50 +1486,6 @@
       "isTransiting": false
     },
     {
-      "lat": 27.051666,
-      "lng": 56.126667,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Bavan",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.588884,
-      "lng": 57.672668,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Pearl",
-      "speed": 0.3,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.753349,
-      "lng": 56.517467,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Adamaris",
-      "speed": 0.5,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 26.246706,
-      "lng": 55.95208,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Pacific Freedom",
-      "speed": 4.4,
-      "isInside": true,
-      "isTransiting": true
-    },
-    {
       "lat": 25.133333,
       "lng": 56.445,
       "type": "Suezmax/LR3",
@@ -3983,28 +1497,6 @@
       "isTransiting": false
     },
     {
-      "lat": 24.493757,
-      "lng": 56.627232,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Maple Ocean",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.730549,
-      "lng": 56.579575,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Fareeda 5",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 25.911959,
       "lng": 55.750759,
       "type": "Handysize",
@@ -4012,28 +1504,6 @@
       "commodity": "dry",
       "name": "Da Cai Yun",
       "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.500399,
-      "lng": 55.431755,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Black Diamond",
-      "speed": 0.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.51679,
-      "lng": 55.198582,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Marinero",
-      "speed": 0.7,
       "isInside": true,
       "isTransiting": false
     },
@@ -4067,17 +1537,6 @@
       "commodity": "liquids",
       "name": "Chemroad Odyssey",
       "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 27.771919,
-      "lng": 48.885193,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Zaki Dream",
-      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -4148,39 +1607,6 @@
       "isTransiting": false
     },
     {
-      "lat": 26.455677,
-      "lng": 53.86068,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "SAVONA",
-      "speed": 5.8,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 26.048859,
-      "lng": 55.92268,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "LYNG TRADER",
-      "speed": 0.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 29.640194,
-      "lng": 48.784859,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Alman",
-      "speed": 0.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 26.499706,
       "lng": 50.190639,
       "type": "Handysize",
@@ -4225,17 +1651,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.402597,
-      "lng": 56.481998,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Trident Ii",
-      "speed": 0.3,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 26.119761,
       "lng": 55.73856,
       "type": "Handysize",
@@ -4269,17 +1684,6 @@
       "isTransiting": false
     },
     {
-      "lat": 24.719868,
-      "lng": 56.575905,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Venus 09",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 25.657784,
       "lng": 55.065254,
       "type": "VLGC",
@@ -4299,28 +1703,6 @@
       "name": "Fogas",
       "speed": 0.1,
       "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 29.669001,
-      "lng": 48.758335,
-      "type": "Intermediate Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Cabri",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 26.147312,
-      "lng": 55.501534,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Mab 5",
-      "speed": 6,
-      "isInside": true,
       "isTransiting": false
     },
     {
@@ -4357,17 +1739,6 @@
       "isTransiting": false
     },
     {
-      "lat": 24.86607,
-      "lng": 56.856758,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Asana",
-      "speed": 5.3,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 28.293913,
       "lng": 49.275799,
       "type": "Handy/MR1",
@@ -4375,39 +1746,6 @@
       "commodity": "liquids",
       "name": "Rawabi Integrity",
       "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.890354,
-      "lng": 54.782612,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Sakai",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.217793,
-      "lng": 56.400799,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Gas Ray",
-      "speed": 10.7,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.693001,
-      "lng": 54.823666,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Crave",
-      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -4442,17 +1780,6 @@
       "name": "Vista Iii",
       "speed": 0,
       "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.49715,
-      "lng": 55.47781,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Zaabeel",
-      "speed": 5.5,
-      "isInside": true,
       "isTransiting": false
     },
     {
@@ -4497,17 +1824,6 @@
       "name": "Daran",
       "speed": 0.1,
       "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.523865,
-      "lng": 55.170952,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Tristan",
-      "speed": 1.2,
-      "isInside": true,
       "isTransiting": false
     },
     {
@@ -4566,17 +1882,6 @@
       "isTransiting": false
     },
     {
-      "lat": 24.759302,
-      "lng": 56.568386,
-      "type": "Intermediate Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Violet 3",
-      "speed": 0.2,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 26.63492,
       "lng": 50.178108,
       "type": "Handysize",
@@ -4585,28 +1890,6 @@
       "name": "Ana Ocean",
       "speed": 0.1,
       "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.646194,
-      "lng": 56.931507,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Simba V",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.948467,
-      "lng": 57.074272,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Alisa",
-      "speed": 6.5,
-      "isInside": false,
       "isTransiting": false
     },
     {
@@ -4709,17 +1992,6 @@
       "isTransiting": false
     },
     {
-      "lat": 29.625383,
-      "lng": 48.905003,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Andia",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 24.608334,
       "lng": 56.764999,
       "type": "Panamax",
@@ -4753,28 +2025,6 @@
       "isTransiting": false
     },
     {
-      "lat": 27.612457,
-      "lng": 52.386829,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Caspia",
-      "speed": 0.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 26.975,
-      "lng": 56.343334,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Delice",
-      "speed": 20,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 25.141502,
       "lng": 56.557373,
       "type": "MR",
@@ -4786,28 +2036,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.829123,
-      "lng": 56.915981,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Global Peak",
-      "speed": 4.8,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 27.002901,
-      "lng": 56.32074,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "BLOOMING DALE",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 25.627501,
       "lng": 55.11235,
       "type": "Handysize",
@@ -4816,39 +2044,6 @@
       "name": "Maria",
       "speed": 0.1,
       "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.507536,
-      "lng": 55.015491,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Yashar",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.714338,
-      "lng": 56.597801,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Horizon 1",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.763254,
-      "lng": 57.524025,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Sun",
-      "speed": 9.6,
-      "isInside": false,
       "isTransiting": false
     },
     {
@@ -4914,72 +2109,6 @@
       "commodity": "lpg",
       "name": "Tania Star",
       "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.528841,
-      "lng": 54.377369,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Su Gas",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.27038,
-      "lng": 55.261238,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Tazerbo",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.472851,
-      "lng": 57.317368,
-      "type": "Intermediate Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Sea Rock",
-      "speed": 9.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.373817,
-      "lng": 56.486908,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Gas Rga",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.567108,
-      "lng": 55.0382,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Daiken Maru",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.365078,
-      "lng": 56.542412,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Pioneer Gas",
-      "speed": 10.8,
       "isInside": false,
       "isTransiting": false
     },
@@ -5116,17 +2245,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.63641,
-      "lng": 56.943966,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Serenity Ix",
-      "speed": 0.2,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 27.20768,
       "lng": 52.392296,
       "type": "Handy",
@@ -5138,17 +2256,6 @@
       "isTransiting": false
     },
     {
-      "lat": 23.641666,
-      "lng": 58.576668,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Md 23",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 24.6,
       "lng": 56.751667,
       "type": "Handymax",
@@ -5157,17 +2264,6 @@
       "name": "Blt Green",
       "speed": 0,
       "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.610926,
-      "lng": 55.124599,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "A Star",
-      "speed": 0.1,
-      "isInside": true,
       "isTransiting": false
     },
     {
@@ -5226,17 +2322,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.368563,
-      "lng": 55.384586,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Velaro",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 28.944054,
       "lng": 48.397404,
       "type": "Panamax",
@@ -5265,17 +2350,6 @@
       "state": "loaded",
       "commodity": "dry",
       "name": "Great Wentao",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.348236,
-      "lng": 56.421047,
-      "type": "SGC",
-      "state": "loaded",
-      "commodity": "lpg",
-      "name": "Amir Gas",
       "speed": 0,
       "isInside": false,
       "isTransiting": false
@@ -5314,45 +2388,12 @@
       "isTransiting": false
     },
     {
-      "lat": 29.308653,
-      "lng": 49.2565,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "P K A",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.792599,
-      "lng": 56.897072,
-      "type": "Intermediate Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Onyx 1",
-      "speed": 0.3,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 25.283556,
       "lng": 54.936146,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Brother Glory",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 27.339636,
-      "lng": 50.421883,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Hicri Kaan",
       "speed": 0,
       "isInside": true,
       "isTransiting": false
@@ -5369,17 +2410,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.336073,
-      "lng": 56.537132,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Maya Gas I",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 25.693903,
       "lng": 56.887321,
       "type": "Suezmax/LR3",
@@ -5388,17 +2418,6 @@
       "name": "Chloe",
       "speed": 0,
       "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.547024,
-      "lng": 55.310246,
-      "type": "SGC",
-      "state": "loaded",
-      "commodity": "lpg",
-      "name": "GALAXY GAS",
-      "speed": 0.1,
-      "isInside": true,
       "isTransiting": false
     },
     {
@@ -5512,17 +2531,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.319788,
-      "lng": 56.71302,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Sifra",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 27.148266,
       "lng": 49.787846,
       "type": "MR",
@@ -5530,17 +2538,6 @@
       "commodity": "liquids",
       "name": "Ratta",
       "speed": 0.3,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.271547,
-      "lng": 55.260941,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Sarwat Gas",
-      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -5622,17 +2619,6 @@
       "isTransiting": true
     },
     {
-      "lat": 25.6366,
-      "lng": 57.673054,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Valiant Roar",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 27.030001,
       "lng": 56.088333,
       "type": "Panamax",
@@ -5677,17 +2663,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.507519,
-      "lng": 55.416439,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Apex Gas",
-      "speed": 1.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 25.366261,
       "lng": 56.576939,
       "type": "VLCC",
@@ -5707,17 +2682,6 @@
       "name": "Huda",
       "speed": 0,
       "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.444654,
-      "lng": 55.32235,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Aqua Spirit",
-      "speed": 0,
-      "isInside": true,
       "isTransiting": false
     },
     {
@@ -5787,28 +2751,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.363583,
-      "lng": 56.467602,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "TRIMMU 3",
-      "speed": 4.3,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.341995,
-      "lng": 54.929905,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Mandala",
-      "speed": 0.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 24.752645,
       "lng": 56.56284,
       "type": "Handymax",
@@ -5853,17 +2795,6 @@
       "isTransiting": false
     },
     {
-      "lat": 30.030834,
-      "lng": 47.952168,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Ophelia I",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 25.185726,
       "lng": 56.570515,
       "type": "Supramax",
@@ -5886,17 +2817,6 @@
       "isTransiting": false
     },
     {
-      "lat": 24.118282,
-      "lng": 58.466587,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Sea Citrine Vi",
-      "speed": 8,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 25.569204,
       "lng": 55.106979,
       "type": "Handy/MR1",
@@ -5904,17 +2824,6 @@
       "commodity": "liquids",
       "name": "Sky Rider",
       "speed": 0.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.574842,
-      "lng": 55.131439,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Yellowstone",
-      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -5971,17 +2880,6 @@
       "name": "Elpis",
       "speed": 10.3,
       "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.333845,
-      "lng": 56.504166,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Zegna",
-      "speed": 0.1,
-      "isInside": false,
       "isTransiting": false
     },
     {
@@ -6150,17 +3048,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.379332,
-      "lng": 56.555786,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Oceana Kai",
-      "speed": 0.2,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 24.67304,
       "lng": 56.609928,
       "type": "Panamax",
@@ -6190,17 +3077,6 @@
       "commodity": "liquids",
       "name": "Esteghlal",
       "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.988638,
-      "lng": 56.876766,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Yara J",
-      "speed": 5,
       "isInside": false,
       "isTransiting": false
     },
@@ -6381,17 +3257,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.086828,
-      "lng": 56.577599,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Talia",
-      "speed": 5.6,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 24.732513,
       "lng": 54.215481,
       "type": "Handy",
@@ -6469,17 +3334,6 @@
       "isTransiting": false
     },
     {
-      "lat": 27.360462,
-      "lng": 50.203445,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Nymph Thetis",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 25.391514,
       "lng": 56.858185,
       "type": "Panamax/LR1",
@@ -6488,28 +3342,6 @@
       "name": "Pioneer Sam",
       "speed": 0.1,
       "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 29.619354,
-      "lng": 48.765995,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Ternhav",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.274258,
-      "lng": 55.258701,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Gsm",
-      "speed": 0,
-      "isInside": true,
       "isTransiting": false
     },
     {
@@ -6524,28 +3356,6 @@
       "isTransiting": false
     },
     {
-      "lat": 29.622047,
-      "lng": 48.725986,
-      "type": "Intermediate Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Pulmonis",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 29.581484,
-      "lng": 48.818302,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Mackerel",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 25.409245,
       "lng": 55.023159,
       "type": "VLCC",
@@ -6553,17 +3363,6 @@
       "commodity": "liquids",
       "name": "Tavaris Cassel",
       "speed": 0.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 27.413448,
-      "lng": 51.846851,
-      "type": "Intermediate Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Sita",
-      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -6744,17 +3543,6 @@
       "isTransiting": false
     },
     {
-      "lat": 29.0026,
-      "lng": 50.6104,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Chem",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 25.36648,
       "lng": 55.380898,
       "type": "Lower Conventional",
@@ -6920,17 +3708,6 @@
       "isTransiting": false
     },
     {
-      "lat": 24.969503,
-      "lng": 54.450886,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Epic Burano",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 25.146212,
       "lng": 56.453365,
       "type": "MR",
@@ -6986,17 +3763,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.869328,
-      "lng": 56.76004,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Coral Wave",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 25.377684,
       "lng": 56.573601,
       "type": "Panamax/LR1",
@@ -7049,17 +3815,6 @@
       "name": "Ocean Koi",
       "speed": 0.4,
       "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.737097,
-      "lng": 54.946892,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Nobler",
-      "speed": 0,
-      "isInside": true,
       "isTransiting": false
     },
     {
@@ -7159,17 +3914,6 @@
       "name": "Ashley",
       "speed": 0,
       "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.580313,
-      "lng": 56.642826,
-      "type": "Intermediate Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Alimas",
-      "speed": 0,
-      "isInside": false,
       "isTransiting": false
     },
     {
@@ -7283,17 +4027,6 @@
       "isTransiting": false
     },
     {
-      "lat": 24.796839,
-      "lng": 56.554539,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Reef",
-      "speed": 3.9,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 25.545393,
       "lng": 54.967373,
       "type": "MR",
@@ -7334,39 +4067,6 @@
       "commodity": "liquids",
       "name": "Ocean Guardian",
       "speed": 9.3,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.910074,
-      "lng": 54.859612,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Seagate",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.676384,
-      "lng": 56.981773,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Hoot",
-      "speed": 1.7,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.493549,
-      "lng": 56.913593,
-      "type": "Intermediate Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Lady Youmna",
-      "speed": 0,
       "isInside": false,
       "isTransiting": false
     },
@@ -7415,17 +4115,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.756603,
-      "lng": 56.896534,
-      "type": "Intermediate Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Voyager Haven",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 29.651934,
       "lng": 48.754478,
       "type": "MR",
@@ -7467,17 +4156,6 @@
       "name": "Kun Peng",
       "speed": 0,
       "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.568592,
-      "lng": 54.886929,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Yc Azalea",
-      "speed": 0,
-      "isInside": true,
       "isTransiting": false
     },
     {
@@ -7668,17 +4346,6 @@
       "isTransiting": false
     },
     {
-      "lat": 24.819319,
-      "lng": 57.849293,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Aether Sail",
-      "speed": 10,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 25.620953,
       "lng": 55.019997,
       "type": "Panamax/LR1",
@@ -7708,28 +4375,6 @@
       "commodity": "liquids",
       "name": "Dakush",
       "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 27.391483,
-      "lng": 50.459915,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Ginga Tiger",
-      "speed": 1.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.430174,
-      "lng": 55.293468,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Titan Harmony",
-      "speed": 11.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -7819,17 +4464,6 @@
       "name": "MADI",
       "speed": 0.2,
       "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.935547,
-      "lng": 54.540092,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Ealdor",
-      "speed": 0.6,
-      "isInside": true,
       "isTransiting": false
     },
     {
@@ -7928,17 +4562,6 @@
       "commodity": "liquids",
       "name": "Bili",
       "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.341999,
-      "lng": 56.505432,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Elena 1",
-      "speed": 0,
       "isInside": false,
       "isTransiting": false
     },
@@ -8273,17 +4896,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.35553,
-      "lng": 56.516552,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Nautical Echo",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 24.822796,
       "lng": 56.607506,
       "type": "MR",
@@ -8438,50 +5050,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.110785,
-      "lng": 56.660999,
-      "type": "Intermediate Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Akkadia",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.395174,
-      "lng": 56.451294,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Parimal",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.635859,
-      "lng": 56.92194,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "ELIAH",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.657829,
-      "lng": 57.009754,
-      "type": "Intermediate Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Euro Viking",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 24.746407,
       "lng": 56.57642,
       "type": "MR",
@@ -8490,17 +5058,6 @@
       "name": "Silver",
       "speed": 1.1,
       "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.306316,
-      "lng": 51.816849,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Serene Monaco",
-      "speed": 0,
-      "isInside": true,
       "isTransiting": false
     },
     {
@@ -8544,17 +5101,6 @@
       "commodity": "liquids",
       "name": "Zeus",
       "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.583307,
-      "lng": 54.898266,
-      "type": "Intermediate Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Yc Pansy",
-      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -8664,28 +5210,6 @@
       "state": "ballast",
       "commodity": "liquids",
       "name": "Well Sail",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.364532,
-      "lng": 56.493546,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Nermeen",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 29.692894,
-      "lng": 48.66449,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Shatt Al Arab",
       "speed": 0,
       "isInside": true,
       "isTransiting": false
@@ -8823,17 +5347,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.144953,
-      "lng": 56.488079,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Liaki Freedom",
-      "speed": 0.2,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 24.750086,
       "lng": 56.603909,
       "type": "MR",
@@ -8911,17 +5424,6 @@
       "isTransiting": false
     },
     {
-      "lat": 26.288021,
-      "lng": 56.266388,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Skylight",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 26.502508,
       "lng": 50.191315,
       "type": "Supramax",
@@ -8929,17 +5431,6 @@
       "commodity": "dry",
       "name": "M Garnet",
       "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.742813,
-      "lng": 53.768208,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Ds Ocean",
-      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -9005,17 +5496,6 @@
       "state": "ballast",
       "commodity": "liquids",
       "name": "Sanmar Suparna",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.520975,
-      "lng": 55.381634,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Ata Beket",
       "speed": 0,
       "isInside": true,
       "isTransiting": false
@@ -9087,17 +5567,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.484688,
-      "lng": 55.231647,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "No. 2 Ocean Pioneer",
-      "speed": 1.8,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 29.867746,
       "lng": 49.193321,
       "type": "Kamsarmax",
@@ -9116,17 +5585,6 @@
       "commodity": "liquids",
       "name": "M Brigit",
       "speed": 13,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.164101,
-      "lng": 56.529495,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Abc Trader",
-      "speed": 3.2,
       "isInside": false,
       "isTransiting": false
     },
@@ -9175,17 +5633,6 @@
       "isTransiting": false
     },
     {
-      "lat": 27.459249,
-      "lng": 50.403358,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Ginga Puma",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 27.166889,
       "lng": 49.790009,
       "type": "Handy/MR1",
@@ -9208,17 +5655,6 @@
       "isTransiting": false
     },
     {
-      "lat": 29.684654,
-      "lng": 48.673168,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Baghdad",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 25.590219,
       "lng": 56.431938,
       "type": "Panamax",
@@ -9226,17 +5662,6 @@
       "commodity": "dry",
       "name": "Ocean Kudos",
       "speed": 0.4,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.715544,
-      "lng": 56.560146,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Snarth",
-      "speed": 0.1,
       "isInside": false,
       "isTransiting": false
     },
@@ -9296,28 +5721,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.80953,
-      "lng": 57.092827,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Rosetta",
-      "speed": 10.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 29.639196,
-      "lng": 48.90514,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Eastern Hero",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 29.712957,
       "lng": 49.636581,
       "type": "Kamsarmax",
@@ -9340,39 +5743,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.337164,
-      "lng": 56.827408,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Silva",
-      "speed": 16.6,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.139584,
-      "lng": 56.526226,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Sorrelle",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.910635,
-      "lng": 56.959042,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Siene",
-      "speed": 9.9,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 26.933001,
       "lng": 56.509834,
       "type": "VLCC",
@@ -9391,28 +5761,6 @@
       "commodity": "liquids",
       "name": "Plata Carrier",
       "speed": 1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 27.363932,
-      "lng": 50.2243,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Al Shaffiah",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.370405,
-      "lng": 55.383591,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Intan Glory",
-      "speed": 3.9,
       "isInside": true,
       "isTransiting": false
     },
@@ -9458,17 +5806,6 @@
       "name": "Express",
       "speed": 0,
       "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.143614,
-      "lng": 56.545387,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Rival",
-      "speed": 0.1,
-      "isInside": false,
       "isTransiting": false
     },
     {
@@ -9593,17 +5930,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.140875,
-      "lng": 56.527534,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Eco 3",
-      "speed": 0.2,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 24.724134,
       "lng": 56.703045,
       "type": "VLGC",
@@ -9611,17 +5937,6 @@
       "commodity": "lpg",
       "name": "Seabus",
       "speed": 0.3,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.406979,
-      "lng": 56.558788,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Al Veer",
-      "speed": 0,
       "isInside": false,
       "isTransiting": false
     },
@@ -9666,17 +5981,6 @@
       "commodity": "liquids",
       "name": "New Future",
       "speed": 0.5,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.159166,
-      "lng": 53.497234,
-      "type": "Intermediate Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Al Samha",
-      "speed": 11.5,
       "isInside": true,
       "isTransiting": false
     },
@@ -9853,17 +6157,6 @@
       "commodity": "liquids",
       "name": "Kerala",
       "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.006241,
-      "lng": 51.600986,
-      "type": "SGC",
-      "state": "ballast",
-      "commodity": "lpg",
-      "name": "Leonora Kosan",
-      "speed": 2.2,
       "isInside": true,
       "isTransiting": false
     },
@@ -10099,17 +6392,6 @@
       "isTransiting": false
     },
     {
-      "lat": 27.553522,
-      "lng": 50.158245,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Oriental Marguerite",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 29.589407,
       "lng": 48.694744,
       "type": "Supramax",
@@ -10118,17 +6400,6 @@
       "name": "Supra Baron",
       "speed": 0,
       "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.572962,
-      "lng": 56.641121,
-      "type": "Intermediate Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "No.6 Ocean Pioneer",
-      "speed": 0.1,
-      "isInside": false,
       "isTransiting": false
     },
     {
@@ -10143,17 +6414,6 @@
       "isTransiting": false
     },
     {
-      "lat": 24.627474,
-      "lng": 56.710201,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Lady Yasso",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 27.376707,
       "lng": 50.317188,
       "type": "Suezmax/LR3",
@@ -10165,17 +6425,6 @@
       "isTransiting": false
     },
     {
-      "lat": 24.569063,
-      "lng": 56.686298,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Pvt Venus",
-      "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 25.926283,
       "lng": 55.397076,
       "type": "VLGC",
@@ -10183,17 +6432,6 @@
       "commodity": "lpg",
       "name": "Green Sanvi",
       "speed": 5.4,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.821592,
-      "lng": 53.038952,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Shamrock Jupiter",
-      "speed": 0.6,
       "isInside": true,
       "isTransiting": false
     },
@@ -10209,17 +6447,6 @@
       "isTransiting": false
     },
     {
-      "lat": 24.995344,
-      "lng": 57.279087,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Pvt Elena",
-      "speed": 6.9,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 23.469866,
       "lng": 59.085159,
       "type": "Panamax",
@@ -10228,39 +6455,6 @@
       "name": "Minoan Sky",
       "speed": 11.8,
       "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.237497,
-      "lng": 54.565575,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Prabhu Parvati",
-      "speed": 3.4,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.372551,
-      "lng": 57.137653,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Nyala",
-      "speed": 11.3,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 29.701834,
-      "lng": 48.654469,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Dijlah",
-      "speed": 0,
-      "isInside": true,
       "isTransiting": false
     },
     {
@@ -10286,28 +6480,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.761295,
-      "lng": 56.951355,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Shiva",
-      "speed": 0.2,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.468094,
-      "lng": 55.504414,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Amelia",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 27.360659,
       "lng": 50.3605,
       "type": "MR",
@@ -10316,17 +6488,6 @@
       "name": "Sundoro",
       "speed": 0,
       "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.399099,
-      "lng": 56.515347,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Lumina Ocean",
-      "speed": 0,
-      "isInside": false,
       "isTransiting": false
     },
     {
@@ -10360,17 +6521,6 @@
       "name": "New Success",
       "speed": 11,
       "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 29.664307,
-      "lng": 48.7043,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Alforat",
-      "speed": 0,
-      "isInside": true,
       "isTransiting": false
     },
     {
@@ -10484,17 +6634,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.56835,
-      "lng": 55.059921,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Kurdos Ii",
-      "speed": 0.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 26.148878,
       "lng": 52.415886,
       "type": "Panamax/LR1",
@@ -10550,28 +6689,6 @@
       "isTransiting": false
     },
     {
-      "lat": 24.503067,
-      "lng": 56.632347,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Songa Topaz",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 27.051666,
-      "lng": 56.253334,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Marivex",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 27.441528,
       "lng": 52.215324,
       "type": "Supramax",
@@ -10601,17 +6718,6 @@
       "commodity": "dry",
       "name": "Ardavan",
       "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.839912,
-      "lng": 51.755871,
-      "type": "Intermediate Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Sidra Doha",
-      "speed": 6,
       "isInside": true,
       "isTransiting": false
     },
@@ -10869,17 +6975,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.683384,
-      "lng": 54.488701,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Amagi Galaxy",
-      "speed": 12.9,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 24.957146,
       "lng": 54.511147,
       "type": "Handysize",
@@ -10887,28 +6982,6 @@
       "commodity": "dry",
       "name": "Tan Binh 345",
       "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.956846,
-      "lng": 54.423447,
-      "type": "Intermediate Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Umm Al Lulu-I",
-      "speed": 9.5,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.871174,
-      "lng": 51.758709,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Sg Pegasus",
-      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -10944,28 +7017,6 @@
       "speed": 0.1,
       "isInside": true,
       "isTransiting": false
-    },
-    {
-      "lat": 25.503834,
-      "lng": 54.876667,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Asian Lilac",
-      "speed": 0.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 26.393008,
-      "lng": 56.197932,
-      "type": "Intermediate Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Ariana",
-      "speed": 6.9,
-      "isInside": true,
-      "isTransiting": true
     },
     {
       "lat": 23.666666,
@@ -11089,17 +7140,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.63899,
-      "lng": 57.02932,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Cora",
-      "speed": 25.2,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 25.80422,
       "lng": 53.344734,
       "type": "VLCC",
@@ -11206,17 +7246,6 @@
       "commodity": "dry",
       "name": "Rui Ning 7",
       "speed": 1.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.456167,
-      "lng": 54.802982,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Hanyu Camellia",
-      "speed": 3.5,
       "isInside": true,
       "isTransiting": false
     },
@@ -11338,17 +7367,6 @@
       "commodity": "dry",
       "name": "Nav Neha",
       "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.323648,
-      "lng": 54.935558,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Pvt Sunrise",
-      "speed": 8.8,
       "isInside": true,
       "isTransiting": false
     },
@@ -11547,17 +7565,6 @@
       "commodity": "liquids",
       "name": "Nave Estella",
       "speed": 0.1,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.658333,
-      "lng": 56.966667,
-      "type": "Short Sea Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Nova 1",
-      "speed": 0,
       "isInside": false,
       "isTransiting": false
     },
@@ -12046,17 +8053,6 @@
       "isTransiting": false
     },
     {
-      "lat": 24.507469,
-      "lng": 54.263912,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Atlas Sapphire",
-      "speed": 0.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 25.523558,
       "lng": 51.805355,
       "type": "Handysize",
@@ -12131,17 +8127,6 @@
       "name": "Xin Qi Meng",
       "speed": 11.8,
       "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.58234,
-      "lng": 56.669926,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Bluebird Arrow",
-      "speed": 0,
-      "isInside": false,
       "isTransiting": false
     },
     {
@@ -12222,17 +8207,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.150576,
-      "lng": 56.486172,
-      "type": "Short Sea Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Baraawe 1",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
       "lat": 25.75399,
       "lng": 53.506874,
       "type": "Aframax/LR2",
@@ -12277,17 +8251,6 @@
       "isTransiting": false
     },
     {
-      "lat": 26.519876,
-      "lng": 54.082108,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Delnia 2",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 26.064829,
       "lng": 55.211414,
       "type": "Panamax",
@@ -12328,17 +8291,6 @@
       "commodity": "dry",
       "name": "Bahri Trader",
       "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 28.975933,
-      "lng": 50.857677,
-      "type": "Small Tankers",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Miad Ii",
-      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -12450,17 +8402,6 @@
       "name": "Sheng He Hai",
       "speed": 0.1,
       "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 29.312893,
-      "lng": 49.548988,
-      "type": "Small Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Aynaz",
-      "speed": 0,
-      "isInside": true,
       "isTransiting": false
     },
     {
@@ -12739,17 +8680,6 @@
       "isTransiting": false
     },
     {
-      "lat": 25.365644,
-      "lng": 55.371841,
-      "type": "SGC",
-      "state": "loaded",
-      "commodity": "lpg",
-      "name": "Epic Sentosa",
-      "speed": 4.3,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
       "lat": 25.022657,
       "lng": 53.209969,
       "type": "VLCC",
@@ -12844,28 +8774,6 @@
       "state": "loaded",
       "commodity": "liquids",
       "name": "Sc Mercury",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.538855,
-      "lng": 54.952492,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Bochem Marengo",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 27.143248,
-      "lng": 49.768196,
-      "type": "Intermediate Tankers",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Louis P",
       "speed": 0,
       "isInside": true,
       "isTransiting": false
@@ -14600,5 +10508,5 @@
     "fillColor": "#ef4444",
     "fillOpacity": 0.15
   },
-  "syncTimestamp": "2026-04-01T06:04:42.572Z"
+  "syncTimestamp": "2026-04-01T12:37:32.316Z"
 }

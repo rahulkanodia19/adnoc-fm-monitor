@@ -193,6 +193,8 @@ function pointInPolygon(lat, lng, polygon) {
 
 // ---------- Vessel matrix builder ----------
 
+const EXCLUDED_TYPES = ['Short Sea Tankers', 'Intermediate Tankers', 'Small Tankers', 'SGC', 'Mini Bulker'];
+
 function buildVesselMatrix(vessels) {
   const inside = { classes: {}, total: { unknown: 0, ballast: 0, laden: 0, total: 0 } };
   const outside = { classes: {}, total: { unknown: 0, ballast: 0, laden: 0, total: 0 } };
@@ -209,6 +211,7 @@ function buildVesselMatrix(vessels) {
     const region = isInside ? inside : outside;
 
     const cls = v.vesselTypeClass || 'Unknown';
+    if (EXCLUDED_TYPES.includes(cls)) continue;
     const state = (v.state || 'unknown').toLowerCase();
 
     if (!region.classes[cls]) {

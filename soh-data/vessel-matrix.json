@@ -30,27 +30,6 @@
         "total": 74
       },
       {
-        "label": "Short Sea Tankers",
-        "ballast": 42,
-        "laden": 30,
-        "unknown": 0,
-        "total": 72
-      },
-      {
-        "label": "Small Tankers",
-        "ballast": 40,
-        "laden": 17,
-        "unknown": 0,
-        "total": 57
-      },
-      {
-        "label": "Intermediate Tankers",
-        "ballast": 9,
-        "laden": 32,
-        "unknown": 0,
-        "total": 41
-      },
-      {
         "label": "Aframax/LR2",
         "ballast": 14,
         "laden": 24,
@@ -107,13 +86,6 @@
         "total": 21
       },
       {
-        "label": "SGC",
-        "ballast": 14,
-        "laden": 2,
-        "unknown": 0,
-        "total": 16
-      },
-      {
         "label": "VLGC",
         "ballast": 5,
         "laden": 9,
@@ -156,13 +128,6 @@
         "total": 5
       },
       {
-        "label": "Mini Bulker",
-        "ballast": 4,
-        "laden": 1,
-        "unknown": 0,
-        "total": 5
-      },
-      {
         "label": "Capesize",
         "ballast": 2,
         "laden": 2,
@@ -199,31 +164,29 @@
       }
     ],
     "grandTotal": {
-      "ballast": 401,
-      "laden": 450,
+      "ballast": 292,
+      "laden": 368,
       "unknown": 1,
-      "total": 852
+      "total": 661
     },
     "productVolumes": [
       {
         "commodity": "Crude & Refined Products",
-        "vesselCount": 258,
-        "totalCapacity": 206.15851096828,
+        "vesselCount": 179,
+        "totalCapacity": 198.73752266845005,
         "unit": "mmbbl",
         "products": {
-          "Methanol": 17,
-          "Chemicals": 10,
+          "Chemicals": 3,
           "arab extra light": 5,
           "Middle Distillates": 3,
-          "High Sulfur Fuel Oil": 16,
+          "High Sulfur Fuel Oil": 7,
           "Basrah Medium": 11,
-          "Ultra Low Sulfur Diesel": 4,
+          "Ultra Low Sulfur Diesel": 3,
           "arab heavy": 2,
           "Arab": 18,
           "Kuwait Crude": 1,
-          "Other Chemicals": 2,
-          "Clean petroleum products": 32,
-          "Fuel Oils": 8,
+          "Clean petroleum products": 21,
+          "Fuel Oils": 3,
           "Jet": 2,
           "kuwait export": 7,
           "basrah heavy": 5,
@@ -231,36 +194,28 @@
           "Upper Zakum": 5,
           "arab light": 3,
           "Aromatic Naphtha": 2,
-          "High Sulphur Straight Run Fuel Oil": 34,
-          "Clean": 1,
-          "Molten Sulphur": 1,
-          "Naphtha": 10,
-          "Bitumen/Asphalt": 4,
-          "Palm Oil": 1,
-          "Gasoil": 2,
-          "Bitumen PEN 60-70": 1,
           "Gasoline": 1,
           "Deodorized Field Condensate": 1,
           "Umm Lulu": 2,
-          "Liquids": 2,
-          "Polymeric Polyol": 2,
-          "Chem/Bio": 6,
+          "High Sulphur Straight Run Fuel Oil": 23,
+          "Methanol": 7,
           "south pars condensate": 2,
           "Iran": 4,
           "RBD Palm Oil": 1,
-          "Crude Oil/Condensate": 3,
-          "2-Ethylhexanol": 1,
-          "Caustic Soda": 1,
+          "Crude Oil/Condensate": 2,
+          "Naphtha": 9,
           "al shaheen": 3,
+          "Other Chemicals": 1,
           "95 Gasoline": 1,
           "GTL Naphtha": 1,
           "Middle East": 2,
           "Very Low Sulphur Fuel Oil": 1,
-          "Monoethylene Glycol": 2,
           "Jet A-1": 2,
           "MTBE": 1,
+          "Gasoil": 1,
           "Murban": 1,
           "Clean Condensate": 2,
+          "Monoethylene Glycol": 1,
           "Low Sulfur Condensate": 1,
           "Low Sulfur Diesel": 1,
           "Base Oil Group III": 1,
@@ -269,30 +224,30 @@
         "topProducts": [
           {
             "name": "High Sulphur Straight Run Fuel Oil",
-            "count": 34
+            "count": 23
           },
           {
             "name": "Clean petroleum products",
-            "count": 32
+            "count": 21
           },
           {
             "name": "Arab",
             "count": 18
           },
           {
-            "name": "Methanol",
-            "count": 17
+            "name": "Basrah Medium",
+            "count": 11
           },
           {
-            "name": "High Sulfur Fuel Oil",
-            "count": 16
+            "name": "Naphtha",
+            "count": 9
           }
         ]
       },
       {
         "commodity": "Dry Bulk",
-        "vesselCount": 101,
-        "totalCapacity": 5.603318999999996,
+        "vesselCount": 100,
+        "totalCapacity": 5.5984269999999965,
         "unit": "mmt",
         "products": {
           "Iron Ore Concentrate": 1,
@@ -303,7 +258,7 @@
           "Diammonium Phosphates": 3,
           "Cement": 6,
           "Dry Bulk": 13,
-          "Aluminium": 2,
+          "Aluminium": 1,
           "Ferrous Scrap": 1,
           "Corn": 7,
           "Wheat": 1,
@@ -365,19 +320,19 @@
       },
       {
         "commodity": "LPG",
-        "vesselCount": 18,
-        "totalCapacity": 0.5543263,
+        "vesselCount": 16,
+        "totalCapacity": 0.5447634499999999,
         "unit": "mmt",
         "products": {
-          "Butane": 8,
+          "Butane": 7,
           "Grey Ammonia": 2,
           "Propane": 6,
-          "LPG": 2
+          "LPG": 1
         },
         "topProducts": [
           {
             "name": "Butane",
-            "count": 8
+            "count": 7
           },
           {
             "name": "Propane",
@@ -389,7 +344,7 @@
           },
           {
             "name": "LPG",
-            "count": 2
+            "count": 1
           }
         ]
       },
@@ -412,20 +367,6 @@
   },
   "outside": {
     "matrix": [
-      {
-        "label": "Short Sea Tankers",
-        "ballast": 68,
-        "laden": 32,
-        "unknown": 0,
-        "total": 100
-      },
-      {
-        "label": "Small Tankers",
-        "ballast": 34,
-        "laden": 15,
-        "unknown": 0,
-        "total": 49
-      },
       {
         "label": "MR",
         "ballast": 28,
@@ -474,20 +415,6 @@
         "laden": 6,
         "unknown": 0,
         "total": 19
-      },
-      {
-        "label": "Intermediate Tankers",
-        "ballast": 9,
-        "laden": 8,
-        "unknown": 0,
-        "total": 17
-      },
-      {
-        "label": "SGC",
-        "ballast": 13,
-        "laden": 1,
-        "unknown": 0,
-        "total": 14
       },
       {
         "label": "Handy/MR1",
@@ -567,13 +494,6 @@
         "total": 2
       },
       {
-        "label": "Mini Bulker",
-        "ballast": 1,
-        "laden": 0,
-        "unknown": 0,
-        "total": 1
-      },
-      {
         "label": "Upper Conventional",
         "ballast": 1,
         "laden": 0,
@@ -582,63 +502,51 @@
       }
     ],
     "grandTotal": {
-      "ballast": 306,
-      "laden": 159,
+      "ballast": 181,
+      "laden": 103,
       "unknown": 0,
-      "total": 465
+      "total": 284
     },
     "productVolumes": [
       {
         "commodity": "Crude & Refined Products",
-        "vesselCount": 97,
-        "totalCapacity": 32.61389136294999,
+        "vesselCount": 42,
+        "totalCapacity": 28.93179885009,
         "unit": "mmbbl",
         "products": {
-          "Palm Oil": 2,
-          "Naphtha": 6,
-          "High Sulfur Fuel Oil": 11,
-          "Chem/Bio": 7,
-          "Gasoil": 1,
-          "Low Sulfur Fuel Oil": 1,
-          "Base Oil Group III": 1,
-          "Fuel Oils": 9,
-          "High Sulphur Straight Run Fuel Oil": 7,
-          "Methanol": 1,
-          "Low Sulphur Straight Run Fuel Oil": 1,
-          "Liquids": 2,
-          "Bitumen/Asphalt": 13,
-          "Clean petroleum products": 14,
-          "Clean": 4,
-          "Meleck": 1,
-          "Soybean Oil": 1,
+          "Clean petroleum products": 10,
+          "Fuel Oils": 4,
+          "High Sulfur Fuel Oil": 6,
           "Iran": 6,
           "Clean Condensate": 1,
-          "Gasoline": 3,
+          "High Sulphur Straight Run Fuel Oil": 5,
+          "Naphtha": 3,
+          "Gasoline": 2,
           "91 Gasoline": 1,
           "oman export": 2,
-          "Marine Diesel": 1,
-          "Coal Tar": 1
+          "Chem/Bio": 1,
+          "Clean": 1
         },
         "topProducts": [
           {
             "name": "Clean petroleum products",
-            "count": 14
-          },
-          {
-            "name": "Bitumen/Asphalt",
-            "count": 13
+            "count": 10
           },
           {
             "name": "High Sulfur Fuel Oil",
-            "count": 11
+            "count": 6
+          },
+          {
+            "name": "Iran",
+            "count": 6
+          },
+          {
+            "name": "High Sulphur Straight Run Fuel Oil",
+            "count": 5
           },
           {
             "name": "Fuel Oils",
-            "count": 9
-          },
-          {
-            "name": "Chem/Bio",
-            "count": 7
+            "count": 4
           }
         ]
       },
@@ -692,20 +600,20 @@
       },
       {
         "commodity": "LPG",
-        "vesselCount": 5,
-        "totalCapacity": 0.12631355000000002,
+        "vesselCount": 4,
+        "totalCapacity": 0.12437535000000001,
         "unit": "mmt",
         "products": {
           "Grey Ammonia": 2,
-          "Butane": 3
+          "Butane": 2
         },
         "topProducts": [
           {
-            "name": "Butane",
-            "count": 3
+            "name": "Grey Ammonia",
+            "count": 2
           },
           {
-            "name": "Grey Ammonia",
+            "name": "Butane",
             "count": 2
           }
         ]
@@ -727,5 +635,5 @@
       }
     ]
   },
-  "syncTimestamp": "2026-04-01T06:04:42.572Z"
+  "syncTimestamp": "2026-04-01T12:37:32.316Z"
 }
