@@ -102,6 +102,12 @@ Focus on events from the last 48 hours. Search for:
 - Shipping disruptions through Strait of Hormuz
 - Tanker diversions, insurance rate changes, war risk premiums (update WAR_RISK_PREMIUM_DATA — see Step 4)
 - OPEC/OPEC+ emergency responses
+- Downstream force majeure declarations by refineries, petrochemical plants, and industrial consumers
+  in importing countries that depend on Gulf feedstock (naphtha, crude, LNG, LPG). Key regions:
+  Asia-Pacific (China, India, Japan, South Korea, Taiwan, Thailand, Vietnam, Philippines, Sri Lanka,
+  Indonesia, Singapore, Malaysia), Americas (USA, Brazil, Mexico), Europe (EU-27, UK, Turkey).
+  Check company investor relations pages, stock exchange filings, and industry publications
+  (ICIS Asia, Chemical Week, C&EN) for downstream FM declarations triggered by Gulf supply disruptions.
 
 ### Source attribution
 
@@ -117,7 +123,7 @@ Search for the latest market-moving developments affecting energy commodity flow
 ### Countries to cover
 
 **Exporters (priority):** Saudi Arabia, UAE, Iraq, Qatar, Russia, United States, Kuwait, Iran, Oman, Bahrain
-**Importers (priority):** China, India, Japan, South Korea, Thailand, Vietnam
+**Importers (priority):** China, India, Japan, South Korea, Taiwan, Thailand, Vietnam, Philippines, Sri Lanka, Indonesia, Singapore, Malaysia, USA, EU-27, UK, Turkey, Brazil, Mexico
 
 ### What to search for (per country)
 
@@ -144,6 +150,15 @@ At minimum:
 - `India crude LNG imports 2026`
 - `Japan South Korea crude LNG imports 2026`
 - `OPEC+ production cuts exports crude 2026`
+- `Taiwan OR "Formosa Plastics" OR FPCC petrochemical force majeure 2026`
+- `Asia downstream petrochemical cracker ethylene force majeure 2026`
+- `India refinery petrochemical force majeure Gulf supply 2026`
+- `China SINOPEC PetroChina refinery force majeure Hormuz 2026`
+- `Japan South Korea petrochemical naphtha force majeure 2026`
+- `Philippines Sri Lanka refinery force majeure crude supply 2026`
+- `Europe refinery petrochemical force majeure Gulf crude 2026`
+- `USA refinery force majeure crude LNG supply disruption 2026`
+- `Southeast Asia Vietnam Thailand Indonesia petrochemical force majeure 2026`
 
 ### Output format
 

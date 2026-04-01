@@ -1018,6 +1018,49 @@ const COUNTRY_STATUS_DATA = [
 // ---------- TABLE 2: Force Majeure Declarations ----------
 const FM_DECLARATIONS_DATA = [
   {
+    id: "fm-026",
+    company: "Formosa Chemicals",
+    country: "Taiwan",
+    flag: "\u{1F1F9}\u{1F1FC}",
+    date: "2026-03-25",
+    status: "active",
+    statusLabel: "Active",
+    summary: "Declared unforeseeable circumstances on downstream petrochemical products as parent FPCC's naphtha cracking operations reduced to ~50% capacity. Naphtha and light oil supply from Formosa Petrochemical significantly curtailed due to Gulf supply disruptions.",
+    details: {
+      volumeAffected: "Downstream petrochemical production (ethylene derivatives, PVC, polyethylene)",
+      commodity: "Petrochemicals (ethylene derivatives, PVC, Polyethylene)",
+      duration: "Ongoing - linked to FPCC naphtha cracking recovery",
+      reason: "Parent company FPCC's naphtha feedstock from Gulf severely disrupted by Hormuz crisis. FPCC operating rates at ~50%, may fall to 40%.",
+      financialImpact: "Downstream polymer and PVC supply to Taiwan and regional markets curtailed."
+    },
+    sources: [
+      { id: 1, title: "Formosa Chemicals joins industry in unforeseeable circumstance declarations - Taiwan News", url: "https://www.taiwannews.com.tw/news/6327471", date: "2026-03-25" },
+      { id: 2, title: "Middle East conflict threatens petrochemical and semiconductor supply chains - Digitimes", url: "https://www.digitimes.com/news/a20260325PD220/shipping-materials-taiwan-market.html", date: "2026-03-25" }
+    ]
+  },
+  {
+    id: "fm-025",
+    company: "Formosa Petrochemical Corp (FPCC)",
+    country: "Taiwan",
+    flag: "\u{1F1F9}\u{1F1FC}",
+    date: "2026-03-10",
+    status: "active",
+    statusLabel: "Active",
+    summary: "FM on petrochemical supplies due to naphtha feedstock delivery delays from Strait of Hormuz shipping disruptions. Operating rates dropped to ~50%, considering further cracker shutdowns if naphtha doesn't resume.",
+    details: {
+      volumeAffected: "Ethylene and propylene supply contracts; cracker operations at ~50% rate",
+      commodity: "Ethylene, Propylene",
+      duration: "Ongoing - may worsen to 40% operating rate if naphtha supply doesn't resume",
+      reason: "Naphtha feedstock delivery delays from Gulf suppliers due to Strait of Hormuz shipping disruptions. Taiwan's naphtha imports collapsed from 147 kbd to zero.",
+      financialImpact: "Taiwan's largest private refiner operating at half capacity. Naphtha surged past $1,000/mt. Downstream polymer prices climbing."
+    },
+    sources: [
+      { id: 1, title: "Taiwan's Formosa Petchem issues force majeure as Iran war disrupts feedstock delivery - Hydrocarbon Processing", url: "https://www.hydrocarbonprocessing.com/news/2026/03/taiwans-formosa-petchem-issues-force-majeure-as-iran-war-disrupts-feedstock-delivery/", date: "2026-03-10" },
+      { id: 2, title: "FPCC invokes force majeure on shipments amid Hormuz disruptions - Offshore Technology", url: "https://www.offshore-technology.com/news/fpcc-force-majeure-shipments-hormuz-disruptions/", date: "2026-03-10" },
+      { id: 3, title: "Taiwan's Formosa Petrochemical issues force majeure on supplies - Baird Maritime", url: "https://www.bairdmaritime.com/offshore/refining-processing/taiwans-formosa-petrochemical-issues-force-majeure-on-supplies-due-to-war-driven-shipping-delays", date: "2026-03-10" }
+    ]
+  },
+  {
     id: "fm-024",
     company: "Iraq Oil Ministry",
     country: "Iraq",
