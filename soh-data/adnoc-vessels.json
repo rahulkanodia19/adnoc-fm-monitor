@@ -21,16 +21,44 @@
       "dataSource": "kpler"
     },
     {
-      "name": "AL SAMHA",
+      "name": "Al Samha",
       "imo": "9380324",
+      "type": "Intermediate Tankers",
+      "state": "ballast",
+      "status": "Under way using engine",
+      "flagName": "United Arab Emirates",
+      "deadWeight": 17510,
+      "capacity": 19020,
+      "speed": 11.5,
+      "course": 248,
+      "lat": 25.159166,
+      "lng": 53.497234,
+      "product": "Clean petroleum products",
+      "destination": "Ruwais",
+      "departed": "2026-03-26 19:58",
+      "isInside": true,
       "marineTrafficUrl": "https://www.marinetraffic.com/en/ais/details/ships/imo:9380324",
-      "dataSource": "unavailable"
+      "dataSource": "kpler"
     },
     {
-      "name": "UMM AL LULU-I",
+      "name": "Umm Al Lulu-I",
       "imo": "9494204",
+      "type": "Intermediate Tankers",
+      "state": "ballast",
+      "status": "Under way using engine",
+      "flagName": "United Arab Emirates",
+      "deadWeight": 15267,
+      "capacity": 17578,
+      "speed": 4.1,
+      "course": 103,
+      "lat": 24.337839,
+      "lng": 54.371212,
+      "product": "Clean petroleum products",
+      "destination": "United Arab Emirates",
+      "departed": "2026-03-31 07:33",
+      "isInside": true,
       "marineTrafficUrl": "https://www.marinetraffic.com/en/ais/details/ships/imo:9494204",
-      "dataSource": "unavailable"
+      "dataSource": "kpler"
     },
     {
       "name": "AL BAZM-II",
@@ -153,10 +181,24 @@
       "dataSource": "kpler"
     },
     {
-      "name": "JANANA",
+      "name": "Janana",
       "imo": "9034236",
+      "type": "Short Sea Tankers",
+      "state": "loaded",
+      "status": "Anchored",
+      "flagName": "United Arab Emirates",
+      "deadWeight": 9365,
+      "capacity": 12274,
+      "speed": 0.2,
+      "course": 0,
+      "lat": 25.10594,
+      "lng": 52.93449,
+      "product": "Molten Sulphur",
+      "destination": null,
+      "departed": "2026-03-05 19:18",
+      "isInside": true,
       "marineTrafficUrl": "https://www.marinetraffic.com/en/ais/details/ships/imo:9034236",
-      "dataSource": "unavailable"
+      "dataSource": "kpler"
     },
     {
       "name": "Navig8 Macallister",
@@ -180,5 +222,5 @@
     }
   ],
   "count": 11,
-  "syncTimestamp": "2026-04-01T12:59:54.494Z"
+  "syncTimestamp": "2026-04-01T13:02:26.679Z"
 }

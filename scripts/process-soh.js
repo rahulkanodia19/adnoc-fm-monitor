@@ -167,7 +167,7 @@ function main() {
   ];
 
   const adnocVessels = ADNOC_FLEET.map(ref => {
-    const v = vessels.find(x => x.imo === ref.imo);
+    const v = allVesselsRaw.find(x => x.imo === ref.imo);
     if (v) {
       // Derive status from speed
       let status = 'Unknown';
