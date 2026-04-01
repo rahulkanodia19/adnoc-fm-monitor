@@ -210,16 +210,10 @@
         <div>
           <div class="mb-2 text-[10px] font-semibold uppercase tracking-wider text-navy-500">${c.title}</div>
           <div class="text-3xl font-extrabold leading-none text-navy-900">${fmtNum(c.value)}</div>
-          ${c.delta != null && c.delta !== 0 ? `<div class="mt-2 text-[10px] font-semibold uppercase tracking-wider" style="color:${deltaColor(c.delta)}">
-            Change vs last: ${fmtSignedDelta(c.delta)}
-          </div>` : ''}
           ${c.ballast != null && c.laden != null ? `
           <div class="mt-3 flex items-center gap-2 text-[10px] font-semibold uppercase text-navy-500">
             <span>Ballast ${fmtNum(c.ballast)}</span><span>|</span><span>Laden ${fmtNum(c.laden)}</span>
-          </div>
-          ${(c.deltaB != null && c.deltaB !== 0) || (c.deltaL != null && c.deltaL !== 0) ? `<div class="mt-1 text-[10px] font-semibold uppercase tracking-wider text-navy-400">
-            Delta B ${fmtSignedDelta(c.deltaB)} | Delta L ${fmtSignedDelta(c.deltaL)}
-          </div>` : ''}` : ''}
+          </div>` : ''}
         </div>
         <div class="mt-4 text-xs text-sky-600 font-medium">${c.cta} &rarr;</div>
       </button>`).join('');
