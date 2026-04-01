@@ -1,33 +1,31 @@
 {
-  "insideTotal": 660,
-  "insideBallast": 289,
-  "insideLaden": 370,
-  "outsideTotal": 285,
-  "outsideBallast": 182,
-  "outsideLaden": 103,
+  "insideTotal": 717,
+  "insideBallast": 312,
+  "insideLaden": 404,
+  "outsideTotal": 317,
+  "outsideBallast": 205,
+  "outsideLaden": 112,
   "adnocCount": 11,
-  "totalVessels": 945,
-  "transitCount": 9,
-  "syncTimestamp": "2026-04-01T13:02:26.679Z",
+  "totalVessels": 1034,
+  "transitCount": 10,
+  "syncTimestamp": "2026-04-01T13:32:30.266Z",
   "deltaLabel": "24h",
   "deltas": {
-    "insideDelta": -191,
-    "outsideDelta": -184,
+    "insideDelta": -134,
+    "outsideDelta": -152,
     "adnocDelta": 0,
-    "insideBallastDelta": -114,
-    "insideLadenDelta": -77,
-    "outsideBallastDelta": -126,
-    "outsideLadenDelta": -58
+    "insideBallastDelta": -91,
+    "insideLadenDelta": -43,
+    "outsideBallastDelta": -103,
+    "outsideLadenDelta": -49
   },
   "smallVessels": {
-    "inside": 192,
-    "outside": 180,
-    "total": 372,
+    "inside": 135,
+    "outside": 148,
+    "total": 283,
     "types": [
       "Short Sea Tankers",
-      "Intermediate Tankers",
       "Small Tankers",
-      "SGC",
       "Mini Bulker"
     ]
   }

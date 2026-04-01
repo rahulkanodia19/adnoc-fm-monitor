@@ -1,27 +1,27 @@
 {
   "crisisStart": "2026-02-28",
-  "totalVessels": 150,
+  "totalVessels": 167,
   "dailyCounts": [
     {
       "date": "2026-04-01",
-      "count": 4,
-      "tankers": 2,
+      "count": 5,
+      "tankers": 3,
       "bulk": 2,
       "container": 0,
       "other": 0
     },
     {
       "date": "2026-03-31",
-      "count": 8,
-      "tankers": 5,
+      "count": 9,
+      "tankers": 6,
       "bulk": 3,
       "container": 0,
       "other": 0
     },
     {
       "date": "2026-03-30",
-      "count": 9,
-      "tankers": 4,
+      "count": 10,
+      "tankers": 5,
       "bulk": 5,
       "container": 0,
       "other": 0
@@ -36,8 +36,8 @@
     },
     {
       "date": "2026-03-28",
-      "count": 6,
-      "tankers": 3,
+      "count": 7,
+      "tankers": 4,
       "bulk": 3,
       "container": 0,
       "other": 0
@@ -52,8 +52,8 @@
     },
     {
       "date": "2026-03-26",
-      "count": 10,
-      "tankers": 6,
+      "count": 12,
+      "tankers": 8,
       "bulk": 4,
       "container": 0,
       "other": 0
@@ -68,8 +68,8 @@
     },
     {
       "date": "2026-03-24",
-      "count": 2,
-      "tankers": 2,
+      "count": 3,
+      "tankers": 3,
       "bulk": 0,
       "container": 0,
       "other": 0
@@ -84,16 +84,16 @@
     },
     {
       "date": "2026-03-22",
-      "count": 3,
-      "tankers": 2,
+      "count": 4,
+      "tankers": 3,
       "bulk": 1,
       "container": 0,
       "other": 0
     },
     {
       "date": "2026-03-21",
-      "count": 1,
-      "tankers": 1,
+      "count": 2,
+      "tankers": 2,
       "bulk": 0,
       "container": 0,
       "other": 0
@@ -116,8 +116,8 @@
     },
     {
       "date": "2026-03-18",
-      "count": 2,
-      "tankers": 2,
+      "count": 3,
+      "tankers": 3,
       "bulk": 0,
       "container": 0,
       "other": 0
@@ -132,8 +132,8 @@
     },
     {
       "date": "2026-03-16",
-      "count": 3,
-      "tankers": 3,
+      "count": 4,
+      "tankers": 4,
       "bulk": 0,
       "container": 0,
       "other": 0
@@ -188,8 +188,8 @@
     },
     {
       "date": "2026-03-08",
-      "count": 4,
-      "tankers": 3,
+      "count": 5,
+      "tankers": 4,
       "bulk": 1,
       "container": 0,
       "other": 0
@@ -204,8 +204,8 @@
     },
     {
       "date": "2026-03-06",
-      "count": 9,
-      "tankers": 5,
+      "count": 10,
+      "tankers": 6,
       "bulk": 4,
       "container": 0,
       "other": 0
@@ -220,32 +220,32 @@
     },
     {
       "date": "2026-03-04",
-      "count": 6,
-      "tankers": 6,
+      "count": 7,
+      "tankers": 7,
       "bulk": 0,
       "container": 0,
       "other": 0
     },
     {
       "date": "2026-03-03",
-      "count": 1,
-      "tankers": 1,
+      "count": 2,
+      "tankers": 2,
       "bulk": 0,
       "container": 0,
       "other": 0
     },
     {
       "date": "2026-03-02",
-      "count": 3,
-      "tankers": 1,
+      "count": 4,
+      "tankers": 2,
       "bulk": 2,
       "container": 0,
       "other": 0
     },
     {
       "date": "2026-03-01",
-      "count": 4,
-      "tankers": 2,
+      "count": 5,
+      "tankers": 3,
       "bulk": 2,
       "container": 0,
       "other": 0
@@ -285,6 +285,19 @@
       "speed": 9.6,
       "departureDate": "2026-04-01",
       "commodity": "dry"
+    },
+    {
+      "name": "Songa Topaz",
+      "imo": "9460461",
+      "vesselTypeClass": "Intermediate Tankers",
+      "state": "loaded",
+      "flagName": "Marshall Islands",
+      "product": "High Sulphur Straight Run Fuel Oil",
+      "destination": null,
+      "deadWeight": 17596,
+      "speed": 0,
+      "departureDate": "2026-04-01",
+      "commodity": "liquids"
     },
     {
       "name": "Abu Dhabi-Iii",
@@ -335,6 +348,19 @@
       "destination": null,
       "deadWeight": 49999,
       "speed": 0.1,
+      "departureDate": "2026-03-31",
+      "commodity": "lpg"
+    },
+    {
+      "name": "Maya Gas I",
+      "imo": "9172753",
+      "vesselTypeClass": "SGC",
+      "state": "ballast",
+      "flagName": "Korea, Republic of",
+      "product": "Butane",
+      "destination": null,
+      "deadWeight": 3318,
+      "speed": 0,
       "departureDate": "2026-03-31",
       "commodity": "lpg"
     },
@@ -495,6 +521,19 @@
       "commodity": "liquids"
     },
     {
+      "name": "No.6 Ocean Pioneer",
+      "imo": "9409522",
+      "vesselTypeClass": "Intermediate Tankers",
+      "state": "ballast",
+      "flagName": "Marshall Islands",
+      "product": "Chem/Bio",
+      "destination": "Sohar",
+      "deadWeight": 19992,
+      "speed": 0.4,
+      "departureDate": "2026-03-30",
+      "commodity": "liquids"
+    },
+    {
       "name": "Ncc Reem",
       "imo": "9459034",
       "vesselTypeClass": "MR",
@@ -625,6 +664,19 @@
       "commodity": "liquids"
     },
     {
+      "name": "Nv Apollo",
+      "imo": "9587790",
+      "vesselTypeClass": "Intermediate Tankers",
+      "state": "ballast",
+      "flagName": "Panama",
+      "product": "Crude Palm Olein",
+      "destination": "Sohar",
+      "deadWeight": 21306,
+      "speed": 13.8,
+      "departureDate": "2026-03-28",
+      "commodity": "liquids"
+    },
+    {
       "name": "Propel Success",
       "imo": "9640607",
       "vesselTypeClass": "Supramax",
@@ -703,6 +755,19 @@
       "commodity": "lpg"
     },
     {
+      "name": "Venus 09",
+      "imo": "9005118",
+      "vesselTypeClass": "SGC",
+      "state": "ballast",
+      "flagName": "Panama",
+      "product": "LPG",
+      "destination": "Oman",
+      "deadWeight": 4319,
+      "speed": 0.1,
+      "departureDate": "2026-03-26",
+      "commodity": "lpg"
+    },
+    {
       "name": "Lucky Long",
       "imo": "9122564",
       "vesselTypeClass": "Panamax",
@@ -750,6 +815,19 @@
       "product": "Naphtha",
       "destination": null,
       "deadWeight": 47791,
+      "speed": 0.1,
+      "departureDate": "2026-03-26",
+      "commodity": "liquids"
+    },
+    {
+      "name": "Euro Viking",
+      "imo": "9309239",
+      "vesselTypeClass": "Intermediate Tankers",
+      "state": "ballast",
+      "flagName": "Saint Kitts and Nevis",
+      "product": "Naphtha",
+      "destination": null,
+      "deadWeight": 24333,
       "speed": 0.1,
       "departureDate": "2026-03-26",
       "commodity": "liquids"
@@ -856,6 +934,19 @@
       "deadWeight": 317534,
       "speed": 13.3,
       "departureDate": "2026-03-25",
+      "commodity": "liquids"
+    },
+    {
+      "name": "Alimas",
+      "imo": "9258624",
+      "vesselTypeClass": "Intermediate Tankers",
+      "state": "ballast",
+      "flagName": "Panama",
+      "product": "Clean petroleum products",
+      "destination": "Sohar",
+      "deadWeight": 24064,
+      "speed": 0.2,
+      "departureDate": "2026-03-24",
       "commodity": "liquids"
     },
     {
@@ -976,6 +1067,19 @@
       "commodity": "dry"
     },
     {
+      "name": "Sea Rock",
+      "imo": "9140451",
+      "vesselTypeClass": "Intermediate Tankers",
+      "state": "ballast",
+      "flagName": "Palau",
+      "product": "Clean petroleum products",
+      "destination": null,
+      "deadWeight": 15313,
+      "speed": 9.1,
+      "departureDate": "2026-03-22",
+      "commodity": "liquids"
+    },
+    {
       "name": "Ark Iii",
       "imo": "9187655",
       "vesselTypeClass": "Aframax/LR2",
@@ -1013,6 +1117,19 @@
       "speed": 0.1,
       "departureDate": "2026-03-22",
       "commodity": "dry"
+    },
+    {
+      "name": "Reef",
+      "imo": "9263382",
+      "vesselTypeClass": "Intermediate Tankers",
+      "state": "loaded",
+      "flagName": "Panama",
+      "product": "Naphtha",
+      "destination": null,
+      "deadWeight": 18736,
+      "speed": 3.9,
+      "departureDate": "2026-03-21",
+      "commodity": "liquids"
     },
     {
       "name": "Liwa-V",
@@ -1236,6 +1353,19 @@
       "commodity": "liquids"
     },
     {
+      "name": "Snarth",
+      "imo": "9349655",
+      "vesselTypeClass": "Intermediate Tankers",
+      "state": "loaded",
+      "flagName": "Barbados",
+      "product": "Chem/Bio",
+      "destination": null,
+      "deadWeight": 20896,
+      "speed": 0.1,
+      "departureDate": "2026-03-18",
+      "commodity": "liquids"
+    },
+    {
       "name": "Al Falah",
       "imo": "9828388",
       "vesselTypeClass": "Aframax/LR2",
@@ -1323,6 +1453,19 @@
       "destination": "Muscat",
       "deadWeight": 319398,
       "speed": 1.1,
+      "departureDate": "2026-03-16",
+      "commodity": "liquids"
+    },
+    {
+      "name": "Southern Wolf",
+      "imo": "9867267",
+      "vesselTypeClass": "Intermediate Tankers",
+      "state": "loaded",
+      "flagName": "Liberia",
+      "product": "Palm Oil",
+      "destination": "Muscat",
+      "deadWeight": 21026,
+      "speed": 0,
       "departureDate": "2026-03-16",
       "commodity": "liquids"
     },
@@ -1691,6 +1834,19 @@
       "commodity": "liquids"
     },
     {
+      "name": "Violet 3",
+      "imo": "9108104",
+      "vesselTypeClass": "Intermediate Tankers",
+      "state": "ballast",
+      "flagName": "Palau",
+      "product": "Chem/Bio",
+      "destination": null,
+      "deadWeight": 19999,
+      "speed": 0.2,
+      "departureDate": "2026-03-08",
+      "commodity": "liquids"
+    },
+    {
       "name": "Elcano",
       "imo": "9341512",
       "vesselTypeClass": "Handy/MR1",
@@ -1886,6 +2042,19 @@
       "commodity": "dry"
     },
     {
+      "name": "Bluebird Arrow",
+      "imo": "9635377",
+      "vesselTypeClass": "Intermediate Tankers",
+      "state": "loaded",
+      "flagName": "Bahamas",
+      "product": "Coal Tar",
+      "destination": null,
+      "deadWeight": 19336,
+      "speed": 0.2,
+      "departureDate": "2026-03-06",
+      "commodity": "liquids"
+    },
+    {
       "name": "ZHONG DA MEN",
       "imo": "1084053",
       "vesselTypeClass": "Ultramax",
@@ -1989,6 +2158,19 @@
       "commodity": "liquids"
     },
     {
+      "name": "Md 23",
+      "imo": "9158240",
+      "vesselTypeClass": "SGC",
+      "state": "ballast",
+      "flagName": "Panama",
+      "product": "Propane",
+      "destination": "Muscat",
+      "deadWeight": 7553,
+      "speed": 0,
+      "departureDate": "2026-03-04",
+      "commodity": "lpg"
+    },
+    {
       "name": "Celeste I",
       "imo": "9250488",
       "vesselTypeClass": "MR",
@@ -2041,6 +2223,19 @@
       "commodity": "liquids"
     },
     {
+      "name": "Lady Youmna",
+      "imo": "9268423",
+      "vesselTypeClass": "Intermediate Tankers",
+      "state": "ballast",
+      "flagName": "Panama",
+      "product": "Chemicals",
+      "destination": null,
+      "deadWeight": 18736,
+      "speed": 0,
+      "departureDate": "2026-03-03",
+      "commodity": "liquids"
+    },
+    {
       "name": "Cyprus Prosperity",
       "imo": "9595216",
       "vesselTypeClass": "VLCC",
@@ -2065,6 +2260,19 @@
       "speed": 0,
       "departureDate": "2026-03-02",
       "commodity": "liquids"
+    },
+    {
+      "name": "Zegna",
+      "imo": "9212577",
+      "vesselTypeClass": "SGC",
+      "state": "ballast",
+      "flagName": "Saint Kitts and Nevis",
+      "product": "Ethylene",
+      "destination": null,
+      "deadWeight": 6148,
+      "speed": 0.1,
+      "departureDate": "2026-03-02",
+      "commodity": "lpg"
     },
     {
       "name": "Kaiser",
@@ -2145,6 +2353,19 @@
       "commodity": "liquids"
     },
     {
+      "name": "Akkadia",
+      "imo": "9308546",
+      "vesselTypeClass": "Intermediate Tankers",
+      "state": "ballast",
+      "flagName": "Sweden",
+      "product": "Clean petroleum products",
+      "destination": null,
+      "deadWeight": 19999,
+      "speed": 0,
+      "departureDate": "2026-03-01",
+      "commodity": "liquids"
+    },
+    {
       "name": "Stellina",
       "imo": "9674933",
       "vesselTypeClass": "Handysize",
@@ -2210,5 +2431,5 @@
       "commodity": "liquids"
     }
   ],
-  "syncTimestamp": "2026-04-01T13:02:26.679Z"
+  "syncTimestamp": "2026-04-01T13:32:30.266Z"
 }

@@ -45,6 +45,17 @@
       "isTransiting": false
     },
     {
+      "lat": 25.543655,
+      "lng": 55.042034,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Bow Victory",
+      "speed": 0.1,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
       "lat": 25.966667,
       "lng": 56.924999,
       "type": "Handy/MR1",
@@ -238,6 +249,17 @@
       "state": "loaded",
       "commodity": "lpg",
       "name": "Gaz Imperial",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 24.977167,
+      "lng": 55.061199,
+      "type": "Intermediate Tankers",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Bravonea",
       "speed": 0,
       "isInside": true,
       "isTransiting": false
@@ -606,6 +628,17 @@
       "isTransiting": false
     },
     {
+      "lat": 23.642717,
+      "lng": 58.566425,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Southern Wolf",
+      "speed": 0,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
       "lat": 25.092253,
       "lng": 53.509716,
       "type": "Handysize",
@@ -815,6 +848,17 @@
       "isTransiting": false
     },
     {
+      "lat": 25.508911,
+      "lng": 54.928146,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Eva Fuji",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
       "lat": 25.159525,
       "lng": 52.931713,
       "type": "VLCC",
@@ -881,6 +925,28 @@
       "isTransiting": false
     },
     {
+      "lat": 27.383417,
+      "lng": 50.400948,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Oriental Gerbera",
+      "speed": 0.1,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.439285,
+      "lng": 55.063831,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Solar Roma",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
       "lat": 25.859095,
       "lng": 52.22942,
       "type": "VLCC",
@@ -909,6 +975,17 @@
       "state": "loaded",
       "commodity": "dry",
       "name": "Leyla Aksoy",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.604691,
+      "lng": 54.594067,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Bow Mercury",
       "speed": 0,
       "isInside": true,
       "isTransiting": false
@@ -1200,6 +1277,17 @@
       "isTransiting": false
     },
     {
+      "lat": 25.562885,
+      "lng": 54.79567,
+      "type": "Intermediate Tankers",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Bow Lion",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
       "lat": 25.838608,
       "lng": 52.187496,
       "type": "Upper Conventional",
@@ -1387,6 +1475,17 @@
       "isTransiting": false
     },
     {
+      "lat": 25.437059,
+      "lng": 55.105396,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Zonda",
+      "speed": 0.1,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
       "lat": 24.303637,
       "lng": 54.470379,
       "type": "Handysize",
@@ -1417,6 +1516,28 @@
       "name": "Advantage Passion",
       "speed": 3.5,
       "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 27.410418,
+      "lng": 50.135159,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Saehan Marina",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 27.392422,
+      "lng": 50.089119,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Thetis Leona",
+      "speed": 0,
+      "isInside": true,
       "isTransiting": false
     },
     {
@@ -1596,6 +1717,17 @@
       "isTransiting": false
     },
     {
+      "lat": 26.049299,
+      "lng": 55.922573,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "LYNG TRADER",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
       "lat": 26.499731,
       "lng": 50.190632,
       "type": "Handysize",
@@ -1673,6 +1805,17 @@
       "isTransiting": false
     },
     {
+      "lat": 24.719868,
+      "lng": 56.575905,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Venus 09",
+      "speed": 0.1,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
       "lat": 25.657784,
       "lng": 55.065254,
       "type": "VLGC",
@@ -1692,6 +1835,28 @@
       "name": "Fogas",
       "speed": 0.6,
       "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 29.668253,
+      "lng": 48.760597,
+      "type": "Intermediate Tankers",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Cabri",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 26.147312,
+      "lng": 55.501534,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Mab 5",
+      "speed": 6,
+      "isInside": true,
       "isTransiting": false
     },
     {
@@ -1734,6 +1899,39 @@
       "state": "ballast",
       "commodity": "liquids",
       "name": "Rawabi Integrity",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.890421,
+      "lng": 54.782593,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Sakai",
+      "speed": 0.1,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.217793,
+      "lng": 56.400799,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Gas Ray",
+      "speed": 10.7,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.691999,
+      "lng": 54.826,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Crave",
       "speed": 0,
       "isInside": true,
       "isTransiting": false
@@ -1868,6 +2066,17 @@
       "name": "Ladonna",
       "speed": 13.3,
       "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 24.759302,
+      "lng": 56.568386,
+      "type": "Intermediate Tankers",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Violet 3",
+      "speed": 0.2,
+      "isInside": false,
       "isTransiting": false
     },
     {
@@ -2014,6 +2223,28 @@
       "isTransiting": false
     },
     {
+      "lat": 27.612833,
+      "lng": 52.3867,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Caspia",
+      "speed": 0.7,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 26.977598,
+      "lng": 56.34494,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Delice",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
       "lat": 25.141502,
       "lng": 56.557373,
       "type": "MR",
@@ -2033,6 +2264,39 @@
       "name": "Maria",
       "speed": 0.1,
       "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.508074,
+      "lng": 55.016041,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Yashar",
+      "speed": 0.3,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 24.714338,
+      "lng": 56.597801,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Horizon 1",
+      "speed": 0.1,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 24.763254,
+      "lng": 57.524025,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Sun",
+      "speed": 9.6,
+      "isInside": false,
       "isTransiting": false
     },
     {
@@ -2098,6 +2362,72 @@
       "commodity": "lpg",
       "name": "Tania Star",
       "speed": 1,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 24.528868,
+      "lng": 54.377361,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Su Gas",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.27038,
+      "lng": 55.261238,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Tazerbo",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 24.472851,
+      "lng": 57.317368,
+      "type": "Intermediate Tankers",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Sea Rock",
+      "speed": 9.1,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.373817,
+      "lng": 56.486908,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Gas Rga",
+      "speed": 0.1,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.567108,
+      "lng": 55.0382,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Daiken Maru",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.365934,
+      "lng": 56.540028,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Pioneer Gas",
+      "speed": 0.1,
       "isInside": false,
       "isTransiting": false
     },
@@ -2234,6 +2564,17 @@
       "isTransiting": false
     },
     {
+      "lat": 25.63641,
+      "lng": 56.943966,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Serenity Ix",
+      "speed": 0.2,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
       "lat": 27.20768,
       "lng": 52.392296,
       "type": "Handy",
@@ -2242,6 +2583,17 @@
       "name": "Vina",
       "speed": 7.1,
       "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 23.641666,
+      "lng": 58.575001,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Md 23",
+      "speed": 0,
+      "isInside": false,
       "isTransiting": false
     },
     {
@@ -2344,6 +2696,17 @@
       "isTransiting": false
     },
     {
+      "lat": 25.348236,
+      "lng": 56.421047,
+      "type": "SGC",
+      "state": "loaded",
+      "commodity": "lpg",
+      "name": "Amir Gas",
+      "speed": 0,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
       "lat": 24.803408,
       "lng": 56.565521,
       "type": "MR",
@@ -2377,6 +2740,28 @@
       "isTransiting": false
     },
     {
+      "lat": 29.308773,
+      "lng": 49.256481,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "P K A",
+      "speed": 0.1,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 24.792599,
+      "lng": 56.897072,
+      "type": "Intermediate Tankers",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Onyx 1",
+      "speed": 0.1,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
       "lat": 25.284937,
       "lng": 54.941254,
       "type": "Panamax",
@@ -2399,6 +2784,17 @@
       "isTransiting": false
     },
     {
+      "lat": 25.336073,
+      "lng": 56.537132,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Maya Gas I",
+      "speed": 0,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
       "lat": 25.693914,
       "lng": 56.887245,
       "type": "Suezmax/LR3",
@@ -2407,6 +2803,17 @@
       "name": "Chloe",
       "speed": 0,
       "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.547024,
+      "lng": 55.310246,
+      "type": "SGC",
+      "state": "loaded",
+      "commodity": "lpg",
+      "name": "GALAXY GAS",
+      "speed": 0.1,
+      "isInside": true,
       "isTransiting": false
     },
     {
@@ -2520,6 +2927,17 @@
       "isTransiting": false
     },
     {
+      "lat": 25.319788,
+      "lng": 56.71302,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Sifra",
+      "speed": 0,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
       "lat": 27.148489,
       "lng": 49.782467,
       "type": "MR",
@@ -2527,6 +2945,17 @@
       "commodity": "liquids",
       "name": "Ratta",
       "speed": 0.2,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.271547,
+      "lng": 55.260941,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Sarwat Gas",
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -2652,6 +3081,17 @@
       "isTransiting": false
     },
     {
+      "lat": 25.507519,
+      "lng": 55.416439,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Apex Gas",
+      "speed": 1.2,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
       "lat": 25.366261,
       "lng": 56.576939,
       "type": "VLCC",
@@ -2671,6 +3111,17 @@
       "name": "Huda",
       "speed": 0.1,
       "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.44495,
+      "lng": 55.32505,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Aqua Spirit",
+      "speed": 0.1,
+      "isInside": true,
       "isTransiting": false
     },
     {
@@ -2736,6 +3187,17 @@
       "commodity": "dry",
       "name": "Win Harmony",
       "speed": 0.1,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.363583,
+      "lng": 56.467602,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "TRIMMU 3",
+      "speed": 4.3,
       "isInside": false,
       "isTransiting": false
     },
@@ -2817,6 +3279,17 @@
       "isTransiting": false
     },
     {
+      "lat": 25.57625,
+      "lng": 55.13316,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Yellowstone",
+      "speed": 0.4,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
       "lat": 25.675949,
       "lng": 55.1497,
       "type": "VLGC",
@@ -2869,6 +3342,17 @@
       "name": "Elpis",
       "speed": 9.9,
       "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.333845,
+      "lng": 56.504166,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Zegna",
+      "speed": 0.1,
+      "isInside": false,
       "isTransiting": false
     },
     {
@@ -3312,6 +3796,17 @@
       "isTransiting": false
     },
     {
+      "lat": 27.358467,
+      "lng": 50.204983,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Nymph Thetis",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
       "lat": 25.391514,
       "lng": 56.858185,
       "type": "Panamax/LR1",
@@ -3334,6 +3829,28 @@
       "isTransiting": false
     },
     {
+      "lat": 29.622047,
+      "lng": 48.725986,
+      "type": "Intermediate Tankers",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Pulmonis",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 29.580517,
+      "lng": 48.817986,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Mackerel",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
       "lat": 25.409245,
       "lng": 55.023159,
       "type": "VLCC",
@@ -3341,6 +3858,17 @@
       "commodity": "liquids",
       "name": "Tavaris Cassel",
       "speed": 0.2,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 27.41353,
+      "lng": 51.846882,
+      "type": "Intermediate Tankers",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Sita",
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -3686,6 +4214,17 @@
       "isTransiting": false
     },
     {
+      "lat": 24.969461,
+      "lng": 54.451565,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Epic Burano",
+      "speed": 0.2,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
       "lat": 25.146212,
       "lng": 56.453365,
       "type": "MR",
@@ -3741,6 +4280,17 @@
       "isTransiting": false
     },
     {
+      "lat": 25.869328,
+      "lng": 56.76004,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Coral Wave",
+      "speed": 0,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
       "lat": 25.377684,
       "lng": 56.573601,
       "type": "Panamax/LR1",
@@ -3793,6 +4343,17 @@
       "name": "Ocean Koi",
       "speed": 0.3,
       "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.527273,
+      "lng": 55.273281,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Nobler",
+      "speed": 0.1,
+      "isInside": true,
       "isTransiting": false
     },
     {
@@ -3881,6 +4442,17 @@
       "name": "Ashley",
       "speed": 0,
       "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 24.579571,
+      "lng": 56.641987,
+      "type": "Intermediate Tankers",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Alimas",
+      "speed": 0.2,
+      "isInside": false,
       "isTransiting": false
     },
     {
@@ -3994,6 +4566,17 @@
       "isTransiting": false
     },
     {
+      "lat": 24.796839,
+      "lng": 56.554539,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Reef",
+      "speed": 3.9,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
       "lat": 25.545362,
       "lng": 54.967415,
       "type": "MR",
@@ -4034,6 +4617,39 @@
       "commodity": "liquids",
       "name": "Ocean Guardian",
       "speed": 9.3,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.910034,
+      "lng": 54.859558,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Seagate",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.675539,
+      "lng": 56.978855,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Hoot",
+      "speed": 0.5,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.493549,
+      "lng": 56.913593,
+      "type": "Intermediate Tankers",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Lady Youmna",
+      "speed": 0,
       "isInside": false,
       "isTransiting": false
     },
@@ -4082,6 +4698,17 @@
       "isTransiting": false
     },
     {
+      "lat": 25.757307,
+      "lng": 56.897713,
+      "type": "Intermediate Tankers",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Voyager Haven",
+      "speed": 3.7,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
       "lat": 29.64946,
       "lng": 48.755829,
       "type": "MR",
@@ -4123,6 +4750,17 @@
       "name": "Kun Peng",
       "speed": 0,
       "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.568899,
+      "lng": 54.887348,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Yc Azalea",
+      "speed": 0,
+      "isInside": true,
       "isTransiting": false
     },
     {
@@ -4346,6 +4984,28 @@
       "isTransiting": false
     },
     {
+      "lat": 27.391716,
+      "lng": 50.461117,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Ginga Tiger",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.43038,
+      "lng": 55.297462,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Titan Harmony",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
       "lat": 24.76,
       "lng": 56.588333,
       "type": "Panamax/LR1",
@@ -4431,6 +5091,17 @@
       "name": "MADI",
       "speed": 0.2,
       "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 24.935871,
+      "lng": 54.541172,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Ealdor",
+      "speed": 0.1,
+      "isInside": true,
       "isTransiting": false
     },
     {
@@ -5028,6 +5699,39 @@
       "isTransiting": false
     },
     {
+      "lat": 25.110785,
+      "lng": 56.660999,
+      "type": "Intermediate Tankers",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Akkadia",
+      "speed": 0,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.636524,
+      "lng": 56.922581,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "ELIAH",
+      "speed": 0.1,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.657221,
+      "lng": 57.01088,
+      "type": "Intermediate Tankers",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Euro Viking",
+      "speed": 0.1,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
       "lat": 24.746862,
       "lng": 56.575455,
       "type": "MR",
@@ -5036,6 +5740,17 @@
       "name": "Silver",
       "speed": 3.9,
       "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.305958,
+      "lng": 51.816059,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Serene Monaco",
+      "speed": 0,
+      "isInside": true,
       "isTransiting": false
     },
     {
@@ -5079,6 +5794,17 @@
       "commodity": "liquids",
       "name": "Zeus",
       "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.583195,
+      "lng": 54.898647,
+      "type": "Intermediate Tankers",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Yc Pansy",
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -5413,6 +6139,17 @@
       "isTransiting": false
     },
     {
+      "lat": 25.742813,
+      "lng": 53.768208,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Ds Ocean",
+      "speed": 0.1,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
       "lat": 26.403696,
       "lng": 55.777645,
       "type": "Kamsarmax",
@@ -5545,6 +6282,17 @@
       "isTransiting": false
     },
     {
+      "lat": 25.486135,
+      "lng": 55.2342,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "No. 2 Ocean Pioneer",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
       "lat": 29.864523,
       "lng": 49.195694,
       "type": "Kamsarmax",
@@ -5611,6 +6359,17 @@
       "isTransiting": false
     },
     {
+      "lat": 27.459267,
+      "lng": 50.403915,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Ginga Puma",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
       "lat": 27.165741,
       "lng": 49.788105,
       "type": "Handy/MR1",
@@ -5640,6 +6399,17 @@
       "commodity": "dry",
       "name": "Ocean Kudos",
       "speed": 0.4,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 24.715544,
+      "lng": 56.560146,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Snarth",
+      "speed": 0.1,
       "isInside": false,
       "isTransiting": false
     },
@@ -5739,6 +6509,17 @@
       "commodity": "liquids",
       "name": "Plata Carrier",
       "speed": 0.1,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 27.36175,
+      "lng": 50.225632,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Al Shaffiah",
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -5919,6 +6700,17 @@
       "isTransiting": false
     },
     {
+      "lat": 25.406979,
+      "lng": 56.558788,
+      "type": "SGC",
+      "state": "ballast",
+      "commodity": "lpg",
+      "name": "Al Veer",
+      "speed": 0,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
       "lat": 25.84256,
       "lng": 53.146893,
       "type": "VLCC",
@@ -5959,6 +6751,17 @@
       "commodity": "liquids",
       "name": "New Future",
       "speed": 0.1,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.159166,
+      "lng": 53.497234,
+      "type": "Intermediate Tankers",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Al Samha",
+      "speed": 11.5,
       "isInside": true,
       "isTransiting": false
     },
@@ -6134,6 +6937,17 @@
       "state": "loaded",
       "commodity": "liquids",
       "name": "Kerala",
+      "speed": 0.1,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.004219,
+      "lng": 51.59996,
+      "type": "SGC",
+      "state": "loaded",
+      "commodity": "lpg",
+      "name": "Leonora Kosan",
       "speed": 0.1,
       "isInside": true,
       "isTransiting": false
@@ -6392,6 +7206,17 @@
       "isTransiting": false
     },
     {
+      "lat": 24.572186,
+      "lng": 56.641174,
+      "type": "Intermediate Tankers",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "No.6 Ocean Pioneer",
+      "speed": 0.4,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
       "lat": 25.59458,
       "lng": 54.882645,
       "type": "VLCC",
@@ -6425,6 +7250,17 @@
       "isTransiting": false
     },
     {
+      "lat": 25.821592,
+      "lng": 53.038952,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Shamrock Jupiter",
+      "speed": 0.6,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
       "lat": 26.181942,
       "lng": 53.78418,
       "type": "Suezmax/LR3",
@@ -6444,6 +7280,17 @@
       "name": "Minoan Sky",
       "speed": 11.8,
       "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.203716,
+      "lng": 54.565182,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Prabhu Parvati",
+      "speed": 0,
+      "isInside": true,
       "isTransiting": false
     },
     {
@@ -6678,6 +7525,17 @@
       "isTransiting": false
     },
     {
+      "lat": 24.502943,
+      "lng": 56.632278,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Songa Topaz",
+      "speed": 0,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
       "lat": 27.441528,
       "lng": 52.215324,
       "type": "Supramax",
@@ -6706,6 +7564,17 @@
       "state": "ballast",
       "commodity": "dry",
       "name": "Ardavan",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.85549,
+      "lng": 51.77475,
+      "type": "Intermediate Tankers",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Sidra Doha",
       "speed": 0,
       "isInside": true,
       "isTransiting": false
@@ -6964,6 +7833,17 @@
       "isTransiting": false
     },
     {
+      "lat": 26.371134,
+      "lng": 52.893135,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Amagi Galaxy",
+      "speed": 13.1,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
       "lat": 24.95829,
       "lng": 54.51284,
       "type": "Handysize",
@@ -6971,6 +7851,17 @@
       "commodity": "dry",
       "name": "Tan Binh 345",
       "speed": 0.3,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 24.337839,
+      "lng": 54.371212,
+      "type": "Intermediate Tankers",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Umm Al Lulu-I",
+      "speed": 4.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -7006,6 +7897,17 @@
       "speed": 0,
       "isInside": true,
       "isTransiting": false
+    },
+    {
+      "lat": 26.393008,
+      "lng": 56.197932,
+      "type": "Intermediate Tankers",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Ariana",
+      "speed": 6.9,
+      "isInside": true,
+      "isTransiting": true
     },
     {
       "lat": 23.663334,
@@ -7250,6 +8152,17 @@
       "isTransiting": false
     },
     {
+      "lat": 25.459249,
+      "lng": 54.745583,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Hanyu Camellia",
+      "speed": 3.5,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
       "lat": 29.123436,
       "lng": 49.482792,
       "type": "VLCC",
@@ -7366,6 +8279,17 @@
       "state": "ballast",
       "commodity": "dry",
       "name": "Nav Neha",
+      "speed": 0.2,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.407726,
+      "lng": 55.025448,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Pvt Sunrise",
       "speed": 0.2,
       "isInside": true,
       "isTransiting": false
@@ -7588,6 +8512,17 @@
       "name": "New Ambition",
       "speed": 0,
       "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 23.751417,
+      "lng": 59.022499,
+      "type": "Intermediate Tankers",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Nv Apollo",
+      "speed": 13.8,
+      "isInside": false,
       "isTransiting": false
     },
     {
@@ -8127,6 +9062,17 @@
       "name": "Xin Qi Meng",
       "speed": 11.8,
       "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 24.581621,
+      "lng": 56.66972,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Bluebird Arrow",
+      "speed": 0.2,
+      "isInside": false,
       "isTransiting": false
     },
     {
@@ -8680,6 +9626,17 @@
       "isTransiting": false
     },
     {
+      "lat": 25.365395,
+      "lng": 55.371853,
+      "type": "SGC",
+      "state": "loaded",
+      "commodity": "lpg",
+      "name": "Epic Sentosa",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
       "lat": 25.022657,
       "lng": 53.209969,
       "type": "VLCC",
@@ -8774,6 +9731,28 @@
       "state": "loaded",
       "commodity": "liquids",
       "name": "Sc Mercury",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.539007,
+      "lng": 54.952702,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Bochem Marengo",
+      "speed": 0.1,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 27.143248,
+      "lng": 49.768196,
+      "type": "Intermediate Tankers",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Louis P",
       "speed": 0,
       "isInside": true,
       "isTransiting": false
@@ -10508,5 +11487,5 @@
     "fillColor": "#ef4444",
     "fillOpacity": 0.15
   },
-  "syncTimestamp": "2026-04-01T13:02:26.679Z"
+  "syncTimestamp": "2026-04-01T13:32:30.266Z"
 }

@@ -164,6 +164,31 @@
       "isTransiting": true
     },
     {
+      "name": "Ariana",
+      "imo": "9500132",
+      "mmsi": "374186000",
+      "vesselTypeClass": "Intermediate Tankers",
+      "state": "ballast",
+      "flagName": "Panama",
+      "deadWeight": 17475,
+      "commodityTypes": [
+        "liquids"
+      ],
+      "capacity": 20128,
+      "speed": 6.9,
+      "course": 155.7,
+      "lat": 26.393008,
+      "lng": 56.197932,
+      "aisDestination": null,
+      "product": "Fuel Oils",
+      "lastPortCall": {
+        "start": "2022-08-16T22:05:48",
+        "end": "2022-08-16T22:05:48"
+      },
+      "transitDirection": "exiting",
+      "isTransiting": true
+    },
+    {
       "name": "Ksl Laiyang",
       "imo": "9555163",
       "mmsi": "538003815",
@@ -241,8 +266,8 @@
       "isTransiting": true
     }
   ],
-  "exitingCount": 1,
+  "exitingCount": 2,
   "enteringCount": 7,
-  "totalTransiting": 9,
-  "syncTimestamp": "2026-04-01T13:02:26.679Z"
+  "totalTransiting": 10,
+  "syncTimestamp": "2026-04-01T13:32:30.266Z"
 }

@@ -75,7 +75,7 @@ function main() {
     console.error('ERROR: vessels.json not found. Run sync or download from Kpler first.');
     process.exit(1);
   }
-  const EXCLUDED_VESSEL_TYPES = ['Short Sea Tankers', 'Intermediate Tankers', 'Small Tankers', 'SGC', 'Mini Bulker'];
+  const EXCLUDED_VESSEL_TYPES = ['Short Sea Tankers', 'Small Tankers', 'Mini Bulker'];
   const allVesselsRaw = JSON.parse(fs.readFileSync(vesselsPath, 'utf-8'));
   const vessels = allVesselsRaw.filter(v => !EXCLUDED_VESSEL_TYPES.includes(v.vesselTypeClass));
   console.log(`Loaded ${allVesselsRaw.length} vessels, excluded ${allVesselsRaw.length - vessels.length} small types → ${vessels.length} vessels`);
