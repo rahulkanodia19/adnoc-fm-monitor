@@ -2,50 +2,50 @@
   "data": [
     {
       "label": "Container Ship",
-      "total": 144,
-      "ballast": 67,
-      "laden": 77
+      "total": 133,
+      "ballast": 60,
+      "laden": 73
     },
     {
       "label": "MR",
       "total": 123,
-      "ballast": 66,
-      "laden": 57
+      "ballast": 69,
+      "laden": 54
     },
     {
       "label": "VLCC",
       "total": 112,
-      "ballast": 41,
-      "laden": 71
+      "ballast": 40,
+      "laden": 72
     },
     {
       "label": "Handysize",
-      "total": 104,
-      "ballast": 66,
-      "laden": 38
+      "total": 105,
+      "ballast": 65,
+      "laden": 40
     },
     {
       "label": "Supramax",
-      "total": 70,
+      "total": 69,
       "ballast": 32,
-      "laden": 38
+      "laden": 37
     },
     {
       "label": "Intermediate Tankers",
       "total": 59,
-      "ballast": 20,
-      "laden": 39
+      "ballast": 19,
+      "laden": 40
     },
     {
       "label": "Panamax",
-      "total": 55,
+      "total": 54,
       "ballast": 36,
-      "laden": 19
+      "laden": 18
     },
     {
       "label": "Aframax/LR2",
-      "total": 48,
-      "ballast": 23,
+      "total": 49,
+      "ballast": 24,
       "laden": 25
     },
     {
@@ -57,26 +57,26 @@
     {
       "label": "Handy/MR1",
       "total": 40,
-      "ballast": 20,
-      "laden": 20
+      "ballast": 19,
+      "laden": 21
     },
     {
       "label": "Kamsarmax",
-      "total": 39,
+      "total": 40,
       "ballast": 28,
-      "laden": 11
+      "laden": 12
+    },
+    {
+      "label": "Suezmax/LR3",
+      "total": 31,
+      "ballast": 10,
+      "laden": 21
     },
     {
       "label": "SGC",
       "total": 30,
       "ballast": 26,
       "laden": 4
-    },
-    {
-      "label": "Suezmax/LR3",
-      "total": 29,
-      "ballast": 8,
-      "laden": 21
     },
     {
       "label": "Ultramax",
@@ -109,16 +109,16 @@
       "laden": 6
     },
     {
-      "label": "Post-Panamax",
+      "label": "Handy",
       "total": 9,
-      "ballast": 5,
-      "laden": 4
+      "ballast": 8,
+      "laden": 1
     },
     {
-      "label": "Handy",
-      "total": 8,
-      "ballast": 7,
-      "laden": 1
+      "label": "Post-Panamax",
+      "total": 9,
+      "ballast": 4,
+      "laden": 5
     },
     {
       "label": "Upper Conventional",
@@ -151,6 +151,6 @@
       "laden": 1
     }
   ],
-  "total": 1034,
-  "syncTimestamp": "2026-04-01T22:30:04.825Z"
+  "total": 1027,
+  "syncTimestamp": "2026-04-01T23:12:46.558Z"
 }
