@@ -269,5 +269,9 @@
   "exitingCount": 2,
   "enteringCount": 7,
   "totalTransiting": 10,
-  "syncTimestamp": "2026-04-01T13:32:30.266Z"
+  "uaeExiting": 0,
+  "uaeEntering": 0,
+  "adnocExiting": 0,
+  "adnocEntering": 0,
+  "syncTimestamp": "2026-04-01T22:30:04.825Z"
 }

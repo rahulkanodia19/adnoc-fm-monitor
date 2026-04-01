@@ -4,14 +4,281 @@
     "comparedTo": "2026-03-31",
     "gapDays": 1,
     "exited": 2,
-    "entered": 2,
+    "entered": 3,
     "tanker_exit": 0,
     "bulk_exit": 0,
     "container_exit": 0,
     "other_exit": 2,
-    "tanker_enter": 0,
+    "tanker_enter": 1,
     "bulk_enter": 0,
     "container_enter": 0,
-    "other_enter": 2
+    "other_enter": 2,
+    "exitedVessels": [
+      {
+        "name": "KYLO",
+        "imo": "9189146",
+        "type": "Suezmax/LR3",
+        "commodity": "liquids",
+        "flag": "Cook Islands",
+        "destination": "",
+        "deadWeight": 160573,
+        "speed": 10,
+        "state": "loaded",
+        "controller": ""
+      },
+      {
+        "name": "Lotus Rising",
+        "imo": "9217656",
+        "type": "Panamax",
+        "commodity": "dry",
+        "flag": "Marshall Islands",
+        "destination": "China",
+        "deadWeight": 75120,
+        "speed": 11.2,
+        "state": "ballast",
+        "controller": "Minoa Marine"
+      }
+    ],
+    "enteredVessels": [
+      {
+        "name": "Exonave",
+        "imo": "9014456",
+        "type": "VLGC",
+        "commodity": "lpg",
+        "flag": "Gambia",
+        "destination": "",
+        "deadWeight": 49996,
+        "speed": 9.8,
+        "state": "ballast",
+        "controller": "Kunlun Shipping"
+      },
+      {
+        "name": "Uma",
+        "imo": "9258870",
+        "type": "Aframax/LR2",
+        "commodity": "liquids",
+        "flag": "Barbados",
+        "destination": "Kharg Island",
+        "deadWeight": 114761,
+        "speed": 2,
+        "state": "ballast",
+        "controller": ""
+      },
+      {
+        "name": "Sun Rise I",
+        "imo": "9377585",
+        "type": "Short Sea Tankers",
+        "commodity": "liquids",
+        "flag": "Panama",
+        "destination": "Khor Al Zubair Port",
+        "deadWeight": 7695,
+        "speed": 10,
+        "state": "ballast",
+        "controller": ""
+      }
+    ],
+    "omanEntered": [
+      {
+        "name": "KYLO",
+        "imo": "9189146",
+        "type": "Suezmax/LR3",
+        "commodity": "liquids",
+        "flag": "Cook Islands",
+        "destination": "",
+        "deadWeight": 160573,
+        "speed": 10,
+        "state": "loaded",
+        "controller": ""
+      },
+      {
+        "name": "Lotus Rising",
+        "imo": "9217656",
+        "type": "Panamax",
+        "commodity": "dry",
+        "flag": "Marshall Islands",
+        "destination": "China",
+        "deadWeight": 75120,
+        "speed": 11.2,
+        "state": "ballast",
+        "controller": "Minoa Marine"
+      },
+      {
+        "name": "Sirius 1",
+        "imo": "9285847",
+        "type": "Aframax/LR2",
+        "commodity": "liquids",
+        "flag": "Comoros",
+        "destination": "",
+        "deadWeight": 115340,
+        "speed": 1,
+        "state": "ballast",
+        "controller": ""
+      },
+      {
+        "name": "M Brigit",
+        "imo": "9340582",
+        "type": "Handy/MR1",
+        "commodity": "liquids",
+        "flag": "Singapore",
+        "destination": "Fujairah",
+        "deadWeight": 29017,
+        "speed": 12,
+        "state": "ballast",
+        "controller": ""
+      },
+      {
+        "name": "Nasco Gem",
+        "imo": "9404986",
+        "type": "Supramax",
+        "commodity": "dry",
+        "flag": "Panama",
+        "destination": "Sohar",
+        "deadWeight": 55085,
+        "speed": 10.6,
+        "state": "loaded",
+        "controller": "NASCO"
+      },
+      {
+        "name": "New Giant",
+        "imo": "9516947",
+        "type": "VLCC",
+        "commodity": "liquids",
+        "flag": "Liberia",
+        "destination": "Fujairah",
+        "deadWeight": 319611,
+        "speed": 13.3,
+        "state": "ballast",
+        "controller": "New Shipping Ltd"
+      },
+      {
+        "name": "Nv Apollo",
+        "imo": "9587790",
+        "type": "Intermediate Tankers",
+        "commodity": "liquids",
+        "flag": "Panama",
+        "destination": "Sohar",
+        "deadWeight": 21306,
+        "speed": 13.8,
+        "state": "ballast",
+        "controller": "Nhat Viet Transportation Corp"
+      },
+      {
+        "name": "Fei Run",
+        "imo": "9621015",
+        "type": "Supramax",
+        "commodity": "dry",
+        "flag": "China",
+        "destination": "",
+        "deadWeight": 56928,
+        "speed": 11.9,
+        "state": "ballast",
+        "controller": "Baosteel"
+      },
+      {
+        "name": "Pan Europe",
+        "imo": "9750244",
+        "type": "Upper Conventional",
+        "commodity": "lng",
+        "flag": "Hong Kong",
+        "destination": "",
+        "deadWeight": 88407,
+        "speed": 3.7,
+        "state": "ballast",
+        "controller": "Shell"
+      }
+    ],
+    "omanLeft": [
+      {
+        "name": "Exonave",
+        "imo": "9014456",
+        "type": "VLGC",
+        "commodity": "lpg",
+        "flag": ""
+      },
+      {
+        "name": "One Force",
+        "imo": "9215933",
+        "type": "Panamax",
+        "commodity": "dry",
+        "flag": ""
+      },
+      {
+        "name": "Alfonso",
+        "imo": "9256298",
+        "type": "Handy/MR1",
+        "commodity": "liquids",
+        "flag": ""
+      },
+      {
+        "name": "Uma",
+        "imo": "9258870",
+        "type": "Aframax/LR2",
+        "commodity": "liquids",
+        "flag": ""
+      },
+      {
+        "name": "Jia Xiang Da",
+        "imo": "9287962",
+        "type": "Supramax",
+        "commodity": "dry",
+        "flag": ""
+      },
+      {
+        "name": "Plata South",
+        "imo": "9353797",
+        "type": "VLCC",
+        "commodity": "liquids",
+        "flag": ""
+      },
+      {
+        "name": "Eco 3",
+        "imo": "9377066",
+        "type": "Short Sea Tankers",
+        "commodity": "liquids",
+        "flag": ""
+      },
+      {
+        "name": "Sun Rise I",
+        "imo": "9377585",
+        "type": "Short Sea Tankers",
+        "commodity": "liquids",
+        "flag": ""
+      },
+      {
+        "name": "Desh Mahima",
+        "imo": "9467744",
+        "type": "Aframax/LR2",
+        "commodity": "liquids",
+        "flag": ""
+      },
+      {
+        "name": "Maturity One",
+        "imo": "9661388",
+        "type": "Short Sea Tankers",
+        "commodity": "liquids",
+        "flag": ""
+      },
+      {
+        "name": "Vietnam Prosperity",
+        "imo": "9709087",
+        "type": "VLCC",
+        "commodity": "liquids",
+        "flag": ""
+      },
+      {
+        "name": "Clearocean Magic",
+        "imo": "9849382",
+        "type": "MR",
+        "commodity": "liquids",
+        "flag": ""
+      },
+      {
+        "name": "Gas Ammon",
+        "imo": "9934474",
+        "type": "MGC",
+        "commodity": "lpg",
+        "flag": ""
+      }
+    ]
   }
 ]

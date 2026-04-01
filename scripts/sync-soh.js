@@ -141,10 +141,10 @@ function kplerPost(urlPath, body) {
 
 // ---------- Kpler flows request builder ----------
 
-function buildFlowsBody({ granularity = 'days', startDate, endDate, split, numberOfSplits = 10, flowDirection = 'export' }) {
+function buildFlowsBody({ granularity = 'days', startDate, endDate, split, numberOfSplits = 10, flowDirection = 'export', products = [] }) {
   const body = {
     cumulative: false,
-    filters: { product: [] },
+    filters: { product: products },
     flowDirection,
     fromLocations: [],
     toLocations: [],
@@ -404,7 +404,27 @@ async function main() {
     console.log(`     → ${data.series?.length || 0} daily data points`);
   } catch (e) { console.error('     ERROR:', e.message); }
 
-  // --- 3c. Weekly export flows (last 2 years) ---
+  // --- 3c-h. Commodity-specific daily flows (2 years) ---
+  const commodityFlows = [
+    { id: 1370, name: 'crude', file: 'flows-crude' },
+    { id: 1750, name: 'lng', file: 'flows-lng' },
+    { id: 2052, name: 'lpg', file: 'flows-lpg' },
+  ];
+  for (const cf of commodityFlows) {
+    for (const dir of ['export', 'import']) {
+      const suffix = dir === 'import' ? '-import' : '';
+      console.log(`  Fetching daily ${dir} ${cf.name} flows (2y)...`);
+      try {
+        const data = await kplerPost('/api/flows', buildFlowsBody({
+          granularity: 'days', startDate: startDate2y, endDate, flowDirection: dir, products: [cf.id],
+        }));
+        fs.writeFileSync(path.join(OUT_DIR, `${cf.file}${suffix}.json`), JSON.stringify(data, null, 2));
+        console.log(`     → ${data.series?.length || 0} daily ${cf.name} ${dir} data points`);
+      } catch (e) { console.error(`     ERROR (${cf.name} ${dir}):`, e.message); }
+    }
+  }
+
+  // --- 3i. Weekly export flows (last 2 years) ---
   console.log('3c/12 Fetching weekly EXPORT flows...');
   try {
     const data = await kplerPost('/api/flows', buildFlowsBody({

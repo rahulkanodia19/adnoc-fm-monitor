@@ -58,5 +58,17 @@
     "adnocCount": 11,
     "totalVessels": 1034,
     "transitCount": 10
+  },
+  {
+    "date": "2026-04-02",
+    "insideTotal": 717,
+    "insideBallast": 312,
+    "insideLaden": 404,
+    "outsideTotal": 317,
+    "outsideBallast": 205,
+    "outsideLaden": 112,
+    "adnocCount": 11,
+    "totalVessels": 1034,
+    "transitCount": 10
   }
 ]
