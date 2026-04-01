@@ -344,6 +344,13 @@ a.source-link:hover {
 .leaflet-control-zoom a { background: #243b53 !important; color: #d9e2ec !important; border-color: #334e68 !important; }
 .leaflet-control-zoom a:hover { background: #334e68 !important; }
 
+/* Map legend — responsive */
+.map-legend { padding: 0.5rem 0.625rem; line-height: 1.8; min-width: 140px; }
+@media (max-width: 639px) {
+  .map-legend { padding: 0.375rem 0.5rem; line-height: 1.5; min-width: auto; max-width: 130px; }
+  .map-legend-body { margin-top: 4px; }
+}
+
 /* GCC Map cursor — default arrow, pointer on interactive elements */
 #gcc-overview-map .leaflet-container { cursor: default !important; }
 #gcc-overview-map .leaflet-grab { cursor: default !important; }

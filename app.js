@@ -737,25 +737,38 @@ function initGccOverviewMap() {
   }
   gccMapLayers.pipelines.addTo(gccMapInstance);
 
-  // --- Legend ---
+  // --- Legend (collapsible on mobile) ---
   const legend = L.control({ position: 'bottomleft' });
   legend.onAdd = function () {
-    const div = L.DomUtil.create('div', 'bg-white/95 backdrop-blur p-3 rounded-lg border border-navy-200 text-[10px] text-navy-700 shadow-md');
-    div.style.lineHeight = '1.8';
-    div.style.minWidth = '140px';
+    const div = L.DomUtil.create('div', 'map-legend bg-white/95 backdrop-blur rounded-lg border border-navy-200 text-[10px] text-navy-700 shadow-md');
+    const isMobile = window.innerWidth < 640;
     div.innerHTML = `
-      <div class="font-bold text-[11px] text-navy-900 mb-1">Legend</div>
-      <div class="flex items-center gap-1.5"><span style="width:10px;height:10px;border-radius:50%;background:#059669;border:1.5px solid #1e293b;display:inline-block"></span> Oil/Gas Field</div>
-      <div class="flex items-center gap-1.5"><span style="width:10px;height:10px;background:#059669;border:1.5px solid #1e293b;display:inline-block"></span> Terminal</div>
-      <div class="flex items-center gap-1.5"><span style="width:10px;height:10px;background:#059669;border:1.5px solid #1e293b;display:inline-block;transform:rotate(45deg)"></span> Refinery / LNG</div>
-      <div class="flex items-center gap-1.5"><svg width="12" height="12" viewBox="0 0 12 12" style="display:inline-block;flex-shrink:0"><polygon points="6,1 11,11 1,11" fill="#059669" stroke="#1e293b" stroke-width="1.2"/></svg> Industrial</div>
-      <div class="flex items-center gap-1.5"><span style="width:16px;height:0;border-top:3px dashed #059669;display:inline-block"></span> Oil Pipeline</div>
-      <div class="flex items-center gap-1.5"><span style="width:16px;height:0;border-top:2.5px dashed #3b82f6;display:inline-block"></span> Gas Pipeline</div>
-      <div class="border-t border-navy-200 my-1"></div>
-      <div class="flex items-center gap-1.5"><span style="width:8px;height:8px;border-radius:50%;background:#059669;display:inline-block"></span> Operational</div>
-      <div class="flex items-center gap-1.5"><span style="width:8px;height:8px;border-radius:50%;background:#d97706;display:inline-block"></span> Partial</div>
-      <div class="flex items-center gap-1.5"><span style="width:8px;height:8px;border-radius:50%;background:#dc2626;display:inline-block"></span> Shutdown</div>
+      <div class="map-legend-toggle font-bold text-[11px] text-navy-900" style="cursor:pointer;display:flex;align-items:center;gap:4px;user-select:none">
+        <span class="map-legend-arrow" style="font-size:8px;transition:transform 0.2s">${isMobile ? '&#9654;' : '&#9660;'}</span> Legend
+      </div>
+      <div class="map-legend-body" style="${isMobile ? 'display:none' : ''}">
+        <div class="flex items-center gap-1.5"><span style="width:10px;height:10px;border-radius:50%;background:#059669;border:1.5px solid #1e293b;display:inline-block"></span> Oil/Gas Field</div>
+        <div class="flex items-center gap-1.5"><span style="width:10px;height:10px;background:#059669;border:1.5px solid #1e293b;display:inline-block"></span> Terminal</div>
+        <div class="flex items-center gap-1.5"><span style="width:10px;height:10px;background:#059669;border:1.5px solid #1e293b;display:inline-block;transform:rotate(45deg)"></span> Refinery / LNG</div>
+        <div class="flex items-center gap-1.5"><svg width="12" height="12" viewBox="0 0 12 12" style="display:inline-block;flex-shrink:0"><polygon points="6,1 11,11 1,11" fill="#059669" stroke="#1e293b" stroke-width="1.2"/></svg> Industrial</div>
+        <div class="flex items-center gap-1.5"><span style="width:16px;height:0;border-top:3px dashed #059669;display:inline-block"></span> Oil Pipeline</div>
+        <div class="flex items-center gap-1.5"><span style="width:16px;height:0;border-top:2.5px dashed #3b82f6;display:inline-block"></span> Gas Pipeline</div>
+        <div class="border-t border-navy-200 my-1"></div>
+        <div class="flex items-center gap-1.5"><span style="width:8px;height:8px;border-radius:50%;background:#059669;display:inline-block"></span> Operational</div>
+        <div class="flex items-center gap-1.5"><span style="width:8px;height:8px;border-radius:50%;background:#d97706;display:inline-block"></span> Partial</div>
+        <div class="flex items-center gap-1.5"><span style="width:8px;height:8px;border-radius:50%;background:#dc2626;display:inline-block"></span> Shutdown</div>
+      </div>
     `;
+    // Toggle on click
+    const toggle = div.querySelector('.map-legend-toggle');
+    const body = div.querySelector('.map-legend-body');
+    const arrow = div.querySelector('.map-legend-arrow');
+    L.DomEvent.disableClickPropagation(div);
+    toggle.addEventListener('click', () => {
+      const open = body.style.display !== 'none';
+      body.style.display = open ? 'none' : '';
+      arrow.innerHTML = open ? '&#9654;' : '&#9660;';
+    });
     return div;
   };
   legend.addTo(gccMapInstance);
