@@ -1,6 +1,6 @@
 {
   "sinceMidnight": "2026-04-02",
-  "syncTimestamp": "2026-04-01T23:37:18.783Z",
+  "syncTimestamp": "2026-04-01T23:45:00.962Z",
   "exitedVessels": [],
   "enteredVessels": [],
   "exitedCount": 0,
@@ -13,8 +13,29 @@
   "bulk_enter": 0,
   "container_enter": 0,
   "other_enter": 0,
-  "omanEntered": [],
-  "omanLeft": [],
-  "omanEnteredCount": 0,
-  "omanLeftCount": 0
+  "omanEntered": [
+    {
+      "name": "Nesreena",
+      "imo": "9459369",
+      "type": "Handysize",
+      "commodity": "dry",
+      "flag": "Panama",
+      "destination": "Fujairah",
+      "deadWeight": 31800,
+      "speed": 8,
+      "state": "loaded",
+      "controller": ""
+    }
+  ],
+  "omanLeft": [
+    {
+      "name": "Margherita Cosulich",
+      "imo": "9825051",
+      "type": "Short Sea Tankers",
+      "commodity": "liquids",
+      "flag": "Singapore"
+    }
+  ],
+  "omanEnteredCount": 1,
+  "omanLeftCount": 1
 }

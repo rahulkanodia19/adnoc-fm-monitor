@@ -8,9 +8,9 @@
     },
     {
       "label": "Dry Bulk",
-      "total": 52,
+      "total": 53,
       "ballast": 29,
-      "laden": 23
+      "laden": 24
     },
     {
       "label": "Clean petroleum products",
@@ -865,6 +865,6 @@
       "laden": 0
     }
   ],
-  "total": 1027,
-  "syncTimestamp": "2026-04-01T23:37:18.783Z"
+  "total": 1028,
+  "syncTimestamp": "2026-04-01T23:45:00.962Z"
 }

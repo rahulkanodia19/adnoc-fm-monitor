@@ -8,9 +8,9 @@
     },
     {
       "label": "Fujairah",
-      "total": 48,
+      "total": 49,
       "ballast": 33,
-      "laden": 15
+      "laden": 16
     },
     {
       "label": "Sohar",
@@ -211,6 +211,12 @@
       "laden": 2
     },
     {
+      "label": "Ras Markaz",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
+    },
+    {
       "label": "Jubail Industrial Port",
       "total": 2,
       "ballast": 2,
@@ -299,12 +305,6 @@
       "total": 2,
       "ballast": 0,
       "laden": 2
-    },
-    {
-      "label": "Paradip",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
     },
     {
       "label": "Bahrain",
@@ -416,12 +416,6 @@
     },
     {
       "label": "New Hamad",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Ras Markaz",
       "total": 1,
       "ballast": 0,
       "laden": 1
@@ -637,6 +631,12 @@
       "laden": 1
     },
     {
+      "label": "Paradip",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
       "label": "Richards Bay",
       "total": 1,
       "ballast": 1,
@@ -757,6 +757,12 @@
       "laden": 1
     },
     {
+      "label": "Scpov",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
       "label": "Omsoh",
       "total": 1,
       "ballast": 1,
@@ -769,22 +775,16 @@
       "laden": 1
     },
     {
-      "label": "Scpov",
+      "label": "Sohar_korea China Jp",
       "total": 1,
-      "ballast": 0,
-      "laden": 1
+      "ballast": 1,
+      "laden": 0
     },
     {
       "label": "Khorfakkan",
       "total": 1,
       "ballast": 0,
       "laden": 1
-    },
-    {
-      "label": "Sohar_korea China Jp",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
     },
     {
       "label": "Khalifa",
@@ -1033,13 +1033,13 @@
       "laden": 1
     },
     {
-      "label": "Aekhl_sgsin",
+      "label": "Indian Crew And Vsl",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "Indian Crew And Vsl",
+      "label": "Aekhl_sgsin",
       "total": 1,
       "ballast": 0,
       "laden": 1
@@ -1105,13 +1105,13 @@
       "laden": 0
     },
     {
-      "label": "China Owner",
+      "label": "Sadmn Opl",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "Sadmn Opl",
+      "label": "China Owner",
       "total": 1,
       "ballast": 1,
       "laden": 0
@@ -1165,10 +1165,10 @@
       "laden": 0
     },
     {
-      "label": "Bushehr",
+      "label": "Umm Qas_r",
       "total": 1,
-      "ballast": 1,
-      "laden": 0
+      "ballast": 0,
+      "laden": 1
     },
     {
       "label": "Waiting For Order",
@@ -1177,10 +1177,10 @@
       "laden": 0
     },
     {
-      "label": "Umm Qas_r",
+      "label": "Bushehr",
       "total": 1,
-      "ballast": 0,
-      "laden": 1
+      "ballast": 1,
+      "laden": 0
     },
     {
       "label": "Jubail",
@@ -1207,6 +1207,6 @@
       "laden": 0
     }
   ],
-  "total": 1027,
-  "syncTimestamp": "2026-04-01T23:37:18.783Z"
+  "total": 1028,
+  "syncTimestamp": "2026-04-01T23:45:00.962Z"
 }

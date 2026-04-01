@@ -1,6 +1,6 @@
 {
   "crisisStart": "2026-02-28",
-  "totalVessels": 169,
+  "totalVessels": 170,
   "totalUAE": 0,
   "totalADNOC": 5,
   "dailyCounts": [
@@ -26,9 +26,9 @@
     },
     {
       "date": "2026-03-30",
-      "count": 7,
+      "count": 8,
       "tankers": 4,
-      "bulk": 3,
+      "bulk": 4,
       "container": 0,
       "other": 0,
       "uae": 0,
@@ -363,7 +363,7 @@
       "product": "Iran",
       "destination": "China",
       "deadWeight": 160573,
-      "speed": 0,
+      "speed": 0.1,
       "departureDate": "2026-04-01",
       "commodity": "liquids"
     },
@@ -419,7 +419,7 @@
       "product": "Corn",
       "destination": "Oman",
       "deadWeight": 74748,
-      "speed": 12.9,
+      "speed": 12.8,
       "departureDate": "2026-04-01",
       "commodity": "dry"
     },
@@ -531,7 +531,7 @@
       "product": "Metallurgical Coke",
       "destination": null,
       "deadWeight": 58089,
-      "speed": 11.3,
+      "speed": 12.1,
       "departureDate": "2026-04-01",
       "commodity": "dry"
     },
@@ -727,9 +727,23 @@
       "product": "Clean petroleum products",
       "destination": null,
       "deadWeight": 45498,
-      "speed": 11.9,
+      "speed": 11.8,
       "departureDate": "2026-03-30",
       "commodity": "liquids"
+    },
+    {
+      "name": "Nesreena",
+      "imo": "9459369",
+      "vesselTypeClass": "Handysize",
+      "state": "loaded",
+      "flagName": "Panama",
+      "controller": "",
+      "product": "Dry Bulk",
+      "destination": "Fujairah",
+      "deadWeight": 31800,
+      "speed": 8,
+      "departureDate": "2026-03-30",
+      "commodity": "dry"
     },
     {
       "name": "Doric Breeze",
@@ -741,7 +755,7 @@
       "product": "Clean petroleum products",
       "destination": "South Africa",
       "deadWeight": 51565,
-      "speed": 0,
+      "speed": 0.3,
       "departureDate": "2026-03-30",
       "commodity": "liquids"
     },
@@ -853,7 +867,7 @@
       "product": "Crude Palm Olein",
       "destination": "Sohar",
       "deadWeight": 21306,
-      "speed": 10.1,
+      "speed": 11,
       "departureDate": "2026-03-28",
       "commodity": "liquids"
     },
@@ -881,7 +895,7 @@
       "product": "Gasoil",
       "destination": "Fujairah",
       "deadWeight": 52384,
-      "speed": 11.7,
+      "speed": 10.5,
       "departureDate": "2026-03-28",
       "commodity": "liquids"
     },
@@ -965,7 +979,7 @@
       "product": "LPG",
       "destination": "Oman",
       "deadWeight": 4319,
-      "speed": 0.4,
+      "speed": 0.3,
       "departureDate": "2026-03-26",
       "commodity": "lpg"
     },
@@ -1035,7 +1049,7 @@
       "product": "High Sulphur Straight Run Fuel Oil",
       "destination": "Oman",
       "deadWeight": 158344,
-      "speed": 8.6,
+      "speed": 2.5,
       "departureDate": "2026-03-26",
       "commodity": "liquids"
     },
@@ -1189,7 +1203,7 @@
       "product": "Varandey",
       "destination": null,
       "deadWeight": 115340,
-      "speed": 0.5,
+      "speed": 0.7,
       "departureDate": "2026-03-24",
       "commodity": "liquids"
     },
@@ -1399,7 +1413,7 @@
       "product": "Naphtha",
       "destination": null,
       "deadWeight": 42616,
-      "speed": 1,
+      "speed": 6.9,
       "departureDate": "2026-03-20",
       "commodity": "liquids"
     },
@@ -1469,7 +1483,7 @@
       "product": "High Sulfur Fuel Oil",
       "destination": null,
       "deadWeight": 47197,
-      "speed": 0.3,
+      "speed": 0.2,
       "departureDate": "2026-03-20",
       "commodity": "liquids"
     },
@@ -1483,7 +1497,7 @@
       "product": "Naphtha",
       "destination": "Lome",
       "deadWeight": 46042,
-      "speed": 0.3,
+      "speed": 1.1,
       "departureDate": "2026-03-20",
       "commodity": "liquids"
     },
@@ -1511,7 +1525,7 @@
       "product": "Murban",
       "destination": "Fujairah",
       "deadWeight": 115501,
-      "speed": 14.2,
+      "speed": 14.1,
       "departureDate": "2026-03-20",
       "commodity": "liquids"
     },
@@ -1553,7 +1567,7 @@
       "product": "Metallurgical Coal",
       "destination": "Dibba Port",
       "deadWeight": 74456,
-      "speed": 0.4,
+      "speed": 0.3,
       "departureDate": "2026-03-19",
       "commodity": "dry"
     },
@@ -1889,7 +1903,7 @@
       "product": "kuwait export",
       "destination": null,
       "deadWeight": 319634,
-      "speed": 1.3,
+      "speed": 1.2,
       "departureDate": "2026-03-14",
       "commodity": "liquids"
     },
@@ -1917,7 +1931,7 @@
       "product": "Grey Ammonia",
       "destination": "Muscat",
       "deadWeight": 30309,
-      "speed": 0.7,
+      "speed": 0.6,
       "departureDate": "2026-03-13",
       "commodity": "lpg"
     },
@@ -1973,7 +1987,7 @@
       "product": "Ethylene",
       "destination": "Fujairah",
       "deadWeight": 23495,
-      "speed": 13.8,
+      "speed": 13.6,
       "departureDate": "2026-03-11",
       "commodity": "lpg"
     },
@@ -2071,7 +2085,7 @@
       "product": "arab medium",
       "destination": "Muscat",
       "deadWeight": 299392,
-      "speed": 0.1,
+      "speed": 0,
       "departureDate": "2026-03-11",
       "commodity": "liquids"
     },
@@ -2085,7 +2099,7 @@
       "product": "Jet",
       "destination": "Fujairah",
       "deadWeight": 48578,
-      "speed": 0.3,
+      "speed": 0.1,
       "departureDate": "2026-03-10",
       "commodity": "liquids"
     },
@@ -2323,7 +2337,7 @@
       "product": "Minor Bulks",
       "destination": "Jebel Ali",
       "deadWeight": 64100,
-      "speed": 0.6,
+      "speed": 0.4,
       "departureDate": "2026-03-05",
       "commodity": "dry"
     },
@@ -2379,7 +2393,7 @@
       "product": "Hot Rolled Coils",
       "destination": null,
       "deadWeight": 55092,
-      "speed": 4.2,
+      "speed": 7,
       "departureDate": "2026-03-05",
       "commodity": "dry"
     },
@@ -2463,7 +2477,7 @@
       "product": "Fuel Oils",
       "destination": null,
       "deadWeight": 45934,
-      "speed": 0.1,
+      "speed": 0.5,
       "departureDate": "2026-03-04",
       "commodity": "liquids"
     },
@@ -2561,7 +2575,7 @@
       "product": "Dry Bulk",
       "destination": "Fujairah",
       "deadWeight": 28462,
-      "speed": 1.1,
+      "speed": 1,
       "departureDate": "2026-03-02",
       "commodity": "dry"
     },
@@ -2692,5 +2706,5 @@
       "commodity": "liquids"
     }
   ],
-  "syncTimestamp": "2026-04-01T23:37:18.783Z"
+  "syncTimestamp": "2026-04-01T23:45:00.962Z"
 }

@@ -406,9 +406,9 @@
       {
         "label": "Handysize",
         "ballast": 24,
-        "laden": 8,
+        "laden": 9,
         "unknown": 0,
-        "total": 32
+        "total": 33
       },
       {
         "label": "Supramax",
@@ -539,9 +539,9 @@
     ],
     "grandTotal": {
       "ballast": 210,
-      "laden": 107,
+      "laden": 108,
       "unknown": 0,
-      "total": 317
+      "total": 318
     },
     "productVolumes": [
       {
@@ -589,8 +589,8 @@
       },
       {
         "commodity": "Dry Bulk",
-        "vesselCount": 40,
-        "totalCapacity": 2.272728,
+        "vesselCount": 41,
+        "totalCapacity": 2.303844,
         "unit": "mmt",
         "products": {
           "Minor Bulks": 4,
@@ -601,7 +601,7 @@
           "Iron Ore Pellets": 1,
           "Yellow Corn": 2,
           "Coal": 2,
-          "Dry Bulk": 10,
+          "Dry Bulk": 11,
           "Cement": 1,
           "Steel": 5,
           "Corn": 2,
@@ -615,7 +615,7 @@
         "topProducts": [
           {
             "name": "Dry Bulk",
-            "count": 10
+            "count": 11
           },
           {
             "name": "Steel",
@@ -672,5 +672,5 @@
       }
     ]
   },
-  "syncTimestamp": "2026-04-01T23:37:18.783Z"
+  "syncTimestamp": "2026-04-01T23:45:00.962Z"
 }

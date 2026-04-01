@@ -62,12 +62,12 @@
         "liquids"
       ],
       "capacity": 51688,
-      "speed": 8.6,
+      "speed": 8.5,
       "course": 221,
-      "lat": 26.74791,
-      "lng": 56.141254,
+      "lat": 26.640869,
+      "lng": 56.035774,
       "destination": "Assaluyeh",
-      "destinationEta": "2026-04-04T18:00:08.764567",
+      "destinationEta": "2026-04-03T13:00:00",
       "aisDestination": null,
       "product": "High Sulfur Fuel Oil",
       "controller": "Torm",
@@ -349,5 +349,5 @@
   "uaeEntering": 0,
   "adnocExiting": 0,
   "adnocEntering": 0,
-  "syncTimestamp": "2026-04-01T23:37:18.783Z"
+  "syncTimestamp": "2026-04-01T23:45:00.962Z"
 }

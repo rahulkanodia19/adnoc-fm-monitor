@@ -20,9 +20,9 @@
     },
     {
       "label": "Handysize",
-      "total": 105,
+      "total": 106,
       "ballast": 65,
-      "laden": 40
+      "laden": 41
     },
     {
       "label": "Supramax",
@@ -151,6 +151,6 @@
       "laden": 1
     }
   ],
-  "total": 1027,
-  "syncTimestamp": "2026-04-01T23:37:18.783Z"
+  "total": 1028,
+  "syncTimestamp": "2026-04-01T23:45:00.962Z"
 }

@@ -297,7 +297,28 @@
     "other_enter": 0,
     "exitedVessels": [],
     "enteredVessels": [],
-    "omanEntered": [],
-    "omanLeft": []
+    "omanEntered": [
+      {
+        "name": "Nesreena",
+        "imo": "9459369",
+        "type": "Handysize",
+        "commodity": "dry",
+        "flag": "Panama",
+        "destination": "Fujairah",
+        "deadWeight": 31800,
+        "speed": 8,
+        "state": "loaded",
+        "controller": ""
+      }
+    ],
+    "omanLeft": [
+      {
+        "name": "Margherita Cosulich",
+        "imo": "9825051",
+        "type": "Short Sea Tankers",
+        "commodity": "liquids",
+        "flag": "Singapore"
+      }
+    ]
   }
 ]
