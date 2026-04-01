@@ -497,16 +497,12 @@ function main() {
     };
   }
 
-  // Always save live snapshot (overwritten each sync)
-  fs.writeFileSync(path.join(snapshotDir, 'live.json'), JSON.stringify(todaySnapshot));
-  console.log(`Live snapshot: ${Object.keys(todaySnapshot).length} vessels saved`);
-
-  // At midnight UAE (hour 0), also save permanent midnight snapshot
-  const isMidnight = uaeHour() === 0;
-  if (isMidnight) {
-    fs.writeFileSync(path.join(snapshotDir, `${today}.json`), JSON.stringify(todaySnapshot));
-    console.log(`Midnight UAE snapshot saved: ${today}.json`);
-  }
+  // Save timestamped snapshot (each sync gets its own file)
+  const uaeNow = new Date(Date.now() + 4 * 3600000);
+  const timeStr = uaeNow.toISOString().substring(11, 16).replace(':', '-');
+  const snapshotFile = `${today}T${timeStr}.json`;
+  fs.writeFileSync(path.join(snapshotDir, snapshotFile), JSON.stringify(todaySnapshot));
+  console.log(`Snapshot saved: ${snapshotFile} (${Object.keys(todaySnapshot).length} vessels)`);
 
   // --- Transit detection: compare live vs last midnight snapshot ---
   // Classify vessels by type
@@ -533,19 +529,19 @@ function main() {
     };
   }
 
-  // Find most recent midnight snapshot (excludes live.json)
-  const midnightFiles = fs.readdirSync(snapshotDir)
-    .filter(f => f !== 'live.json' && f.endsWith('.json'))
+  // Find latest snapshot from a PREVIOUS day for comparison
+  const prevDayFiles = fs.readdirSync(snapshotDir)
+    .filter(f => f.endsWith('.json') && f < `${today}T`)
     .sort();
-  const lastMidnightFile = midnightFiles.length > 0 ? midnightFiles[midnightFiles.length - 1] : null;
+  const prevSnapshotFile = prevDayFiles.length > 0 ? prevDayFiles[prevDayFiles.length - 1] : null;
 
-  if (lastMidnightFile) {
-    const midnightDate = lastMidnightFile.replace('.json', '');
-    const midnightSnapshot = JSON.parse(fs.readFileSync(path.join(snapshotDir, lastMidnightFile), 'utf-8'));
+  if (prevSnapshotFile) {
+    const prevSnapshotDate = prevSnapshotFile.substring(0, 10); // YYYY-MM-DD
+    const prevSnapshot = JSON.parse(fs.readFileSync(path.join(snapshotDir, prevSnapshotFile), 'utf-8'));
 
     const exitedVessels = [], enteredVessels = [];
     for (const [imo, curr] of Object.entries(todaySnapshot)) {
-      const prev = midnightSnapshot[imo];
+      const prev = prevSnapshot[imo];
       if (!prev) continue;
       if (prev.inside && !curr.inside) exitedVessels.push(vesselDetail(imo, curr));
       if (!prev.inside && curr.inside) enteredVessels.push(vesselDetail(imo, curr));
@@ -559,12 +555,12 @@ function main() {
     const omanEntered = [];
     for (const [imo, curr] of Object.entries(todaySnapshot)) {
       if (curr.inside) continue; // only care about outside vessels
-      const prev = midnightSnapshot[imo];
+      const prev = prevSnapshot[imo];
       if (!prev || prev.inside) omanEntered.push(vesselDetail(imo, curr));
     }
     // Left Oman = was outside BEFORE but is NOT outside now (gone or moved inside)
     const omanLeft = [];
-    for (const [imo, prev] of Object.entries(midnightSnapshot)) {
+    for (const [imo, prev] of Object.entries(prevSnapshot)) {
       if (prev.inside) continue; // only care about vessels that were outside
       const curr = todaySnapshot[imo];
       if (!curr || curr.inside) omanLeft.push({ name: prev.name, imo, type: prev.type, commodity: prev.commodity, flag: prev.flag || '' });
@@ -572,7 +568,7 @@ function main() {
 
     // Write current transit data (live vs last midnight)
     fs.writeFileSync(path.join(SOH_DIR, 'transit-current.json'), JSON.stringify({
-      sinceMidnight: midnightDate,
+      sinceMidnight: prevSnapshotDate,
       syncTimestamp: now,
       exitedVessels, enteredVessels,
       exitedCount: exitedVessels.length,
@@ -585,56 +581,28 @@ function main() {
       omanEnteredCount: omanEntered.length,
       omanLeftCount: omanLeft.length,
     }, null, 2));
-    console.log(`Transit current: ${exitedVessels.length} exited, ${enteredVessels.length} entered, oman +${omanEntered.length}/-${omanLeft.length} (since midnight ${midnightDate})`);
+    console.log(`Transit current: ${exitedVessels.length} exited, ${enteredVessels.length} entered, oman +${omanEntered.length}/-${omanLeft.length} (since midnight ${prevSnapshotDate})`);
 
     // Add exit/entry deltas to summary
     summary.deltas.exitedSinceMidnight = exitedVessels.length;
     summary.deltas.enteredSinceMidnight = enteredVessels.length;
     fs.writeFileSync(path.join(SOH_DIR, 'summary.json'), JSON.stringify(summary, null, 2));
 
-    // --- Daily transit history: midnight-to-midnight comparison ---
-    if (isMidnight && midnightFiles.length >= 2) {
-      // Compare today's midnight snapshot with previous midnight snapshot
-      const prevMidnightFile = midnightFiles[midnightFiles.length - 2];
-      const prevMidnightDate = prevMidnightFile.replace('.json', '');
-      const prevMidnightSnapshot = JSON.parse(fs.readFileSync(path.join(snapshotDir, prevMidnightFile), 'utf-8'));
-      const gapDays = Math.round((new Date(today) - new Date(prevMidnightDate)) / 86400000);
-
-      const m_exitedVessels = [], m_enteredVessels = [];
-      for (const [imo, curr] of Object.entries(todaySnapshot)) {
-        const prev = prevMidnightSnapshot[imo];
-        if (!prev) continue;
-        if (prev.inside && !curr.inside) m_exitedVessels.push(vesselDetail(imo, curr));
-        if (!prev.inside && curr.inside) m_enteredVessels.push(vesselDetail(imo, curr));
-      }
-      const m_exitCounts = classifyTransits(m_exitedVessels);
-      const m_enterCounts = classifyTransits(m_enteredVessels);
-
-      // Gulf of Oman: compare outside vessels (midnight-to-midnight)
-      const m_omanEntered = [];
-      for (const [imo, curr] of Object.entries(todaySnapshot)) {
-        if (curr.inside) continue;
-        const prev = prevMidnightSnapshot[imo];
-        if (!prev || prev.inside) m_omanEntered.push(vesselDetail(imo, curr));
-      }
-      const m_omanLeft = [];
-      for (const [imo, prev] of Object.entries(prevMidnightSnapshot)) {
-        if (prev.inside) continue;
-        const curr = todaySnapshot[imo];
-        if (!curr || curr.inside) m_omanLeft.push({ name: prev.name, imo, type: prev.type, commodity: prev.commodity, flag: prev.flag || '' });
-      }
+    // --- Daily transit history: update on every sync (reuse live vs midnight comparison) ---
+    {
+      const gapDays = Math.round((new Date(today) - new Date(prevSnapshotDate)) / 86400000);
 
       const transitHistoryPath = path.join(SOH_DIR, 'daily-transit-history.json');
       let transitHistory = [];
       try { transitHistory = JSON.parse(fs.readFileSync(transitHistoryPath, 'utf-8')); } catch {}
 
       const histEntry = {
-        date: today, comparedTo: prevMidnightDate, gapDays,
-        exited: m_exitedVessels.length, entered: m_enteredVessels.length,
-        tanker_exit: m_exitCounts.tanker, bulk_exit: m_exitCounts.bulk, container_exit: m_exitCounts.container, other_exit: m_exitCounts.other,
-        tanker_enter: m_enterCounts.tanker, bulk_enter: m_enterCounts.bulk, container_enter: m_enterCounts.container, other_enter: m_enterCounts.other,
-        exitedVessels: m_exitedVessels, enteredVessels: m_enteredVessels,
-        omanEntered: m_omanEntered, omanLeft: m_omanLeft,
+        date: today, comparedTo: prevSnapshotDate, gapDays,
+        exited: exitedVessels.length, entered: enteredVessels.length,
+        tanker_exit: exitCounts.tanker, bulk_exit: exitCounts.bulk, container_exit: exitCounts.container, other_exit: exitCounts.other,
+        tanker_enter: enterCounts.tanker, bulk_enter: enterCounts.bulk, container_enter: enterCounts.container, other_enter: enterCounts.other,
+        exitedVessels, enteredVessels,
+        omanEntered, omanLeft,
       };
 
       const existingIdx = transitHistory.findIndex(h => h.date === today);
@@ -642,7 +610,7 @@ function main() {
       else transitHistory.push(histEntry);
       transitHistory = transitHistory.slice(-180);
       fs.writeFileSync(transitHistoryPath, JSON.stringify(transitHistory, null, 2));
-      console.log(`Transit history: ${m_exitedVessels.length} exited, ${m_enteredVessels.length} entered, outside +${m_outsideArrived.length}/-${m_outsideDeparted.length} (midnight ${prevMidnightDate} → ${today}, gap ${gapDays}d)`);
+      console.log(`Transit history: ${exitedVessels.length} exited, ${enteredVessels.length} entered, oman +${omanEntered.length}/-${omanLeft.length} (${prevSnapshotDate} → ${today}, gap ${gapDays}d)`);
     }
   } else {
     console.log('Transit detection: no midnight snapshot yet — first run');
@@ -656,11 +624,11 @@ function main() {
     }, null, 2));
   }
 
-  // Clean up midnight snapshots older than 90 days
+  // Clean up snapshots older than 90 days
   const cutoffDate = uaeDate(-90 * 86400000);
   for (const f of fs.readdirSync(snapshotDir)) {
-    if (f === 'live.json') continue;
-    if (f < `${cutoffDate}.json`) {
+    if (!f.endsWith('.json')) continue;
+    if (f.substring(0, 10) < cutoffDate) {
       fs.unlinkSync(path.join(snapshotDir, f));
     }
   }

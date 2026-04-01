@@ -312,19 +312,16 @@
 
   function renderKPIs(summary, transitCurrent, dailyHistory) {
     const d = summary.deltas || {};
-    let tc = transitCurrent || {};
-    // Fallback: if transit-current has no data, use latest daily history entry
-    if (!tc.exitedCount && !tc.enteredCount && Array.isArray(dailyHistory) && dailyHistory.length > 0) {
-      const latest = dailyHistory[dailyHistory.length - 1];
-      tc = {
-        ...tc,
-        exitedCount: latest.exited || 0,
-        enteredCount: latest.entered || 0,
-        omanEnteredCount: (latest.omanEntered || []).length,
-        omanLeftCount: (latest.omanLeft || []).length,
-        sinceMidnight: latest.date,
-      };
-    }
+    // KPI cards use the last CLOSED day (second-to-last entry; latest is today's partial)
+    const histLen = Array.isArray(dailyHistory) ? dailyHistory.length : 0;
+    const latest = histLen >= 2 ? dailyHistory[histLen - 2] : (histLen === 1 ? dailyHistory[0] : null);
+    const tc = latest ? {
+      exitedCount: latest.exited || 0,
+      enteredCount: latest.entered || 0,
+      omanEnteredCount: (latest.omanEntered || []).length,
+      omanLeftCount: (latest.omanLeft || []).length,
+      sinceMidnight: latest.date,
+    } : {};
     const cards = [
       {
         title: 'ADNOC Vessels in Hormuz', value: summary.adnocCount,
@@ -1211,7 +1208,7 @@
 
   function renderOmanZoneLog(days) {
     // Filter to snapshot days that have Oman activity
-    const omanDays = days.filter(d => d.source === 'snapshot' && ((d.omanEntered?.length || 0) + (d.omanLeft?.length || 0) > 0));
+    const omanDays = days.filter(d => d.source === 'snapshot');
     if (!omanDays.length) return '';
 
     const totalArrived = omanDays.reduce((s, d) => s + (d.omanEntered?.length || 0), 0);
