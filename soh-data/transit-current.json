@@ -1,19 +1,249 @@
 {
-  "sinceMidnight": "2026-04-02",
-  "syncTimestamp": "2026-04-01T23:45:00.962Z",
-  "exitedVessels": [],
-  "enteredVessels": [],
-  "exitedCount": 0,
-  "enteredCount": 0,
-  "tanker_exit": 0,
+  "sinceMidnight": "2026-04-01",
+  "syncTimestamp": "2026-04-01T23:48:52.839Z",
+  "exitedVessels": [
+    {
+      "name": "Rayan 02",
+      "imo": "8915110",
+      "type": "Small Tankers",
+      "commodity": "liquids",
+      "flag": "",
+      "destination": "",
+      "deadWeight": 0,
+      "speed": 0,
+      "state": "",
+      "controller": ""
+    },
+    {
+      "name": "New Liberty",
+      "imo": "9221645",
+      "type": "Handysize",
+      "commodity": "dry",
+      "flag": "Barbados",
+      "destination": "Guangzhou",
+      "deadWeight": 28471,
+      "speed": 10.6,
+      "state": "ballast",
+      "controller": "GMZ Ship Management"
+    },
+    {
+      "name": "Aya",
+      "imo": "9331397",
+      "type": "Kamsarmax",
+      "commodity": "dry",
+      "flag": "Malta",
+      "destination": "Santos",
+      "deadWeight": 82992,
+      "speed": 11.9,
+      "state": "ballast",
+      "controller": "Minoa Marine"
+    },
+    {
+      "name": "Minoan Glory",
+      "imo": "9364447",
+      "type": "Panamax",
+      "commodity": "dry",
+      "flag": "Liberia",
+      "destination": "Oman",
+      "deadWeight": 74748,
+      "speed": 12.8,
+      "state": "ballast",
+      "controller": "Modion Maritime Management"
+    }
+  ],
+  "enteredVessels": [
+    {
+      "name": "Nidi",
+      "imo": "8818843",
+      "type": "Handy",
+      "commodity": "lpg",
+      "flag": "San Marino",
+      "destination": "Sharjah",
+      "deadWeight": 29271,
+      "speed": 8.2,
+      "state": "ballast",
+      "controller": "Razi"
+    },
+    {
+      "name": "Kush",
+      "imo": "9282522",
+      "type": "MR",
+      "commodity": "liquids",
+      "flag": "Comoros",
+      "destination": "",
+      "deadWeight": 46866,
+      "speed": 8,
+      "state": "loaded",
+      "controller": "GLOBAL SHIP MANAGEMENT LTD"
+    }
+  ],
+  "exitedCount": 4,
+  "enteredCount": 2,
+  "tanker_exit": 1,
   "bulk_exit": 0,
   "container_exit": 0,
-  "other_exit": 0,
+  "other_exit": 3,
   "tanker_enter": 0,
   "bulk_enter": 0,
   "container_enter": 0,
-  "other_enter": 0,
+  "other_enter": 2,
   "omanEntered": [
+    {
+      "name": "Rayan 02",
+      "imo": "8915110",
+      "type": "Small Tankers",
+      "commodity": "liquids",
+      "flag": "",
+      "destination": "",
+      "deadWeight": 0,
+      "speed": 0,
+      "state": "",
+      "controller": ""
+    },
+    {
+      "name": "PLUTO",
+      "imo": "9130444",
+      "type": "Container Ship",
+      "commodity": "container",
+      "flag": "",
+      "destination": "AE KLF",
+      "deadWeight": 7221,
+      "speed": 8.8,
+      "state": "loaded",
+      "controller": ""
+    },
+    {
+      "name": "Great Sail",
+      "imo": "9177583",
+      "type": "Handy",
+      "commodity": "lpg",
+      "flag": "Palau",
+      "destination": "Fujairah",
+      "deadWeight": 23495,
+      "speed": 13.6,
+      "state": "ballast",
+      "controller": ""
+    },
+    {
+      "name": "New Liberty",
+      "imo": "9221645",
+      "type": "Handysize",
+      "commodity": "dry",
+      "flag": "Barbados",
+      "destination": "Guangzhou",
+      "deadWeight": 28471,
+      "speed": 10.6,
+      "state": "ballast",
+      "controller": "GMZ Ship Management"
+    },
+    {
+      "name": "Rieveria I",
+      "imo": "9286229",
+      "type": "Suezmax/LR3",
+      "commodity": "liquids",
+      "flag": "San Marino",
+      "destination": "",
+      "deadWeight": 159106,
+      "speed": 12.1,
+      "state": "ballast",
+      "controller": "Sygnius Ship Mgmt"
+    },
+    {
+      "name": "Bravo",
+      "imo": "9305403",
+      "type": "Short Sea Tankers",
+      "commodity": "liquids",
+      "flag": "",
+      "destination": "",
+      "deadWeight": 0,
+      "speed": 0,
+      "state": "",
+      "controller": ""
+    },
+    {
+      "name": "HENG HUI 5",
+      "imo": "9323015",
+      "type": "Container Ship",
+      "commodity": "container",
+      "flag": "",
+      "destination": "AEKLF",
+      "deadWeight": 46318,
+      "speed": 17.5,
+      "state": "loaded",
+      "controller": ""
+    },
+    {
+      "name": "Aya",
+      "imo": "9331397",
+      "type": "Kamsarmax",
+      "commodity": "dry",
+      "flag": "Malta",
+      "destination": "Santos",
+      "deadWeight": 82992,
+      "speed": 11.9,
+      "state": "ballast",
+      "controller": "Minoa Marine"
+    },
+    {
+      "name": "Tour 2",
+      "imo": "9364112",
+      "type": "Suezmax/LR3",
+      "commodity": "liquids",
+      "flag": "Iran (Islamic Republic of)",
+      "destination": "Mideast Gulf",
+      "deadWeight": 158719,
+      "speed": 0.9,
+      "state": "ballast",
+      "controller": ""
+    },
+    {
+      "name": "Minoan Glory",
+      "imo": "9364447",
+      "type": "Panamax",
+      "commodity": "dry",
+      "flag": "Liberia",
+      "destination": "Oman",
+      "deadWeight": 74748,
+      "speed": 12.8,
+      "state": "ballast",
+      "controller": "Modion Maritime Management"
+    },
+    {
+      "name": "ESL WASL",
+      "imo": "9400071",
+      "type": "Container Ship",
+      "commodity": "container",
+      "flag": "",
+      "destination": "AEKLF",
+      "deadWeight": 81002,
+      "speed": 46.7,
+      "state": "loaded",
+      "controller": ""
+    },
+    {
+      "name": "Iasonas",
+      "imo": "9419357",
+      "type": "Aframax/LR2",
+      "commodity": "liquids",
+      "flag": "Liberia",
+      "destination": "Fujairah",
+      "deadWeight": 115501,
+      "speed": 14.1,
+      "state": "ballast",
+      "controller": "Liquimar"
+    },
+    {
+      "name": "UAFL LIBERTY",
+      "imo": "9435674",
+      "type": "Container Ship",
+      "commodity": "container",
+      "flag": "",
+      "destination": "SCPOV",
+      "deadWeight": 23252,
+      "speed": 10.1,
+      "state": "loaded",
+      "controller": ""
+    },
     {
       "name": "Nesreena",
       "imo": "9459369",
@@ -25,17 +255,189 @@
       "speed": 8,
       "state": "loaded",
       "controller": ""
+    },
+    {
+      "name": "Xin Hai Tong 63",
+      "imo": "9592721",
+      "type": "Supramax",
+      "commodity": "dry",
+      "flag": "Liberia",
+      "destination": "Fujairah",
+      "deadWeight": 57023,
+      "speed": 11.7,
+      "state": "ballast",
+      "controller": "Black Sea Shipping Co."
+    },
+    {
+      "name": "Hafnia Libra",
+      "imo": "9617959",
+      "type": "MR",
+      "commodity": "liquids",
+      "flag": "Denmark",
+      "destination": "Fujairah",
+      "deadWeight": 52384,
+      "speed": 10.5,
+      "state": "ballast",
+      "controller": ""
+    },
+    {
+      "name": "Fuat Bey",
+      "imo": "9663817",
+      "type": "Handysize",
+      "commodity": "dry",
+      "flag": "Marshall Islands",
+      "destination": "Sohar",
+      "deadWeight": 35437,
+      "speed": 11.7,
+      "state": "loaded",
+      "controller": ""
+    },
+    {
+      "name": "GFS GISELLE",
+      "imo": "9704661",
+      "type": "Container Ship",
+      "commodity": "container",
+      "flag": "",
+      "destination": "AEKLF",
+      "deadWeight": 54117,
+      "speed": 0.1,
+      "state": "loaded",
+      "controller": ""
+    },
+    {
+      "name": "Am Umang",
+      "imo": "9792058",
+      "type": "Kamsarmax",
+      "commodity": "dry",
+      "flag": "Liberia",
+      "destination": "Fujairah",
+      "deadWeight": 81788,
+      "speed": 11.4,
+      "state": "ballast",
+      "controller": "Fuyo Kaiun Co. Ltd."
     }
   ],
   "omanLeft": [
+    {
+      "name": "HONG DA XIN 768",
+      "imo": "1027469",
+      "type": "Container Ship",
+      "commodity": "container",
+      "flag": ""
+    },
+    {
+      "name": "HUA CHUANG 66",
+      "imo": "1033602",
+      "type": "Container Ship",
+      "commodity": "container",
+      "flag": ""
+    },
+    {
+      "name": "NEWVOYAGER",
+      "imo": "1088396",
+      "type": "Container Ship",
+      "commodity": "container",
+      "flag": ""
+    },
+    {
+      "name": "Nidi",
+      "imo": "8818843",
+      "type": "Handy",
+      "commodity": "lpg",
+      "flag": ""
+    },
+    {
+      "name": "GFS JADE",
+      "imo": "9187863",
+      "type": "Container Ship",
+      "commodity": "container",
+      "flag": ""
+    },
+    {
+      "name": "MAERSK KENTUCKY",
+      "imo": "9193240",
+      "type": "Container Ship",
+      "commodity": "container",
+      "flag": ""
+    },
+    {
+      "name": "SM KAVERI",
+      "imo": "9236042",
+      "type": "Container Ship",
+      "commodity": "container",
+      "flag": ""
+    },
+    {
+      "name": "SSL BRAHMAPUTRA",
+      "imo": "9238806",
+      "type": "Container Ship",
+      "commodity": "container",
+      "flag": ""
+    },
+    {
+      "name": "Kush",
+      "imo": "9282522",
+      "type": "MR",
+      "commodity": "liquids",
+      "flag": ""
+    },
+    {
+      "name": "Mac Hope",
+      "imo": "9316191",
+      "type": "Supramax",
+      "commodity": "dry",
+      "flag": ""
+    },
+    {
+      "name": "ELENI T",
+      "imo": "9397585",
+      "type": "Container Ship",
+      "commodity": "container",
+      "flag": ""
+    },
+    {
+      "name": "Minoan Sky",
+      "imo": "9422328",
+      "type": "Panamax",
+      "commodity": "dry",
+      "flag": ""
+    },
+    {
+      "name": "Sidra",
+      "imo": "9566435",
+      "type": "Supramax",
+      "commodity": "dry",
+      "flag": ""
+    },
+    {
+      "name": "Velos Turquoise",
+      "imo": "9645786",
+      "type": "MR",
+      "commodity": "liquids",
+      "flag": ""
+    },
+    {
+      "name": "HUI FA",
+      "imo": "9714939",
+      "type": "Container Ship",
+      "commodity": "container",
+      "flag": ""
+    },
+    {
+      "name": "SOUL OF KOLKATA",
+      "imo": "9813838",
+      "type": "Container Ship",
+      "commodity": "container",
+      "flag": ""
+    },
     {
       "name": "Margherita Cosulich",
       "imo": "9825051",
       "type": "Short Sea Tankers",
       "commodity": "liquids",
-      "flag": "Singapore"
+      "flag": ""
     }
   ],
-  "omanEnteredCount": 1,
-  "omanLeftCount": 1
+  "omanEnteredCount": 19,
+  "omanLeftCount": 17
 }

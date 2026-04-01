@@ -531,7 +531,7 @@ function main() {
 
   // Find latest snapshot from a PREVIOUS day for comparison
   const prevDayFiles = fs.readdirSync(snapshotDir)
-    .filter(f => f.endsWith('.json') && f < `${today}T`)
+    .filter(f => f.endsWith('.json') && f.substring(0, 10) < today)
     .sort();
   const prevSnapshotFile = prevDayFiles.length > 0 ? prevDayFiles[prevDayFiles.length - 1] : null;
 
