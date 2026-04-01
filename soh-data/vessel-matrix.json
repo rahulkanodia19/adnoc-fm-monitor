@@ -10,8 +10,8 @@
       },
       {
         "label": "MR",
-        "ballast": 39,
-        "laden": 38,
+        "ballast": 38,
+        "laden": 39,
         "unknown": 0,
         "total": 77
       },
@@ -24,8 +24,8 @@
       },
       {
         "label": "Handysize",
-        "ballast": 45,
-        "laden": 29,
+        "ballast": 44,
+        "laden": 30,
         "unknown": 0,
         "total": 74
       },
@@ -51,18 +51,18 @@
         "total": 41
       },
       {
-        "label": "Supramax",
-        "ballast": 15,
-        "laden": 23,
+        "label": "Aframax/LR2",
+        "ballast": 14,
+        "laden": 24,
         "unknown": 0,
         "total": 38
       },
       {
-        "label": "Aframax/LR2",
-        "ballast": 14,
-        "laden": 23,
+        "label": "Supramax",
+        "ballast": 16,
+        "laden": 22,
         "unknown": 0,
-        "total": 37
+        "total": 38
       },
       {
         "label": "Panamax",
@@ -73,15 +73,15 @@
       },
       {
         "label": "Kamsarmax",
-        "ballast": 25,
-        "laden": 7,
+        "ballast": 26,
+        "laden": 6,
         "unknown": 0,
         "total": 32
       },
       {
         "label": "Handy/MR1",
-        "ballast": 11,
-        "laden": 17,
+        "ballast": 10,
+        "laden": 18,
         "unknown": 0,
         "total": 28
       },
@@ -164,8 +164,8 @@
       },
       {
         "label": "Capesize",
-        "ballast": 3,
-        "laden": 1,
+        "ballast": 2,
+        "laden": 2,
         "unknown": 0,
         "total": 4
       },
@@ -199,43 +199,44 @@
       }
     ],
     "grandTotal": {
-      "ballast": 403,
-      "laden": 447,
+      "ballast": 401,
+      "laden": 450,
       "unknown": 1,
-      "total": 851
+      "total": 852
     },
     "productVolumes": [
       {
         "commodity": "Crude & Refined Products",
-        "vesselCount": 255,
-        "totalCapacity": 204.8283545291,
+        "vesselCount": 258,
+        "totalCapacity": 206.15851096828,
         "unit": "mmbbl",
         "products": {
-          "Methanol": 16,
-          "Chemicals": 11,
-          "arab extra light": 3,
+          "Methanol": 17,
+          "Chemicals": 10,
+          "arab extra light": 5,
           "Middle Distillates": 3,
-          "High Sulfur Fuel Oil": 15,
+          "High Sulfur Fuel Oil": 16,
           "Basrah Medium": 11,
           "Ultra Low Sulfur Diesel": 4,
           "arab heavy": 2,
           "Arab": 18,
           "Kuwait Crude": 1,
-          "arab light": 4,
+          "Other Chemicals": 2,
           "Clean petroleum products": 32,
           "Fuel Oils": 8,
           "Jet": 2,
           "kuwait export": 7,
           "basrah heavy": 5,
           "Das": 5,
-          "Upper Zakum": 6,
+          "Upper Zakum": 5,
+          "arab light": 3,
           "Aromatic Naphtha": 2,
-          "Unknown": 2,
-          "High Sulphur Straight Run Fuel Oil": 32,
+          "High Sulphur Straight Run Fuel Oil": 34,
           "Clean": 1,
           "Molten Sulphur": 1,
-          "Naphtha": 11,
+          "Naphtha": 10,
           "Bitumen/Asphalt": 4,
+          "Palm Oil": 1,
           "Gasoil": 2,
           "Bitumen PEN 60-70": 1,
           "Gasoline": 1,
@@ -249,9 +250,8 @@
           "RBD Palm Oil": 1,
           "Crude Oil/Condensate": 3,
           "2-Ethylhexanol": 1,
+          "Caustic Soda": 1,
           "al shaheen": 3,
-          "Other Chemicals": 1,
-          "arab medium": 1,
           "95 Gasoline": 1,
           "GTL Naphtha": 1,
           "Middle East": 2,
@@ -259,6 +259,7 @@
           "Monoethylene Glycol": 2,
           "Jet A-1": 2,
           "MTBE": 1,
+          "Murban": 1,
           "Clean Condensate": 2,
           "Low Sulfur Condensate": 1,
           "Low Sulfur Diesel": 1,
@@ -267,11 +268,11 @@
         },
         "topProducts": [
           {
-            "name": "Clean petroleum products",
-            "count": 32
+            "name": "High Sulphur Straight Run Fuel Oil",
+            "count": 34
           },
           {
-            "name": "High Sulphur Straight Run Fuel Oil",
+            "name": "Clean petroleum products",
             "count": 32
           },
           {
@@ -280,36 +281,36 @@
           },
           {
             "name": "Methanol",
-            "count": 16
+            "count": 17
           },
           {
             "name": "High Sulfur Fuel Oil",
-            "count": 15
+            "count": 16
           }
         ]
       },
       {
         "commodity": "Dry Bulk",
         "vesselCount": 101,
-        "totalCapacity": 5.530365999999997,
+        "totalCapacity": 5.603318999999996,
         "unit": "mmt",
         "products": {
           "Iron Ore Concentrate": 1,
           "Steel Coils": 1,
-          "Sulphur": 10,
+          "Sulphur": 12,
           "Monoammonium Phosphates": 2,
           "Urea": 19,
           "Diammonium Phosphates": 3,
-          "Cement": 7,
-          "Dry Bulk": 15,
+          "Cement": 6,
+          "Dry Bulk": 13,
           "Aluminium": 2,
           "Ferrous Scrap": 1,
           "Corn": 7,
           "Wheat": 1,
-          "Minerals": 6,
+          "Minerals": 7,
           "Clinker": 2,
           "Steel Plates": 2,
-          "Iron Ore Pellets": 3,
+          "Iron Ore Pellets": 4,
           "Stone": 1,
           "Major Bulks": 1,
           "Steel": 4,
@@ -322,7 +323,6 @@
           "Forest Products": 1,
           "Phosphorus Fertilizers": 1,
           "Bauxite": 1,
-          "Soybean": 1,
           "Minor Bulks": 1
         },
         "topProducts": [
@@ -332,18 +332,18 @@
           },
           {
             "name": "Dry Bulk",
-            "count": 15
+            "count": 13
           },
           {
             "name": "Sulphur",
-            "count": 10
-          },
-          {
-            "name": "Cement",
-            "count": 7
+            "count": 12
           },
           {
             "name": "Corn",
+            "count": 7
+          },
+          {
+            "name": "Minerals",
             "count": 7
           }
         ]
@@ -370,9 +370,8 @@
         "unit": "mmt",
         "products": {
           "Butane": 8,
-          "Grey Ammonia": 1,
+          "Grey Ammonia": 2,
           "Propane": 6,
-          "Olefins": 1,
           "LPG": 2
         },
         "topProducts": [
@@ -385,16 +384,12 @@
             "count": 6
           },
           {
-            "name": "LPG",
+            "name": "Grey Ammonia",
             "count": 2
           },
           {
-            "name": "Grey Ammonia",
-            "count": 1
-          },
-          {
-            "name": "Olefins",
-            "count": 1
+            "name": "LPG",
+            "count": 2
           }
         ]
       },
@@ -419,10 +414,10 @@
     "matrix": [
       {
         "label": "Short Sea Tankers",
-        "ballast": 69,
+        "ballast": 68,
         "laden": 32,
         "unknown": 0,
-        "total": 101
+        "total": 100
       },
       {
         "label": "Small Tankers",
@@ -433,22 +428,22 @@
       },
       {
         "label": "MR",
-        "ballast": 29,
+        "ballast": 28,
         "laden": 18,
         "unknown": 0,
-        "total": 47
+        "total": 46
       },
       {
         "label": "VLCC",
-        "ballast": 32,
+        "ballast": 30,
         "laden": 6,
         "unknown": 0,
-        "total": 38
+        "total": 36
       },
       {
         "label": "Supramax",
-        "ballast": 17,
-        "laden": 14,
+        "ballast": 18,
+        "laden": 13,
         "unknown": 0,
         "total": 31
       },
@@ -496,10 +491,10 @@
       },
       {
         "label": "Handy/MR1",
-        "ballast": 7,
+        "ballast": 8,
         "laden": 5,
         "unknown": 0,
-        "total": 12
+        "total": 13
       },
       {
         "label": "VLGC",
@@ -509,18 +504,18 @@
         "total": 12
       },
       {
-        "label": "Aframax/LR2",
-        "ballast": 9,
-        "laden": 2,
-        "unknown": 0,
-        "total": 11
-      },
-      {
         "label": "Handymax",
         "ballast": 6,
         "laden": 4,
         "unknown": 0,
         "total": 10
+      },
+      {
+        "label": "Aframax/LR2",
+        "ballast": 8,
+        "laden": 1,
+        "unknown": 0,
+        "total": 9
       },
       {
         "label": "Suezmax/LR3",
@@ -577,29 +572,36 @@
         "laden": 0,
         "unknown": 0,
         "total": 1
+      },
+      {
+        "label": "Upper Conventional",
+        "ballast": 1,
+        "laden": 0,
+        "unknown": 0,
+        "total": 1
       }
     ],
     "grandTotal": {
-      "ballast": 308,
-      "laden": 161,
+      "ballast": 306,
+      "laden": 159,
       "unknown": 0,
-      "total": 469
+      "total": 465
     },
     "productVolumes": [
       {
         "commodity": "Crude & Refined Products",
-        "vesselCount": 98,
-        "totalCapacity": 33.359095472129994,
+        "vesselCount": 97,
+        "totalCapacity": 32.61389136294999,
         "unit": "mmbbl",
         "products": {
           "Palm Oil": 2,
           "Naphtha": 6,
           "High Sulfur Fuel Oil": 11,
-          "Chem/Bio": 6,
+          "Chem/Bio": 7,
           "Gasoil": 1,
           "Low Sulfur Fuel Oil": 1,
           "Base Oil Group III": 1,
-          "Fuel Oils": 10,
+          "Fuel Oils": 9,
           "High Sulphur Straight Run Fuel Oil": 7,
           "Methanol": 1,
           "Low Sulphur Straight Run Fuel Oil": 1,
@@ -615,7 +617,6 @@
           "91 Gasoline": 1,
           "oman export": 2,
           "Marine Diesel": 1,
-          "Murban": 1,
           "Coal Tar": 1
         },
         "topProducts": [
@@ -633,18 +634,18 @@
           },
           {
             "name": "Fuel Oils",
-            "count": 10
+            "count": 9
           },
           {
-            "name": "High Sulphur Straight Run Fuel Oil",
+            "name": "Chem/Bio",
             "count": 7
           }
         ]
       },
       {
         "commodity": "Dry Bulk",
-        "vesselCount": 40,
-        "totalCapacity": 2.285976,
+        "vesselCount": 39,
+        "totalCapacity": 2.2338229999999997,
         "unit": "mmt",
         "products": {
           "Minor Bulks": 4,
@@ -652,7 +653,7 @@
           "Alumina": 1,
           "Sugar": 1,
           "Limestone": 1,
-          "Iron Ore Pellets": 3,
+          "Iron Ore Pellets": 2,
           "Yellow Corn": 2,
           "Coal": 2,
           "Dry Bulk": 9,
@@ -680,11 +681,11 @@
             "count": 4
           },
           {
-            "name": "Iron Ore Pellets",
-            "count": 3
+            "name": "Wheat",
+            "count": 2
           },
           {
-            "name": "Wheat",
+            "name": "Iron Ore Pellets",
             "count": 2
           }
         ]
@@ -726,5 +727,5 @@
       }
     ]
   },
-  "syncTimestamp": "2026-03-31T20:09:13.272Z"
+  "syncTimestamp": "2026-04-01T06:04:42.572Z"
 }

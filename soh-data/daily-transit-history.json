@@ -1,0 +1,17 @@
+[
+  {
+    "date": "2026-04-01",
+    "comparedTo": "2026-03-31",
+    "gapDays": 1,
+    "exited": 0,
+    "entered": 1,
+    "tanker_exit": 0,
+    "bulk_exit": 0,
+    "container_exit": 0,
+    "other_exit": 0,
+    "tanker_enter": 0,
+    "bulk_enter": 0,
+    "container_enter": 0,
+    "other_enter": 1
+  }
+]

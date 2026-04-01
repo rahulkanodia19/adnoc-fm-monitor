@@ -2,8 +2,8 @@
   "data": [
     {
       "label": "Short Sea Tankers",
-      "total": 173,
-      "ballast": 111,
+      "total": 172,
+      "ballast": 110,
       "laden": 62
     },
     {
@@ -14,14 +14,14 @@
     },
     {
       "label": "MR",
-      "total": 124,
-      "ballast": 68,
-      "laden": 56
+      "total": 123,
+      "ballast": 66,
+      "laden": 57
     },
     {
       "label": "VLCC",
-      "total": 113,
-      "ballast": 42,
+      "total": 111,
+      "ballast": 40,
       "laden": 71
     },
     {
@@ -33,14 +33,14 @@
     {
       "label": "Handysize",
       "total": 104,
-      "ballast": 68,
-      "laden": 36
+      "ballast": 67,
+      "laden": 37
     },
     {
       "label": "Supramax",
       "total": 69,
-      "ballast": 32,
-      "laden": 37
+      "ballast": 34,
+      "laden": 35
     },
     {
       "label": "Intermediate Tankers",
@@ -56,8 +56,8 @@
     },
     {
       "label": "Aframax/LR2",
-      "total": 48,
-      "ballast": 23,
+      "total": 47,
+      "ballast": 22,
       "laden": 25
     },
     {
@@ -68,15 +68,15 @@
     },
     {
       "label": "Handy/MR1",
-      "total": 40,
+      "total": 41,
       "ballast": 18,
-      "laden": 22
+      "laden": 23
     },
     {
       "label": "Kamsarmax",
       "total": 39,
-      "ballast": 27,
-      "laden": 12
+      "ballast": 28,
+      "laden": 11
     },
     {
       "label": "SGC",
@@ -133,16 +133,16 @@
       "laden": 1
     },
     {
+      "label": "Upper Conventional",
+      "total": 6,
+      "ballast": 2,
+      "laden": 4
+    },
+    {
       "label": "Mini Bulker",
       "total": 6,
       "ballast": 5,
       "laden": 1
-    },
-    {
-      "label": "Upper Conventional",
-      "total": 5,
-      "ballast": 1,
-      "laden": 4
     },
     {
       "label": "Baby Capes",
@@ -153,8 +153,8 @@
     {
       "label": "Capesize",
       "total": 4,
-      "ballast": 3,
-      "laden": 1
+      "ballast": 2,
+      "laden": 2
     },
     {
       "label": "Q-Flex",
@@ -169,6 +169,6 @@
       "laden": 1
     }
   ],
-  "total": 1320,
-  "syncTimestamp": "2026-03-31T20:09:13.272Z"
+  "total": 1317,
+  "syncTimestamp": "2026-04-01T06:04:42.572Z"
 }

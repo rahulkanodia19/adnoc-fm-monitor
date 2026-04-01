@@ -1,12 +1,12 @@
 {
-  "timestamp": "2026-04-01T03:13:33.515Z",
+  "timestamp": "2026-04-01T11:45:07.683Z",
   "overall": "ok",
   "pipelines": {
     "news_fm": {
       "status": "ok",
-      "dataAsOf": "01 Apr 2026, 01:00 GST",
-      "lastUpdated": "2026-03-31T21:00:00Z",
-      "details": "9/9 countries, 24 FMs, 23 shutdowns"
+      "dataAsOf": "01 Apr 2026, 10:00 GST",
+      "lastUpdated": "2026-04-01T06:00:00.000Z",
+      "details": "9/9 countries, 26 FMs, 24 shutdowns"
     },
     "prices": {
       "status": "ok",
@@ -28,26 +28,26 @@
     },
     "soh": {
       "status": "ok",
-      "dataAsOf": "01 Apr 2026, 00:00 GST",
-      "lastUpdated": "2026-03-31T20:09:13.272Z",
-      "details": "1320 vessels, 851 inside, 11 ADNOC"
+      "dataAsOf": "01 Apr 2026, 10:00 GST",
+      "lastUpdated": "2026-04-01T06:04:42.572Z",
+      "details": "1317 vessels, 852 inside, 11 ADNOC"
     },
     "import_flows": {
       "status": "ok",
-      "dataAsOf": "30 Mar 2026, 04:00 GST",
-      "lastUpdated": "2026-03-30",
+      "dataAsOf": "31 Mar 2026, 04:00 GST",
+      "lastUpdated": "2026-03-31",
       "details": "64 datasets, 6.4 MB"
     },
     "export_flows": {
       "status": "ok",
-      "dataAsOf": "30 Mar 2026, 04:00 GST",
-      "lastUpdated": "2026-03-30",
+      "dataAsOf": "31 Mar 2026, 04:00 GST",
+      "lastUpdated": "2026-03-31",
       "details": "88 datasets, 8.1 MB"
     },
     "flow_insights": {
       "status": "ok",
-      "dataAsOf": "01 Apr 2026, 01:00 GST",
-      "lastUpdated": "2026-03-31T21:50:06.208Z",
+      "dataAsOf": "01 Apr 2026, 15:00 GST",
+      "lastUpdated": "2026-04-01T11:45:07.129Z",
       "details": "160 datasets"
     }
   }

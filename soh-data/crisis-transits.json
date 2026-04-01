@@ -1,28 +1,36 @@
 {
   "crisisStart": "2026-02-28",
-  "totalVessels": 252,
+  "totalVessels": 254,
   "dailyCounts": [
     {
+      "date": "2026-04-01",
+      "count": 5,
+      "tankers": 4,
+      "bulk": 1,
+      "container": 0,
+      "other": 0
+    },
+    {
       "date": "2026-03-31",
-      "count": 14,
-      "tankers": 11,
+      "count": 16,
+      "tankers": 13,
       "bulk": 3,
       "container": 0,
       "other": 0
     },
     {
       "date": "2026-03-30",
-      "count": 14,
-      "tankers": 9,
+      "count": 13,
+      "tankers": 8,
       "bulk": 5,
       "container": 0,
       "other": 0
     },
     {
       "date": "2026-03-29",
-      "count": 6,
+      "count": 5,
       "tankers": 5,
-      "bulk": 1,
+      "bulk": 0,
       "container": 0,
       "other": 0
     },
@@ -37,8 +45,8 @@
     {
       "date": "2026-03-27",
       "count": 4,
-      "tankers": 4,
-      "bulk": 0,
+      "tankers": 3,
+      "bulk": 1,
       "container": 0,
       "other": 0
     },
@@ -180,8 +188,8 @@
     },
     {
       "date": "2026-03-09",
-      "count": 5,
-      "tankers": 5,
+      "count": 4,
+      "tankers": 4,
       "bulk": 0,
       "container": 0,
       "other": 0
@@ -204,8 +212,8 @@
     },
     {
       "date": "2026-03-06",
-      "count": 13,
-      "tankers": 9,
+      "count": 12,
+      "tankers": 8,
       "bulk": 4,
       "container": 0,
       "other": 0
@@ -220,8 +228,8 @@
     },
     {
       "date": "2026-03-04",
-      "count": 12,
-      "tankers": 12,
+      "count": 11,
+      "tankers": 11,
       "bulk": 0,
       "container": 0,
       "other": 0
@@ -261,6 +269,70 @@
   ],
   "vessels": [
     {
+      "name": "Coya",
+      "imo": "9524786",
+      "vesselTypeClass": "Short Sea Tankers",
+      "state": "ballast",
+      "flagName": "Marshall Islands",
+      "destination": "Fujairah",
+      "deadWeight": 9519,
+      "speed": 0,
+      "departureDate": "2026-04-01",
+      "commodity": "liquids"
+    },
+    {
+      "name": "Gas Ammon",
+      "imo": "9934474",
+      "vesselTypeClass": "MGC",
+      "state": "loaded",
+      "flagName": "Liberia",
+      "product": "Grey Ammonia",
+      "destination": null,
+      "deadWeight": 28700,
+      "speed": 13.4,
+      "departureDate": "2026-04-01",
+      "commodity": "lpg"
+    },
+    {
+      "name": "Songa Topaz",
+      "imo": "9460461",
+      "vesselTypeClass": "Intermediate Tankers",
+      "state": "loaded",
+      "flagName": "Marshall Islands",
+      "product": "High Sulphur Straight Run Fuel Oil",
+      "destination": null,
+      "deadWeight": 17596,
+      "speed": 0,
+      "departureDate": "2026-04-01",
+      "commodity": "liquids"
+    },
+    {
+      "name": "Abu Dhabi-Iii",
+      "imo": "9489027",
+      "vesselTypeClass": "Aframax/LR2",
+      "state": "ballast",
+      "flagName": "Liberia",
+      "product": "Jet",
+      "destination": "Fujairah",
+      "deadWeight": 105131,
+      "speed": 0.4,
+      "departureDate": "2026-04-01",
+      "commodity": "liquids"
+    },
+    {
+      "name": "Sidra",
+      "imo": "9566435",
+      "vesselTypeClass": "Supramax",
+      "state": "loaded",
+      "flagName": "Panama",
+      "product": "Granular Urea",
+      "destination": null,
+      "deadWeight": 56140,
+      "speed": 6,
+      "departureDate": "2026-04-01",
+      "commodity": "dry"
+    },
+    {
       "name": "Kassia",
       "imo": "9409986",
       "vesselTypeClass": "Short Sea Tankers",
@@ -269,7 +341,7 @@
       "product": "High Sulphur Straight Run Fuel Oil",
       "destination": "Oman",
       "deadWeight": 6790,
-      "speed": 1.2,
+      "speed": 0.8,
       "departureDate": "2026-03-31",
       "commodity": "liquids"
     },
@@ -280,9 +352,21 @@
       "state": "ballast",
       "flagName": "Palau",
       "product": "Fuel Oils",
-      "destination": "Fujairah",
+      "destination": null,
       "deadWeight": 6690,
-      "speed": 4.4,
+      "speed": 0.8,
+      "departureDate": "2026-03-31",
+      "commodity": "liquids"
+    },
+    {
+      "name": "Gaia",
+      "imo": "9661417",
+      "vesselTypeClass": "Short Sea Tankers",
+      "state": "ballast",
+      "flagName": "Marshall Islands",
+      "destination": "Sohar",
+      "deadWeight": 7020,
+      "speed": 0.1,
       "departureDate": "2026-03-31",
       "commodity": "liquids"
     },
@@ -295,7 +379,20 @@
       "product": "Naphtha",
       "destination": null,
       "deadWeight": 8000,
-      "speed": 2.2,
+      "speed": 1,
+      "departureDate": "2026-03-31",
+      "commodity": "liquids"
+    },
+    {
+      "name": "Advantage Passion",
+      "imo": "1045980",
+      "vesselTypeClass": "Panamax/LR1",
+      "state": "loaded",
+      "flagName": "Marshall Islands",
+      "product": "Clean petroleum products",
+      "destination": "Toamasina",
+      "deadWeight": 73778,
+      "speed": 0,
       "departureDate": "2026-03-31",
       "commodity": "liquids"
     },
@@ -307,7 +404,7 @@
       "flagName": "Panama",
       "destination": "Fujairah",
       "deadWeight": 4990,
-      "speed": 0.3,
+      "speed": 0,
       "departureDate": "2026-03-31",
       "commodity": "liquids"
     },
@@ -333,7 +430,7 @@
       "product": "Clean petroleum products",
       "destination": null,
       "deadWeight": 11980,
-      "speed": 1.2,
+      "speed": 6.5,
       "departureDate": "2026-03-31",
       "commodity": "liquids"
     },
@@ -359,9 +456,22 @@
       "product": "Minor Bulks",
       "destination": null,
       "deadWeight": 52402,
-      "speed": 1.3,
+      "speed": 0,
       "departureDate": "2026-03-31",
       "commodity": "dry"
+    },
+    {
+      "name": "Navara",
+      "imo": "9241798",
+      "vesselTypeClass": "Handy/MR1",
+      "state": "loaded",
+      "flagName": "Liberia",
+      "product": "High Sulphur Straight Run Fuel Oil",
+      "destination": null,
+      "deadWeight": 40249,
+      "speed": 1.3,
+      "departureDate": "2026-03-31",
+      "commodity": "liquids"
     },
     {
       "name": "Bern",
@@ -372,7 +482,7 @@
       "product": "Dry Bulk",
       "destination": "Oman",
       "deadWeight": 76878,
-      "speed": 2.5,
+      "speed": 0,
       "departureDate": "2026-03-31",
       "commodity": "dry"
     },
@@ -383,22 +493,9 @@
       "state": "ballast",
       "flagName": "Panama",
       "product": "Jet A-1",
-      "destination": null,
+      "destination": "Fujairah",
       "deadWeight": 51246,
-      "speed": 0.1,
-      "departureDate": "2026-03-31",
-      "commodity": "liquids"
-    },
-    {
-      "name": "Desh Mahima",
-      "imo": "9467744",
-      "vesselTypeClass": "Aframax/LR2",
-      "state": "loaded",
-      "flagName": "India",
-      "product": "Murban",
-      "destination": "Sikka",
-      "deadWeight": 115611,
-      "speed": 13.6,
+      "speed": 0,
       "departureDate": "2026-03-31",
       "commodity": "liquids"
     },
@@ -424,7 +521,7 @@
       "product": "Naphtha",
       "destination": null,
       "deadWeight": 12476,
-      "speed": 0.1,
+      "speed": 0,
       "departureDate": "2026-03-31",
       "commodity": "liquids"
     },
@@ -437,7 +534,7 @@
       "product": "Corn",
       "destination": "Santos",
       "deadWeight": 77113,
-      "speed": 12.5,
+      "speed": 0.1,
       "departureDate": "2026-03-31",
       "commodity": "dry"
     },
@@ -449,19 +546,7 @@
       "flagName": "Singapore",
       "destination": "Duqm",
       "deadWeight": 7994,
-      "speed": 8.2,
-      "departureDate": "2026-03-30",
-      "commodity": "liquids"
-    },
-    {
-      "name": "Coya",
-      "imo": "9524786",
-      "vesselTypeClass": "Short Sea Tankers",
-      "state": "ballast",
-      "flagName": "Marshall Islands",
-      "destination": "Fujairah",
-      "deadWeight": 9519,
-      "speed": 0,
+      "speed": 7,
       "departureDate": "2026-03-30",
       "commodity": "liquids"
     },
@@ -474,7 +559,7 @@
       "product": "Iron Ore Pellets",
       "destination": null,
       "deadWeight": 34676,
-      "speed": 0,
+      "speed": 0.1,
       "departureDate": "2026-03-30",
       "commodity": "dry"
     },
@@ -487,7 +572,7 @@
       "product": "High Sulphur Straight Run Fuel Oil",
       "destination": "Duqm",
       "deadWeight": 38877,
-      "speed": 8.6,
+      "speed": 8.2,
       "departureDate": "2026-03-30",
       "commodity": "liquids"
     },
@@ -526,7 +611,7 @@
       "product": "Steel",
       "destination": "Sohar",
       "deadWeight": 55566,
-      "speed": 0.2,
+      "speed": 14,
       "departureDate": "2026-03-30",
       "commodity": "dry"
     },
@@ -539,7 +624,7 @@
       "product": "Gasoil",
       "destination": "Fujairah",
       "deadWeight": 13078,
-      "speed": 2.9,
+      "speed": 0.1,
       "departureDate": "2026-03-30",
       "commodity": "liquids"
     },
@@ -552,7 +637,7 @@
       "product": "Dry Bulk",
       "destination": null,
       "deadWeight": 50785,
-      "speed": 0.8,
+      "speed": 0.6,
       "departureDate": "2026-03-30",
       "commodity": "dry"
     },
@@ -578,7 +663,7 @@
       "product": "Chem/Bio",
       "destination": "Sohar",
       "deadWeight": 19992,
-      "speed": 0.4,
+      "speed": 0.1,
       "departureDate": "2026-03-30",
       "commodity": "liquids"
     },
@@ -591,7 +676,7 @@
       "product": "Clean petroleum products",
       "destination": null,
       "deadWeight": 45498,
-      "speed": 0.1,
+      "speed": 0,
       "departureDate": "2026-03-30",
       "commodity": "liquids"
     },
@@ -602,9 +687,9 @@
       "state": "loaded",
       "flagName": "Liberia",
       "product": "Clean petroleum products",
-      "destination": null,
+      "destination": "South Africa",
       "deadWeight": 51565,
-      "speed": 0.2,
+      "speed": 0.1,
       "departureDate": "2026-03-30",
       "commodity": "liquids"
     },
@@ -630,7 +715,7 @@
       "product": "Fuel Oils",
       "destination": null,
       "deadWeight": 6822,
-      "speed": 0.1,
+      "speed": 0,
       "departureDate": "2026-03-29",
       "commodity": "liquids"
     },
@@ -674,19 +759,6 @@
       "commodity": "liquids"
     },
     {
-      "name": "Jia Xiang Da",
-      "imo": "9287962",
-      "vesselTypeClass": "Supramax",
-      "state": "loaded",
-      "flagName": "Panama",
-      "product": "Iron Ore Pellets",
-      "destination": "Sohar",
-      "deadWeight": 53299,
-      "speed": 11.1,
-      "departureDate": "2026-03-29",
-      "commodity": "dry"
-    },
-    {
       "name": "Pvt Venus",
       "imo": "9414333",
       "vesselTypeClass": "Short Sea Tankers",
@@ -695,21 +767,8 @@
       "product": "Crude Oil/Condensate",
       "destination": null,
       "deadWeight": 13149,
-      "speed": 0,
+      "speed": 0.1,
       "departureDate": "2026-03-29",
-      "commodity": "liquids"
-    },
-    {
-      "name": "Clearocean Magic",
-      "imo": "9849382",
-      "vesselTypeClass": "MR",
-      "state": "ballast",
-      "flagName": "Liberia",
-      "product": "Gasoline",
-      "destination": null,
-      "deadWeight": 49995,
-      "speed": 13.7,
-      "departureDate": "2026-03-28",
       "commodity": "liquids"
     },
     {
@@ -731,9 +790,9 @@
       "state": "loaded",
       "flagName": "Dominica",
       "product": "High Sulfur Fuel Oil",
-      "destination": null,
+      "destination": "Fujairah",
       "deadWeight": 7281,
-      "speed": 0,
+      "speed": 0.5,
       "departureDate": "2026-03-28",
       "commodity": "liquids"
     },
@@ -743,22 +802,9 @@
       "vesselTypeClass": "Small Tankers",
       "state": "ballast",
       "flagName": "Tuvalu",
-      "destination": "Sohar",
+      "destination": "Muscat",
       "deadWeight": 4999,
-      "speed": 0,
-      "departureDate": "2026-03-28",
-      "commodity": "liquids"
-    },
-    {
-      "name": "Maple Ocean",
-      "imo": "1043011",
-      "vesselTypeClass": "Short Sea Tankers",
-      "state": "ballast",
-      "flagName": "Liberia",
-      "product": "Base Oil",
-      "destination": "Sohar",
-      "deadWeight": 13221,
-      "speed": 11.7,
+      "speed": 6.7,
       "departureDate": "2026-03-28",
       "commodity": "liquids"
     },
@@ -771,7 +817,7 @@
       "product": "Iron Ore Pellets",
       "destination": "Karachi",
       "deadWeight": 50244,
-      "speed": 0,
+      "speed": 0.6,
       "departureDate": "2026-03-28",
       "commodity": "dry"
     },
@@ -784,9 +830,22 @@
       "product": "Steel",
       "destination": null,
       "deadWeight": 51187,
-      "speed": 1.2,
+      "speed": 11.8,
       "departureDate": "2026-03-28",
       "commodity": "dry"
+    },
+    {
+      "name": "M Brigit",
+      "imo": "9340582",
+      "vesselTypeClass": "Handy/MR1",
+      "state": "ballast",
+      "flagName": "Singapore",
+      "product": "Crude Palm Oil",
+      "destination": "Fujairah",
+      "deadWeight": 29017,
+      "speed": 13,
+      "departureDate": "2026-03-28",
+      "commodity": "liquids"
     },
     {
       "name": "Nave Estella",
@@ -797,7 +856,7 @@
       "product": "Gasoil",
       "destination": "Fujairah",
       "deadWeight": 74999,
-      "speed": 12.6,
+      "speed": 0.1,
       "departureDate": "2026-03-28",
       "commodity": "liquids"
     },
@@ -810,9 +869,22 @@
       "product": "Limestone",
       "destination": "Fujairah",
       "deadWeight": 58665,
-      "speed": 12.1,
+      "speed": 0.2,
       "departureDate": "2026-03-28",
       "commodity": "dry"
+    },
+    {
+      "name": "Pan Europe",
+      "imo": "9750244",
+      "vesselTypeClass": "Upper Conventional",
+      "state": "ballast",
+      "flagName": "Hong Kong",
+      "product": "lng",
+      "destination": null,
+      "deadWeight": 88407,
+      "speed": 3.7,
+      "departureDate": "2026-03-28",
+      "commodity": "lng"
     },
     {
       "name": "Interstellar",
@@ -823,7 +895,7 @@
       "product": "Naphtha",
       "destination": null,
       "deadWeight": 74999,
-      "speed": 6.5,
+      "speed": 0,
       "departureDate": "2026-03-27",
       "commodity": "liquids"
     },
@@ -836,7 +908,7 @@
       "product": "Palm Oil",
       "destination": "Oman",
       "deadWeight": 40218,
-      "speed": 3.6,
+      "speed": 0.3,
       "departureDate": "2026-03-27",
       "commodity": "liquids"
     },
@@ -849,22 +921,22 @@
       "product": "Carbon Black Feedstock",
       "destination": null,
       "deadWeight": 11255,
-      "speed": 0,
+      "speed": 3.2,
       "departureDate": "2026-03-27",
       "commodity": "liquids"
     },
     {
-      "name": "Abu Dhabi-Iii",
-      "imo": "9489027",
-      "vesselTypeClass": "Aframax/LR2",
+      "name": "Fei Run",
+      "imo": "9621015",
+      "vesselTypeClass": "Supramax",
       "state": "ballast",
-      "flagName": "Liberia",
-      "product": "Jet",
-      "destination": "Fujairah",
-      "deadWeight": 105131,
-      "speed": 15.3,
+      "flagName": "China",
+      "product": "Steel",
+      "destination": null,
+      "deadWeight": 56928,
+      "speed": 12.6,
       "departureDate": "2026-03-27",
-      "commodity": "liquids"
+      "commodity": "dry"
     },
     {
       "name": "Sea Shore",
@@ -873,9 +945,9 @@
       "state": "loaded",
       "flagName": "San Marino",
       "product": "Chem/Bio",
-      "destination": null,
+      "destination": "Fujairah",
       "deadWeight": 9118,
-      "speed": 1.7,
+      "speed": 5.1,
       "departureDate": "2026-03-26",
       "commodity": "liquids"
     },
@@ -901,7 +973,7 @@
       "product": "Butane",
       "destination": "Khor Fakkan Anchorage",
       "deadWeight": 49301,
-      "speed": 1.6,
+      "speed": 6.8,
       "departureDate": "2026-03-26",
       "commodity": "lpg"
     },
@@ -940,7 +1012,7 @@
       "product": "Iron Ore Pellets",
       "destination": "Sohar",
       "deadWeight": 28392,
-      "speed": 0,
+      "speed": 0.2,
       "departureDate": "2026-03-26",
       "commodity": "dry"
     },
@@ -953,7 +1025,7 @@
       "product": "Clean petroleum products",
       "destination": null,
       "deadWeight": 10018,
-      "speed": 1.1,
+      "speed": 5,
       "departureDate": "2026-03-26",
       "commodity": "liquids"
     },
@@ -966,7 +1038,7 @@
       "product": "Naphtha",
       "destination": null,
       "deadWeight": 37164,
-      "speed": 0.1,
+      "speed": 0,
       "departureDate": "2026-03-26",
       "commodity": "liquids"
     },
@@ -1005,7 +1077,7 @@
       "product": "Jet",
       "destination": "Fujairah",
       "deadWeight": 47999,
-      "speed": 11,
+      "speed": 10.7,
       "departureDate": "2026-03-26",
       "commodity": "liquids"
     },
@@ -1018,7 +1090,7 @@
       "product": "Arab",
       "destination": "India",
       "deadWeight": 105576,
-      "speed": 13.5,
+      "speed": 13.3,
       "departureDate": "2026-03-26",
       "commodity": "liquids"
     },
@@ -1031,7 +1103,7 @@
       "product": "Grey Ammonia",
       "destination": null,
       "deadWeight": 26618,
-      "speed": 13.8,
+      "speed": 0.1,
       "departureDate": "2026-03-26",
       "commodity": "lpg"
     },
@@ -1134,7 +1206,7 @@
       "product": "Clean petroleum products",
       "destination": "Mumbai Light.",
       "deadWeight": 2267,
-      "speed": 3,
+      "speed": 6.5,
       "departureDate": "2026-03-24",
       "commodity": "liquids"
     },
@@ -1146,7 +1218,7 @@
       "flagName": null,
       "destination": null,
       "deadWeight": 4499,
-      "speed": 6.3,
+      "speed": 0.2,
       "departureDate": "2026-03-24",
       "commodity": "liquids"
     },
@@ -1159,7 +1231,7 @@
       "product": "Clean petroleum products",
       "destination": "Sohar",
       "deadWeight": 24064,
-      "speed": 0.3,
+      "speed": 0,
       "departureDate": "2026-03-24",
       "commodity": "liquids"
     },
@@ -1172,7 +1244,7 @@
       "product": "High Sulphur Straight Run Fuel Oil",
       "destination": "Fujairah",
       "deadWeight": 72719,
-      "speed": 0,
+      "speed": 25.8,
       "departureDate": "2026-03-24",
       "commodity": "liquids"
     },
@@ -1184,7 +1256,7 @@
       "flagName": "Saint Kitts and Nevis",
       "destination": null,
       "deadWeight": 4801,
-      "speed": 0.1,
+      "speed": 1.2,
       "departureDate": "2026-03-23",
       "commodity": "liquids"
     },
@@ -1249,7 +1321,7 @@
       "product": "Clean petroleum products",
       "destination": "Oman",
       "deadWeight": 50922,
-      "speed": 0.2,
+      "speed": 1.2,
       "departureDate": "2026-03-23",
       "commodity": "liquids"
     },
@@ -1262,7 +1334,7 @@
       "product": "Thermal Coal",
       "destination": "Sohar",
       "deadWeight": 57318,
-      "speed": 0.2,
+      "speed": 0.1,
       "departureDate": "2026-03-23",
       "commodity": "dry"
     },
@@ -1337,9 +1409,9 @@
       "state": "ballast",
       "flagName": "Panama",
       "product": "Clean petroleum products",
-      "destination": "Oman",
+      "destination": "Fujairah",
       "deadWeight": 45987,
-      "speed": 0.2,
+      "speed": 0,
       "departureDate": "2026-03-22",
       "commodity": "liquids"
     },
@@ -1378,7 +1450,7 @@
       "product": "Naphtha",
       "destination": null,
       "deadWeight": 18736,
-      "speed": 0,
+      "speed": 3.9,
       "departureDate": "2026-03-21",
       "commodity": "liquids"
     },
@@ -1391,7 +1463,7 @@
       "product": "Thermal Coal",
       "destination": "Muscat",
       "deadWeight": 55621,
-      "speed": 0.3,
+      "speed": 3.9,
       "departureDate": "2026-03-21",
       "commodity": "dry"
     },
@@ -1404,7 +1476,7 @@
       "product": "Naphtha",
       "destination": "Fujairah",
       "deadWeight": 105221,
-      "speed": 13.6,
+      "speed": 13.3,
       "departureDate": "2026-03-21",
       "commodity": "liquids"
     },
@@ -1416,7 +1488,7 @@
       "flagName": "Comoros",
       "destination": null,
       "deadWeight": 3184,
-      "speed": 6.5,
+      "speed": 0.6,
       "departureDate": "2026-03-20",
       "commodity": "liquids"
     },
@@ -1441,7 +1513,7 @@
       "product": "Soybean Oil",
       "destination": null,
       "deadWeight": 1710,
-      "speed": 1.9,
+      "speed": 3.9,
       "departureDate": "2026-03-20",
       "commodity": "liquids"
     },
@@ -1454,7 +1526,7 @@
       "product": "Naphtha",
       "destination": null,
       "deadWeight": 42616,
-      "speed": 0,
+      "speed": 5.6,
       "departureDate": "2026-03-20",
       "commodity": "liquids"
     },
@@ -1480,7 +1552,7 @@
       "product": "High Sulfur Fuel Oil",
       "destination": null,
       "deadWeight": 70681,
-      "speed": 2.2,
+      "speed": 18,
       "departureDate": "2026-03-20",
       "commodity": "liquids"
     },
@@ -1506,7 +1578,7 @@
       "product": "Naphtha",
       "destination": null,
       "deadWeight": 51303,
-      "speed": 0.2,
+      "speed": 0.6,
       "departureDate": "2026-03-20",
       "commodity": "liquids"
     },
@@ -1519,7 +1591,7 @@
       "product": "High Sulfur Fuel Oil",
       "destination": null,
       "deadWeight": 47197,
-      "speed": 0.1,
+      "speed": 1.1,
       "departureDate": "2026-03-20",
       "commodity": "liquids"
     },
@@ -1532,7 +1604,7 @@
       "product": "Naphtha",
       "destination": "Lome",
       "deadWeight": 46042,
-      "speed": 0,
+      "speed": 0.1,
       "departureDate": "2026-03-20",
       "commodity": "liquids"
     },
@@ -1545,7 +1617,7 @@
       "product": "Naphtha",
       "destination": null,
       "deadWeight": 39998,
-      "speed": 0.9,
+      "speed": 0.4,
       "departureDate": "2026-03-20",
       "commodity": "liquids"
     },
@@ -1558,7 +1630,7 @@
       "product": "Alumina",
       "destination": null,
       "deadWeight": 60514,
-      "speed": 0.6,
+      "speed": 0.1,
       "departureDate": "2026-03-19",
       "commodity": "dry"
     },
@@ -1571,7 +1643,7 @@
       "product": "Base Oil Group III",
       "destination": "Fujairah",
       "deadWeight": 7550,
-      "speed": 0,
+      "speed": 2.4,
       "departureDate": "2026-03-19",
       "commodity": "liquids"
     },
@@ -1597,7 +1669,7 @@
       "product": "Dry Bulk",
       "destination": "Fujairah",
       "deadWeight": 80230,
-      "speed": 0,
+      "speed": 0.1,
       "departureDate": "2026-03-19",
       "commodity": "dry"
     },
@@ -1610,7 +1682,7 @@
       "product": "Metallurgical Coal",
       "destination": "Dibba Port",
       "deadWeight": 74456,
-      "speed": 0.1,
+      "speed": 0.4,
       "departureDate": "2026-03-19",
       "commodity": "dry"
     },
@@ -1649,7 +1721,7 @@
       "product": "High Sulfur Fuel Oil",
       "destination": null,
       "deadWeight": 47198,
-      "speed": 1,
+      "speed": 0.4,
       "departureDate": "2026-03-18",
       "commodity": "liquids"
     },
@@ -1688,7 +1760,7 @@
       "product": "Naphtha",
       "destination": "Fujairah",
       "deadWeight": 114756,
-      "speed": 9.2,
+      "speed": 11.9,
       "departureDate": "2026-03-17",
       "commodity": "liquids"
     },
@@ -1779,7 +1851,7 @@
       "product": "Low Sulphur Straight Run Fuel Oil",
       "destination": "Fujairah",
       "deadWeight": 8033,
-      "speed": 2.8,
+      "speed": 0.4,
       "departureDate": "2026-03-16",
       "commodity": "liquids"
     },
@@ -1805,7 +1877,7 @@
       "product": "Butane",
       "destination": "Khor Al Zubair Port",
       "deadWeight": 23257,
-      "speed": 10.3,
+      "speed": 0,
       "departureDate": "2026-03-16",
       "commodity": "lpg"
     },
@@ -1831,7 +1903,7 @@
       "product": "kuwait export",
       "destination": "Muscat",
       "deadWeight": 299546,
-      "speed": 0.1,
+      "speed": 0,
       "departureDate": "2026-03-15",
       "commodity": "liquids"
     },
@@ -1843,7 +1915,7 @@
       "flagName": "Liberia",
       "destination": "Fujairah",
       "deadWeight": 7991,
-      "speed": 3.5,
+      "speed": 0,
       "departureDate": "2026-03-15",
       "commodity": "liquids"
     },
@@ -1882,7 +1954,7 @@
       "product": "Middle East",
       "destination": "Fujairah",
       "deadWeight": 297027,
-      "speed": 14.3,
+      "speed": 11,
       "departureDate": "2026-03-15",
       "commodity": "liquids"
     },
@@ -1893,7 +1965,7 @@
       "state": "ballast",
       "flagName": "Marshall Islands",
       "product": "High CV",
-      "destination": "Dibba Port",
+      "destination": "Santos",
       "deadWeight": 80306,
       "speed": 12.1,
       "departureDate": "2026-03-15",
@@ -1908,7 +1980,7 @@
       "product": "Clean petroleum products",
       "destination": "Fujairah",
       "deadWeight": 45953,
-      "speed": 17.1,
+      "speed": 0,
       "departureDate": "2026-03-15",
       "commodity": "liquids"
     },
@@ -1921,7 +1993,7 @@
       "product": "Clean",
       "destination": "Fujairah",
       "deadWeight": 49990,
-      "speed": 2.3,
+      "speed": 12.7,
       "departureDate": "2026-03-15",
       "commodity": "liquids"
     },
@@ -1934,7 +2006,7 @@
       "product": "Crude Palm Oil",
       "destination": null,
       "deadWeight": 11477,
-      "speed": 0.6,
+      "speed": 0,
       "departureDate": "2026-03-14",
       "commodity": "liquids"
     },
@@ -1960,7 +2032,7 @@
       "product": "High Sulfur Fuel Oil",
       "destination": "China",
       "deadWeight": 47087,
-      "speed": 0,
+      "speed": 0.6,
       "departureDate": "2026-03-14",
       "commodity": "liquids"
     },
@@ -1986,7 +2058,7 @@
       "product": "High Sulfur Fuel Oil",
       "destination": "Oman",
       "deadWeight": 72825,
-      "speed": 0.1,
+      "speed": 0.2,
       "departureDate": "2026-03-14",
       "commodity": "liquids"
     },
@@ -1999,7 +2071,7 @@
       "product": "Western Russia Crude",
       "destination": null,
       "deadWeight": 309097,
-      "speed": 0,
+      "speed": 0.1,
       "departureDate": "2026-03-14",
       "commodity": "liquids"
     },
@@ -2038,7 +2110,7 @@
       "product": "kuwait export",
       "destination": null,
       "deadWeight": 319634,
-      "speed": 1.7,
+      "speed": 16.1,
       "departureDate": "2026-03-14",
       "commodity": "liquids"
     },
@@ -2064,7 +2136,7 @@
       "product": "Grey Ammonia",
       "destination": "Muscat",
       "deadWeight": 30309,
-      "speed": 0.4,
+      "speed": 0,
       "departureDate": "2026-03-13",
       "commodity": "lpg"
     },
@@ -2077,7 +2149,7 @@
       "product": "Phosrock",
       "destination": null,
       "deadWeight": 29952,
-      "speed": 0,
+      "speed": 0.1,
       "departureDate": "2026-03-13",
       "commodity": "dry"
     },
@@ -2103,7 +2175,7 @@
       "product": "Iran",
       "destination": null,
       "deadWeight": 71024,
-      "speed": 0.7,
+      "speed": 0.6,
       "departureDate": "2026-03-12",
       "commodity": "liquids"
     },
@@ -2116,7 +2188,7 @@
       "product": "Steel",
       "destination": null,
       "deadWeight": 48913,
-      "speed": 0,
+      "speed": 0.4,
       "departureDate": "2026-03-11",
       "commodity": "dry"
     },
@@ -2129,7 +2201,7 @@
       "product": "Iran",
       "destination": "Sohar",
       "deadWeight": 105661,
-      "speed": 1,
+      "speed": 0.8,
       "departureDate": "2026-03-11",
       "commodity": "liquids"
     },
@@ -2181,7 +2253,7 @@
       "product": "Steel",
       "destination": "Sohar",
       "deadWeight": 53224,
-      "speed": 12.5,
+      "speed": 1.2,
       "departureDate": "2026-03-11",
       "commodity": "dry"
     },
@@ -2207,7 +2279,7 @@
       "product": "Jet",
       "destination": "Fujairah",
       "deadWeight": 48578,
-      "speed": 0.1,
+      "speed": 0.3,
       "departureDate": "2026-03-10",
       "commodity": "liquids"
     },
@@ -2220,7 +2292,7 @@
       "product": "Bitumen/Asphalt",
       "destination": "Fujairah",
       "deadWeight": 6012,
-      "speed": 8.3,
+      "speed": 0,
       "departureDate": "2026-03-10",
       "commodity": "liquids"
     },
@@ -2246,7 +2318,7 @@
       "product": "Bitumen/Asphalt",
       "destination": "Oman",
       "deadWeight": 5985,
-      "speed": 0.1,
+      "speed": 1.3,
       "departureDate": "2026-03-09",
       "commodity": "liquids"
     },
@@ -2285,20 +2357,7 @@
       "product": "Castor Oil",
       "destination": "Fujairah",
       "deadWeight": 4985,
-      "speed": 1.2,
-      "departureDate": "2026-03-09",
-      "commodity": "liquids"
-    },
-    {
-      "name": "Vietnam Prosperity",
-      "imo": "9709087",
-      "vesselTypeClass": "VLCC",
-      "state": "ballast",
-      "flagName": "Marshall Islands",
-      "product": "Middle East",
-      "destination": "Muscat",
-      "deadWeight": 299320,
-      "speed": 8.9,
+      "speed": 0.5,
       "departureDate": "2026-03-09",
       "commodity": "liquids"
     },
@@ -2363,7 +2422,7 @@
       "product": "Bitumen/Asphalt",
       "destination": null,
       "deadWeight": 4999,
-      "speed": 0,
+      "speed": 1.1,
       "departureDate": "2026-03-07",
       "commodity": "liquids"
     },
@@ -2400,9 +2459,9 @@
       "state": "ballast",
       "flagName": "San Marino",
       "product": "Propane",
-      "destination": "Oman",
+      "destination": "Sharjah",
       "deadWeight": 29271,
-      "speed": 9.2,
+      "speed": 8.6,
       "departureDate": "2026-03-07",
       "commodity": "lpg"
     },
@@ -2441,7 +2500,7 @@
       "product": "Methanol",
       "destination": "Fujairah",
       "deadWeight": 6269,
-      "speed": 0.1,
+      "speed": 0.8,
       "departureDate": "2026-03-06",
       "commodity": "liquids"
     },
@@ -2454,7 +2513,7 @@
       "product": "Clean petroleum products",
       "destination": null,
       "deadWeight": 2952,
-      "speed": 1.5,
+      "speed": 2.2,
       "departureDate": "2026-03-06",
       "commodity": "liquids"
     },
@@ -2472,7 +2531,7 @@
       "commodity": "lpg"
     },
     {
-      "name": "Alaa",
+      "name": "Royal H",
       "imo": "9155341",
       "vesselTypeClass": "Handy",
       "state": "ballast",
@@ -2485,19 +2544,6 @@
       "commodity": "lpg"
     },
     {
-      "name": "Navara",
-      "imo": "9241798",
-      "vesselTypeClass": "Handy/MR1",
-      "state": "loaded",
-      "flagName": "Liberia",
-      "product": "High Sulphur Straight Run Fuel Oil",
-      "destination": "Sharjah",
-      "deadWeight": 40249,
-      "speed": 9,
-      "departureDate": "2026-03-06",
-      "commodity": "liquids"
-    },
-    {
       "name": "Luxeed",
       "imo": "9290866",
       "vesselTypeClass": "Supramax",
@@ -2506,7 +2552,7 @@
       "product": "Steel",
       "destination": "China",
       "deadWeight": 55718,
-      "speed": 0.6,
+      "speed": 0.3,
       "departureDate": "2026-03-06",
       "commodity": "dry"
     },
@@ -2532,7 +2578,7 @@
       "product": "Naphtha",
       "destination": null,
       "deadWeight": 13938,
-      "speed": 0.3,
+      "speed": 0,
       "departureDate": "2026-03-06",
       "commodity": "liquids"
     },
@@ -2543,7 +2589,7 @@
       "state": "loaded",
       "flagName": "Panama",
       "product": "Clean petroleum products",
-      "destination": "Sohar",
+      "destination": null,
       "deadWeight": 73427,
       "speed": 0,
       "departureDate": "2026-03-06",
@@ -2608,9 +2654,9 @@
       "state": "ballast",
       "flagName": "Mauritius",
       "product": "Fuel Oils",
-      "destination": null,
+      "destination": "Colombo",
       "deadWeight": 9596,
-      "speed": 1.7,
+      "speed": 5.9,
       "departureDate": "2026-03-05",
       "commodity": "liquids"
     },
@@ -2623,7 +2669,7 @@
       "product": "Bitumen/Asphalt",
       "destination": "Fujairah",
       "deadWeight": 6143,
-      "speed": 0,
+      "speed": 4.9,
       "departureDate": "2026-03-05",
       "commodity": "liquids"
     },
@@ -2636,7 +2682,7 @@
       "product": "Minor Bulks",
       "destination": "Jebel Ali",
       "deadWeight": 64100,
-      "speed": 0,
+      "speed": 0.2,
       "departureDate": "2026-03-05",
       "commodity": "dry"
     },
@@ -2647,9 +2693,9 @@
       "state": "ballast",
       "flagName": "Gambia",
       "product": "Butane",
-      "destination": "Oman",
+      "destination": null,
       "deadWeight": 49996,
-      "speed": 1,
+      "speed": 11,
       "departureDate": "2026-03-05",
       "commodity": "lpg"
     },
@@ -2662,7 +2708,7 @@
       "product": "Cement",
       "destination": "Shuwaikh",
       "deadWeight": 28674,
-      "speed": 1,
+      "speed": 1.1,
       "departureDate": "2026-03-05",
       "commodity": "dry"
     },
@@ -2688,7 +2734,7 @@
       "product": "Iron Ore Pellets",
       "destination": null,
       "deadWeight": 28379,
-      "speed": 0.1,
+      "speed": 2.7,
       "departureDate": "2026-03-05",
       "commodity": "dry"
     },
@@ -2727,19 +2773,6 @@
       "product": "Chem/Bio",
       "destination": null,
       "deadWeight": 5705,
-      "speed": 0.1,
-      "departureDate": "2026-03-04",
-      "commodity": "liquids"
-    },
-    {
-      "name": "Maturity One",
-      "imo": "9661388",
-      "vesselTypeClass": "Short Sea Tankers",
-      "state": "loaded",
-      "flagName": "Marshall Islands",
-      "product": "Fuel Oils",
-      "destination": null,
-      "deadWeight": 7023,
       "speed": 0,
       "departureDate": "2026-03-04",
       "commodity": "liquids"
@@ -2764,7 +2797,7 @@
       "flagName": "Panama",
       "destination": "Fujairah",
       "deadWeight": 4990,
-      "speed": 0.8,
+      "speed": 0.1,
       "departureDate": "2026-03-04",
       "commodity": "liquids"
     },
@@ -2789,7 +2822,7 @@
       "product": "Butane",
       "destination": null,
       "deadWeight": 56885,
-      "speed": 0.8,
+      "speed": 0.2,
       "departureDate": "2026-03-04",
       "commodity": "lpg"
     },
@@ -2801,7 +2834,7 @@
       "flagName": "Panama",
       "destination": null,
       "deadWeight": 45991,
-      "speed": 1.2,
+      "speed": 6.5,
       "departureDate": "2026-03-04",
       "commodity": "liquids"
     },
@@ -2814,7 +2847,7 @@
       "product": "Propane",
       "destination": "Muscat",
       "deadWeight": 7553,
-      "speed": 0.1,
+      "speed": 0,
       "departureDate": "2026-03-04",
       "commodity": "lpg"
     },
@@ -2840,7 +2873,7 @@
       "product": "Fuel Oils",
       "destination": null,
       "deadWeight": 45934,
-      "speed": 0.3,
+      "speed": 0,
       "departureDate": "2026-03-04",
       "commodity": "liquids"
     },
@@ -2853,7 +2886,7 @@
       "product": "Fuel Oils",
       "destination": null,
       "deadWeight": 70313,
-      "speed": 0.1,
+      "speed": 0.8,
       "departureDate": "2026-03-04",
       "commodity": "liquids"
     },
@@ -2866,7 +2899,7 @@
       "product": "Gasoil/Diesel",
       "destination": "Sohar",
       "deadWeight": 110586,
-      "speed": 0.1,
+      "speed": 0.5,
       "departureDate": "2026-03-04",
       "commodity": "liquids"
     },
@@ -2905,7 +2938,7 @@
       "product": "Clean petroleum products",
       "destination": null,
       "deadWeight": 6711,
-      "speed": 0.1,
+      "speed": 0.3,
       "departureDate": "2026-03-02",
       "commodity": "liquids"
     },
@@ -2916,9 +2949,9 @@
       "state": "loaded",
       "flagName": "Panama",
       "product": "Fuel Oils",
-      "destination": null,
+      "destination": "Fujairah",
       "deadWeight": 5999,
-      "speed": 0.1,
+      "speed": 19.2,
       "departureDate": "2026-03-02",
       "commodity": "liquids"
     },
@@ -2995,7 +3028,7 @@
       "product": "Ethylene",
       "destination": null,
       "deadWeight": 6148,
-      "speed": 0,
+      "speed": 0.1,
       "departureDate": "2026-03-02",
       "commodity": "lpg"
     },
@@ -3008,7 +3041,7 @@
       "product": "Iron Ore Pellets",
       "destination": null,
       "deadWeight": 27787,
-      "speed": 0,
+      "speed": 0.1,
       "departureDate": "2026-03-02",
       "commodity": "dry"
     },
@@ -3019,9 +3052,9 @@
       "state": "ballast",
       "flagName": "Panama",
       "product": "Gasoil",
-      "destination": null,
+      "destination": "Fujairah",
       "deadWeight": 13125,
-      "speed": 0.3,
+      "speed": 0,
       "departureDate": "2026-03-02",
       "commodity": "liquids"
     },
@@ -3071,7 +3104,7 @@
       "product": "High Sulfur Fuel Oil",
       "destination": "Fujairah",
       "deadWeight": 12000,
-      "speed": 1.1,
+      "speed": 0.2,
       "departureDate": "2026-03-02",
       "commodity": "liquids"
     },
@@ -3097,7 +3130,7 @@
       "product": "Dry Bulk",
       "destination": "Fujairah",
       "deadWeight": 28462,
-      "speed": 0.3,
+      "speed": 0.6,
       "departureDate": "2026-03-02",
       "commodity": "dry"
     },
@@ -3110,7 +3143,7 @@
       "product": "Clean petroleum products",
       "destination": "Fujairah",
       "deadWeight": 13800,
-      "speed": 1.1,
+      "speed": 0,
       "departureDate": "2026-03-01",
       "commodity": "liquids"
     },
@@ -3123,7 +3156,7 @@
       "product": "Gasoil",
       "destination": null,
       "deadWeight": 9054,
-      "speed": 0,
+      "speed": 0.1,
       "departureDate": "2026-03-01",
       "commodity": "liquids"
     },
@@ -3184,7 +3217,7 @@
       "vesselTypeClass": "Short Sea Tankers",
       "state": "ballast",
       "flagName": "Marshall Islands",
-      "destination": null,
+      "destination": "Fujairah",
       "deadWeight": 7020,
       "speed": 0,
       "departureDate": "2026-03-01",
@@ -3251,7 +3284,7 @@
       "product": "Alumina",
       "destination": "Fujairah",
       "deadWeight": 82952,
-      "speed": 0.1,
+      "speed": 0,
       "departureDate": "2026-03-01",
       "commodity": "dry"
     },
@@ -3262,9 +3295,9 @@
       "state": "loaded",
       "flagName": "Panama",
       "product": "Minor Bulks",
-      "destination": "Sharjah",
+      "destination": null,
       "deadWeight": 49361,
-      "speed": 4.4,
+      "speed": 0,
       "departureDate": "2026-03-01",
       "commodity": "dry"
     },
@@ -3277,7 +3310,7 @@
       "product": "Naphtha",
       "destination": null,
       "deadWeight": 49000,
-      "speed": 0.3,
+      "speed": 0,
       "departureDate": "2026-03-01",
       "commodity": "liquids"
     },
@@ -3290,7 +3323,7 @@
       "product": "Methanol",
       "destination": "Suez Canal",
       "deadWeight": 49414,
-      "speed": 0.2,
+      "speed": 0,
       "departureDate": "2026-03-01",
       "commodity": "liquids"
     },
@@ -3329,7 +3362,7 @@
       "product": "Marine Diesel",
       "destination": null,
       "deadWeight": 13052,
-      "speed": 1.2,
+      "speed": 6.9,
       "departureDate": "2026-03-01",
       "commodity": "liquids"
     },
@@ -3341,7 +3374,7 @@
       "flagName": "United Arab Emirates",
       "destination": null,
       "deadWeight": 6374,
-      "speed": 0.1,
+      "speed": 0,
       "departureDate": "2026-02-28",
       "commodity": "liquids"
     },
@@ -3366,7 +3399,7 @@
       "product": "Bitumen/Asphalt",
       "destination": "Sohar",
       "deadWeight": 5752,
-      "speed": 0.2,
+      "speed": 0,
       "departureDate": "2026-02-28",
       "commodity": "liquids"
     },
@@ -3378,7 +3411,7 @@
       "flagName": "Panama",
       "destination": null,
       "deadWeight": 1077,
-      "speed": 9,
+      "speed": 0.1,
       "departureDate": "2026-02-28",
       "commodity": "liquids"
     },
@@ -3416,7 +3449,7 @@
       "product": "Chem/Bio",
       "destination": "Fujairah",
       "deadWeight": 4307,
-      "speed": 2.7,
+      "speed": 0.1,
       "departureDate": "2026-02-28",
       "commodity": "liquids"
     },
@@ -3429,7 +3462,7 @@
       "product": "Clean",
       "destination": null,
       "deadWeight": 4972,
-      "speed": 6.8,
+      "speed": 0.2,
       "departureDate": "2026-02-28",
       "commodity": "liquids"
     },
@@ -3468,7 +3501,7 @@
       "product": "High Sulfur Fuel Oil",
       "destination": null,
       "deadWeight": 72768,
-      "speed": 0.2,
+      "speed": 0.4,
       "departureDate": "2026-02-28",
       "commodity": "liquids"
     },
@@ -3492,9 +3525,9 @@
       "state": "loaded",
       "flagName": "Liberia",
       "product": "High Sulphur Straight Run Fuel Oil",
-      "destination": "Ras Al Khaimah",
+      "destination": "Oman",
       "deadWeight": 158344,
-      "speed": 1.6,
+      "speed": 1,
       "departureDate": "2026-02-28",
       "commodity": "liquids"
     },
@@ -3507,10 +3540,10 @@
       "product": "Corn",
       "destination": "Santos",
       "deadWeight": 76596,
-      "speed": 9.7,
+      "speed": 9.6,
       "departureDate": "2026-02-28",
       "commodity": "dry"
     }
   ],
-  "syncTimestamp": "2026-03-31T20:09:13.272Z"
+  "syncTimestamp": "2026-04-01T06:04:42.572Z"
 }

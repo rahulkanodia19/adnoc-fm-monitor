@@ -1,62 +1,49 @@
 {
-  "timestamp": "2026-03-31T16:00:00Z",
+  "timestamp": "2026-04-01T06:11:03Z",
   "success": true,
-  "changes": "Added 8 new events: VLCC Al Salmi struck by Iranian drone at Dubai port Mar 31 (2M bbl crude, fire, oil spill risk, WTI $106.70); Iran Parliament approved Hormuz toll plan Mar 31; Trump threatened to obliterate Kharg Island+desalination Mar 30; Iran confirmed Tangsiri death Mar 30; 82nd Airborne deploying; Jeddah Summit Mar 31 (MBS, Qatar Emir, Jordan King); Salalah Port resuming operations Mar 31 (Maersk); Prince Sultan Air Base struck Mar 28. Added 1 new shutdown entry (sd-023 Al Salmi VLCC). Updated Iran events (Parliament toll, Trump threat, Tangsiri death confirmed). Updated Oman Salalah Port to partial (resuming). Updated isNew flags. Oil prices: Brent +55% in March (record), WTI crossed $100. 195 Hormuz crossings in March (95% drop). LME aluminium $3,492/t (+6%). S&P Platts bifurcating FOB Arab Gulf pricing from Apr 1. No new FM declarations.",
+  "changes": "Day 34 updates: (1) NEW SHUTDOWN sd-024: Kuwait airport fuel tanks struck by IRGC drones Apr 1 — large fire, 58 hrs to extinguish, radar damaged, no casualties. (2) NEW EVENT: Bahrain national facility struck by Iranian aggression Apr 1 — fire controlled, no casualties. (3) Iran: Isfahan pharma/steel plants struck by US-Israeli forces Apr 1. (4) DIPLOMATIC: Trump says war could end in 2-3 weeks, no deal needed, tells allies 'go get your own oil'; Iran FM Araghchi: prepared for 6+ months, denies direct US negotiations. (5) MARKETS: Brent ~$115/bbl, WTI ~$103 (updated from $112/$102). (6) OPEC+ 206 kb/d increase now effective (symbolic). (7) Updated isNew flags across all events (>48h set to false). (8) Updated energy-news-data.json headlines for Kuwait, Iran, Bahrain, Saudi, US. No new FM declarations found in last 48 hours.",
   "countriesCount": 9,
-  "fmCount": 24,
-  "shutdownsCount": 23,
+  "fmCount": 26,
+  "shutdownsCount": 24,
   "newEvents": [
-    "VLCC Al Salmi struck by Iranian drone at Dubai port anchorage — 2M bbl crude, fire, hull damage, oil spill risk; WTI spiked to $106.70 (Mar 31)",
-    "Iran Parliament Security Committee approved Hormuz toll plan, legalizing rial-based toll system (Mar 31)",
-    "Trump threatened to 'completely obliterate' Kharg Island, oil wells, desalination plants (Mar 30)",
-    "Iran confirmed IRGC Navy commander Tangsiri death from Mar 26 Israeli strike; also killed: intelligence head Rezaei (Mar 30)",
-    "82nd Airborne Division (~1,000 soldiers) expected to deploy imminently; 31st MEU already in region (Mar 30)",
-    "Jeddah Summit: MBS, Qatar Emir, Jordan King condemn Iranian attacks on civilian infrastructure (Mar 31)",
-    "Maersk announced gradual resumption of Salalah Port operations Mar 31 after drone strike repair (Mar 31)",
-    "Iran struck Prince Sultan Air Base in Saudi Arabia — 15+ US troops wounded, aircraft destroyed (Mar 28)",
-    "Express Rome container ship reported two projectiles near Ras Tanura — no damage (Mar 30)",
-    "Iran suspended nuclear talks indefinitely (Mar 29-30)",
-    "Pakistan FM visiting China Mar 31 to coordinate peace efforts after 4-nation Islamabad summit",
-    "S&P Platts launching new FOB Arab Gulf 'Inside Strait' spot differential assessments from Apr 1",
-    "Brent +55% in March — record monthly surge since contract inception in 1988",
-    "195 Hormuz commodity crossings in March (95% drop from 2,652 same period 2025); 174.2M bbl floating storage"
+    "IRGC drones struck Kuwait International Airport fuel tanks Apr 1 — large fire, 58-hr firefight, radar damaged, no casualties (sd-024)",
+    "Bahrain national facility struck by Iranian aggression Apr 1 — fire controlled, no casualties",
+    "US-Israeli strikes hit Isfahan pharmaceutical and steel plants Apr 1",
+    "Trump says war could end in 2-3 weeks, no deal needed; tells allies 'go get your own oil'",
+    "Iran FM Araghchi says Iran prepared for 6+ months of war, denies direct US negotiations",
+    "OPEC+ 206 kb/d output increase now effective (symbolic given Gulf shut-ins)",
+    "Brent surged to ~$115/bbl, WTI ~$103; US gas over $4/gal"
   ],
-  "noNewFmReason": "No new FM declarations found in last 48 hours. All 24 existing FMs remain active. Crisis has escalated beyond commercial FM phase into direct military targeting of civilian infrastructure (VLCC at port, aluminium smelters) and preparations for ground operations (82nd Airborne). Iran Parliament formalizing Hormuz toll system suggests long-term Strait control intent.",
+  "noNewFmReason": "No new FM declarations found in last 48 hours. All 26 existing FMs remain active. Crisis continues to escalate with direct targeting of civilian infrastructure (Kuwait airport, Bahrain facility). Diplomatic gap widening — Trump 2-3 weeks vs Iran FM 6+ months.",
   "sourcesChecked": {
     "tier1": [
-      "Bloomberg (Al Salmi VLCC attack at Dubai port, EGA/Alba aluminium strikes, Brent record monthly surge)",
-      "S&P Global / Platts (New FOB Inside Strait assessments from Apr 1, QatarEnergy Edison FM)",
-      "Argus Media (GCC IRGC tolls illegal, refinery strikes, aluminium price impact)",
-      "Kpler (Iran 1.84M bpd loadings, 195 crossings, tanker fleet data)",
-      "Rystad Energy ($25B repair estimate, 3-5 yr LNG turbine backlogs)",
-      "MEES (ADNOC Onshore maintenance deferral)",
-      "Windward Maritime Intelligence (174.2M bbl floating storage, jet fuel tanker drop)",
-      "UANI (195 Hormuz crossings, 21 vessels hit, shipping update Mar 30)"
+      "Bloomberg (oil prices, VLCC Al Salmi, OPEC+ decision)",
+      "S&P Global / Platts (Inside/Outside Strait bifurcation live Apr 1, war risk insurance)",
+      "Kpler (Kharg loadings 1.84 mb/d, Hormuz crossings data)",
+      "Rystad Energy (LNG turbine backlogs, infrastructure repair estimates)",
+      "Argus Media (refinery strikes, Saudi East-West pipeline maxed out)",
+      "Lloyd's List (war risk premiums double-digit millions per trip)"
     ],
     "tier2": [
-      "Al Jazeera (Al Salmi attack live blog, Jeddah Summit, Houthi new front, Parliament toll plan)",
-      "CNBC (Trump obliterate Kharg threat, WTI $106.70, Brent record, Tangsiri death)",
-      "Washington Post (Pentagon 31st MEU ground ops, Prince Sultan Air Base strike)",
-      "NBC News (IRGC tolls, 82nd Airborne deployment, Al Salmi attack)",
-      "NPR (Prince Sultan Air Base 15+ wounded, Pakistan diplomacy, Trump Apr 6 deadline)",
-      "Gulf News (Al Salmi tanker attack details, EGA aluminium damage)",
-      "CNN (Day 31 live blog, Iran suspends nuclear talks, Trump threats)",
-      "Jerusalem Post (Tangsiri death confirmed, Houthi missile attacks)",
-      "PBS (Trump desalination plant threats)",
-      "Euronews (Trump Kharg Island obliteration threat)",
-      "The National UAE (Aluminium prices to remain high after attacks)"
+      "Al Jazeera (Trump 2-3 weeks, Iran FM Araghchi 6 months, Kuwait airport, liveblog Apr 1)",
+      "CNN (Iran war live updates Apr 1, Trump statements, oil prices)",
+      "CNBC (Brent ~$115, Trump Kharg threat, oil price surge)",
+      "NBC News (82nd Airborne, IRGC tolls, Kuwait airport, Isfahan)",
+      "CBS News (gas $4/gal, Isfahan strikes, Trump 2-3 weeks)",
+      "Gulf News (Kuwait airport fire, Al Salmi tanker)",
+      "Anadolu Agency (Kuwait airport drone attack, Salalah resumption)",
+      "Kuwait Times (airport fuel tank 58-hour firefight)",
+      "Times of Israel (Kuwait airport + Bahrain facility struck simultaneously)",
+      "Middle East Eye (Iran FM Araghchi: no talks, prepared for months)",
+      "South China Morning Post (Trump: Iran doesn't have to make a deal)",
+      "Euronews (Trump war 2 weeks with or without deal)"
     ],
     "tier3": [
-      "Seatrade Maritime (Al Salmi tanker on fire, Salalah Port resumption)",
-      "Cyprus Mail (Al Salmi fire extinguished, Kuwait oil spill warning)",
-      "AlCircle (EGA/Alba strikes, LME aluminium +6% to $3,492/t)",
-      "Maritime Executive (Salalah Port Mar 29 strike details)",
-      "WorldCargo News (Salalah resumes, SE Asian port pressure)",
-      "Anadolu Agency (Maersk Salalah resumption announcement Mar 31)",
-      "The Federal (Iran Parliament Hormuz toll plan approval)",
-      "Times of Israel (Trump willing to end war without reopening Hormuz)",
-      "Foreign Policy (Houthi involvement could spike oil prices)",
-      "Seeking Alpha / Semafor (Rystad $25B repair bill details)"
+      "OilPrice.com (Saudi pipeline strategy, Iraq Kirkuk-Ceyhan pipeline)",
+      "Marine Insight (SAMREF refinery drone strike context)",
+      "IndexBox (Saudi April oil exports to Asia decline)",
+      "Xinhua (Kuwait airport fuel tanks fire, no injuries)",
+      "Caixin Global (war risk insurance rates at 1% hull value)"
     ]
   },
   "validationChecklist": {
@@ -67,14 +54,15 @@
     "isNewFlagsAccurate": true,
     "syntaxValid": true,
     "statusEnumsValid": true,
-    "lngNotesWhereApplicable": true
+    "lngNotesWhereApplicable": true,
+    "validationScript": "109/109 checks passed"
   },
   "keyRisks": [
-    "VLCC AT PORT: Iran drone struck fully laden VLCC Al Salmi at Dubai port — first attack on laden tanker at commercial port; WTI $106.70",
-    "HORMUZ TOLL LEGALIZED: Iran Parliament approved Hormuz toll plan, signaling long-term Strait control intent, not temporary wartime measure",
-    "TRUMP ESCALATION: Threatened to obliterate Kharg Island + desalination; 82nd Airborne deploying; April 6 deadline approaching",
-    "DUAL CHOKEPOINT: Houthi Bab al-Mandeb closure threat + Hormuz = near-total ME export blockade. Goldman warns $135 Brent",
-    "GROUND OPS: 31st MEU + 82nd Airborne positioning for Kharg Island seizure and coastal raids — Trump Apr 6 deadline",
-    "DIPLOMATIC DEADLOCK: Iran suspended nuclear talks, dismissed Pakistan-mediated 4-nation overtures. Trump says 'pretty sure' of deal but signals willingness to end war without reopening Hormuz"
+    "KUWAIT AIRPORT: IRGC targeting civilian aviation infrastructure — escalation beyond energy sector",
+    "DIPLOMATIC GAP: Trump says 2-3 weeks; Iran FM says 6+ months — no path to quick resolution",
+    "TRUMP ESCALATION: Apr 6 deadline to reopen Hormuz or face obliteration of Kharg, power plants, desalination",
+    "DUAL CHOKEPOINT: Houthi Bab al-Mandeb closure threat + Hormuz = near-total ME export blockade; Goldman $135 Brent",
+    "GROUND OPS: 82nd Airborne + 31st MEU positioning for potential Kharg Island seizure and coastal raids",
+    "OIL PRICES: Brent ~$115, WTI ~$103; US gas $4/gal; options traders betting $150 by end-April"
   ]
 }

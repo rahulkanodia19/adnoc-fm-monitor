@@ -81,10 +81,10 @@
         "days": 7,
         "dailyAvg": 10751.7,
         "allCountries": {
+          "Saudi Arabia": 8785.6,
           "Angola": 5019.1,
           "Republic of the Congo": 981.8,
           "Russian Federation": 16283,
-          "Saudi Arabia": 8785.6,
           "United Arab Emirates": 4995.2,
           "Kazakhstan": 1540,
           "Myanmar": 1400,
@@ -97,10 +97,10 @@
           "Ghana": 962.1
         },
         "allCountriesDaily": {
+          "Saudi Arabia": 1255.1,
           "Angola": 717,
           "Republic of the Congo": 140.3,
           "Russian Federation": 2326.1,
-          "Saudi Arabia": 1255.1,
           "United Arab Emirates": 713.6,
           "Kazakhstan": 220,
           "Myanmar": 200,
@@ -146,7 +146,7 @@
           "Thailand": 294.5,
           "Algeria": 769.7,
           "Canada": 1700,
-          "Ecuador": 1536,
+          "Ecuador": 1536.1,
           "Sudan": 600,
           "Malaysia": 184.5,
           "Venezuela": 257.1
@@ -186,33 +186,37 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 7247,
-        "days": 1,
-        "dailyAvg": 7246.6,
+        "end": "2026-03-31",
+        "total": 17657,
+        "days": 2,
+        "dailyAvg": 8828.7,
         "allCountries": {
-          "Brazil": 2699.6,
-          "Russian Federation": 2127,
-          "Iran": 2000,
-          "Kazakhstan": 220,
-          "Myanmar": 200
+          "Brazil": 5366.6,
+          "Russian Federation": 4961.1,
+          "Iran": 3305.2,
+          "Kazakhstan": 440,
+          "Myanmar": 400,
+          "Angola": 2055.7,
+          "Canada": 1128.8
         },
         "allCountriesDaily": {
-          "Brazil": 2699.6,
-          "Russian Federation": 2127,
-          "Iran": 2000,
+          "Brazil": 2683.3,
+          "Russian Federation": 2480.6,
+          "Iran": 1652.6,
           "Kazakhstan": 220,
-          "Myanmar": 200
+          "Myanmar": 200,
+          "Angola": 1027.9,
+          "Canada": 564.4
         },
-        "gulfTotal": 2000,
-        "gulfDailyAvg": 2000,
-        "gulfShare": 27.6,
+        "gulfTotal": 3305,
+        "gulfDailyAvg": 1652.6,
+        "gulfShare": 18.7,
         "top5": [
           "Brazil",
           "Russian Federation",
           "Iran",
-          "Kazakhstan",
-          "Myanmar"
+          "Angola",
+          "Canada"
         ]
       }
     ]
@@ -326,21 +330,27 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 137,
-        "days": 1,
-        "dailyAvg": 137,
+        "end": "2026-03-31",
+        "total": 292,
+        "days": 2,
+        "dailyAvg": 146.1,
         "allCountries": {
-          "Australia": 137
+          "Australia": 137,
+          "Oman": 76.7,
+          "Papua New Guinea": 78.5
         },
         "allCountriesDaily": {
-          "Australia": 137
+          "Australia": 68.5,
+          "Oman": 38.4,
+          "Papua New Guinea": 39.3
         },
-        "gulfTotal": 0,
-        "gulfDailyAvg": 0,
-        "gulfShare": 0,
+        "gulfTotal": 77,
+        "gulfDailyAvg": 38.4,
+        "gulfShare": 26.2,
         "top5": [
-          "Australia"
+          "Australia",
+          "Papua New Guinea",
+          "Oman"
         ]
       }
     ]
@@ -464,16 +474,25 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 0,
-        "days": 1,
-        "dailyAvg": 0,
-        "allCountries": {},
-        "allCountriesDaily": {},
+        "end": "2026-03-31",
+        "total": 145,
+        "days": 2,
+        "dailyAvg": 72.4,
+        "allCountries": {
+          "United States": 122.9,
+          "Australia": 21.9
+        },
+        "allCountriesDaily": {
+          "United States": 61.5,
+          "Australia": 11
+        },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
-        "top5": []
+        "top5": [
+          "United States",
+          "Australia"
+        ]
       }
     ]
   },
@@ -536,9 +555,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -623,16 +642,22 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 0,
-        "days": 1,
-        "dailyAvg": 0,
-        "allCountries": {},
-        "allCountriesDaily": {},
+        "end": "2026-03-31",
+        "total": 9,
+        "days": 2,
+        "dailyAvg": 4.3,
+        "allCountries": {
+          "Taiwan": 8.5
+        },
+        "allCountriesDaily": {
+          "Taiwan": 4.3
+        },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
-        "top5": []
+        "top5": [
+          "Taiwan"
+        ]
       }
     ]
   },
@@ -695,9 +720,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -814,16 +839,22 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 0,
-        "days": 1,
-        "dailyAvg": 0,
-        "allCountries": {},
-        "allCountriesDaily": {},
+        "end": "2026-03-31",
+        "total": 130,
+        "days": 2,
+        "dailyAvg": 65.1,
+        "allCountries": {
+          "Russian Federation": 130.1
+        },
+        "allCountriesDaily": {
+          "Russian Federation": 65.1
+        },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
-        "top5": []
+        "top5": [
+          "Russian Federation"
+        ]
       }
     ]
   },
@@ -904,16 +935,22 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 0,
-        "days": 1,
-        "dailyAvg": 0,
-        "allCountries": {},
-        "allCountriesDaily": {},
-        "gulfTotal": 0,
-        "gulfDailyAvg": 0,
-        "gulfShare": 0,
-        "top5": []
+        "end": "2026-03-31",
+        "total": 73,
+        "days": 2,
+        "dailyAvg": 36.3,
+        "allCountries": {
+          "Iran": 72.5
+        },
+        "allCountriesDaily": {
+          "Iran": 36.3
+        },
+        "gulfTotal": 73,
+        "gulfDailyAvg": 36.3,
+        "gulfShare": 100,
+        "top5": [
+          "Iran"
+        ]
       }
     ]
   },
@@ -1040,27 +1077,33 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 9223,
-        "days": 1,
-        "dailyAvg": 9223.3,
+        "end": "2026-03-31",
+        "total": 14930,
+        "days": 2,
+        "dailyAvg": 7465.2,
         "allCountries": {
-          "Russian Federation": 6971.5,
+          "Russian Federation": 9389.3,
           "Gabon": 829.5,
-          "United States": 1422.3
+          "United States": 1422.3,
+          "Brazil": 2738.7,
+          "Colombia": 550.6
         },
         "allCountriesDaily": {
-          "Russian Federation": 6971.5,
-          "Gabon": 829.5,
-          "United States": 1422.3
+          "Russian Federation": 4694.7,
+          "Gabon": 414.8,
+          "United States": 711.2,
+          "Brazil": 1369.4,
+          "Colombia": 275.3
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
           "Russian Federation",
+          "Brazil",
           "United States",
-          "Gabon"
+          "Gabon",
+          "Colombia"
         ]
       }
     ]
@@ -1157,20 +1200,23 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 60,
-        "days": 1,
-        "dailyAvg": 60,
+        "end": "2026-03-31",
+        "total": 132,
+        "days": 2,
+        "dailyAvg": 65.8,
         "allCountries": {
-          "Nigeria": 60
+          "Nigeria": 60,
+          "United States": 71.5
         },
         "allCountriesDaily": {
-          "Nigeria": 60
+          "Nigeria": 30,
+          "United States": 35.8
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
+          "United States",
           "Nigeria"
         ]
       }
@@ -1220,27 +1266,27 @@
         "period": "2026-W12",
         "start": "2026-03-16",
         "end": "2026-03-22",
-        "total": 82,
+        "total": 72,
         "days": 7,
-        "dailyAvg": 11.7,
+        "dailyAvg": 10.2,
         "allCountries": {
           "Qatar": 11.1,
           "Saudi Arabia": 17,
           "Kuwait": 22.2,
-          "United States": 31.6
+          "United States": 21.3
         },
         "allCountriesDaily": {
           "Qatar": 1.6,
           "Saudi Arabia": 2.4,
           "Kuwait": 3.2,
-          "United States": 4.5
+          "United States": 3
         },
         "gulfTotal": 50,
         "gulfDailyAvg": 7.2,
-        "gulfShare": 61.4,
+        "gulfShare": 70.3,
         "top5": [
-          "United States",
           "Kuwait",
+          "United States",
           "Saudi Arabia",
           "Qatar"
         ]
@@ -1249,18 +1295,18 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-29",
-        "total": 112,
+        "total": 104,
         "days": 7,
-        "dailyAvg": 16,
+        "dailyAvg": 14.8,
         "allCountries": {
-          "United States": 73.2,
+          "United States": 64.7,
           "Qatar": 14.1,
           "Kuwait": 11.4,
           "Saudi Arabia": 11.8,
           "United Arab Emirates": 1.7
         },
         "allCountriesDaily": {
-          "United States": 10.5,
+          "United States": 9.2,
           "Qatar": 2,
           "Kuwait": 1.6,
           "Saudi Arabia": 1.7,
@@ -1268,7 +1314,7 @@
         },
         "gulfTotal": 39,
         "gulfDailyAvg": 5.6,
-        "gulfShare": 34.8,
+        "gulfShare": 37.6,
         "top5": [
           "United States",
           "Qatar",
@@ -1280,23 +1326,29 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 41,
-        "days": 1,
-        "dailyAvg": 41.2,
+        "end": "2026-03-31",
+        "total": 86,
+        "days": 2,
+        "dailyAvg": 42.9,
         "allCountries": {
-          "United States": 35.5,
-          "Qatar": 5.7
+          "United States": 47.2,
+          "Qatar": 5.7,
+          "Iran": 21.5,
+          "Kuwait": 11.4
         },
         "allCountriesDaily": {
-          "United States": 35.5,
-          "Qatar": 5.7
+          "United States": 23.6,
+          "Qatar": 2.9,
+          "Iran": 10.8,
+          "Kuwait": 5.7
         },
-        "gulfTotal": 6,
-        "gulfDailyAvg": 5.7,
-        "gulfShare": 13.8,
+        "gulfTotal": 39,
+        "gulfDailyAvg": 19.3,
+        "gulfShare": 45,
         "top5": [
           "United States",
+          "Iran",
+          "Kuwait",
           "Qatar"
         ]
       }
@@ -1355,9 +1407,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -1421,9 +1473,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -1499,9 +1551,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -1589,16 +1641,22 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 0,
-        "days": 1,
-        "dailyAvg": 0,
-        "allCountries": {},
-        "allCountriesDaily": {},
+        "end": "2026-03-31",
+        "total": 824,
+        "days": 2,
+        "dailyAvg": 411.8,
+        "allCountries": {
+          "Russian Federation": 823.5
+        },
+        "allCountriesDaily": {
+          "Russian Federation": 411.8
+        },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
-        "top5": []
+        "top5": [
+          "Russian Federation"
+        ]
       }
     ]
   },
@@ -1670,16 +1728,22 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 0,
-        "days": 1,
-        "dailyAvg": 0,
-        "allCountries": {},
-        "allCountriesDaily": {},
+        "end": "2026-03-31",
+        "total": 12,
+        "days": 2,
+        "dailyAvg": 6.2,
+        "allCountries": {
+          "Jordan": 12.3
+        },
+        "allCountriesDaily": {
+          "Jordan": 6.2
+        },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
-        "top5": []
+        "top5": [
+          "Jordan"
+        ]
       }
     ]
   },
@@ -1727,25 +1791,25 @@
         "period": "2026-W12",
         "start": "2026-03-16",
         "end": "2026-03-22",
-        "total": 13933,
+        "total": 14077,
         "days": 7,
-        "dailyAvg": 1990.4,
+        "dailyAvg": 2011,
         "allCountries": {
-          "Saudi Arabia": 7402.3,
+          "Saudi Arabia": 7546.2,
           "United Arab Emirates": 4524.1,
           "Oman": 300,
           "Kuwait": 1069.8,
           "Qatar": 636.7
         },
         "allCountriesDaily": {
-          "Saudi Arabia": 1057.5,
+          "Saudi Arabia": 1078,
           "United Arab Emirates": 646.3,
           "Oman": 42.9,
           "Kuwait": 152.8,
           "Qatar": 91
         },
-        "gulfTotal": 13933,
-        "gulfDailyAvg": 1990.4,
+        "gulfTotal": 14077,
+        "gulfDailyAvg": 2011,
         "gulfShare": 100,
         "top5": [
           "Saudi Arabia",
@@ -1787,21 +1851,27 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 492,
-        "days": 1,
-        "dailyAvg": 492,
+        "end": "2026-03-31",
+        "total": 1368,
+        "days": 2,
+        "dailyAvg": 684.1,
         "allCountries": {
-          "Qatar": 492
+          "Qatar": 492,
+          "Saudi Arabia": 376.1,
+          "United Arab Emirates": 500
         },
         "allCountriesDaily": {
-          "Qatar": 492
+          "Qatar": 246,
+          "Saudi Arabia": 188.1,
+          "United Arab Emirates": 250
         },
-        "gulfTotal": 492,
-        "gulfDailyAvg": 492,
+        "gulfTotal": 1368,
+        "gulfDailyAvg": 684.1,
         "gulfShare": 100,
         "top5": [
-          "Qatar"
+          "United Arab Emirates",
+          "Qatar",
+          "Saudi Arabia"
         ]
       }
     ]
@@ -1927,15 +1997,15 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 72,
-        "days": 1,
-        "dailyAvg": 71.5,
+        "days": 2,
+        "dailyAvg": 35.8,
         "allCountries": {
           "Australia": 71.5
         },
         "allCountriesDaily": {
-          "Australia": 71.5
+          "Australia": 35.8
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -2020,15 +2090,15 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 63,
-        "days": 1,
-        "dailyAvg": 63.3,
+        "end": "2026-03-31",
+        "total": 118,
+        "days": 2,
+        "dailyAvg": 58.8,
         "allCountries": {
-          "United States": 63.3
+          "United States": 117.6
         },
         "allCountriesDaily": {
-          "United States": 63.3
+          "United States": 58.8
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -2110,15 +2180,15 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 346,
-        "days": 1,
-        "dailyAvg": 345.9,
+        "days": 2,
+        "dailyAvg": 173,
         "allCountries": {
           "South Korea": 345.9
         },
         "allCountriesDaily": {
-          "South Korea": 345.9
+          "South Korea": 173
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -2203,15 +2273,15 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 9,
-        "days": 1,
-        "dailyAvg": 8.5,
+        "days": 2,
+        "dailyAvg": 4.3,
         "allCountries": {
           "South Korea": 8.5
         },
         "allCountriesDaily": {
-          "South Korea": 8.5
+          "South Korea": 4.3
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -2293,15 +2363,15 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 36,
-        "days": 1,
-        "dailyAvg": 36,
+        "days": 2,
+        "dailyAvg": 18,
         "allCountries": {
           "South Korea": 36
         },
         "allCountriesDaily": {
-          "South Korea": 36
+          "South Korea": 18
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -2406,9 +2476,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -2472,9 +2542,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -2604,15 +2674,15 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 1983,
-        "days": 1,
-        "dailyAvg": 1982.5,
+        "days": 2,
+        "dailyAvg": 991.3,
         "allCountries": {
           "United States": 1982.5
         },
         "allCountriesDaily": {
-          "United States": 1982.5
+          "United States": 991.3
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -2742,19 +2812,19 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 187,
-        "days": 1,
-        "dailyAvg": 186.5,
+        "days": 2,
+        "dailyAvg": 93.3,
         "allCountries": {
           "Australia": 69,
           "China": 46.6,
           "Malaysia": 70.9
         },
         "allCountriesDaily": {
-          "Australia": 69,
-          "China": 46.6,
-          "Malaysia": 70.9
+          "Australia": 34.5,
+          "China": 23.3,
+          "Malaysia": 35.5
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -2802,15 +2872,15 @@
         "period": "2026-W12",
         "start": "2026-03-16",
         "end": "2026-03-22",
-        "total": 106,
+        "total": 95,
         "days": 7,
-        "dailyAvg": 15.2,
+        "dailyAvg": 13.5,
         "allCountries": {
-          "United States": 94.1,
+          "United States": 82.6,
           "Canada": 12.1
         },
         "allCountriesDaily": {
-          "United States": 13.4,
+          "United States": 11.8,
           "Canada": 1.7
         },
         "gulfTotal": 0,
@@ -2847,16 +2917,22 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 0,
-        "days": 1,
-        "dailyAvg": 0,
-        "allCountries": {},
-        "allCountriesDaily": {},
+        "end": "2026-03-31",
+        "total": 71,
+        "days": 2,
+        "dailyAvg": 35.5,
+        "allCountries": {
+          "United States": 70.9
+        },
+        "allCountriesDaily": {
+          "United States": 35.5
+        },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
-        "top5": []
+        "top5": [
+          "United States"
+        ]
       }
     ]
   },
@@ -2919,9 +2995,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -3012,9 +3088,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -3090,9 +3166,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -3185,9 +3261,9 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-29",
-        "total": 2408,
+        "total": 2335,
         "days": 7,
-        "dailyAvg": 343.9,
+        "dailyAvg": 333.6,
         "allCountries": {
           "Egypt": 330.1,
           "Greece": 436,
@@ -3196,7 +3272,7 @@
           "Qatar": 237.2,
           "Japan": 12.3,
           "Oman": 488.6,
-          "Algeria": 371.6
+          "Algeria": 299.4
         },
         "allCountriesDaily": {
           "Egypt": 47.2,
@@ -3206,36 +3282,39 @@
           "Qatar": 33.9,
           "Japan": 1.8,
           "Oman": 69.8,
-          "Algeria": 53.1
+          "Algeria": 42.8
         },
         "gulfTotal": 726,
         "gulfDailyAvg": 103.7,
-        "gulfShare": 30.1,
+        "gulfShare": 31.1,
         "top5": [
           "Oman",
           "Greece",
-          "Algeria",
           "Peru",
-          "Egypt"
+          "Egypt",
+          "Algeria"
         ]
       },
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 234,
-        "days": 1,
-        "dailyAvg": 234.2,
+        "end": "2026-03-31",
+        "total": 534,
+        "days": 2,
+        "dailyAvg": 266.8,
         "allCountries": {
-          "Russian Federation": 234.2
+          "Russian Federation": 234.2,
+          "Algeria": 299.4
         },
         "allCountriesDaily": {
-          "Russian Federation": 234.2
+          "Russian Federation": 117.1,
+          "Algeria": 149.7
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
+          "Algeria",
           "Russian Federation"
         ]
       }
@@ -3294,9 +3373,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -3409,18 +3488,18 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 361,
-        "days": 1,
-        "dailyAvg": 360.8,
+        "days": 2,
+        "dailyAvg": 180.4,
         "allCountries": {
           "United Arab Emirates": 360.8
         },
         "allCountriesDaily": {
-          "United Arab Emirates": 360.8
+          "United Arab Emirates": 180.4
         },
         "gulfTotal": 361,
-        "gulfDailyAvg": 360.8,
+        "gulfDailyAvg": 180.4,
         "gulfShare": 100,
         "top5": [
           "United Arab Emirates"
@@ -3517,21 +3596,24 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 71,
-        "days": 1,
-        "dailyAvg": 70.7,
+        "end": "2026-03-31",
+        "total": 141,
+        "days": 2,
+        "dailyAvg": 70.4,
         "allCountries": {
-          "United States": 70.7
+          "United States": 70.7,
+          "China": 70.1
         },
         "allCountriesDaily": {
-          "United States": 70.7
+          "United States": 35.4,
+          "China": 35.1
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
-          "United States"
+          "United States",
+          "China"
         ]
       }
     ]
@@ -3595,16 +3677,25 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 0,
-        "days": 1,
-        "dailyAvg": 0,
-        "allCountries": {},
-        "allCountriesDaily": {},
+        "end": "2026-03-31",
+        "total": 22,
+        "days": 2,
+        "dailyAvg": 11.1,
+        "allCountries": {
+          "Angola": 11.1,
+          "Nigeria": 11.1
+        },
+        "allCountriesDaily": {
+          "Angola": 5.6,
+          "Nigeria": 5.6
+        },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
-        "top5": []
+        "top5": [
+          "Angola",
+          "Nigeria"
+        ]
       }
     ]
   },
@@ -3661,9 +3752,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -3745,9 +3836,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -3832,24 +3923,27 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 91,
-        "days": 1,
-        "dailyAvg": 90.6,
+        "end": "2026-03-31",
+        "total": 111,
+        "days": 2,
+        "dailyAvg": 55.3,
         "allCountries": {
           "Malaysia": 42.2,
-          "Singapore Republic": 48.4
+          "Singapore Republic": 48.4,
+          "South Korea": 20
         },
         "allCountriesDaily": {
-          "Malaysia": 42.2,
-          "Singapore Republic": 48.4
+          "Malaysia": 21.1,
+          "Singapore Republic": 24.2,
+          "South Korea": 10
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
           "Singapore Republic",
-          "Malaysia"
+          "Malaysia",
+          "South Korea"
         ]
       }
     ]
@@ -3919,9 +4013,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -3985,9 +4079,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -4063,9 +4157,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -4135,9 +4229,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -4228,9 +4322,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -4315,9 +4409,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -4363,14 +4457,14 @@
         "period": "2026-W12",
         "start": "2026-03-16",
         "end": "2026-03-22",
-        "total": 1187,
+        "total": 1138,
         "days": 7,
-        "dailyAvg": 169.6,
+        "dailyAvg": 162.5,
         "allCountries": {
-          "South Korea": 1187.2
+          "South Korea": 1137.8
         },
         "allCountriesDaily": {
-          "South Korea": 169.6
+          "South Korea": 162.5
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -4383,16 +4477,16 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-29",
-        "total": 1591,
+        "total": 1582,
         "days": 7,
-        "dailyAvg": 227.3,
+        "dailyAvg": 226,
         "allCountries": {
-          "South Korea": 1168.3,
+          "South Korea": 1159.4,
           "Singapore Republic": 86.9,
           "Taiwan": 336
         },
         "allCountriesDaily": {
-          "South Korea": 166.9,
+          "South Korea": 165.6,
           "Singapore Republic": 12.4,
           "Taiwan": 48
         },
@@ -4408,16 +4502,22 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 0,
-        "days": 1,
-        "dailyAvg": 0,
-        "allCountries": {},
-        "allCountriesDaily": {},
+        "end": "2026-03-31",
+        "total": 58,
+        "days": 2,
+        "dailyAvg": 29.2,
+        "allCountries": {
+          "South Korea": 58.4
+        },
+        "allCountriesDaily": {
+          "South Korea": 29.2
+        },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
-        "top5": []
+        "top5": [
+          "South Korea"
+        ]
       }
     ]
   },
@@ -4495,9 +4595,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -4561,15 +4661,15 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 338,
-        "days": 1,
-        "dailyAvg": 337.9,
+        "days": 2,
+        "dailyAvg": 169,
         "allCountries": {
           "Russian Federation": 337.9
         },
         "allCountriesDaily": {
-          "Russian Federation": 337.9
+          "Russian Federation": 169
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -4639,9 +4739,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -4732,9 +4832,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -4798,9 +4898,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -4881,24 +4981,22 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-29",
-        "total": 21,
+        "total": 19,
         "days": 7,
-        "dailyAvg": 2.9,
+        "dailyAvg": 2.7,
         "allCountries": {
           "Poland": 6.9,
           "Ireland": 6.3,
           "France": 0.8,
           "Romania": 4,
-          "Portugal": 0.6,
-          "United Kingdom": 1.9
+          "Portugal": 0.6
         },
         "allCountriesDaily": {
           "Poland": 1,
           "Ireland": 0.9,
           "France": 0.1,
           "Romania": 0.6,
-          "Portugal": 0.1,
-          "United Kingdom": 0.3
+          "Portugal": 0.1
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -4907,23 +5005,29 @@
           "Poland",
           "Ireland",
           "Romania",
-          "United Kingdom",
-          "France"
+          "France",
+          "Portugal"
         ]
       },
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 0,
-        "days": 1,
-        "dailyAvg": 0,
-        "allCountries": {},
-        "allCountriesDaily": {},
+        "end": "2026-03-31",
+        "total": 2,
+        "days": 2,
+        "dailyAvg": 0.8,
+        "allCountries": {
+          "Portugal": 1.5
+        },
+        "allCountriesDaily": {
+          "Portugal": 0.8
+        },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
-        "top5": []
+        "top5": [
+          "Portugal"
+        ]
       }
     ]
   },
@@ -4973,7 +5077,7 @@
         "dailyAvg": 116,
         "allCountries": {
           "Norway": 49.2,
-          "Cyprus": 117.9,
+          "Cyprus": 57,
           "Albania": 71.8,
           "Spain": 175.3,
           "United Kingdom": 270.7,
@@ -4982,7 +5086,7 @@
         },
         "allCountriesDaily": {
           "Norway": 7,
-          "Cyprus": 16.8,
+          "Cyprus": 8.1,
           "Albania": 10.3,
           "Spain": 25,
           "United Kingdom": 38.7,
@@ -4995,9 +5099,9 @@
         "top5": [
           "United Kingdom",
           "Spain",
-          "Cyprus",
           "Malta",
-          "Albania"
+          "Albania",
+          "Cyprus"
         ]
       },
       {
@@ -5029,17 +5133,17 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 234,
-        "days": 1,
-        "dailyAvg": 234.4,
+        "days": 2,
+        "dailyAvg": 117.2,
         "allCountries": {
           "France": 144.8,
           "Portugal": 89.6
         },
         "allCountriesDaily": {
-          "France": 144.8,
-          "Portugal": 89.6
+          "France": 72.4,
+          "Portugal": 44.8
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -5137,9 +5241,9 @@
         "period": "2026-W12",
         "start": "2026-03-16",
         "end": "2026-03-22",
-        "total": 7947,
+        "total": 7954,
         "days": 7,
-        "dailyAvg": 1135.3,
+        "dailyAvg": 1136.3,
         "allCountries": {
           "Finland": 179,
           "United Kingdom": 1429.2,
@@ -5148,6 +5252,7 @@
           "Netherlands": 126.5,
           "Germany": 105.2,
           "Spain": 536.2,
+          "Belgium": 7,
           "Slovenia": 458.7,
           "Latvia": 117.8,
           "Sweden": 87.7,
@@ -5171,6 +5276,7 @@
           "Netherlands": 18.1,
           "Germany": 15,
           "Spain": 76.6,
+          "Belgium": 1,
           "Slovenia": 65.5,
           "Latvia": 16.8,
           "Sweden": 12.5,
@@ -5201,9 +5307,9 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-29",
-        "total": 3691,
+        "total": 3693,
         "days": 7,
-        "dailyAvg": 527.3,
+        "dailyAvg": 527.6,
         "allCountries": {
           "Croatia": 674.5,
           "Germany": 7.8,
@@ -5212,13 +5318,13 @@
           "Belgium": 28.4,
           "Georgia": 33.8,
           "Mauritania": 25.9,
+          "Turkey": 131.9,
           "United Kingdom": 318.9,
           "Albania": 41.5,
           "Italy": 210.7,
           "Morocco": 30.9,
           "Poland": 345.4,
           "Spain": 100.2,
-          "Turkey": 130,
           "Denmark": 160.4,
           "Finland": 49.3,
           "Sweden": 78.1,
@@ -5234,13 +5340,13 @@
           "Belgium": 4.1,
           "Georgia": 4.8,
           "Mauritania": 3.7,
+          "Turkey": 18.8,
           "United Kingdom": 45.6,
           "Albania": 5.9,
           "Italy": 30.1,
           "Morocco": 4.4,
           "Poland": 49.3,
           "Spain": 14.3,
-          "Turkey": 18.6,
           "Denmark": 22.9,
           "Finland": 7,
           "Sweden": 11.2,
@@ -5262,33 +5368,39 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 572,
-        "days": 1,
-        "dailyAvg": 572.2,
+        "end": "2026-03-31",
+        "total": 1438,
+        "days": 2,
+        "dailyAvg": 719.1,
         "allCountries": {
           "Gibraltar": 342.1,
           "Morocco": 30.9,
           "Netherlands": 14.1,
-          "United Kingdom": 118,
-          "Western Sahara": 67.1
+          "United Kingdom": 164.1,
+          "Western Sahara": 67.1,
+          "Albania": 180.4,
+          "Sweden": 41.4,
+          "Turkey": 23.1
         },
         "allCountriesDaily": {
-          "Gibraltar": 342.1,
-          "Morocco": 30.9,
-          "Netherlands": 14.1,
-          "United Kingdom": 118,
-          "Western Sahara": 67.1
+          "Gibraltar": 171.1,
+          "Morocco": 15.5,
+          "Netherlands": 7.1,
+          "United Kingdom": 82.1,
+          "Western Sahara": 33.6,
+          "Albania": 90.2,
+          "Sweden": 20.7,
+          "Turkey": 11.6
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
           "Gibraltar",
+          "Albania",
           "United Kingdom",
           "Western Sahara",
-          "Morocco",
-          "Netherlands"
+          "Sweden"
         ]
       }
     ]
@@ -5305,9 +5417,9 @@
         "period": "2026-W11",
         "start": "2026-03-09",
         "end": "2026-03-15",
-        "total": 8362,
+        "total": 8098,
         "days": 7,
-        "dailyAvg": 1194.6,
+        "dailyAvg": 1156.9,
         "allCountries": {
           "France": 219.6,
           "Libya": 580.5,
@@ -5333,7 +5445,7 @@
           "Morocco": 319.9,
           "Canada": 123.5,
           "Germany": 70.5,
-          "United States": 342.6,
+          "United States": 78.8,
           "Latvia": 134.4,
           "Nigeria": 342.8,
           "Portugal": 35.5,
@@ -5364,7 +5476,7 @@
           "Morocco": 45.7,
           "Canada": 17.6,
           "Germany": 10.1,
-          "United States": 48.9,
+          "United States": 11.3,
           "Latvia": 19.2,
           "Nigeria": 49,
           "Portugal": 5.1,
@@ -5372,7 +5484,7 @@
         },
         "gulfTotal": 266,
         "gulfDailyAvg": 37.9,
-        "gulfShare": 3.2,
+        "gulfShare": 3.3,
         "top5": [
           "Puerto Rico",
           "Libya",
@@ -5385,16 +5497,16 @@
         "period": "2026-W12",
         "start": "2026-03-16",
         "end": "2026-03-22",
-        "total": 9340,
+        "total": 9684,
         "days": 7,
-        "dailyAvg": 1334.3,
+        "dailyAvg": 1383.5,
         "allCountries": {
           "Belgium": 68.8,
           "Georgia": 62.9,
           "Kenya": 775.7,
           "Lebanon": 129.8,
           "Netherlands": 750.6,
-          "South Africa": 686.8,
+          "South Africa": 1030.9,
           "Italy": 295.3,
           "Ghana": 690.8,
           "Latvia": 170,
@@ -5418,7 +5530,7 @@
           "Kenya": 110.8,
           "Lebanon": 18.5,
           "Netherlands": 107.2,
-          "South Africa": 98.1,
+          "South Africa": 147.3,
           "Italy": 42.2,
           "Ghana": 98.7,
           "Latvia": 24.3,
@@ -5440,20 +5552,20 @@
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
+          "South Africa",
           "Kenya",
           "Netherlands",
           "United Kingdom",
-          "Ghana",
-          "South Africa"
+          "Ghana"
         ]
       },
       {
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-29",
-        "total": 8344,
+        "total": 8755,
         "days": 7,
-        "dailyAvg": 1191.9,
+        "dailyAvg": 1250.7,
         "allCountries": {
           "France": 283,
           "United Kingdom": 244.3,
@@ -5461,16 +5573,15 @@
           "Egypt": 776.3,
           "Finland": 70.4,
           "Morocco": 346.8,
-          "Turkey": 1.9,
-          "Tunisia": 273,
+          "Spain": 413.5,
+          "Tunisia": 173.8,
           "Ghana": 345.4,
-          "Libya": 281.9,
+          "Libya": 563.3,
           "Netherlands": 81.5,
           "Puerto Rico": 216,
           "Canada": 237,
           "Cyprus": 345.4,
           "United States": 554,
-          "Spain": 345.4,
           "Senegal": 339.9
         },
         "allCountriesDaily": {
@@ -5480,16 +5591,15 @@
           "Egypt": 110.9,
           "Finland": 10.1,
           "Morocco": 49.5,
-          "Turkey": 0.3,
-          "Tunisia": 39,
+          "Spain": 59.1,
+          "Tunisia": 24.8,
           "Ghana": 49.3,
-          "Libya": 40.3,
+          "Libya": 80.5,
           "Netherlands": 11.6,
           "Puerto Rico": 30.9,
           "Canada": 33.9,
           "Cyprus": 49.3,
           "United States": 79.1,
-          "Spain": 49.3,
           "Senegal": 48.6
         },
         "gulfTotal": 0,
@@ -5497,34 +5607,40 @@
         "gulfShare": 0,
         "top5": [
           "Egypt",
+          "Libya",
           "United States",
-          "Morocco",
-          "Ghana",
-          "Cyprus"
+          "Spain",
+          "Morocco"
         ]
       },
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 494,
-        "days": 1,
-        "dailyAvg": 494.4,
+        "end": "2026-03-31",
+        "total": 881,
+        "days": 2,
+        "dailyAvg": 440.3,
         "allCountries": {
           "United Kingdom": 116,
-          "Slovenia": 127,
-          "Spain": 90.4
+          "Belgium": 161,
+          "Slovenia": 254,
+          "Spain": 90.4,
+          "Guinea": 172.7
         },
         "allCountriesDaily": {
-          "United Kingdom": 116,
+          "United Kingdom": 58,
+          "Belgium": 80.5,
           "Slovenia": 127,
-          "Spain": 90.4
+          "Spain": 45.2,
+          "Guinea": 86.4
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
           "Slovenia",
+          "Guinea",
+          "Belgium",
           "United Kingdom",
           "Spain"
         ]
@@ -5585,16 +5701,17 @@
         "period": "2026-W12",
         "start": "2026-03-16",
         "end": "2026-03-22",
-        "total": 2338,
+        "total": 2487,
         "days": 7,
-        "dailyAvg": 334,
+        "dailyAvg": 355.2,
         "allCountries": {
           "Belgium": 625.2,
           "Cyprus": 35.4,
+          "Argentina": 149,
           "Sweden": 21.7,
           "Latvia": 133.3,
-          "Japan": 110.7,
           "Spain": 1119.3,
+          "Japan": 110.7,
           "Netherlands": 60.6,
           "France": 207,
           "United Kingdom": 24.5
@@ -5602,10 +5719,11 @@
         "allCountriesDaily": {
           "Belgium": 89.3,
           "Cyprus": 5.1,
+          "Argentina": 21.3,
           "Sweden": 3.1,
           "Latvia": 19,
-          "Japan": 15.8,
           "Spain": 159.9,
+          "Japan": 15.8,
           "Netherlands": 8.7,
           "France": 29.6,
           "United Kingdom": 3.5
@@ -5617,17 +5735,17 @@
           "Spain",
           "Belgium",
           "France",
-          "Latvia",
-          "Japan"
+          "Argentina",
+          "Latvia"
         ]
       },
       {
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-29",
-        "total": 2342,
+        "total": 2415,
         "days": 7,
-        "dailyAvg": 334.5,
+        "dailyAvg": 344.9,
         "allCountries": {
           "Italy": 501.8,
           "Netherlands": 29.3,
@@ -5662,23 +5780,20 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 217,
-        "days": 1,
-        "dailyAvg": 217.4,
+        "end": "2026-03-31",
+        "total": 324,
+        "days": 2,
+        "dailyAvg": 161.8,
         "allCountries": {
-          "Slovenia": 127,
-          "Spain": 90.4
+          "Spain": 323.6
         },
         "allCountriesDaily": {
-          "Slovenia": 127,
-          "Spain": 90.4
+          "Spain": 161.8
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
-          "Slovenia",
           "Spain"
         ]
       }
@@ -5737,9 +5852,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -5860,21 +5975,21 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-29",
-        "total": 17937,
+        "total": 16292,
         "days": 7,
-        "dailyAvg": 2562.4,
+        "dailyAvg": 2327.4,
         "allCountries": {
           "Bahamas": 917.9,
           "Venezuela": 2722,
           "Mexico": 1960.3,
-          "Saudi Arabia": 3678.8,
+          "Saudi Arabia": 3328.9,
           "Panama": 1032.1,
           "Ecuador": 357.1,
           "Argentina": 724.4,
           "Iraq": 1187.8,
           "Canada": 1207.2,
           "Colombia": 551.4,
-          "Brazil": 2058,
+          "Brazil": 762.8,
           "Ghana": 538.6,
           "Guyana": 1001
         },
@@ -5882,54 +5997,57 @@
           "Bahamas": 131.1,
           "Venezuela": 388.9,
           "Mexico": 280,
-          "Saudi Arabia": 525.5,
+          "Saudi Arabia": 475.6,
           "Panama": 147.4,
           "Ecuador": 51,
           "Argentina": 103.5,
           "Iraq": 169.7,
           "Canada": 172.5,
           "Colombia": 78.8,
-          "Brazil": 294,
+          "Brazil": 109,
           "Ghana": 76.9,
           "Guyana": 143
         },
-        "gulfTotal": 4867,
-        "gulfDailyAvg": 695.2,
-        "gulfShare": 27.1,
+        "gulfTotal": 4517,
+        "gulfDailyAvg": 645.2,
+        "gulfShare": 27.7,
         "top5": [
           "Saudi Arabia",
           "Venezuela",
-          "Brazil",
           "Mexico",
-          "Canada"
+          "Canada",
+          "Iraq"
         ]
       },
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 2183,
-        "days": 1,
-        "dailyAvg": 2182.6,
+        "end": "2026-03-31",
+        "total": 2989,
+        "days": 2,
+        "dailyAvg": 1494.4,
         "allCountries": {
+          "Saudi Arabia": 767.5,
           "Argentina": 635.7,
           "Canada": 129.4,
-          "Saudi Arabia": 417.5,
-          "Venezuela": 1000
+          "Venezuela": 1000,
+          "Bahamas": 456.2
         },
         "allCountriesDaily": {
-          "Argentina": 635.7,
-          "Canada": 129.4,
-          "Saudi Arabia": 417.5,
-          "Venezuela": 1000
+          "Saudi Arabia": 383.8,
+          "Argentina": 317.9,
+          "Canada": 64.7,
+          "Venezuela": 500,
+          "Bahamas": 228.1
         },
-        "gulfTotal": 418,
-        "gulfDailyAvg": 417.5,
-        "gulfShare": 19.1,
+        "gulfTotal": 768,
+        "gulfDailyAvg": 383.8,
+        "gulfShare": 25.7,
         "top5": [
           "Venezuela",
-          "Argentina",
           "Saudi Arabia",
+          "Argentina",
+          "Bahamas",
           "Canada"
         ]
       }
@@ -5988,9 +6106,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -6060,9 +6178,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -6159,15 +6277,15 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 86,
-        "days": 1,
-        "dailyAvg": 86,
+        "end": "2026-03-31",
+        "total": 778,
+        "days": 2,
+        "dailyAvg": 389.2,
         "allCountries": {
-          "South Korea": 86
+          "South Korea": 778.3
         },
         "allCountriesDaily": {
-          "South Korea": 86
+          "South Korea": 389.2
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -6236,15 +6354,15 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-29",
-        "total": 674,
+        "total": 725,
         "days": 7,
-        "dailyAvg": 96.2,
+        "dailyAvg": 103.5,
         "allCountries": {
-          "Canada": 650.4,
+          "Canada": 701.4,
           "Argentina": 23.1
         },
         "allCountriesDaily": {
-          "Canada": 92.9,
+          "Canada": 100.2,
           "Argentina": 3.3
         },
         "gulfTotal": 0,
@@ -6258,17 +6376,17 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 467,
-        "days": 1,
-        "dailyAvg": 467.4,
+        "end": "2026-03-31",
+        "total": 510,
+        "days": 2,
+        "dailyAvg": 255,
         "allCountries": {
-          "Canada": 381.4,
+          "Canada": 424,
           "South Korea": 86
         },
         "allCountriesDaily": {
-          "Canada": 381.4,
-          "South Korea": 86
+          "Canada": 212,
+          "South Korea": 43
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -6362,11 +6480,11 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-29",
-        "total": 2144,
+        "total": 2067,
         "days": 7,
-        "dailyAvg": 306.3,
+        "dailyAvg": 295.3,
         "allCountries": {
-          "Canada": 764.7,
+          "Canada": 688,
           "United Kingdom": 84.6,
           "United States Virgin Islands": 292,
           "Bahamas": 521,
@@ -6374,7 +6492,7 @@
           "India": 309.4
         },
         "allCountriesDaily": {
-          "Canada": 109.2,
+          "Canada": 98.3,
           "United Kingdom": 12.1,
           "United States Virgin Islands": 41.7,
           "Bahamas": 74.4,
@@ -6395,17 +6513,17 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 552,
-        "days": 1,
-        "dailyAvg": 552.1,
+        "end": "2026-03-31",
+        "total": 772,
+        "days": 2,
+        "dailyAvg": 386,
         "allCountries": {
-          "Canada": 314.8,
-          "United Kingdom": 237.3
+          "Canada": 472.4,
+          "United Kingdom": 299.6
         },
         "allCountriesDaily": {
-          "Canada": 314.8,
-          "United Kingdom": 237.3
+          "Canada": 236.2,
+          "United Kingdom": 149.8
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -6500,9 +6618,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -6572,9 +6690,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -6665,16 +6783,22 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 0,
-        "days": 1,
-        "dailyAvg": 0,
-        "allCountries": {},
-        "allCountriesDaily": {},
+        "end": "2026-03-31",
+        "total": 2094,
+        "days": 2,
+        "dailyAvg": 1047,
+        "allCountries": {
+          "United States": 2094
+        },
+        "allCountriesDaily": {
+          "United States": 1047
+        },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
-        "top5": []
+        "top5": [
+          "United States"
+        ]
       }
     ]
   },
@@ -6776,20 +6900,23 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 73,
-        "days": 1,
-        "dailyAvg": 72.9,
+        "end": "2026-03-31",
+        "total": 147,
+        "days": 2,
+        "dailyAvg": 73.3,
         "allCountries": {
-          "United States": 72.9
+          "United States": 72.9,
+          "Australia": 73.7
         },
         "allCountriesDaily": {
-          "United States": 72.9
+          "United States": 36.5,
+          "Australia": 36.9
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
+          "Australia",
           "United States"
         ]
       }
@@ -6860,9 +6987,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -6926,9 +7053,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -7016,16 +7143,22 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 0,
-        "days": 1,
-        "dailyAvg": 0,
-        "allCountries": {},
-        "allCountriesDaily": {},
+        "end": "2026-03-31",
+        "total": 19,
+        "days": 2,
+        "dailyAvg": 9.4,
+        "allCountries": {
+          "China": 18.8
+        },
+        "allCountriesDaily": {
+          "China": 9.4
+        },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
-        "top5": []
+        "top5": [
+          "China"
+        ]
       }
     ]
   },
@@ -7088,9 +7221,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -7169,9 +7302,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -7235,15 +7368,15 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 15,
-        "days": 1,
-        "dailyAvg": 15.4,
+        "days": 2,
+        "dailyAvg": 7.7,
         "allCountries": {
           "Russian Federation": 15.4
         },
         "allCountriesDaily": {
-          "Russian Federation": 15.4
+          "Russian Federation": 7.7
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -7307,9 +7440,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -7373,9 +7506,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -7439,9 +7572,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -7505,9 +7638,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -7571,9 +7704,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -7637,9 +7770,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -7703,9 +7836,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -7756,9 +7889,9 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-29",
-        "total": 5,
+        "total": 0,
         "days": 7,
-        "dailyAvg": 0.6,
+        "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
         "gulfTotal": 0,
@@ -7769,10 +7902,10 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 5,
-        "days": 1,
-        "dailyAvg": 4.5,
+        "end": "2026-03-31",
+        "total": 0,
+        "days": 2,
+        "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
         "gulfTotal": 0,
@@ -7808,9 +7941,9 @@
         "period": "2026-W12",
         "start": "2026-03-16",
         "end": "2026-03-22",
-        "total": 11528,
+        "total": 11337,
         "days": 7,
-        "dailyAvg": 1646.9,
+        "dailyAvg": 1619.6,
         "allCountries": {},
         "allCountriesDaily": {},
         "gulfTotal": 0,
@@ -7835,10 +7968,10 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 755,
-        "days": 1,
-        "dailyAvg": 755.3,
+        "end": "2026-03-31",
+        "total": 2755,
+        "days": 2,
+        "dailyAvg": 1377.7,
         "allCountries": {},
         "allCountriesDaily": {},
         "gulfTotal": 0,
@@ -7901,9 +8034,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -7979,9 +8112,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -8045,9 +8178,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -8111,9 +8244,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -8177,9 +8310,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -8249,9 +8382,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -8315,9 +8448,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -8393,12 +8526,12 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 250,
-        "days": 1,
+        "end": "2026-03-31",
+        "total": 500,
+        "days": 2,
         "dailyAvg": 250,
         "allCountries": {
-          "Turkey": 250
+          "Turkey": 500
         },
         "allCountriesDaily": {
           "Turkey": 250
@@ -8465,9 +8598,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -8531,9 +8664,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -8597,9 +8730,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -8663,9 +8796,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -8729,9 +8862,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -8782,9 +8915,9 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-29",
-        "total": 91,
+        "total": 0,
         "days": 7,
-        "dailyAvg": 13,
+        "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
         "gulfTotal": 0,
@@ -8795,9 +8928,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -8861,9 +8994,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -8927,9 +9060,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -8993,9 +9126,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -9059,9 +9192,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -9125,9 +9258,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -9200,9 +9333,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -9272,9 +9405,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -9338,9 +9471,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -9404,9 +9537,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -9491,15 +9624,15 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 4020,
-        "days": 1,
-        "dailyAvg": 4020,
+        "days": 2,
+        "dailyAvg": 2010,
         "allCountries": {
           "China": 2135
         },
         "allCountriesDaily": {
-          "China": 2135
+          "China": 1067.5
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -9596,16 +9729,22 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 0,
-        "days": 1,
-        "dailyAvg": 0,
-        "allCountries": {},
-        "allCountriesDaily": {},
+        "end": "2026-03-31",
+        "total": 69,
+        "days": 2,
+        "dailyAvg": 34.4,
+        "allCountries": {
+          "India": 68.8
+        },
+        "allCountriesDaily": {
+          "India": 34.4
+        },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
-        "top5": []
+        "top5": [
+          "India"
+        ]
       }
     ]
   },
@@ -9662,9 +9801,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -9740,9 +9879,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -9833,9 +9972,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -9923,9 +10062,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -9995,9 +10134,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -10061,9 +10200,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -10133,9 +10272,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -10214,9 +10353,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -10280,9 +10419,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -10346,9 +10485,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -10412,9 +10551,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -10478,9 +10617,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -10544,9 +10683,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -10610,9 +10749,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -10688,7 +10827,7 @@
         "dailyAvg": 6647.5,
         "allCountries": {
           "Turkey": 3630.3,
-          "India": 9440.8,
+          "India": 8731,
           "Italy": 3189.3,
           "Netherlands": 3047.2,
           "Philippines": 1482.8,
@@ -10700,7 +10839,7 @@
         },
         "allCountriesDaily": {
           "Turkey": 518.6,
-          "India": 1348.7,
+          "India": 1247.3,
           "Italy": 455.6,
           "Netherlands": 435.3,
           "Philippines": 211.8,
@@ -10729,8 +10868,8 @@
         "days": 7,
         "dailyAvg": 5318.6,
         "allCountries": {
-          "India": 6335.1,
-          "Turkey": 4659.8,
+          "India": 6440.7,
+          "Turkey": 3838.2,
           "China": 9003.7,
           "Hong Kong": 509.5,
           "Italy": 4599.7,
@@ -10743,8 +10882,8 @@
           "Greece": 744.4
         },
         "allCountriesDaily": {
-          "India": 905,
-          "Turkey": 665.7,
+          "India": 920.1,
+          "Turkey": 548.3,
           "China": 1286.2,
           "Hong Kong": 72.8,
           "Italy": 657.1,
@@ -10762,35 +10901,38 @@
         "top5": [
           "China",
           "India",
-          "Turkey",
           "Italy",
+          "Turkey",
           "France"
         ]
       },
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 6296,
-        "days": 1,
-        "dailyAvg": 6296.3,
+        "end": "2026-03-31",
+        "total": 8367,
+        "days": 2,
+        "dailyAvg": 4183.4,
         "allCountries": {
           "India": 765.6,
           "Romania": 621.9,
-          "China": 600
+          "Spain": 1057.7,
+          "China": 1969.7
         },
         "allCountriesDaily": {
-          "India": 765.6,
-          "Romania": 621.9,
-          "China": 600
+          "India": 382.8,
+          "Romania": 311,
+          "Spain": 528.9,
+          "China": 984.9
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
+          "China",
+          "Spain",
           "India",
-          "Romania",
-          "China"
+          "Romania"
         ]
       }
     ]
@@ -10873,9 +11015,9 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-29",
-        "total": 569,
+        "total": 494,
         "days": 7,
-        "dailyAvg": 81.3,
+        "dailyAvg": 70.6,
         "allCountries": {
           "Belgium": 146.8,
           "Spain": 73.6,
@@ -10904,20 +11046,23 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 64,
-        "days": 1,
-        "dailyAvg": 64.3,
+        "end": "2026-03-31",
+        "total": 138,
+        "days": 2,
+        "dailyAvg": 69,
         "allCountries": {
-          "China": 64.3
+          "China": 64.3,
+          "France": 73.7
         },
         "allCountriesDaily": {
-          "China": 64.3
+          "China": 32.2,
+          "France": 36.9
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
+          "France",
           "China"
         ]
       }
@@ -10988,9 +11133,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -11054,9 +11199,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -11083,9 +11228,9 @@
         "days": 7,
         "dailyAvg": 1005.1,
         "allCountries": {
-          "Egypt": 1186.6,
           "Turkey": 2568.2,
           "Brazil": 746.2,
+          "Egypt": 492.4,
           "Ghana": 231.3,
           "Georgia": 261.1,
           "Morocco": 313.4,
@@ -11094,9 +11239,9 @@
           "Sudan": 223.8
         },
         "allCountriesDaily": {
-          "Egypt": 169.5,
           "Turkey": 366.9,
           "Brazil": 106.6,
+          "Egypt": 70.3,
           "Ghana": 33,
           "Georgia": 37.3,
           "Morocco": 44.8,
@@ -11109,8 +11254,8 @@
         "gulfShare": 0,
         "top5": [
           "Turkey",
-          "Egypt",
           "Brazil",
+          "Egypt",
           "Syria",
           "Morocco"
         ]
@@ -11123,7 +11268,7 @@
         "days": 7,
         "dailyAvg": 800.5,
         "allCountries": {
-          "Turkey": 1516.2,
+          "Turkey": 1740,
           "Brazil": 1421.2,
           "Ghana": 298.5,
           "Morocco": 373.1,
@@ -11131,7 +11276,7 @@
           "Taiwan": 298.5
         },
         "allCountriesDaily": {
-          "Turkey": 216.6,
+          "Turkey": 248.6,
           "Brazil": 203,
           "Ghana": 42.6,
           "Morocco": 53.3,
@@ -11178,15 +11323,15 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 261,
-        "days": 1,
-        "dailyAvg": 261.2,
+        "end": "2026-03-31",
+        "total": 1441,
+        "days": 2,
+        "dailyAvg": 720.3,
         "allCountries": {
-          "Turkey": 261.2
+          "Turkey": 435.9
         },
         "allCountriesDaily": {
-          "Turkey": 261.2
+          "Turkey": 218
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -11209,9 +11354,9 @@
         "period": "2026-W11",
         "start": "2026-03-09",
         "end": "2026-03-15",
-        "total": 284,
+        "total": 288,
         "days": 7,
-        "dailyAvg": 40.6,
+        "dailyAvg": 41.2,
         "allCountries": {
           "Libya": 262.5
         },
@@ -11256,9 +11401,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -11281,9 +11426,9 @@
         "period": "2026-W11",
         "start": "2026-03-09",
         "end": "2026-03-15",
-        "total": 4656,
+        "total": 4228,
         "days": 7,
-        "dailyAvg": 665.1,
+        "dailyAvg": 603.9,
         "allCountries": {
           "China": 1619.4,
           "Morocco": 173.5,
@@ -11313,18 +11458,18 @@
         "period": "2026-W12",
         "start": "2026-03-16",
         "end": "2026-03-22",
-        "total": 3280,
+        "total": 3528,
         "days": 7,
-        "dailyAvg": 468.6,
+        "dailyAvg": 504,
         "allCountries": {
-          "China": 510.7,
+          "China": 758.8,
           "Indonesia": 806.8,
           "India": 259.8,
           "Brazil": 520.5,
           "Morocco": 685.4
         },
         "allCountriesDaily": {
-          "China": 73,
+          "China": 108.4,
           "Indonesia": 115.3,
           "India": 37.1,
           "Brazil": 74.4,
@@ -11335,9 +11480,9 @@
         "gulfShare": 0,
         "top5": [
           "Indonesia",
+          "China",
           "Morocco",
           "Brazil",
-          "China",
           "India"
         ]
       },
@@ -11350,16 +11495,19 @@
         "dailyAvg": 350.5,
         "allCountries": {
           "Turkey": 320.6,
-          "India": 330.1
+          "China": 511.4,
+          "India": 355
         },
         "allCountriesDaily": {
           "Turkey": 45.8,
-          "India": 47.2
+          "China": 73.1,
+          "India": 50.7
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
+          "China",
           "India",
           "Turkey"
         ]
@@ -11367,9 +11515,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -11445,16 +11593,22 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 0,
-        "days": 1,
-        "dailyAvg": 0,
-        "allCountries": {},
-        "allCountriesDaily": {},
+        "end": "2026-03-31",
+        "total": 57,
+        "days": 2,
+        "dailyAvg": 28.6,
+        "allCountries": {
+          "Morocco": 57.2
+        },
+        "allCountriesDaily": {
+          "Morocco": 28.6
+        },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
-        "top5": []
+        "top5": [
+          "Morocco"
+        ]
       }
     ]
   },
@@ -11463,18 +11617,18 @@
     "country": "Saudi Arabia",
     "commodity": "crude",
     "unit": "kbd",
-    "hasPipeline": false,
-    "pipelineNote": "",
+    "hasPipeline": true,
+    "pipelineNote": "Includes Yanbu-SUMED pipeline (~1,500 kbd) to Egypt/Mediterranean since Mar 11 2026",
     "weeks": [
       {
         "period": "2026-W11",
         "start": "2026-03-09",
         "end": "2026-03-15",
-        "total": 19880,
+        "total": 28082,
         "days": 7,
-        "dailyAvg": 2840,
+        "dailyAvg": 4011.7,
         "allCountries": {
-          "Egypt": 2010,
+          "Egypt": 9510,
           "India": 5964.9,
           "Jordan": 1040.4,
           "South Korea": 2771.7,
@@ -11482,7 +11636,7 @@
           "China": 5990.3
         },
         "allCountriesDaily": {
-          "Egypt": 287.1,
+          "Egypt": 1358.6,
           "India": 852.1,
           "Jordan": 148.6,
           "South Korea": 396,
@@ -11493,10 +11647,10 @@
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
+          "Egypt",
           "China",
           "India",
           "South Korea",
-          "Egypt",
           "Jordan"
         ]
       },
@@ -11504,57 +11658,62 @@
         "period": "2026-W12",
         "start": "2026-03-16",
         "end": "2026-03-22",
-        "total": 26953,
+        "total": 37453,
         "days": 7,
-        "dailyAvg": 3850.4,
+        "dailyAvg": 5350.4,
         "allCountries": {
           "China": 12154.4,
           "India": 6593.9,
+          "Egypt": 12567,
           "Thailand": 1996.4,
           "Myanmar": 2010,
-          "Egypt": 2067
+          "South Korea": 2131.3
         },
         "allCountriesDaily": {
           "China": 1736.3,
           "India": 942,
+          "Egypt": 1795.3,
           "Thailand": 285.2,
           "Myanmar": 287.1,
-          "Egypt": 295.3
+          "South Korea": 304.5
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
+          "Egypt",
           "China",
           "India",
-          "Egypt",
-          "Myanmar",
-          "Thailand"
+          "South Korea",
+          "Myanmar"
         ]
       },
       {
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-29",
-        "total": 30827,
+        "total": 41327,
         "days": 7,
-        "dailyAvg": 4403.8,
+        "dailyAvg": 5903.8,
         "allCountries": {
           "China": 7777.8,
           "India": 7200.7,
           "Myanmar": 4001.4,
+          "Egypt": 10500,
           "Malaysia": 1038.1
         },
         "allCountriesDaily": {
           "China": 1111.1,
           "India": 1028.7,
           "Myanmar": 571.6,
+          "Egypt": 1500,
           "Malaysia": 148.3
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
+          "Egypt",
           "China",
           "India",
           "Myanmar",
@@ -11564,24 +11723,27 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 4131,
-        "days": 1,
-        "dailyAvg": 4130.8,
+        "end": "2026-03-31",
+        "total": 9141,
+        "days": 2,
+        "dailyAvg": 4570.4,
         "allCountries": {
-          "Egypt": 2120.8,
-          "South Korea": 2010
+          "Egypt": 5120.8,
+          "South Korea": 2010,
+          "China": 2010
         },
         "allCountriesDaily": {
-          "Egypt": 2120.8,
-          "South Korea": 2010
+          "Egypt": 2560.4,
+          "South Korea": 1005,
+          "China": 1005
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
           "Egypt",
-          "South Korea"
+          "South Korea",
+          "China"
         ]
       }
     ]
@@ -11639,9 +11801,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -11723,9 +11885,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -11766,10 +11928,10 @@
         "days": 7,
         "dailyAvg": 95.1,
         "allCountries": {
-          "United Kingdom": 320
+          "United Kingdom": 665.4
         },
         "allCountriesDaily": {
-          "United Kingdom": 45.7
+          "United Kingdom": 95.1
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -11795,9 +11957,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -11896,18 +12058,20 @@
         "days": 7,
         "dailyAvg": 542,
         "allCountries": {
-          "Egypt": 802.5,
+          "Egypt": 1305.7,
           "Belgium": 744.1,
           "Kenya": 235,
           "Pakistan": 306.4,
-          "Sudan": 132.8
+          "Sudan": 132.8,
+          "Djibouti": 332.3
         },
         "allCountriesDaily": {
-          "Egypt": 114.6,
+          "Egypt": 186.5,
           "Belgium": 106.3,
           "Kenya": 33.6,
           "Pakistan": 43.8,
-          "Sudan": 19
+          "Sudan": 19,
+          "Djibouti": 47.5
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -11915,24 +12079,30 @@
         "top5": [
           "Egypt",
           "Belgium",
+          "Djibouti",
           "Pakistan",
-          "Kenya",
-          "Sudan"
+          "Kenya"
         ]
       },
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 433,
-        "days": 1,
-        "dailyAvg": 432.8,
-        "allCountries": {},
-        "allCountriesDaily": {},
+        "end": "2026-03-31",
+        "total": 1696,
+        "days": 2,
+        "dailyAvg": 847.9,
+        "allCountries": {
+          "Egypt": 855.3
+        },
+        "allCountriesDaily": {
+          "Egypt": 427.7
+        },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
-        "top5": []
+        "top5": [
+          "Egypt"
+        ]
       }
     ]
   },
@@ -11982,13 +12152,13 @@
         "dailyAvg": 225.5,
         "allCountries": {
           "Jordan": 118.2,
-          "Malaysia": 315.9,
+          "Malaysia": 635.1,
           "Singapore Republic": 198.7,
           "Sudan": 132.8
         },
         "allCountriesDaily": {
           "Jordan": 16.9,
-          "Malaysia": 45.1,
+          "Malaysia": 90.7,
           "Singapore Republic": 28.4,
           "Sudan": 19
         },
@@ -12031,9 +12201,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -12115,9 +12285,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -12187,9 +12357,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -12212,13 +12382,13 @@
         "period": "2026-W11",
         "start": "2026-03-09",
         "end": "2026-03-15",
-        "total": 15105,
+        "total": 15000,
         "days": 7,
-        "dailyAvg": 2157.8,
+        "dailyAvg": 2142.9,
         "allCountries": {
           "South Korea": 3900,
           "Thailand": 5500,
-          "Pakistan": 404.5,
+          "Pakistan": 300,
           "India": 1300,
           "Singapore Republic": 900,
           "Japan": 1200,
@@ -12227,7 +12397,7 @@
         "allCountriesDaily": {
           "South Korea": 557.1,
           "Thailand": 785.7,
-          "Pakistan": 57.8,
+          "Pakistan": 42.9,
           "India": 185.7,
           "Singapore Republic": 128.6,
           "Japan": 171.4,
@@ -12248,17 +12418,17 @@
         "period": "2026-W12",
         "start": "2026-03-16",
         "end": "2026-03-22",
-        "total": 8629,
+        "total": 8229,
         "days": 7,
-        "dailyAvg": 1232.7,
+        "dailyAvg": 1175.6,
         "allCountries": {
           "Pakistan": 800,
-          "India": 3900,
+          "India": 1900,
           "China": 100
         },
         "allCountriesDaily": {
           "Pakistan": 114.3,
-          "India": 557.1,
+          "India": 271.4,
           "China": 14.3
         },
         "gulfTotal": 0,
@@ -12307,21 +12477,24 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 650,
-        "days": 1,
-        "dailyAvg": 650,
+        "end": "2026-03-31",
+        "total": 969,
+        "days": 2,
+        "dailyAvg": 484.6,
         "allCountries": {
-          "Pakistan": 650
+          "Pakistan": 350,
+          "India": 319.2
         },
         "allCountriesDaily": {
-          "Pakistan": 650
+          "Pakistan": 175,
+          "India": 159.6
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
-          "Pakistan"
+          "Pakistan",
+          "India"
         ]
       }
     ]
@@ -12379,9 +12552,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -12445,9 +12618,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -12511,9 +12684,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -12583,9 +12756,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -12649,9 +12822,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -12721,9 +12894,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -12787,9 +12960,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -12812,9 +12985,9 @@
         "period": "2026-W11",
         "start": "2026-03-09",
         "end": "2026-03-15",
-        "total": 26902,
+        "total": 27127,
         "days": 7,
-        "dailyAvg": 3843.1,
+        "dailyAvg": 3875.2,
         "allCountries": {
           "Brazil": 700,
           "Greece": 707,
@@ -12824,14 +12997,15 @@
           "India": 1207,
           "United Kingdom": 2615,
           "South Korea": 4114,
+          "Curacao": 127.8,
+          "Dominican Republic": 597.2,
           "Netherlands": 4220,
           "Singapore Republic": 735,
           "Nicaragua": 305,
           "Taiwan": 2094,
           "France": 2119.5,
           "Sweden": 1036.7,
-          "Thailand": 760,
-          "Dominican Republic": 500
+          "Thailand": 760
         },
         "allCountriesDaily": {
           "Brazil": 100,
@@ -12842,14 +13016,15 @@
           "India": 172.4,
           "United Kingdom": 373.6,
           "South Korea": 587.7,
+          "Curacao": 18.3,
+          "Dominican Republic": 85.3,
           "Netherlands": 602.9,
           "Singapore Republic": 105,
           "Nicaragua": 43.6,
           "Taiwan": 299.1,
           "France": 302.8,
           "Sweden": 148.1,
-          "Thailand": 108.6,
-          "Dominican Republic": 71.4
+          "Thailand": 108.6
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -12866,117 +13041,132 @@
         "period": "2026-W12",
         "start": "2026-03-16",
         "end": "2026-03-22",
-        "total": 26791,
+        "total": 28001,
         "days": 7,
-        "dailyAvg": 3827.2,
+        "dailyAvg": 4000.1,
         "allCountries": {
           "South Korea": 5647,
-          "Japan": 2089,
+          "Japan": 4058.6,
           "United Kingdom": 2606.7,
           "India": 1500,
           "Canada": 3624.7,
           "Colombia": 900,
           "Netherlands": 2113,
-          "Ireland": 500,
-          "Thailand": 950,
+          "Thailand": 770,
+          "Ireland": 623,
           "Italy": 1264.2,
-          "France": 900
+          "France": 1047.7
         },
         "allCountriesDaily": {
           "South Korea": 806.7,
-          "Japan": 298.4,
+          "Japan": 579.8,
           "United Kingdom": 372.4,
           "India": 214.3,
           "Canada": 517.8,
           "Colombia": 128.6,
           "Netherlands": 301.9,
-          "Ireland": 71.4,
-          "Thailand": 135.7,
+          "Thailand": 110,
+          "Ireland": 89,
           "Italy": 180.6,
-          "France": 128.6
+          "France": 149.7
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
           "South Korea",
+          "Japan",
           "Canada",
           "United Kingdom",
-          "Netherlands",
-          "Japan"
+          "Netherlands"
         ]
       },
       {
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-29",
-        "total": 30280,
+        "total": 31093,
         "days": 7,
-        "dailyAvg": 4325.7,
+        "dailyAvg": 4441.9,
         "allCountries": {
-          "Netherlands": 4900.7,
-          "Denmark": 1440,
-          "South Korea": 3545,
+          "Netherlands": 4980.7,
+          "Denmark": 1435,
+          "South Korea": 2145,
           "United Kingdom": 1400,
-          "Spain": 2105.7,
+          "Japan": 3406.3,
+          "Spain": 2166.2,
           "Brazil": 700,
           "India": 1741,
-          "Japan": 2000,
+          "Colombia": 1000,
+          "Australia": 603,
           "Canada": 700,
-          "Colombia": 500,
           "Peru": 500,
+          "Taiwan": 1417.5,
           "Bahamas": 705,
           "China": 1570,
-          "Dominican Republic": 503.5
+          "Dominican Republic": 503.5,
+          "Panama": 705
         },
         "allCountriesDaily": {
-          "Netherlands": 700.1,
-          "Denmark": 205.7,
-          "South Korea": 506.4,
+          "Netherlands": 711.5,
+          "Denmark": 205,
+          "South Korea": 306.4,
           "United Kingdom": 200,
-          "Spain": 300.8,
+          "Japan": 486.6,
+          "Spain": 309.5,
           "Brazil": 100,
           "India": 248.7,
-          "Japan": 285.7,
+          "Colombia": 142.9,
+          "Australia": 86.1,
           "Canada": 100,
-          "Colombia": 71.4,
           "Peru": 71.4,
+          "Taiwan": 202.5,
           "Bahamas": 100.7,
           "China": 224.3,
-          "Dominican Republic": 71.9
+          "Dominican Republic": 71.9,
+          "Panama": 100.7
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
           "Netherlands",
-          "South Korea",
-          "Spain",
           "Japan",
+          "Spain",
+          "South Korea",
           "India"
         ]
       },
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 2805,
-        "days": 1,
-        "dailyAvg": 2805,
+        "end": "2026-03-31",
+        "total": 6589,
+        "days": 2,
+        "dailyAvg": 3294.7,
         "allCountries": {
           "Netherlands": 700,
-          "Sweden": 700
+          "Sweden": 760,
+          "France": 1515,
+          "Barbados": 810,
+          "Germany": 700
         },
         "allCountriesDaily": {
-          "Netherlands": 700,
-          "Sweden": 700
+          "Netherlands": 350,
+          "Sweden": 380,
+          "France": 757.5,
+          "Barbados": 405,
+          "Germany": 350
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
+          "France",
+          "Barbados",
+          "Sweden",
           "Netherlands",
-          "Sweden"
+          "Germany"
         ]
       }
     ]
@@ -13114,11 +13304,11 @@
         "dailyAvg": 375.9,
         "allCountries": {
           "South Korea": 145.5,
-          "France": 220.7,
+          "France": 148,
           "Thailand": 239.9,
           "Belgium": 105.6,
-          "Netherlands": 466.4,
-          "Spain": 209.6,
+          "Netherlands": 539.2,
+          "Spain": 136.9,
           "Dominican Republic": 72.5,
           "Egypt": 221.1,
           "Bangladesh": 72.7,
@@ -13128,11 +13318,11 @@
         },
         "allCountriesDaily": {
           "South Korea": 20.8,
-          "France": 31.5,
+          "France": 21.1,
           "Thailand": 34.3,
           "Belgium": 15.1,
-          "Netherlands": 66.6,
-          "Spain": 29.9,
+          "Netherlands": 77,
+          "Spain": 19.6,
           "Dominican Republic": 10.4,
           "Egypt": 31.6,
           "Bangladesh": 10.4,
@@ -13148,27 +13338,36 @@
           "Thailand",
           "Egypt",
           "France",
-          "Spain"
+          "South Korea"
         ]
       },
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 364,
-        "days": 1,
-        "dailyAvg": 363.7,
+        "end": "2026-03-31",
+        "total": 869,
+        "days": 2,
+        "dailyAvg": 434.4,
         "allCountries": {
-          "India": 72.7
+          "India": 72.7,
+          "South Korea": 72.7,
+          "France": 72.7,
+          "Japan": 72.7
         },
         "allCountriesDaily": {
-          "India": 72.7
+          "India": 36.4,
+          "South Korea": 36.4,
+          "France": 36.4,
+          "Japan": 36.4
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
-          "India"
+          "India",
+          "South Korea",
+          "France",
+          "Japan"
         ]
       }
     ]
@@ -13253,9 +13452,9 @@
         "period": "2026-W12",
         "start": "2026-03-16",
         "end": "2026-03-22",
-        "total": 894,
+        "total": 868,
         "days": 7,
-        "dailyAvg": 127.7,
+        "dailyAvg": 124,
         "allCountries": {
           "Japan": 196.7,
           "Netherlands": 46.2,
@@ -13268,13 +13467,13 @@
           "Colombia": 15.6,
           "Panama": 2.8,
           "Taiwan": 75.1,
-          "Mexico": 47.7,
           "Bahamas": 1.7,
           "Honduras": 1.7,
+          "Mexico": 41.6,
           "South Korea": 44.3,
           "United States Virgin Islands": 6,
-          "Egypt": 11.8,
-          "Indonesia": 46.6,
+          "Egypt": 11.3,
+          "Indonesia": 48,
           "Peru": 14.6
         },
         "allCountriesDaily": {
@@ -13289,13 +13488,13 @@
           "Colombia": 2.2,
           "Panama": 0.4,
           "Taiwan": 10.7,
-          "Mexico": 6.8,
           "Bahamas": 0.2,
           "Honduras": 0.2,
+          "Mexico": 5.9,
           "South Korea": 6.3,
           "United States Virgin Islands": 0.9,
-          "Egypt": 1.7,
-          "Indonesia": 6.7,
+          "Egypt": 1.6,
+          "Indonesia": 6.9,
           "Peru": 2.1
         },
         "gulfTotal": 0,
@@ -13304,28 +13503,28 @@
         "top5": [
           "Japan",
           "Taiwan",
-          "Mexico",
           "Indonesia",
-          "India"
+          "India",
+          "Netherlands"
         ]
       },
       {
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-29",
-        "total": 1186,
+        "total": 1177,
         "days": 7,
-        "dailyAvg": 169.4,
+        "dailyAvg": 168.2,
         "allCountries": {
           "Japan": 205.2,
           "Honduras": 37.3,
           "Vietnam": 44,
-          "China": 98.4,
+          "China": 92.4,
           "India": 22.1,
           "Indonesia": 93.3,
           "France": 46.1,
           "Jamaica": 2.8,
-          "Mexico": 58.5,
+          "Mexico": 56,
           "Netherlands": 61.4,
           "South Korea": 67.5,
           "Tanzania": 12.8,
@@ -13337,12 +13536,12 @@
           "Japan": 29.3,
           "Honduras": 5.3,
           "Vietnam": 6.3,
-          "China": 14.1,
+          "China": 13.2,
           "India": 3.2,
           "Indonesia": 13.3,
           "France": 6.6,
           "Jamaica": 0.4,
-          "Mexico": 8.4,
+          "Mexico": 8,
           "Netherlands": 8.8,
           "South Korea": 9.6,
           "Tanzania": 1.8,
@@ -13355,8 +13554,8 @@
         "gulfShare": 0,
         "top5": [
           "Japan",
-          "China",
           "Indonesia",
+          "China",
           "South Korea",
           "Netherlands"
         ]
@@ -13364,27 +13563,37 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 213,
-        "days": 1,
-        "dailyAvg": 212.6,
+        "end": "2026-03-31",
+        "total": 328,
+        "days": 2,
+        "dailyAvg": 163.8,
         "allCountries": {
           "Egypt": 25,
           "Netherlands": 46.1,
-          "Thailand": 45.5
+          "Thailand": 45.5,
+          "Honduras": 6,
+          "India": 49.4,
+          "Indonesia": 24.7,
+          "Morocco": 23.8
         },
         "allCountriesDaily": {
-          "Egypt": 25,
-          "Netherlands": 46.1,
-          "Thailand": 45.5
+          "Egypt": 12.5,
+          "Netherlands": 23.1,
+          "Thailand": 22.8,
+          "Honduras": 3,
+          "India": 24.7,
+          "Indonesia": 12.4,
+          "Morocco": 11.9
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
+          "India",
           "Netherlands",
           "Thailand",
-          "Egypt"
+          "Egypt",
+          "Indonesia"
         ]
       }
     ]
@@ -13435,18 +13644,19 @@
         "period": "2026-W12",
         "start": "2026-03-16",
         "end": "2026-03-22",
-        "total": 2253,
+        "total": 2284,
         "days": 7,
-        "dailyAvg": 321.9,
+        "dailyAvg": 326.2,
         "allCountries": {
           "United Kingdom": 584.9,
           "Cayman Islands": 52.3,
           "Ecuador": 225,
-          "Honduras": 107.6,
           "Belize": 15,
+          "Honduras": 138,
           "Canada": 362.7,
           "Panama": 60.8,
-          "Aruba": 219,
+          "Aruba": 170.1,
+          "Dominican Republic": 48.9,
           "Mexico": 270,
           "Peru": 56
         },
@@ -13454,11 +13664,12 @@
           "United Kingdom": 83.6,
           "Cayman Islands": 7.5,
           "Ecuador": 32.1,
-          "Honduras": 15.4,
           "Belize": 2.1,
+          "Honduras": 19.7,
           "Canada": 51.8,
           "Panama": 8.7,
-          "Aruba": 31.3,
+          "Aruba": 24.3,
+          "Dominican Republic": 7,
           "Mexico": 38.6,
           "Peru": 8
         },
@@ -13477,11 +13688,12 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-29",
-        "total": 1995,
+        "total": 2100,
         "days": 7,
-        "dailyAvg": 285,
+        "dailyAvg": 300,
         "allCountries": {
-          "United Kingdom": 304.8,
+          "Dominican Republic": 105,
+          "United Kingdom": 583.6,
           "Jamaica": 33.3,
           "Panama": 61.3,
           "Peru": 78.3,
@@ -13490,7 +13702,8 @@
           "Honduras": 60.5
         },
         "allCountriesDaily": {
-          "United Kingdom": 43.5,
+          "Dominican Republic": 15,
+          "United Kingdom": 83.4,
           "Jamaica": 4.8,
           "Panama": 8.8,
           "Peru": 11.2,
@@ -13505,23 +13718,29 @@
           "United Kingdom",
           "Netherlands",
           "Costa Rica",
-          "Peru",
-          "Panama"
+          "Dominican Republic",
+          "Peru"
         ]
       },
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 304,
-        "days": 1,
-        "dailyAvg": 304,
-        "allCountries": {},
-        "allCountriesDaily": {},
+        "end": "2026-03-31",
+        "total": 566,
+        "days": 2,
+        "dailyAvg": 283.2,
+        "allCountries": {
+          "Venezuela": 262.4
+        },
+        "allCountriesDaily": {
+          "Venezuela": 131.2
+        },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
-        "top5": []
+        "top5": [
+          "Venezuela"
+        ]
       }
     ]
   },
@@ -13541,18 +13760,18 @@
         "days": 7,
         "dailyAvg": 1200.7,
         "allCountries": {
-          "Angola": 285,
           "Colombia": 639.8,
           "Chile": 1095.4,
           "Peru": 1134.3,
           "Saint Lucia": 297,
+          "Togo": 116,
           "Mexico": 927.4,
           "South Africa": 947.5,
           "El Salvador": 150,
           "France": 184.5,
-          "Honduras": 92.2,
-          "Netherlands": 63.5,
-          "Panama": 903.2,
+          "Honduras": 119.2,
+          "Panama": 876.2,
+          "United Kingdom": 63.5,
           "Australia": 300,
           "Trinidad and Tobago": 285,
           "Bahamas": 140.1,
@@ -13562,18 +13781,18 @@
           "Norway": 311.1
         },
         "allCountriesDaily": {
-          "Angola": 40.7,
           "Colombia": 91.4,
           "Chile": 156.5,
           "Peru": 162,
           "Saint Lucia": 42.4,
+          "Togo": 16.6,
           "Mexico": 132.5,
           "South Africa": 135.4,
           "El Salvador": 21.4,
           "France": 26.4,
-          "Honduras": 13.2,
-          "Netherlands": 9.1,
-          "Panama": 129,
+          "Honduras": 17,
+          "Panama": 125.2,
+          "United Kingdom": 9.1,
           "Australia": 42.9,
           "Trinidad and Tobago": 40.7,
           "Bahamas": 20,
@@ -13597,43 +13816,45 @@
         "period": "2026-W12",
         "start": "2026-03-16",
         "end": "2026-03-22",
-        "total": 6704,
+        "total": 6586,
         "days": 7,
-        "dailyAvg": 957.8,
+        "dailyAvg": 940.9,
         "allCountries": {
           "Australia": 300,
           "Guatemala": 450,
-          "Mexico": 571.1,
+          "Mexico": 413.4,
           "Netherlands": 1055,
+          "Honduras": 284,
           "Cayman Islands": 85.3,
           "Costa Rica": 304,
-          "Honduras": 309.1,
           "United Kingdom": 888.9,
           "United States Virgin Islands": 300,
           "Belize": 55,
           "Ecuador": 878.5,
+          "Chile": 109.9,
           "Panama": 121.6,
           "South Africa": 300,
-          "Aruba": 6.2,
-          "Dominican Republic": 93.8,
+          "Dominican Republic": 100,
+          "Togo": 300,
           "Peru": 76
         },
         "allCountriesDaily": {
           "Australia": 42.9,
           "Guatemala": 64.3,
-          "Mexico": 81.6,
+          "Mexico": 59.1,
           "Netherlands": 150.7,
+          "Honduras": 40.6,
           "Cayman Islands": 12.2,
           "Costa Rica": 43.4,
-          "Honduras": 44.2,
           "United Kingdom": 127,
           "United States Virgin Islands": 42.9,
           "Belize": 7.9,
           "Ecuador": 125.5,
+          "Chile": 15.7,
           "Panama": 17.4,
           "South Africa": 42.9,
-          "Aruba": 0.9,
-          "Dominican Republic": 13.4,
+          "Dominican Republic": 14.3,
+          "Togo": 42.9,
           "Peru": 10.9
         },
         "gulfTotal": 0,
@@ -13643,46 +13864,50 @@
           "Netherlands",
           "United Kingdom",
           "Ecuador",
-          "Mexico",
-          "Guatemala"
+          "Guatemala",
+          "Mexico"
         ]
       },
       {
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-29",
-        "total": 11041,
+        "total": 11167,
         "days": 7,
-        "dailyAvg": 1577.2,
+        "dailyAvg": 1595.3,
         "allCountries": {
-          "Chile": 454,
+          "Chile": 759,
           "Morocco": 304,
           "Netherlands": 2775.2,
+          "Panama": 271,
           "Peru": 714.3,
           "Australia": 607.4,
-          "Colombia": 280.2,
+          "Colombia": 230,
           "Mexico": 235,
-          "Jamaica": 66.7,
-          "Panama": 122.5,
+          "Togo": 291,
+          "Jamaica": 366.7,
           "United Kingdom": 903.4,
+          "Trinidad and Tobago": 285,
           "Costa Rica": 151.9,
-          "Trinidad and Tobago": 300,
+          "Guatemala": 300,
           "Bahamas": 302.8,
-          "Honduras": 121
+          "Honduras": 121.1
         },
         "allCountriesDaily": {
-          "Chile": 64.9,
+          "Chile": 108.4,
           "Morocco": 43.4,
           "Netherlands": 396.5,
+          "Panama": 38.7,
           "Peru": 102,
           "Australia": 86.8,
-          "Colombia": 40,
+          "Colombia": 32.9,
           "Mexico": 33.6,
-          "Jamaica": 9.5,
-          "Panama": 17.5,
+          "Togo": 41.6,
+          "Jamaica": 52.4,
           "United Kingdom": 129.1,
+          "Trinidad and Tobago": 40.7,
           "Costa Rica": 21.7,
-          "Trinidad and Tobago": 42.9,
+          "Guatemala": 42.9,
           "Bahamas": 43.3,
           "Honduras": 17.3
         },
@@ -13692,32 +13917,35 @@
         "top5": [
           "Netherlands",
           "United Kingdom",
+          "Chile",
           "Peru",
-          "Australia",
-          "Chile"
+          "Australia"
         ]
       },
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 907,
-        "days": 1,
-        "dailyAvg": 907,
+        "end": "2026-03-31",
+        "total": 1537,
+        "days": 2,
+        "dailyAvg": 768.3,
         "allCountries": {
           "Netherlands": 156.7,
           "Peru": 173.6,
-          "United States Virgin Islands": 302.5
+          "United States Virgin Islands": 302.5,
+          "United Kingdom": 303.9
         },
         "allCountriesDaily": {
-          "Netherlands": 156.7,
-          "Peru": 173.6,
-          "United States Virgin Islands": 302.5
+          "Netherlands": 78.4,
+          "Peru": 86.8,
+          "United States Virgin Islands": 151.3,
+          "United Kingdom": 152
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
+          "United Kingdom",
           "United States Virgin Islands",
           "Peru",
           "Netherlands"
@@ -13737,18 +13965,17 @@
         "period": "2026-W11",
         "start": "2026-03-09",
         "end": "2026-03-15",
-        "total": 5705,
+        "total": 5780,
         "days": 7,
-        "dailyAvg": 814.9,
+        "dailyAvg": 825.7,
         "allCountries": {
           "Chile": 316.5,
-          "Honduras": 357.8,
+          "Honduras": 330.8,
           "Mexico": 2177.8,
-          "Curacao": 127.8,
-          "Dominican Republic": 193.4,
+          "Dominican Republic": 96.2,
           "Guatemala": 150,
           "Haiti": 119.6,
-          "Panama": 171.9,
+          "Panama": 198.9,
           "Colombia": 972.1,
           "Ecuador": 643,
           "Jamaica": 233.8,
@@ -13756,13 +13983,12 @@
         },
         "allCountriesDaily": {
           "Chile": 45.2,
-          "Honduras": 51.1,
+          "Honduras": 47.3,
           "Mexico": 311.1,
-          "Curacao": 18.3,
-          "Dominican Republic": 27.6,
+          "Dominican Republic": 13.7,
           "Guatemala": 21.4,
           "Haiti": 17.1,
-          "Panama": 24.6,
+          "Panama": 28.4,
           "Colombia": 138.9,
           "Ecuador": 91.9,
           "Jamaica": 33.4,
@@ -13783,35 +14009,39 @@
         "period": "2026-W12",
         "start": "2026-03-16",
         "end": "2026-03-22",
-        "total": 5214,
+        "total": 5603,
         "days": 7,
-        "dailyAvg": 744.9,
+        "dailyAvg": 800.5,
         "allCountries": {
           "Dominican Republic": 144.6,
-          "Mexico": 1988.6,
+          "Mexico": 2181.6,
           "El Salvador": 107.1,
           "Guatemala": 347.9,
-          "Honduras": 251.3,
+          "Honduras": 277.2,
           "Bahamas": 287,
           "Costa Rica": 315.3,
           "Peru": 173,
           "Trinidad and Tobago": 325,
-          "Australia": 450,
+          "Australia": 610,
+          "Chile": 197.5,
           "Panama": 121.6,
+          "Colombia": 160,
           "Ecuador": 300
         },
         "allCountriesDaily": {
           "Dominican Republic": 20.7,
-          "Mexico": 284.1,
+          "Mexico": 311.7,
           "El Salvador": 15.3,
           "Guatemala": 49.7,
-          "Honduras": 35.9,
+          "Honduras": 39.6,
           "Bahamas": 41,
           "Costa Rica": 45,
           "Peru": 24.7,
           "Trinidad and Tobago": 46.4,
-          "Australia": 64.3,
+          "Australia": 87.1,
+          "Chile": 28.2,
           "Panama": 17.4,
+          "Colombia": 22.9,
           "Ecuador": 42.9
         },
         "gulfTotal": 0,
@@ -13829,9 +14059,9 @@
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-29",
-        "total": 5021,
+        "total": 4848,
         "days": 7,
-        "dailyAvg": 717.3,
+        "dailyAvg": 692.6,
         "allCountries": {
           "Chile": 150,
           "Colombia": 426,
@@ -13839,7 +14069,7 @@
           "Bahamas": 119.2,
           "Cayman Islands": 9.8,
           "Jamaica": 200,
-          "Mexico": 1065.5,
+          "Mexico": 1001.5,
           "Dominican Republic": 300,
           "Panama": 122.5,
           "Argentina": 174,
@@ -13852,7 +14082,7 @@
           "Bahamas": 17,
           "Cayman Islands": 1.4,
           "Jamaica": 28.6,
-          "Mexico": 152.2,
+          "Mexico": 143.1,
           "Dominican Republic": 42.9,
           "Panama": 17.5,
           "Argentina": 24.9,
@@ -13872,20 +14102,23 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 143,
-        "days": 1,
-        "dailyAvg": 142.7,
+        "end": "2026-03-31",
+        "total": 1173,
+        "days": 2,
+        "dailyAvg": 586.5,
         "allCountries": {
-          "Belize": 142.7
+          "Belize": 142.7,
+          "Mexico": 442.3
         },
         "allCountriesDaily": {
-          "Belize": 142.7
+          "Belize": 71.4,
+          "Mexico": 221.2
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
+          "Mexico",
           "Belize"
         ]
       }
@@ -13937,26 +14170,26 @@
         "period": "2026-W12",
         "start": "2026-03-16",
         "end": "2026-03-22",
-        "total": 5169,
+        "total": 5315,
         "days": 7,
-        "dailyAvg": 738.4,
+        "dailyAvg": 759.3,
         "allCountries": {
           "Brazil": 611.1,
           "South Korea": 1421.4,
           "Ecuador": 262.6,
           "Japan": 579.8,
-          "Mexico": 611.2,
-          "Chile": 302.8,
-          "Colombia": 304
+          "Mexico": 884.6,
+          "Venezuela": 450.1,
+          "Chile": 302.8
         },
         "allCountriesDaily": {
           "Brazil": 87.3,
           "South Korea": 203.1,
           "Ecuador": 37.5,
           "Japan": 82.8,
-          "Mexico": 87.3,
-          "Chile": 43.3,
-          "Colombia": 43.4
+          "Mexico": 126.4,
+          "Venezuela": 64.3,
+          "Chile": 43.3
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -13966,48 +14199,63 @@
           "Mexico",
           "Brazil",
           "Japan",
-          "Colombia"
+          "Venezuela"
         ]
       },
       {
         "period": "2026-W13",
         "start": "2026-03-23",
         "end": "2026-03-29",
-        "total": 2704,
+        "total": 3519,
         "days": 7,
-        "dailyAvg": 386.3,
+        "dailyAvg": 502.7,
         "allCountries": {
-          "Venezuela": 748.7,
+          "Brazil": 525,
+          "Venezuela": 715,
           "Japan": 226.8,
-          "Colombia": 320
+          "Colombia": 320,
+          "Guatemala": 300
         },
         "allCountriesDaily": {
-          "Venezuela": 107,
+          "Brazil": 75,
+          "Venezuela": 102.1,
           "Japan": 32.4,
-          "Colombia": 45.7
+          "Colombia": 45.7,
+          "Guatemala": 42.9
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
           "Venezuela",
+          "Brazil",
           "Colombia",
+          "Guatemala",
           "Japan"
         ]
       },
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 0,
-        "days": 1,
-        "dailyAvg": 0,
-        "allCountries": {},
-        "allCountriesDaily": {},
+        "end": "2026-03-31",
+        "total": 604,
+        "days": 2,
+        "dailyAvg": 301.9,
+        "allCountries": {
+          "Japan": 302.7,
+          "United Kingdom": 301.1
+        },
+        "allCountriesDaily": {
+          "Japan": 151.4,
+          "United Kingdom": 150.6
+        },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
-        "top5": []
+        "top5": [
+          "Japan",
+          "United Kingdom"
+        ]
       }
     ]
   },
@@ -14070,21 +14318,24 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 56,
-        "days": 1,
-        "dailyAvg": 55.6,
+        "end": "2026-03-31",
+        "total": 77,
+        "days": 2,
+        "dailyAvg": 38.6,
         "allCountries": {
-          "Trinidad and Tobago": 55.6
+          "Trinidad and Tobago": 55.6,
+          "Brazil": 21.6
         },
         "allCountriesDaily": {
-          "Trinidad and Tobago": 55.6
+          "Trinidad and Tobago": 27.8,
+          "Brazil": 10.8
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
-          "Trinidad and Tobago"
+          "Trinidad and Tobago",
+          "Brazil"
         ]
       }
     ]
@@ -14132,21 +14383,18 @@
         "dailyAvg": 267,
         "allCountries": {
           "Singapore Republic": 650,
-          "South Korea": 648.7,
-          "Japan": 570
+          "South Korea": 648.7
         },
         "allCountriesDaily": {
           "Singapore Republic": 92.9,
-          "South Korea": 92.7,
-          "Japan": 81.4
+          "South Korea": 92.7
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
           "Singapore Republic",
-          "South Korea",
-          "Japan"
+          "South Korea"
         ]
       },
       {
@@ -14157,34 +14405,37 @@
         "days": 7,
         "dailyAvg": 182.5,
         "allCountries": {
-          "South Korea": 743.2,
-          "Japan": 206.3
+          "South Korea": 743.2
         },
         "allCountriesDaily": {
-          "South Korea": 106.2,
-          "Japan": 29.5
+          "South Korea": 106.2
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
         "top5": [
-          "South Korea",
-          "Japan"
+          "South Korea"
         ]
       },
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 0,
-        "days": 1,
-        "dailyAvg": 0,
-        "allCountries": {},
-        "allCountriesDaily": {},
+        "end": "2026-03-31",
+        "total": 647,
+        "days": 2,
+        "dailyAvg": 323.5,
+        "allCountries": {
+          "Japan": 647
+        },
+        "allCountriesDaily": {
+          "Japan": 323.5
+        },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
-        "top5": []
+        "top5": [
+          "Japan"
+        ]
       }
     ]
   },
@@ -14244,18 +14495,18 @@
         "allCountries": {
           "Japan": 338.8,
           "South Korea": 343.2,
+          "Malaysia": 59.8,
           "Bangladesh": 74.3,
           "China": 311.6,
-          "Malaysia": 59.8,
           "Thailand": 113.9,
           "Taiwan": 340.9
         },
         "allCountriesDaily": {
           "Japan": 48.4,
           "South Korea": 49,
+          "Malaysia": 8.5,
           "Bangladesh": 10.6,
           "China": 44.5,
-          "Malaysia": 8.5,
           "Thailand": 16.3,
           "Taiwan": 48.7
         },
@@ -14307,21 +14558,21 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 271,
-        "days": 1,
-        "dailyAvg": 270.8,
+        "end": "2026-03-31",
+        "total": 341,
+        "days": 2,
+        "dailyAvg": 170.6,
         "allCountries": {
           "China": 61.8,
-          "Japan": 76,
+          "Japan": 146.4,
           "South Korea": 68.3,
           "Taiwan": 64.7
         },
         "allCountriesDaily": {
-          "China": 61.8,
-          "Japan": 76,
-          "South Korea": 68.3,
-          "Taiwan": 64.7
+          "China": 30.9,
+          "Japan": 73.2,
+          "South Korea": 34.2,
+          "Taiwan": 32.4
         },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
@@ -14403,16 +14654,22 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
-        "total": 0,
-        "days": 1,
-        "dailyAvg": 0,
-        "allCountries": {},
-        "allCountriesDaily": {},
+        "end": "2026-03-31",
+        "total": 25,
+        "days": 2,
+        "dailyAvg": 12.5,
+        "allCountries": {
+          "China": 25
+        },
+        "allCountriesDaily": {
+          "China": 12.5
+        },
         "gulfTotal": 0,
         "gulfDailyAvg": 0,
         "gulfShare": 0,
-        "top5": []
+        "top5": [
+          "China"
+        ]
       }
     ]
   },
@@ -14469,9 +14726,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -14535,9 +14792,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -14601,9 +14858,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -14673,9 +14930,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
@@ -14739,9 +14996,9 @@
       {
         "period": "2026-W14",
         "start": "2026-03-30",
-        "end": "2026-03-30",
+        "end": "2026-03-31",
         "total": 0,
-        "days": 1,
+        "days": 2,
         "dailyAvg": 0,
         "allCountries": {},
         "allCountriesDaily": {},
