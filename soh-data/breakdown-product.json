@@ -9,20 +9,20 @@
     {
       "label": "Dry Bulk",
       "total": 52,
-      "ballast": 30,
-      "laden": 22
+      "ballast": 29,
+      "laden": 23
     },
     {
       "label": "Naphtha",
-      "total": 45,
-      "ballast": 33,
+      "total": 44,
+      "ballast": 32,
       "laden": 12
     },
     {
       "label": "Clean petroleum products",
       "total": 41,
-      "ballast": 10,
-      "laden": 31
+      "ballast": 9,
+      "laden": 32
     },
     {
       "label": "Iran",
@@ -33,8 +33,8 @@
     {
       "label": "High Sulphur Straight Run Fuel Oil",
       "total": 34,
-      "ballast": 6,
-      "laden": 28
+      "ballast": 7,
+      "laden": 27
     },
     {
       "label": "Corn",
@@ -57,26 +57,26 @@
     {
       "label": "lng",
       "total": 21,
-      "ballast": 7,
-      "laden": 14
-    },
-    {
-      "label": "Butane",
-      "total": 21,
-      "ballast": 12,
-      "laden": 9
+      "ballast": 6,
+      "laden": 15
     },
     {
       "label": "Urea",
-      "total": 20,
+      "total": 21,
       "ballast": 1,
-      "laden": 19
+      "laden": 20
     },
     {
       "label": "Arab",
       "total": 20,
       "ballast": 2,
       "laden": 18
+    },
+    {
+      "label": "Butane",
+      "total": 20,
+      "ballast": 12,
+      "laden": 8
     },
     {
       "label": "Methanol",
@@ -91,16 +91,22 @@
       "laden": 6
     },
     {
-      "label": "Minor Bulks",
-      "total": 14,
-      "ballast": 9,
-      "laden": 5
+      "label": "Propane",
+      "total": 15,
+      "ballast": 8,
+      "laden": 7
     },
     {
-      "label": "Propane",
+      "label": "Cement",
       "total": 14,
+      "ballast": 5,
+      "laden": 9
+    },
+    {
+      "label": "Minor Bulks",
+      "total": 13,
       "ballast": 8,
-      "laden": 6
+      "laden": 5
     },
     {
       "label": "Basrah Medium",
@@ -121,16 +127,10 @@
       "laden": 2
     },
     {
-      "label": "Cement",
-      "total": 11,
-      "ballast": 4,
-      "laden": 7
-    },
-    {
       "label": "Fuel Oils",
       "total": 10,
-      "ballast": 3,
-      "laden": 7
+      "ballast": 4,
+      "laden": 6
     },
     {
       "label": "Grains/Oilseeds",
@@ -153,20 +153,8 @@
     {
       "label": "Gasoline",
       "total": 9,
-      "ballast": 6,
-      "laden": 3
-    },
-    {
-      "label": "Grey Ammonia",
-      "total": 9,
-      "ballast": 5,
-      "laden": 4
-    },
-    {
-      "label": "Minerals",
-      "total": 9,
-      "ballast": 1,
-      "laden": 8
+      "ballast": 7,
+      "laden": 2
     },
     {
       "label": "basrah heavy",
@@ -187,10 +175,22 @@
       "laden": 0
     },
     {
+      "label": "Grey Ammonia",
+      "total": 8,
+      "ballast": 5,
+      "laden": 3
+    },
+    {
       "label": "Iron Ore",
       "total": 8,
       "ballast": 8,
       "laden": 0
+    },
+    {
+      "label": "Minerals",
+      "total": 8,
+      "ballast": 1,
+      "laden": 7
     },
     {
       "label": "Ultra Low Sulfur Diesel",
@@ -199,10 +199,10 @@
       "laden": 3
     },
     {
-      "label": "Limestone",
-      "total": 7,
-      "ballast": 4,
-      "laden": 3
+      "label": "Das",
+      "total": 6,
+      "ballast": 1,
+      "laden": 5
     },
     {
       "label": "Upper Zakum",
@@ -211,22 +211,16 @@
       "laden": 5
     },
     {
-      "label": "arab extra light",
-      "total": 5,
-      "ballast": 0,
-      "laden": 5
+      "label": "Limestone",
+      "total": 6,
+      "ballast": 3,
+      "laden": 3
     },
     {
       "label": "Jet",
       "total": 5,
       "ballast": 3,
       "laden": 2
-    },
-    {
-      "label": "Das",
-      "total": 5,
-      "ballast": 0,
-      "laden": 5
     },
     {
       "label": "Soybean",
@@ -245,6 +239,18 @@
       "total": 5,
       "ballast": 4,
       "laden": 1
+    },
+    {
+      "label": "arab extra light",
+      "total": 4,
+      "ballast": 0,
+      "laden": 4
+    },
+    {
+      "label": "arab light",
+      "total": 4,
+      "ballast": 0,
+      "laden": 4
     },
     {
       "label": "Sugar",
@@ -277,12 +283,6 @@
       "laden": 1
     },
     {
-      "label": "Thermal Coal",
-      "total": 4,
-      "ballast": 4,
-      "laden": 0
-    },
-    {
       "label": "91 Gasoline",
       "total": 3,
       "ballast": 2,
@@ -308,12 +308,6 @@
     },
     {
       "label": "Diammonium Phosphates",
-      "total": 3,
-      "ballast": 0,
-      "laden": 3
-    },
-    {
-      "label": "arab light",
       "total": 3,
       "ballast": 0,
       "laden": 3
@@ -359,6 +353,18 @@
       "total": 3,
       "ballast": 1,
       "laden": 2
+    },
+    {
+      "label": "Granular Urea",
+      "total": 3,
+      "ballast": 0,
+      "laden": 3
+    },
+    {
+      "label": "Thermal Coal",
+      "total": 3,
+      "ballast": 3,
+      "laden": 0
     },
     {
       "label": "WTI midland",
@@ -523,12 +529,6 @@
       "laden": 1
     },
     {
-      "label": "Granular Urea",
-      "total": 2,
-      "ballast": 0,
-      "laden": 2
-    },
-    {
       "label": "Finished Steel",
       "total": 2,
       "ballast": 2,
@@ -661,6 +661,12 @@
       "laden": 0
     },
     {
+      "label": "Varandey",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
       "label": "Chrome Ore",
       "total": 1,
       "ballast": 1,
@@ -683,12 +689,6 @@
       "total": 1,
       "ballast": 0,
       "laden": 1
-    },
-    {
-      "label": "Soda Ash",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
     },
     {
       "label": "Metallurgical Coal",
@@ -830,5 +830,5 @@
     }
   ],
   "total": 945,
-  "syncTimestamp": "2026-04-01T12:55:57.106Z"
+  "syncTimestamp": "2026-04-01T12:59:54.494Z"
 }

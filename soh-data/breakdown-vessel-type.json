@@ -14,45 +14,45 @@
     },
     {
       "label": "VLCC",
-      "total": 111,
-      "ballast": 40,
+      "total": 112,
+      "ballast": 41,
       "laden": 71
     },
     {
       "label": "Handysize",
       "total": 104,
-      "ballast": 67,
-      "laden": 37
+      "ballast": 66,
+      "laden": 38
     },
     {
       "label": "Supramax",
-      "total": 69,
-      "ballast": 34,
-      "laden": 35
+      "total": 70,
+      "ballast": 32,
+      "laden": 38
     },
     {
       "label": "Panamax",
-      "total": 56,
-      "ballast": 38,
-      "laden": 18
+      "total": 55,
+      "ballast": 36,
+      "laden": 19
     },
     {
       "label": "Aframax/LR2",
-      "total": 47,
-      "ballast": 22,
+      "total": 48,
+      "ballast": 23,
       "laden": 25
     },
     {
       "label": "Panamax/LR1",
       "total": 46,
-      "ballast": 22,
-      "laden": 24
+      "ballast": 21,
+      "laden": 25
     },
     {
       "label": "Handy/MR1",
-      "total": 41,
-      "ballast": 18,
-      "laden": 23
+      "total": 40,
+      "ballast": 20,
+      "laden": 20
     },
     {
       "label": "Kamsarmax",
@@ -86,21 +86,21 @@
     },
     {
       "label": "MGC",
-      "total": 13,
+      "total": 12,
       "ballast": 5,
-      "laden": 8
+      "laden": 7
     },
     {
       "label": "Lower Conventional",
       "total": 10,
-      "ballast": 5,
-      "laden": 5
+      "ballast": 4,
+      "laden": 6
     },
     {
       "label": "Post-Panamax",
       "total": 9,
-      "ballast": 4,
-      "laden": 5
+      "ballast": 5,
+      "laden": 4
     },
     {
       "label": "Handy",
@@ -140,5 +140,5 @@
     }
   ],
   "total": 945,
-  "syncTimestamp": "2026-04-01T12:55:57.106Z"
+  "syncTimestamp": "2026-04-01T12:59:54.494Z"
 }

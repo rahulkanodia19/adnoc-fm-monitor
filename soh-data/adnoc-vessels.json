@@ -122,9 +122,9 @@
       "deadWeight": 54000,
       "capacity": 86000,
       "speed": 0.1,
-      "course": 0,
-      "lat": 25.521469,
-      "lng": 54.970768,
+      "course": 91,
+      "lat": 25.520769,
+      "lng": 54.970078,
       "product": "Butane",
       "destination": "Karachi",
       "departed": null,
@@ -168,9 +168,9 @@
       "deadWeight": 75618,
       "capacity": 83309,
       "speed": 0,
-      "course": 0,
-      "lat": 25.008762,
-      "lng": 54.461414,
+      "course": 339,
+      "lat": 25.009483,
+      "lng": 54.462132,
       "product": "Clean petroleum products",
       "destination": null,
       "departed": "2026-03-07 06:06",
@@ -180,5 +180,5 @@
     }
   ],
   "count": 11,
-  "syncTimestamp": "2026-04-01T12:55:57.106Z"
+  "syncTimestamp": "2026-04-01T12:59:54.494Z"
 }

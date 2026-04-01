@@ -1,8 +1,8 @@
 {
   "positions": [
     {
-      "lat": 25.902781,
-      "lng": 52.199234,
+      "lat": 25.90193,
+      "lng": 52.199188,
       "type": "Upper Conventional",
       "state": "loaded",
       "commodity": "lng",
@@ -12,24 +12,24 @@
       "isTransiting": false
     },
     {
-      "lat": 25.469997,
-      "lng": 54.684139,
+      "lat": 25.480808,
+      "lng": 54.718224,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "Global Ambition",
-      "speed": 3.6,
+      "speed": 1.9,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 27.542,
-      "lng": 50.631496,
+      "lat": 27.51947,
+      "lng": 50.630001,
       "type": "Panamax/LR1",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Peace Victoria",
-      "speed": 0.5,
+      "speed": 10,
       "isInside": true,
       "isTransiting": false
     },
@@ -45,8 +45,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.965,
-      "lng": 56.926666,
+      "lat": 25.966667,
+      "lng": 56.924999,
       "type": "Handy/MR1",
       "state": "ballast",
       "commodity": "liquids",
@@ -67,13 +67,13 @@
       "isTransiting": false
     },
     {
-      "lat": 27.113512,
-      "lng": 49.763142,
+      "lat": 27.113422,
+      "lng": 49.762806,
       "type": "Handy/MR1",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Chemocean Orion",
-      "speed": 0.4,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -89,19 +89,19 @@
       "isTransiting": false
     },
     {
-      "lat": 26.950415,
-      "lng": 51.016422,
+      "lat": 26.950724,
+      "lng": 51.017475,
       "type": "Capesize",
       "state": "loaded",
       "commodity": "dry",
       "name": "Cape Taweelah",
-      "speed": 0.3,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.755844,
-      "lng": 53.658791,
+      "lat": 25.754992,
+      "lng": 53.656536,
       "type": "Aframax/LR2",
       "state": "loaded",
       "commodity": "liquids",
@@ -111,13 +111,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.506128,
-      "lng": 54.965313,
+      "lat": 25.507444,
+      "lng": 54.965881,
       "type": "Aframax/LR2",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Asp Avana",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -144,96 +144,96 @@
       "isTransiting": false
     },
     {
-      "lat": 25.627007,
-      "lng": 54.640995,
+      "lat": 25.626814,
+      "lng": 54.640785,
       "type": "Suezmax/LR3",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Monte Urbasa",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.592157,
-      "lng": 54.770508,
-      "type": "VLCC",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Gulf Sunrise",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 27.363766,
-      "lng": 50.133205,
-      "type": "Kamsarmax",
-      "state": "ballast",
-      "commodity": "dry",
-      "name": "Tai Keystone",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 27.258722,
-      "lng": 50.528782,
-      "type": "VLCC",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Gem No. 5",
-      "speed": 1.5,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.565229,
-      "lng": 55.31308,
-      "type": "Handysize",
-      "state": "loaded",
-      "commodity": "dry",
-      "name": "Banglar Joyjatra",
-      "speed": 0.3,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.719942,
-      "lng": 53.970428,
-      "type": "VLCC",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Miracle Hope",
-      "speed": 0.9,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 26.785208,
-      "lng": 53.347694,
-      "type": "MR",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Daryabandar 4",
-      "speed": 0.3,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 27.28068,
-      "lng": 50.237141,
-      "type": "VLCC",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Universal Glory",
       "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.636272,
-      "lng": 55.075878,
+      "lat": 25.590748,
+      "lng": 54.768875,
+      "type": "VLCC",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Gulf Sunrise",
+      "speed": 0.3,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 27.362894,
+      "lng": 50.132687,
+      "type": "Kamsarmax",
+      "state": "ballast",
+      "commodity": "dry",
+      "name": "Tai Keystone",
+      "speed": 0.1,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 27.254381,
+      "lng": 50.541267,
+      "type": "VLCC",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Gem No. 5",
+      "speed": 0.1,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.567003,
+      "lng": 55.315773,
+      "type": "Handysize",
+      "state": "loaded",
+      "commodity": "dry",
+      "name": "Banglar Joyjatra",
+      "speed": 0.1,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.718044,
+      "lng": 53.903118,
+      "type": "VLCC",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Miracle Hope",
+      "speed": 0.4,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 26.781458,
+      "lng": 53.362312,
+      "type": "MR",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Daryabandar 4",
+      "speed": 0.7,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 27.27639,
+      "lng": 50.241474,
+      "type": "VLCC",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Universal Glory",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.523798,
+      "lng": 54.94706,
       "type": "VLGC",
       "state": "loaded",
       "commodity": "lpg",
@@ -243,19 +243,19 @@
       "isTransiting": false
     },
     {
-      "lat": 27.141844,
-      "lng": 50.268684,
+      "lat": 27.137686,
+      "lng": 50.272537,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Tonegawa",
-      "speed": 0.2,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 24.612392,
-      "lng": 56.673813,
+      "lat": 24.611315,
+      "lng": 56.674812,
       "type": "Ultramax",
       "state": "ballast",
       "commodity": "dry",
@@ -276,46 +276,46 @@
       "isTransiting": false
     },
     {
-      "lat": 25.370914,
-      "lng": 55.381824,
+      "lat": 25.370834,
+      "lng": 55.381702,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Marvin Faith",
-      "speed": 1.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 26.786301,
-      "lng": 53.34338,
+      "lat": 26.786755,
+      "lng": 53.342861,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Niki",
-      "speed": 0.5,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 26.784792,
-      "lng": 53.347759,
+      "lat": 26.787565,
+      "lng": 53.342205,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Dalia",
-      "speed": 0.2,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 26.050556,
-      "lng": 55.257935,
+      "lat": 26.051325,
+      "lng": 55.258995,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Petunia",
-      "speed": 0,
+      "speed": 0.3,
       "isInside": true,
       "isTransiting": false
     },
@@ -342,8 +342,8 @@
       "isTransiting": false
     },
     {
-      "lat": 23.673334,
-      "lng": 58.411667,
+      "lat": 23.671667,
+      "lng": 58.408333,
       "type": "VLCC",
       "state": "ballast",
       "commodity": "liquids",
@@ -364,8 +364,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.838003,
-      "lng": 51.764042,
+      "lat": 25.837183,
+      "lng": 51.763641,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
@@ -386,30 +386,30 @@
       "isTransiting": false
     },
     {
-      "lat": 25.581497,
-      "lng": 54.656384,
+      "lat": 25.517014,
+      "lng": 54.650875,
       "type": "Ultramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Bc Agility",
-      "speed": 0,
+      "speed": 3.3,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.118864,
-      "lng": 54.212482,
+      "lat": 25.145334,
+      "lng": 54.130554,
       "type": "Aframax/LR2",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Siena",
-      "speed": 4.2,
+      "speed": 3.5,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 27.358341,
-      "lng": 50.282948,
+      "lat": 27.353846,
+      "lng": 50.285187,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
@@ -419,19 +419,19 @@
       "isTransiting": false
     },
     {
-      "lat": 25.546719,
-      "lng": 54.941124,
+      "lat": 25.546665,
+      "lng": 54.94136,
       "type": "Aframax/LR2",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Lion",
-      "speed": 0.2,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 27.055305,
-      "lng": 50.275356,
+      "lat": 27.049402,
+      "lng": 50.277309,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
@@ -441,13 +441,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.8587,
-      "lng": 53.447941,
+      "lat": 25.860067,
+      "lng": 53.441582,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Yuan Gui Yang",
-      "speed": 0,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
@@ -463,29 +463,29 @@
       "isTransiting": false
     },
     {
-      "lat": 25.647612,
-      "lng": 54.883873,
+      "lat": 25.647671,
+      "lng": 54.884354,
       "type": "Ultramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Lem Geranium",
-      "speed": 0,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.216757,
-      "lng": 53.890842,
+      "lat": 25.291647,
+      "lng": 53.898525,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Sea Wolf",
-      "speed": 0.8,
+      "speed": 1.2,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 24.57,
+      "lat": 24.566668,
       "lng": 56.696667,
       "type": "VLGC",
       "state": "ballast",
@@ -496,24 +496,24 @@
       "isTransiting": false
     },
     {
-      "lat": 25.510174,
-      "lng": 53.44812,
+      "lat": 25.5084,
+      "lng": 53.445621,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Tenzan",
-      "speed": 0,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.625372,
-      "lng": 53.387512,
+      "lat": 25.588982,
+      "lng": 53.400906,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Sea Emerald",
-      "speed": 1,
+      "speed": 6.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -529,13 +529,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.502401,
-      "lng": 53.563061,
+      "lat": 25.501423,
+      "lng": 53.56004,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Nissos Keros",
-      "speed": 0,
+      "speed": 0.3,
       "isInside": true,
       "isTransiting": false
     },
@@ -551,19 +551,19 @@
       "isTransiting": false
     },
     {
-      "lat": 24.588976,
-      "lng": 56.699066,
+      "lat": 24.587233,
+      "lng": 56.698738,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Sifsafah",
-      "speed": 0.3,
+      "speed": 1.5,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 27.689669,
-      "lng": 49.529335,
+      "lat": 27.686289,
+      "lng": 49.530918,
       "type": "Ultramax",
       "state": "loaded",
       "commodity": "dry",
@@ -584,13 +584,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.419775,
-      "lng": 51.943592,
+      "lat": 25.418089,
+      "lng": 51.94212,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
       "name": "World Prize",
-      "speed": 0,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
@@ -606,8 +606,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.092291,
-      "lng": 53.509354,
+      "lat": 25.092253,
+      "lng": 53.509716,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
@@ -617,48 +617,48 @@
       "isTransiting": false
     },
     {
-      "lat": 26.062195,
-      "lng": 55.961075,
+      "lat": 26.062536,
+      "lng": 55.960732,
       "type": "Ultramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Belray",
+      "speed": 0.2,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.94426,
+      "lng": 54.833992,
+      "type": "VLCC",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Dhalkut",
+      "speed": 1,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 27.116287,
+      "lng": 50.250385,
+      "type": "VLCC",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Pertamina Pride",
       "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.976244,
-      "lng": 53.988705,
-      "type": "VLCC",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Dhalkut",
-      "speed": 0.7,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 27.121571,
-      "lng": 50.249352,
-      "type": "VLCC",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Pertamina Pride",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 26.045984,
-      "lng": 55.867435,
+      "lat": 25.68721,
+      "lng": 54.931683,
       "type": "Suezmax/LR3",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Miaoulis 21",
-      "speed": 5,
+      "speed": 4.6,
       "isInside": true,
-      "isTransiting": true
+      "isTransiting": false
     },
     {
       "lat": 24.820028,
@@ -672,8 +672,8 @@
       "isTransiting": false
     },
     {
-      "lat": 24.551666,
-      "lng": 56.683334,
+      "lat": 24.552067,
+      "lng": 56.684853,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
@@ -683,8 +683,8 @@
       "isTransiting": false
     },
     {
-      "lat": 27.152512,
-      "lng": 49.779106,
+      "lat": 27.151939,
+      "lng": 49.777493,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
@@ -694,13 +694,13 @@
       "isTransiting": false
     },
     {
-      "lat": 27.85355,
-      "lng": 49.490807,
+      "lat": 27.85227,
+      "lng": 49.489765,
       "type": "MGC",
       "state": "ballast",
       "commodity": "lpg",
       "name": "Searambler",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -716,13 +716,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.831963,
-      "lng": 55.642555,
+      "lat": 25.832478,
+      "lng": 55.643181,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
       "name": "Tai An Kou",
-      "speed": 0,
+      "speed": 0.3,
       "isInside": true,
       "isTransiting": false
     },
@@ -738,8 +738,8 @@
       "isTransiting": false
     },
     {
-      "lat": 29.673216,
-      "lng": 48.679485,
+      "lat": 29.672287,
+      "lng": 48.682522,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
@@ -760,19 +760,19 @@
       "isTransiting": false
     },
     {
-      "lat": 25.898268,
-      "lng": 55.720078,
+      "lat": 25.898407,
+      "lng": 55.719921,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "V Monoceros",
-      "speed": 16.7,
+      "speed": 0,
       "isInside": true,
-      "isTransiting": true
+      "isTransiting": false
     },
     {
-      "lat": 27.32217,
-      "lng": 50.212292,
+      "lat": 27.322168,
+      "lng": 50.21286,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
@@ -793,8 +793,8 @@
       "isTransiting": false
     },
     {
-      "lat": 28.035973,
-      "lng": 49.565025,
+      "lat": 28.032883,
+      "lng": 49.569378,
       "type": "Suezmax/LR3",
       "state": "loaded",
       "commodity": "liquids",
@@ -826,13 +826,13 @@
       "isTransiting": false
     },
     {
-      "lat": 27.24612,
-      "lng": 50.404442,
+      "lat": 27.243647,
+      "lng": 50.407619,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Grand Bonanza",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -848,8 +848,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.521469,
-      "lng": 54.970768,
+      "lat": 25.520769,
+      "lng": 54.970078,
       "type": "VLGC",
       "state": "loaded",
       "commodity": "lpg",
@@ -870,8 +870,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.686279,
-      "lng": 53.693153,
+      "lat": 25.686693,
+      "lng": 53.686954,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
@@ -881,19 +881,19 @@
       "isTransiting": false
     },
     {
-      "lat": 25.860092,
-      "lng": 52.230133,
+      "lat": 25.859095,
+      "lng": 52.22942,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Vl Breeze",
-      "speed": 0.1,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.029316,
-      "lng": 54.629852,
+      "lat": 25.030264,
+      "lng": 54.632198,
       "type": "Aframax/LR2",
       "state": "ballast",
       "commodity": "liquids",
@@ -903,8 +903,8 @@
       "isTransiting": false
     },
     {
-      "lat": 26.556616,
-      "lng": 50.173687,
+      "lat": 26.553406,
+      "lng": 50.171967,
       "type": "Ultramax",
       "state": "loaded",
       "commodity": "dry",
@@ -925,8 +925,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.361809,
-      "lng": 55.37442,
+      "lat": 25.36198,
+      "lng": 55.374405,
       "type": "Kamsarmax",
       "state": "ballast",
       "commodity": "dry",
@@ -936,8 +936,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.949041,
-      "lng": 55.448513,
+      "lat": 25.949131,
+      "lng": 55.448818,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
@@ -947,8 +947,8 @@
       "isTransiting": false
     },
     {
-      "lat": 27.026808,
-      "lng": 49.690334,
+      "lat": 27.026861,
+      "lng": 49.690323,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
@@ -958,13 +958,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.521282,
-      "lng": 54.853401,
+      "lat": 25.527523,
+      "lng": 54.857075,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Front Gander",
-      "speed": 1.7,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -980,8 +980,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.545916,
-      "lng": 54.912128,
+      "lat": 25.544926,
+      "lng": 54.913754,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
@@ -991,19 +991,8 @@
       "isTransiting": false
     },
     {
-      "lat": 22.591618,
-      "lng": 59.941555,
-      "type": "MGC",
-      "state": "loaded",
-      "commodity": "lpg",
-      "name": "Gas Ammon",
-      "speed": 13.4,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.925524,
-      "lng": 53.560272,
+      "lat": 25.871347,
+      "lng": 53.60994,
       "type": "MGC",
       "state": "loaded",
       "commodity": "lpg",
@@ -1013,13 +1002,13 @@
       "isTransiting": false
     },
     {
-      "lat": 24.981911,
-      "lng": 54.521679,
+      "lat": 24.982288,
+      "lng": 54.522453,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
       "name": "Lowlands Corso",
-      "speed": 0.5,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -1068,13 +1057,13 @@
       "isTransiting": false
     },
     {
-      "lat": 27.883881,
-      "lng": 49.510818,
+      "lat": 27.882071,
+      "lng": 49.510567,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "Saraca",
-      "speed": 0,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
@@ -1101,8 +1090,8 @@
       "isTransiting": false
     },
     {
-      "lat": 27.478041,
-      "lng": 50.249794,
+      "lat": 27.478058,
+      "lng": 50.250328,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
@@ -1112,19 +1101,19 @@
       "isTransiting": false
     },
     {
-      "lat": 25.313046,
-      "lng": 51.777187,
+      "lat": 25.312937,
+      "lng": 51.777439,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "Industrial Swift",
-      "speed": 0,
+      "speed": 0.3,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 27.268162,
-      "lng": 50.273727,
+      "lat": 27.268192,
+      "lng": 50.273685,
       "type": "MGC",
       "state": "loaded",
       "commodity": "lpg",
@@ -1134,13 +1123,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.947485,
-      "lng": 55.378716,
+      "lat": 25.947594,
+      "lng": 55.379005,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "Da Tong Yun",
-      "speed": 0,
+      "speed": 0.3,
       "isInside": true,
       "isTransiting": false
     },
@@ -1156,30 +1145,30 @@
       "isTransiting": false
     },
     {
-      "lat": 25.925852,
-      "lng": 52.321838,
+      "lat": 25.925394,
+      "lng": 52.321857,
       "type": "Upper Conventional",
       "state": "loaded",
       "commodity": "lng",
       "name": "Lebrethah",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.877298,
-      "lng": 51.812492,
+      "lat": 25.874092,
+      "lng": 51.810688,
       "type": "Upper Conventional",
       "state": "loaded",
       "commodity": "lng",
       "name": "MIHZEM",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 29.639799,
-      "lng": 48.728024,
+      "lat": 29.637106,
+      "lng": 48.730293,
       "type": "Ultramax",
       "state": "loaded",
       "commodity": "dry",
@@ -1189,8 +1178,8 @@
       "isTransiting": false
     },
     {
-      "lat": 29.694086,
-      "lng": 48.679783,
+      "lat": 29.693184,
+      "lng": 48.682755,
       "type": "Handy/MR1",
       "state": "loaded",
       "commodity": "liquids",
@@ -1200,19 +1189,19 @@
       "isTransiting": false
     },
     {
-      "lat": 29.677147,
-      "lng": 48.719334,
+      "lat": 29.675474,
+      "lng": 48.719341,
       "type": "Handy/MR1",
-      "state": "loaded",
+      "state": "ballast",
       "commodity": "liquids",
       "name": "Akkad",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.839403,
-      "lng": 52.187096,
+      "lat": 25.838608,
+      "lng": 52.187496,
       "type": "Upper Conventional",
       "state": "loaded",
       "commodity": "lng",
@@ -1222,8 +1211,8 @@
       "isTransiting": false
     },
     {
-      "lat": 26.670576,
-      "lng": 50.236092,
+      "lat": 26.66659,
+      "lng": 50.236134,
       "type": "Aframax/LR2",
       "state": "ballast",
       "commodity": "liquids",
@@ -1233,13 +1222,13 @@
       "isTransiting": false
     },
     {
-      "lat": 24.505728,
-      "lng": 56.618053,
+      "lat": 24.50564,
+      "lng": 56.618046,
       "type": "Ultramax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Darya Nitya",
-      "speed": 0.3,
+      "speed": 1.6,
       "isInside": false,
       "isTransiting": false
     },
@@ -1255,8 +1244,8 @@
       "isTransiting": false
     },
     {
-      "lat": 27.117413,
-      "lng": 50.293705,
+      "lat": 27.111977,
+      "lng": 50.296204,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
@@ -1266,13 +1255,13 @@
       "isTransiting": false
     },
     {
-      "lat": 26.808319,
-      "lng": 50.486385,
+      "lat": 26.807838,
+      "lng": 50.487053,
       "type": "Kamsarmax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Star Earendel",
-      "speed": 0.3,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -1288,8 +1277,8 @@
       "isTransiting": false
     },
     {
-      "lat": 27.082279,
-      "lng": 49.678078,
+      "lat": 27.082285,
+      "lng": 49.67804,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
@@ -1299,8 +1288,8 @@
       "isTransiting": false
     },
     {
-      "lat": 24.924133,
-      "lng": 51.573757,
+      "lat": 24.924179,
+      "lng": 51.5737,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
@@ -1310,19 +1299,19 @@
       "isTransiting": false
     },
     {
-      "lat": 24.49432,
-      "lng": 56.626099,
+      "lat": 24.494957,
+      "lng": 56.626274,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
       "name": "Carpe Diem",
-      "speed": 0,
+      "speed": 1.8,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 25.773233,
-      "lng": 51.814339,
+      "lat": 25.772163,
+      "lng": 51.813782,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
@@ -1332,19 +1321,19 @@
       "isTransiting": false
     },
     {
-      "lat": 25.741823,
-      "lng": 53.344372,
+      "lat": 25.741739,
+      "lng": 53.344345,
       "type": "Ultramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Yasa Moon",
-      "speed": 0,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.383333,
-      "lng": 55.016666,
+      "lat": 25.384003,
+      "lng": 55.021698,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
@@ -1354,46 +1343,46 @@
       "isTransiting": false
     },
     {
-      "lat": 25.602472,
-      "lng": 53.446148,
+      "lat": 25.647202,
+      "lng": 53.413342,
       "type": "Aframax/LR2",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Sea Condor",
-      "speed": 4.5,
+      "speed": 0.7,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 28.955887,
-      "lng": 49.502468,
+      "lat": 28.875366,
+      "lng": 49.482204,
       "type": "Kamsarmax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Okeanis",
-      "speed": 10.1,
+      "speed": 2.5,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.11655,
-      "lng": 54.136547,
+      "lat": 25.120199,
+      "lng": 54.151588,
       "type": "Ultramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Nord Attol",
-      "speed": 0.4,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.618389,
-      "lng": 54.852798,
+      "lat": 25.617964,
+      "lng": 54.849815,
       "type": "Suezmax/LR3",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Stoic Warrior",
-      "speed": 0.1,
+      "speed": 0.3,
       "isInside": true,
       "isTransiting": false
     },
@@ -1420,13 +1409,13 @@
       "isTransiting": false
     },
     {
-      "lat": 24.502058,
-      "lng": 56.632492,
+      "lat": 24.50215,
+      "lng": 56.632515,
       "type": "Panamax/LR1",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Advantage Passion",
-      "speed": 0,
+      "speed": 3.5,
       "isInside": false,
       "isTransiting": false
     },
@@ -1442,41 +1431,41 @@
       "isTransiting": false
     },
     {
-      "lat": 27.487009,
-      "lng": 50.298233,
+      "lat": 27.487244,
+      "lng": 50.298847,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "Rosaire A.Desgagnes",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.570984,
-      "lng": 55.290012,
+      "lat": 25.572445,
+      "lng": 55.291672,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "Bbc Manila",
-      "speed": 0.3,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.14114,
-      "lng": 53.644859,
-      "type": "Ultramax",
-      "state": "loaded",
-      "commodity": "dry",
-      "name": "African Lorikeet",
       "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 24.611814,
-      "lng": 56.662579,
+      "lat": 25.140415,
+      "lng": 53.644035,
+      "type": "Ultramax",
+      "state": "loaded",
+      "commodity": "dry",
+      "name": "African Lorikeet",
+      "speed": 0.2,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 24.610001,
+      "lng": 56.661667,
       "type": "Kamsarmax",
       "state": "loaded",
       "commodity": "dry",
@@ -1497,19 +1486,19 @@
       "isTransiting": false
     },
     {
-      "lat": 25.911959,
-      "lng": 55.750759,
+      "lat": 25.911617,
+      "lng": 55.751755,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "Da Cai Yun",
-      "speed": 0.1,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 24.578089,
-      "lng": 56.722332,
+      "lat": 24.576666,
+      "lng": 56.721668,
       "type": "Kamsarmax",
       "state": "loaded",
       "commodity": "dry",
@@ -1530,8 +1519,8 @@
       "isTransiting": false
     },
     {
-      "lat": 27.25243,
-      "lng": 49.910503,
+      "lat": 27.251181,
+      "lng": 49.911812,
       "type": "Handy/MR1",
       "state": "loaded",
       "commodity": "liquids",
@@ -1541,19 +1530,19 @@
       "isTransiting": false
     },
     {
-      "lat": 26.085928,
-      "lng": 55.853142,
+      "lat": 26.086119,
+      "lng": 55.853779,
       "type": "Ultramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Jin Yuan Men",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.444937,
-      "lng": 51.835945,
+      "lat": 25.443407,
+      "lng": 51.834393,
       "type": "Ultramax",
       "state": "loaded",
       "commodity": "dry",
@@ -1563,30 +1552,30 @@
       "isTransiting": false
     },
     {
-      "lat": 25.886478,
-      "lng": 55.670334,
+      "lat": 25.887232,
+      "lng": 55.670666,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "JNS CRANE",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 24.636194,
-      "lng": 56.773521,
+      "lat": 24.635,
+      "lng": 56.773335,
       "type": "Ultramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "ZHONG DA MEN",
-      "speed": 0.2,
+      "speed": 0,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 25.886667,
-      "lng": 55.728333,
+      "lat": 25.5769,
+      "lng": 55.335541,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
@@ -1596,8 +1585,8 @@
       "isTransiting": false
     },
     {
-      "lat": 27.383408,
-      "lng": 50.353088,
+      "lat": 27.383263,
+      "lng": 50.352966,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
@@ -1607,8 +1596,8 @@
       "isTransiting": false
     },
     {
-      "lat": 26.499706,
-      "lng": 50.190639,
+      "lat": 26.499731,
+      "lng": 50.190632,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
@@ -1629,41 +1618,41 @@
       "isTransiting": false
     },
     {
-      "lat": 25.726303,
-      "lng": 57.181847,
+      "lat": 26.840588,
+      "lng": 56.855335,
       "type": "Handy",
       "state": "ballast",
       "commodity": "lpg",
       "name": "Nidi",
-      "speed": 8.6,
+      "speed": 7.5,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 24.763823,
-      "lng": 56.605759,
+      "lat": 24.764284,
+      "lng": 56.605427,
       "type": "VLGC",
       "state": "loaded",
       "commodity": "lpg",
       "name": "Salute",
-      "speed": 6.8,
+      "speed": 3.2,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 26.119761,
-      "lng": 55.73856,
+      "lat": 25.978954,
+      "lng": 56.057987,
       "type": "Handysize",
-      "state": "ballast",
+      "state": "loaded",
       "commodity": "dry",
       "name": "Samanta",
-      "speed": 13.8,
+      "speed": 0.1,
       "isInside": true,
-      "isTransiting": true
+      "isTransiting": false
     },
     {
-      "lat": 24.772434,
-      "lng": 56.526333,
+      "lat": 24.772818,
+      "lng": 56.52684,
       "type": "VLGC",
       "state": "ballast",
       "commodity": "lpg",
@@ -1673,13 +1662,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.51404,
-      "lng": 55.218147,
+      "lat": 25.517031,
+      "lng": 55.22216,
       "type": "VLGC",
       "state": "loaded",
       "commodity": "lpg",
       "name": "Global Vivian",
-      "speed": 0,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
@@ -1695,25 +1684,25 @@
       "isTransiting": false
     },
     {
-      "lat": 24.613514,
-      "lng": 56.730614,
+      "lat": 24.613146,
+      "lng": 56.732006,
       "type": "VLGC",
       "state": "ballast",
       "commodity": "lpg",
       "name": "Fogas",
-      "speed": 0.1,
+      "speed": 0.6,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 26.658243,
-      "lng": 56.782387,
+      "lat": 26.143833,
+      "lng": 55.828785,
       "type": "VLGC",
       "state": "ballast",
       "commodity": "lpg",
       "name": "Exonave",
-      "speed": 11,
-      "isInside": false,
+      "speed": 9.8,
+      "isInside": true,
       "isTransiting": true
     },
     {
@@ -1728,19 +1717,19 @@
       "isTransiting": false
     },
     {
-      "lat": 25.418333,
-      "lng": 57.906666,
+      "lat": 25.410986,
+      "lng": 57.961521,
       "type": "Handy",
       "state": "ballast",
       "commodity": "lpg",
       "name": "Avon",
-      "speed": 0,
+      "speed": 0.8,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 28.293913,
-      "lng": 49.275799,
+      "lat": 28.291067,
+      "lng": 49.276394,
       "type": "Handy/MR1",
       "state": "ballast",
       "commodity": "liquids",
@@ -1783,8 +1772,8 @@
       "isTransiting": false
     },
     {
-      "lat": 29.675934,
-      "lng": 48.698257,
+      "lat": 29.674471,
+      "lng": 48.701542,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
@@ -1805,13 +1794,13 @@
       "isTransiting": false
     },
     {
-      "lat": 29.014454,
-      "lng": 48.311199,
+      "lat": 29.011534,
+      "lng": 48.314041,
       "type": "Panamax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Liwa",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -1838,13 +1827,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.878057,
-      "lng": 52.193054,
+      "lat": 25.877102,
+      "lng": 52.193127,
       "type": "Lower Conventional",
       "state": "loaded",
       "commodity": "lng",
       "name": "Al Rayyan",
-      "speed": 0,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
@@ -1860,8 +1849,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.472168,
-      "lng": 55.341373,
+      "lat": 25.472944,
+      "lng": 55.345284,
       "type": "Handymax",
       "state": "loaded",
       "commodity": "dry",
@@ -1937,8 +1926,8 @@
       "isTransiting": false
     },
     {
-      "lat": 28.9645,
-      "lng": 48.391796,
+      "lat": 28.961767,
+      "lng": 48.393742,
       "type": "Handymax",
       "state": "loaded",
       "commodity": "dry",
@@ -1948,37 +1937,37 @@
       "isTransiting": false
     },
     {
-      "lat": 26.069595,
-      "lng": 55.952454,
+      "lat": 25.975935,
+      "lng": 56.055313,
       "type": "Panamax",
-      "state": "ballast",
+      "state": "loaded",
       "commodity": "dry",
       "name": "Haykal",
-      "speed": 0.2,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 29.471333,
-      "lng": 49.120499,
+      "lat": 29.469166,
+      "lng": 49.121662,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
       "name": "Yara J",
-      "speed": 0.4,
+      "speed": 0.3,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 26.013674,
-      "lng": 55.305721,
+      "lat": 26.049437,
+      "lng": 55.795727,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Wafra",
-      "speed": 10.5,
+      "speed": 12.9,
       "isInside": true,
-      "isTransiting": false
+      "isTransiting": true
     },
     {
       "lat": 27.058767,
@@ -1992,8 +1981,8 @@
       "isTransiting": false
     },
     {
-      "lat": 24.608334,
-      "lng": 56.764999,
+      "lat": 24.610001,
+      "lng": 56.766666,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
@@ -2003,8 +1992,8 @@
       "isTransiting": false
     },
     {
-      "lat": 27.130674,
-      "lng": 52.07373,
+      "lat": 27.344889,
+      "lng": 51.372028,
       "type": "Panamax",
       "state": "loaded",
       "commodity": "dry",
@@ -2058,8 +2047,8 @@
       "isTransiting": false
     },
     {
-      "lat": 28.84408,
-      "lng": 48.424644,
+      "lat": 28.840633,
+      "lng": 48.427132,
       "type": "Kamsarmax",
       "state": "loaded",
       "commodity": "dry",
@@ -2069,19 +2058,19 @@
       "isTransiting": false
     },
     {
-      "lat": 25.369467,
-      "lng": 55.063114,
+      "lat": 25.368351,
+      "lng": 55.065235,
       "type": "Handymax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Haven Messenger",
-      "speed": 4,
+      "speed": 0.5,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.639833,
-      "lng": 56.971947,
+      "lat": 25.640182,
+      "lng": 56.968418,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
@@ -2091,24 +2080,24 @@
       "isTransiting": false
     },
     {
-      "lat": 24.739157,
-      "lng": 56.583591,
+      "lat": 24.739136,
+      "lng": 56.583187,
       "type": "Handy",
       "state": "ballast",
       "commodity": "lpg",
       "name": "Rayyan Gas",
-      "speed": 2.5,
+      "speed": 1.8,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 23.965,
-      "lng": 58.766666,
+      "lat": 23.938334,
+      "lng": 58.75,
       "type": "MGC",
       "state": "ballast",
       "commodity": "lpg",
       "name": "Tania Star",
-      "speed": 0,
+      "speed": 1,
       "isInside": false,
       "isTransiting": false
     },
@@ -2135,13 +2124,13 @@
       "isTransiting": false
     },
     {
-      "lat": 24.619795,
-      "lng": 56.686081,
+      "lat": 24.617146,
+      "lng": 56.684933,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
       "name": "Neraki",
-      "speed": 0.2,
+      "speed": 2.7,
       "isInside": false,
       "isTransiting": false
     },
@@ -2157,8 +2146,8 @@
       "isTransiting": true
     },
     {
-      "lat": 28.8962,
-      "lng": 48.401985,
+      "lat": 28.893234,
+      "lng": 48.403267,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
@@ -2168,19 +2157,19 @@
       "isTransiting": false
     },
     {
-      "lat": 25.65641,
-      "lng": 55.014935,
+      "lat": 25.657066,
+      "lng": 55.015133,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "Despina",
-      "speed": 0,
+      "speed": 0.6,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 26.806515,
-      "lng": 51.571995,
+      "lat": 26.807407,
+      "lng": 51.581478,
       "type": "Handy",
       "state": "ballast",
       "commodity": "lpg",
@@ -2212,13 +2201,13 @@
       "isTransiting": false
     },
     {
-      "lat": 24.754049,
-      "lng": 56.626015,
+      "lat": 24.795,
+      "lng": 57.258335,
       "type": "Handy/MR1",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Themir",
-      "speed": 0.6,
+      "speed": 0,
       "isInside": false,
       "isTransiting": false
     },
@@ -2234,8 +2223,8 @@
       "isTransiting": false
     },
     {
-      "lat": 24.733337,
-      "lng": 56.533386,
+      "lat": 24.7334,
+      "lng": 56.533394,
       "type": "Handy",
       "state": "ballast",
       "commodity": "lpg",
@@ -2257,7 +2246,7 @@
     },
     {
       "lat": 24.6,
-      "lng": 56.751667,
+      "lng": 56.753334,
       "type": "Handymax",
       "state": "ballast",
       "commodity": "dry",
@@ -2267,35 +2256,35 @@
       "isTransiting": false
     },
     {
-      "lat": 25.719385,
-      "lng": 53.32111,
+      "lat": 25.719446,
+      "lng": 53.321144,
       "type": "Handymax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Kiana",
-      "speed": 0,
+      "speed": 0.5,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 24.996155,
-      "lng": 57.418812,
+      "lat": 24.706869,
+      "lng": 57.462208,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Noble",
-      "speed": 0.4,
+      "speed": 0.9,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 25.558332,
-      "lng": 56.685001,
+      "lat": 25.559416,
+      "lng": 56.685215,
       "type": "Handymax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Apex Iron",
-      "speed": 0,
+      "speed": 0.3,
       "isInside": false,
       "isTransiting": false
     },
@@ -2311,37 +2300,37 @@
       "isTransiting": false
     },
     {
-      "lat": 26.022669,
-      "lng": 55.584766,
+      "lat": 26.017275,
+      "lng": 54.562248,
       "type": "Handymax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Jawhart Berlin",
-      "speed": 7.9,
+      "speed": 7.7,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 28.944054,
-      "lng": 48.397404,
+      "lat": 28.94046,
+      "lng": 48.398521,
       "type": "Panamax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Khalejia Ana 3",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.978306,
-      "lng": 55.705715,
+      "lat": 25.983694,
+      "lng": 55.793167,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Moshtaraka 3",
-      "speed": 11.3,
+      "speed": 0.2,
       "isInside": true,
-      "isTransiting": true
+      "isTransiting": false
     },
     {
       "lat": 24.403166,
@@ -2355,8 +2344,8 @@
       "isTransiting": false
     },
     {
-      "lat": 24.743326,
-      "lng": 56.55172,
+      "lat": 24.803408,
+      "lng": 56.565521,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
@@ -2377,30 +2366,30 @@
       "isTransiting": false
     },
     {
-      "lat": 24.598333,
-      "lng": 56.665001,
+      "lat": 24.599995,
+      "lng": 56.66666,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Eunice",
-      "speed": 0,
+      "speed": 0.2,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 25.283556,
-      "lng": 54.936146,
+      "lat": 25.284937,
+      "lng": 54.941254,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Brother Glory",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.366642,
-      "lng": 55.040691,
+      "lat": 25.367615,
+      "lng": 55.045647,
       "type": "VLGC",
       "state": "ballast",
       "commodity": "lpg",
@@ -2410,8 +2399,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.693903,
-      "lng": 56.887321,
+      "lat": 25.693914,
+      "lng": 56.887245,
       "type": "Suezmax/LR3",
       "state": "loaded",
       "commodity": "liquids",
@@ -2476,8 +2465,8 @@
       "isTransiting": false
     },
     {
-      "lat": 24.586666,
-      "lng": 56.711666,
+      "lat": 24.586832,
+      "lng": 56.713001,
       "type": "Handymax",
       "state": "ballast",
       "commodity": "dry",
@@ -2509,57 +2498,57 @@
       "isTransiting": false
     },
     {
-      "lat": 29.0077,
-      "lng": 48.322262,
+      "lat": 29.003866,
+      "lng": 48.325905,
       "type": "Panamax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Portland Iv",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.521214,
-      "lng": 54.927502,
+      "lat": 25.520733,
+      "lng": 54.927845,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Sian",
+      "speed": 0.1,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 27.148489,
+      "lng": 49.782467,
+      "type": "MR",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Ratta",
       "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 27.148266,
-      "lng": 49.787846,
-      "type": "MR",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Ratta",
-      "speed": 0.3,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.722183,
-      "lng": 57.143848,
+      "lat": 24.658882,
+      "lng": 57.196934,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
       "name": "Haje Nafela",
-      "speed": 1.1,
+      "speed": 0.8,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 25.308491,
-      "lng": 57.145481,
+      "lat": 25.273983,
+      "lng": 57.117439,
       "type": "Handymax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Honestar",
-      "speed": 0.4,
+      "speed": 0,
       "isInside": false,
       "isTransiting": false
     },
@@ -2608,46 +2597,46 @@
       "isTransiting": false
     },
     {
-      "lat": 26.635183,
-      "lng": 56.018341,
+      "lat": 26.558517,
+      "lng": 56.897301,
       "type": "Suezmax/LR3",
       "state": "loaded",
       "commodity": "liquids",
       "name": "KYLO",
-      "speed": 6.5,
-      "isInside": true,
-      "isTransiting": true
+      "speed": 10,
+      "isInside": false,
+      "isTransiting": false
     },
     {
-      "lat": 27.030001,
-      "lng": 56.088333,
+      "lat": 27.038549,
+      "lng": 56.0868,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Golzar",
+      "speed": 0.6,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 29.832844,
+      "lng": 49.183311,
+      "type": "Panamax",
+      "state": "loaded",
+      "commodity": "dry",
+      "name": "Artavand",
       "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 29.836803,
-      "lng": 49.181633,
-      "type": "Panamax",
-      "state": "loaded",
-      "commodity": "dry",
-      "name": "Artavand",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 29.33643,
-      "lng": 49.332935,
+      "lat": 29.337627,
+      "lng": 49.332825,
       "type": "Aframax/LR2",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Divit",
-      "speed": 0.2,
+      "speed": 0.3,
       "isInside": true,
       "isTransiting": false
     },
@@ -2674,13 +2663,13 @@
       "isTransiting": false
     },
     {
-      "lat": 26.963385,
-      "lng": 56.402233,
+      "lat": 26.964108,
+      "lng": 56.402267,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "Huda",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": false,
       "isTransiting": false
     },
@@ -2707,13 +2696,13 @@
       "isTransiting": false
     },
     {
-      "lat": 24.779716,
-      "lng": 56.608852,
+      "lat": 24.778334,
+      "lng": 56.608334,
       "type": "Aframax/LR2",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Ala",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": false,
       "isTransiting": false
     },
@@ -2729,57 +2718,57 @@
       "isTransiting": false
     },
     {
-      "lat": 25.334499,
-      "lng": 56.476921,
+      "lat": 24.703733,
+      "lng": 57.453365,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "Marie",
-      "speed": 0.1,
+      "speed": 12.5,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 24.488333,
-      "lng": 56.676666,
+      "lat": 24.494303,
+      "lng": 56.678234,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Win Harmony",
-      "speed": 0,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.752645,
-      "lng": 56.56284,
-      "type": "Handymax",
-      "state": "ballast",
-      "commodity": "dry",
-      "name": "Sea Prosperity",
       "speed": 0.1,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 24.979729,
-      "lng": 55.065582,
+      "lat": 24.752392,
+      "lng": 56.562866,
+      "type": "Handymax",
+      "state": "ballast",
+      "commodity": "dry",
+      "name": "Sea Prosperity",
+      "speed": 0.9,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 24.980734,
+      "lng": 55.065235,
       "type": "Handymax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Mercury Lucky",
-      "speed": 0.5,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.704964,
-      "lng": 56.916225,
+      "lat": 25.704687,
+      "lng": 56.916054,
       "type": "VLCC",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Voras",
-      "speed": 0.4,
+      "speed": 0.1,
       "isInside": false,
       "isTransiting": false
     },
@@ -2806,13 +2795,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.924118,
-      "lng": 55.567806,
+      "lat": 25.551615,
+      "lng": 55.090752,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Vicstar",
-      "speed": 10.4,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -2828,24 +2817,24 @@
       "isTransiting": false
     },
     {
-      "lat": 25.676003,
-      "lng": 55.148724,
+      "lat": 25.675949,
+      "lng": 55.1497,
       "type": "VLGC",
       "state": "loaded",
       "commodity": "lpg",
       "name": "Sogl",
-      "speed": 0.5,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.631369,
-      "lng": 54.865715,
+      "lat": 25.631607,
+      "lng": 54.86404,
       "type": "Panamax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Richsing Lotus",
-      "speed": 0.4,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
@@ -2861,24 +2850,24 @@
       "isTransiting": false
     },
     {
-      "lat": 25.591034,
-      "lng": 53.01376,
+      "lat": 25.459097,
+      "lng": 53.990345,
       "type": "Lower Conventional",
       "state": "ballast",
       "commodity": "lng",
       "name": "Sohar LNG",
-      "speed": 1,
+      "speed": 9.4,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 26.433327,
-      "lng": 53.590286,
+      "lat": 26.151163,
+      "lng": 54.838486,
       "type": "Handy/MR1",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Elpis",
-      "speed": 10.3,
+      "speed": 9.9,
       "isInside": true,
       "isTransiting": false
     },
@@ -2894,8 +2883,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.585409,
-      "lng": 54.82674,
+      "lat": 25.585573,
+      "lng": 54.827084,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
@@ -2905,19 +2894,19 @@
       "isTransiting": false
     },
     {
-      "lat": 27.065084,
-      "lng": 56.375927,
+      "lat": 27.064821,
+      "lng": 56.376835,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Termeh",
-      "speed": 0.1,
+      "speed": 0.3,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 27.061455,
-      "lng": 56.295181,
+      "lat": 27.061129,
+      "lng": 56.296532,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
@@ -2927,10 +2916,10 @@
       "isTransiting": false
     },
     {
-      "lat": 29.61117,
-      "lng": 48.715919,
+      "lat": 29.608334,
+      "lng": 48.715,
       "type": "Handy/MR1",
-      "state": "loaded",
+      "state": "ballast",
       "commodity": "liquids",
       "name": "Blue Star I",
       "speed": 0,
@@ -2938,25 +2927,14 @@
       "isTransiting": false
     },
     {
-      "lat": 25.526239,
-      "lng": 53.790421,
+      "lat": 25.526991,
+      "lng": 53.790859,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Bow Saga",
-      "speed": 0.1,
+      "speed": 0.7,
       "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 23.255434,
-      "lng": 59.845646,
-      "type": "Panamax",
-      "state": "ballast",
-      "commodity": "dry",
-      "name": "One Force",
-      "speed": 11,
-      "isInside": false,
       "isTransiting": false
     },
     {
@@ -2971,25 +2949,25 @@
       "isTransiting": false
     },
     {
-      "lat": 24.504995,
-      "lng": 56.618752,
+      "lat": 24.504967,
+      "lng": 56.61874,
       "type": "Supramax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Hero",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 26.534782,
-      "lng": 55.922375,
+      "lat": 26.871332,
+      "lng": 56.642761,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Lotus Rising",
-      "speed": 0.9,
-      "isInside": true,
+      "speed": 11.2,
+      "isInside": false,
       "isTransiting": false
     },
     {
@@ -3004,8 +2982,8 @@
       "isTransiting": false
     },
     {
-      "lat": 30.444639,
-      "lng": 49.039898,
+      "lat": 30.444597,
+      "lng": 49.039864,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
@@ -3015,13 +2993,13 @@
       "isTransiting": false
     },
     {
-      "lat": 29.07428,
-      "lng": 49.756161,
+      "lat": 29.074276,
+      "lng": 49.754227,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Jasmine 8",
-      "speed": 0.3,
+      "speed": 0.4,
       "isInside": true,
       "isTransiting": false
     },
@@ -3059,15 +3037,15 @@
       "isTransiting": false
     },
     {
-      "lat": 26.380159,
-      "lng": 55.43486,
+      "lat": 26.558006,
+      "lng": 55.890327,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "New Liberty",
-      "speed": 0.1,
+      "speed": 13.1,
       "isInside": true,
-      "isTransiting": false
+      "isTransiting": true
     },
     {
       "lat": 25.696239,
@@ -3081,24 +3059,24 @@
       "isTransiting": false
     },
     {
-      "lat": 25.635466,
-      "lng": 57.003468,
+      "lat": 25.634869,
+      "lng": 57.005573,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
       "name": "V Gem",
-      "speed": 3.3,
+      "speed": 2.5,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 25.281925,
-      "lng": 54.96904,
+      "lat": 25.282417,
+      "lng": 54.970219,
       "type": "Supramax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Zx Glory",
-      "speed": 0.5,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
@@ -3114,13 +3092,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.562277,
-      "lng": 54.981567,
+      "lat": 25.562176,
+      "lng": 54.982235,
       "type": "Supramax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Xing Qiang 1",
-      "speed": 0.2,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -3136,19 +3114,19 @@
       "isTransiting": false
     },
     {
-      "lat": 24.732023,
-      "lng": 56.558559,
+      "lat": 24.73,
+      "lng": 56.556667,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Sea Wise",
-      "speed": 1.5,
+      "speed": 0,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 24.6,
-      "lng": 56.753334,
+      "lat": 24.600267,
+      "lng": 56.754433,
       "type": "Panamax",
       "state": "loaded",
       "commodity": "dry",
@@ -3158,19 +3136,19 @@
       "isTransiting": false
     },
     {
-      "lat": 26.589382,
-      "lng": 52.036602,
+      "lat": 26.5886,
+      "lng": 52.030586,
       "type": "VLCC",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Fso Asia",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 26.670099,
-      "lng": 51.901188,
+      "lat": 26.669327,
+      "lng": 51.896709,
       "type": "VLCC",
       "state": "ballast",
       "commodity": "liquids",
@@ -3202,13 +3180,13 @@
       "isTransiting": false
     },
     {
-      "lat": 27.063334,
-      "lng": 56.325001,
+      "lat": 27.065742,
+      "lng": 56.324741,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Artaria",
-      "speed": 0,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
@@ -3257,35 +3235,35 @@
       "isTransiting": false
     },
     {
-      "lat": 24.732513,
-      "lng": 54.215481,
+      "lat": 24.733074,
+      "lng": 54.217308,
       "type": "Handy",
       "state": "ballast",
       "commodity": "lpg",
       "name": "Ard Horizon",
-      "speed": 0.1,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 24.278198,
-      "lng": 59.492535,
+      "lat": 24.402454,
+      "lng": 59.027607,
       "type": "Aframax/LR2",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Atlantis I",
-      "speed": 0.8,
+      "speed": 0.4,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 25.547939,
-      "lng": 55.066086,
+      "lat": 25.549765,
+      "lng": 55.069118,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "Nj Moon",
-      "speed": 0,
+      "speed": 0.7,
       "isInside": true,
       "isTransiting": false
     },
@@ -3301,7 +3279,7 @@
       "isTransiting": false
     },
     {
-      "lat": 25.958334,
+      "lat": 25.959999,
       "lng": 56.898335,
       "type": "Panamax/LR1",
       "state": "ballast",
@@ -3312,13 +3290,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.519415,
-      "lng": 55.295444,
+      "lat": 25.521019,
+      "lng": 55.297836,
       "type": "Handy/MR1",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Elohim",
-      "speed": 2.7,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -3367,13 +3345,13 @@
       "isTransiting": false
     },
     {
-      "lat": 26.92,
-      "lng": 56.523335,
+      "lat": 26.921217,
+      "lng": 56.523014,
       "type": "VLCC",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Yuri",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": false,
       "isTransiting": false
     },
@@ -3400,19 +3378,19 @@
       "isTransiting": false
     },
     {
-      "lat": 25.567162,
-      "lng": 55.126892,
+      "lat": 25.568098,
+      "lng": 55.127846,
       "type": "Handy/MR1",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Kurdos",
-      "speed": 3.3,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 29.38916,
-      "lng": 48.915226,
+      "lat": 29.38612,
+      "lng": 48.916679,
       "type": "Handy/MR1",
       "state": "loaded",
       "commodity": "liquids",
@@ -3455,13 +3433,13 @@
       "isTransiting": false
     },
     {
-      "lat": 24.574936,
-      "lng": 56.65258,
+      "lat": 24.584677,
+      "lng": 56.650162,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "Kaia",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": false,
       "isTransiting": false
     },
@@ -3477,8 +3455,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.698839,
-      "lng": 52.247955,
+      "lat": 25.697174,
+      "lng": 52.246685,
       "type": "Suezmax/LR3",
       "state": "loaded",
       "commodity": "liquids",
@@ -3488,30 +3466,30 @@
       "isTransiting": false
     },
     {
-      "lat": 25.0247,
-      "lng": 54.614235,
+      "lat": 25.145809,
+      "lng": 53.423691,
       "type": "Aframax/LR2",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Daffodil",
-      "speed": 0,
+      "speed": 3.6,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.688898,
-      "lng": 56.940842,
+      "lat": 25.688334,
+      "lng": 56.936668,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Aliza",
-      "speed": 0.8,
+      "speed": 0,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 29.576283,
-      "lng": 48.78965,
+      "lat": 29.572849,
+      "lng": 48.791485,
       "type": "Aframax/LR2",
       "state": "loaded",
       "commodity": "liquids",
@@ -3532,13 +3510,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.678734,
-      "lng": 56.661186,
+      "lat": 25.679918,
+      "lng": 56.660015,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Longevity 7",
-      "speed": 1.8,
+      "speed": 0.6,
       "isInside": false,
       "isTransiting": false
     },
@@ -3554,13 +3532,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.252542,
-      "lng": 56.79808,
+      "lat": 24.969999,
+      "lng": 56.941666,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Multan",
-      "speed": 0.6,
+      "speed": 0,
       "isInside": false,
       "isTransiting": false
     },
@@ -3576,19 +3554,19 @@
       "isTransiting": false
     },
     {
-      "lat": 25.505527,
-      "lng": 55.254997,
+      "lat": 25.506458,
+      "lng": 55.255867,
       "type": "Handy/MR1",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Miraan",
-      "speed": 1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 30.199934,
-      "lng": 47.880215,
+      "lat": 30.200027,
+      "lng": 47.880184,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
@@ -3609,24 +3587,24 @@
       "isTransiting": false
     },
     {
-      "lat": 25.647877,
-      "lng": 55.13979,
+      "lat": 25.648563,
+      "lng": 55.140186,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Swift Falcon",
-      "speed": 0.6,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 26.991667,
-      "lng": 56.360001,
+      "lat": 26.99325,
+      "lng": 56.359592,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Breez",
-      "speed": 0,
+      "speed": 0.9,
       "isInside": true,
       "isTransiting": false
     },
@@ -3653,8 +3631,8 @@
       "isTransiting": false
     },
     {
-      "lat": 29.633186,
-      "lng": 48.677994,
+      "lat": 29.63196,
+      "lng": 48.680954,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
@@ -3664,13 +3642,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.975847,
-      "lng": 56.055599,
+      "lat": 26.018511,
+      "lng": 54.99456,
       "type": "Panamax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Ekouo",
-      "speed": 2.2,
+      "speed": 9.3,
       "isInside": true,
       "isTransiting": false
     },
@@ -3697,13 +3675,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.843876,
-      "lng": 51.77528,
+      "lat": 25.843306,
+      "lng": 51.775341,
       "type": "Lower Conventional",
       "state": "loaded",
       "commodity": "lng",
       "name": "Disha",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -3719,8 +3697,8 @@
       "isTransiting": false
     },
     {
-      "lat": 29.609814,
-      "lng": 48.775814,
+      "lat": 29.606119,
+      "lng": 48.780796,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
@@ -3730,19 +3708,19 @@
       "isTransiting": false
     },
     {
-      "lat": 27.565556,
-      "lng": 51.889141,
+      "lat": 27.56563,
+      "lng": 51.889671,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Loanna",
-      "speed": 0.4,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.712404,
-      "lng": 55.107922,
+      "lat": 25.711866,
+      "lng": 55.108463,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
@@ -3752,13 +3730,13 @@
       "isTransiting": false
     },
     {
-      "lat": 27.615088,
-      "lng": 51.923973,
+      "lat": 27.779526,
+      "lng": 51.90852,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Farog",
-      "speed": 8.5,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -3774,8 +3752,8 @@
       "isTransiting": false
     },
     {
-      "lat": 29.342817,
-      "lng": 48.953732,
+      "lat": 29.339518,
+      "lng": 48.955715,
       "type": "Panamax/LR1",
       "state": "ballast",
       "commodity": "liquids",
@@ -3807,46 +3785,35 @@
       "isTransiting": false
     },
     {
-      "lat": 24.575438,
-      "lng": 58.269939,
+      "lat": 24.574841,
+      "lng": 58.264507,
       "type": "Panamax/LR1",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Ocean Koi",
-      "speed": 0.4,
+      "speed": 0.3,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 25.907679,
-      "lng": 52.35004,
+      "lat": 25.906673,
+      "lng": 52.350075,
       "type": "Lower Conventional",
       "state": "loaded",
       "commodity": "lng",
       "name": "Fuwairit",
-      "speed": 0,
+      "speed": 0.4,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 22.162638,
-      "lng": 59.951626,
-      "type": "Handy/MR1",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Alfonso",
-      "speed": 8.2,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.598331,
-      "lng": 55.134888,
+      "lat": 25.59873,
+      "lng": 55.138695,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Vaughan",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -3862,8 +3829,8 @@
       "isTransiting": false
     },
     {
-      "lat": 29.596684,
-      "lng": 48.785851,
+      "lat": 29.59285,
+      "lng": 48.791065,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
@@ -3873,13 +3840,13 @@
       "isTransiting": false
     },
     {
-      "lat": 24.921598,
-      "lng": 57.842873,
+      "lat": 25.476906,
+      "lng": 56.695545,
       "type": "Supramax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Ocean Pretty",
-      "speed": 11.8,
+      "speed": 11.3,
       "isInside": false,
       "isTransiting": false
     },
@@ -3895,8 +3862,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.608622,
-      "lng": 54.99511,
+      "lat": 25.608877,
+      "lng": 54.995399,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
@@ -3906,8 +3873,8 @@
       "isTransiting": false
     },
     {
-      "lat": 30.194151,
-      "lng": 47.88517,
+      "lat": 30.194147,
+      "lng": 47.885159,
       "type": "Panamax/LR1",
       "state": "loaded",
       "commodity": "liquids",
@@ -3917,8 +3884,8 @@
       "isTransiting": false
     },
     {
-      "lat": 29.217966,
-      "lng": 49.197117,
+      "lat": 29.216667,
+      "lng": 49.196667,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
@@ -3928,13 +3895,13 @@
       "isTransiting": false
     },
     {
-      "lat": 26.426235,
-      "lng": 55.714127,
+      "lat": 26.407751,
+      "lng": 55.869179,
       "type": "Aframax/LR2",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Uma",
-      "speed": 0.9,
+      "speed": 2,
       "isInside": true,
       "isTransiting": false
     },
@@ -3961,19 +3928,19 @@
       "isTransiting": false
     },
     {
-      "lat": 29.615553,
-      "lng": 48.753086,
+      "lat": 29.614986,
+      "lng": 48.753353,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Pure Point",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.700916,
-      "lng": 55.026684,
+      "lat": 25.699883,
+      "lng": 55.027233,
       "type": "Handy/MR1",
       "state": "loaded",
       "commodity": "liquids",
@@ -3983,8 +3950,8 @@
       "isTransiting": false
     },
     {
-      "lat": 26.725449,
-      "lng": 52.072529,
+      "lat": 26.725496,
+      "lng": 52.072533,
       "type": "Aframax/LR2",
       "state": "ballast",
       "commodity": "liquids",
@@ -3994,8 +3961,8 @@
       "isTransiting": false
     },
     {
-      "lat": 27.359476,
-      "lng": 50.097763,
+      "lat": 27.356764,
+      "lng": 50.098831,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
@@ -4005,19 +3972,19 @@
       "isTransiting": false
     },
     {
-      "lat": 25.755217,
-      "lng": 53.686283,
+      "lat": 25.755733,
+      "lng": 53.686768,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Ye Chi",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.59236,
-      "lng": 55.096832,
+      "lat": 25.596704,
+      "lng": 55.100479,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
@@ -4027,19 +3994,19 @@
       "isTransiting": false
     },
     {
-      "lat": 25.545393,
-      "lng": 54.967373,
+      "lat": 25.545362,
+      "lng": 54.967415,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Soyia",
-      "speed": 0.1,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 29.7159,
-      "lng": 48.6366,
+      "lat": 29.713751,
+      "lng": 48.640751,
       "type": "Aframax/LR2",
       "state": "ballast",
       "commodity": "liquids",
@@ -4049,8 +4016,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.555483,
-      "lng": 54.644783,
+      "lat": 25.556032,
+      "lng": 54.645248,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
@@ -4071,8 +4038,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.491398,
-      "lng": 55.197788,
+      "lat": 25.492952,
+      "lng": 55.201309,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
@@ -4082,13 +4049,13 @@
       "isTransiting": false
     },
     {
-      "lat": 29.692499,
-      "lng": 49.631016,
+      "lat": 29.69195,
+      "lng": 49.635132,
       "type": "Panamax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Omicron Nikos",
-      "speed": 0,
+      "speed": 0.6,
       "isInside": true,
       "isTransiting": false
     },
@@ -4115,8 +4082,8 @@
       "isTransiting": false
     },
     {
-      "lat": 29.651934,
-      "lng": 48.754478,
+      "lat": 29.64946,
+      "lng": 48.755829,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
@@ -4126,19 +4093,19 @@
       "isTransiting": false
     },
     {
-      "lat": 25.654537,
-      "lng": 56.94664,
+      "lat": 25.654408,
+      "lng": 56.946712,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Celine I",
-      "speed": 0,
+      "speed": 0.8,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 27.030008,
-      "lng": 49.692162,
+      "lat": 27.030094,
+      "lng": 49.692154,
       "type": "Supramax",
       "state": "ballast",
       "commodity": "dry",
@@ -4148,10 +4115,10 @@
       "isTransiting": false
     },
     {
-      "lat": 24.5774,
-      "lng": 56.8442,
+      "lat": 24.497185,
+      "lng": 56.632767,
       "type": "MR",
-      "state": "loaded",
+      "state": "ballast",
       "commodity": "liquids",
       "name": "Kun Peng",
       "speed": 0,
@@ -4170,19 +4137,19 @@
       "isTransiting": false
     },
     {
-      "lat": 24.863853,
-      "lng": 51.674622,
+      "lat": 24.967453,
+      "lng": 51.601845,
       "type": "Post-Panamax",
-      "state": "loaded",
+      "state": "ballast",
       "commodity": "dry",
       "name": "Leya",
-      "speed": 5.9,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.683372,
-      "lng": 55.126152,
+      "lat": 25.488552,
+      "lng": 55.397079,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
@@ -4203,8 +4170,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.734234,
-      "lng": 56.913521,
+      "lat": 25.735292,
+      "lng": 56.915054,
       "type": "VLCC",
       "state": "ballast",
       "commodity": "liquids",
@@ -4214,8 +4181,8 @@
       "isTransiting": false
     },
     {
-      "lat": 29.282467,
-      "lng": 49.221718,
+      "lat": 29.281666,
+      "lng": 49.221668,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
@@ -4225,13 +4192,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.615236,
-      "lng": 55.070786,
+      "lat": 25.615442,
+      "lng": 55.070965,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Epik",
-      "speed": 0.4,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -4247,8 +4214,8 @@
       "isTransiting": false
     },
     {
-      "lat": 27.094999,
-      "lng": 56.043335,
+      "lat": 27.081667,
+      "lng": 56.041668,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
@@ -4258,8 +4225,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.318224,
-      "lng": 57.56694,
+      "lat": 25.305878,
+      "lng": 57.412933,
       "type": "Panamax",
       "state": "loaded",
       "commodity": "dry",
@@ -4291,8 +4258,8 @@
       "isTransiting": false
     },
     {
-      "lat": 30.205214,
-      "lng": 47.876221,
+      "lat": 30.205276,
+      "lng": 47.876194,
       "type": "Panamax/LR1",
       "state": "loaded",
       "commodity": "liquids",
@@ -4302,24 +4269,24 @@
       "isTransiting": false
     },
     {
-      "lat": 26.894917,
-      "lng": 52.72805,
+      "lat": 27.285383,
+      "lng": 51.991184,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Rose 25",
-      "speed": 6,
+      "speed": 6.5,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.587633,
-      "lng": 55.045502,
+      "lat": 25.589033,
+      "lng": 55.048,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Starlight",
-      "speed": 0.2,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -4330,13 +4297,13 @@
       "state": "ballast",
       "commodity": "dry",
       "name": "Bern",
-      "speed": 0,
+      "speed": 0.6,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 27.296185,
-      "lng": 50.333462,
+      "lat": 27.294609,
+      "lng": 50.334953,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
@@ -4346,13 +4313,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.620953,
-      "lng": 55.019997,
+      "lat": 25.622086,
+      "lng": 55.021023,
       "type": "Panamax/LR1",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Happy Camper",
-      "speed": 0.4,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -4368,41 +4335,41 @@
       "isTransiting": false
     },
     {
-      "lat": 25.532732,
-      "lng": 54.931786,
+      "lat": 25.532694,
+      "lng": 54.932392,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Dakush",
+      "speed": 0.1,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 24.76,
+      "lng": 56.588333,
+      "type": "Panamax/LR1",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Ding Xiang",
+      "speed": 0,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.580063,
+      "lng": 55.079281,
+      "type": "Panamax/LR1",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Rangver",
       "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 24.75989,
-      "lng": 56.590065,
-      "type": "Panamax/LR1",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Ding Xiang",
-      "speed": 0.6,
-      "isInside": false,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.580465,
-      "lng": 55.078762,
-      "type": "Panamax/LR1",
-      "state": "ballast",
-      "commodity": "liquids",
-      "name": "Rangver",
-      "speed": 0.6,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 26.462465,
-      "lng": 53.315632,
+      "lat": 26.854666,
+      "lng": 52.723686,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
@@ -4412,24 +4379,24 @@
       "isTransiting": false
     },
     {
-      "lat": 25.706221,
-      "lng": 54.985054,
+      "lat": 25.706104,
+      "lng": 54.985188,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Torin",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.663677,
-      "lng": 56.662106,
+      "lat": 25.664671,
+      "lng": 56.662548,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
       "name": "New Venture",
-      "speed": 0.9,
+      "speed": 2,
       "isInside": false,
       "isTransiting": false
     },
@@ -4522,8 +4489,8 @@
       "isTransiting": false
     },
     {
-      "lat": 29.62326,
-      "lng": 48.76646,
+      "lat": 29.61936,
+      "lng": 48.770794,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
@@ -4533,13 +4500,13 @@
       "isTransiting": false
     },
     {
-      "lat": 26.136873,
-      "lng": 53.622753,
+      "lat": 26.111496,
+      "lng": 53.637554,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Ocean Lily",
-      "speed": 0.9,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -4555,8 +4522,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.853411,
-      "lng": 56.941727,
+      "lat": 25.853262,
+      "lng": 56.941734,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
@@ -4566,8 +4533,19 @@
       "isTransiting": false
     },
     {
-      "lat": 29.058826,
-      "lng": 48.16526,
+      "lat": 23.807777,
+      "lng": 59.269241,
+      "type": "Aframax/LR2",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "Sirius 1",
+      "speed": 1,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 29.058847,
+      "lng": 48.165298,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
@@ -4577,13 +4555,13 @@
       "isTransiting": false
     },
     {
-      "lat": 24.500963,
-      "lng": 56.621452,
+      "lat": 24.50107,
+      "lng": 56.621265,
       "type": "Supramax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Valor",
-      "speed": 0,
+      "speed": 0.9,
       "isInside": false,
       "isTransiting": false
     },
@@ -4599,13 +4577,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.551262,
-      "lng": 55.353645,
+      "lat": 25.552641,
+      "lng": 55.355675,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Sands",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -4621,8 +4599,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.732304,
-      "lng": 52.060986,
+      "lat": 25.730778,
+      "lng": 52.060139,
       "type": "Aframax/LR2",
       "state": "ballast",
       "commodity": "liquids",
@@ -4643,13 +4621,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.382698,
-      "lng": 57.153625,
+      "lat": 25.379221,
+      "lng": 57.129002,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Luxeed",
-      "speed": 0.3,
+      "speed": 10.6,
       "isInside": false,
       "isTransiting": false
     },
@@ -4687,8 +4665,8 @@
       "isTransiting": false
     },
     {
-      "lat": 24.763321,
-      "lng": 56.559948,
+      "lat": 24.763405,
+      "lng": 56.560028,
       "type": "VLCC",
       "state": "ballast",
       "commodity": "liquids",
@@ -4698,7 +4676,7 @@
       "isTransiting": false
     },
     {
-      "lat": 25.933332,
+      "lat": 25.934999,
       "lng": 56.931667,
       "type": "MR",
       "state": "ballast",
@@ -4720,13 +4698,13 @@
       "isTransiting": false
     },
     {
-      "lat": 29.593452,
-      "lng": 48.760845,
+      "lat": 29.591141,
+      "lng": 48.766766,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "New Andros",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -4742,19 +4720,19 @@
       "isTransiting": false
     },
     {
-      "lat": 25.041634,
-      "lng": 54.614567,
+      "lat": 25.046497,
+      "lng": 54.628025,
       "type": "Aframax/LR2",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Hydra",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 28.927616,
-      "lng": 48.409668,
+      "lat": 28.924101,
+      "lng": 48.411934,
       "type": "Panamax",
       "state": "loaded",
       "commodity": "dry",
@@ -4786,10 +4764,10 @@
       "isTransiting": false
     },
     {
-      "lat": 29.661449,
-      "lng": 48.711716,
+      "lat": 29.659134,
+      "lng": 48.717285,
       "type": "Panamax/LR1",
-      "state": "ballast",
+      "state": "loaded",
       "commodity": "liquids",
       "name": "Felicity",
       "speed": 0,
@@ -4797,8 +4775,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.719418,
-      "lng": 54.890434,
+      "lat": 25.720083,
+      "lng": 54.888367,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
@@ -4808,24 +4786,24 @@
       "isTransiting": false
     },
     {
-      "lat": 24.781635,
-      "lng": 56.55616,
+      "lat": 24.781633,
+      "lng": 56.555527,
       "type": "Suezmax/LR3",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Liliana",
-      "speed": 1,
+      "speed": 4.6,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 26.472546,
-      "lng": 53.358814,
+      "lat": 26.530941,
+      "lng": 53.223293,
       "type": "Handy/MR1",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Blue Commander",
-      "speed": 5.2,
+      "speed": 8.8,
       "isInside": true,
       "isTransiting": false
     },
@@ -4841,13 +4819,13 @@
       "isTransiting": false
     },
     {
-      "lat": 29.324226,
-      "lng": 48.988121,
+      "lat": 29.321413,
+      "lng": 48.989994,
       "type": "Handy/MR1",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Bellagio",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -4863,19 +4841,19 @@
       "isTransiting": false
     },
     {
-      "lat": 25.336044,
-      "lng": 56.553982,
+      "lat": 25.334999,
+      "lng": 56.553333,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "Kaiser",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 25.771109,
-      "lng": 56.898113,
+      "lat": 25.771038,
+      "lng": 56.897034,
       "type": "Panamax/LR1",
       "state": "ballast",
       "commodity": "liquids",
@@ -4907,13 +4885,13 @@
       "isTransiting": false
     },
     {
-      "lat": 26.849257,
-      "lng": 52.688862,
+      "lat": 26.613213,
+      "lng": 53.11256,
       "type": "Supramax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Bright Ocean",
-      "speed": 8.8,
+      "speed": 9.3,
       "isInside": true,
       "isTransiting": false
     },
@@ -4940,8 +4918,8 @@
       "isTransiting": false
     },
     {
-      "lat": 24.586666,
-      "lng": 56.759998,
+      "lat": 24.586817,
+      "lng": 56.760532,
       "type": "Supramax",
       "state": "ballast",
       "commodity": "dry",
@@ -4995,13 +4973,13 @@
       "isTransiting": false
     },
     {
-      "lat": 29.845387,
-      "lng": 49.206261,
+      "lat": 29.84181,
+      "lng": 49.208378,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Artin",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -5017,13 +4995,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.539764,
-      "lng": 55.283234,
+      "lat": 25.541784,
+      "lng": 55.286221,
       "type": "VLGC",
       "state": "loaded",
       "commodity": "lpg",
       "name": "Nv Aquamarine",
-      "speed": 0.8,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -5050,19 +5028,19 @@
       "isTransiting": false
     },
     {
-      "lat": 24.746407,
-      "lng": 56.57642,
+      "lat": 24.746862,
+      "lng": 56.575455,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Silver",
-      "speed": 1.1,
+      "speed": 3.9,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 30.201954,
-      "lng": 47.878651,
+      "lat": 30.201967,
+      "lng": 47.878666,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
@@ -5094,8 +5072,8 @@
       "isTransiting": false
     },
     {
-      "lat": 29.625601,
-      "lng": 48.719601,
+      "lat": 29.623699,
+      "lng": 48.721783,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
@@ -5116,19 +5094,19 @@
       "isTransiting": false
     },
     {
-      "lat": 29.652794,
-      "lng": 48.711327,
+      "lat": 29.683426,
+      "lng": 48.700375,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Stella",
-      "speed": 3.6,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 24.363333,
-      "lng": 57.718334,
+      "lat": 23.996666,
+      "lng": 59.040001,
       "type": "Supramax",
       "state": "ballast",
       "commodity": "dry",
@@ -5138,13 +5116,13 @@
       "isTransiting": false
     },
     {
-      "lat": 27.278336,
-      "lng": 49.906895,
+      "lat": 27.275812,
+      "lng": 49.907467,
       "type": "Handy/MR1",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Chemroad Rose",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -5160,52 +5138,52 @@
       "isTransiting": false
     },
     {
-      "lat": 25.259567,
-      "lng": 56.906666,
+      "lat": 25.264366,
+      "lng": 56.894878,
       "type": "MGC",
       "state": "ballast",
       "commodity": "lpg",
       "name": "Pacific Star I",
-      "speed": 3.2,
+      "speed": 0.6,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 27.078161,
-      "lng": 49.696335,
+      "lat": 27.135998,
+      "lng": 49.805172,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Tailogy",
-      "speed": 0,
+      "speed": 12,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 29.662163,
-      "lng": 48.712021,
+      "lat": 29.658449,
+      "lng": 48.717091,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Alraya",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 27.122168,
-      "lng": 50.272133,
-      "type": "VLCC",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Towada",
       "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 28.535048,
-      "lng": 49.856022,
+      "lat": 27.121283,
+      "lng": 50.274117,
+      "type": "VLCC",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Towada",
+      "speed": 0.2,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 28.531652,
+      "lng": 49.859192,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
@@ -5215,8 +5193,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.605762,
-      "lng": 53.812569,
+      "lat": 25.604916,
+      "lng": 53.809559,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
@@ -5237,24 +5215,24 @@
       "isTransiting": false
     },
     {
-      "lat": 29.852663,
-      "lng": 49.189968,
+      "lat": 29.848997,
+      "lng": 49.191456,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Golafruz",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.984875,
-      "lng": 55.730961,
+      "lat": 25.986664,
+      "lng": 55.731194,
       "type": "Kamsarmax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Nozo",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -5270,24 +5248,24 @@
       "isTransiting": false
     },
     {
-      "lat": 29.59206,
-      "lng": 48.710907,
+      "lat": 29.591366,
+      "lng": 48.710567,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
       "name": "Nadeen",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 26.004103,
-      "lng": 55.431808,
+      "lat": 26.00419,
+      "lng": 55.432751,
       "type": "MGC",
       "state": "loaded",
       "commodity": "lpg",
       "name": "Jag Vikram",
-      "speed": 1.5,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -5303,52 +5281,52 @@
       "isTransiting": false
     },
     {
-      "lat": 24.608419,
-      "lng": 57.74614,
+      "lat": 25.08926,
+      "lng": 56.947445,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Purity",
-      "speed": 10.7,
+      "speed": 11.3,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 25.890106,
-      "lng": 51.774788,
+      "lat": 25.88924,
+      "lng": 51.774368,
       "type": "Lower Conventional",
       "state": "loaded",
       "commodity": "lng",
       "name": "Al Daayen",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.541033,
+      "lng": 55.375092,
+      "type": "MR",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Golden Eagle Ii",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 26.025234,
+      "lng": 55.198208,
+      "type": "MGC",
+      "state": "loaded",
+      "commodity": "lpg",
+      "name": "Green Asha",
       "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.539417,
-      "lng": 55.371712,
-      "type": "MR",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Golden Eagle Ii",
-      "speed": 0.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 26.024763,
-      "lng": 55.197365,
-      "type": "MGC",
-      "state": "loaded",
-      "commodity": "lpg",
-      "name": "Green Asha",
-      "speed": 0.3,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.750086,
-      "lng": 56.603909,
+      "lat": 24.749966,
+      "lng": 56.603882,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
@@ -5391,19 +5369,19 @@
       "isTransiting": false
     },
     {
-      "lat": 29.694433,
-      "lng": 49.655186,
+      "lat": 29.690996,
+      "lng": 49.658283,
       "type": "Kamsarmax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Star Laura",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 24.727776,
-      "lng": 56.716331,
+      "lat": 24.726847,
+      "lng": 56.714741,
       "type": "Panamax/LR1",
       "state": "ballast",
       "commodity": "liquids",
@@ -5424,8 +5402,8 @@
       "isTransiting": false
     },
     {
-      "lat": 26.502508,
-      "lng": 50.191315,
+      "lat": 26.502537,
+      "lng": 50.191284,
       "type": "Supramax",
       "state": "ballast",
       "commodity": "dry",
@@ -5435,30 +5413,30 @@
       "isTransiting": false
     },
     {
-      "lat": 25.891747,
-      "lng": 55.144573,
+      "lat": 26.403696,
+      "lng": 55.777645,
       "type": "Kamsarmax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Aya",
-      "speed": 5.1,
+      "speed": 12.9,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.640903,
-      "lng": 56.677288,
+      "lat": 25.637701,
+      "lng": 56.684673,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Ksl Mingyang",
-      "speed": 0.1,
+      "speed": 3.2,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 26.034954,
-      "lng": 55.803688,
+      "lat": 26.035883,
+      "lng": 55.804535,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
@@ -5479,8 +5457,8 @@
       "isTransiting": false
     },
     {
-      "lat": 27.132627,
-      "lng": 50.286472,
+      "lat": 27.127718,
+      "lng": 50.289463,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
@@ -5512,8 +5490,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.573717,
-      "lng": 54.9991,
+      "lat": 25.575399,
+      "lng": 55.002483,
       "type": "MGC",
       "state": "loaded",
       "commodity": "lpg",
@@ -5523,52 +5501,52 @@
       "isTransiting": false
     },
     {
-      "lat": 27.069851,
-      "lng": 49.701065,
+      "lat": 27.07803,
+      "lng": 49.678078,
       "type": "Supramax",
-      "state": "ballast",
+      "state": "loaded",
       "commodity": "dry",
       "name": "Victoria",
-      "speed": 4.4,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.797953,
-      "lng": 53.581295,
+      "lat": 25.799509,
+      "lng": 53.5765,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Cospearl Lake",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 24.587391,
-      "lng": 57.532532,
+      "lat": 24.921459,
+      "lng": 56.960941,
       "type": "Aframax/LR2",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Banda",
-      "speed": 13.3,
+      "speed": 10,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 25.806932,
-      "lng": 51.776501,
+      "lat": 25.805967,
+      "lng": 51.77602,
       "type": "Handy/MR1",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Sidra Al Ruwais",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 29.867746,
-      "lng": 49.193321,
+      "lat": 29.864523,
+      "lng": 49.195694,
       "type": "Kamsarmax",
       "state": "loaded",
       "commodity": "dry",
@@ -5578,41 +5556,41 @@
       "isTransiting": false
     },
     {
-      "lat": 23.946667,
-      "lng": 58.851665,
+      "lat": 24.436666,
+      "lng": 57.868332,
       "type": "Handy/MR1",
       "state": "ballast",
       "commodity": "liquids",
       "name": "M Brigit",
-      "speed": 13,
+      "speed": 12,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 24.758333,
-      "lng": 56.560001,
+      "lat": 24.759766,
+      "lng": 56.561466,
       "type": "Handy/MR1",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Elcano",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 24.723736,
-      "lng": 54.156666,
+      "lat": 24.72443,
+      "lng": 54.158909,
       "type": "Kamsarmax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Anna Oldendorff",
-      "speed": 0.7,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 24.553316,
-      "lng": 56.854198,
+      "lat": 24.553249,
+      "lng": 56.853867,
       "type": "MGC",
       "state": "loaded",
       "commodity": "lpg",
@@ -5622,24 +5600,24 @@
       "isTransiting": false
     },
     {
-      "lat": 25.917904,
-      "lng": 53.100906,
+      "lat": 25.882835,
+      "lng": 53.052814,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Tenjun",
-      "speed": 5,
+      "speed": 0.6,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 27.166889,
-      "lng": 49.790009,
+      "lat": 27.165741,
+      "lng": 49.788105,
       "type": "Handy/MR1",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Kohzan Maru V",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -5677,32 +5655,32 @@
       "isTransiting": false
     },
     {
-      "lat": 24.944126,
-      "lng": 54.540455,
+      "lat": 24.945183,
+      "lng": 54.542347,
       "type": "VLGC",
       "state": "ballast",
       "commodity": "lpg",
       "name": "Bw Loyalty",
-      "speed": 0.3,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.431536,
-      "lng": 55.051712,
+      "lat": 25.432173,
+      "lng": 55.053596,
       "type": "VLGC",
       "state": "loaded",
       "commodity": "lpg",
       "name": "Sarv Shakti",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.467264,
-      "lng": 55.481686,
+      "lat": 25.467325,
+      "lng": 55.481709,
       "type": "MR",
-      "state": "ballast",
+      "state": "loaded",
       "commodity": "liquids",
       "name": "Deepblue",
       "speed": 0,
@@ -5710,19 +5688,19 @@
       "isTransiting": false
     },
     {
-      "lat": 25.61726,
-      "lng": 55.143925,
+      "lat": 25.617056,
+      "lng": 55.144455,
       "type": "VLGC",
       "state": "ballast",
       "commodity": "lpg",
       "name": "Haana",
-      "speed": 0,
+      "speed": 0.3,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 29.712957,
-      "lng": 49.636581,
+      "lat": 29.710543,
+      "lng": 49.640553,
       "type": "Kamsarmax",
       "state": "loaded",
       "commodity": "dry",
@@ -5754,19 +5732,19 @@
       "isTransiting": false
     },
     {
-      "lat": 26.040693,
-      "lng": 53.345325,
+      "lat": 26.019552,
+      "lng": 53.368153,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Plata Carrier",
-      "speed": 1,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.804285,
-      "lng": 51.811817,
+      "lat": 25.803398,
+      "lng": 51.811047,
       "type": "Q-Flex",
       "state": "loaded",
       "commodity": "lng",
@@ -5776,13 +5754,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.797768,
-      "lng": 52.163685,
+      "lat": 25.796524,
+      "lng": 52.163548,
       "type": "Q-Flex",
       "state": "loaded",
       "commodity": "lng",
       "name": "Al Sahla",
-      "speed": 0,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
@@ -5809,8 +5787,8 @@
       "isTransiting": false
     },
     {
-      "lat": 27.27463,
-      "lng": 50.341465,
+      "lat": 27.272392,
+      "lng": 50.342487,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
@@ -5820,8 +5798,8 @@
       "isTransiting": false
     },
     {
-      "lat": 29.684866,
-      "lng": 48.696617,
+      "lat": 29.683134,
+      "lng": 48.700249,
       "type": "Aframax/LR2",
       "state": "loaded",
       "commodity": "liquids",
@@ -5831,19 +5809,19 @@
       "isTransiting": false
     },
     {
-      "lat": 26.06126,
-      "lng": 55.299637,
+      "lat": 26.604506,
+      "lng": 56.010986,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Minoan Glory",
-      "speed": 0.1,
+      "speed": 14.1,
       "isInside": true,
-      "isTransiting": false
+      "isTransiting": true
     },
     {
-      "lat": 26.639116,
-      "lng": 50.219017,
+      "lat": 26.635334,
+      "lng": 50.219898,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
@@ -5853,13 +5831,13 @@
       "isTransiting": false
     },
     {
-      "lat": 27.221704,
-      "lng": 50.167984,
+      "lat": 26.613636,
+      "lng": 51.050491,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Pvt Valencia",
-      "speed": 10.7,
+      "speed": 0.8,
       "isInside": true,
       "isTransiting": false
     },
@@ -5886,35 +5864,35 @@
       "isTransiting": false
     },
     {
-      "lat": 24.592884,
-      "lng": 56.679707,
+      "lat": 24.591875,
+      "lng": 56.679146,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Yuan Hang Wei Ye",
-      "speed": 0.6,
+      "speed": 2.2,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 26.041842,
-      "lng": 54.9049,
+      "lat": 25.856319,
+      "lng": 53.68409,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Mls Onyx",
-      "speed": 8.5,
+      "speed": 9.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.523392,
-      "lng": 54.880272,
+      "lat": 25.524639,
+      "lng": 54.881214,
       "type": "Panamax/LR1",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Alora",
-      "speed": 0.2,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -5930,8 +5908,8 @@
       "isTransiting": false
     },
     {
-      "lat": 24.724134,
-      "lng": 56.703045,
+      "lat": 24.727087,
+      "lng": 56.707966,
       "type": "VLGC",
       "state": "ballast",
       "commodity": "lpg",
@@ -5952,18 +5930,18 @@
       "isTransiting": false
     },
     {
-      "lat": 24.78511,
-      "lng": 56.547482,
+      "lat": 24.78499,
+      "lng": 56.546959,
       "type": "Handy/MR1",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Nova",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 23.721666,
+      "lat": 23.716667,
       "lng": 58.436668,
       "type": "Suezmax/LR3",
       "state": "ballast",
@@ -5974,19 +5952,19 @@
       "isTransiting": false
     },
     {
-      "lat": 25.538431,
-      "lng": 55.385933,
+      "lat": 25.53912,
+      "lng": 55.39006,
       "type": "MR",
       "state": "ballast",
       "commodity": "liquids",
       "name": "New Future",
-      "speed": 0.5,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 27.098026,
-      "lng": 52.050995,
+      "lat": 26.263941,
+      "lng": 53.184467,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
@@ -5996,8 +5974,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.599422,
-      "lng": 55.03685,
+      "lat": 25.600704,
+      "lng": 55.039387,
       "type": "Handy/MR1",
       "state": "ballast",
       "commodity": "liquids",
@@ -6018,24 +5996,24 @@
       "isTransiting": false
     },
     {
-      "lat": 25.713909,
-      "lng": 53.801067,
+      "lat": 25.711943,
+      "lng": 53.799385,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "LONG WIND",
-      "speed": 0,
+      "speed": 0.3,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 24.601667,
-      "lng": 56.723331,
+      "lat": 24.600653,
+      "lng": 56.721142,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Pacific Guardian",
-      "speed": 0,
+      "speed": 0.3,
       "isInside": false,
       "isTransiting": false
     },
@@ -6084,8 +6062,8 @@
       "isTransiting": false
     },
     {
-      "lat": 27.1,
-      "lng": 56.068333,
+      "lat": 27.100204,
+      "lng": 56.069168,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
@@ -6095,8 +6073,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.55863,
-      "lng": 55.342159,
+      "lat": 25.559971,
+      "lng": 55.344975,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
@@ -6106,8 +6084,8 @@
       "isTransiting": false
     },
     {
-      "lat": 23.721468,
-      "lng": 58.364933,
+      "lat": 23.718941,
+      "lng": 58.361988,
       "type": "VLCC",
       "state": "ballast",
       "commodity": "liquids",
@@ -6117,8 +6095,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.891684,
-      "lng": 51.757965,
+      "lat": 25.890533,
+      "lng": 51.757332,
       "type": "Aframax/LR2",
       "state": "loaded",
       "commodity": "liquids",
@@ -6139,30 +6117,30 @@
       "isTransiting": false
     },
     {
-      "lat": 25.42112,
-      "lng": 54.189209,
+      "lat": 25.388046,
+      "lng": 54.19146,
       "type": "Panamax/LR1",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Shahrazad",
-      "speed": 0.7,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 26.659344,
-      "lng": 50.240273,
-      "type": "Panamax/LR1",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Kerala",
       "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 23.674999,
-      "lng": 58.445,
+      "lat": 26.654198,
+      "lng": 50.241215,
+      "type": "Panamax/LR1",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Kerala",
+      "speed": 0.1,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 23.673334,
+      "lng": 58.441666,
       "type": "VLCC",
       "state": "ballast",
       "commodity": "liquids",
@@ -6172,8 +6150,8 @@
       "isTransiting": false
     },
     {
-      "lat": 27.079935,
-      "lng": 49.677998,
+      "lat": 27.079987,
+      "lng": 49.678032,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
@@ -6183,13 +6161,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.42872,
-      "lng": 53.895889,
+      "lat": 25.380531,
+      "lng": 53.926552,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Zeze Start",
-      "speed": 0.9,
+      "speed": 0.5,
       "isInside": true,
       "isTransiting": false
     },
@@ -6205,8 +6183,8 @@
       "isTransiting": false
     },
     {
-      "lat": 23.691668,
-      "lng": 58.413334,
+      "lat": 23.690001,
+      "lng": 58.41,
       "type": "VLCC",
       "state": "ballast",
       "commodity": "liquids",
@@ -6216,35 +6194,35 @@
       "isTransiting": false
     },
     {
-      "lat": 25.76288,
-      "lng": 53.723034,
+      "lat": 25.764456,
+      "lng": 53.716953,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Azumasan",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.855089,
-      "lng": 51.760021,
+      "lat": 25.854397,
+      "lng": 51.75972,
       "type": "Q-Flex",
       "state": "loaded",
       "commodity": "lng",
       "name": "Al Ghashamiya",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.787918,
-      "lng": 51.812778,
+      "lat": 25.787359,
+      "lng": 51.812679,
       "type": "Q-Flex",
       "state": "loaded",
       "commodity": "lng",
       "name": "Al Kharaitiyat",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -6271,24 +6249,24 @@
       "isTransiting": false
     },
     {
-      "lat": 25.676159,
-      "lng": 54.684963,
+      "lat": 25.670891,
+      "lng": 54.684742,
       "type": "Aframax/LR2",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Namrata",
-      "speed": 2.7,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 26.817907,
-      "lng": 50.479214,
+      "lat": 26.81547,
+      "lng": 50.478245,
       "type": "Kamsarmax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Apj Priti 2",
-      "speed": 0.2,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -6326,8 +6304,8 @@
       "isTransiting": false
     },
     {
-      "lat": 29.662399,
-      "lng": 48.688168,
+      "lat": 29.660521,
+      "lng": 48.688625,
       "type": "Handy",
       "state": "loaded",
       "commodity": "lpg",
@@ -6337,19 +6315,30 @@
       "isTransiting": false
     },
     {
-      "lat": 27.069239,
-      "lng": 52.15855,
+      "lat": 23.303196,
+      "lng": 59.581295,
+      "type": "Supramax",
+      "state": "loaded",
+      "commodity": "dry",
+      "name": "Nasco Gem",
+      "speed": 10.6,
+      "isInside": false,
+      "isTransiting": false
+    },
+    {
+      "lat": 26.33606,
+      "lng": 53.463383,
       "type": "Supramax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Em Jade",
-      "speed": 11.9,
+      "speed": 11.8,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 30.022093,
-      "lng": 47.952492,
+      "lat": 30.022141,
+      "lng": 47.952461,
       "type": "Supramax",
       "state": "ballast",
       "commodity": "dry",
@@ -6359,41 +6348,41 @@
       "isTransiting": false
     },
     {
-      "lat": 26.249409,
-      "lng": 54.225166,
+      "lat": 26.141539,
+      "lng": 55.394798,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Baskar",
-      "speed": 9.6,
+      "speed": 22.6,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 26.737705,
-      "lng": 56.150742,
+      "lat": 27.037708,
+      "lng": 56.233887,
       "type": "Supramax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Roshak",
-      "speed": 11.8,
-      "isInside": true,
-      "isTransiting": true
-    },
-    {
-      "lat": 25.839815,
-      "lng": 51.81168,
-      "type": "MGC",
-      "state": "loaded",
-      "commodity": "lpg",
-      "name": "Symi",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 29.589407,
-      "lng": 48.694744,
+      "lat": 25.839199,
+      "lng": 51.811554,
+      "type": "MGC",
+      "state": "loaded",
+      "commodity": "lpg",
+      "name": "Symi",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 29.588369,
+      "lng": 48.694534,
       "type": "Supramax",
       "state": "ballast",
       "commodity": "dry",
@@ -6403,46 +6392,46 @@
       "isTransiting": false
     },
     {
-      "lat": 25.595764,
-      "lng": 54.886238,
+      "lat": 25.59458,
+      "lng": 54.882645,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Serifos",
+      "speed": 0.3,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 27.372826,
+      "lng": 50.318718,
+      "type": "Suezmax/LR3",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Nordic Vega",
       "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 27.376707,
-      "lng": 50.317188,
-      "type": "Suezmax/LR3",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Nordic Vega",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.926283,
-      "lng": 55.397076,
+      "lat": 25.919527,
+      "lng": 55.41156,
       "type": "VLGC",
       "state": "loaded",
       "commodity": "lpg",
       "name": "Green Sanvi",
-      "speed": 5.4,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 26.238384,
-      "lng": 53.734646,
+      "lat": 26.181942,
+      "lng": 53.78418,
       "type": "Suezmax/LR3",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Ocean Thunder",
-      "speed": 1.3,
+      "speed": 0.7,
       "isInside": true,
       "isTransiting": false
     },
@@ -6458,13 +6447,13 @@
       "isTransiting": false
     },
     {
-      "lat": 30.164433,
-      "lng": 48.972118,
+      "lat": 29.145901,
+      "lng": 49.987686,
       "type": "Kamsarmax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Iolcos Legacy",
-      "speed": 10.8,
+      "speed": 12.3,
       "isInside": true,
       "isTransiting": false
     },
@@ -6480,8 +6469,8 @@
       "isTransiting": false
     },
     {
-      "lat": 27.360659,
-      "lng": 50.3605,
+      "lat": 27.359755,
+      "lng": 50.361858,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
@@ -6491,24 +6480,24 @@
       "isTransiting": false
     },
     {
-      "lat": 24.596188,
-      "lng": 56.689919,
+      "lat": 24.596067,
+      "lng": 56.689434,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Densa Lion",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 29.677006,
-      "lng": 49.669437,
+      "lat": 29.673571,
+      "lng": 49.670532,
       "type": "Kamsarmax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Basel",
-      "speed": 0,
+      "speed": 0.5,
       "isInside": true,
       "isTransiting": false
     },
@@ -6524,8 +6513,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.791433,
-      "lng": 53.456558,
+      "lat": 25.790991,
+      "lng": 53.454487,
       "type": "Panamax/LR1",
       "state": "loaded",
       "commodity": "liquids",
@@ -6535,8 +6524,8 @@
       "isTransiting": false
     },
     {
-      "lat": 27.566797,
-      "lng": 49.194939,
+      "lat": 27.566851,
+      "lng": 49.194946,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
@@ -6546,40 +6535,40 @@
       "isTransiting": false
     },
     {
-      "lat": 28.144617,
-      "lng": 49.431149,
+      "lat": 28.141184,
+      "lng": 49.4342,
       "type": "Suezmax/LR3",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Nordic Cross",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 29.962574,
+      "lng": 49.085991,
+      "type": "Panamax",
+      "state": "loaded",
+      "commodity": "dry",
+      "name": "Geneve",
+      "speed": 12.3,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.854998,
+      "lng": 51.774494,
+      "type": "Q-Max",
+      "state": "loaded",
+      "commodity": "lng",
+      "name": "Rasheeda",
       "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 29.843987,
-      "lng": 49.229561,
-      "type": "Panamax",
-      "state": "loaded",
-      "commodity": "dry",
-      "name": "Geneve",
-      "speed": 0.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.987223,
-      "lng": 51.838821,
-      "type": "Q-Max",
-      "state": "loaded",
-      "commodity": "lng",
-      "name": "Rasheeda",
-      "speed": 14,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 24.620001,
+      "lat": 24.621666,
       "lng": 56.728333,
       "type": "Supramax",
       "state": "ballast",
@@ -6590,24 +6579,24 @@
       "isTransiting": false
     },
     {
-      "lat": 26.106436,
-      "lng": 55.892506,
+      "lat": 26.107231,
+      "lng": 55.893841,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Sheng Tai",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 26.015249,
-      "lng": 53.484158,
+      "lat": 26.01841,
+      "lng": 53.477943,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Fpmc C Lord",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -6623,13 +6612,13 @@
       "isTransiting": false
     },
     {
-      "lat": 27.995966,
-      "lng": 50.365028,
+      "lat": 27.996143,
+      "lng": 50.366978,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
       "name": "Merry M",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -6667,13 +6656,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.955441,
-      "lng": 55.724396,
+      "lat": 25.95586,
+      "lng": 55.724472,
       "type": "Baby Capes",
       "state": "ballast",
       "commodity": "dry",
       "name": "Eastern Bund",
-      "speed": 1.2,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -6711,8 +6700,8 @@
       "isTransiting": false
     },
     {
-      "lat": 30.441521,
-      "lng": 49.044792,
+      "lat": 30.440001,
+      "lng": 49.043335,
       "type": "Supramax",
       "state": "ballast",
       "commodity": "dry",
@@ -6722,8 +6711,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.874735,
-      "lng": 51.782249,
+      "lat": 25.873791,
+      "lng": 51.782528,
       "type": "Aframax/LR2",
       "state": "ballast",
       "commodity": "liquids",
@@ -6733,35 +6722,35 @@
       "isTransiting": false
     },
     {
-      "lat": 26.050575,
-      "lng": 55.893742,
+      "lat": 26.051884,
+      "lng": 55.893261,
       "type": "Aframax/LR2",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Desh Suraksha",
-      "speed": 0.1,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.614784,
-      "lng": 54.732094,
-      "type": "VLCC",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Olympic Target",
       "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 26.18845,
-      "lng": 50.68845,
+      "lat": 25.615746,
+      "lng": 54.729588,
+      "type": "VLCC",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Olympic Target",
+      "speed": 0.2,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 26.188734,
+      "lng": 50.688568,
       "type": "Capesize",
       "state": "loaded",
       "commodity": "dry",
       "name": "Cape Trader",
-      "speed": 0.3,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -6799,8 +6788,8 @@
       "isTransiting": false
     },
     {
-      "lat": 27.373751,
-      "lng": 50.065182,
+      "lat": 27.370874,
+      "lng": 50.067505,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
@@ -6810,13 +6799,13 @@
       "isTransiting": false
     },
     {
-      "lat": 29.731907,
-      "lng": 49.617943,
+      "lat": 29.73073,
+      "lng": 49.622696,
       "type": "Kamsarmax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Ascanio",
-      "speed": 0,
+      "speed": 0.5,
       "isInside": true,
       "isTransiting": false
     },
@@ -6832,29 +6821,29 @@
       "isTransiting": false
     },
     {
-      "lat": 27.292685,
-      "lng": 50.362938,
+      "lat": 27.290409,
+      "lng": 50.364613,
       "type": "Panamax/LR1",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Asprouda",
-      "speed": 0.2,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 22.683039,
-      "lng": 59.463993,
+      "lat": 22.651667,
+      "lng": 59.436668,
       "type": "Supramax",
-      "state": "ballast",
+      "state": "loaded",
       "commodity": "dry",
       "name": "Tk Ortakoy",
-      "speed": 3.9,
+      "speed": 0,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 24.586666,
+      "lat": 24.588333,
       "lng": 56.801666,
       "type": "Supramax",
       "state": "ballast",
@@ -6887,8 +6876,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.008762,
-      "lng": 54.461414,
+      "lat": 25.009483,
+      "lng": 54.462132,
       "type": "Panamax/LR1",
       "state": "loaded",
       "commodity": "liquids",
@@ -6909,8 +6898,8 @@
       "isTransiting": false
     },
     {
-      "lat": 30.42914,
-      "lng": 49.060127,
+      "lat": 30.428333,
+      "lng": 49.060001,
       "type": "Kamsarmax",
       "state": "ballast",
       "commodity": "dry",
@@ -6920,13 +6909,13 @@
       "isTransiting": false
     },
     {
-      "lat": 27.205223,
-      "lng": 50.848888,
+      "lat": 27.221992,
+      "lng": 50.826279,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Nave Capella",
-      "speed": 0.1,
+      "speed": 0.3,
       "isInside": true,
       "isTransiting": false
     },
@@ -6964,8 +6953,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.036491,
-      "lng": 54.494904,
+      "lat": 25.044958,
+      "lng": 54.529388,
       "type": "Baby Capes",
       "state": "ballast",
       "commodity": "dry",
@@ -6975,13 +6964,13 @@
       "isTransiting": false
     },
     {
-      "lat": 24.957146,
-      "lng": 54.511147,
+      "lat": 24.95829,
+      "lng": 54.51284,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "Tan Binh 345",
-      "speed": 0.1,
+      "speed": 0.3,
       "isInside": true,
       "isTransiting": false
     },
@@ -7008,19 +6997,19 @@
       "isTransiting": false
     },
     {
-      "lat": 29.667833,
-      "lng": 48.670506,
+      "lat": 29.666014,
+      "lng": 48.673008,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "Obe Heart",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 23.666666,
-      "lng": 58.536667,
+      "lat": 23.663334,
+      "lng": 58.540001,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
@@ -7030,13 +7019,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.922029,
-      "lng": 53.75716,
+      "lat": 25.871717,
+      "lng": 53.728279,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Habrut",
-      "speed": 0.8,
+      "speed": 0.3,
       "isInside": true,
       "isTransiting": false
     },
@@ -7052,8 +7041,8 @@
       "isTransiting": false
     },
     {
-      "lat": 24.603804,
-      "lng": 56.665695,
+      "lat": 24.602823,
+      "lng": 56.665421,
       "type": "Supramax",
       "state": "ballast",
       "commodity": "dry",
@@ -7085,19 +7074,19 @@
       "isTransiting": false
     },
     {
-      "lat": 25.024181,
-      "lng": 54.614166,
+      "lat": 25.02371,
+      "lng": 54.613373,
       "type": "VLCC",
       "state": "ballast",
       "commodity": "liquids",
       "name": "ROTTERDAM ENERGY",
-      "speed": 0,
+      "speed": 8.6,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 29.633034,
-      "lng": 48.709332,
+      "lat": 29.6304,
+      "lng": 48.710098,
       "type": "Kamsarmax",
       "state": "ballast",
       "commodity": "dry",
@@ -7107,13 +7096,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.620916,
-      "lng": 52.050266,
+      "lat": 25.620083,
+      "lng": 52.050133,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
       "name": "Amyntor",
-      "speed": 0,
+      "speed": 0.4,
       "isInside": true,
       "isTransiting": false
     },
@@ -7126,6 +7115,17 @@
       "name": "Zefyros",
       "speed": 0.5,
       "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 23.174501,
+      "lng": 59.367195,
+      "type": "VLCC",
+      "state": "ballast",
+      "commodity": "liquids",
+      "name": "New Giant",
+      "speed": 13.3,
+      "isInside": false,
       "isTransiting": false
     },
     {
@@ -7151,46 +7151,46 @@
       "isTransiting": false
     },
     {
-      "lat": 25.013004,
-      "lng": 53.067513,
+      "lat": 25.013342,
+      "lng": 53.067474,
       "type": "Suezmax/LR3",
       "state": "ballast",
       "commodity": "liquids",
       "name": "St Nikolas",
+      "speed": 0,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 25.717159,
+      "lng": 55.137901,
+      "type": "Supramax",
+      "state": "loaded",
+      "commodity": "dry",
+      "name": "Sun Profit",
       "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.717445,
-      "lng": 55.137466,
-      "type": "Supramax",
-      "state": "loaded",
-      "commodity": "dry",
-      "name": "Sun Profit",
-      "speed": 0,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 29.882914,
-      "lng": 49.192902,
+      "lat": 29.881781,
+      "lng": 49.192547,
       "type": "Panamax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Lb Energy",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.524433,
-      "lng": 53.832615,
+      "lat": 25.524366,
+      "lng": 53.837017,
       "type": "Suezmax/LR3",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Captain Michael",
-      "speed": 0,
+      "speed": 0.3,
       "isInside": true,
       "isTransiting": false
     },
@@ -7217,15 +7217,15 @@
       "isTransiting": false
     },
     {
-      "lat": 25.890377,
-      "lng": 55.697247,
+      "lat": 25.89204,
+      "lng": 55.698307,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Chang Chang Dong Hai",
-      "speed": 14.7,
+      "speed": 0,
       "isInside": true,
-      "isTransiting": true
+      "isTransiting": false
     },
     {
       "lat": 25.197979,
@@ -7250,19 +7250,19 @@
       "isTransiting": false
     },
     {
-      "lat": 29.127068,
-      "lng": 49.478073,
+      "lat": 29.123436,
+      "lng": 49.482792,
       "type": "VLCC",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Khalij-E-Fars",
-      "speed": 0.1,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.053413,
-      "lng": 54.411835,
+      "lat": 25.053736,
+      "lng": 54.412121,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
@@ -7283,13 +7283,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.33506,
-      "lng": 56.831467,
+      "lat": 25.351883,
+      "lng": 56.81218,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
       "name": "Portland",
-      "speed": 0.6,
+      "speed": 0.5,
       "isInside": false,
       "isTransiting": false
     },
@@ -7305,13 +7305,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.535915,
-      "lng": 55.249748,
+      "lat": 25.537863,
+      "lng": 55.25312,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Phoenix",
-      "speed": 4.3,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -7349,24 +7349,24 @@
       "isTransiting": false
     },
     {
-      "lat": 25.359182,
-      "lng": 55.372952,
+      "lat": 25.358948,
+      "lng": 55.372421,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "Sai Fortune",
-      "speed": 0.6,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.437969,
-      "lng": 51.964752,
+      "lat": 25.436491,
+      "lng": 51.964622,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "Nav Neha",
-      "speed": 0,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
@@ -7481,35 +7481,35 @@
       "isTransiting": false
     },
     {
-      "lat": 25.364141,
-      "lng": 51.901333,
+      "lat": 25.362642,
+      "lng": 51.900082,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
       "name": "Lila Incheon",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.579624,
-      "lng": 54.632053,
+      "lat": 25.586313,
+      "lng": 54.66708,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "Woohyun Sky",
-      "speed": 0,
+      "speed": 2.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.420113,
-      "lng": 51.980175,
+      "lat": 25.418646,
+      "lng": 51.979092,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Equinox Orenda",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -7525,35 +7525,35 @@
       "isTransiting": false
     },
     {
-      "lat": 25.409119,
-      "lng": 51.916714,
+      "lat": 25.407318,
+      "lng": 51.914848,
       "type": "Ultramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Kiran China",
+      "speed": 0.1,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 26.127703,
+      "lng": 55.885498,
+      "type": "Supramax",
+      "state": "loaded",
+      "commodity": "dry",
+      "name": "Ksl Qingyang",
       "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 26.127457,
-      "lng": 55.885372,
-      "type": "Supramax",
-      "state": "loaded",
-      "commodity": "dry",
-      "name": "Ksl Qingyang",
-      "speed": 3.5,
-      "isInside": true,
-      "isTransiting": true
-    },
-    {
-      "lat": 25.412403,
-      "lng": 54.07608,
+      "lat": 25.346657,
+      "lng": 54.096409,
       "type": "Panamax/LR1",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Nave Andromeda",
-      "speed": 0.4,
+      "speed": 0.7,
       "isInside": true,
       "isTransiting": false
     },
@@ -7569,19 +7569,19 @@
       "isTransiting": false
     },
     {
-      "lat": 27.141111,
-      "lng": 50.253868,
+      "lat": 27.136423,
+      "lng": 50.256466,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Almi Hydra",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 30.431377,
-      "lng": 49.059086,
+      "lat": 30.431347,
+      "lng": 49.059048,
       "type": "Kamsarmax",
       "state": "ballast",
       "commodity": "dry",
@@ -7602,8 +7602,8 @@
       "isTransiting": false
     },
     {
-      "lat": 26.186903,
-      "lng": 50.711948,
+      "lat": 26.186872,
+      "lng": 50.711922,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
@@ -7624,15 +7624,15 @@
       "isTransiting": false
     },
     {
-      "lat": 25.926304,
-      "lng": 55.718414,
+      "lat": 25.925848,
+      "lng": 55.719528,
       "type": "Handymax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Jin Hai Hua",
-      "speed": 16.3,
+      "speed": 0,
       "isInside": true,
-      "isTransiting": true
+      "isTransiting": false
     },
     {
       "lat": 25.083097,
@@ -7646,19 +7646,19 @@
       "isTransiting": false
     },
     {
-      "lat": 24.601961,
-      "lng": 56.705799,
+      "lat": 24.600782,
+      "lng": 56.704391,
       "type": "Aframax/LR2",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Bneider",
-      "speed": 0.5,
+      "speed": 0.4,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 23.696384,
-      "lng": 58.44902,
+      "lat": 23.693996,
+      "lng": 58.445999,
       "type": "VLCC",
       "state": "ballast",
       "commodity": "liquids",
@@ -7679,13 +7679,13 @@
       "isTransiting": false
     },
     {
-      "lat": 29.285152,
-      "lng": 49.109207,
+      "lat": 29.28261,
+      "lng": 49.110493,
       "type": "Kamsarmax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Capetan Costas S",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -7712,24 +7712,24 @@
       "isTransiting": false
     },
     {
-      "lat": 23.70775,
-      "lng": 58.382427,
+      "lat": 23.706829,
+      "lng": 58.379341,
       "type": "VLCC",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Bahrain Prosperity",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 29.229403,
-      "lng": 49.132477,
+      "lat": 29.225206,
+      "lng": 49.137344,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Eagle Verona",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -7745,30 +7745,30 @@
       "isTransiting": false
     },
     {
-      "lat": 26.148726,
-      "lng": 54.980598,
+      "lat": 26.233738,
+      "lng": 55.420574,
       "type": "Kamsarmax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Stardust",
-      "speed": 3.9,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 26.072598,
-      "lng": 55.888302,
+      "lat": 26.072544,
+      "lng": 55.888428,
       "type": "Post-Panamax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Ulivia",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 29.621273,
-      "lng": 48.689812,
+      "lat": 29.619574,
+      "lng": 48.68948,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
@@ -7778,8 +7778,8 @@
       "isTransiting": false
     },
     {
-      "lat": 27.252296,
-      "lng": 50.352997,
+      "lat": 27.248814,
+      "lng": 50.355221,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
@@ -7789,7 +7789,7 @@
       "isTransiting": false
     },
     {
-      "lat": 23.646667,
+      "lat": 23.645,
       "lng": 58.564999,
       "type": "Supramax",
       "state": "loaded",
@@ -7800,13 +7800,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.9541,
-      "lng": 53.63023,
+      "lat": 25.958862,
+      "lng": 53.623844,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "He Rong Hai",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -7822,19 +7822,19 @@
       "isTransiting": false
     },
     {
-      "lat": 24.798338,
-      "lng": 54.658745,
+      "lat": 24.798788,
+      "lng": 54.658581,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "Manta Fatma",
-      "speed": 0.8,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 27.451588,
-      "lng": 50.344501,
+      "lat": 27.449724,
+      "lng": 50.344139,
       "type": "Ultramax",
       "state": "loaded",
       "commodity": "dry",
@@ -7855,35 +7855,35 @@
       "isTransiting": true
     },
     {
-      "lat": 26.119024,
-      "lng": 55.863823,
+      "lat": 26.11927,
+      "lng": 55.863716,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Heilan Journey",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 26.09799,
-      "lng": 55.871353,
+      "lat": 26.098175,
+      "lng": 55.871761,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Heilan Brother",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 27.529514,
-      "lng": 50.760521,
+      "lat": 27.466959,
+      "lng": 50.771385,
       "type": "Panamax/LR1",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Magic Victoria",
-      "speed": 0.4,
+      "speed": 0.5,
       "isInside": true,
       "isTransiting": false
     },
@@ -7899,30 +7899,30 @@
       "isTransiting": false
     },
     {
-      "lat": 25.857452,
-      "lng": 51.807159,
+      "lat": 25.856302,
+      "lng": 51.806595,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
       "name": "Liverpool Strait",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.596851,
-      "lng": 55.010578,
+      "lat": 25.596163,
+      "lng": 55.009102,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Poly Odyssey",
-      "speed": 0.1,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.88159,
-      "lng": 53.281979,
+      "lat": 25.880922,
+      "lng": 53.280731,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
@@ -7932,8 +7932,8 @@
       "isTransiting": false
     },
     {
-      "lat": 26.052891,
-      "lng": 55.910267,
+      "lat": 26.055017,
+      "lng": 55.909882,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
@@ -7943,46 +7943,46 @@
       "isTransiting": false
     },
     {
-      "lat": 26.916742,
-      "lng": 51.113808,
+      "lat": 26.916344,
+      "lng": 51.114761,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
       "name": "Safeen Al Nasr",
-      "speed": 0.1,
+      "speed": 1.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 27.32353,
-      "lng": 49.882248,
+      "lat": 27.322966,
+      "lng": 49.882408,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "Hpc Unity",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 24.610498,
-      "lng": 56.692841,
+      "lat": 24.609432,
+      "lng": 56.693233,
       "type": "Supramax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Shuo Long 618",
-      "speed": 0.1,
+      "speed": 2.4,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 25.750069,
-      "lng": 53.585781,
+      "lat": 25.749388,
+      "lng": 53.584232,
       "type": "Aframax/LR2",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Hua Lin Wan",
-      "speed": 0.3,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
@@ -7998,13 +7998,13 @@
       "isTransiting": false
     },
     {
-      "lat": 28.011208,
-      "lng": 50.937241,
+      "lat": 27.427668,
+      "lng": 51.521584,
       "type": "Kamsarmax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Giacometti",
-      "speed": 8.3,
+      "speed": 9.6,
       "isInside": true,
       "isTransiting": false
     },
@@ -8020,19 +8020,19 @@
       "isTransiting": false
     },
     {
-      "lat": 25.534012,
-      "lng": 55.307037,
+      "lat": 25.535496,
+      "lng": 55.308559,
       "type": "Handymax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Eastern Voyager",
-      "speed": 14.3,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 26.089581,
-      "lng": 55.889675,
+      "lat": 26.088989,
+      "lng": 55.889854,
       "type": "Ultramax",
       "state": "loaded",
       "commodity": "dry",
@@ -8042,35 +8042,35 @@
       "isTransiting": false
     },
     {
-      "lat": 23.539227,
-      "lng": 59.018208,
+      "lat": 24.148378,
+      "lng": 57.891266,
       "type": "Supramax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Fei Run",
-      "speed": 12.6,
+      "speed": 11.9,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 25.523558,
-      "lng": 51.805355,
+      "lat": 25.522606,
+      "lng": 51.804619,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
       "name": "Pan Bonita",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 26.086344,
-      "lng": 52.241848,
+      "lat": 25.933212,
+      "lng": 51.599468,
       "type": "Lower Conventional",
-      "state": "ballast",
+      "state": "loaded",
       "commodity": "lng",
       "name": "Gaslog Skagen",
-      "speed": 9.6,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -8086,13 +8086,13 @@
       "isTransiting": false
     },
     {
-      "lat": 24.583286,
-      "lng": 56.656067,
+      "lat": 24.585079,
+      "lng": 56.651707,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Whiplash",
-      "speed": 1.2,
+      "speed": 0.1,
       "isInside": false,
       "isTransiting": false
     },
@@ -8108,13 +8108,13 @@
       "isTransiting": false
     },
     {
-      "lat": 24.594883,
-      "lng": 56.647366,
+      "lat": 24.370266,
+      "lng": 57.302334,
       "type": "Supramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Medrose",
-      "speed": 0,
+      "speed": 9.7,
       "isInside": false,
       "isTransiting": false
     },
@@ -8130,8 +8130,8 @@
       "isTransiting": false
     },
     {
-      "lat": 24.604532,
-      "lng": 56.648365,
+      "lat": 24.604153,
+      "lng": 56.648052,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
@@ -8141,13 +8141,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.470686,
-      "lng": 54.122513,
+      "lat": 25.502153,
+      "lng": 54.225132,
       "type": "Panamax/LR1",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Nave Rigel",
-      "speed": 0.9,
+      "speed": 1.2,
       "isInside": true,
       "isTransiting": false
     },
@@ -8185,35 +8185,35 @@
       "isTransiting": false
     },
     {
-      "lat": 24.444584,
-      "lng": 57.734482,
+      "lat": 24.051825,
+      "lng": 58.482506,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Velos Turquoise",
-      "speed": 12.7,
+      "speed": 12.1,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 26.931025,
-      "lng": 51.051693,
+      "lat": 26.930992,
+      "lng": 51.052753,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "Glorieuse",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.75399,
-      "lng": 53.506874,
+      "lat": 25.753809,
+      "lng": 53.503792,
       "type": "Aframax/LR2",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Tong Lin Wan",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -8251,13 +8251,13 @@
       "isTransiting": false
     },
     {
-      "lat": 26.064829,
-      "lng": 55.211414,
+      "lat": 26.065582,
+      "lng": 55.212353,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Christina V",
-      "speed": 0.2,
+      "speed": 0.5,
       "isInside": true,
       "isTransiting": false
     },
@@ -8284,13 +8284,13 @@
       "isTransiting": false
     },
     {
-      "lat": 27.554075,
-      "lng": 49.197548,
+      "lat": 27.554073,
+      "lng": 49.197552,
       "type": "Kamsarmax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Bahri Trader",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -8306,13 +8306,13 @@
       "isTransiting": false
     },
     {
-      "lat": 27.714481,
-      "lng": 49.646412,
+      "lat": 27.711575,
+      "lng": 49.649361,
       "type": "Ultramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Global Unity",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -8339,35 +8339,35 @@
       "isTransiting": false
     },
     {
-      "lat": 29.669773,
-      "lng": 48.730873,
+      "lat": 29.66737,
+      "lng": 48.73069,
       "type": "Ultramax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Clover",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 24.496626,
-      "lng": 56.62442,
+      "lat": 24.496702,
+      "lng": 56.624454,
       "type": "Kamsarmax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Star Nicole",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 27.031273,
-      "lng": 49.686275,
+      "lat": 27.031368,
+      "lng": 49.686298,
       "type": "Panamax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Sasebo Green",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
@@ -8383,8 +8383,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.507652,
-      "lng": 54.82711,
+      "lat": 25.509819,
+      "lng": 54.828632,
       "type": "Aframax/LR2",
       "state": "loaded",
       "commodity": "liquids",
@@ -8394,24 +8394,24 @@
       "isTransiting": false
     },
     {
-      "lat": 24.502893,
-      "lng": 56.620148,
+      "lat": 24.50289,
+      "lng": 56.620075,
       "type": "Supramax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Sheng He Hai",
-      "speed": 0.1,
+      "speed": 2.2,
       "isInside": false,
       "isTransiting": false
     },
     {
-      "lat": 27.334383,
-      "lng": 50.312622,
+      "lat": 27.333462,
+      "lng": 50.31834,
       "type": "VLCC",
       "state": "ballast",
       "commodity": "liquids",
       "name": "Vl Prime",
-      "speed": 12.8,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -8427,41 +8427,41 @@
       "isTransiting": false
     },
     {
-      "lat": 25.531729,
-      "lng": 54.798332,
+      "lat": 25.515533,
+      "lng": 54.789532,
       "type": "Aframax/LR2",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Sti Elysees",
-      "speed": 0.1,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 27.079565,
-      "lng": 49.739342,
+      "lat": 27.083532,
+      "lng": 49.720303,
       "type": "Aframax/LR2",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Sti Orchard",
-      "speed": 4.2,
-      "isInside": true,
-      "isTransiting": false
-    },
-    {
-      "lat": 25.628002,
-      "lng": 54.805756,
-      "type": "Aframax/LR2",
-      "state": "loaded",
-      "commodity": "liquids",
-      "name": "Stemnitsa",
       "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 27.011578,
-      "lng": 51.126255,
+      "lat": 25.627165,
+      "lng": 54.804188,
+      "type": "Aframax/LR2",
+      "state": "loaded",
+      "commodity": "liquids",
+      "name": "Stemnitsa",
+      "speed": 0.2,
+      "isInside": true,
+      "isTransiting": false
+    },
+    {
+      "lat": 27.011566,
+      "lng": 51.127235,
       "type": "Post-Panamax",
       "state": "ballast",
       "commodity": "dry",
@@ -8471,8 +8471,8 @@
       "isTransiting": false
     },
     {
-      "lat": 27.017702,
-      "lng": 51.161808,
+      "lat": 27.01786,
+      "lng": 51.163567,
       "type": "Post-Panamax",
       "state": "ballast",
       "commodity": "dry",
@@ -8482,13 +8482,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.649513,
-      "lng": 55.104725,
+      "lat": 25.650484,
+      "lng": 55.105892,
       "type": "Handysize",
       "state": "ballast",
       "commodity": "dry",
       "name": "Hatthaya Naree",
-      "speed": 0.2,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -8504,15 +8504,15 @@
       "isTransiting": false
     },
     {
-      "lat": 25.840256,
-      "lng": 55.666214,
+      "lat": 25.841852,
+      "lng": 55.669655,
       "type": "Ultramax",
       "state": "loaded",
       "commodity": "dry",
       "name": "Glory Tom",
-      "speed": 3.5,
+      "speed": 0,
       "isInside": true,
-      "isTransiting": true
+      "isTransiting": false
     },
     {
       "lat": 27.03298,
@@ -8526,8 +8526,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.827354,
-      "lng": 51.792339,
+      "lat": 25.82584,
+      "lng": 51.792122,
       "type": "Ultramax",
       "state": "loaded",
       "commodity": "dry",
@@ -8537,41 +8537,41 @@
       "isTransiting": false
     },
     {
-      "lat": 25.535511,
-      "lng": 55.404785,
+      "lat": 25.536562,
+      "lng": 55.408787,
       "type": "Ultramax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Aliki Perrotis",
-      "speed": 0.2,
+      "speed": 0.3,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.341927,
-      "lng": 53.813568,
+      "lat": 25.341747,
+      "lng": 53.811928,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Mahadah Silver",
-      "speed": 0,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.408161,
-      "lng": 53.802582,
+      "lat": 25.428419,
+      "lng": 53.746231,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Sadah Silver",
-      "speed": 1.4,
+      "speed": 1.2,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.640512,
-      "lng": 54.746227,
+      "lat": 25.640657,
+      "lng": 54.746387,
       "type": "Kamsarmax",
       "state": "ballast",
       "commodity": "dry",
@@ -8581,8 +8581,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.422014,
-      "lng": 51.821247,
+      "lat": 25.420864,
+      "lng": 51.820366,
       "type": "VLGC",
       "state": "loaded",
       "commodity": "lpg",
@@ -8592,8 +8592,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.556589,
-      "lng": 54.837002,
+      "lat": 25.557055,
+      "lng": 54.837368,
       "type": "MR",
       "state": "loaded",
       "commodity": "liquids",
@@ -8614,8 +8614,8 @@
       "isTransiting": false
     },
     {
-      "lat": 25.82098,
-      "lng": 53.511879,
+      "lat": 25.822359,
+      "lng": 53.50626,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
@@ -8625,30 +8625,30 @@
       "isTransiting": false
     },
     {
-      "lat": 27.120512,
-      "lng": 49.771526,
+      "lat": 27.119396,
+      "lng": 49.769455,
       "type": "Handy/MR1",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Hafnia Alabaster",
-      "speed": 0.1,
+      "speed": 0,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 27.322136,
-      "lng": 50.109474,
+      "lat": 27.254965,
+      "lng": 50.732723,
       "type": "Kamsarmax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Gebe Oldendorff",
-      "speed": 0.2,
+      "speed": 11.6,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.363359,
-      "lng": 55.377666,
+      "lat": 25.363382,
+      "lng": 55.377659,
       "type": "Kamsarmax",
       "state": "ballast",
       "commodity": "dry",
@@ -8669,13 +8669,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.078772,
-      "lng": 53.9375,
+      "lat": 25.081854,
+      "lng": 53.854393,
       "type": "Aframax/LR2",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Stellata",
-      "speed": 4.3,
+      "speed": 3.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -8691,13 +8691,13 @@
       "isTransiting": false
     },
     {
-      "lat": 27.25185,
-      "lng": 50.481945,
+      "lat": 27.248932,
+      "lng": 50.483719,
       "type": "VLCC",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Gem No. 2",
-      "speed": 1.4,
+      "speed": 0.1,
       "isInside": true,
       "isTransiting": false
     },
@@ -8713,24 +8713,24 @@
       "isTransiting": false
     },
     {
-      "lat": 27.32575,
-      "lng": 50.000092,
+      "lat": 27.323338,
+      "lng": 50.002453,
       "type": "Handysize",
       "state": "loaded",
       "commodity": "dry",
       "name": "Es Integrity",
-      "speed": 0.1,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
     {
-      "lat": 25.692501,
-      "lng": 52.161415,
+      "lat": 25.691654,
+      "lng": 52.161678,
       "type": "Kamsarmax",
       "state": "ballast",
       "commodity": "dry",
       "name": "Laguna Seca",
-      "speed": 0,
+      "speed": 0.4,
       "isInside": true,
       "isTransiting": false
     },
@@ -8768,8 +8768,8 @@
       "isTransiting": false
     },
     {
-      "lat": 27.078966,
-      "lng": 49.690342,
+      "lat": 27.079016,
+      "lng": 49.690319,
       "type": "Handy/MR1",
       "state": "loaded",
       "commodity": "liquids",
@@ -8801,13 +8801,13 @@
       "isTransiting": false
     },
     {
-      "lat": 25.602798,
-      "lng": 54.8605,
+      "lat": 25.602329,
+      "lng": 54.858246,
       "type": "Suezmax/LR3",
       "state": "loaded",
       "commodity": "liquids",
       "name": "Prudent Warrior",
-      "speed": 0.1,
+      "speed": 0.2,
       "isInside": true,
       "isTransiting": false
     },
@@ -10508,5 +10508,5 @@
     "fillColor": "#ef4444",
     "fillOpacity": 0.15
   },
-  "syncTimestamp": "2026-04-01T12:55:57.106Z"
+  "syncTimestamp": "2026-04-01T12:59:54.494Z"
 }

@@ -1,84 +1,6 @@
 {
   "vessels": [
     {
-      "name": "Miaoulis 21",
-      "imo": "9886641",
-      "mmsi": "241763000",
-      "vesselTypeClass": "Suezmax/LR3",
-      "state": "loaded",
-      "flagName": "Greece",
-      "deadWeight": 158081,
-      "commodityTypes": [
-        "liquids"
-      ],
-      "capacity": 171401,
-      "speed": 5,
-      "course": 243,
-      "lat": 26.045984,
-      "lng": 55.867435,
-      "aisDestination": null,
-      "product": "Basrah Medium",
-      "controller": "Vitol",
-      "lastPortCall": {
-        "start": "2026-02-26T22:39:00",
-        "end": "2026-02-28T03:58:00"
-      },
-      "transitDirection": "unknown",
-      "isTransiting": true
-    },
-    {
-      "name": "V Monoceros",
-      "imo": "9478470",
-      "mmsi": "563249500",
-      "vesselTypeClass": "Handysize",
-      "state": "ballast",
-      "flagName": "Singapore",
-      "deadWeight": 33145,
-      "commodityTypes": [
-        "dry"
-      ],
-      "capacity": 32432,
-      "speed": 16.7,
-      "course": 129,
-      "lat": 25.898268,
-      "lng": 55.720078,
-      "destination": "China",
-      "destinationEta": "2026-04-10T03:02:13.059034",
-      "aisDestination": null,
-      "product": "Dry Bulk",
-      "lastPortCall": {
-        "start": "2026-02-23T14:50:09",
-        "end": "2026-03-01T10:54:41"
-      },
-      "transitDirection": "exiting",
-      "isTransiting": true
-    },
-    {
-      "name": "Samanta",
-      "imo": "9000297",
-      "mmsi": "341107001",
-      "vesselTypeClass": "Handysize",
-      "state": "ballast",
-      "flagName": "Saint Kitts and Nevis",
-      "deadWeight": 39110,
-      "commodityTypes": [
-        "dry"
-      ],
-      "capacity": 38269,
-      "speed": 13.8,
-      "course": 101,
-      "lat": 26.119761,
-      "lng": 55.73856,
-      "aisDestination": null,
-      "product": "Limestone",
-      "lastPortCall": {
-        "start": "2026-03-25T13:15:09",
-        "end": "2026-03-29T17:38:51"
-      },
-      "transitDirection": "exiting",
-      "isTransiting": true
-    },
-    {
       "name": "Exonave",
       "imo": "9014456",
       "mmsi": "647553066",
@@ -90,16 +12,44 @@
         "lpg"
       ],
       "capacity": 75362,
-      "speed": 11,
-      "course": 312,
-      "lat": 26.658243,
-      "lng": 56.782387,
+      "speed": 9.8,
+      "course": 214,
+      "lat": 26.143833,
+      "lng": 55.828785,
       "aisDestination": null,
       "product": "Butane",
       "controller": "Kunlun Shipping",
       "lastPortCall": {
         "start": "2026-03-04T00:00:00",
         "end": "2026-03-05T00:00:00"
+      },
+      "transitDirection": "unknown",
+      "isTransiting": true
+    },
+    {
+      "name": "Wafra",
+      "imo": "9118678",
+      "mmsi": "352005822",
+      "vesselTypeClass": "Panamax",
+      "state": "ballast",
+      "flagName": "Liberia",
+      "deadWeight": 72873,
+      "commodityTypes": [
+        "dry"
+      ],
+      "capacity": 71306,
+      "speed": 12.9,
+      "course": 64,
+      "lat": 26.049437,
+      "lng": 55.795727,
+      "destination": "Saqr",
+      "destinationEta": "2026-04-04T12:00:06.246200",
+      "aisDestination": null,
+      "product": "Limestone",
+      "controller": "Combined Group Rocks Co KSCC",
+      "lastPortCall": {
+        "start": "2026-03-27T11:16:46",
+        "end": "2026-03-30T09:19:02"
       },
       "transitDirection": "entering",
       "isTransiting": true
@@ -130,54 +80,29 @@
       "isTransiting": true
     },
     {
-      "name": "Moshtaraka 3",
-      "imo": "9164653",
-      "mmsi": "374399000",
-      "vesselTypeClass": "Panamax",
+      "name": "New Liberty",
+      "imo": "9221645",
+      "mmsi": "314001022",
+      "vesselTypeClass": "Handysize",
       "state": "ballast",
-      "flagName": "Panama",
-      "deadWeight": 73207,
+      "flagName": "Barbados",
+      "deadWeight": 28471,
       "commodityTypes": [
         "dry"
       ],
-      "capacity": 71633,
-      "speed": 11.3,
-      "course": 92,
-      "lat": 25.978306,
-      "lng": 55.705715,
-      "destination": "Mina' Saqr",
-      "destinationEta": "2026-04-01T21:00:06.467952",
+      "capacity": 27858,
+      "speed": 13.1,
+      "course": 55,
+      "lat": 26.558006,
+      "lng": 55.890327,
+      "destination": "Guangzhou",
+      "destinationEta": "2026-04-15T09:00:00",
       "aisDestination": null,
-      "product": "Cement",
-      "controller": "Combined Group Rocks Co KSCC",
+      "product": "Sugar",
+      "controller": "GMZ Ship Management",
       "lastPortCall": {
-        "start": "2026-03-27T09:14:02",
-        "end": "2026-03-29T19:38:48"
-      },
-      "transitDirection": "exiting",
-      "isTransiting": true
-    },
-    {
-      "name": "KYLO",
-      "imo": "9189146",
-      "mmsi": "620800028",
-      "vesselTypeClass": "Suezmax/LR3",
-      "state": "loaded",
-      "flagName": "Cook Islands",
-      "deadWeight": 160573,
-      "commodityTypes": [
-        "liquids"
-      ],
-      "capacity": 167230,
-      "speed": 6.5,
-      "course": 48,
-      "lat": 26.635183,
-      "lng": 56.018341,
-      "aisDestination": null,
-      "product": "Iran",
-      "lastPortCall": {
-        "start": "2026-03-27T00:00:00",
-        "end": "2026-03-28T00:00:00"
+        "start": "2026-03-04T04:36:40",
+        "end": "2026-03-04T04:36:40"
       },
       "transitDirection": "entering",
       "isTransiting": true
@@ -211,57 +136,31 @@
       "isTransiting": true
     },
     {
-      "name": "Roshak",
-      "imo": "9405966",
-      "mmsi": "422039600",
-      "vesselTypeClass": "Supramax",
+      "name": "Minoan Glory",
+      "imo": "9364447",
+      "mmsi": "636019301",
+      "vesselTypeClass": "Panamax",
       "state": "ballast",
-      "flagName": "Iran (Islamic Republic of)",
-      "deadWeight": 53565,
+      "flagName": "Liberia",
+      "deadWeight": 74748,
       "commodityTypes": [
         "dry"
       ],
-      "capacity": 52413,
-      "speed": 11.8,
-      "course": 44,
-      "lat": 26.737705,
-      "lng": 56.150742,
-      "destination": "Bandar Abbas",
-      "destinationEta": "2026-04-01T21:00:07.018647",
+      "capacity": 73140,
+      "speed": 14.1,
+      "course": 40,
+      "lat": 26.604506,
+      "lng": 56.010986,
+      "destination": "Oman",
+      "destinationEta": "2026-04-05T09:14:17.311062",
       "aisDestination": null,
-      "product": "Iron Ore",
-      "controller": "Sapid",
+      "product": "Corn",
+      "controller": "Modion Maritime Management",
       "lastPortCall": {
-        "start": "2026-03-28T12:28:10",
-        "end": "2026-03-28T23:17:39"
+        "start": "2026-03-23T15:53:13",
+        "end": "2026-03-24T11:27:57"
       },
       "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
-      "name": "Chang Chang Dong Hai",
-      "imo": "9535876",
-      "mmsi": "414374000",
-      "vesselTypeClass": "Supramax",
-      "state": "loaded",
-      "flagName": "China",
-      "deadWeight": 57053,
-      "commodityTypes": [
-        "dry"
-      ],
-      "capacity": 55826,
-      "speed": 14.7,
-      "course": 191,
-      "lat": 25.890377,
-      "lng": 55.697247,
-      "aisDestination": null,
-      "product": "Phosphorus Fertilizers",
-      "controller": "Zhejiang Changchang Shipping",
-      "lastPortCall": {
-        "start": "2026-03-07T06:38:19",
-        "end": "2026-03-10T21:56:09"
-      },
-      "transitDirection": "exiting",
       "isTransiting": true
     },
     {
@@ -293,60 +192,6 @@
       "isTransiting": true
     },
     {
-      "name": "Ksl Qingyang",
-      "imo": "9578050",
-      "mmsi": "538008668",
-      "vesselTypeClass": "Supramax",
-      "state": "loaded",
-      "flagName": "Marshall Islands",
-      "deadWeight": 56880,
-      "commodityTypes": [
-        "dry"
-      ],
-      "capacity": 55657,
-      "speed": 3.5,
-      "course": 268,
-      "lat": 26.127457,
-      "lng": 55.885372,
-      "destination": "China",
-      "destinationEta": "2026-04-05T04:00:00",
-      "aisDestination": null,
-      "product": "Dry Bulk",
-      "controller": "Nanjing King Ship Management",
-      "lastPortCall": {
-        "start": "2026-03-04T21:35:33",
-        "end": "2026-03-08T18:39:38"
-      },
-      "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
-      "name": "Jin Hai Hua",
-      "imo": "9591026",
-      "mmsi": "413697680",
-      "vesselTypeClass": "Handymax",
-      "state": "ballast",
-      "flagName": "China",
-      "deadWeight": 44968,
-      "commodityTypes": [
-        "dry"
-      ],
-      "capacity": 43782,
-      "speed": 16.3,
-      "course": 240,
-      "lat": 25.926304,
-      "lng": 55.718414,
-      "aisDestination": null,
-      "product": "Finished Steel",
-      "controller": "FUJIAN SHIPPING CO",
-      "lastPortCall": {
-        "start": "2026-02-28T12:19:23",
-        "end": "2026-03-02T05:59:32"
-      },
-      "transitDirection": "unknown",
-      "isTransiting": true
-    },
-    {
       "name": "Propel Grace",
       "imo": "9605023",
       "mmsi": "563189200",
@@ -369,34 +214,6 @@
         "end": "2026-03-23T03:38:43"
       },
       "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
-      "name": "Glory Tom",
-      "imo": "9701360",
-      "mmsi": "352003139",
-      "vesselTypeClass": "Ultramax",
-      "state": "loaded",
-      "flagName": "Panama",
-      "deadWeight": 63696,
-      "commodityTypes": [
-        "dry"
-      ],
-      "capacity": 62326,
-      "speed": 3.5,
-      "course": 133,
-      "lat": 25.840256,
-      "lng": 55.666214,
-      "destination": "Jakarta",
-      "destinationEta": "2026-04-15T02:00:00",
-      "aisDestination": null,
-      "product": "Dry Bulk",
-      "controller": "Dato Marine",
-      "lastPortCall": {
-        "start": "2026-03-29T04:38:17",
-        "end": "2026-03-31T10:39:16"
-      },
-      "transitDirection": "exiting",
       "isTransiting": true
     },
     {
@@ -424,8 +241,8 @@
       "isTransiting": true
     }
   ],
-  "exitingCount": 6,
-  "enteringCount": 8,
-  "totalTransiting": 16,
-  "syncTimestamp": "2026-04-01T12:55:57.106Z"
+  "exitingCount": 1,
+  "enteringCount": 7,
+  "totalTransiting": 9,
+  "syncTimestamp": "2026-04-01T12:59:54.494Z"
 }
