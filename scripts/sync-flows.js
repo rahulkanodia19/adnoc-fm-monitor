@@ -76,6 +76,7 @@ const PIPELINES = [
   { dataset: 'china_crude',  country: 'Myanmar',            volume: 200, start: '2024-01-01', label: 'Myanmar-China' },
   { dataset: 'iraq_crude',   country: 'Turkey',             volume: 250, start: '2026-03-17', label: 'Kirkuk-Ceyhan' },
   { dataset: 'russia_crude', country: 'China',              volume: 600, start: '2024-01-01', label: 'ESPO export' },
+  { dataset: 'saudi_arabia_crude', country: 'Egypt',        volume: 1500, start: '2026-03-11', label: 'Yanbu-SUMED' },
 ];
 
 // ---------- Token ----------
@@ -530,7 +531,7 @@ async function main() {
     path.join(PROJECT_DIR, 'export-data.js'),
     'EXPORT_FLOW_DATA',
     exportData,
-    `// Auto-generated from Kpler API — ${now}\n// Export flows (Crude, LNG & LPG) by destination country\n// Daily, weekly and monthly aggregations\n// Note: Iraq crude includes Kirkuk-Ceyhan pipeline, Russia crude includes ESPO pipeline`
+    `// Auto-generated from Kpler API — ${now}\n// Export flows (Crude, LNG & LPG) by destination country\n// Daily, weekly and monthly aggregations\n// Note: Iraq crude includes Kirkuk-Ceyhan pipeline, Russia crude includes ESPO pipeline, Saudi Arabia crude includes Yanbu-SUMED pipeline`
   );
 
   // Verification
@@ -554,6 +555,7 @@ async function main() {
     'china_crude': 'Includes ESPO Russia→China (~600 kbd), Kazakhstan-China (~220 kbd), Myanmar-China (~200 kbd) — ~1,020 kbd Hormuz-independent',
     'iraq_crude': 'Includes Kirkuk-Ceyhan pipeline (~250 kbd) to Turkey since Mar 17 2026',
     'russia_crude': 'Includes ESPO pipeline (~600 kbd) to China',
+    'saudi_arabia_crude': 'Includes Yanbu-SUMED pipeline (~1,500 kbd) to Egypt/Mediterranean since Mar 11 2026',
   };
 
   function buildSummary(data, direction, defs) {

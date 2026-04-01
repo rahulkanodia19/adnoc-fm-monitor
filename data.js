@@ -113,7 +113,7 @@ const COUNTRY_STATUS_DATA = [
       { name: "North Field East Expansion", type: "LNG Expansion", capacity: "32 Mtpa (construction)", status: "shutdown" },
       { name: "Qatalum Smelter", type: "Aluminium", capacity: "585,000 tpa", status: "shutdown" },
       { name: "Hamad Port", type: "Port", capacity: "Qatar's main commercial port", status: "partial", notes: "Commercial port south of Doha; limited container/cargo ops amid Hormuz closure" },
-      { name: "Dolphin Gas Pipeline", type: "Gas Pipeline", capacity: "3.2 bcf/d", status: "operational", notes: "Subsea to UAE; GCC's only cross-border gas pipeline" },
+      { name: "Dolphin Gas Pipeline", type: "Gas Pipeline", capacity: "3.2 bcf/d", status: "partial", notes: "Subsea to UAE; ~2 bcf/d pre-crisis — wartime flow unverified; Qatar upstream shutdowns may reduce throughput" },
       { name: "QAFCO Fertilizer Complex", type: "Fertilizer Plant", capacity: "~5.6 Mtpa urea (world's largest single-site)", status: "shutdown", notes: "All downstream halted since 3 Mar; urea production suspended; Mesaieed industrial shutdown" },
       { name: "Umm Al Houl Power", type: "Power/Desalination Plant", capacity: "2,520 MW + 614k m³/day (40% of Qatar water)", status: "operational", notes: "Domestic power/water supply; distinct from struck Mesaieed power plant; Qatar 100% desal-dependent" }
     ],
@@ -481,7 +481,7 @@ const COUNTRY_STATUS_DATA = [
       { name: "Jebel Dhanna Terminal", type: "Export Terminal", capacity: "Crude loading terminal", status: "partial", notes: "Crude loadings curtailed; onshore field production cuts limit available volumes" },
       { name: "Khalifa Port", type: "Port", capacity: "Abu Dhabi deep-water; 5M+ TEU", status: "partial", notes: "Container & cargo ops continue at reduced capacity; customs arrangements in place" },
       { name: "EGA Al Taweelah Smelter", type: "Aluminium Smelter", capacity: "~2.5 Mtpa", status: "partial", notes: "IRGC drone/missile strike Mar 29; 6 injured, significant damage; one of world's largest smelters" },
-      { name: "Dolphin Gas Pipeline (receiving)", type: "Gas Pipeline", capacity: "~2 bcf/d received", status: "operational", notes: "From Qatar via subsea; ~2 bcf/d for UAE power generation" },
+      { name: "Dolphin Gas Pipeline (receiving)", type: "Gas Pipeline", capacity: "~2 bcf/d received", status: "partial", notes: "From Qatar via subsea; ~2 bcf/d pre-crisis — actual wartime receipt unverified; Qatar upstream shutdowns may reduce flow" },
       { name: "EGA Jebel Ali Smelter", type: "Aluminium Smelter", capacity: "~1.0 Mtpa", status: "operational", notes: "Not directly struck; sister plant Al Taweelah hit Mar 29. Near Jebel Ali Port (partial ops). Combined EGA ~3.5 Mtpa" },
       { name: "Borouge Petrochemical Complex", type: "Petrochemical Complex", capacity: "~4.5 Mtpa polyolefins", status: "partial", notes: "Feedstock disrupted by Ruwais Refinery-2 shutdown (Mar 10 drone strike); output reduced ~40%; ADNOC subsidiary" },
       { name: "Jebel Ali Power & Desalination Complex", type: "Power/Desalination Plant", capacity: "8,695 MW + 2.2M m³/day water", status: "operational", notes: "World's largest gas-fired plant; 40% of Dubai power; explicitly noted as operational in crisis data" },

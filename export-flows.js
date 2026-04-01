@@ -502,7 +502,7 @@
     // --- Bullet 1: Headline with conflict context ---
     const changePct = prevVal > 0 ? ((refVal - prevVal) / prevVal * 100) : 0;
     const absChange = Math.abs(changePct);
-    const flowType = isGroup ? 'seaborne + pipeline' : ((state.commodity === 'crude' && ['iraq', 'russia'].includes(state.exporter)) ? 'seaborne + pipeline' : 'seaborne');
+    const flowType = isGroup ? 'seaborne + pipeline' : ((state.commodity === 'crude' && ['iraq', 'russia', 'saudi_arabia'].includes(state.exporter)) ? 'seaborne + pipeline' : 'seaborne');
     let b1 = `${exporterLabel} ${flowType} ${commodityLabel} exports averaged <strong>${refVal.toFixed(1)} ${unit}</strong> in ${refLabel}`;
 
     // Change framing — conflict-aware for Gulf exporters
@@ -639,6 +639,9 @@
       if (state.exporter === 'russia' && state.commodity === 'crude') {
         insights.push('<strong>Pipeline flows included:</strong> ESPO to China (~600 kb/d via Skovorodino-Mohe) — bypasses Hormuz, operates at full capacity.');
       }
+      if (state.exporter === 'saudi_arabia' && state.commodity === 'crude') {
+        insights.push('<strong>Pipeline flows included:</strong> Yanbu–SUMED to Mediterranean (~1,500 kb/d via Ain Sokhna–Sidi Kerir) — Saudi crude bypassing Hormuz via Red Sea and SUMED pipeline since Mar 11.');
+      }
     }
 
     return insights;
@@ -745,7 +748,7 @@
               </svg>
               Export Flows
             </h2>
-            <p class="text-sm text-navy-500 mt-0.5">${state.commodity === 'crude' ? 'Crude oil exports by destination country (includes pipeline flows for Iraq, Russia)' : (state.commodity === 'lng' ? 'LNG' : 'LPG') + ' exports by destination country'} | Source: Kpler vessel tracking + pipeline estimates</p>
+            <p class="text-sm text-navy-500 mt-0.5">${state.commodity === 'crude' ? 'Crude oil exports by destination country (includes pipeline flows for Iraq, Russia, Saudi Arabia via SUMED)' : (state.commodity === 'lng' ? 'LNG' : 'LPG') + ' exports by destination country'} | Source: Kpler vessel tracking + pipeline estimates</p>
           </div>
           <div id="ef-date-badge"></div>
         </div>

@@ -396,13 +396,13 @@ const PIPELINE_ROUTES = [
     country: "Saudi Arabia",
     type: "oil",
     capacity: "~7 mb/d",
-    currentFlow: "~5 mb/d",
+    currentFlow: "~7 mb/d",
     fromCountry: "Saudi Arabia",
     toCountry: "Saudi Arabia (Red Sea)",
     status: "operational",
     startLabel: "Abqaiq",
     endLabel: "Yanbu",
-    notes: "Rerouting crude Abqaiq→Yanbu via Red Sea; converted to full capacity Mar 11; ~5M bpd crude in Mar",
+    notes: "Operating at full 7 mb/d since Mar 11 conversion; Yanbu port loading constrained to ~4.4-5 mb/d (port bottleneck, not pipeline)",
     // 1,201 km across Saudi Arabia: Abqaiq → central desert (11 pump stations) → Hijas Mountains → Yanbu
     coords: [
       [25.94, 49.68],  // Abqaiq
@@ -507,10 +507,10 @@ const PIPELINE_ROUTES = [
     currentFlow: "~2 bcf/d",
     fromCountry: "Qatar",
     toCountry: "UAE",
-    status: "operational",
+    status: "partial",
     startLabel: "Ras Laffan",
     endLabel: "Taweelah",
-    notes: "GCC's only cross-border gas pipeline; subsea Qatar→UAE since 2007; ~2 bcf/d to UAE, remainder to Oman. Operator: Dolphin Energy (Mubadala 51%, Total 24.5%, Oxy 24.5%)",
+    notes: "GCC's only cross-border gas pipeline; ~2 bcf/d pre-crisis flow to UAE — actual wartime throughput unverified, may be reduced due to Qatar production shutdowns. Operator: Dolphin Energy (Mubadala 51%, Total 24.5%, Oxy 24.5%)",
     // 364 km subsea: Ras Laffan → Persian Gulf → Taweelah (Abu Dhabi)
     coords: [
       [25.89, 51.54],  // Ras Laffan LNG complex, Qatar
