@@ -1678,6 +1678,7 @@ function updateStats(activeTab) {
         { label: 'Operational', value: SHUTDOWNS_NO_FM_DATA.filter(d => ['operational', 'resumed'].includes(d.status)).length, color: 'text-emerald-600', change: countNew(SHUTDOWNS_NO_FM_DATA, d => ['operational', 'resumed'].includes(d.status)) },
       ];
       break;
+    case 'adnoc-vessels':
     case 'market-news':
     case 'import-flows':
     case 'export-flows':
