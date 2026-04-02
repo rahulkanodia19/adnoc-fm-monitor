@@ -1,49 +1,52 @@
 {
-  "timestamp": "2026-04-01T06:11:03Z",
+  "timestamp": "2026-04-02T23:30:00Z",
   "success": true,
-  "changes": "Day 34 updates: (1) NEW SHUTDOWN sd-024: Kuwait airport fuel tanks struck by IRGC drones Apr 1 — large fire, 58 hrs to extinguish, radar damaged, no casualties. (2) NEW EVENT: Bahrain national facility struck by Iranian aggression Apr 1 — fire controlled, no casualties. (3) Iran: Isfahan pharma/steel plants struck by US-Israeli forces Apr 1. (4) DIPLOMATIC: Trump says war could end in 2-3 weeks, no deal needed, tells allies 'go get your own oil'; Iran FM Araghchi: prepared for 6+ months, denies direct US negotiations. (5) MARKETS: Brent ~$115/bbl, WTI ~$103 (updated from $112/$102). (6) OPEC+ 206 kb/d increase now effective (symbolic). (7) Updated isNew flags across all events (>48h set to false). (8) Updated energy-news-data.json headlines for Kuwait, Iran, Bahrain, Saudi, US. No new FM declarations found in last 48 hours.",
+  "changes": "Day 35 evening sync: (1) NEW EVENT: Former FM Kharazi seriously injured, wife killed in Tehran airstrike Apr 1 — diplomacy via Pakistan derailed. (2) NEW EVENT: Hengam Island (strategic Hormuz island) struck by airstrikes — 7 injured. (3) UK 35-NATION SUMMIT: 35 countries issued joint statement condemning Iran's Hormuz closure; military planners to evaluate post-conflict naval options; US excluded. (4) SHIPPING DATA: March oil loadings west of Hormuz declined 76% (5.28M bpd vs 22.2M bpd Feb) — Windward Maritime Intelligence. (5) NEW FM: LyondellBasell declared FM on European polyolefins supply (fm-028) due to naphtha cost surge. (6) OIL PRICES: Brent at $105.27; Brent-WTI spread collapsed to 2026 lows; war premium deflating; EIA forecasts Brent above $95/b next 2 months. (7) RYANAIR: CEO warns 25% of European jet fuel at risk from May if conflict continues. (8) Updated energy-news-data.json headlines for Iran, Saudi, UAE, Qatar, Bahrain, US, South Korea.",
   "countriesCount": 9,
-  "fmCount": 26,
+  "fmCount": 27,
   "shutdownsCount": 24,
   "newEvents": [
-    "IRGC drones struck Kuwait International Airport fuel tanks Apr 1 — large fire, 58-hr firefight, radar damaged, no casualties (sd-024)",
-    "Bahrain national facility struck by Iranian aggression Apr 1 — fire controlled, no casualties",
-    "US-Israeli strikes hit Isfahan pharmaceutical and steel plants Apr 1",
-    "Trump says war could end in 2-3 weeks, no deal needed; tells allies 'go get your own oil'",
-    "Iran FM Araghchi says Iran prepared for 6+ months of war, denies direct US negotiations",
-    "OPEC+ 206 kb/d output increase now effective (symbolic given Gulf shut-ins)",
-    "Brent surged to ~$115/bbl, WTI ~$103; US gas over $4/gal"
+    "Former FM Kharazi seriously injured, wife killed in Tehran strike — diplomacy via Pakistan/Vance channel derailed (Al Arabiya)",
+    "Hengam Island (Hormuz) struck by airstrikes — 7 injured (Wikipedia/CNN)",
+    "UK hosted 35-nation Hormuz summit — joint statement, military planners to follow; US excluded (Washington Post, Al Jazeera)",
+    "March oil loadings west of Hormuz declined 76% to 5.28M bpd (Windward Maritime Intelligence)",
+    "LyondellBasell FM on European polyolefins — naphtha cost surge $250-300/mt (ChemOrbis)",
+    "Brent at $105.27; Brent-WTI spread at 2026 lows on de-escalation signals (EIA, ActionForex)",
+    "Ryanair CEO: 25% of European jet fuel at risk from May (Irish Times, Investing.com)",
+    "CENTCOM cumulative: 19 Iranian ships, 1 submarine, ~2,000 targets destroyed (Stars and Stripes)"
   ],
-  "noNewFmReason": "No new FM declarations found in last 48 hours. All 26 existing FMs remain active. Crisis continues to escalate with direct targeting of civilian infrastructure (Kuwait airport, Bahrain facility). Diplomatic gap widening — Trump 2-3 weeks vs Iran FM 6+ months.",
+  "noNewFmReason": "One new FM added: LyondellBasell (fm-028) on European polyolefins, declared Mar 11 but not previously captured. Total FM count now 27. All existing FMs remain active. Ryanair flagged potential flight cancellations Jun-Aug if jet fuel supply disrupted.",
   "sourcesChecked": {
     "tier1": [
-      "Bloomberg (oil prices, VLCC Al Salmi, OPEC+ decision)",
-      "S&P Global / Platts (Inside/Outside Strait bifurcation live Apr 1, war risk insurance)",
-      "Kpler (Kharg loadings 1.84 mb/d, Hormuz crossings data)",
-      "Rystad Energy (LNG turbine backlogs, infrastructure repair estimates)",
-      "Argus Media (refinery strikes, Saudi East-West pipeline maxed out)",
-      "Lloyd's List (war risk premiums double-digit millions per trip)"
+      "S&P Global / Platts (Inside/Outside Strait bifurcation, pricing data)",
+      "Kpler (March export volumes, Kharg loadings data)",
+      "Rystad Energy (infrastructure repair estimates)",
+      "Bloomberg (oil prices, war premium analysis)",
+      "Argus Media (refinery status, Hormuz tolls)",
+      "Lloyd's List (war risk premiums, maritime insurance)",
+      "Windward Maritime Intelligence (March shipping data: 76% decline)"
     ],
     "tier2": [
-      "Al Jazeera (Trump 2-3 weeks, Iran FM Araghchi 6 months, Kuwait airport, liveblog Apr 1)",
-      "CNN (Iran war live updates Apr 1, Trump statements, oil prices)",
-      "CNBC (Brent ~$115, Trump Kharg threat, oil price surge)",
-      "NBC News (82nd Airborne, IRGC tolls, Kuwait airport, Isfahan)",
-      "CBS News (gas $4/gal, Isfahan strikes, Trump 2-3 weeks)",
-      "Gulf News (Kuwait airport fire, Al Salmi tanker)",
-      "Anadolu Agency (Kuwait airport drone attack, Salalah resumption)",
-      "Kuwait Times (airport fuel tank 58-hour firefight)",
-      "Times of Israel (Kuwait airport + Bahrain facility struck simultaneously)",
-      "Middle East Eye (Iran FM Araghchi: no talks, prepared for months)",
-      "South China Morning Post (Trump: Iran doesn't have to make a deal)",
-      "Euronews (Trump war 2 weeks with or without deal)"
+      "Al Jazeera (Apr 2 liveblog, UK summit, Kharazi, Iran denies ceasefire)",
+      "Washington Post (UK 35-nation summit details, Hormuz reopening)",
+      "Al Arabiya (Kharazi injured, wife killed in Tehran strike)",
+      "CNN (Hengam Island strikes, 7 islands analysis, war timeline)",
+      "CBS News (Trump primetime speech, CENTCOM targets)",
+      "CNBC (Brent pricing, OPEC+ Apr 5 context)",
+      "Irish Times / RTE (Ryanair jet fuel supply warning)",
+      "Gulf News (maritime data, regional attacks)",
+      "Insurance Journal (war risk premiums, AQUA 1 incident)",
+      "UPI (UK Hormuz summit details)"
     ],
     "tier3": [
-      "OilPrice.com (Saudi pipeline strategy, Iraq Kirkuk-Ceyhan pipeline)",
-      "Marine Insight (SAMREF refinery drone strike context)",
-      "IndexBox (Saudi April oil exports to Asia decline)",
-      "Xinhua (Kuwait airport fuel tanks fire, no injuries)",
-      "Caixin Global (war risk insurance rates at 1% hull value)"
+      "ChemOrbis (LyondellBasell FM on European polyolefins)",
+      "Polymer Update (LyondellBasell FM details)",
+      "Seoul Economic Daily (Lotte Chemical, naphtha crisis)",
+      "KED Global (South Korea petrochemical idling)",
+      "ActionForex (Brent-WTI spread analysis)",
+      "Investing.com (Ryanair 25% fuel risk)",
+      "FinancialContent (naphtha $1,000/mt crisis)",
+      "C&EN (Hormuz pinch worsens for Asian chemical makers)"
     ]
   },
   "validationChecklist": {
@@ -58,11 +61,12 @@
     "validationScript": "109/109 checks passed"
   },
   "keyRisks": [
-    "KUWAIT AIRPORT: IRGC targeting civilian aviation infrastructure — escalation beyond energy sector",
-    "DIPLOMATIC GAP: Trump says 2-3 weeks; Iran FM says 6+ months — no path to quick resolution",
-    "TRUMP ESCALATION: Apr 6 deadline to reopen Hormuz or face obliteration of Kharg, power plants, desalination",
-    "DUAL CHOKEPOINT: Houthi Bab al-Mandeb closure threat + Hormuz = near-total ME export blockade; Goldman $135 Brent",
-    "GROUND OPS: 82nd Airborne + 31st MEU positioning for potential Kharg Island seizure and coastal raids",
-    "OIL PRICES: Brent ~$115, WTI ~$103; US gas $4/gal; options traders betting $150 by end-April"
+    "DIPLOMACY DERAILED: Kharazi (Pakistan/Vance mediation lead) injured in Tehran strike — key channel disrupted",
+    "APR 6 DEADLINE: Trump deadline to reopen Hormuz or escalate to power plants, desalination, Kharg Island",
+    "OPEC+ APR 5: Most consequential meeting since formation — stick with, reverse, or expand 206 kb/d increase?",
+    "DUAL CHOKEPOINT: Houthi Bab al-Mandeb closure threat + Hormuz = near-total ME export blockade",
+    "JET FUEL: Ryanair warns 25% of European jet fuel at risk from May; possible flight cancellations Jun-Aug",
+    "WAR PREMIUM: Brent-WTI spread at 2026 lows — market pricing in de-escalation that may not materialize",
+    "PETROCHEMICAL CASCADE: LyondellBasell FM joins FPCC, Formosa Chemicals, YNCC, PCS in naphtha/polymer crisis"
   ]
 }
