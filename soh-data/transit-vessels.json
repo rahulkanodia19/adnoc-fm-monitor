@@ -1,54 +1,31 @@
 {
   "vessels": [
     {
-      "name": "Petunia",
-      "imo": "9820336",
-      "mmsi": "422232600",
-      "vesselTypeClass": "MR",
+      "name": "Dhalkut",
+      "imo": "9888601",
+      "mmsi": "538009085",
+      "vesselTypeClass": "VLCC",
       "state": "loaded",
-      "flagName": "Iran (Islamic Republic of)",
-      "deadWeight": 49288,
+      "flagName": "Marshall Islands",
+      "deadWeight": 299997,
       "commodityTypes": [
         "liquids"
       ],
-      "capacity": 54684,
-      "speed": 10,
-      "course": 50,
-      "lat": 26.486244,
-      "lng": 55.899487,
+      "capacity": 339688,
+      "speed": 11,
+      "course": 115,
+      "lat": 26.441744,
+      "lng": 56.492493,
+      "destination": "Ras Markaz",
+      "destinationEta": "2026-04-04T00:01:00",
       "aisDestination": null,
-      "product": "Clean petroleum products",
-      "controller": "Islamic Republic of Iran Shipping Lines ",
+      "product": "arab heavy",
+      "controller": "CNPC",
       "lastPortCall": {
-        "start": "2026-03-20T02:38:54",
-        "end": "2026-03-23T07:07:55"
+        "start": "2026-04-02T08:00:00",
+        "end": "2026-04-02T08:00:00"
       },
-      "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
-      "name": "Samanta",
-      "imo": "9000297",
-      "mmsi": "341107001",
-      "vesselTypeClass": "Handysize",
-      "state": "loaded",
-      "flagName": "Saint Kitts and Nevis",
-      "deadWeight": 39110,
-      "commodityTypes": [
-        "dry"
-      ],
-      "capacity": 38269,
-      "speed": 28,
-      "course": 333,
-      "lat": 25.979094,
-      "lng": 56.05756,
-      "aisDestination": null,
-      "product": "Minerals",
-      "lastPortCall": {
-        "start": "2026-04-01T06:17:23",
-        "end": null
-      },
-      "transitDirection": "entering",
+      "transitDirection": "exiting",
       "isTransiting": true
     },
     {
@@ -88,10 +65,10 @@
         "lng"
       ],
       "capacity": 137248,
-      "speed": 16.2,
-      "course": 18,
-      "lat": 26.017708,
-      "lng": 55.725269,
+      "speed": 12.1,
+      "course": 43,
+      "lat": 26.325439,
+      "lng": 56.230206,
       "destination": "Qalhat",
       "destinationEta": "2026-04-04T03:00:00",
       "aisDestination": null,
@@ -100,6 +77,32 @@
       "lastPortCall": {
         "start": "2026-02-25T03:19:20",
         "end": "2026-02-25T03:19:20"
+      },
+      "transitDirection": "entering",
+      "isTransiting": true
+    },
+    {
+      "name": "Elpis",
+      "imo": "9212400",
+      "mmsi": "620999876",
+      "vesselTypeClass": "Handy/MR1",
+      "state": "loaded",
+      "flagName": "Panama",
+      "deadWeight": 35775,
+      "commodityTypes": [
+        "liquids"
+      ],
+      "capacity": 40533,
+      "speed": 8.1,
+      "course": 45,
+      "lat": 26.600243,
+      "lng": 55.915955,
+      "aisDestination": null,
+      "product": "Methanol",
+      "controller": "IMS LTD",
+      "lastPortCall": {
+        "start": "2026-03-30T09:55:22",
+        "end": "2026-03-30T14:17:47"
       },
       "transitDirection": "entering",
       "isTransiting": true
@@ -131,80 +134,28 @@
       "isTransiting": true
     },
     {
-      "name": "Ocean Pretty",
-      "imo": "9257084",
-      "mmsi": "314001120",
-      "vesselTypeClass": "Supramax",
+      "name": "Uma",
+      "imo": "9258870",
+      "mmsi": "750057000",
+      "vesselTypeClass": "Aframax/LR2",
       "state": "ballast",
-      "flagName": "Liberia",
-      "deadWeight": 51187,
-      "commodityTypes": [
-        "dry"
-      ],
-      "capacity": 50100,
-      "speed": 7.6,
-      "course": 340,
-      "lat": 25.608074,
-      "lng": 56.420158,
-      "aisDestination": null,
-      "product": "Steel",
-      "controller": "Kaalbye Shipping",
-      "lastPortCall": {
-        "start": "2026-03-28T16:35:00",
-        "end": "2026-03-28T16:35:00"
-      },
-      "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
-      "name": "Deepblue",
-      "imo": "9350862",
-      "mmsi": "352005665",
-      "vesselTypeClass": "MR",
-      "state": "loaded",
-      "flagName": "Liberia",
-      "deadWeight": 50922,
+      "flagName": "Barbados",
+      "deadWeight": 114761,
       "commodityTypes": [
         "liquids"
       ],
-      "capacity": 51569,
-      "speed": 11.3,
-      "course": 43,
-      "lat": 26.609579,
-      "lng": 55.990921,
+      "capacity": 121270,
+      "speed": 6.2,
+      "course": 55,
+      "lat": 26.744062,
+      "lng": 56.174465,
+      "destination": "Kharg Island",
+      "destinationEta": "2026-04-02T22:00:00",
       "aisDestination": null,
-      "product": "Clean petroleum products",
-      "controller": "MRI",
+      "product": "High Sulfur Fuel Oil",
       "lastPortCall": {
-        "start": "2026-03-28T15:58:50",
-        "end": "2026-04-01T13:19:27"
-      },
-      "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
-      "name": "Tour 2",
-      "imo": "9364112",
-      "mmsi": "422038400",
-      "vesselTypeClass": "Suezmax/LR3",
-      "state": "ballast",
-      "flagName": "Iran (Islamic Republic of)",
-      "deadWeight": 158719,
-      "commodityTypes": [
-        "liquids"
-      ],
-      "capacity": 173272,
-      "speed": 12.3,
-      "course": 327,
-      "lat": 26.648222,
-      "lng": 56.682205,
-      "destination": "Mideast Gulf",
-      "destinationEta": "2026-04-02T21:00:00",
-      "aisDestination": null,
-      "product": "Iran",
-      "lastPortCall": {
-        "start": "2026-04-02T02:16:00",
-        "end": "2026-04-02T02:16:00"
+        "start": "2026-03-31T15:39:00",
+        "end": "2026-03-31T15:39:00"
       },
       "transitDirection": "entering",
       "isTransiting": true
@@ -235,6 +186,34 @@
       "isTransiting": true
     },
     {
+      "name": "Habrut",
+      "imo": "9500730",
+      "mmsi": "538004577",
+      "vesselTypeClass": "VLCC",
+      "state": "loaded",
+      "flagName": "Marshall Islands",
+      "deadWeight": 319439,
+      "commodityTypes": [
+        "liquids"
+      ],
+      "capacity": 348079,
+      "speed": 10,
+      "course": 51,
+      "lat": 26.223207,
+      "lng": 56.107346,
+      "destination": "Ras Markaz",
+      "destinationEta": "2026-04-04T10:00:00",
+      "aisDestination": null,
+      "product": "Murban",
+      "controller": "Mercuria",
+      "lastPortCall": {
+        "start": "2026-03-21T11:56:00",
+        "end": "2026-03-22T04:29:00"
+      },
+      "transitDirection": "entering",
+      "isTransiting": true
+    },
+    {
       "name": "Ksl Laiyang",
       "imo": "9555163",
       "mmsi": "538003815",
@@ -251,39 +230,13 @@
       "lat": 25.61433,
       "lng": 56.45076,
       "destination": "Dibba Port",
-      "destinationEta": "2026-04-04T18:00:06.877547",
+      "destinationEta": "2026-04-05T18:00:06.656312",
       "aisDestination": null,
       "product": "Minerals",
       "controller": "Nanjing King Ship Management",
       "lastPortCall": {
         "start": "2026-03-23T10:58:54",
         "end": "2026-03-26T00:19:13"
-      },
-      "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
-      "name": "Stardust",
-      "imo": "9597757",
-      "mmsi": "538007443",
-      "vesselTypeClass": "Kamsarmax",
-      "state": "ballast",
-      "flagName": "Marshall Islands",
-      "deadWeight": 81502,
-      "commodityTypes": [
-        "dry"
-      ],
-      "capacity": 79749,
-      "speed": 11.3,
-      "course": 36,
-      "lat": 26.751837,
-      "lng": 56.141373,
-      "aisDestination": null,
-      "product": "Corn",
-      "controller": "Star Bulk",
-      "lastPortCall": {
-        "start": "2026-03-17T03:35:03",
-        "end": "2026-03-17T19:19:54"
       },
       "transitDirection": "entering",
       "isTransiting": true
@@ -330,7 +283,7 @@
       "lat": 25.594561,
       "lng": 56.455978,
       "destination": "Fujairah",
-      "destinationEta": "2026-04-02T18:00:06.877547",
+      "destinationEta": "2026-04-03T18:00:06.656312",
       "aisDestination": null,
       "product": "Limestone",
       "lastPortCall": {
@@ -341,78 +294,46 @@
       "isTransiting": true
     },
     {
-      "name": "Christina V",
-      "imo": "9658915",
-      "mmsi": "636023296",
-      "vesselTypeClass": "Panamax",
-      "state": "ballast",
-      "flagName": "Liberia",
-      "deadWeight": 77211,
-      "commodityTypes": [
-        "dry"
-      ],
-      "capacity": 75550,
-      "speed": 7.8,
-      "course": 37,
-      "lat": 26.716736,
-      "lng": 56.111454,
-      "destination": "Santos",
-      "destinationEta": "2026-04-30T12:00:00",
-      "aisDestination": null,
-      "product": "Corn",
-      "controller": "Modion Maritime Management",
-      "lastPortCall": {
-        "start": "2026-03-21T11:56:32",
-        "end": "2026-03-30T03:59:37"
-      },
-      "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
-      "name": "Glory Tom",
-      "imo": "9701360",
-      "mmsi": "352003139",
-      "vesselTypeClass": "Ultramax",
-      "state": "loaded",
-      "flagName": "Panama",
-      "deadWeight": 63696,
-      "commodityTypes": [
-        "dry"
-      ],
-      "capacity": 62326,
-      "speed": 12.8,
-      "course": 79,
-      "lat": 25.839005,
-      "lng": 55.669868,
-      "destination": "Jakarta",
-      "destinationEta": "2026-04-15T02:00:00",
-      "aisDestination": null,
-      "product": "Dry Bulk",
-      "controller": "Dato Marine",
-      "lastPortCall": {
-        "start": "2026-03-29T04:38:17",
-        "end": "2026-03-31T10:39:16"
-      },
-      "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
-      "name": "ESL WASL",
-      "imo": "9400071",
-      "mmsi": "255915689",
+      "name": "CMA CGM KRIBI",
+      "imo": "9694543",
+      "mmsi": "215922000",
       "vesselTypeClass": "Container Ship",
       "state": "loaded",
       "flagName": "",
-      "deadWeight": 81002,
+      "deadWeight": 67467,
       "commodityTypes": [
         "container"
       ],
       "capacity": null,
-      "speed": 46.7,
-      "course": 340,
-      "lat": 25.794915,
-      "lng": 56.363,
-      "destination": "AEKLF",
+      "speed": 15.8,
+      "course": 181,
+      "lat": 26.5101367,
+      "lng": 56.72674,
+      "destination": "OWNER FRANCE",
+      "product": null,
+      "controller": null,
+      "lastPortCall": null,
+      "dataSource": "mint",
+      "transitDirection": "exiting",
+      "isTransiting": true
+    },
+    {
+      "name": "SELEN",
+      "imo": "9208459",
+      "mmsi": "341935001",
+      "vesselTypeClass": "Container Ship",
+      "state": "loaded",
+      "flagName": "",
+      "deadWeight": 6850,
+      "commodityTypes": [
+        "container"
+      ],
+      "capacity": null,
+      "speed": 10.5,
+      "course": 46,
+      "lat": 26.755325,
+      "lng": 56.15278,
+      "destination": "MUMBAI",
       "product": null,
       "controller": null,
       "lastPortCall": null,
@@ -445,12 +366,12 @@
       "isTransiting": true
     }
   ],
-  "exitingCount": 2,
-  "enteringCount": 15,
-  "totalTransiting": 17,
+  "exitingCount": 4,
+  "enteringCount": 10,
+  "totalTransiting": 14,
   "uaeExiting": 0,
   "uaeEntering": 0,
   "adnocExiting": 0,
   "adnocEntering": 1,
-  "syncTimestamp": "2026-04-02T06:48:28.009Z"
+  "syncTimestamp": "2026-04-02T20:31:33.104Z"
 }

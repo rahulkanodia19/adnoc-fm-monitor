@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "name": "CMA CGM KRIBI",
+    "imo": "9694543",
+    "vesselTypeClass": "Container Ship",
+    "state": "loaded",
+    "flagName": "",
+    "product": null,
+    "destination": "OWNER FRANCE",
+    "deadWeight": 67467,
+    "speed": 15.8,
+    "departureDate": "2026-04-03",
+    "commodity": "container"
+  }
+]
