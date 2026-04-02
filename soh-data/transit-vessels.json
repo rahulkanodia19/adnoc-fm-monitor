@@ -1,6 +1,32 @@
 {
   "vessels": [
     {
+      "name": "Petunia",
+      "imo": "9820336",
+      "mmsi": "422232600",
+      "vesselTypeClass": "MR",
+      "state": "loaded",
+      "flagName": "Iran (Islamic Republic of)",
+      "deadWeight": 49288,
+      "commodityTypes": [
+        "liquids"
+      ],
+      "capacity": 54684,
+      "speed": 10,
+      "course": 50,
+      "lat": 26.486244,
+      "lng": 55.899487,
+      "aisDestination": null,
+      "product": "Clean petroleum products",
+      "controller": "Islamic Republic of Iran Shipping Lines ",
+      "lastPortCall": {
+        "start": "2026-03-20T02:38:54",
+        "end": "2026-03-23T07:07:55"
+      },
+      "transitDirection": "entering",
+      "isTransiting": true
+    },
+    {
       "name": "Samanta",
       "imo": "9000297",
       "mmsi": "341107001",
@@ -51,31 +77,31 @@
       "isTransiting": true
     },
     {
-      "name": "Maoming",
-      "imo": "9215103",
-      "mmsi": "422963400",
-      "vesselTypeClass": "MR",
+      "name": "Sohar LNG",
+      "imo": "9210816",
+      "mmsi": "357186000",
+      "vesselTypeClass": "Lower Conventional",
       "state": "ballast",
       "flagName": "Panama",
-      "deadWeight": 46414,
+      "deadWeight": 71997,
       "commodityTypes": [
-        "liquids"
+        "lng"
       ],
-      "capacity": 51688,
-      "speed": 8.5,
-      "course": 221,
-      "lat": 26.640869,
-      "lng": 56.035774,
-      "destination": "Assaluyeh",
-      "destinationEta": "2026-04-03T13:00:00",
+      "capacity": 137248,
+      "speed": 16.2,
+      "course": 18,
+      "lat": 26.017708,
+      "lng": 55.725269,
+      "destination": "Qalhat",
+      "destinationEta": "2026-04-04T03:00:00",
       "aisDestination": null,
-      "product": "High Sulfur Fuel Oil",
-      "controller": "Torm",
+      "product": "lng",
+      "controller": "ADNOC Gas",
       "lastPortCall": {
-        "start": "2026-03-13T18:12:00",
-        "end": "2026-03-15T14:19:00"
+        "start": "2026-02-25T03:19:20",
+        "end": "2026-02-25T03:19:20"
       },
-      "transitDirection": "unknown",
+      "transitDirection": "entering",
       "isTransiting": true
     },
     {
@@ -94,8 +120,6 @@
       "course": 137,
       "lat": 25.607454,
       "lng": 56.440807,
-      "destination": "Mundra",
-      "destinationEta": "2026-04-02T03:00:06.328122",
       "aisDestination": null,
       "product": "Steel Pipes",
       "controller": "Portline",
@@ -133,29 +157,54 @@
       "isTransiting": true
     },
     {
-      "name": "Baskar",
-      "imo": "9405942",
-      "mmsi": "422036800",
-      "vesselTypeClass": "Supramax",
+      "name": "Deepblue",
+      "imo": "9350862",
+      "mmsi": "352005665",
+      "vesselTypeClass": "MR",
       "state": "loaded",
-      "flagName": "Iran (Islamic Republic of)",
-      "deadWeight": 53565,
+      "flagName": "Liberia",
+      "deadWeight": 50922,
       "commodityTypes": [
-        "dry"
+        "liquids"
       ],
-      "capacity": 52413,
-      "speed": 8.5,
-      "course": 36,
-      "lat": 26.694105,
-      "lng": 56.110241,
-      "destination": "Bandar Abbas",
-      "destinationEta": "2026-04-04T09:00:07.005371",
+      "capacity": 51569,
+      "speed": 11.3,
+      "course": 43,
+      "lat": 26.609579,
+      "lng": 55.990921,
       "aisDestination": null,
-      "product": "Iron Ore Pellets",
-      "controller": "Sapid",
+      "product": "Clean petroleum products",
+      "controller": "MRI",
       "lastPortCall": {
-        "start": "2026-03-28T13:12:43",
-        "end": "2026-03-28T23:18:58"
+        "start": "2026-03-28T15:58:50",
+        "end": "2026-04-01T13:19:27"
+      },
+      "transitDirection": "entering",
+      "isTransiting": true
+    },
+    {
+      "name": "Tour 2",
+      "imo": "9364112",
+      "mmsi": "422038400",
+      "vesselTypeClass": "Suezmax/LR3",
+      "state": "ballast",
+      "flagName": "Iran (Islamic Republic of)",
+      "deadWeight": 158719,
+      "commodityTypes": [
+        "liquids"
+      ],
+      "capacity": 173272,
+      "speed": 12.3,
+      "course": 327,
+      "lat": 26.648222,
+      "lng": 56.682205,
+      "destination": "Mideast Gulf",
+      "destinationEta": "2026-04-02T21:00:00",
+      "aisDestination": null,
+      "product": "Iran",
+      "lastPortCall": {
+        "start": "2026-04-02T02:16:00",
+        "end": "2026-04-02T02:16:00"
       },
       "transitDirection": "entering",
       "isTransiting": true
@@ -214,6 +263,32 @@
       "isTransiting": true
     },
     {
+      "name": "Stardust",
+      "imo": "9597757",
+      "mmsi": "538007443",
+      "vesselTypeClass": "Kamsarmax",
+      "state": "ballast",
+      "flagName": "Marshall Islands",
+      "deadWeight": 81502,
+      "commodityTypes": [
+        "dry"
+      ],
+      "capacity": 79749,
+      "speed": 11.3,
+      "course": 36,
+      "lat": 26.751837,
+      "lng": 56.141373,
+      "aisDestination": null,
+      "product": "Corn",
+      "controller": "Star Bulk",
+      "lastPortCall": {
+        "start": "2026-03-17T03:35:03",
+        "end": "2026-03-17T19:19:54"
+      },
+      "transitDirection": "entering",
+      "isTransiting": true
+    },
+    {
       "name": "Propel Grace",
       "imo": "9605023",
       "mmsi": "563189200",
@@ -261,6 +336,34 @@
       "lastPortCall": {
         "start": "2026-03-20T08:39:38",
         "end": "2026-03-28T01:59:13"
+      },
+      "transitDirection": "entering",
+      "isTransiting": true
+    },
+    {
+      "name": "Christina V",
+      "imo": "9658915",
+      "mmsi": "636023296",
+      "vesselTypeClass": "Panamax",
+      "state": "ballast",
+      "flagName": "Liberia",
+      "deadWeight": 77211,
+      "commodityTypes": [
+        "dry"
+      ],
+      "capacity": 75550,
+      "speed": 7.8,
+      "course": 37,
+      "lat": 26.716736,
+      "lng": 56.111454,
+      "destination": "Santos",
+      "destinationEta": "2026-04-30T12:00:00",
+      "aisDestination": null,
+      "product": "Corn",
+      "controller": "Modion Maritime Management",
+      "lastPortCall": {
+        "start": "2026-03-21T11:56:32",
+        "end": "2026-03-30T03:59:37"
       },
       "transitDirection": "entering",
       "isTransiting": true
@@ -343,11 +446,11 @@
     }
   ],
   "exitingCount": 2,
-  "enteringCount": 10,
-  "totalTransiting": 13,
+  "enteringCount": 15,
+  "totalTransiting": 17,
   "uaeExiting": 0,
   "uaeEntering": 0,
   "adnocExiting": 0,
-  "adnocEntering": 0,
-  "syncTimestamp": "2026-04-01T23:48:52.839Z"
+  "adnocEntering": 1,
+  "syncTimestamp": "2026-04-02T06:48:28.009Z"
 }

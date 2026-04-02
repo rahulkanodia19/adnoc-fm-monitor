@@ -9,8 +9,8 @@
     {
       "label": "MR",
       "total": 123,
-      "ballast": 69,
-      "laden": 54
+      "ballast": 70,
+      "laden": 53
     },
     {
       "label": "VLCC",
@@ -20,27 +20,27 @@
     },
     {
       "label": "Handysize",
-      "total": 106,
-      "ballast": 65,
+      "total": 105,
+      "ballast": 64,
       "laden": 41
     },
     {
       "label": "Supramax",
       "total": 69,
-      "ballast": 32,
-      "laden": 37
+      "ballast": 33,
+      "laden": 36
     },
     {
       "label": "Intermediate Tankers",
-      "total": 59,
-      "ballast": 19,
-      "laden": 40
+      "total": 60,
+      "ballast": 18,
+      "laden": 42
     },
     {
       "label": "Panamax",
       "total": 54,
-      "ballast": 36,
-      "laden": 18
+      "ballast": 37,
+      "laden": 17
     },
     {
       "label": "Aframax/LR2",
@@ -74,8 +74,8 @@
     },
     {
       "label": "SGC",
-      "total": 30,
-      "ballast": 26,
+      "total": 31,
+      "ballast": 27,
       "laden": 4
     },
     {
@@ -151,6 +151,6 @@
       "laden": 1
     }
   ],
-  "total": 1028,
-  "syncTimestamp": "2026-04-01T23:48:52.839Z"
+  "total": 1029,
+  "syncTimestamp": "2026-04-02T06:48:28.009Z"
 }
