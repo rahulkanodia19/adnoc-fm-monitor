@@ -2223,7 +2223,7 @@ const SHUTDOWNS_NO_FM_DATA = [
 
 const SPR_RELEASE_DATA = {
   announced: "2026-03-11",
-  asOf: "2026-04-01",
+  asOf: "2026-04-02",
   trigger: "Strait of Hormuz disruption / Iran conflict — ~20% of global oil supply at risk",
   totalCommitted: 426.0,
   totalCrude: 301,
@@ -2231,13 +2231,15 @@ const SPR_RELEASE_DATA = {
   totalReleased: 67.7,
   releasePeriodDays: 120,
   keyInsights: [
-    "EIA weekly data shows US SPR at 415.1 mb for week ending Mar 27 — first measurable drawdown (0.3 mb); bulk deliveries of 45.2 mb contracted tranche start today",
-    "Japan national reserves flowing from 11 JOGMEC bases since Mar 26; combined 11.0 mb released (13.8% of 79.8 mb) across private and state stocks",
-    "South Korea swap program launched Mar 31 with 2 mb initial contract; all 4 domestic refiners participating alongside 6.0 mb in direct releases",
-    "Canada's 140k bpd production increase takes effect today — one of few IEA members contributing via added output rather than stockpile drawdowns",
-    "Global release at 67.7 of 426.0 mb (15.9%) on Day 21 of 120; 17 European countries began Mar 28 but no per-country release data reported yet"
+    "DOE issued RFP for additional 10 mb SPR exchange from Bryan Mound on Apr 1; bids due Apr 6 — would bring total US awards to 55.2 mb",
+    "IEA's Birol warned April oil supply losses will be 'twice March' and the agency is assessing whether a second coordinated release is needed",
+    "EIA weekly SPR at 415.1 mb (Mar 27); physical drawdown gradual at ~0.4 mb/week despite 45.2 mb in awarded exchange contracts",
+    "South Korea swap program operational since Mar 31 with 2 mb initial contract; 20+ mb in refiner demand queued for April-May",
+    "Global release at 67.7 of 426.0 mb (15.9%) on Day 22 of 120; European releases ongoing since Mar 28 but no per-country data yet"
   ],
   sources: [
+    { title: "DOE initiates additional 10 mb SPR emergency exchange from Bryan Mound", url: "https://www.energy.gov/hgeo/articles/energy-department-initiates-additional-strategic-petroleum-reserve-emergency-exchange", date: "2026-04-01" },
+    { title: "Oil supply crunch will worsen in April, IEA warns as it weighs further stock releases", url: "https://www.cnbc.com/2026/04/01/oil-price-iea-fatih-birol-brent-iran-strait-hormuz.html", date: "2026-04-01" },
     { title: "EIA Weekly Petroleum Status Report — SPR at 415.1 mb (week ending Mar 27)", url: "https://www.eia.gov/petroleum/supply/weekly/", date: "2026-04-01" },
     { title: "Korea launches first oil swap program to offset Middle East risks", url: "https://www.koreaherald.com/article/10706695", date: "2026-03-31" },
     { title: "Canada to release additional 140K barrels of oil per day starting in April", url: "https://globalnews.ca/news/11731814/canada-oil-production-increase/", date: "2026-03-31" },
