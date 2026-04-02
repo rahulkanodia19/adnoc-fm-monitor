@@ -1,53 +1,53 @@
 {
-  "timestamp": "2026-04-01T11:45:07.683Z",
+  "timestamp": "2026-04-02T07:43:38.963Z",
   "overall": "ok",
   "pipelines": {
     "news_fm": {
       "status": "ok",
-      "dataAsOf": "01 Apr 2026, 10:00 GST",
-      "lastUpdated": "2026-04-01T06:00:00.000Z",
-      "details": "9/9 countries, 26 FMs, 24 shutdowns"
+      "dataAsOf": "02 Apr 2026, 09:00 GST",
+      "lastUpdated": "2026-04-02T05:00:00.000Z",
+      "details": "9/9 countries, 28 FMs, 25 shutdowns"
     },
     "prices": {
       "status": "ok",
-      "dataAsOf": "31 Mar 2026, 04:00 GST",
-      "lastUpdated": "2026-03-31T00:00:00Z",
-      "details": "11 symbols, latest 31 Mar 2026, 04:00 GST"
+      "dataAsOf": "02 Apr 2026, 04:00 GST",
+      "lastUpdated": "2026-04-02T00:00:00Z",
+      "details": "11 symbols, latest 02 Apr 2026, 04:00 GST"
     },
     "war_risk": {
       "status": "ok",
-      "dataAsOf": "01 Apr 2026, 04:00 GST",
-      "lastUpdated": "2026-04-01",
-      "details": "28 data points, current 5.0% hull value"
+      "dataAsOf": "02 Apr 2026, 04:00 GST",
+      "lastUpdated": "2026-04-02",
+      "details": "29 data points, current 5.0% hull value"
     },
     "spr": {
       "status": "ok",
-      "dataAsOf": "01 Apr 2026, 04:00 GST",
-      "lastUpdated": "2026-04-01",
+      "dataAsOf": "02 Apr 2026, 04:00 GST",
+      "lastUpdated": "2026-04-02",
       "details": "30 countries, 67.7 mb released"
     },
     "soh": {
       "status": "ok",
-      "dataAsOf": "01 Apr 2026, 10:00 GST",
-      "lastUpdated": "2026-04-01T06:04:42.572Z",
-      "details": "1317 vessels, 852 inside, 11 ADNOC"
+      "dataAsOf": "02 Apr 2026, 10:00 GST",
+      "lastUpdated": "2026-04-02T06:48:28.009Z",
+      "details": "1029 vessels, 710 inside, 11 ADNOC"
     },
     "import_flows": {
       "status": "ok",
-      "dataAsOf": "31 Mar 2026, 04:00 GST",
-      "lastUpdated": "2026-03-31",
+      "dataAsOf": "01 Apr 2026, 04:00 GST",
+      "lastUpdated": "2026-04-01",
       "details": "64 datasets, 6.4 MB"
     },
     "export_flows": {
       "status": "ok",
-      "dataAsOf": "31 Mar 2026, 04:00 GST",
-      "lastUpdated": "2026-03-31",
+      "dataAsOf": "01 Apr 2026, 04:00 GST",
+      "lastUpdated": "2026-04-01",
       "details": "88 datasets, 8.1 MB"
     },
     "flow_insights": {
       "status": "ok",
-      "dataAsOf": "01 Apr 2026, 15:00 GST",
-      "lastUpdated": "2026-04-01T11:45:07.129Z",
+      "dataAsOf": "02 Apr 2026, 10:00 GST",
+      "lastUpdated": "2026-04-02T06:27:31.872Z",
       "details": "160 datasets"
     }
   }
