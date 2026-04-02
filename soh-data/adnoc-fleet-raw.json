@@ -26,7 +26,7 @@
     "isFloatingStorage": false,
     "flagName": "Marshall Islands",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:59:07Z",
+    "timestamp": "2026-04-02T22:46:46Z",
     "imo": "9767584",
     "nextDestination": {
       "source": "Fixture",
@@ -61,15 +61,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 300,
+      "course": 29,
       "geo": {
-        "lon": -8.668155,
-        "lat": 33.164085
+        "lon": -8.66871,
+        "lat": 33.164265
       },
       "draught": 10.3,
       "draughtComputed": 10.3,
-      "id": 73846162618,
-      "receivedTime": "2026-04-02T19:36:34",
+      "id": 73846268087,
+      "receivedTime": "2026-04-02T22:18:34",
       "vesselId": 100269,
       "currentCargo": {
         "loaded": false,
@@ -168,7 +168,7 @@
     "isFloatingStorage": false,
     "flagName": "Marshall Islands",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:03:50Z",
+    "timestamp": "2026-04-02T22:50:31Z",
     "imo": "9791298",
     "nextDestination": {
       "source": "AIS",
@@ -203,15 +203,15 @@
         "volume_gas": 111291,
         "energy": 2842594.660015773
       },
-      "course": 110,
+      "course": 111,
       "geo": {
-        "lon": -78.82029,
-        "lat": 22.815182
+        "lon": -78.225639,
+        "lat": 22.600496
       },
       "draught": 13.4,
       "draughtComputed": 13.4,
-      "id": 83455409493,
-      "receivedTime": "2026-04-02T18:39:00",
+      "id": 83455511556,
+      "receivedTime": "2026-04-02T22:19:50",
       "vesselId": 101255,
       "currentCargo": {
         "loaded": true,
@@ -249,7 +249,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 11.3
+      "speed": 9.4
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -319,7 +319,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:59:20Z",
+    "timestamp": "2026-04-02T22:57:30Z",
     "imo": "9801732",
     "nextDestination": {
       "source": "AIS",
@@ -356,13 +356,13 @@
       },
       "course": 251,
       "geo": {
-        "lon": -59.08588,
-        "lat": -38.98278
+        "lon": -59.753502,
+        "lat": -39.159409
       },
       "draught": 10.2,
       "draughtComputed": 10.2,
-      "id": 73846160231,
-      "receivedTime": "2026-04-02T19:28:34",
+      "id": 73846284476,
+      "receivedTime": "2026-04-02T22:38:03",
       "vesselId": 101847,
       "currentCargo": {
         "loaded": true,
@@ -394,7 +394,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 10.8
+      "speed": 10.2
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -464,7 +464,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:04:44Z",
+    "timestamp": "2026-04-02T22:28:24Z",
     "imo": "9806354",
     "nextDestination": {
       "source": "AIS",
@@ -504,15 +504,15 @@
         "volume_gas": 73468.18727490996,
         "energy": 1876524.398457178
       },
-      "course": 299,
+      "course": 301,
       "geo": {
-        "lon": 78.58741,
-        "lat": 6.88318
+        "lon": 78.271484,
+        "lat": 7.088676
       },
       "draught": 6.9,
       "draughtComputed": 6.9,
-      "id": 73846169670,
-      "receivedTime": "2026-04-02T19:37:16",
+      "id": 73846260125,
+      "receivedTime": "2026-04-02T21:51:06",
       "vesselId": 102054,
       "currentCargo": {
         "loaded": true,
@@ -544,7 +544,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 10.1
+      "speed": 10.2
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -614,7 +614,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:04:10Z",
+    "timestamp": "2026-04-02T22:50:45Z",
     "imo": "9823534",
     "nextDestination": {
       "source": "AIS",
@@ -649,15 +649,15 @@
         "volume_gas": 14369,
         "energy": 367012.98999709444
       },
-      "course": 215,
+      "course": 220,
       "geo": {
-        "lon": 107.303696,
-        "lat": 5.65656
+        "lon": 107.132004,
+        "lat": 5.421613
       },
       "draught": 9.6,
       "draughtComputed": 9.6,
-      "id": 83455402115,
-      "receivedTime": "2026-04-02T18:35:49",
+      "id": 83455437837,
+      "receivedTime": "2026-04-02T19:50:50",
       "vesselId": 102519,
       "currentCargo": {
         "loaded": true,
@@ -692,7 +692,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 14.4
+      "speed": 14.5
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -762,7 +762,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T18:58:48Z",
+    "timestamp": "2026-04-02T22:50:45Z",
     "imo": "9823546",
     "nextDestination": {
       "source": "AIS",
@@ -802,15 +802,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 0,
+      "course": 173,
       "geo": {
-        "lon": 6.91067,
-        "lat": 37.501938
+        "lon": 6.969347,
+        "lat": 37.303684
       },
       "draught": 9,
       "draughtComputed": 9,
-      "id": 83455400484,
-      "receivedTime": "2026-04-02T18:27:34",
+      "id": 83455503795,
+      "receivedTime": "2026-04-02T22:12:46",
       "vesselId": 102521,
       "currentCargo": {
         "loaded": false,
@@ -845,7 +845,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 2.2
+      "speed": 5.4
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -915,10 +915,10 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:09:01Z",
+    "timestamp": "2026-04-02T23:00:59Z",
     "imo": "9828376",
     "nextDestination": {
-      "source": "Port",
+      "source": "AIS",
       "id": 388636090,
       "installation": {
         "name": "Skikda Refinery",
@@ -926,7 +926,7 @@
         "id": 1232,
         "resourceType": "installation"
       },
-      "eta": "2026-04-02T21:00:06.543658",
+      "eta": "2026-04-05T21:00:08.917225",
       "zone": {
         "name": "Skikda",
         "fullname": "Skikda",
@@ -955,15 +955,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 345,
+      "course": 341,
       "geo": {
-        "lon": 6.915226,
-        "lat": 37.357079
+        "lon": 6.84793,
+        "lat": 37.489658
       },
       "draught": 9.5,
       "draughtComputed": 9.5,
-      "id": 83455402447,
-      "receivedTime": "2026-04-02T18:34:15",
+      "id": 83455512273,
+      "receivedTime": "2026-04-02T22:34:36",
       "vesselId": 102695,
       "currentCargo": {
         "loaded": false,
@@ -998,7 +998,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 1.8
+      "speed": 4.6
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -1068,7 +1068,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:09:01Z",
+    "timestamp": "2026-04-02T22:53:57Z",
     "imo": "9828388",
     "nextDestination": {
       "source": "AIS",
@@ -1216,7 +1216,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:11:41Z",
+    "timestamp": "2026-04-02T22:53:57Z",
     "imo": "9828390",
     "nextDestination": {
       "source": "AIS",
@@ -1251,15 +1251,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 315,
+      "course": 312,
       "geo": {
-        "lon": 59.96666,
-        "lat": 22.726849
+        "lon": 59.24464,
+        "lat": 23.388515
       },
       "draught": 9.2,
       "draughtComputed": 9.2,
-      "id": 83455400343,
-      "receivedTime": "2026-04-02T18:24:47",
+      "id": 83455503054,
+      "receivedTime": "2026-04-02T22:11:39",
       "vesselId": 102699,
       "currentCargo": {
         "loaded": false,
@@ -1294,7 +1294,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 15.5
+      "speed": 14.6
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -1364,7 +1364,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:09:01Z",
+    "timestamp": "2026-04-02T22:53:57Z",
     "imo": "9828405",
     "nextDestination": {
       "source": "AIS",
@@ -1399,15 +1399,15 @@
         "volume_gas": 88497,
         "energy": 2260390.3247110355
       },
-      "course": 15,
+      "course": 20,
       "geo": {
-        "lon": 121.83667,
-        "lat": 21.648333
+        "lon": 122.182655,
+        "lat": 22.897371
       },
       "draught": 13,
       "draughtComputed": 13,
-      "id": 83455335441,
-      "receivedTime": "2026-04-02T16:13:34",
+      "id": 83455502685,
+      "receivedTime": "2026-04-02T22:06:23",
       "vesselId": 102701,
       "currentCargo": {
         "loaded": true,
@@ -1442,7 +1442,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 13
+      "speed": 12.6
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -1512,7 +1512,7 @@
     "isFloatingStorage": false,
     "flagName": "Marshall Islands",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:55:07Z",
+    "timestamp": "2026-04-02T22:54:00Z",
     "imo": "9831294",
     "nextDestination": {
       "source": "AIS",
@@ -1654,7 +1654,7 @@
     "isFloatingStorage": false,
     "flagName": "Marshall Islands",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:37:45Z",
+    "timestamp": "2026-04-02T22:54:00Z",
     "imo": "9831309",
     "nextDestination": {
       "source": "AIS",
@@ -1694,15 +1694,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 260,
+      "course": 261,
       "geo": {
-        "lon": -24.046949,
-        "lat": 33.525513
+        "lon": -24.930935,
+        "lat": 33.398663
       },
       "draught": 8.7,
       "draughtComputed": 8.7,
-      "id": 83455410117,
-      "receivedTime": "2026-04-02T18:52:13",
+      "id": 83455507412,
+      "receivedTime": "2026-04-02T22:18:43",
       "vesselId": 102863,
       "currentCargo": {
         "loaded": false,
@@ -1807,7 +1807,7 @@
     "isFloatingStorage": false,
     "flagName": "Singapore",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:09:07Z",
+    "timestamp": "2026-04-02T22:54:01Z",
     "imo": "9833656",
     "nextDestination": {
       "source": "AIS",
@@ -1842,15 +1842,15 @@
         "volume_gas": 54918,
         "energy": 1402715.5254130722
       },
-      "course": 254,
+      "course": 257,
       "geo": {
-        "lon": 2.084982,
-        "lat": 37.304718
+        "lon": 1.097813,
+        "lat": 37.106686
       },
       "draught": 11.8,
       "draughtComputed": 11.8,
-      "id": 83455401506,
-      "receivedTime": "2026-04-02T18:34:24",
+      "id": 83455504340,
+      "receivedTime": "2026-04-02T22:14:45",
       "vesselId": 102983,
       "currentCargo": {
         "loaded": true,
@@ -1885,7 +1885,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 12.3
+      "speed": 13.5
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -1955,7 +1955,7 @@
     "isFloatingStorage": false,
     "flagName": "Singapore",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:09:07Z",
+    "timestamp": "2026-04-02T22:54:01Z",
     "imo": "9833668",
     "nextDestination": {
       "source": "AIS",
@@ -1990,15 +1990,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 236,
+      "course": 237,
       "geo": {
-        "lon": -22.799986,
-        "lat": 42.451687
+        "lon": -23.898689,
+        "lat": 41.92268
       },
       "draught": 8.4,
       "draughtComputed": 8.4,
-      "id": 83455383891,
-      "receivedTime": "2026-04-02T17:53:39",
+      "id": 83455503387,
+      "receivedTime": "2026-04-02T22:15:08",
       "vesselId": 102985,
       "currentCargo": {
         "loaded": false,
@@ -2033,7 +2033,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 13.8
+      "speed": 12.6
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -2103,7 +2103,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:09:07Z",
+    "timestamp": "2026-04-02T22:54:01Z",
     "imo": "9833670",
     "nextDestination": null,
     "id": 102987,
@@ -2129,13 +2129,13 @@
       },
       "course": 288,
       "geo": {
-        "lon": -15.41507,
-        "lat": 28.140779
+        "lon": -15.415067,
+        "lat": 28.140766
       },
       "draught": 11.9,
       "draughtComputed": 11.9,
-      "id": 83455403841,
-      "receivedTime": "2026-04-02T18:37:05",
+      "id": 83455507166,
+      "receivedTime": "2026-04-02T22:18:14",
       "vesselId": 102987,
       "currentCargo": {
         "loaded": false,
@@ -2246,7 +2246,7 @@
     "isFloatingStorage": false,
     "flagName": "Singapore",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:09:07Z",
+    "timestamp": "2026-04-02T22:54:01Z",
     "imo": "9833682",
     "nextDestination": null,
     "id": 102989,
@@ -2374,7 +2374,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:55:17Z",
+    "timestamp": "2026-04-02T22:54:07Z",
     "imo": "9851830",
     "nextDestination": {
       "source": "AIS",
@@ -2414,15 +2414,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 259,
+      "course": 278,
       "geo": {
-        "lon": -18.245384,
-        "lat": -28.033453
+        "lon": -18.797995,
+        "lat": -27.955563
       },
       "draught": 11,
       "draughtComputed": 11,
-      "id": 83455434659,
-      "receivedTime": "2026-04-02T19:38:05",
+      "id": 83455507998,
+      "receivedTime": "2026-04-02T22:18:45",
       "vesselId": 103892,
       "currentCargo": {
         "loaded": false,
@@ -2460,7 +2460,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 11.5
+      "speed": 11.2
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -2530,7 +2530,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:09:14Z",
+    "timestamp": "2026-04-02T22:54:07Z",
     "imo": "9851842",
     "nextDestination": {
       "source": "AIS",
@@ -2565,15 +2565,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 254,
+      "course": 256,
       "geo": {
-        "lon": 33.764111,
-        "lat": -33.290848
+        "lon": 32.751053,
+        "lat": -33.501945
       },
       "draught": 11,
       "draughtComputed": 11,
-      "id": 83455401284,
-      "receivedTime": "2026-04-02T18:35:32",
+      "id": 83455508349,
+      "receivedTime": "2026-04-02T22:19:16",
       "vesselId": 103894,
       "currentCargo": {
         "loaded": false,
@@ -2614,7 +2614,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 13.6
+      "speed": 14
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -2684,7 +2684,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:08:57Z",
+    "timestamp": "2026-04-02T22:31:02Z",
     "imo": "9852743",
     "nextDestination": {
       "source": "AIS",
@@ -2721,13 +2721,13 @@
       },
       "course": 0,
       "geo": {
-        "lon": 122.632294,
-        "lat": 31.17454
+        "lon": 122.631691,
+        "lat": 31.172247
       },
       "draught": 11.2,
       "draughtComputed": 11.2,
-      "id": 73846165429,
-      "receivedTime": "2026-04-02T19:35:21",
+      "id": 73846272482,
+      "receivedTime": "2026-04-02T22:14:17",
       "vesselId": 103934,
       "currentCargo": {
         "loaded": true,
@@ -2826,7 +2826,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:11:44Z",
+    "timestamp": "2026-04-02T22:31:02Z",
     "imo": "9852767",
     "nextDestination": {
       "source": "Port",
@@ -2861,15 +2861,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 169,
+      "course": 158,
       "geo": {
-        "lon": 32.036804,
-        "lat": -28.792654
+        "lon": 32.036812,
+        "lat": -28.79266
       },
       "draught": 12,
       "draughtComputed": 12,
-      "id": 73846163372,
-      "receivedTime": "2026-04-02T19:36:58",
+      "id": 73846273170,
+      "receivedTime": "2026-04-02T22:15:57",
       "vesselId": 103938,
       "currentCargo": {
         "loaded": false,
@@ -2971,14 +2971,14 @@
     "isFloatingStorage": false,
     "flagName": "Singapore",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:38:25Z",
+    "timestamp": "2026-04-02T22:54:07Z",
     "imo": "9853216",
     "nextDestination": null,
     "id": 103986,
     "isBunker": false,
     "mmsi": "563250300",
     "lastRawAisSignals": {
-      "eta": "2026-03-25T06:05:00",
+      "eta": "2026-03-25T06:10:00",
       "sourceType": "AIS",
       "rawDestination": "CL PUQ"
     },
@@ -2995,15 +2995,15 @@
         "volume_gas": 53864,
         "energy": 1375794.2580001042
       },
-      "course": 348,
+      "course": 275,
       "geo": {
-        "lon": -70.797066,
-        "lat": -52.928555
+        "lon": -70.867142,
+        "lat": -53.170341
       },
       "draught": 12.6,
       "draughtComputed": 12.6,
-      "id": 83455425904,
-      "receivedTime": "2026-04-02T19:18:07",
+      "id": 83455486763,
+      "receivedTime": "2026-04-02T21:37:38",
       "vesselId": 103986,
       "currentCargo": {
         "loaded": true,
@@ -3068,12 +3068,12 @@
         ]
       },
       "draughtChange": null,
-      "speed": 0.5
+      "speed": 0.4
     },
     "portCallInfo": {
       "lastPortCall": {
         "start": "2026-04-02T05:34:58",
-        "end": null
+        "end": "2026-04-02T19:36:17"
       }
     },
     "deadWeight": 49770,
@@ -3138,7 +3138,7 @@
     "isFloatingStorage": false,
     "flagName": "Singapore",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:09:15Z",
+    "timestamp": "2026-04-02T22:54:07Z",
     "imo": "9853228",
     "nextDestination": {
       "source": "AIS",
@@ -3173,15 +3173,15 @@
         "volume_gas": 53864,
         "energy": 1375794.2580001042
       },
-      "course": 322,
+      "course": 320,
       "geo": {
-        "lon": 6.56944,
-        "lat": -21.516233
+        "lon": 6.009615,
+        "lat": -20.821846
       },
       "draught": 11.7,
       "draughtComputed": 11.7,
-      "id": 83455402035,
-      "receivedTime": "2026-04-02T18:36:09",
+      "id": 83455504630,
+      "receivedTime": "2026-04-02T22:16:19",
       "vesselId": 103988,
       "currentCargo": {
         "loaded": true,
@@ -3249,7 +3249,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 14.1
+      "speed": 14
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -3319,7 +3319,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:09:15Z",
+    "timestamp": "2026-04-02T22:54:07Z",
     "imo": "9853230",
     "nextDestination": {
       "source": "AIS",
@@ -3354,15 +3354,15 @@
         "volume_gas": 49914,
         "energy": 1274903.3602000817
       },
-      "course": 137,
+      "course": 140,
       "geo": {
-        "lon": -11.294897,
-        "lat": -0.896993
+        "lon": -10.677711,
+        "lat": -1.641287
       },
       "draught": 12.6,
       "draughtComputed": 12.6,
-      "id": 83455382562,
-      "receivedTime": "2026-04-02T17:43:12",
+      "id": 83455503566,
+      "receivedTime": "2026-04-02T22:10:51",
       "vesselId": 103990,
       "currentCargo": {
         "loaded": true,
@@ -3430,7 +3430,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 12.7
+      "speed": 13.1
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -3500,7 +3500,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:09:15Z",
+    "timestamp": "2026-04-02T22:54:07Z",
     "imo": "9853242",
     "nextDestination": {
       "source": "AIS",
@@ -3535,15 +3535,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 256,
+      "course": 258,
       "geo": {
-        "lon": -13.082733,
-        "lat": 35.845428
+        "lon": -14.158502,
+        "lat": 35.665154
       },
       "draught": 8.5,
       "draughtComputed": 8.5,
-      "id": 83455408684,
-      "receivedTime": "2026-04-02T18:38:52",
+      "id": 83455509034,
+      "receivedTime": "2026-04-02T22:19:21",
       "vesselId": 103992,
       "currentCargo": {
         "loaded": false,
@@ -3584,7 +3584,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 14.4
+      "speed": 14.7
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -3654,7 +3654,7 @@
     "isFloatingStorage": false,
     "flagName": "Marshall Islands",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:09:15Z",
+    "timestamp": "2026-04-02T22:54:07Z",
     "imo": "9853266",
     "nextDestination": {
       "source": "AIS",
@@ -3691,13 +3691,13 @@
       },
       "course": 88,
       "geo": {
-        "lon": -136.827881,
-        "lat": 46.957039
+        "lon": -135.815292,
+        "lat": 46.967682
       },
       "draught": 8.6,
       "draughtComputed": 8.6,
-      "id": 83455404982,
-      "receivedTime": "2026-04-02T18:38:11",
+      "id": 83455507233,
+      "receivedTime": "2026-04-02T22:18:19",
       "vesselId": 103996,
       "currentCargo": {
         "loaded": false,
@@ -3732,7 +3732,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 11.7
+      "speed": 11.2
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -3802,13 +3802,13 @@
     "isFloatingStorage": false,
     "flagName": "Marshall Islands",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:09:15Z",
+    "timestamp": "2026-04-02T22:54:07Z",
     "imo": "9853278",
     "nextDestination": {
       "source": "AIS",
       "id": 388971988,
       "installation": null,
-      "eta": "2026-04-02T21:00:06.543658",
+      "eta": "2026-04-05T21:00:08.917225",
       "zone": {
         "name": "Dangote",
         "fullname": "Dangote",
@@ -3837,15 +3837,15 @@
         "volume_gas": 119133,
         "energy": 3042895.019648121
       },
-      "course": 14,
+      "course": 182,
       "geo": {
-        "lon": 3.968453,
-        "lat": 6.292193
+        "lon": 3.968393,
+        "lat": 6.291665
       },
       "draught": 9.1,
       "draughtComputed": 9.1,
-      "id": 83455401369,
-      "receivedTime": "2026-04-02T18:29:09",
+      "id": 83455493664,
+      "receivedTime": "2026-04-02T21:49:28",
       "vesselId": 103998,
       "currentCargo": {
         "loaded": true,
@@ -3953,7 +3953,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:12:06Z",
+    "timestamp": "2026-04-02T22:54:08Z",
     "imo": "9854507",
     "nextDestination": {
       "source": "AIS",
@@ -3988,15 +3988,15 @@
         "volume_gas": 329462,
         "energy": 8415118.220504053
       },
-      "course": 50,
+      "course": 51,
       "geo": {
-        "lon": 108.029999,
-        "lat": -4.925
+        "lon": 108.591408,
+        "lat": -4.498168
       },
       "draught": 20.5,
       "draughtComputed": 20.5,
-      "id": 83455403468,
-      "receivedTime": "2026-04-02T18:36:12",
+      "id": 83455502654,
+      "receivedTime": "2026-04-02T22:07:13",
       "vesselId": 104066,
       "currentCargo": {
         "loaded": true,
@@ -4037,7 +4037,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 12
+      "speed": 12.3
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -4107,7 +4107,7 @@
     "isFloatingStorage": false,
     "flagName": "Marshall Islands",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:09:17Z",
+    "timestamp": "2026-04-02T22:52:17Z",
     "imo": "9855496",
     "nextDestination": {
       "source": "Port",
@@ -4142,15 +4142,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 100,
+      "course": 92,
       "geo": {
-        "lon": -105.994621,
-        "lat": -53.921638
+        "lon": -104.328674,
+        "lat": -54.038288
       },
       "draught": 9,
       "draughtComputed": 9,
-      "id": 83455394972,
-      "receivedTime": "2026-04-02T18:16:18",
+      "id": 83455506043,
+      "receivedTime": "2026-04-02T22:17:24",
       "vesselId": 104134,
       "currentCargo": {
         "loaded": false,
@@ -4188,7 +4188,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 14.5
+      "speed": 14.7
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -4258,7 +4258,7 @@
     "isFloatingStorage": true,
     "flagName": "United Arab Emirates",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:11:27Z",
+    "timestamp": "2026-04-02T22:40:27Z",
     "imo": "9034236",
     "nextDestination": null,
     "id": 114338,
@@ -4395,7 +4395,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:05:34Z",
+    "timestamp": "2026-04-02T22:51:01Z",
     "imo": "9902615",
     "nextDestination": {
       "source": "AIS",
@@ -4430,15 +4430,15 @@
         "volume_gas": 286177,
         "energy": 7309532.774611908
       },
-      "course": 82,
+      "course": 83,
       "geo": {
-        "lon": 94.034271,
-        "lat": 6.055192
+        "lon": 94.744583,
+        "lat": 6.120242
       },
       "draught": 19.7,
       "draughtComputed": 19.7,
-      "id": 83455401825,
-      "receivedTime": "2026-04-02T18:35:22",
+      "id": 83455503375,
+      "receivedTime": "2026-04-02T22:15:24",
       "vesselId": 116468,
       "currentCargo": {
         "loaded": true,
@@ -4476,7 +4476,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 11.1
+      "speed": 12.3
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -4546,7 +4546,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:57:49Z",
+    "timestamp": "2026-04-02T22:46:45Z",
     "imo": "9916812",
     "nextDestination": null,
     "id": 116969,
@@ -4572,13 +4572,13 @@
       },
       "course": 62,
       "geo": {
-        "lon": 74.810715,
-        "lat": 12.922767
+        "lon": 74.810692,
+        "lat": 12.92278
       },
       "draught": 8.5,
       "draughtComputed": 8.5,
-      "id": 2540586070,
-      "receivedTime": "2026-04-02T19:36:12",
+      "id": 2540596766,
+      "receivedTime": "2026-04-02T22:15:26",
       "vesselId": 116969,
       "currentCargo": {
         "loaded": false,
@@ -4698,7 +4698,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:47:24Z",
+    "timestamp": "2026-04-02T22:46:45Z",
     "imo": "9916836",
     "nextDestination": {
       "source": "AIS",
@@ -4738,15 +4738,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 30,
+      "course": 33,
       "geo": {
-        "lon": 65.933304,
-        "lat": 21.195494
+        "lon": 65.998398,
+        "lat": 21.290909
       },
       "draught": 8.3,
       "draughtComputed": 8.3,
-      "id": 2540585302,
-      "receivedTime": "2026-04-02T19:15:57",
+      "id": 2540595811,
+      "receivedTime": "2026-04-02T22:15:02",
       "vesselId": 116970,
       "currentCargo": {
         "loaded": false,
@@ -4796,7 +4796,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 2.5
+      "speed": 2.2
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -4858,7 +4858,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:47:24Z",
+    "timestamp": "2026-04-02T22:46:45Z",
     "imo": "9916824",
     "nextDestination": {
       "source": "AIS",
@@ -4893,15 +4893,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 306,
+      "course": 308,
       "geo": {
-        "lon": -28.547487,
-        "lat": -9.889977
+        "lon": -29.162661,
+        "lat": -9.437384
       },
       "draught": 8.9,
       "draughtComputed": 8.9,
-      "id": 2540584607,
-      "receivedTime": "2026-04-02T19:12:45",
+      "id": 2540596564,
+      "receivedTime": "2026-04-02T22:18:36",
       "vesselId": 116974,
       "currentCargo": {
         "loaded": false,
@@ -4951,7 +4951,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 14.8
+      "speed": 14.5
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -5013,7 +5013,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:47:24Z",
+    "timestamp": "2026-04-02T22:46:46Z",
     "imo": "9923085",
     "nextDestination": {
       "source": "Port",
@@ -5024,7 +5024,7 @@
         "id": 4515,
         "resourceType": "installation"
       },
-      "eta": "2026-04-04T09:41:27.101079",
+      "eta": "2026-04-04T21:00:06.580259",
       "zone": {
         "name": "Karachi",
         "fullname": "Karachi",
@@ -5100,7 +5100,15 @@
     },
     "deadWeight": 54000,
     "beta": false,
-    "vesselController": null,
+    "vesselController": {
+      "default": {
+        "name": "Aramco",
+        "resourceType": "player",
+        "country": "Saudi Arabia",
+        "id": 1923,
+        "fullname": "Saudi Aramco"
+      }
+    },
     "engineMetrics": {
       "horsePower": 17043,
       "powerPlantType": null,
@@ -5152,7 +5160,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:47:24Z",
+    "timestamp": "2026-04-02T22:46:46Z",
     "imo": "9923097",
     "nextDestination": {
       "source": "AIS",
@@ -5163,7 +5171,7 @@
         "id": 1662,
         "resourceType": "installation"
       },
-      "eta": "2026-04-04T09:41:27.101079",
+      "eta": "2026-04-04T21:00:06.580259",
       "zone": {
         "name": "Ras Laffan",
         "fullname": "Ras Laffan",
@@ -5291,7 +5299,7 @@
     "isFloatingStorage": false,
     "flagName": "Marshall Islands",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:55:10Z",
+    "timestamp": "2026-04-02T22:54:00Z",
     "imo": "9935301",
     "nextDestination": {
       "source": "AIS",
@@ -5439,7 +5447,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:08:46Z",
+    "timestamp": "2026-04-02T22:38:20Z",
     "imo": "9928011",
     "nextDestination": null,
     "id": 118232,
@@ -5463,15 +5471,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 300,
+      "course": 299,
       "geo": {
-        "lon": -4.232227,
-        "lat": -23.467875
+        "lon": -4.78294,
+        "lat": -23.175421
       },
       "draught": 11,
       "draughtComputed": 11,
-      "id": 83455434540,
-      "receivedTime": "2026-04-02T19:38:35",
+      "id": 83455509535,
+      "receivedTime": "2026-04-02T22:19:28",
       "vesselId": 118232,
       "currentCargo": {
         "loaded": false,
@@ -5539,7 +5547,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 13.3
+      "speed": 12.9
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -5609,7 +5617,7 @@
     "isFloatingStorage": false,
     "flagName": "Marshall Islands",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:08:46Z",
+    "timestamp": "2026-04-02T22:38:20Z",
     "imo": "9947378",
     "nextDestination": {
       "source": "AIS",
@@ -5644,15 +5652,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 350,
+      "course": 31,
       "geo": {
-        "lon": -94.544403,
-        "lat": 29.183228
+        "lon": -94.544418,
+        "lat": 29.182764
       },
       "draught": 9.1,
       "draughtComputed": 9.1,
-      "id": 83455435006,
-      "receivedTime": "2026-04-02T19:38:42",
+      "id": 83455505663,
+      "receivedTime": "2026-04-02T22:17:43",
       "vesselId": 118241,
       "currentCargo": {
         "loaded": false,
@@ -5760,7 +5768,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:08:46Z",
+    "timestamp": "2026-04-02T22:38:20Z",
     "imo": "9928023",
     "nextDestination": {
       "source": "AIS",
@@ -5795,15 +5803,15 @@
         "volume_gas": 302076,
         "energy": 7715625.023756859
       },
-      "course": 120,
+      "course": 121,
       "geo": {
-        "lon": -37.107128,
-        "lat": -1.191545
+        "lon": -36.634914,
+        "lat": -1.49018
       },
       "draught": 21.7,
       "draughtComputed": 21.7,
-      "id": 83455434741,
-      "receivedTime": "2026-04-02T19:38:58",
+      "id": 83455504882,
+      "receivedTime": "2026-04-02T22:16:16",
       "vesselId": 118258,
       "currentCargo": {
         "loaded": true,
@@ -5841,7 +5849,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 12.7
+      "speed": 12.5
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -5887,7 +5895,7 @@
   {
     "vesselTypeClass": "Aframax/LR2",
     "name": "Navig8 Pride Lhj",
-    "state": "loaded",
+    "state": "ballast",
     "resourceType": "vessel",
     "callSign": "9VDW9",
     "build": {
@@ -5911,17 +5919,17 @@
     "isFloatingStorage": false,
     "flagName": "Singapore",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:08:47Z",
+    "timestamp": "2026-04-02T22:36:26Z",
     "imo": "9947366",
     "nextDestination": {
-      "source": "Port",
-      "id": 389022581,
+      "source": "AIS",
+      "id": 389107009,
       "installation": null,
-      "eta": "2026-04-04T15:00:08.210492",
+      "eta": "2026-04-05T09:41:33.759462",
       "zone": {
-        "name": "Fos",
-        "fullname": "Fos",
-        "id": 1069,
+        "name": "PADD 3",
+        "fullname": "PADD 3",
+        "id": 697,
         "resourceType": "zone"
       }
     },
@@ -5931,7 +5939,7 @@
     "lastRawAisSignals": {
       "eta": "2026-03-30T06:00:00",
       "sourceType": "AIS",
-      "rawDestination": "AUGUSTA FOR ORDERS"
+      "rawDestination": "USG FOR ORDERS"
     },
     "commodityTypes": [
       "liquids"
@@ -5941,23 +5949,23 @@
     "isAsphaltBitumenCapable": false,
     "lastPosition": {
       "quantity": {
-        "volume": 56122,
-        "mass": 45571.064,
-        "volume_gas": 56122,
-        "energy": 1433468.0927424969
+        "volume": 0,
+        "mass": 0,
+        "volume_gas": 0,
+        "energy": 0
       },
       "course": 156,
       "geo": {
-        "lon": 15.203941,
-        "lat": 37.187553
+        "lon": 15.203943,
+        "lat": 37.187531
       },
-      "draught": 13.6,
-      "draughtComputed": 13.6,
-      "id": 83455431254,
-      "receivedTime": "2026-04-02T19:37:13",
+      "draught": 9,
+      "draughtComputed": 9,
+      "id": 83455509115,
+      "receivedTime": "2026-04-02T22:19:25",
       "vesselId": 118279,
       "currentCargo": {
-        "loaded": true,
+        "loaded": false,
         "products": [
           {
             "name": "WTI midland",
@@ -6065,7 +6073,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:08:51Z",
+    "timestamp": "2026-04-02T22:38:24Z",
     "imo": "9937799",
     "nextDestination": {
       "source": "AIS",
@@ -6216,7 +6224,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:08:52Z",
+    "timestamp": "2026-04-02T22:38:25Z",
     "imo": "9928009",
     "nextDestination": {
       "source": "Fixture",
@@ -6364,7 +6372,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:11:10Z",
+    "timestamp": "2026-04-02T22:50:42Z",
     "imo": "9965423",
     "nextDestination": {
       "source": "AIS",
@@ -6404,15 +6412,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 205,
+      "course": 202,
       "geo": {
-        "lon": 111.589737,
-        "lat": 12.65371
+        "lon": 111.245323,
+        "lat": 12.011613
       },
       "draught": 9.9,
       "draughtComputed": 9.9,
-      "id": 1265903321,
-      "receivedTime": "2026-04-02T19:35:18",
+      "id": 1265908760,
+      "receivedTime": "2026-04-02T22:16:18",
       "vesselId": 119080,
       "currentCargo": {
         "loaded": false,
@@ -6502,7 +6510,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:11:10Z",
+    "timestamp": "2026-04-02T22:51:09Z",
     "imo": "9965435",
     "nextDestination": {
       "source": "AIS",
@@ -6542,15 +6550,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 283,
+      "course": 269,
       "geo": {
-        "lon": 41.630428,
-        "lat": -10.919478
+        "lon": 41.604412,
+        "lat": -10.915415
       },
       "draught": 9.7,
       "draughtComputed": 9.7,
-      "id": 1265903555,
-      "receivedTime": "2026-04-02T19:37:46",
+      "id": 1265909067,
+      "receivedTime": "2026-04-02T22:14:21",
       "vesselId": 119081,
       "currentCargo": {
         "loaded": false,
@@ -6570,7 +6578,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 0.5
+      "speed": 0.7
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -6640,7 +6648,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:11:19Z",
+    "timestamp": "2026-04-02T22:54:26Z",
     "imo": "9972945",
     "nextDestination": {
       "source": "AIS",
@@ -6680,15 +6688,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 295,
+      "course": 294,
       "geo": {
-        "lon": 66.031776,
-        "lat": 21.364372
+        "lon": 65.765953,
+        "lat": 21.474262
       },
       "draught": 9.6,
       "draughtComputed": 9.6,
-      "id": 1265903489,
-      "receivedTime": "2026-04-02T19:32:32",
+      "id": 1265906539,
+      "receivedTime": "2026-04-02T20:58:43",
       "vesselId": 119877,
       "currentCargo": {
         "loaded": false,
@@ -6708,7 +6716,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 11.3
+      "speed": 11.2
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -6778,7 +6786,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:10:53Z",
+    "timestamp": "2026-04-02T22:54:34Z",
     "imo": "9972957",
     "nextDestination": {
       "source": "Port",
@@ -6818,15 +6826,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 57,
+      "course": 58,
       "geo": {
-        "lon": 166.757446,
-        "lat": 41.951141
+        "lon": 167.500793,
+        "lat": 42.297836
       },
       "draught": 9.7,
       "draughtComputed": 9.7,
-      "id": 1265903183,
-      "receivedTime": "2026-04-02T19:38:00",
+      "id": 1265909564,
+      "receivedTime": "2026-04-02T22:36:28",
       "vesselId": 119878,
       "currentCargo": {
         "loaded": false,
@@ -6846,7 +6854,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 13
+      "speed": 13.4
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -6916,7 +6924,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:10:55Z",
+    "timestamp": "2026-04-02T22:41:18Z",
     "imo": "9972969",
     "nextDestination": null,
     "id": 119879,
@@ -6940,22 +6948,22 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 319,
+      "course": 296,
       "geo": {
-        "lon": 113.212334,
-        "lat": 21.665083
+        "lon": 113.184677,
+        "lat": 21.706751
       },
       "draught": 8.4,
       "draughtComputed": 8.4,
-      "id": 1265903212,
-      "receivedTime": "2026-04-02T19:39:22",
+      "id": 1265909280,
+      "receivedTime": "2026-04-02T22:17:43",
       "vesselId": 119879,
       "currentCargo": {
         "loaded": false,
         "products": []
       },
       "draughtChange": null,
-      "speed": 9.7
+      "speed": 0
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -7017,7 +7025,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:11:19Z",
+    "timestamp": "2026-04-02T22:41:18Z",
     "imo": "9972971",
     "nextDestination": null,
     "id": 119880,
@@ -7118,7 +7126,7 @@
     "isFloatingStorage": false,
     "flagName": "Singapore",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:08:58Z",
+    "timestamp": "2026-04-02T22:38:30Z",
     "imo": "9973901",
     "nextDestination": {
       "source": "AIS",
@@ -7153,15 +7161,15 @@
         "volume_gas": 54177,
         "energy": 1383788.9038257767
       },
-      "course": 267,
+      "course": 256,
       "geo": {
-        "lon": 25.998104,
-        "lat": -34.373589
+        "lon": 25.329704,
+        "lat": -34.515121
       },
       "draught": 13.3,
       "draughtComputed": 13.3,
-      "id": 83455436726,
-      "receivedTime": "2026-04-02T19:39:24",
+      "id": 83455511364,
+      "receivedTime": "2026-04-02T22:19:45",
       "vesselId": 119894,
       "currentCargo": {
         "loaded": true,
@@ -7196,7 +7204,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 12.9
+      "speed": 12.3
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -7258,7 +7266,7 @@
     "isFloatingStorage": true,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:08:58Z",
+    "timestamp": "2026-04-02T22:38:30Z",
     "imo": "9973913",
     "nextDestination": null,
     "id": 119895,
@@ -7395,7 +7403,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:08:58Z",
+    "timestamp": "2026-04-02T22:38:30Z",
     "imo": "9973925",
     "nextDestination": {
       "source": "AIS",
@@ -7430,15 +7438,15 @@
         "volume_gas": 41600,
         "energy": 1062547.1768306165
       },
-      "course": 81,
+      "course": 80,
       "geo": {
-        "lon": 4.512715,
-        "lat": 37.275345
+        "lon": 5.174918,
+        "lat": 37.362114
       },
       "draught": 12.6,
       "draughtComputed": 12.6,
-      "id": 83455428534,
-      "receivedTime": "2026-04-02T19:36:48",
+      "id": 83455503098,
+      "receivedTime": "2026-04-02T22:12:41",
       "vesselId": 119896,
       "currentCargo": {
         "loaded": true,
@@ -7473,7 +7481,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 12.2
+      "speed": 12.1
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -7519,7 +7527,7 @@
   {
     "vesselTypeClass": "MR",
     "name": "Navig8 Executive",
-    "state": "loaded",
+    "state": "ballast",
     "resourceType": "vessel",
     "callSign": "9VDQ9",
     "build": {
@@ -7543,17 +7551,17 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:08:58Z",
+    "timestamp": "2026-04-02T22:38:30Z",
     "imo": "9973937",
     "nextDestination": {
       "source": "AIS",
-      "id": 388367922,
+      "id": 388308389,
       "installation": null,
-      "eta": "2026-04-02T18:30:00",
+      "eta": "2026-04-03T08:00:00",
       "zone": {
-        "name": "Las Palmas",
-        "fullname": "Las Palmas",
-        "id": 2529,
+        "name": "Spain",
+        "fullname": "Spain",
+        "id": 877,
         "resourceType": "zone"
       }
     },
@@ -7573,24 +7581,51 @@
     "isAsphaltBitumenCapable": false,
     "lastPosition": {
       "quantity": {
-        "volume": 54032,
-        "mass": 46322.94,
-        "volume_gas": 54032,
-        "energy": 1380085.3139065355
+        "volume": 0,
+        "mass": 0,
+        "volume_gas": 0,
+        "energy": 0
       },
-      "course": 297,
+      "course": 22,
       "geo": {
-        "lon": -15.353329,
-        "lat": 28.104494
+        "lon": -15.414207,
+        "lat": 28.142294
       },
       "draught": 12.3,
       "draughtComputed": 12.3,
-      "id": 83455436008,
-      "receivedTime": "2026-04-02T19:39:21",
+      "id": 83455505454,
+      "receivedTime": "2026-04-02T22:17:04",
       "vesselId": 119897,
       "currentCargo": {
-        "loaded": true,
+        "loaded": false,
         "products": [
+          {
+            "name": "Styrene",
+            "id": 2473,
+            "ancestors": [
+              {
+                "id": 2473
+              },
+              {
+                "id": 1866
+              },
+              {
+                "id": 1312
+              },
+              {
+                "id": 1920
+              },
+              {
+                "id": 1362
+              },
+              {
+                "id": 1746
+              },
+              {
+                "id": 2447
+              }
+            ]
+          },
           {
             "name": "Used Cooking Oil",
             "id": 2619,
@@ -7617,16 +7652,70 @@
                 "id": 2447
               }
             ]
+          },
+          {
+            "name": "Biodiesel (FAME)",
+            "id": 1220,
+            "ancestors": [
+              {
+                "id": 1220
+              },
+              {
+                "id": 1222
+              },
+              {
+                "id": 2372
+              },
+              {
+                "id": 1920
+              },
+              {
+                "id": 1362
+              },
+              {
+                "id": 1746
+              },
+              {
+                "id": 2447
+              }
+            ]
+          },
+          {
+            "name": "Renewable Diesel",
+            "id": 2100,
+            "ancestors": [
+              {
+                "id": 2100
+              },
+              {
+                "id": 1222
+              },
+              {
+                "id": 2372
+              },
+              {
+                "id": 1920
+              },
+              {
+                "id": 1362
+              },
+              {
+                "id": 1746
+              },
+              {
+                "id": 2447
+              }
+            ]
           }
         ]
       },
       "draughtChange": null,
-      "speed": 7.4
+      "speed": 0
     },
     "portCallInfo": {
       "lastPortCall": {
-        "start": "2026-03-19T10:37:19",
-        "end": "2026-03-19T10:37:19"
+        "start": "2026-04-02T20:38:53",
+        "end": null
       }
     },
     "deadWeight": 49143,
@@ -7683,7 +7772,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:08:59Z",
+    "timestamp": "2026-04-02T22:38:31Z",
     "imo": "9976874",
     "nextDestination": null,
     "id": 119932,
@@ -7709,13 +7798,13 @@
       },
       "course": 29,
       "geo": {
-        "lon": 31.03208,
-        "lat": -29.885347
+        "lon": 31.03212,
+        "lat": -29.88537
       },
       "draught": 11.6,
       "draughtComputed": 11.6,
-      "id": 83455437108,
-      "receivedTime": "2026-04-02T19:39:31",
+      "id": 83455506916,
+      "receivedTime": "2026-04-02T22:18:26",
       "vesselId": 119932,
       "currentCargo": {
         "loaded": false,
@@ -7815,7 +7904,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:08:59Z",
+    "timestamp": "2026-04-02T22:38:31Z",
     "imo": "9976886",
     "nextDestination": {
       "source": "AIS",
@@ -7852,13 +7941,13 @@
       },
       "course": 321,
       "geo": {
-        "lon": 12.859022,
-        "lat": -29.068506
+        "lon": 12.448125,
+        "lat": -28.606167
       },
       "draught": 12.6,
       "draughtComputed": 12.6,
-      "id": 83455437468,
-      "receivedTime": "2026-04-02T19:39:28",
+      "id": 83455511090,
+      "receivedTime": "2026-04-02T22:19:46",
       "vesselId": 119933,
       "currentCargo": {
         "loaded": true,
@@ -7920,7 +8009,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 13.1
+      "speed": 12.9
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -7990,7 +8079,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:47:30Z",
+    "timestamp": "2026-04-02T22:46:51Z",
     "imo": "1013834",
     "nextDestination": {
       "source": "AIS",
@@ -8030,15 +8119,15 @@
         "volume_gas": 149197.95,
         "energy": 2490728.075688403
       },
-      "course": 264,
+      "course": 268,
       "geo": {
-        "lon": 150.119797,
-        "lat": 34.175282
+        "lon": 149.297287,
+        "lat": 34.095219
       },
       "draught": 12.8,
       "draughtComputed": 12.8,
-      "id": 2540584455,
-      "receivedTime": "2026-04-02T19:12:58",
+      "id": 2540596441,
+      "receivedTime": "2026-04-02T22:15:20",
       "vesselId": 120434,
       "currentCargo": {
         "loaded": true,
@@ -8064,7 +8153,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 13.5
+      "speed": 13.3
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -8134,7 +8223,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:47:30Z",
+    "timestamp": "2026-04-02T22:46:51Z",
     "imo": "1013846",
     "nextDestination": null,
     "id": 120435,
@@ -8158,15 +8247,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 90,
+      "course": 87,
       "geo": {
-        "lon": 178.418015,
-        "lat": 36.442905
+        "lon": 179.366074,
+        "lat": 36.439625
       },
       "draught": 9,
       "draughtComputed": 9,
-      "id": 2540585291,
-      "receivedTime": "2026-04-02T19:18:21",
+      "id": 2540596210,
+      "receivedTime": "2026-04-02T22:18:09",
       "vesselId": 120435,
       "currentCargo": {
         "loaded": false,
@@ -8192,7 +8281,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 15.2
+      "speed": 15.4
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -8262,7 +8351,7 @@
     "isFloatingStorage": false,
     "flagName": "Panama",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:00:31Z",
+    "timestamp": "2026-04-02T22:24:11Z",
     "imo": "1024443",
     "nextDestination": {
       "source": "AIS",
@@ -8299,13 +8388,13 @@
       },
       "course": 58,
       "geo": {
-        "lon": 88.271362,
-        "lat": 1.808127
+        "lon": 89.088333,
+        "lat": 2.316667
       },
       "draught": 13.6,
       "draughtComputed": 13.6,
-      "id": 73846019495,
-      "receivedTime": "2026-04-02T15:57:15",
+      "id": 73846233369,
+      "receivedTime": "2026-04-02T21:14:27",
       "vesselId": 120694,
       "currentCargo": {
         "loaded": true,
@@ -8407,7 +8496,7 @@
     "isFloatingStorage": false,
     "flagName": null,
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:47:34Z",
+    "timestamp": "2026-04-02T22:46:56Z",
     "imo": "1066908",
     "nextDestination": null,
     "id": 124197,
@@ -8486,7 +8575,7 @@
     "isFloatingStorage": false,
     "flagName": null,
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:47:34Z",
+    "timestamp": "2026-04-02T22:46:56Z",
     "imo": "1066910",
     "nextDestination": null,
     "id": 124198,
@@ -8557,7 +8646,7 @@
     "isFloatingStorage": false,
     "flagName": "Panama",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:38:00Z",
+    "timestamp": "2026-04-02T22:06:24Z",
     "imo": "1036056",
     "nextDestination": null,
     "id": 125317,
@@ -8583,13 +8672,13 @@
       },
       "course": 242,
       "geo": {
-        "lon": 25.687134,
+        "lon": 25.68716,
         "lat": -33.806988
       },
       "draught": 6.9,
       "draughtComputed": 6.9,
-      "id": 73846150634,
-      "receivedTime": "2026-04-02T19:17:22",
+      "id": 73846240407,
+      "receivedTime": "2026-04-02T21:38:24",
       "vesselId": 125317,
       "currentCargo": {
         "loaded": true,
@@ -8688,7 +8777,7 @@
     "isFloatingStorage": false,
     "flagName": "Singapore",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:47:38Z",
+    "timestamp": "2026-04-02T22:47:00Z",
     "imo": "1079008",
     "nextDestination": null,
     "id": 127466,
@@ -8764,7 +8853,7 @@
     "isFloatingStorage": false,
     "flagName": "Singapore",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:47:38Z",
+    "timestamp": "2026-04-02T22:47:00Z",
     "imo": "1079022",
     "nextDestination": null,
     "id": 127467,
@@ -8840,7 +8929,7 @@
     "isFloatingStorage": false,
     "flagName": "Singapore",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:47:38Z",
+    "timestamp": "2026-04-02T22:47:00Z",
     "imo": "1079034",
     "nextDestination": null,
     "id": 127468,
@@ -8916,7 +9005,7 @@
     "isFloatingStorage": false,
     "flagName": "Singapore",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:47:38Z",
+    "timestamp": "2026-04-02T22:47:00Z",
     "imo": "1079046",
     "nextDestination": null,
     "id": 127469,
@@ -8992,7 +9081,7 @@
     "isFloatingStorage": false,
     "flagName": "Singapore",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:47:38Z",
+    "timestamp": "2026-04-02T22:47:00Z",
     "imo": "1079096",
     "nextDestination": null,
     "id": 127470,
@@ -9068,7 +9157,7 @@
     "isFloatingStorage": false,
     "flagName": "Singapore",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:47:38Z",
+    "timestamp": "2026-04-02T22:47:00Z",
     "imo": "1079137",
     "nextDestination": null,
     "id": 127471,
@@ -9144,7 +9233,7 @@
     "isFloatingStorage": false,
     "flagName": "Singapore",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:47:38Z",
+    "timestamp": "2026-04-02T22:47:00Z",
     "imo": "1079149",
     "nextDestination": null,
     "id": 127472,
@@ -9223,7 +9312,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:09:48Z",
+    "timestamp": "2026-04-02T22:50:59Z",
     "imo": "9035852",
     "nextDestination": {
       "source": "AIS",
@@ -9356,7 +9445,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:09:48Z",
+    "timestamp": "2026-04-02T22:55:33Z",
     "imo": "9035864",
     "nextDestination": null,
     "id": 64325,
@@ -9380,15 +9469,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 228,
+      "course": 196,
       "geo": {
         "lon": 121.082657,
-        "lat": 13.620156
+        "lat": 13.620152
       },
       "draught": 11,
       "draughtComputed": 11,
-      "id": 1265903053,
-      "receivedTime": "2026-04-02T19:33:56",
+      "id": 1265910054,
+      "receivedTime": "2026-04-02T22:37:38",
       "vesselId": 64325,
       "currentCargo": {
         "loaded": false,
@@ -9478,7 +9567,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:09:49Z",
+    "timestamp": "2026-04-02T22:39:49Z",
     "imo": "9074626",
     "nextDestination": null,
     "id": 65123,
@@ -9600,7 +9689,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:09:49Z",
+    "timestamp": "2026-04-02T22:39:49Z",
     "imo": "9074640",
     "nextDestination": null,
     "id": 65127,
@@ -9624,15 +9713,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 197,
+      "course": 189,
       "geo": {
-        "lon": 68.016479,
-        "lat": 17.890779
+        "lon": 68.005737,
+        "lat": 17.86245
       },
       "draught": 9.9,
       "draughtComputed": 9.9,
-      "id": 1265903083,
-      "receivedTime": "2026-04-02T19:35:37",
+      "id": 1265908804,
+      "receivedTime": "2026-04-02T22:15:30",
       "vesselId": 65127,
       "currentCargo": {
         "loaded": false,
@@ -9652,7 +9741,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 0.5
+      "speed": 1
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -9722,7 +9811,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:09:49Z",
+    "timestamp": "2026-04-02T22:39:49Z",
     "imo": "9074652",
     "nextDestination": null,
     "id": 65129,
@@ -9748,13 +9837,13 @@
       },
       "course": 282,
       "geo": {
-        "lon": 66.608757,
-        "lat": 21.635332
+        "lon": 66.483383,
+        "lat": 21.663734
       },
       "draught": 9.7,
       "draughtComputed": 9.7,
-      "id": 1265903051,
-      "receivedTime": "2026-04-02T19:37:57",
+      "id": 1265909288,
+      "receivedTime": "2026-04-02T22:17:57",
       "vesselId": 65129,
       "currentCargo": {
         "loaded": false,
@@ -9774,7 +9863,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 2.5
+      "speed": 3.2
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -9844,7 +9933,7 @@
     "isFloatingStorage": false,
     "flagName": "United Arab Emirates",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:08:07Z",
+    "timestamp": "2026-04-02T22:50:29Z",
     "imo": "9380324",
     "nextDestination": null,
     "id": 78761,
@@ -9975,7 +10064,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:51:01Z",
+    "timestamp": "2026-04-02T22:43:37Z",
     "imo": "9393682",
     "nextDestination": {
       "source": "Port",
@@ -10015,15 +10104,15 @@
         "volume_gas": 85190.61000000002,
         "energy": 2107444.8320460897
       },
-      "course": 21,
+      "course": 74,
       "geo": {
-        "lon": 68.832016,
-        "lat": 22.353966
+        "lon": 69.373268,
+        "lat": 22.593733
       },
       "draught": 11.5,
       "draughtComputed": 11.5,
-      "id": 2540585129,
-      "receivedTime": "2026-04-02T19:16:26",
+      "id": 2540596363,
+      "receivedTime": "2026-04-02T22:19:45",
       "vesselId": 79531,
       "currentCargo": {
         "loaded": true,
@@ -10073,7 +10162,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 13.5
+      "speed": 12.2
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -10143,7 +10232,7 @@
     "isFloatingStorage": true,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:32:32Z",
+    "timestamp": "2026-04-02T23:01:41Z",
     "imo": "9482847",
     "nextDestination": null,
     "id": 84780,
@@ -10167,15 +10256,15 @@
         "volume_gas": 56755,
         "energy": 1449636.1783899434
       },
-      "course": 18,
+      "course": 320,
       "geo": {
-        "lon": 104.286789,
-        "lat": 1.3348
+        "lon": 104.287102,
+        "lat": 1.333867
       },
       "draught": 13,
       "draughtComputed": 13,
-      "id": 83455414655,
-      "receivedTime": "2026-04-02T18:57:09",
+      "id": 83455512850,
+      "receivedTime": "2026-04-02T22:36:09",
       "vesselId": 84780,
       "currentCargo": {
         "loaded": true,
@@ -10271,7 +10360,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:05:03Z",
+    "timestamp": "2026-04-02T23:01:41Z",
     "imo": "9482859",
     "nextDestination": {
       "source": "AIS",
@@ -10306,15 +10395,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 282,
+      "course": 296,
       "geo": {
-        "lon": 5.260667,
-        "lat": -30.00275
+        "lon": 4.4943,
+        "lat": -29.833567
       },
       "draught": 8.8,
       "draughtComputed": 8.8,
-      "id": 83455434173,
-      "receivedTime": "2026-04-02T19:38:09",
+      "id": 83455514487,
+      "receivedTime": "2026-04-02T22:37:14",
       "vesselId": 84782,
       "currentCargo": {
         "loaded": false,
@@ -10352,7 +10441,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 13.9
+      "speed": 14.2
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -10422,7 +10511,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:41:20Z",
+    "timestamp": "2026-04-02T23:01:41Z",
     "imo": "9482861",
     "nextDestination": {
       "source": "AIS",
@@ -10457,15 +10546,15 @@
         "volume_gas": 79017,
         "energy": 2018252.1699909815
       },
-      "course": 292,
+      "course": 290,
       "geo": {
-        "lon": -163.049072,
-        "lat": 17.519316
+        "lon": -163.828766,
+        "lat": 17.831203
       },
       "draught": 11.6,
       "draughtComputed": 11.6,
-      "id": 83455416605,
-      "receivedTime": "2026-04-02T18:58:47",
+      "id": 83455517270,
+      "receivedTime": "2026-04-02T22:38:16",
       "vesselId": 84784,
       "currentCargo": {
         "loaded": true,
@@ -10500,7 +10589,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 13.3
+      "speed": 13.1
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -10570,7 +10659,7 @@
     "isFloatingStorage": true,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:32:34Z",
+    "timestamp": "2026-04-02T23:01:41Z",
     "imo": "9482873",
     "nextDestination": null,
     "id": 84786,
@@ -10594,15 +10683,15 @@
         "volume_gas": 82059,
         "energy": 2095950.9322967206
       },
-      "course": 66,
+      "course": 76,
       "geo": {
-        "lon": 54.462002,
-        "lat": 25.00905
+        "lon": 54.461613,
+        "lat": 25.008776
       },
       "draught": 12.7,
       "draughtComputed": 12.7,
-      "id": 83455414834,
-      "receivedTime": "2026-04-02T18:57:56",
+      "id": 83455511679,
+      "receivedTime": "2026-04-02T22:27:33",
       "vesselId": 84786,
       "currentCargo": {
         "loaded": true,
@@ -10698,7 +10787,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:41:23Z",
+    "timestamp": "2026-04-02T23:01:43Z",
     "imo": "9487249",
     "nextDestination": {
       "source": "AIS",
@@ -10733,15 +10822,15 @@
         "volume_gas": 92610,
         "energy": 2365444.568420274
       },
-      "course": 198,
+      "course": 216,
       "geo": {
-        "lon": -37.649479,
-        "lat": -20.607325
+        "lon": -37.932858,
+        "lat": -21.348812
       },
       "draught": 12,
       "draughtComputed": 12,
-      "id": 83455412829,
-      "receivedTime": "2026-04-02T18:57:11",
+      "id": 83455516253,
+      "receivedTime": "2026-04-02T22:35:59",
       "vesselId": 84990,
       "currentCargo": {
         "loaded": true,
@@ -10776,7 +10865,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 13
+      "speed": 12.9
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -10846,7 +10935,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:55:34Z",
+    "timestamp": "2026-04-02T23:01:43Z",
     "imo": "9487251",
     "nextDestination": null,
     "id": 84992,
@@ -10983,7 +11072,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:32:51Z",
+    "timestamp": "2026-04-02T23:01:43Z",
     "imo": "9487263",
     "nextDestination": {
       "source": "AIS",
@@ -11018,15 +11107,15 @@
         "volume_gas": 79783,
         "energy": 2037817.341564353
       },
-      "course": 146,
+      "course": 156,
       "geo": {
-        "lon": 35.952168,
-        "lat": 25.24254
+        "lon": 36.362785,
+        "lat": 24.487574
       },
       "draught": 12.3,
       "draughtComputed": 12.3,
-      "id": 83455413880,
-      "receivedTime": "2026-04-02T18:56:35",
+      "id": 83455516700,
+      "receivedTime": "2026-04-02T22:38:26",
       "vesselId": 84994,
       "currentCargo": {
         "loaded": true,
@@ -11061,7 +11150,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 13.6
+      "speed": 13.7
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -11131,7 +11220,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:41:23Z",
+    "timestamp": "2026-04-02T23:01:43Z",
     "imo": "9487275",
     "nextDestination": {
       "source": "AIS",
@@ -11166,15 +11255,15 @@
         "volume_gas": 81043,
         "energy": 2070000.2608625882
       },
-      "course": 111,
+      "course": 124,
       "geo": {
-        "lon": 64.603683,
-        "lat": 10.926349
+        "lon": 65.153618,
+        "lat": 10.704478
       },
       "draught": 11.8,
       "draughtComputed": 11.8,
-      "id": 83455411593,
-      "receivedTime": "2026-04-02T18:52:32",
+      "id": 83455487698,
+      "receivedTime": "2026-04-02T21:34:04",
       "vesselId": 84996,
       "currentCargo": {
         "loaded": true,
@@ -11209,7 +11298,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 13.4
+      "speed": 10
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -11279,13 +11368,13 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:32:41Z",
+    "timestamp": "2026-04-02T23:01:43Z",
     "imo": "9489027",
     "nextDestination": {
       "source": "AIS",
       "id": 388959658,
       "installation": null,
-      "eta": "2026-04-03T09:41:33.759462",
+      "eta": "2026-04-03T18:00:08.371303",
       "zone": {
         "name": "Fujairah",
         "fullname": "Fujairah",
@@ -11427,7 +11516,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:32:42Z",
+    "timestamp": "2026-04-02T23:01:43Z",
     "imo": "9489039",
     "nextDestination": {
       "source": "AIS",
@@ -11575,7 +11664,7 @@
     "isFloatingStorage": false,
     "flagName": "Marshall Islands",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:41:24Z",
+    "timestamp": "2026-04-02T23:01:44Z",
     "imo": "9489106",
     "nextDestination": {
       "source": "Fixture",
@@ -11610,15 +11699,15 @@
         "volume_gas": 49978,
         "energy": 1276538.0481644366
       },
-      "course": 358,
+      "course": 246,
       "geo": {
-        "lon": -95.224236,
-        "lat": 29.727316
+        "lon": -95.224251,
+        "lat": 29.727301
       },
       "draught": 8.5,
       "draughtComputed": 8.5,
-      "id": 83455412118,
-      "receivedTime": "2026-04-02T18:55:41",
+      "id": 83455514902,
+      "receivedTime": "2026-04-02T22:37:36",
       "vesselId": 85128,
       "currentCargo": {
         "loaded": true,
@@ -11715,7 +11804,7 @@
     "isFloatingStorage": false,
     "flagName": "Marshall Islands",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:32:42Z",
+    "timestamp": "2026-04-02T23:01:44Z",
     "imo": "9489118",
     "nextDestination": {
       "source": "AIS",
@@ -11750,15 +11839,15 @@
         "volume_gas": 49943,
         "energy": 1275644.07818393
       },
-      "course": 105,
+      "course": 107,
       "geo": {
-        "lon": -144.82753,
-        "lat": 27.230659
+        "lon": -144.006012,
+        "lat": 26.984081
       },
       "draught": 11.9,
       "draughtComputed": 11.9,
-      "id": 83455415497,
-      "receivedTime": "2026-04-02T18:58:11",
+      "id": 83455516747,
+      "receivedTime": "2026-04-02T22:38:33",
       "vesselId": 85130,
       "currentCargo": {
         "loaded": true,
@@ -11784,7 +11873,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 12.7
+      "speed": 12.5
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -11854,7 +11943,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:57:24Z",
+    "timestamp": "2026-04-02T22:18:30Z",
     "imo": "9494034",
     "nextDestination": null,
     "id": 85538,
@@ -11878,15 +11967,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 252,
+      "course": 263,
       "geo": {
-        "lon": 120.991814,
-        "lat": 35.82164
+        "lon": 120.991386,
+        "lat": 35.821392
       },
       "draught": 6.3,
       "draughtComputed": 6.3,
-      "id": 73846173008,
-      "receivedTime": "2026-04-02T19:39:26",
+      "id": 73846260953,
+      "receivedTime": "2026-04-02T21:57:26",
       "vesselId": 85538,
       "currentCargo": {
         "loaded": false,
@@ -11915,7 +12004,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 0.1
+      "speed": 0
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -11985,7 +12074,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:57:24Z",
+    "timestamp": "2026-04-02T22:18:30Z",
     "imo": "9494046",
     "nextDestination": null,
     "id": 85540,
@@ -12009,15 +12098,15 @@
         "volume_gas": 50801.470588235294,
         "energy": 1297571.1334705052
       },
-      "course": 117,
+      "course": 119,
       "geo": {
-        "lon": -8.744595,
-        "lat": 33.132233
+        "lon": -8.744987,
+        "lat": 33.132526
       },
       "draught": 6.7,
       "draughtComputed": 6.7,
-      "id": 73846167544,
-      "receivedTime": "2026-04-02T19:37:42",
+      "id": 73846260255,
+      "receivedTime": "2026-04-02T21:58:42",
       "vesselId": 85540,
       "currentCargo": {
         "loaded": true,
@@ -12146,7 +12235,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:57:24Z",
+    "timestamp": "2026-04-02T22:31:50Z",
     "imo": "9494058",
     "nextDestination": {
       "source": "Port",
@@ -12183,13 +12272,13 @@
       },
       "course": 57,
       "geo": {
-        "lon": 132.649994,
-        "lat": 32.07592
+        "lon": 133.41246,
+        "lat": 32.472919
       },
       "draught": 11.7,
       "draughtComputed": 11.7,
-      "id": 73846131786,
-      "receivedTime": "2026-04-02T18:33:23",
+      "id": 73846258044,
+      "receivedTime": "2026-04-02T21:53:40",
       "vesselId": 85542,
       "currentCargo": {
         "loaded": true,
@@ -12218,7 +12307,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 13
+      "speed": 14.3
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -12288,7 +12377,7 @@
     "isFloatingStorage": false,
     "flagName": "United Arab Emirates",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:33:02Z",
+    "timestamp": "2026-04-02T23:01:45Z",
     "imo": "9494204",
     "nextDestination": {
       "source": "AIS",
@@ -12427,7 +12516,7 @@
     "isFloatingStorage": false,
     "flagName": "Marshall Islands",
     "isFeeder": false,
-    "timestamp": "2026-04-02T20:08:48Z",
+    "timestamp": "2026-04-02T22:38:39Z",
     "imo": "9556181",
     "nextDestination": {
       "source": "AIS",
@@ -12464,13 +12553,13 @@
       },
       "course": 245,
       "geo": {
-        "lon": 33.148502,
-        "lat": -32.070713
+        "lon": 32.413025,
+        "lat": -32.359982
       },
       "draught": 7.8,
       "draughtComputed": 7.8,
-      "id": 83455434661,
-      "receivedTime": "2026-04-02T19:38:33",
+      "id": 83455509429,
+      "receivedTime": "2026-04-02T22:19:30",
       "vesselId": 88108,
       "currentCargo": {
         "loaded": false,
@@ -12508,7 +12597,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 14.8
+      "speed": 15.3
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -12578,7 +12667,7 @@
     "isFloatingStorage": false,
     "flagName": "United Arab Emirates",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:14:12Z",
+    "timestamp": "2026-04-02T22:31:20Z",
     "imo": "9592898",
     "nextDestination": {
       "source": "AIS",
@@ -12723,7 +12812,7 @@
     "isFloatingStorage": false,
     "flagName": "Panama",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:19:31Z",
+    "timestamp": "2026-04-02T22:34:45Z",
     "imo": "9615030",
     "nextDestination": {
       "source": "AIS",
@@ -12765,13 +12854,13 @@
       },
       "course": 288,
       "geo": {
-        "lon": 72.344574,
-        "lat": 8.182662
+        "lon": 72.01564,
+        "lat": 8.295562
       },
       "draught": 9.9,
       "draughtComputed": 9.9,
-      "id": 73846133509,
-      "receivedTime": "2026-04-02T18:44:50",
+      "id": 73846213688,
+      "receivedTime": "2026-04-02T20:49:29",
       "vesselId": 91711,
       "currentCargo": {
         "loaded": true,
@@ -12867,7 +12956,7 @@
     "isFloatingStorage": false,
     "flagName": "Panama",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:44:39Z",
+    "timestamp": "2026-04-02T22:12:27Z",
     "imo": "9682904",
     "nextDestination": null,
     "id": 94845,
@@ -12891,15 +12980,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 197,
+      "course": 65,
       "geo": {
-        "lon": 73.803467,
-        "lat": 15.41627
+        "lon": 73.803444,
+        "lat": 15.41626
       },
       "draught": 5.4,
       "draughtComputed": 5.4,
-      "id": 73846157058,
-      "receivedTime": "2026-04-02T19:17:29",
+      "id": 73846249726,
+      "receivedTime": "2026-04-02T21:38:29",
       "vesselId": 94845,
       "currentCargo": {
         "loaded": false,
@@ -12931,7 +13020,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 0
+      "speed": 0.1
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -13001,7 +13090,7 @@
     "isFloatingStorage": false,
     "flagName": "Singapore",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:44:50Z",
+    "timestamp": "2026-04-02T22:12:37Z",
     "imo": "9700146",
     "nextDestination": {
       "source": "AIS",
@@ -13043,13 +13132,13 @@
       },
       "course": 44,
       "geo": {
-        "lon": -10.367347,
-        "lat": 32.556843
+        "lon": -10.089236,
+        "lat": 32.783173
       },
       "draught": 11,
       "draughtComputed": 11,
-      "id": 73846154008,
-      "receivedTime": "2026-04-02T19:19:12",
+      "id": 73846248473,
+      "receivedTime": "2026-04-02T21:39:22",
       "vesselId": 95810,
       "currentCargo": {
         "loaded": true,
@@ -13081,7 +13170,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 10.7
+      "speed": 10.1
     },
     "portCallInfo": {
       "lastPortCall": {
@@ -13151,7 +13240,7 @@
     "isFloatingStorage": false,
     "flagName": "Liberia",
     "isFeeder": false,
-    "timestamp": "2026-04-02T19:55:53Z",
+    "timestamp": "2026-04-02T22:55:35Z",
     "imo": "9719408",
     "nextDestination": null,
     "id": 97132,
@@ -13175,15 +13264,15 @@
         "volume_gas": 0,
         "energy": 0
       },
-      "course": 251,
+      "course": 255,
       "geo": {
-        "lon": 47.945553,
-        "lat": 12.886639
+        "lon": 47.128841,
+        "lat": 12.603492
       },
       "draught": 8,
       "draughtComputed": 8,
-      "id": 2540586841,
-      "receivedTime": "2026-04-02T19:38:47",
+      "id": 2540598158,
+      "receivedTime": "2026-04-02T22:38:06",
       "vesselId": 97132,
       "currentCargo": {
         "loaded": false,
@@ -13209,7 +13298,7 @@
         ]
       },
       "draughtChange": null,
-      "speed": 17.1
+      "speed": 16.8
     },
     "portCallInfo": {
       "lastPortCall": {
