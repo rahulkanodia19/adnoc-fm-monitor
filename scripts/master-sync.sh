@@ -38,7 +38,7 @@ TIMESTAMP_UTC=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
 
 # Pipeline status tracking
 declare -A PIPELINE_STATUS PIPELINE_TIME PIPELINE_DETAIL PIPELINE_ATTEMPT
-PIPELINES="news_fm soh prices flows spr awrp insights"
+PIPELINES="news_fm soh prices flows adnoc spr awrp insights"
 for p in $PIPELINES; do
   PIPELINE_STATUS[$p]="pending"
   PIPELINE_TIME[$p]=""
@@ -480,6 +480,22 @@ else
   FLOWS_PID=""
 fi
 
+# [5/8] ADNOC Fleet
+LABEL_ADNOC="[5/8] ADNOC Fleet ........."
+if [ "$KPLER_TOKEN_OK" = true ]; then
+  log "  $LABEL_ADNOC ⏳ running"
+  (
+    run_pipeline "adnoc" "$LABEL_ADNOC" 3 node "$SCRIPT_DIR/sync-adnoc-fleet.js"
+    exit $?
+  ) &
+  ADNOC_PID=$!
+else
+  log "  $LABEL_ADNOC ○ skipped (no token)"
+  PIPELINE_STATUS[adnoc]="skipped"
+  PIPELINE_DETAIL[adnoc]="No Kpler token"
+  ADNOC_PID=""
+fi
+
 hr
 
 # --- Wait for parallel jobs ---
@@ -515,6 +531,9 @@ collect_result "$FLOWS_PID" "flows" "$LABEL_FLOWS" \
 
 collect_result "$NEWS_PID" "news_fm" "$LABEL_NEWS" \
   "echo 'agent complete'"
+
+collect_result "$ADNOC_PID" "adnoc" "$LABEL_ADNOC" \
+  "node -e \"const d=JSON.parse(require('fs').readFileSync('soh-data/adnoc-fleet-data.json'));console.log(d.count+' fleet + '+(JSON.parse(require('fs').readFileSync('soh-data/adnoc-chartered-data.json')).count||0)+' chartered')\""
 
 # [5/6] SPR Releases (sequential — after News/FM, both write data.js)
 echo ""

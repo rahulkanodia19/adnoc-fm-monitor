@@ -18,6 +18,7 @@
     "sync:flow-insights": "bash scripts/sync-flow-insights.sh",
     "sync:prices": "bash scripts/sync-prices.sh",
     "fetch:prices": "node scripts/fetch-platts-prices.js",
+    "sync:adnoc": "node scripts/sync-adnoc-fleet.js",
     "verify": "node scripts/verify-sync.js",
     "merge:containers": "node scripts/merge-containers.js"
   },

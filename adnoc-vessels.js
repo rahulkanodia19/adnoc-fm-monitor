@@ -337,6 +337,12 @@
         </div>
       </div>
 
+      <!-- Data Verification Disclaimer -->
+      <div class="bg-blue-50 border border-blue-200 rounded-lg px-4 py-2.5 mb-4 text-xs text-blue-800">
+        <span class="font-bold uppercase tracking-wider text-[10px]">Data Verification in Progress</span><br>
+        Vessel positions, status, and port data are being validated against multiple sources. Some fields may be incomplete or approximate.
+      </div>
+
       <!-- AIS Disclaimer -->
       <div class="bg-amber-50 border border-amber-200 rounded-lg px-4 py-2.5 mb-4 text-xs text-amber-800">
         <span class="font-bold uppercase tracking-wider text-[10px]">Live Vessel Tracking Disclaimer</span><br>
