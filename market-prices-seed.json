@@ -15131,8 +15131,8 @@
       ]
     },
     "gasoline": {
-      "current": 123.17,
-      "previousClose": 126.01,
+      "current": 132.3,
+      "previousClose": 123.17,
       "high52w": 140.32,
       "low52w": 66.98,
       "history": [
@@ -20171,12 +20171,16 @@
         {
           "date": "2026-04-01",
           "price": 123.17
+        },
+        {
+          "date": "2026-04-02",
+          "price": 132.3
         }
       ]
     },
     "jetfuel": {
-      "current": 211.49,
-      "previousClose": 211.97,
+      "current": 224.24,
+      "previousClose": 211.49,
       "high52w": 236.46,
       "low52w": 71.98,
       "history": [
@@ -25215,13 +25219,17 @@
         {
           "date": "2026-04-01",
           "price": 211.49
+        },
+        {
+          "date": "2026-04-02",
+          "price": 224.24
         }
       ]
     },
     "gasoil": {
-      "current": 238.46,
-      "previousClose": 232.04,
-      "high52w": 245.53,
+      "current": 284.97,
+      "previousClose": 238.46,
+      "high52w": 284.97,
       "low52w": 72.81,
       "history": [
         {
@@ -30259,6 +30267,10 @@
         {
           "date": "2026-04-01",
           "price": 238.46
+        },
+        {
+          "date": "2026-04-02",
+          "price": 284.97
         }
       ]
     },
