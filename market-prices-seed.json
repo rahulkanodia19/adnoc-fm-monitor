@@ -1,10 +1,10 @@
 {
-  "lastUpdated": "2026-03-31T00:00:00Z",
+  "lastUpdated": "2026-04-02T00:00:00Z",
   "_source": "seed",
   "prices": {
     "wti": {
-      "current": 101.38,
-      "previousClose": 102.88,
+      "current": 100.12,
+      "previousClose": 101.38,
       "high52w": 102.88,
       "low52w": 55.27,
       "history": [
@@ -5007,13 +5007,17 @@
         {
           "date": "2026-03-31",
           "price": 101.38
+        },
+        {
+          "date": "2026-04-01",
+          "price": 100.12
         }
       ]
     },
     "brent": {
-      "current": 127.24,
-      "previousClose": 123.485,
-      "high52w": 127.24,
+      "current": 128.46,
+      "previousClose": 127.24,
+      "high52w": 128.46,
       "low52w": 60.2,
       "history": [
         {
@@ -10071,12 +10075,16 @@
         {
           "date": "2026-03-31",
           "price": 127.24
+        },
+        {
+          "date": "2026-04-01",
+          "price": 128.46
         }
       ]
     },
     "murban": {
-      "current": 121.1,
-      "previousClose": 125.29,
+      "current": 114.65,
+      "previousClose": 108.9,
       "high52w": 169.75,
       "low52w": 59.55,
       "history": [
@@ -15111,12 +15119,20 @@
         {
           "date": "2026-03-31",
           "price": 121.1
+        },
+        {
+          "date": "2026-04-01",
+          "price": 108.9
+        },
+        {
+          "date": "2026-04-02",
+          "price": 114.65
         }
       ]
     },
     "gasoline": {
-      "current": 126.01,
-      "previousClose": 127.71,
+      "current": 123.17,
+      "previousClose": 126.01,
       "high52w": 140.32,
       "low52w": 66.98,
       "history": [
@@ -20151,12 +20167,16 @@
         {
           "date": "2026-03-31",
           "price": 126.01
+        },
+        {
+          "date": "2026-04-01",
+          "price": 123.17
         }
       ]
     },
     "jetfuel": {
-      "current": 211.97,
-      "previousClose": 236.46,
+      "current": 211.49,
+      "previousClose": 211.97,
       "high52w": 236.46,
       "low52w": 71.98,
       "history": [
@@ -25191,12 +25211,16 @@
         {
           "date": "2026-03-31",
           "price": 211.97
+        },
+        {
+          "date": "2026-04-01",
+          "price": 211.49
         }
       ]
     },
     "gasoil": {
-      "current": 232.04,
-      "previousClose": 245.53,
+      "current": 238.46,
+      "previousClose": 232.04,
       "high52w": 245.53,
       "low52w": 72.81,
       "history": [
@@ -30231,12 +30255,16 @@
         {
           "date": "2026-03-31",
           "price": 232.04
+        },
+        {
+          "date": "2026-04-01",
+          "price": 238.46
         }
       ]
     },
     "lng": {
-      "current": 19.349,
-      "previousClose": 20.338,
+      "current": 17.859,
+      "previousClose": 17.733,
       "high52w": 25.41,
       "low52w": 9.28,
       "history": [
@@ -35267,12 +35295,20 @@
         {
           "date": "2026-03-31",
           "price": 19.349
+        },
+        {
+          "date": "2026-04-01",
+          "price": 17.733
+        },
+        {
+          "date": "2026-04-02",
+          "price": 17.859
         }
       ]
     },
     "lng_nwe": {
-      "current": 16.609,
-      "previousClose": 17.958,
+      "current": 15.742,
+      "previousClose": 16.609,
       "high52w": 20.728,
       "low52w": 8.585,
       "history": [
@@ -51199,12 +51235,16 @@
         {
           "date": "2026-03-31",
           "price": 16.609
+        },
+        {
+          "date": "2026-04-01",
+          "price": 15.742
         }
       ]
     },
     "ttf": {
-      "current": 17.981,
-      "previousClose": 18.751,
+      "current": 16.471,
+      "previousClose": 17.981,
       "high52w": 22.5,
       "low52w": 9.221,
       "history": [
@@ -55227,12 +55267,16 @@
         {
           "date": "2026-03-31",
           "price": 17.981
+        },
+        {
+          "date": "2026-04-01",
+          "price": 16.471
         }
       ]
     },
     "henry_hub": {
-      "current": 2.905,
-      "previousClose": 2.866,
+      "current": 2.836,
+      "previousClose": 2.905,
       "high52w": 6.8,
       "low52w": 2.705,
       "history": [
@@ -71159,13 +71203,17 @@
         {
           "date": "2026-03-31",
           "price": 2.905
+        },
+        {
+          "date": "2026-04-01",
+          "price": 2.836
         }
       ]
     },
     "awrp": {
-      "current": 1.9,
-      "previousClose": 1.7,
-      "high52w": 1.9,
+      "current": 2.2,
+      "previousClose": 1.9,
+      "high52w": 2.2,
       "low52w": 0.65,
       "history": [
         {
@@ -74703,6 +74751,10 @@
         {
           "date": "2026-03-31",
           "price": 1.9
+        },
+        {
+          "date": "2026-04-01",
+          "price": 2.2
         }
       ]
     }

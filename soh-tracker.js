@@ -439,7 +439,7 @@
           <span class="map-legend-arrow" style="font-size:8px;transition:transform 0.2s">${isMobile ? '&#9654;' : '&#9660;'}</span> Vessel Type
         </div>
         <div class="map-legend-body" style="${isMobile ? 'display:none' : ''}">
-          ${Object.entries(colorMap).map(([k, c]) => `<div class="flex items-center gap-1"><span class="inline-block w-2.5 h-2.5 rounded-full" style="background:${c}"></span>${k}</div>`).join('')}
+          ${Object.entries(colorMap).map(([k, c]) => `<div class="flex items-center gap-1"><span class="inline-block w-2.5 h-2.5 rounded-full" style="background:${c}"></span>${{liquids:'Liquids',lng:'LNG',lpg:'LPG',dry:'Dry',container:'Container',other:'Other'}[k]}</div>`).join('')}
           <div class="mt-1 border-t border-navy-200 pt-1">
             <span class="opacity-50">&#9679;</span> Ballast &nbsp; <span class="opacity-90">&#9679;</span> Laden
             <br><span style="font-size:13px">&#9679;</span> = In Transit

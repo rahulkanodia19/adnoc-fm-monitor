@@ -100,7 +100,7 @@ Focus on events from the last 48 hours. Search for:
 - Country-level status changes for: Qatar, Kuwait, Saudi Arabia, UAE, Iraq, Bahrain, Oman, Israel, Iran
 - Production volume impacts (kb/d, Mtpa, Bcf/d) and infrastructure damage
 - Shipping disruptions through Strait of Hormuz
-- Tanker diversions, insurance rate changes, war risk premiums (update WAR_RISK_PREMIUM_DATA — see Step 4)
+- Tanker diversions, insurance rate changes, war risk premiums
 - OPEC/OPEC+ emergency responses
 - Downstream force majeure declarations by refineries, petrochemical plants, and industrial consumers
   in importing countries that depend on Gulf feedstock (naphtha, crude, LNG, LPG). Key regions:
@@ -252,24 +252,10 @@ Update the `data.js` file with any new findings. Preserve the exact same schema 
 - The file must use `const` declarations (not export)
 - Preserve the production object structure on country entries if present
 
-### WAR_RISK_PREMIUM_DATA — Update hull % war risk premium
+### WAR_RISK_PREMIUM_DATA — DO NOT UPDATE
 
-Also update `WAR_RISK_PREMIUM_DATA` in data.js with the latest Strait of Hormuz war-risk insurance premium (% of hull value):
-
-1. Search these FREE sources for the latest rate:
-   - hormuztracker.com (look for "War Risk Premiums" section)
-   - insurancejournal.com (search "Hormuz war risk premium")
-   - splash247.com (search "Hormuz insurance premium")
-   - gcaptain.com (search "Hormuz war risk")
-2. Extract the current rate as % of hull value for a standard 7-day policy
-3. Update `WAR_RISK_PREMIUM_DATA.current.rate` with the latest value
-4. Update `WAR_RISK_PREMIUM_DATA.lastUpdated` to current ISO date (YYYY-MM-DD)
-5. Append a new entry to `WAR_RISK_PREMIUM_DATA.history`:
-   ```javascript
-   { date: "YYYY-MM-DD", rate: <number>, event: "<brief context>", source: "<source name>" }
-   ```
-6. Do NOT remove or modify existing history entries — only append today's data point
-7. If no new rate is found, keep the previous day's rate and note "No update found" as event
+`WAR_RISK_PREMIUM_DATA` is updated by the sync-prices pipeline (`sync-prices.sh`).
+Do NOT modify it during the news sync. Leave it untouched.
 
 ### Pre-war baselines (LOCKED — never modify these values)
 

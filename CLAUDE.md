@@ -22,7 +22,7 @@ Real-time Oil & Gas intelligence dashboard tracking the Gulf/Hormuz military esc
 | Shutdowns (No FM) | `data.js` (SHUTDOWNS_NO_FM_DATA) | Same | Same |
 | Import Flows | `import-data.js` (IMPORT_FLOW_DATA) | Kpler API (JWT) | `sync-flows.js` |
 | Export Flows | `export-data.js` (EXPORT_FLOW_DATA) | Kpler API (JWT) | `sync-flows.js` |
-| Market Prices | `market-prices-seed.json` | S&P Platts API (Okta) | `fetch-platts-prices.js` |
+| Market Prices | `market-prices-seed.json` + `data.js` (WAR_RISK_PREMIUM_DATA) | S&P Platts API (Okta) + Claude web search | `sync-prices.sh` |
 | SOH Tracker | `soh-data/*.json` (21 files) | Kpler API (JWT) + S&P MINT | `sync-soh.js` |
 | SPR Status | `data.js` (SPR_RELEASE_DATA) | Claude web search | `sync-spr.sh` |
 | Flow Insights | `flow-insights.json` | Claude LLM (4 batches) | `sync-flow-insights.sh` |
@@ -43,13 +43,14 @@ Qatar, Kuwait, Saudi Arabia, UAE, Iraq, Bahrain, Oman, Israel, Iran
 ### Commands
 
 ```
-npm run sync:all      # Master orchestrator — runs ALL 6 pipelines
+npm run sync:all      # Master orchestrator — runs ALL 7 pipelines
 npm run sync:news     # News/FM/Production only (Claude + Chrome MCP)
 npm run sync:soh      # SOH Vessels only (Kpler JWT token)
 npm run sync:flows    # Import/Export Flows only (Kpler JWT token)
 npm run sync:insights # Flow Insights only (4 Claude batches)
 npm run sync:spr      # SPR Releases only (Claude web search)
-npm run fetch:prices  # Platts Prices only (Okta PKCE)
+npm run sync:prices   # Market Prices (Platts + War Risk Premium)
+npm run fetch:prices  # Platts Prices only (Okta PKCE, no AWRP)
 npm run verify        # Check freshness of all data files → sync-status.json
 ```
 
@@ -60,8 +61,9 @@ npm run verify        # Check freshness of all data files → sync-status.json
 1. **Pre-flight**: Start Chrome (3 retries), check Kpler login, extract JWT, check MINT/Platts tokens, backup data to `.sync-backup/`
 2. **Phase 1 (parallel)**: News/FM + SOH + Platts + Flows (4 pipelines in background)
 3. **Phase 1b (sequential)**: SPR (after News/FM — both write data.js)
-4. **Phase 2**: Flow Insights (split-flow-summary.js → 4 Claude batches → merge)
-5. **Phase 3**: validate-data.js + verify-sync.js → git commit + push to master + main
+4. **Phase 1c (sequential)**: AWRP war risk premium (after SPR — also writes data.js)
+5. **Phase 2**: Flow Insights (split-flow-summary.js → 4 Claude batches → merge)
+6. **Phase 3**: validate-data.js + verify-sync.js → git commit + push to master + main
 
 ### Retry & Recovery
 
@@ -102,13 +104,14 @@ Run automatically before commit. Checks:
 - Refining math: capacity - affected = available (within 5%)
 - current <= preWar for oil/gas
 - FM/shutdown entries have required fields + sources with URLs
+- WAR_RISK_PREMIUM_DATA has valid history, current rate, and lastUpdated
 
 ## Key Files
 
 | File | Purpose |
 |------|---------|
 | `app.js` | Main UI — tab routing, rendering, sync-status badges |
-| `data.js` | Country status, FM declarations, shutdowns, SPR data |
+| `data.js` | Country status, FM declarations, shutdowns, SPR, war risk premium data |
 | `import-flows.js` / `export-flows.js` | Flow dashboard frontends |
 | `market-prices.js` | Price charts frontend |
 | `soh-tracker.js` | SOH vessel tracking frontend |
@@ -117,6 +120,7 @@ Run automatically before commit. Checks:
 | `scripts/validate-data.js` | Schema validation (pre-commit) |
 | `scripts/sync-soh.js` | Kpler vessel + flow API fetch (token-based) |
 | `scripts/sync-flows.js` | Kpler import/export flow API fetch |
+| `scripts/sync-prices.sh` | Market Prices sync orchestrator (Platts + AWRP) |
 | `scripts/fetch-platts-prices.js` | S&P Platts price fetch |
 | `scripts/process-soh.js` | Post-process vessels (classify inside/outside Gulf) |
 | `scripts/split-flow-summary.js` | Split flow data into 4 batches for insights |

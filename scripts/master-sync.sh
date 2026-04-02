@@ -38,7 +38,7 @@ TIMESTAMP_UTC=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
 
 # Pipeline status tracking
 declare -A PIPELINE_STATUS PIPELINE_TIME PIPELINE_DETAIL PIPELINE_ATTEMPT
-PIPELINES="news_fm soh prices flows spr insights"
+PIPELINES="news_fm soh prices flows spr awrp insights"
 for p in $PIPELINES; do
   PIPELINE_STATUS[$p]="pending"
   PIPELINE_TIME[$p]=""
@@ -48,6 +48,22 @@ done
 
 cd "$PROJECT_DIR"
 mkdir -p sync-logs
+
+# --- Cleanup on exit (prevents zombie processes on Windows) ---
+cleanup() {
+  echo "[sync] Cleaning up child processes..."
+  local children
+  children=$(jobs -p 2>/dev/null)
+  if [ -n "$children" ]; then
+    kill $children 2>/dev/null || true
+    sleep 2
+    kill -9 $children 2>/dev/null || true
+  fi
+  # Kill any claude -p processes we may have spawned
+  taskkill.exe //F //FI "IMAGENAME eq claude.exe" 2>/dev/null || true
+  rm -f sync-progress.json
+}
+trap cleanup EXIT INT TERM
 
 # ============================================================
 # HELPERS
@@ -133,6 +149,13 @@ run_pipeline() {
       if [[ "$name" == "soh" || "$name" == "flows" ]]; then
         extract_kpler_token_quiet
       fi
+
+      # Restart Chrome for browser-dependent pipelines
+      if [[ "$name" == "news_fm" || "$name" == "spr" ]]; then
+        log "  Restarting Chrome before retry..."
+        kill_chrome
+        start_chrome || true
+      fi
     fi
 
     PIPELINE_STATUS[$name]="running"
@@ -215,6 +238,12 @@ restore_pipeline() {
         log "  Restoring data.js from backup (SPR + News/FM both failed)"
         cp .sync-backup/data.js data.js 2>/dev/null || true
       fi ;;
+    awrp)
+      # Only restore data.js if news_fm and spr also failed
+      if [ "${PIPELINE_STATUS[news_fm]}" != "ok" ] && [ "${PIPELINE_STATUS[spr]}" != "ok" ]; then
+        log "  Restoring data.js from backup (AWRP + SPR + News/FM all failed)"
+        cp .sync-backup/data.js data.js 2>/dev/null || true
+      fi ;;
   esac
 }
 
@@ -230,6 +259,29 @@ echo ""
 log "PRE-FLIGHT"
 
 write_progress "preflight"
+
+# --- Kill stale sync processes from previous runs ---
+STALE_KILLED=0
+for proc_name in "sync-news" "sync-spr" "sync-prices" "sync-flows" "sync-soh" "master-sync" "download-server" "sync-flow-insights"; do
+  while read -r pid; do
+    [ -z "$pid" ] && continue
+    [ "$pid" = "$$" ] && continue  # don't kill ourselves
+    create_time=$(wmic process where "ProcessId=$pid" get creationdate 2>/dev/null | grep -oP '\d{14}' | head -1)
+    if [ -n "$create_time" ]; then
+      create_epoch=$(date -d "${create_time:0:4}-${create_time:4:2}-${create_time:6:2} ${create_time:8:2}:${create_time:10:2}:${create_time:12:2}" +%s 2>/dev/null || echo 0)
+      now_epoch=$(date +%s)
+      age=$(( now_epoch - create_epoch ))
+      if [ $age -gt 7200 ]; then  # older than 2 hours
+        taskkill.exe //PID $pid //F 2>/dev/null && STALE_KILLED=$((STALE_KILLED + 1))
+      fi
+    fi
+  done < <(wmic process where "commandline like '%${proc_name}%'" get processid 2>/dev/null | grep -oP '\d+')
+done
+if [ $STALE_KILLED -gt 0 ]; then
+  log "  Stale procs ..... ✓ killed $STALE_KILLED zombie processes"
+else
+  log "  Stale procs ..... ✓ none found"
+fi
 
 # --- Chrome startup (up to 3 attempts) ---
 CHROME_PID=""
@@ -373,8 +425,8 @@ echo ""
 log "PHASE 1 — Data Collection"
 write_progress "data_collection"
 
-# [1/5] News/FM/Production
-LABEL_NEWS="[1/5] News/FM/Production ..."
+# [1/6] News/FM/Production
+LABEL_NEWS="[1/6] News/FM/Production ..."
 log "  $LABEL_NEWS ⏳ running"
 (
   run_pipeline "news_fm" "$LABEL_NEWS" 3 bash "$SCRIPT_DIR/sync-news.sh"
@@ -383,7 +435,7 @@ log "  $LABEL_NEWS ⏳ running"
 NEWS_PID=$!
 
 # [2/5] SOH Vessels
-LABEL_SOH="[2/5] SOH Vessels .........."
+LABEL_SOH="[2/6] SOH Vessels .........."
 if [ "$KPLER_TOKEN_OK" = true ]; then
   log "  $LABEL_SOH ⏳ running"
   (
@@ -403,8 +455,8 @@ else
   SOH_PID=""
 fi
 
-# [3/5] Platts Prices
-LABEL_PRICES="[3/5] Platts Prices ........"
+# [3/6] Platts Prices
+LABEL_PRICES="[3/6] Platts Prices ........"
 log "  $LABEL_PRICES ⏳ running"
 (
   run_pipeline "prices" "$LABEL_PRICES" 3 node "$SCRIPT_DIR/fetch-platts-prices.js"
@@ -412,8 +464,8 @@ log "  $LABEL_PRICES ⏳ running"
 ) &
 PRICES_PID=$!
 
-# [5/5] Import/Export Flows
-LABEL_FLOWS="[5/5] Import/Export Flows .."
+# [4/6] Import/Export Flows
+LABEL_FLOWS="[4/6] Import/Export Flows .."
 if [ "$KPLER_TOKEN_OK" = true ]; then
   log "  $LABEL_FLOWS ⏳ running"
   (
@@ -464,9 +516,9 @@ collect_result "$FLOWS_PID" "flows" "$LABEL_FLOWS" \
 collect_result "$NEWS_PID" "news_fm" "$LABEL_NEWS" \
   "echo 'agent complete'"
 
-# [4/5] SPR Releases (sequential — after News/FM, both write data.js)
+# [5/6] SPR Releases (sequential — after News/FM, both write data.js)
 echo ""
-LABEL_SPR="[4/5] SPR Releases ........."
+LABEL_SPR="[5/6] SPR Releases ........."
 log "  $LABEL_SPR ⏳ running"
 SPR_START=$(date +%s)
 if run_pipeline "spr" "$LABEL_SPR" 3 bash "$SCRIPT_DIR/sync-spr.sh"; then
@@ -481,6 +533,28 @@ else
   log "  $LABEL_SPR ✗ FAILED"
   restore_pipeline "spr"
   notify "SPR Failed" "SPR pipeline failed after 3 attempts."
+fi
+write_progress "data_collection"
+
+# [6/6] War Risk Premium AWRP (sequential — after SPR, also writes data.js)
+echo ""
+LABEL_AWRP="[6/6] War Risk Premium ....."
+log "  $LABEL_AWRP ⏳ running"
+AWRP_START=$(date +%s)
+if run_pipeline "awrp" "$LABEL_AWRP" 3 claude -p "$(cat "$SCRIPT_DIR/sync-prices-awrp-prompt.md")" \
+  --allowedTools "Edit,Read,WebSearch,WebFetch,Glob,Grep" \
+  --max-turns 20; then
+  PIPELINE_STATUS[awrp]="ok"
+  PIPELINE_DETAIL[awrp]="web search complete"
+  PIPELINE_TIME[awrp]=$(elapsed $AWRP_START)
+  log "  $LABEL_AWRP ✓ done (${PIPELINE_TIME[awrp]})"
+else
+  PIPELINE_STATUS[awrp]="failed"
+  PIPELINE_DETAIL[awrp]="failed after 3 attempts"
+  PIPELINE_TIME[awrp]=$(elapsed $AWRP_START)
+  log "  $LABEL_AWRP ✗ FAILED"
+  restore_pipeline "awrp"
+  notify "AWRP Failed" "War risk premium pipeline failed after 3 attempts."
 fi
 write_progress "data_collection"
 
@@ -626,7 +700,7 @@ if [ $TOTAL_SECS -ge 60 ]; then TOTAL_TIME="$((TOTAL_SECS/60))m$((TOTAL_SECS%60)
 sep
 log "SUMMARY"
 
-LABELS="news_fm:News/FM/Production soh:SOH_Vessels prices:Platts_Prices flows:Import/Export_Flows spr:SPR_Releases insights:Flow_Insights"
+LABELS="news_fm:News/FM/Production soh:SOH_Vessels prices:Platts_Prices flows:Import/Export_Flows spr:SPR_Releases awrp:War_Risk_Premium insights:Flow_Insights"
 
 FAIL_COUNT=0
 for entry in $LABELS; do

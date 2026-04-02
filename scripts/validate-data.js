@@ -24,7 +24,7 @@ try {
   // data.js uses const declarations — we need to eval it in a sandbox
   const code = fs.readFileSync(dataPath, 'utf8');
   // Wrap in a function to avoid polluting scope, and extract the consts
-  const wrapped = `(function() { ${code}; return { LAST_UPDATED, COUNTRY_STATUS_DATA, FM_DECLARATIONS_DATA, SHUTDOWNS_NO_FM_DATA }; })()`;
+  const wrapped = `(function() { ${code}; return { LAST_UPDATED, COUNTRY_STATUS_DATA, FM_DECLARATIONS_DATA, SHUTDOWNS_NO_FM_DATA, WAR_RISK_PREMIUM_DATA }; })()`;
   var data = eval(wrapped);
   pass('JS syntax valid');
 } catch (e) {
@@ -35,7 +35,7 @@ try {
   process.exit(1);
 }
 
-const { LAST_UPDATED, COUNTRY_STATUS_DATA, FM_DECLARATIONS_DATA, SHUTDOWNS_NO_FM_DATA } = data;
+const { LAST_UPDATED, COUNTRY_STATUS_DATA, FM_DECLARATIONS_DATA, SHUTDOWNS_NO_FM_DATA, WAR_RISK_PREMIUM_DATA } = data;
 
 // ---------- 2. LAST_UPDATED valid ----------
 const lastUpdatedDate = new Date(LAST_UPDATED);
@@ -266,6 +266,34 @@ if (!Array.isArray(SHUTDOWNS_NO_FM_DATA) || SHUTDOWNS_NO_FM_DATA.length === 0) {
       fail(`Shutdown ${label}: no source URLs`);
     }
   });
+}
+
+// ---------- 8. WAR_RISK_PREMIUM_DATA validation ----------
+if (WAR_RISK_PREMIUM_DATA) {
+  if (Array.isArray(WAR_RISK_PREMIUM_DATA.history) && WAR_RISK_PREMIUM_DATA.history.length > 0) {
+    pass(`WAR_RISK_PREMIUM_DATA: ${WAR_RISK_PREMIUM_DATA.history.length} entries`);
+  } else {
+    fail('WAR_RISK_PREMIUM_DATA.history missing or empty');
+  }
+
+  if (WAR_RISK_PREMIUM_DATA.current && typeof WAR_RISK_PREMIUM_DATA.current.rate === 'number') {
+    pass('WAR_RISK_PREMIUM_DATA.current.rate is a number');
+  } else {
+    fail('WAR_RISK_PREMIUM_DATA.current.rate missing or not a number');
+  }
+
+  if (WAR_RISK_PREMIUM_DATA.lastUpdated) {
+    const awrpDate = new Date(WAR_RISK_PREMIUM_DATA.lastUpdated);
+    if (isNaN(awrpDate.getTime())) {
+      fail(`WAR_RISK_PREMIUM_DATA.lastUpdated is not a valid date: "${WAR_RISK_PREMIUM_DATA.lastUpdated}"`);
+    } else {
+      pass('WAR_RISK_PREMIUM_DATA.lastUpdated is a valid date');
+    }
+  } else {
+    fail('WAR_RISK_PREMIUM_DATA.lastUpdated missing');
+  }
+} else {
+  fail('WAR_RISK_PREMIUM_DATA not found in data.js');
 }
 
 // ---------- Summary ----------
