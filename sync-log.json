@@ -1,52 +1,47 @@
 {
-  "timestamp": "2026-04-02T23:30:00Z",
+  "timestamp": "2026-04-03T14:30:00.000Z",
   "success": true,
-  "changes": "Day 35 evening sync: (1) NEW EVENT: Former FM Kharazi seriously injured, wife killed in Tehran airstrike Apr 1 — diplomacy via Pakistan derailed. (2) NEW EVENT: Hengam Island (strategic Hormuz island) struck by airstrikes — 7 injured. (3) UK 35-NATION SUMMIT: 35 countries issued joint statement condemning Iran's Hormuz closure; military planners to evaluate post-conflict naval options; US excluded. (4) SHIPPING DATA: March oil loadings west of Hormuz declined 76% (5.28M bpd vs 22.2M bpd Feb) — Windward Maritime Intelligence. (5) NEW FM: LyondellBasell declared FM on European polyolefins supply (fm-028) due to naphtha cost surge. (6) OIL PRICES: Brent at $105.27; Brent-WTI spread collapsed to 2026 lows; war premium deflating; EIA forecasts Brent above $95/b next 2 months. (7) RYANAIR: CEO warns 25% of European jet fuel at risk from May if conflict continues. (8) Updated energy-news-data.json headlines for Iran, Saudi, UAE, Qatar, Bahrain, US, South Korea.",
+  "changes": "Day 36 update: UK-led 40+ nation coalition (expanded from initial 35) demands 'immediate and unconditional' Hormuz reopening with sanctions threat and military planners meeting next week. Iran demands guaranteed ceasefire but calls US demands 'maximalist and irrational'. IEA warns April oil supply losses will be 'twice March' — world losing 4.5-5 mb/d, doubling mid-April. Kpler: 214 crossings Mar 1-Apr 1 (94% decline). Brent volatile $105-112. Rubio: war objectives in 'weeks not months'. Apr 6 deadline 3 days away. OPEC+ Apr 5 critical. No new FM declarations or infrastructure attacks found for Apr 3.",
   "countriesCount": 9,
-  "fmCount": 27,
-  "shutdownsCount": 24,
+  "fmCount": 28,
+  "shutdownsCount": 25,
   "newEvents": [
-    "Former FM Kharazi seriously injured, wife killed in Tehran strike — diplomacy via Pakistan/Vance channel derailed (Al Arabiya)",
-    "Hengam Island (Hormuz) struck by airstrikes — 7 injured (Wikipedia/CNN)",
-    "UK hosted 35-nation Hormuz summit — joint statement, military planners to follow; US excluded (Washington Post, Al Jazeera)",
-    "March oil loadings west of Hormuz declined 76% to 5.28M bpd (Windward Maritime Intelligence)",
-    "LyondellBasell FM on European polyolefins — naphtha cost surge $250-300/mt (ChemOrbis)",
-    "Brent at $105.27; Brent-WTI spread at 2026 lows on de-escalation signals (EIA, ActionForex)",
-    "Ryanair CEO: 25% of European jet fuel at risk from May (Irish Times, Investing.com)",
-    "CENTCOM cumulative: 19 Iranian ships, 1 submarine, ~2,000 targets destroyed (Stars and Stripes)"
+    "UK Hormuz summit Apr 2: expanded to 40+ nations; chairman's statement demands immediate reopening; sanctions threat; military planners next week; Cooper: Iran 'hijacking shipping route'; US excluded — Al Jazeera, Euronews, Military.com",
+    "IEA Birol: April supply losses will be 'twice March'; weighing second coordinated release daily/hourly; jet fuel/diesel shortages reaching Europe Apr/May — CNBC",
+    "Iran demands guaranteed ceasefire via intermediaries; calls US demands 'maximalist and irrational'; no direct talks confirmed — CNBC/Reuters",
+    "Kpler transit data: 214 commodity crossings Mar 1-Apr 1 (94% decline); 131 oil/gas tankers; 60% Iran-linked — Kpler, Anadolu Agency",
+    "World losing 4.5-5 mb/d through ~Apr 19; doubling to largest crude supply loss in history — CNBC, Wikipedia/Economic Impact",
+    "Brent volatile $105-112 range; US gas past $4/gal for first time since 2022 — Fortune, CNBC",
+    "Rubio: war objectives achievable in 'weeks not months' without ground troops — France 24, Irish Times",
+    "Casualty toll: 3,000+ killed across region, 1,900+ in Iran, 1,200+ in Lebanon, 19 in Israel, 13 US service members — Wikipedia, CNN, NPR"
   ],
-  "noNewFmReason": "One new FM added: LyondellBasell (fm-028) on European polyolefins, declared Mar 11 but not previously captured. Total FM count now 27. All existing FMs remain active. Ryanair flagged potential flight cancellations Jun-Aug if jet fuel supply disrupted.",
+  "noNewFmReason": "No new FM declarations found for April 2-3. All 28 existing FMs remain active. Lotte Chemical Yeosu restart confirmed for May 29 (pre-existing). YNCC-Lotte merger review underway.",
   "sourcesChecked": {
     "tier1": [
-      "S&P Global / Platts (Inside/Outside Strait bifurcation, pricing data)",
-      "Kpler (March export volumes, Kharg loadings data)",
-      "Rystad Energy (infrastructure repair estimates)",
-      "Bloomberg (oil prices, war premium analysis)",
-      "Argus Media (refinery status, Hormuz tolls)",
-      "Lloyd's List (war risk premiums, maritime insurance)",
-      "Windward Maritime Intelligence (March shipping data: 76% decline)"
+      "Kpler (214 transit crossings Mar-Apr data, 94% decline confirmed)",
+      "S&P Global / Platts (Inside/Outside Strait bifurcation continues)",
+      "IEA (Birol: April losses doubling, second release being assessed)",
+      "Bloomberg (oil prices, Brent $111.69 Apr 2 morning)",
+      "Reuters (Iran demands guaranteed ceasefire via intermediaries)"
     ],
     "tier2": [
-      "Al Jazeera (Apr 2 liveblog, UK summit, Kharazi, Iran denies ceasefire)",
-      "Washington Post (UK 35-nation summit details, Hormuz reopening)",
-      "Al Arabiya (Kharazi injured, wife killed in Tehran strike)",
-      "CNN (Hengam Island strikes, 7 islands analysis, war timeline)",
+      "Al Jazeera (40+ nation coalition, Iran ceasefire position, Day 34 coverage)",
+      "CNBC (IEA April supply warning, Brent pricing, ceasefire demands, Trump speech recap)",
+      "CNN (Day 33-34 liveblog, casualty toll updates)",
+      "NPR (Trump address, Iran war Day 36 context)",
+      "Washington Post (UK summit 40+ nations details)",
+      "Gulf News (Day 34 summary, Iran strikes update)",
+      "Euronews (40+ nation coalition launch, Hormuz summit)",
+      "France 24 (Rubio: weeks not months)",
       "CBS News (Trump primetime speech, CENTCOM targets)",
-      "CNBC (Brent pricing, OPEC+ Apr 5 context)",
-      "Irish Times / RTE (Ryanair jet fuel supply warning)",
-      "Gulf News (maritime data, regional attacks)",
-      "Insurance Journal (war risk premiums, AQUA 1 incident)",
-      "UPI (UK Hormuz summit details)"
+      "Fortune (oil prices $111.69 Apr 2, $104.86 Apr 1)",
+      "Military.com (UK gathers 40+ countries for Hormuz)"
     ],
     "tier3": [
-      "ChemOrbis (LyondellBasell FM on European polyolefins)",
-      "Polymer Update (LyondellBasell FM details)",
-      "Seoul Economic Daily (Lotte Chemical, naphtha crisis)",
-      "KED Global (South Korea petrochemical idling)",
-      "ActionForex (Brent-WTI spread analysis)",
-      "Investing.com (Ryanair 25% fuel risk)",
-      "FinancialContent (naphtha $1,000/mt crisis)",
-      "C&EN (Hormuz pinch worsens for Asian chemical makers)"
+      "Seoul Economic Daily (Lotte Chemical Yeosu restart May 29)",
+      "Argus Media (YNCC-Lotte merger review, South Korea restructuring)",
+      "Wikipedia (Timeline of 2026 Iran war, Economic impact, Hormuz crisis)",
+      "Britannica (2026 Iran war overview)"
     ]
   },
   "validationChecklist": {
@@ -58,15 +53,15 @@
     "syntaxValid": true,
     "statusEnumsValid": true,
     "lngNotesWhereApplicable": true,
-    "validationScript": "109/109 checks passed"
+    "validationScript": "112/112 checks passed"
   },
   "keyRisks": [
-    "DIPLOMACY DERAILED: Kharazi (Pakistan/Vance mediation lead) injured in Tehran strike — key channel disrupted",
-    "APR 6 DEADLINE: Trump deadline to reopen Hormuz or escalate to power plants, desalination, Kharg Island",
-    "OPEC+ APR 5: Most consequential meeting since formation — stick with, reverse, or expand 206 kb/d increase?",
+    "APR 6 DEADLINE (3 DAYS): Trump deadline to reopen Hormuz or escalate to power plants, desalination, Kharg Island",
+    "OPEC+ APR 5 (2 DAYS): Most consequential meeting since formation — stick with 206 kb/d increase or reverse?",
+    "IEA SECOND RELEASE: Birol assessing daily/hourly if second coordinated release needed; jet fuel/diesel shortages hitting Asia, reaching Europe Apr-May",
+    "SUPPLY DOUBLING: 4.5-5 mb/d loss doubling by mid-April — largest crude supply disruption in history",
+    "DIPLOMACY STALLED: Iran demands guaranteed ceasefire; Kharazi (mediation lead) injured Apr 1; no direct US-Iran talks",
     "DUAL CHOKEPOINT: Houthi Bab al-Mandeb closure threat + Hormuz = near-total ME export blockade",
-    "JET FUEL: Ryanair warns 25% of European jet fuel at risk from May; possible flight cancellations Jun-Aug",
-    "WAR PREMIUM: Brent-WTI spread at 2026 lows — market pricing in de-escalation that may not materialize",
-    "PETROCHEMICAL CASCADE: LyondellBasell FM joins FPCC, Formosa Chemicals, YNCC, PCS in naphtha/polymer crisis"
+    "PETROCHEMICAL CASCADE: Naphtha past $1,000/mt; cracker shutdowns cascading across Asia and Europe"
   ]
 }
