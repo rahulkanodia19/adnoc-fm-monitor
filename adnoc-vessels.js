@@ -13,7 +13,7 @@
     sortCol: 'name',
     sortAsc: true,
     filter: '',
-    areaFilter: 'all',
+    areaFilter: 'Strait of Hormuz',
     statusFilter: 'all',
     boundFilter: 'all',
     // Chartered table state

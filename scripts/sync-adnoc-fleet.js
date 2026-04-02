@@ -143,23 +143,40 @@ function deriveStatus(speed, state) {
 
 // --- Port name → country lookup ---
 const PORT_COUNTRY_MAP = {
+  // UAE
   'fujairah': 'UAE', 'ruwais': 'UAE', 'jebel ali': 'UAE', 'das island': 'UAE',
   'khalifa port': 'UAE', 'abu dhabi': 'UAE', 'musaffah': 'UAE', 'khor fakkan': 'UAE',
-  'zirku': 'UAE', 'umm al nar': 'UAE', 'hamriyah': 'UAE',
-  'singapore': 'Singapore', 'rotterdam': 'Netherlands', 'amsterdam': 'Netherlands',
-  'mumbai': 'India', 'kandla': 'India', 'mundra': 'India', 'mangalore': 'India',
-  'vizag': 'India', 'paradip': 'India', 'haldia': 'India', 'cochin': 'India',
+  'zirku': 'UAE', 'umm al nar': 'UAE', 'hamriyah': 'UAE', 'jebel dhanna': 'UAE',
+  'united arab emirates': 'UAE',
+  // Asia
+  'singapore': 'Singapore', 'mumbai': 'India', 'kandla': 'India', 'mundra': 'India',
+  'mangalore': 'India', 'vizag': 'India', 'paradip': 'India', 'haldia': 'India',
+  'cochin': 'India', 'sikka': 'India',
   'karachi': 'Pakistan', 'port qasim': 'Pakistan',
+  'yokohama': 'Japan', 'chiba': 'Japan', 'himeji': 'Japan',
+  'ulsan': 'South Korea', 'daesan': 'South Korea',
+  'ningbo': 'China', 'shanghai': 'China', 'qingdao': 'China', 'yantai': 'China',
+  'fujian': 'China', 'cjk': 'China',
+  'cilegon': 'Indonesia', 'galle': 'Sri Lanka',
+  // Middle East
   'ras tanura': 'Saudi Arabia', 'jubail': 'Saudi Arabia', 'yanbu': 'Saudi Arabia',
   'ras laffan': 'Qatar', 'mesaieed': 'Qatar',
-  'bahia blanca': 'Argentina', 'barcarena': 'Brazil', 'santos': 'Brazil',
-  'richards bay': 'South Africa', 'durban': 'South Africa',
-  'sohar': 'Oman', 'salalah': 'Oman', 'muscat': 'Oman', 'duqm': 'Oman',
+  'sohar': 'Oman', 'salalah': 'Oman', 'muscat': 'Oman', 'duqm': 'Oman', 'qalhat': 'Oman',
   'bandar abbas': 'Iran', 'kharg island': 'Iran', 'basra': 'Iraq',
-  'skikda': 'Algeria', 'suez': 'Egypt', 'jeddah': 'Saudi Arabia',
   'bahrain': 'Bahrain', 'mina al ahmadi': 'Kuwait', 'shuwaikh': 'Kuwait',
-  'yokohama': 'Japan', 'chiba': 'Japan', 'ulsan': 'South Korea',
-  'ningbo': 'China', 'shanghai': 'China', 'qingdao': 'China',
+  // Europe
+  'rotterdam': 'Netherlands', 'amsterdam': 'Netherlands',
+  'piombino': 'Italy', 'antikyra port': 'Greece', 'las palmas': 'Spain', 'spain': 'Spain',
+  // Africa
+  'skikda': 'Algeria', 'suez': 'Egypt', 'port said': 'Egypt', 'jeddah': 'Saudi Arabia',
+  'richards bay': 'South Africa', 'durban': 'South Africa', 'cape town': 'South Africa',
+  'dangote': 'Nigeria', 'rovuma basin': 'Mozambique',
+  // Americas
+  'bahia blanca': 'Argentina', 'barcarena': 'Brazil', 'santos': 'Brazil',
+  'angra dos reis': 'Brazil', 'brazil': 'Brazil',
+  'houston': 'USA', 'southern louisiana': 'USA', 'padd 3': 'USA',
+  'vancouver': 'Canada', 'kitimat': 'Canada',
+  'callao': 'Peru', 'freeport bahamas': 'Bahamas', 'caribbean sea': 'Caribbean',
   // AIS short codes
   'aerws': 'UAE', 'ae fjr': 'UAE', 'ae rws': 'UAE', 'rws': 'UAE', 'fjr': 'UAE',
   'kp': 'UAE', 'sg sin': 'Singapore', 'nlrtm': 'Netherlands', 'dzski': 'Algeria',
