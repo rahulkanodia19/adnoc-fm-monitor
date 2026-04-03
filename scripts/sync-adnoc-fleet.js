@@ -679,10 +679,13 @@ async function main() {
     syncTimestamp: new Date().toISOString(),
   };
 
-  fs.writeFileSync(
-    path.join(OUT_DIR, 'adnoc-fleet-data.json'),
-    JSON.stringify(output, null, 2)
-  );
+  // Backup previous data before overwriting
+  const fleetDataPath = path.join(OUT_DIR, 'adnoc-fleet-data.json');
+  if (fs.existsSync(fleetDataPath)) {
+    fs.copyFileSync(fleetDataPath, path.join(OUT_DIR, 'adnoc-fleet-data.prev.json'));
+  }
+
+  fs.writeFileSync(fleetDataPath, JSON.stringify(output, null, 2));
 
   console.log(`\n[adnoc-fleet] Results:`);
   console.log(`  Total: ${processed.length} vessels`);
@@ -787,10 +790,11 @@ async function main() {
     syncTimestamp: new Date().toISOString(),
   };
 
-  fs.writeFileSync(
-    path.join(OUT_DIR, 'adnoc-chartered-data.json'),
-    JSON.stringify(charteredOutput, null, 2)
-  );
+  const charteredDataPath = path.join(OUT_DIR, 'adnoc-chartered-data.json');
+  if (fs.existsSync(charteredDataPath)) {
+    fs.copyFileSync(charteredDataPath, path.join(OUT_DIR, 'adnoc-chartered-data.prev.json'));
+  }
+  fs.writeFileSync(charteredDataPath, JSON.stringify(charteredOutput, null, 2));
 
   console.log(`[adnoc-fleet] Chartered/FOB: ${chartered.length} vessels at ADNOC ports`);
   console.log(`  By port:`, charteredByPort);

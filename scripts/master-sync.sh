@@ -211,6 +211,8 @@ backup_data() {
   cp soh-data/vessel-matrix.json .sync-backup/soh-data/ 2>/dev/null || true
   cp soh-data/adnoc-vessels.json .sync-backup/soh-data/ 2>/dev/null || true
   cp soh-data/map-positions.json .sync-backup/soh-data/ 2>/dev/null || true
+  cp soh-data/adnoc-fleet-data.json .sync-backup/soh-data/ 2>/dev/null || true
+  cp soh-data/adnoc-chartered-data.json .sync-backup/soh-data/ 2>/dev/null || true
 }
 
 restore_pipeline() {
@@ -238,6 +240,10 @@ restore_pipeline() {
         log "  Restoring data.js from backup (SPR + News/FM both failed)"
         cp .sync-backup/data.js data.js 2>/dev/null || true
       fi ;;
+    adnoc)
+      log "  Restoring adnoc fleet data from backup"
+      cp .sync-backup/soh-data/adnoc-fleet-data.json soh-data/ 2>/dev/null || true
+      cp .sync-backup/soh-data/adnoc-chartered-data.json soh-data/ 2>/dev/null || true ;;
     awrp)
       # Only restore data.js if news_fm and spr also failed
       if [ "${PIPELINE_STATUS[news_fm]}" != "ok" ] && [ "${PIPELINE_STATUS[spr]}" != "ok" ]; then

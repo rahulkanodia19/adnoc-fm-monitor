@@ -8,17 +8,24 @@ You are an energy intelligence analyst updating the ADNOC Force Majeure & Geopol
 
 Read the file `data.js` in the project root. Note the schema, the current countries, FM declarations, and shutdowns. This is your baseline.
 
-## Step 2: Save previous data
+## Step 2: Save previous data (CRITICAL — do NOT skip)
 
-Before making ANY changes, save the current data to `data-previous.json` as a full backup. Read the complete `data.js` file and write `data-previous.json` with the full data arrays (not just IDs — the complete objects):
+Before making ANY changes, you MUST save a full backup of the current data. This is a safety requirement.
+
+1. Read the ENTIRE `data.js` file using the Read tool
+2. Extract the full arrays: COUNTRY_STATUS_DATA, FM_DECLARATIONS_DATA, SHUTDOWNS_NO_FM_DATA, LAST_UPDATED
+3. Write `data-previous.json` with the complete data (NOT empty arrays — verify the file has content > 1KB after writing)
+
 ```json
 {
   "lastUpdated": "<value of LAST_UPDATED>",
-  "countryStatus": [<full COUNTRY_STATUS_DATA array>],
+  "countryStatus": [<full COUNTRY_STATUS_DATA array — 9 countries>],
   "fmDeclarations": [<full FM_DECLARATIONS_DATA array>],
   "shutdowns": [<full SHUTDOWNS_NO_FM_DATA array>]
 }
 ```
+
+**Verification:** After writing, check that `data-previous.json` has `countryStatus` with 9 entries. If it has 0 entries or is empty, you have a bug — re-read data.js and try again.
 
 ## Step 3: Search for latest updates
 
