@@ -1,184 +1,20 @@
 {
   "sinceMidnight": "2026-04-03",
-  "syncTimestamp": "2026-04-03T06:26:10.931Z",
-  "exitedVessels": [
-    {
-      "name": "Gas Fate",
-      "imo": "9147394",
-      "type": "Handy",
-      "commodity": "lpg",
-      "flag": "Panama",
-      "destination": "",
-      "deadWeight": 17779,
-      "speed": 11,
-      "state": "loaded",
-      "controller": "Geogas"
-    },
-    {
-      "name": "Uma",
-      "imo": "9258870",
-      "type": "Aframax/LR2",
-      "commodity": "liquids",
-      "flag": "Barbados",
-      "destination": "Kharg Island",
-      "deadWeight": 114761,
-      "speed": 0,
-      "state": "ballast",
-      "controller": ""
-    }
-  ],
-  "enteredVessels": [
-    {
-      "name": "Petunia",
-      "imo": "9820336",
-      "type": "MR",
-      "commodity": "liquids",
-      "flag": "Iran (Islamic Republic of)",
-      "destination": "",
-      "deadWeight": 49288,
-      "speed": 6.3,
-      "state": "loaded",
-      "controller": "Islamic Republic of Iran Shipping Lines "
-    }
-  ],
-  "exitedCount": 2,
-  "enteredCount": 1,
+  "syncTimestamp": "2026-04-03T21:53:09.728Z",
+  "exitedVessels": [],
+  "enteredVessels": [],
+  "exitedCount": 0,
+  "enteredCount": 0,
   "tanker_exit": 0,
   "bulk_exit": 0,
   "container_exit": 0,
-  "other_exit": 2,
+  "other_exit": 0,
   "tanker_enter": 0,
   "bulk_enter": 0,
   "container_enter": 0,
-  "other_enter": 1,
-  "omanEntered": [
-    {
-      "name": "Camelia",
-      "imo": "9070072",
-      "type": "SGC",
-      "commodity": "lpg",
-      "flag": "Saint Kitts and Nevis",
-      "destination": "",
-      "deadWeight": 5632,
-      "speed": 8.1,
-      "state": "ballast",
-      "controller": "Anthony Veder"
-    },
-    {
-      "name": "Gas Fate",
-      "imo": "9147394",
-      "type": "Handy",
-      "commodity": "lpg",
-      "flag": "Panama",
-      "destination": "",
-      "deadWeight": 17779,
-      "speed": 11,
-      "state": "loaded",
-      "controller": "Geogas"
-    },
-    {
-      "name": "Berbera Star 7",
-      "imo": "9166156",
-      "type": "Intermediate Tankers",
-      "commodity": "liquids",
-      "flag": "Comoros",
-      "destination": "",
-      "deadWeight": 15748,
-      "speed": 9.1,
-      "state": "ballast",
-      "controller": ""
-    },
-    {
-      "name": "Lpg Sevan",
-      "imo": "9177806",
-      "type": "MGC",
-      "commodity": "lpg",
-      "flag": "Panama",
-      "destination": "Khor Fakkan Anchorage",
-      "deadWeight": 29121,
-      "speed": 3.7,
-      "state": "ballast",
-      "controller": ""
-    },
-    {
-      "name": "Uma",
-      "imo": "9258870",
-      "type": "Aframax/LR2",
-      "commodity": "liquids",
-      "flag": "Barbados",
-      "destination": "Kharg Island",
-      "deadWeight": 114761,
-      "speed": 0,
-      "state": "ballast",
-      "controller": ""
-    },
-    {
-      "name": "Delnavaz",
-      "imo": "9387803",
-      "type": "Supramax",
-      "commodity": "dry",
-      "flag": "Iran (Islamic Republic of)",
-      "destination": "",
-      "deadWeight": 53412,
-      "speed": 11.3,
-      "state": "ballast",
-      "controller": "Sapid"
-    },
-    {
-      "name": "Atlantic Harmony",
-      "imo": "9613812",
-      "type": "Handysize",
-      "commodity": "dry",
-      "flag": "Hong Kong",
-      "destination": "Jebel Ali",
-      "deadWeight": 31776,
-      "speed": 9.6,
-      "state": "loaded",
-      "controller": ""
-    },
-    {
-      "name": "Boccadasse",
-      "imo": "9829899",
-      "type": "Aframax/LR2",
-      "commodity": "liquids",
-      "flag": "Marshall Islands",
-      "destination": "Fujairah",
-      "deadWeight": 109991,
-      "speed": 13,
-      "state": "ballast",
-      "controller": "Oceonix Services"
-    }
-  ],
-  "omanLeft": [
-    {
-      "name": "Maple Ocean",
-      "imo": "1043011",
-      "type": "Short Sea Tankers",
-      "commodity": "liquids",
-      "flag": "Liberia"
-    },
-    {
-      "name": "Armathia",
-      "imo": "9427031",
-      "type": "Panamax",
-      "commodity": "dry",
-      "flag": "Marshall Islands"
-    },
-    {
-      "name": "Rhine",
-      "imo": "9502374",
-      "type": "Short Sea Tankers",
-      "commodity": "liquids",
-      "flag": "Singapore"
-    },
-    {
-      "name": "Petunia",
-      "imo": "9820336",
-      "type": "MR",
-      "commodity": "liquids",
-      "flag": "Iran (Islamic Republic of)"
-    }
-  ],
-  "omanEnteredCount": 8,
-  "omanLeftCount": 4
+  "other_enter": 0,
+  "omanEntered": [],
+  "omanLeft": [],
+  "omanEnteredCount": 0,
+  "omanLeftCount": 0
 }

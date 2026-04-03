@@ -8,39 +8,39 @@
     },
     {
       "label": "MR",
-      "total": 124,
+      "total": 123,
       "ballast": 69,
-      "laden": 55
+      "laden": 54
     },
     {
       "label": "VLCC",
-      "total": 115,
-      "ballast": 43,
-      "laden": 72
+      "total": 116,
+      "ballast": 39,
+      "laden": 77
     },
     {
       "label": "Handysize",
-      "total": 105,
-      "ballast": 64,
-      "laden": 41
+      "total": 108,
+      "ballast": 66,
+      "laden": 42
     },
     {
       "label": "Supramax",
-      "total": 71,
-      "ballast": 34,
-      "laden": 37
+      "total": 72,
+      "ballast": 36,
+      "laden": 36
     },
     {
       "label": "Intermediate Tankers",
-      "total": 61,
+      "total": 62,
       "ballast": 19,
-      "laden": 42
+      "laden": 43
     },
     {
       "label": "Panamax",
       "total": 52,
-      "ballast": 35,
-      "laden": 17
+      "ballast": 34,
+      "laden": 18
     },
     {
       "label": "Aframax/LR2",
@@ -51,26 +51,26 @@
     {
       "label": "Panamax/LR1",
       "total": 46,
-      "ballast": 19,
-      "laden": 27
+      "ballast": 20,
+      "laden": 26
     },
     {
       "label": "Handy/MR1",
       "total": 40,
-      "ballast": 17,
-      "laden": 23
+      "ballast": 18,
+      "laden": 22
     },
     {
       "label": "Kamsarmax",
       "total": 39,
-      "ballast": 26,
-      "laden": 13
+      "ballast": 27,
+      "laden": 12
     },
     {
       "label": "SGC",
       "total": 32,
-      "ballast": 27,
-      "laden": 5
+      "ballast": 28,
+      "laden": 4
     },
     {
       "label": "Suezmax/LR3",
@@ -79,22 +79,22 @@
       "laden": 21
     },
     {
+      "label": "VLGC",
+      "total": 28,
+      "ballast": 16,
+      "laden": 12
+    },
+    {
       "label": "Ultramax",
       "total": 28,
       "ballast": 7,
       "laden": 20
     },
     {
-      "label": "VLGC",
-      "total": 27,
-      "ballast": 15,
-      "laden": 12
-    },
-    {
       "label": "Handymax",
-      "total": 21,
+      "total": 22,
       "ballast": 11,
-      "laden": 10
+      "laden": 11
     },
     {
       "label": "MGC",
@@ -122,9 +122,9 @@
     },
     {
       "label": "Upper Conventional",
-      "total": 5,
+      "total": 6,
       "ballast": 1,
-      "laden": 4
+      "laden": 5
     },
     {
       "label": "Capesize",
@@ -151,6 +151,6 @@
       "laden": 1
     }
   ],
-  "total": 1039,
-  "syncTimestamp": "2026-04-03T06:26:10.931Z"
+  "total": 1047,
+  "syncTimestamp": "2026-04-03T21:53:09.728Z"
 }

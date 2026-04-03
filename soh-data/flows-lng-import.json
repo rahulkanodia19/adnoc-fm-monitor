@@ -5287,7 +5287,7 @@
           "datasetName": "flows",
           "values": {
             "volume": 367406,
-            "volume_gas": 209679764.56,
+            "volume_gas": 209679764.55999997,
             "mass": 166511.92682,
             "energy": 8934818.653586704
           }
@@ -5737,7 +5737,7 @@
           "datasetName": "flows",
           "values": {
             "volume": 890023,
-            "volume_gas": 508011996.35999995,
+            "volume_gas": 508011996.36,
             "mass": 408431.43492,
             "energy": 21349144.662125938
           }

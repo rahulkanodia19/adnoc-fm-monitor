@@ -1116,17 +1116,29 @@
     "date": "2026-04-03",
     "comparedTo": "2026-04-03",
     "gapDays": 0,
-    "exited": 2,
-    "entered": 1,
+    "exited": 10,
+    "entered": 3,
     "tanker_exit": 0,
     "bulk_exit": 0,
     "container_exit": 0,
-    "other_exit": 2,
-    "tanker_enter": 0,
+    "other_exit": 10,
+    "tanker_enter": 1,
     "bulk_enter": 0,
     "container_enter": 0,
-    "other_enter": 1,
+    "other_enter": 2,
     "exitedVessels": [
+      {
+        "name": "Sakai",
+        "imo": "9038763",
+        "type": "SGC",
+        "commodity": "lpg",
+        "flag": "Panama",
+        "destination": "Fujairah",
+        "deadWeight": 5150,
+        "speed": 7.9,
+        "state": "ballast",
+        "controller": "Marine Shipping Line"
+      },
       {
         "name": "Gas Fate",
         "imo": "9147394",
@@ -1135,9 +1147,33 @@
         "flag": "Panama",
         "destination": "",
         "deadWeight": 17779,
-        "speed": 11,
+        "speed": 11.6,
         "state": "loaded",
         "controller": "Geogas"
+      },
+      {
+        "name": "Danisa",
+        "imo": "9172739",
+        "type": "VLGC",
+        "commodity": "lpg",
+        "flag": "Panama",
+        "destination": "",
+        "deadWeight": 49723,
+        "speed": 8.9,
+        "state": "loaded",
+        "controller": "Pertamina"
+      },
+      {
+        "name": "Sohar LNG",
+        "imo": "9210816",
+        "type": "Lower Conventional",
+        "commodity": "lng",
+        "flag": "Panama",
+        "destination": "Qalhat",
+        "deadWeight": 71997,
+        "speed": 0.1,
+        "state": "ballast",
+        "controller": "ADNOC Gas"
       },
       {
         "name": "Uma",
@@ -1150,9 +1186,93 @@
         "speed": 0,
         "state": "ballast",
         "controller": ""
+      },
+      {
+        "name": "Bright Ocean",
+        "imo": "9301146",
+        "type": "Supramax",
+        "commodity": "dry",
+        "flag": "Panama",
+        "destination": "Sohar",
+        "deadWeight": 53702,
+        "speed": 1.6,
+        "state": "ballast",
+        "controller": ""
+      },
+      {
+        "name": "Baskar",
+        "imo": "9405942",
+        "type": "Supramax",
+        "commodity": "dry",
+        "flag": "Iran (Islamic Republic of)",
+        "destination": "Singapore",
+        "deadWeight": 53565,
+        "speed": 8.8,
+        "state": "loaded",
+        "controller": "Sapid"
+      },
+      {
+        "name": "Green Sanvi",
+        "imo": "9415686",
+        "type": "VLGC",
+        "commodity": "lpg",
+        "flag": "India",
+        "destination": "",
+        "deadWeight": 58811,
+        "speed": 13.2,
+        "state": "loaded",
+        "controller": "BPCL"
+      },
+      {
+        "name": "Batis",
+        "imo": "9465760",
+        "type": "Supramax",
+        "commodity": "dry",
+        "flag": "Iran (Islamic Republic of)",
+        "destination": "",
+        "deadWeight": 53100,
+        "speed": 8.4,
+        "state": "loaded",
+        "controller": "Sapid"
+      },
+      {
+        "name": "Habrut",
+        "imo": "9500730",
+        "type": "VLCC",
+        "commodity": "liquids",
+        "flag": "Marshall Islands",
+        "destination": "Ras Markaz",
+        "deadWeight": 319439,
+        "speed": 0.2,
+        "state": "loaded",
+        "controller": "Mercuria"
       }
     ],
     "enteredVessels": [
+      {
+        "name": "Royal H",
+        "imo": "9155341",
+        "type": "Handy",
+        "commodity": "lpg",
+        "flag": "Palau",
+        "destination": "",
+        "deadWeight": 18111,
+        "speed": 1.3,
+        "state": "ballast",
+        "controller": "Geogas"
+      },
+      {
+        "name": "Pacific Explorer",
+        "imo": "9571052",
+        "type": "Short Sea Tankers",
+        "commodity": "liquids",
+        "flag": "",
+        "destination": "",
+        "deadWeight": 0,
+        "speed": 0,
+        "state": "",
+        "controller": ""
+      },
       {
         "name": "Petunia",
         "imo": "9820336",
@@ -1161,12 +1281,24 @@
         "flag": "Iran (Islamic Republic of)",
         "destination": "",
         "deadWeight": 49288,
-        "speed": 6.3,
+        "speed": 0,
         "state": "loaded",
         "controller": "Islamic Republic of Iran Shipping Lines "
       }
     ],
     "omanEntered": [
+      {
+        "name": "Sakai",
+        "imo": "9038763",
+        "type": "SGC",
+        "commodity": "lpg",
+        "flag": "Panama",
+        "destination": "Fujairah",
+        "deadWeight": 5150,
+        "speed": 7.9,
+        "state": "ballast",
+        "controller": "Marine Shipping Line"
+      },
       {
         "name": "Camelia",
         "imo": "9070072",
@@ -1175,9 +1307,21 @@
         "flag": "Saint Kitts and Nevis",
         "destination": "",
         "deadWeight": 5632,
-        "speed": 8.1,
+        "speed": 0.3,
         "state": "ballast",
         "controller": "Anthony Veder"
+      },
+      {
+        "name": "Momentum Phonix",
+        "imo": "9113874",
+        "type": "Handysize",
+        "commodity": "dry",
+        "flag": "Sierra Leone",
+        "destination": "Fujairah",
+        "deadWeight": 23712,
+        "speed": 13.2,
+        "state": "ballast",
+        "controller": ""
       },
       {
         "name": "Gas Fate",
@@ -1187,7 +1331,7 @@
         "flag": "Panama",
         "destination": "",
         "deadWeight": 17779,
-        "speed": 11,
+        "speed": 11.6,
         "state": "loaded",
         "controller": "Geogas"
       },
@@ -1197,11 +1341,23 @@
         "type": "Intermediate Tankers",
         "commodity": "liquids",
         "flag": "Comoros",
-        "destination": "",
+        "destination": "Fujairah",
         "deadWeight": 15748,
-        "speed": 9.1,
+        "speed": 0,
         "state": "ballast",
         "controller": ""
+      },
+      {
+        "name": "Danisa",
+        "imo": "9172739",
+        "type": "VLGC",
+        "commodity": "lpg",
+        "flag": "Panama",
+        "destination": "",
+        "deadWeight": 49723,
+        "speed": 8.9,
+        "state": "loaded",
+        "controller": "Pertamina"
       },
       {
         "name": "Lpg Sevan",
@@ -1211,7 +1367,43 @@
         "flag": "Panama",
         "destination": "Khor Fakkan Anchorage",
         "deadWeight": 29121,
-        "speed": 3.7,
+        "speed": 0,
+        "state": "ballast",
+        "controller": ""
+      },
+      {
+        "name": "Sohar LNG",
+        "imo": "9210816",
+        "type": "Lower Conventional",
+        "commodity": "lng",
+        "flag": "Panama",
+        "destination": "Qalhat",
+        "deadWeight": 71997,
+        "speed": 0.1,
+        "state": "ballast",
+        "controller": "ADNOC Gas"
+      },
+      {
+        "name": "Farouk M",
+        "imo": "9214848",
+        "type": "Handymax",
+        "commodity": "dry",
+        "flag": "Barbados",
+        "destination": "New Hamad",
+        "deadWeight": 46786,
+        "speed": 11.6,
+        "state": "loaded",
+        "controller": ""
+      },
+      {
+        "name": "Gas Endurance",
+        "imo": "9240419",
+        "type": "VLGC",
+        "commodity": "lpg",
+        "flag": "Gabon",
+        "destination": "Fujairah",
+        "deadWeight": 54998,
+        "speed": 0.1,
         "state": "ballast",
         "controller": ""
       },
@@ -1228,6 +1420,42 @@
         "controller": ""
       },
       {
+        "name": "Lady Sacha",
+        "imo": "9299460",
+        "type": "Handysize",
+        "commodity": "dry",
+        "flag": "Barbados",
+        "destination": "Sohar",
+        "deadWeight": 27782,
+        "speed": 12.9,
+        "state": "ballast",
+        "controller": ""
+      },
+      {
+        "name": "Bright Ocean",
+        "imo": "9301146",
+        "type": "Supramax",
+        "commodity": "dry",
+        "flag": "Panama",
+        "destination": "Sohar",
+        "deadWeight": 53702,
+        "speed": 1.6,
+        "state": "ballast",
+        "controller": ""
+      },
+      {
+        "name": "Ocean Wealth",
+        "imo": "9310666",
+        "type": "Supramax",
+        "commodity": "dry",
+        "flag": "Panama",
+        "destination": "Fujairah",
+        "deadWeight": 53169,
+        "speed": 12,
+        "state": "ballast",
+        "controller": "Essar"
+      },
+      {
         "name": "Delnavaz",
         "imo": "9387803",
         "type": "Supramax",
@@ -1235,9 +1463,93 @@
         "flag": "Iran (Islamic Republic of)",
         "destination": "",
         "deadWeight": 53412,
-        "speed": 11.3,
+        "speed": 3.7,
         "state": "ballast",
         "controller": "Sapid"
+      },
+      {
+        "name": "Baskar",
+        "imo": "9405942",
+        "type": "Supramax",
+        "commodity": "dry",
+        "flag": "Iran (Islamic Republic of)",
+        "destination": "Singapore",
+        "deadWeight": 53565,
+        "speed": 8.8,
+        "state": "loaded",
+        "controller": "Sapid"
+      },
+      {
+        "name": "Green Sanvi",
+        "imo": "9415686",
+        "type": "VLGC",
+        "commodity": "lpg",
+        "flag": "India",
+        "destination": "",
+        "deadWeight": 58811,
+        "speed": 13.2,
+        "state": "loaded",
+        "controller": "BPCL"
+      },
+      {
+        "name": "Batis",
+        "imo": "9465760",
+        "type": "Supramax",
+        "commodity": "dry",
+        "flag": "Iran (Islamic Republic of)",
+        "destination": "",
+        "deadWeight": 53100,
+        "speed": 8.4,
+        "state": "loaded",
+        "controller": "Sapid"
+      },
+      {
+        "name": "Gunes K.",
+        "imo": "9479553",
+        "type": "Intermediate Tankers",
+        "commodity": "liquids",
+        "flag": "Malta",
+        "destination": "Fujairah",
+        "deadWeight": 19987,
+        "speed": 12.1,
+        "state": "ballast",
+        "controller": ""
+      },
+      {
+        "name": "Eurospirit",
+        "imo": "9480837",
+        "type": "VLCC",
+        "commodity": "liquids",
+        "flag": "Liberia",
+        "destination": "Fujairah",
+        "deadWeight": 320105,
+        "speed": 13.2,
+        "state": "ballast",
+        "controller": "Eurotankers"
+      },
+      {
+        "name": "Habrut",
+        "imo": "9500730",
+        "type": "VLCC",
+        "commodity": "liquids",
+        "flag": "Marshall Islands",
+        "destination": "Ras Markaz",
+        "deadWeight": 319439,
+        "speed": 0.2,
+        "state": "loaded",
+        "controller": "Mercuria"
+      },
+      {
+        "name": "Sibi",
+        "imo": "9519224",
+        "type": "Handysize",
+        "commodity": "dry",
+        "flag": "Pakistan",
+        "destination": "Fujairah",
+        "deadWeight": 28442,
+        "speed": 10,
+        "state": "loaded",
+        "controller": "PNSC"
       },
       {
         "name": "Atlantic Harmony",
@@ -1245,7 +1557,7 @@
         "type": "Handysize",
         "commodity": "dry",
         "flag": "Hong Kong",
-        "destination": "Jebel Ali",
+        "destination": "Fujairah",
         "deadWeight": 31776,
         "speed": 9.6,
         "state": "loaded",
@@ -1259,9 +1571,21 @@
         "flag": "Marshall Islands",
         "destination": "Fujairah",
         "deadWeight": 109991,
-        "speed": 13,
+        "speed": 14.9,
         "state": "ballast",
         "controller": "Oceonix Services"
+      },
+      {
+        "name": "Kongtong",
+        "imo": "9958664",
+        "type": "Upper Conventional",
+        "commodity": "lng",
+        "flag": "Hong Kong",
+        "destination": "",
+        "deadWeight": 80000,
+        "speed": 0,
+        "state": "loaded",
+        "controller": "PetroChina"
       }
     ],
     "omanLeft": [
@@ -1271,6 +1595,20 @@
         "type": "Short Sea Tankers",
         "commodity": "liquids",
         "flag": "Liberia"
+      },
+      {
+        "name": "Royal H",
+        "imo": "9155341",
+        "type": "Handy",
+        "commodity": "lpg",
+        "flag": "Palau"
+      },
+      {
+        "name": "Taryn Eve",
+        "imo": "9256925",
+        "type": "MR",
+        "commodity": "liquids",
+        "flag": "India"
       },
       {
         "name": "Armathia",
@@ -1287,6 +1625,13 @@
         "flag": "Singapore"
       },
       {
+        "name": "Pacific Explorer",
+        "imo": "9571052",
+        "type": "Short Sea Tankers",
+        "commodity": "liquids",
+        "flag": "Palau"
+      },
+      {
         "name": "Petunia",
         "imo": "9820336",
         "type": "MR",
@@ -1294,5 +1639,24 @@
         "flag": "Iran (Islamic Republic of)"
       }
     ]
+  },
+  {
+    "date": "2026-04-04",
+    "comparedTo": "2026-04-03",
+    "gapDays": 1,
+    "exited": 0,
+    "entered": 0,
+    "tanker_exit": 0,
+    "bulk_exit": 0,
+    "container_exit": 0,
+    "other_exit": 0,
+    "tanker_enter": 0,
+    "bulk_enter": 0,
+    "container_enter": 0,
+    "other_enter": 0,
+    "exitedVessels": [],
+    "enteredVessels": [],
+    "omanEntered": [],
+    "omanLeft": []
   }
 ]

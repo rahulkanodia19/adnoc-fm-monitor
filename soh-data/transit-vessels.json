@@ -1,34 +1,6 @@
 {
   "vessels": [
     {
-      "name": "Dhalkut",
-      "imo": "9888601",
-      "mmsi": "538009085",
-      "vesselTypeClass": "VLCC",
-      "state": "loaded",
-      "flagName": "Marshall Islands",
-      "deadWeight": 299997,
-      "commodityTypes": [
-        "liquids"
-      ],
-      "capacity": 339688,
-      "speed": 11,
-      "course": 115,
-      "lat": 26.441744,
-      "lng": 56.492493,
-      "destination": "Ras Markaz",
-      "destinationEta": "2026-04-04T00:01:00",
-      "aisDestination": null,
-      "product": "arab heavy",
-      "controller": "CNPC",
-      "lastPortCall": {
-        "start": "2026-04-02T08:00:00",
-        "end": "2026-04-02T08:00:00"
-      },
-      "transitDirection": "exiting",
-      "isTransiting": true
-    },
-    {
       "name": "Yas Sky",
       "imo": "9145982",
       "mmsi": "351495000",
@@ -54,83 +26,112 @@
       "isTransiting": true
     },
     {
-      "name": "Danisa",
-      "imo": "9172739",
-      "mmsi": "352004406",
-      "vesselTypeClass": "VLGC",
-      "state": "loaded",
-      "flagName": "Panama",
-      "deadWeight": 49723,
-      "commodityTypes": [
-        "lpg"
-      ],
-      "capacity": 76929,
-      "speed": 7.3,
-      "course": 40,
-      "lat": 26.74243,
-      "lng": 56.121086,
-      "aisDestination": null,
-      "product": "Butane",
-      "controller": "Pertamina",
-      "lastPortCall": {
-        "start": "2026-03-30T00:00:00",
-        "end": "2026-03-31T00:00:00"
-      },
-      "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
-      "name": "Sohar LNG",
-      "imo": "9210816",
-      "mmsi": "357186000",
-      "vesselTypeClass": "Lower Conventional",
+      "name": "Star Line",
+      "imo": "9237618",
+      "mmsi": "306884000",
+      "vesselTypeClass": "Aframax/LR2",
       "state": "ballast",
       "flagName": "Panama",
-      "deadWeight": 71997,
+      "deadWeight": 105716,
       "commodityTypes": [
-        "lng"
+        "liquids"
       ],
-      "capacity": 137248,
-      "speed": 12.1,
-      "course": 43,
-      "lat": 26.325439,
-      "lng": 56.230206,
-      "destination": "Qalhat",
-      "destinationEta": "2026-04-04T03:00:00",
+      "capacity": 115602,
+      "speed": 8.3,
+      "course": 235,
+      "lat": 26.598833,
+      "lng": 55.977665,
+      "destination": "Kharg Island",
+      "destinationEta": "2026-04-05T15:00:00",
       "aisDestination": null,
-      "product": "lng",
-      "controller": "ADNOC Gas",
+      "product": "Iran",
+      "controller": "HEIDMAR INC",
       "lastPortCall": {
-        "start": "2026-04-02T07:19:00",
-        "end": "2026-04-02T07:19:00"
+        "start": "2026-04-02T00:00:00",
+        "end": "2026-04-03T00:00:00"
       },
-      "transitDirection": "entering",
+      "transitDirection": "unknown",
       "isTransiting": true
     },
     {
-      "name": "Liao Fan",
-      "imo": "9228021",
-      "mmsi": "372468000",
+      "name": "Uhud",
+      "imo": "9254939",
+      "mmsi": "370949000",
+      "vesselTypeClass": "MR",
+      "state": "ballast",
+      "flagName": "Panama",
+      "deadWeight": 45987,
+      "commodityTypes": [
+        "liquids"
+      ],
+      "capacity": 51460,
+      "speed": 9.8,
+      "course": 107,
+      "lat": 25.507902,
+      "lng": 56.546928,
+      "destination": "Fujairah",
+      "destinationEta": "2026-04-03T15:00:08.452055",
+      "aisDestination": null,
+      "product": "Clean petroleum products",
+      "lastPortCall": {
+        "start": "2026-03-22T07:07:03",
+        "end": "2026-03-22T07:07:03"
+      },
+      "transitDirection": "exiting",
+      "isTransiting": true
+    },
+    {
+      "name": "Batis",
+      "imo": "9465760",
+      "mmsi": "422040500",
       "vesselTypeClass": "Supramax",
-      "state": "ballast",
-      "flagName": "Panama",
-      "deadWeight": 50949,
+      "state": "loaded",
+      "flagName": "Iran (Islamic Republic of)",
+      "deadWeight": 53100,
       "commodityTypes": [
         "dry"
       ],
-      "capacity": 49895,
-      "speed": 3.2,
-      "course": 137,
-      "lat": 25.607454,
-      "lng": 56.440807,
+      "capacity": 51958,
+      "speed": 8.4,
+      "course": 139,
+      "lat": 26.727633,
+      "lng": 56.627308,
       "aisDestination": null,
-      "product": "Steel Pipes",
-      "controller": "Portline",
+      "product": "Steel",
+      "controller": "Sapid",
       "lastPortCall": {
-        "start": "2026-03-11T08:19:16",
-        "end": "2026-03-17T21:59:19"
+        "start": "2026-03-09T13:48:27",
+        "end": "2026-03-09T16:08:21"
       },
       "transitDirection": "exiting",
+      "isTransiting": true
+    },
+    {
+      "name": "Gcl Sabarmati",
+      "imo": "9481661",
+      "mmsi": "563136500",
+      "vesselTypeClass": "Baby Capes",
+      "state": "ballast",
+      "flagName": "Singapore",
+      "deadWeight": 106528,
+      "commodityTypes": [
+        "dry"
+      ],
+      "capacity": 104238,
+      "speed": 9.3,
+      "course": 229,
+      "lat": 25.595968,
+      "lng": 56.441582,
+      "destination": "Dibba Port",
+      "destinationEta": "2026-04-04T09:00:07.005371",
+      "aisDestination": null,
+      "product": "Medium CV",
+      "controller": "Synergy Marine Group",
+      "lastPortCall": {
+        "start": "2026-03-19T10:34:15",
+        "end": "2026-03-22T10:19:35"
+      },
+      "transitDirection": "unknown",
       "isTransiting": true
     },
     {
@@ -156,34 +157,6 @@
         "end": "2022-08-16T22:05:48"
       },
       "transitDirection": "exiting",
-      "isTransiting": true
-    },
-    {
-      "name": "Habrut",
-      "imo": "9500730",
-      "mmsi": "538004577",
-      "vesselTypeClass": "VLCC",
-      "state": "loaded",
-      "flagName": "Marshall Islands",
-      "deadWeight": 319439,
-      "commodityTypes": [
-        "liquids"
-      ],
-      "capacity": 348079,
-      "speed": 10,
-      "course": 51,
-      "lat": 26.223207,
-      "lng": 56.107346,
-      "destination": "Ras Markaz",
-      "destinationEta": "2026-04-04T10:00:00",
-      "aisDestination": null,
-      "product": "Murban",
-      "controller": "Mercuria",
-      "lastPortCall": {
-        "start": "2026-03-21T11:56:00",
-        "end": "2026-03-22T04:29:00"
-      },
-      "transitDirection": "entering",
       "isTransiting": true
     },
     {
@@ -340,11 +313,11 @@
     }
   ],
   "exitingCount": 4,
-  "enteringCount": 9,
-  "totalTransiting": 13,
+  "enteringCount": 6,
+  "totalTransiting": 12,
   "uaeExiting": 0,
   "uaeEntering": 0,
   "adnocExiting": 0,
-  "adnocEntering": 1,
-  "syncTimestamp": "2026-04-03T06:26:10.931Z"
+  "adnocEntering": 0,
+  "syncTimestamp": "2026-04-03T21:53:09.728Z"
 }

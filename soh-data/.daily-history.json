@@ -73,14 +73,26 @@
   },
   {
     "date": "2026-04-03",
-    "insideTotal": 705,
-    "insideBallast": 298,
-    "insideLaden": 406,
-    "outsideTotal": 334,
-    "outsideBallast": 215,
-    "outsideLaden": 119,
+    "insideTotal": 698,
+    "insideBallast": 301,
+    "insideLaden": 396,
+    "outsideTotal": 349,
+    "outsideBallast": 216,
+    "outsideLaden": 133,
     "adnocCount": 11,
-    "totalVessels": 1039,
-    "transitCount": 13
+    "totalVessels": 1047,
+    "transitCount": 12
+  },
+  {
+    "date": "2026-04-04",
+    "insideTotal": 698,
+    "insideBallast": 301,
+    "insideLaden": 396,
+    "outsideTotal": 349,
+    "outsideBallast": 216,
+    "outsideLaden": 133,
+    "adnocCount": 11,
+    "totalVessels": 1047,
+    "transitCount": 12
   }
 ]
