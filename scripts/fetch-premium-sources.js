@@ -135,10 +135,10 @@ async function fetchRystad(pages) {
     await navigate(ws, 'https://portal.rystadenergy.com/dashboards/detail/1047/0');
   }
 
-  // Wait extra for Power BI to render
+  // Wait for Power BI to render
   await new Promise(r => setTimeout(r, 5000));
 
-  // Take screenshot (Power BI content can't be extracted as text)
+  // Take screenshot
   const ssData = await screenshot(ws);
   const screenshotPath = path.join(OUT_DIR, '.rystad-dashboard.png');
   if (ssData) {
@@ -146,15 +146,29 @@ async function fetchRystad(pages) {
     console.log('[premium] Rystad: screenshot saved');
   }
 
-  // Also try to get any text outside the Power BI iframe
-  const content = await evaluate(ws, 'document.body?.innerText?.substring(0, 3000) || ""', 3);
-
   ws.close();
+
+  // Access Power BI iframe as separate CDP target for text extraction
+  let pbiContent = '';
+  const freshPages = await getPages();
+  const pbiPage = freshPages.find(p => p.url.includes('powerbi.com'));
+  if (pbiPage) {
+    console.log('[premium] Rystad: extracting Power BI content from iframe target...');
+    try {
+      const ws2 = await connectPage(pbiPage);
+      pbiContent = await evaluate(ws2, 'document.body?.innerText?.substring(0, 10000) || ""') || '';
+      ws2.close();
+      console.log('[premium] Rystad: Power BI text extracted (' + pbiContent.length + ' chars)');
+    } catch (e) {
+      console.log('[premium] Rystad: Power BI text extraction failed:', e.message);
+    }
+  }
+
   return {
     status: 'accessed',
     url: 'portal.rystadenergy.com/dashboards/detail/1047/0',
     screenshot: ssData ? '.rystad-dashboard.png' : null,
-    content: content || 'Power BI dashboard — see screenshot for visual data',
+    content: pbiContent || 'Power BI dashboard — see screenshot for visual data',
   };
 }
 
