@@ -67,7 +67,10 @@ fi
 echo "[sync-local] Running Claude Code sync..."
 cd "$PROJECT_DIR"
 
-claude -p "$(cat scripts/sync-prompt.md)
+# Build combined prompt (sync-prompt.md + local browser instructions)
+TMPFILE=$(mktemp)
+cat scripts/sync-prompt.md > "$TMPFILE"
+cat >> "$TMPFILE" << 'LOCALEOF'
 
 ADDITIONAL INSTRUCTIONS FOR LOCAL BROWSER-AUTHENTICATED RUN:
 You have access to a Chrome browser via the chrome-devtools MCP tools.
@@ -77,9 +80,12 @@ The browser is logged into premium data platforms. Use the browser to:
 3. Navigate to connect.spglobal.com/home — read news feed, search for 'force majeure' and 'Hormuz' for latest Platts assessments and CERA reports
 Also use WebSearch for publicly available data as usual.
 Combine browser-sourced data with web search results for the most comprehensive update.
-When citing data obtained via browser from premium sources, note the source clearly." \
+When citing data obtained via browser from premium sources, note the source clearly.
+LOCALEOF
+cat "$TMPFILE" | claude -p - \
   --allowedTools "Edit,Write,Read,WebSearch,WebFetch,Glob,Grep,Bash(git diff*),Bash(git status*),mcp__chrome-devtools*" \
   --max-turns 50
+rm -f "$TMPFILE"
 
 # 3. Verify sync completed
 if [ ! -f "$PROJECT_DIR/sync-log.json" ]; then

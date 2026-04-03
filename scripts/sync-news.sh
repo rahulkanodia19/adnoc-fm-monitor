@@ -55,7 +55,7 @@ fi
 
 # Run Claude agent
 echo "[sync-news] Running Claude agent (web search + premium sources)..."
-claude -p "$(cat scripts/sync-prompt.md)" \
+cat scripts/sync-prompt.md | claude -p - \
   --allowedTools "$TOOLS" \
   --max-turns 50
 
