@@ -1685,18 +1685,14 @@ function updateStats(activeTab) {
       break;
     }
     case 'country-matrix': {
-      // Countries don't have isNew at root — check events within each country
-      const countNewEvents = (arr, filterFn) =>
-        arr.filter(c => (!filterFn || filterFn(c)) && c.events && c.events.some(e => e.isNew)).length;
-      const cUpdated = COUNTRY_STATUS_DATA
-        .filter(c => c.events && c.events.some(e => e.isNew))
-        .map(c => c.country + ': ' + (c.metrics?.productionOffline || c.metrics?.headline || '').substring(0, 80))
-        .filter(h => h.length > 5);
+      const cRecent = COUNTRY_STATUS_DATA.filter(c => c.events && c.events.some(e => e.isNew));
+      const cNames = cRecent.map(c => c.country).join(', ');
+      const topHL = cRecent[0]?.metrics?.headline || '';
       stats = [
-        { label: 'Countries Monitored', value: COUNTRY_STATUS_DATA.length, color: 'text-blue-600', change: countNewEvents(COUNTRY_STATUS_DATA), subtitle: cUpdated[0] || '' },
-        { label: 'Critical / Conflict', value: COUNTRY_STATUS_DATA.filter(c => ['critical', 'conflict', 'high'].includes(c.status)).length, color: 'text-red-600', change: countNewEvents(COUNTRY_STATUS_DATA, c => ['critical', 'conflict', 'high'].includes(c.status)), subtitle: cUpdated[1] || '' },
-        { label: 'Elevated Risk', value: COUNTRY_STATUS_DATA.filter(c => c.status === 'elevated').length, color: 'text-amber-600', change: countNewEvents(COUNTRY_STATUS_DATA, c => c.status === 'elevated'), subtitle: cUpdated[2] || '' },
-        { label: 'Stable', value: COUNTRY_STATUS_DATA.filter(c => c.status === 'stable').length, color: 'text-emerald-600', change: countNewEvents(COUNTRY_STATUS_DATA, c => c.status === 'stable'), subtitle: cUpdated[3] || '' },
+        { label: 'Countries Monitored', value: COUNTRY_STATUS_DATA.length, color: 'text-blue-600', change: cRecent.length, subtitle: cNames ? cRecent.length + ' with new events: ' + cNames : '' },
+        { label: 'Critical / Conflict', value: COUNTRY_STATUS_DATA.filter(c => ['critical', 'conflict', 'high'].includes(c.status)).length, color: 'text-red-600', change: 0, subtitle: topHL.substring(0, 90) },
+        { label: 'Elevated Risk', value: COUNTRY_STATUS_DATA.filter(c => c.status === 'elevated').length, color: 'text-amber-600', change: 0 },
+        { label: 'Stable', value: COUNTRY_STATUS_DATA.filter(c => c.status === 'stable').length, color: 'text-emerald-600', change: 0 },
       ];
       break;
     }
@@ -1743,15 +1739,16 @@ function updateStats(activeTab) {
   container.innerHTML = stats.map(s => {
     const borderClass = borderMap[s.color] || 'border-l-navy-300';
     const icon = iconMap[s.color] || '';
-    const changeColor = s.change > 0 ? 'text-emerald-600' : 'text-navy-400';
-    const changeText = s.change > 0 ? `${s.change} updated` : 'Steady';
     const subtitleHtml = s.subtitle ? `<div class="text-[10px] mt-1.5 text-navy-500 leading-tight line-clamp-2">${s.subtitle}</div>` : '';
+    const changeHtml = s.change > 0
+      ? `<div class="text-xs mt-1.5 text-emerald-600">${s.change} with new events</div>`
+      : (s.subtitle ? '' : '<div class="text-xs mt-1.5 text-navy-400">Steady</div>');
     return `
       <div class="stat-card bg-white rounded-xl p-3 sm:p-4 border border-navy-200/70 border-l-4 ${borderClass} shadow-[0_1px_3px_rgba(10,25,41,0.04)]">
         <div class="mb-1.5">${icon}</div>
         <div class="text-xl sm:text-2xl md:text-3xl font-extrabold tabular-nums ${s.color}">${s.value}</div>
         <div class="text-xs sm:text-sm text-navy-500 mt-1">${s.label}</div>
-        <div class="text-xs mt-1.5 ${changeColor}">${changeText}</div>
+        ${changeHtml}
         ${subtitleHtml}
       </div>
     `;
