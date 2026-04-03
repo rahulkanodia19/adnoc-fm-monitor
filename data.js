@@ -1,7 +1,7 @@
 // ============================================================
 // data.js -- ADNOC Force Majeure & Geopolitical Monitor
 // Pre-populated monitoring data from verified intelligence
-// Last updated: 2026-04-03T17:30:00.000Z
+// Last updated: 2026-04-03T18:45:00.000Z
 // Period: 28 February - 3 April 2026
 // Context: Strait of Hormuz / Gulf military escalation
 // ============================================================
@@ -827,24 +827,30 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1EE}\u{1F1F1}",
     status: "conflict",
     statusLabel: "Conflict / FM",
-    summary: "Iran targets Arik Bridge (Route 87, Galilee-Golan) in bridge hit list. Chevron FM on Leviathan. Karish shut. Tamar domestic only. Iran's 'most significant strike' on Tel Aviv Apr 1 — 14 injured incl. children. Israel struck 400+ Iran targets incl. B1 bridge Apr 3. Pentagon: 90% of Iran capability degraded. DM Katz vows Lebanon occupation. Trump: war to end in 2-3 weeks.",
+    summary: "Iran targets Arik Bridge (Route 87, Galilee-Golan) in bridge hit list. Chevron FM on Leviathan. Karish shut. Tamar domestic only. Iran's 'most significant strike' on Tel Aviv Apr 1 — 14 injured incl. children. Israel struck 400+ Iran targets incl. B1 bridge Apr 3. Pentagon: 90% of Iran capability degraded. DM Katz vows Lebanon occupation. Trump: war to end in 2-3 weeks. LEVIATHAN RESTART: Energy Ministry announced Leviathan resumption Apr 2; Chevron restarting platform — ~1.2 Bcf/d gas returning.",
     metrics: {
-      headline: "~2.0 Bcf/d gas offline; Iran massive missile strike on Tel Aviv Apr 1",
-      productionOffline: "Leviathan + Karish shut, Tamar domestic only",
-      keyFigure: "Egypt/Jordan gas exports halted; 416 Iranian attack waves since Feb 28"
+      headline: "Leviathan RESTARTING Apr 2 (~1.2 Bcf/d returning); Karish still shut; Iran massive strike on Tel Aviv Apr 1",
+      productionOffline: "Leviathan restarting + Karish shut; Tamar domestic only",
+      keyFigure: "Egypt/Jordan gas exports halted; 416 Iranian attack waves since Feb 28; Leviathan restart signals improved maritime security"
     },
     production: {
       oil: { preWar: 0, current: 0, unit: "kb/d" },
-      gas: { preWar: 3.0, current: 1.0, unit: "Bcf/d" },
+      gas: { preWar: 3.0, current: 2.0, unit: "Bcf/d" },
       refining: { capacity: 197, affected: 60, available: 137, unit: "kb/d" },
       notes: {
-        oil: "Leviathan+Karish shut; Tamar domestic",
-        gas: "Leviathan+Karish gas offline; Tamar supplying domestic only",
+        oil: "No oil production; Leviathan restart does not affect crude",
+        gas: "Leviathan restarting Apr 2 (~1.2 Bcf/d ramping up); Karish still shut (~0.6 Bcf/d); Tamar supplying domestic (~1.0 Bcf/d); gas exports to Egypt/Jordan remain halted pending security assessment",
         refining: "Haifa damaged but mostly online",
-        ports: "No major oil/LNG export terminals"
+        ports: "No major oil/LNG export terminals; Leviathan restart may enable gas export resumption if pipeline security confirmed"
       }
     },
     events: [
+      {
+        date: "2026-04-02",
+        title: "Leviathan gas field resumes operations — Energy Ministry announces restart; Chevron ramping up platform",
+        description: "Israel's Energy Ministry announced that the Leviathan natural gas field, the country's largest offshore gas platform, will resume operations after being shut down since Feb 28 due to security concerns. Chevron Mediterranean Limited is working on restarting the platform with regular production expected within hours. Leviathan produces ~1.2 Bcf/d (~12 Bcm/yr) and accounts for over 70% of Israel's electricity generation. The restart signals improved security conditions around Israel's Mediterranean coast, though gas exports to Egypt and Jordan remain halted pending further assessment. Karish field remains shut. — OilPrice.com, Times of Israel, Washington Today, Business Upturn",
+        isNew: true
+      },
       {
         date: "2026-04-01",
         title: "Iran fires 'most significant strike since first days' on Tel Aviv — 14 injured including children",
@@ -869,11 +875,11 @@ const COUNTRY_STATUS_DATA = [
     ],
     oilGasImpact: {
       severity: "critical",
-      summary: "~2.0 Bcf/d gas offline, exports halted; massive Iranian strike on Tel Aviv Apr 1; DM Katz vows Lebanon occupation",
-      details: "Leviathan (Chevron FM, ~1.2 Bcf/d) and Karish (ministry shutdown, ~0.6 Bcf/d) offline. Tamar producing ~1.0 Bcf/d for domestic only. All gas exports to Egypt/Jordan halted. Iran fired 'most significant strike since first days' at Tel Aviv Apr 1 — 10 missiles, 14 injured incl. children. 416 attack waves from Iran since Feb 28. Israel struck 400+ targets in Iran in 2 days. Israeli strikes killed 7 in Beirut. DM Katz vowed to occupy southern Lebanon post-war. Former FM Kharazi (Iran diplomacy lead) injured in strike — diplomacy derailed."
+      summary: "Leviathan RESTARTING Apr 2 (~1.2 Bcf/d returning); Karish still shut; exports halted; massive Iranian strike on Tel Aviv Apr 1; DM Katz vows Lebanon occupation",
+      details: "Leviathan restarting Apr 2 — Energy Ministry announced resumption, Chevron ramping up platform (~1.2 Bcf/d returning). Karish (ministry shutdown, ~0.6 Bcf/d) still offline. Tamar producing ~1.0 Bcf/d for domestic only. Gas exports to Egypt/Jordan remain halted pending security assessment. Iran fired 'most significant strike since first days' at Tel Aviv Apr 1 — 10 missiles, 14 injured incl. children. 416 attack waves from Iran since Feb 28. Israel struck 400+ targets in Iran in 2 days. Israeli strikes killed 7 in Beirut. DM Katz vowed to occupy southern Lebanon post-war. Former FM Kharazi (Iran diplomacy lead) injured in strike — diplomacy derailed. Leviathan restart signals improved security around Israel's Mediterranean coast and is a concrete indicator of partial conflict de-escalation."
     },
     infrastructure: [
-      { name: "Leviathan Gas Field", type: "Offshore Gas", capacity: "~1.2 Bcf/d", status: "shutdown" },
+      { name: "Leviathan Gas Field", type: "Offshore Gas", capacity: "~1.2 Bcf/d", status: "operational", notes: "Energy Ministry announced restart Apr 2; Chevron ramping up platform; 70%+ of Israel electricity" },
       { name: "Tamar Gas Field", type: "Offshore Gas", capacity: "~1.0 Bcf/d", status: "partial" },
       { name: "Karish Gas Field", type: "Offshore Gas", capacity: "~0.6 Bcf/d", status: "shutdown" },
       { name: "EMG Pipeline (Israel-Egypt)", type: "Subsea Pipeline", capacity: "~700 mmscf/d", status: "shutdown" },
@@ -889,7 +895,10 @@ const COUNTRY_STATUS_DATA = [
       { id: 4, title: "Israel gas shutdowns - World Oil", url: "https://www.worldoil.com", date: "2026-03-01" },
       { id: 5, title: "Iran fires most significant strike on Israel since war began - Alma Center", url: "https://israel-alma.org/daily-report-the-second-iran-war-april-1-2026-1600/", date: "2026-04-01" },
       { id: 6, title: "Israel strikes kill 7 in Beirut, vows to occupy southern Lebanon - Euronews", url: "https://www.euronews.com/2026/04/01/israeli-strikes-kill-seven-in-beirut-as-it-vows-to-occupy-southern-lebanon-after-war-ends", date: "2026-04-01" },
-      { id: 7, title: "Israel struck 400+ targets in Iran in 2 days - CBS News", url: "https://www.cbsnews.com/live-updates/iran-war-trump-nato-tehran-threatens-us-tech-companies-strait-of-hormuz/", date: "2026-04-01" }
+      { id: 7, title: "Israel struck 400+ targets in Iran in 2 days - CBS News", url: "https://www.cbsnews.com/live-updates/iran-war-trump-nato-tehran-threatens-us-tech-companies-strait-of-hormuz/", date: "2026-04-01" },
+      { id: 8, title: "Giant Leviathan Gas Field Offshore Israel Resumes Operations — OilPrice.com", url: "https://oilprice.com/Latest-Energy-News/World-News/Giant-Leviathan-Gas-Field-Offshore-Israel-Resumes-Operations.html", date: "2026-04-02" },
+      { id: 9, title: "Energy Ministry announces resumption of Leviathan operations — Times of Israel", url: "https://www.timesofisrael.com/liveblog_entry/energy-ministry-announces-resumption-of-operations-at-leviathan-offshore-gas-field/", date: "2026-04-02" },
+      { id: 10, title: "Chevron's Leviathan reopening raises questions over U.S. role — CTech", url: "https://www.calcalistech.com/ctechnews/article/rkhhss3oze", date: "2026-04-02" }
     ]
   },
   {
@@ -1442,15 +1451,16 @@ const FM_DECLARATIONS_DATA = [
     country: "Israel",
     flag: "\u{1F1EE}\u{1F1F1}",
     date: "2026-03-01",
-    status: "active",
-    statusLabel: "Active",
-    summary: "FM on Leviathan gas field after govt-ordered suspension. Egypt/Jordan gas exports halted.",
+    status: "partially_lifted",
+    statusLabel: "Partially Lifted",
+    isNew: true,
+    summary: "FM on Leviathan gas field after govt-ordered suspension. Egypt/Jordan gas exports halted. UPDATE Apr 2: Energy Ministry announced Leviathan restart; Chevron ramping up production. Domestic gas supply resuming but export FM remains active pending security assessment of EMG/JNGET pipelines.",
     details: {
-      volumeAffected: "Leviathan ~22 bcm/yr; Egypt & Jordan exports halted",
+      volumeAffected: "Leviathan ~22 bcm/yr; Egypt & Jordan exports still halted; domestic production restarting Apr 2",
       commodity: "Natural Gas",
-      duration: "Ongoing since 1 Mar 2026",
-      reason: "Government-ordered suspension amid regional military escalation.",
-      financialImpact: "Egypt and Jordan pipeline gas exports halted; downstream energy shortages."
+      duration: "FM since 1 Mar 2026; production restart announced 2 Apr 2026; export FM remains active",
+      reason: "Government-ordered suspension amid regional military escalation. Production restart Apr 2 signals improved security; export pipelines to Egypt/Jordan remain shut pending assessment.",
+      financialImpact: "Egypt and Jordan pipeline gas exports remain halted; Israel domestic gas supply improving; Leviathan restart may restore ~1.2 Bcf/d production."
     },
     sources: [
       { id: 1, title: "Chevron FM - Yahoo Finance", url: "https://finance.yahoo.com", date: "2026-03-01" },
