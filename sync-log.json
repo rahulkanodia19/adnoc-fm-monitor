@@ -1,64 +1,59 @@
 {
-  "timestamp": "2026-04-04T06:30:00.000Z",
+  "timestamp": "2026-04-03T12:30:00.000Z",
   "success": true,
-  "changes": "Major policy shift: WH says Hormuz reopening 'not a core objective' of Iran war (Time/CNN). Iran publishes bridge target list (8 Gulf bridges as 'legitimate targets') after B1 destruction. Pentagon claims 90% of Iran ballistic/drone capability degraded. UN Hormuz vote postponed past Good Friday — no new date; China/Russia oppose. Brent corrected to ~$106 (from ~$108-112). Iran casualties updated to >2,000 killed. Kpler crossings updated to 218 (from 214). Iraq Syria route: SOMO agreed 50k bpd crude + 650k mt/month fuel oil Apr-Jun. ADCOP spare capacity: 71% utilization, can surge to 1.8M bpd. India bought 30M bbl Russian crude in one week. All isNew flags updated for >48hr recency. No new FM declarations or shutdowns found.",
+  "changes": "Updated Brent price range to $105-$112 (volatile; $111.69 on Apr 2). Added ~2,000 vessels trapped in Gulf (IMO data). Updated UN Hormuz vote to Saturday Apr 5 (Bahrain resolution: 'all defensive means' for 6 months; China/Russia vetoes expected). Added Trump Apr 3 statement ('hasn't even started destroying what's left'). Added LG Chem Yeosu No. 2 cracker shutdown (sd-029, 800k tpa, Mar 23). Updated OPEC+ Apr 5 context ('most consequential meeting since alliance formation'). Added S&P Global 'Persian Gulf LNG supply scenarios: Longer market impacts from war' (Apr 2) to Qatar sources. Updated energy-news-data.json with latest headlines. Fixed day count references (Day 36). No new FM declarations found in last 48 hours.",
   "countriesCount": 9,
   "fmCount": 29,
-  "shutdownsCount": 27,
+  "shutdownsCount": 28,
   "newEvents": [
-    "White House: Hormuz reopening 'not a core objective' of Iran war — 3rd time Trump signaled war may end with strait closed (Time, CNN)",
-    "Iran publishes bridge target list: Sheikh Jaber (Kuwait), Sheikh Zayed/Al Maqta/Khalifa (UAE), King Fahd Causeway (Saudi-Bahrain), Jordan bridges, Arik Bridge (Israel) — declared 'legitimate targets' (Fars News, Fox News, Anadolu Agency)",
-    "Pentagon claims 90% of Iran's ballistic missile and drone capabilities degraded (NBC News)",
-    "UN Hormuz vote postponed past Good Friday — no new date set; China/Russia oppose force authorization (Al-Monitor, Washington Post)",
-    "Brent closed $106.04 on Apr 2 (up 4.8%); WTI $104.29 (Business Standard, CNBC)",
-    "Iran casualties now >2,000 killed (up from >1,900); 4,700 security forces killed per Iran International (Al Jazeera, Wikipedia)",
-    "Kpler: 218 crossings since Mar 1 (up from 214; 94% decline from peacetime) (Kpler, UANI)",
-    "Iraq SOMO: 50k bpd crude + 650k mt/month fuel oil via Syria overland to Mediterranean Apr-Jun (The National, Middle East Eye)",
-    "ADCOP at 71% utilization, can temporarily surge to 1.8M bpd (Argusmedia, CNBC)",
-    "India bought ~30M bbl Russian crude in under a week after US sanctions waiver (Bloomberg, Moscow Times)"
+    "Trump on Apr 3: 'US hasn't even started destroying what's left in Iran' — vows more infrastructure strikes (Al-Monitor)",
+    "~2,000 vessels trapped in Persian Gulf per IMO (CNN liveblog Apr 2)",
+    "UN Hormuz vote confirmed for Saturday Apr 5 — Bahrain resolution authorizes 'all defensive means necessary' for at least 6 months (Al-Monitor, France 24, Washington Post)",
+    "China opposes force authorization — vetoes expected; Russia also opposes (Al-Monitor, CNN)",
+    "Brent volatile $105-$112; $111.69 on Apr 2 (Fortune); Apr 3 surging on bridge strikes",
+    "Kuwait air defenses intercepting missiles twice on Apr 3 (Wikipedia/ACLED)",
+    "S&P Global published 'Persian Gulf LNG supply scenarios update: Longer market impacts from war' (Apr 2)",
+    "OPEC+ Apr 5 described as 'most consequential meeting since alliance formation' (Middle East Insider)",
+    "LG Chem shut 800k tpa Yeosu No. 2 ethylene cracker due to naphtha shortage (Seoul Economic Daily, Mar 23)",
+    "South Korea turns to Russian naphtha for chip supply chain (The Next Web)"
   ],
   "newFMDeclarations": [],
-  "newShutdowns": [],
-  "noNewFmReason": "No new force majeure declarations found since Formosa Plastics Corp (fm-027, Apr 1). Industry warns April will see cascade of FM declarations as naphtha inventories deplete (Lotte Chemical official, C&EN). Monitoring continues.",
+  "newShutdowns": ["sd-029: LG Chem Yeosu No. 2 Cracker (South Korea, Mar 23, 800k tpa ethylene — naphtha supply shortage)"],
+  "noNewFmReason": "No new force majeure declarations found since Formosa Plastics Corp (fm-027, Apr 1). LG Chem and Hanwha Solutions notified customers of potential FM on some products (Korea Times). Industry warns April will see cascade of FM declarations as naphtha inventories deplete.",
   "sourcesChecked": {
     "tier1": [
-      "Kpler (218 crossings data; cargo flow tracking)",
-      "S&P Global / Platts (Inside/Outside Strait bifurcation)",
-      "Bloomberg (oil prices, Iran bridge strikes, India-Russia crude)",
-      "Reuters (UN vote, diplomatic context)",
-      "Argus Media (ADCOP utilization, Hormuz traffic)",
-      "Rystad Energy ($25B repair bill)",
-      "Vortexa (Iranian crude tracking)"
+      "S&P Global / Platts (premium pre-fetch: 'Persian Gulf LNG supply scenarios' Apr 2; 'Rapid Response Vol. 4.0' Mar 31)",
+      "Kpler (premium pre-fetch — screenshot blank; 218 crossings data from UANI)",
+      "Rystad (premium pre-fetch — dashboard loaded but data area empty)",
+      "Bloomberg (oil prices, bridge strikes)",
+      "Reuters (UN vote context)"
     ],
     "tier2": [
-      "Al Jazeera (Iran bridge retaliation, UN vote, war live blogs)",
-      "CNBC (oil prices $106, IEA warnings, OPEC+ Apr 5)",
-      "CNN (WH Hormuz not core objective, Trump exit strategy)",
-      "Time (WH reopening Hormuz not vital, Trump Iran off-ramp)",
-      "Washington Post (UN vote postponed, markets shudder)",
-      "Fox News (Iran bridge target list, B1 collapse)",
-      "CBS News (Pentagon 90% degraded, Iran war updates)",
-      "NBC News (Iran drone/missile data, Trump primetime speech)",
-      "NPR (B1 bridge, Iran casualties)",
-      "The National UAE (Iraq Syria exports, Bahrain resolution)",
-      "Gulf News (Kuwait attacks, Al Salmi tanker)"
+      "Al Jazeera (war liveblogs, UN vote, bridge retaliation)",
+      "CNN (IMO ~2,000 vessels trapped, Trump speech, UN vote liveblog)",
+      "CNBC (oil prices, IEA warnings, OPEC+ Apr 5)",
+      "Al-Monitor (US vows more infrastructure strikes Apr 3, UN vote)",
+      "France 24 (UN vote delayed to Saturday)",
+      "NPR (bridge strikes, Iran war updates)",
+      "Fortune (Brent $111.69 on Apr 2)",
+      "Washington Post (UN vote, Hormuz summit)",
+      "Gulf News (Kuwait attacks, Trump war speech Day 34)",
+      "Seoul Economic Daily (LG Chem shutdown, Lotte Chemical)"
     ],
     "tier3": [
-      "OilPrice.com (China-India racing for Russian crude)",
-      "Hellenic Shipping News (Oman coastal route)",
-      "UANI (218 Kpler crossings, April 2 shipping update)",
-      "Business Standard (Brent $106.04, WTI $104.29)",
-      "C&EN (Asian petrochemical crisis deepening)",
-      "FinancialContent (naphtha $1000, Goldman $150 warning)",
-      "The War Zone (B1 bridge destruction details)",
-      "Anadolu Agency (Iran bridge target list)",
-      "Middle East Eye (Iraq Syria land route)"
+      "Wikipedia (timeline, Iran war, Hormuz crisis, casualty data)",
+      "Hydrocarbon Processing (LG Chem 800k tpa cracker shutdown)",
+      "Korea Times (FM fears spreading across industries)",
+      "Middle East Insider (OPEC+ Apr 5 analysis)",
+      "The Next Web (South Korea Russian naphtha)",
+      "Newsweek (force majeure explainer)",
+      "LNG Industry (QatarEnergy FM extension)"
     ]
   },
   "premiumSourceAccess": {
-    "terminal.kpler.com": "skipped — Chrome DevTools MCP not available (connection timed out)",
-    "portal.rystadenergy.com": "skipped — Chrome DevTools MCP not available (connection timed out)",
-    "connect.spglobal.com": "skipped — Chrome DevTools MCP not available (connection timed out)"
+    "terminal.kpler.com": "Accessed via pre-fetch — screenshot blank; content field 'empty'; no intelligence articles extracted",
+    "portal.rystadenergy.com": "Accessed via pre-fetch — dashboard navigation visible but data area blank; no field-level data extracted",
+    "connect.spglobal.com": "Accessed via pre-fetch — identified 'Persian Gulf LNG supply scenarios update: Longer market impacts from war' (Apr 2) and 'Rapid Response 2026: US-Israel war with Iran Vol. 4.0' (Mar 31)"
   },
   "validationResult": "112/112 checks passed"
 }
