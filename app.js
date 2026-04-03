@@ -1648,14 +1648,18 @@ function updateStats(activeTab) {
         refAffected += refLoss;
         if (oilLoss > 0 || gasLoss > 0 || refLoss > 0) impactedCount++;
       });
-      const countriesUpdated = COUNTRY_STATUS_DATA.filter(c =>
-        c.isNew || (c.events && c.events.some(e => e.isNew))
-      ).length;
+      // Get recent highlights from countries with new events
+      const recentHighlights = COUNTRY_STATUS_DATA
+        .filter(c => c.isNew || (c.events && c.events.some(e => e.isNew)))
+        .map(c => ({ country: c.country, headline: c.metrics?.headline }))
+        .filter(h => h.headline);
+      const hl1 = recentHighlights[0]?.headline || '';
+      const hl2 = recentHighlights[1]?.headline || '';
       stats = [
-        { label: 'Oil Offline (kb/d)', value: formatNum(Math.round(oilOffline)), color: 'text-red-600', change: countriesUpdated },
-        { label: 'Gas Offline (Bcf/d)', value: formatNum(Math.round(gasOffline * 10) / 10), color: 'text-amber-600', change: countriesUpdated },
-        { label: 'Refining Affected (kb/d)', value: formatNum(Math.round(refAffected)), color: 'text-orange-600', change: countriesUpdated },
-        { label: 'Countries Impacted', value: impactedCount, color: 'text-blue-600', change: countriesUpdated },
+        { label: 'Oil Offline (kb/d)', value: formatNum(Math.round(oilOffline)), color: 'text-red-600', change: recentHighlights.length, subtitle: hl1 },
+        { label: 'Gas Offline (Bcf/d)', value: formatNum(Math.round(gasOffline * 10) / 10), color: 'text-amber-600', change: recentHighlights.length, subtitle: hl2 },
+        { label: 'Refining Affected (kb/d)', value: formatNum(Math.round(refAffected)), color: 'text-orange-600', change: recentHighlights.length },
+        { label: 'Countries Impacted', value: impactedCount, color: 'text-blue-600', change: recentHighlights.length },
       ];
       break;
     }
@@ -1712,12 +1716,14 @@ function updateStats(activeTab) {
     const icon = iconMap[s.color] || '';
     const changeColor = s.change > 0 ? 'text-emerald-600' : 'text-navy-400';
     const changeText = s.change > 0 ? `${s.change} updated` : 'Steady';
+    const subtitleHtml = s.subtitle ? `<div class="text-[10px] mt-1.5 text-navy-500 leading-tight line-clamp-2">${s.subtitle}</div>` : '';
     return `
       <div class="stat-card bg-white rounded-xl p-3 sm:p-4 border border-navy-200/70 border-l-4 ${borderClass} shadow-[0_1px_3px_rgba(10,25,41,0.04)]">
         <div class="mb-1.5">${icon}</div>
         <div class="text-xl sm:text-2xl md:text-3xl font-extrabold tabular-nums ${s.color}">${s.value}</div>
         <div class="text-xs sm:text-sm text-navy-500 mt-1">${s.label}</div>
         <div class="text-xs mt-1.5 ${changeColor}">${changeText}</div>
+        ${subtitleHtml}
       </div>
     `;
   }).join('');
