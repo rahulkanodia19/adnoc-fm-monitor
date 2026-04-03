@@ -1691,8 +1691,6 @@ function updateStats(activeTab) {
       stats = [
         { label: 'Countries Monitored', value: COUNTRY_STATUS_DATA.length, color: 'text-blue-600', change: cRecent.length, subtitle: cNames ? cRecent.length + ' with new events: ' + cNames : '' },
         { label: 'Critical / Conflict', value: COUNTRY_STATUS_DATA.filter(c => ['critical', 'conflict', 'high'].includes(c.status)).length, color: 'text-red-600', change: 0, subtitle: topHL.substring(0, 90) },
-        { label: 'Elevated Risk', value: COUNTRY_STATUS_DATA.filter(c => c.status === 'elevated').length, color: 'text-amber-600', change: 0 },
-        { label: 'Stable', value: COUNTRY_STATUS_DATA.filter(c => c.status === 'stable').length, color: 'text-emerald-600', change: 0 },
       ];
       break;
     }
