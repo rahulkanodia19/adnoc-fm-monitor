@@ -412,6 +412,36 @@ else
   log "  Platts token ..... ○ not found (will attempt full auth)"
 fi
 
+# --- Premium source tab checks ---
+if [ "$CHROME_OK" = true ]; then
+  log "  Premium sources:"
+  check_premium_tab() {
+    local name="$1" url="$2" full_url="$3"
+    local found
+    found=$(curl -s "http://127.0.0.1:$DEBUG_PORT/json" 2>/dev/null | \
+      node -e "let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{const p=JSON.parse(d);console.log(p.some(x=>x.url.includes('$url'))?'open':'missing')}catch{console.log('error')}})" 2>/dev/null) || found="error"
+    if [ "$found" = "open" ]; then
+      log "    $name .... ✓ tab open"
+    else
+      log "    $name .... ⚠ no tab — opening $full_url"
+      node -e "
+const http=require('http'),WebSocket=require('ws');
+(async()=>{
+  const resp=await new Promise((res,rej)=>{
+    const req=http.request('http://127.0.0.1:$DEBUG_PORT/json/new?$full_url',{method:'PUT'},r=>{let d='';r.on('data',c=>d+=c);r.on('end',()=>res(d))});
+    req.on('error',rej);req.end();
+  });
+})().catch(()=>{});
+" 2>/dev/null
+      sleep 3
+      log "    $name .... ✓ tab opened (may need login)"
+    fi
+  }
+  check_premium_tab "Kpler" "terminal.kpler.com" "https://terminal.kpler.com"
+  check_premium_tab "Rystad" "portal.rystadenergy.com" "https://portal.rystadenergy.com/home"
+  check_premium_tab "S&P Connect" "connect.spglobal.com" "https://connect.spglobal.com"
+fi
+
 # --- Pre-sync backup ---
 backup_data
 write_progress "preflight"

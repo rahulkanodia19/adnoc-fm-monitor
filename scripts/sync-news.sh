@@ -30,6 +30,19 @@ TOOLS="Edit,Write,Read,WebSearch,WebFetch,Glob,Grep,Bash(git diff*),Bash(git sta
 if curl -s "http://127.0.0.1:$DEBUG_PORT/json/version" > /dev/null 2>&1; then
   echo "[sync-news] Chrome available — including premium source access."
   TOOLS="$TOOLS,mcp__chrome-devtools*"
+  # Check premium source tabs
+  echo "[sync-news] Premium source tab check:"
+  for site in "terminal.kpler.com:Kpler" "portal.rystadenergy.com:Rystad" "connect.spglobal.com:S&P Connect"; do
+    url="${site%%:*}"
+    name="${site##*:}"
+    has_tab=$(curl -s "http://127.0.0.1:$DEBUG_PORT/json" 2>/dev/null | \
+      node -e "let d='';process.stdin.on('data',c=>d+=c);process.stdin.on('end',()=>{try{console.log(JSON.parse(d).some(x=>x.url.includes('$url'))?'yes':'no')}catch{console.log('no')}})" 2>/dev/null)
+    if [ "$has_tab" = "yes" ]; then
+      echo "[sync-news]   $name ($url) ✓ tab open"
+    else
+      echo "[sync-news]   $name ($url) ✗ NO TAB — agent cannot access premium data"
+    fi
+  done
 else
   echo "[sync-news] WARNING: Chrome not running. Using web search only (no premium sources)."
 fi

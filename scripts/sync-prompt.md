@@ -221,6 +221,16 @@ If you have access to Chrome DevTools MCP tools (mcp__chrome-devtools__*), use t
 - If a platform requires login/MFA and you cannot access it, skip it and note in sync-log.json
 - Do NOT use browser for prices, vessel counts, or flow data — those are separate tabs
 
+### Required: Premium Source Access Summary
+After completing Step 3c, you MUST output a summary to the console:
+```
+Premium Source Access:
+  - terminal.kpler.com: [accessed / login required / skipped / error]
+  - portal.rystadenergy.com: [accessed / login required / skipped / error]
+  - connect.spglobal.com: [accessed / login required / skipped / error]
+```
+This summary is mandatory even if all platforms are skipped (e.g., no Chrome MCP tools available).
+
 ---
 
 ## Step 4: Update data.js
