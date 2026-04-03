@@ -1,73 +1,31 @@
 {
-  "timestamp": "2026-04-03T17:30:00.000Z",
+  "timestamp": "2026-04-03T21:15:00.000Z",
   "success": true,
-  "changes": "CRITICAL: EGA Al Taweelah smelter status upgraded to SHUTDOWN — power plant destroyed in Mar 29 strike; potlines solidified; zero output; WoodMac warns 3-3.5 Mtpa global loss (Bloomberg Apr 1). Added USAF F-15E Strike Eagle shot down over Iran Apr 3 (IRGC claimed F-35; debris shows F-15E from 494th FS). Added Zarif calls for Iran to 'declare victory and make deal' — first internal voice for settlement. Added Sheikh Khaled ADNOC resilience meeting (Apr 2). Updated Alba to ~30% capacity (Bloomberg). Added Kuwait Mar 30 power/desal plant attack (1 Indian worker killed). Added IDF killing of ballistic missile chief Atimi (Apr 3). Updated Brent to $99-$110 range. Updated Bahrain Sitra with 32 civilians injured (Rystad). Updated energy-news-data.json with Golden Pass first LNG, Russia gasoline ban, Aramco April cuts. No new FM declarations in last 48 hours.",
+  "changes": "3 CRITICAL new events from April 3: (1) UAE Habshan gas complex SECOND SHUTDOWN — debris from intercepted missile caused fire, ~60% of domestic gas offline (Bloomberg Apr 3); (2) Kuwait Mina Al-Ahmadi refinery struck 3RD TIME — fires in multiple units (The National, Al Jazeera Apr 3); (3) Kuwait power/desalination plant struck 2ND TIME (Al Jazeera Apr 3). Added Saudi Manifa field to infrastructure (Rystad). Updated UAE gas from 5.5 to 4.0 Bcf/d. Updated Brent to ~$109 ($99-$110). 225 Kpler crossings since Mar 1 (94% decline). Rystad: 11,535 kboe/d upstream disrupted. No new FM declarations.",
   "countriesCount": 9,
   "fmCount": 29,
-  "shutdownsCount": 28,
-  "newEvents": [
-    "EGA Al Taweelah fully halted — power plant destroyed; potlines solidified; zero output; WoodMac warns 3-3.5 Mtpa global loss (Bloomberg Apr 1)",
-    "USAF F-15E Strike Eagle shot down over Iran Apr 3 — IRGC claimed F-35 but debris shows F-15E from 494th FS, RAF Lakenheath (The Aviationist)",
-    "Former FM Zarif calls for Iran to 'declare victory and make deal' — first internal voice for settlement (Al Jazeera Apr 3)",
-    "Sheikh Khaled chairs ADNOC executive resilience meeting Apr 2 — highest-level UAE leadership engagement (The National)",
-    "Alba smelter (Bahrain) confirmed at ~30% capacity after Mar 29 strike (Bloomberg Apr 1)",
-    "Kuwait power/desalination plant struck Mar 30 — 1 Indian worker killed (Al Jazeera, The National, Anadolu Agency)",
-    "IDF kills Makram Atimi, ballistic missile unit commander, in Kermanshah Apr 3 (JPost)",
-    "Bahrain Sitra Mar 9 attack: 32 civilians injured (Rystad Middle East Conflict dashboard)",
-    "Iran publishes bridge target lists for retaliation (Anadolu Agency Apr 3)",
-    "Philippines gets toll-free Hormuz passage — US ally cutting separate deal (Bloomberg Apr 2)",
-    "India waives customs duty on 40 petrochemical products until Jun 30 (OilPrice, BusinessToday Apr 2)",
-    "Italy calls for UN-led 'humanitarian corridor' for fertiliser — 30% of global fertilizer trade via Hormuz (CGTN Apr 2)",
-    "Golden Pass Train 1 (QatarEnergy/ExxonMobil JV) first LNG produced Mar 30 (OilPrice)",
-    "Russia bans gasoline exports from April 1 (Business Today)",
-    "Brent at $108.95 on Apr 3; intraday range $99.17-$109.72 (Trading Economics)"
+  "shutdownsCount": 31,
+  "newShutdowns": [
+    "sd-030: ADNOC Habshan Gas Complex 2nd Shutdown (Apr 3) — debris from intercepted missile caused fire",
+    "sd-031: Kuwait Power/Desalination Plant 2nd Strike (Apr 3)",
+    "sd-032: Kuwait Mina Al-Ahmadi Refinery 3rd Strike (Apr 3)"
   ],
   "newFMDeclarations": [],
-  "newShutdowns": [],
-  "noNewFmReason": "No new force majeure declarations found since Formosa Plastics Corp (fm-027, Apr 1). All 29 existing FM declarations remain active. Industry analysts warn April will see cascade of FM declarations as naphtha inventories deplete, particularly in Asia-Pacific petrochemical sector.",
+  "noNewFmReason": "No new force majeure declarations found. All 29 existing FM declarations remain active.",
   "sourcesChecked": {
-    "tier1": [
-      "S&P Global / Platts",
-      "Bloomberg",
-      "Reuters",
-      "Kpler (pre-fetched — limited CDP access; intelligence SPA not extractable)",
-      "Rystad Energy (pre-fetched — dashboard screenshot, data consistent with data.js)",
-      "Argus Media",
-      "Vortexa",
-      "IHS Markit"
-    ],
-    "tier2": [
-      "Al Jazeera (Kuwait desal attack, UN vote, war liveblogs)",
-      "CNBC (oil prices, Oman-Iran protocol, IEA warnings, OPEC+ Apr 5)",
-      "CNN (IMO vessels trapped, UN vote, Trump speech)",
-      "The National UAE (Kuwait desal plant, Aramco allocations)",
-      "NPR (bridge strikes, war updates)",
-      "Washington Post (UN vote, Hormuz summit)",
-      "Gulf News (Kuwait attacks, Brent prices)",
-      "Anadolu Agency (Kuwait desal attack, Iran bridge list)",
-      "Haaretz (Kuwait desal attack)",
-      "Jerusalem Post (IDF kills Atimi)",
-      "Fortune (Brent prices, oil market)",
-      "Fox News (B1 bridge collapse)",
-      "The War Zone (B1 bridge analysis)"
-    ],
-    "tier3": [
-      "OilPrice.com (Aramco allocations, Golden Pass LNG)",
-      "Hellenic Shipping News (Oman vessels)",
-      "UANI (shipping updates)",
-      "Wikipedia (timeline, casualty data)",
-      "Middle East Insider (OPEC+ analysis)",
-      "Hydrocarbon Processing (petrochemical FMs)",
-      "C&EN (naphtha crisis)",
-      "Business Today India (Russia gasoline ban)",
-      "Shafaq News (Iraq-Syria oil route)",
-      "BIC Magazine (US Gulf Coast LNG)"
-    ]
+    "tier1": ["Bloomberg (Habshan Apr 3)", "Rystad Energy (dashboard: 11,535 kboe/d disrupted)", "S&P Global/Platts (Rapid Response Vol 4.0)", "Kpler (225 crossings since Mar 1)", "UANI (12 vessels Apr 2, 27 Iranian tankers in Gulf)", "Argus Media"],
+    "tier2": ["Al Jazeera (Kuwait double-strike Apr 3, war liveblogs)", "The National (Kuwait refinery, ADNOC)", "CNBC (Brent ~$109, IEA warns)", "Middle East Eye (Al-Ahmadi)", "Gulf News (Iran war Day 37)", "Khaleej Times (Al-Ahmadi)", "Anadolu Agency (Habshan, Al-Ahmadi)"],
+    "tier3": ["OilPrice.com (Leviathan restart)", "MEED (Habshan)", "Times of Israel", "Wikipedia (UAE strikes timeline)", "India TV News (Iran bridge hit list)"]
   },
-  "premiumSourceAccess": {
-    "terminal.kpler.com": "Accessed via pre-fetch — map page loaded; intelligence SPA not extractable via CDP; vessel list visible but no specific Gulf crisis intelligence extracted",
-    "portal.rystadenergy.com": "Accessed via pre-fetch — Middle East Conflict dashboard screenshot available; data consistent with existing data.js values; no new field-level data beyond web search findings",
-    "connect.spglobal.com": "Accessed via pre-fetch — limited content extractable from CDP; no new FM declarations or status changes found beyond web search results"
+  "premiumSources": {
+    "kpler": "Intelligence SPA not extractable via CDP — limited access",
+    "rystad": "Accessed — Middle East Conflict dashboard: 11,535 kboe/d oil+cond, 3,400 gas, 1,085 NGL disrupted; 2,178 kbbl/d refinery; Kuwait producing ~500 kbpd for local demand only",
+    "spglobal": "Accessed — Rapid Response Vol 4.0 (Mar 31); GCC vehicle production impacted; oil price shock scenario"
+  },
+  "infrastructureMonitoring": {
+    "queriesWithNewFindings": [1, 6, 7, 9, 11, 12, 13, 17, 20, 24, 25, 27, 28, 29],
+    "queriesNoNewResults": 16,
+    "totalQueries": 30
   },
   "validationResult": "112/112 checks passed"
 }

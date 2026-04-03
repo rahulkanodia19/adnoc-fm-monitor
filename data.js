@@ -1,12 +1,12 @@
 // ============================================================
 // data.js -- ADNOC Force Majeure & Geopolitical Monitor
 // Pre-populated monitoring data from verified intelligence
-// Last updated: 2026-04-03T18:45:00.000Z
+// Last updated: 2026-04-03T21:15:00.000Z
 // Period: 28 February - 3 April 2026
 // Context: Strait of Hormuz / Gulf military escalation
 // ============================================================
 
-const LAST_UPDATED = "2026-04-03T09:00:00.000Z";
+const LAST_UPDATED = "2026-04-03T10:00:00.000Z";
 
 // ---------- TABLE 1: Country Status Matrix ----------
 const COUNTRY_STATUS_DATA = [
@@ -150,11 +150,11 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1F0}\u{1F1FC}",
     status: "critical",
     statusLabel: "FM / Struck",
-    summary: "Iran publishes bridge target list incl. Sheikh Jaber Sea Bridge (Kuwait). IRGC drones struck Kuwait airport fuel tanks Apr 1 (58 hrs to extinguish). Power/desal plant struck Mar 30 (1 Indian worker killed). Kuwait intercepted 97 BMs + 283 drones cumulatively. VLCC Al Salmi struck Mar 31. KPC FM on crude. Al-Ahmadi struck. UN Hormuz vote Saturday Apr 5. Brent volatile $99-$110. OPEC+ Apr 5.",
+    summary: "Iran publishes bridge target list incl. Sheikh Jaber Sea Bridge (Kuwait). IRGC drones struck Kuwait airport fuel tanks Apr 1 (58 hrs to extinguish). Power/desal plant struck Mar 30 (1 Indian worker killed). Kuwait intercepted 97 BMs + 283 drones cumulatively. VLCC Al Salmi struck Mar 31. KPC FM on crude. Al-Ahmadi struck. UN Hormuz vote Saturday Apr 5. Brent volatile $99-$110. OPEC+ Apr 5. Apr 3: Al-Ahmadi refinery struck AGAIN (3rd time, fires in multiple units) + power/desal plant struck AGAIN (2nd time) — 7th+ major Iranian attack on Kuwait.",
     metrics: {
-      headline: "Iran targets Sheikh Jaber bridge; 97 BMs + 283 drones intercepted; power/desal plant struck; WH: Hormuz not core objective",
-      productionOffline: "Al-Ahmadi refinery + airport fuel tanks + power/desal plant + tanker attacked",
-      keyFigure: "2.6 mb/d baseline disrupted; 6 major attacks since conflict began; bridge targeting escalation"
+      headline: "Apr 3: Al-Ahmadi refinery struck 3rd time + desalination plant struck 2nd time; Iran targets Sheikh Jaber bridge; 7+ major attacks",
+      productionOffline: "Al-Ahmadi refinery (3x struck) + power/desal plant (2x) + airport fuel tanks + tanker attacked",
+      keyFigure: "2.6 mb/d baseline disrupted; 7+ major attacks since conflict began; bridge targeting escalation; Brent ~$109"
     },
     production: {
       oil: { preWar: 2600, current: 2000, unit: "kb/d" },
@@ -168,6 +168,12 @@ const COUNTRY_STATUS_DATA = [
       }
     },
     events: [
+      {
+        date: "2026-04-03",
+        title: "Mina Al-Ahmadi refinery struck 3rd time by drones — fires in multiple units; power/desalination plant also struck hours later",
+        description: "Iranian drones struck Kuwait's Mina Al-Ahmadi refinery (~466k bpd) in early morning Apr 3, sparking fires in several operational units. No injuries reported. KPC confirmed attack and began containment. Hours later, a Kuwait power and desalination plant was also hit by Iranian missiles. This brings total major Iranian attacks on Kuwait infrastructure to 7+ since conflict began (Al-Ahmadi x3, Mina Abdullah x1, Subiya x1, airport fuel tanks x1, power/desal plants x2). — The National, Al Jazeera, Anadolu Agency, Khaleej Times, Middle East Eye",
+        isNew: true
+      },
       {
         date: "2026-04-01",
         title: "IRGC drones strike Kuwait International Airport fuel tanks — large fire, 58 hrs to extinguish",
@@ -204,8 +210,8 @@ const COUNTRY_STATUS_DATA = [
     ],
     oilGasImpact: {
       severity: "critical",
-      summary: "6 major attacks: airport fuel tanks Apr 1, power/desal plant Mar 30 (1 killed), VLCC Al Salmi Mar 31, refineries Mar 19-20; 97 BMs + 283 drones intercepted",
-      details: "IRGC drones struck Kuwait airport fuel tanks Apr 1 (58-hr fire, radar damaged) — 5th major attack. Power/desalination plant struck Mar 30, killing 1 Indian worker — 4th major attack. VLCC Al Salmi (2M bbl crude) struck at Dubai port Mar 31. Kuwait has intercepted 97 ballistic missiles and 283 drones cumulatively since conflict began. KPC FM on all crude exports. Al-Ahmadi (466k bpd) offline after drone strikes Mar 19-20. Mina Abdullah (454k bpd) also struck Mar 19. Al-Zour at reduced rates. ~900 kb/d refining affected; ~500 kb/d available. Kafco fuel storage tanks struck. Subiya power plant fire. Export via Hormuz severely disrupted."
+      summary: "7+ major attacks: Al-Ahmadi struck 3rd time Apr 3 + desal plant struck Apr 3; airport fuel tanks Apr 1; power/desal Mar 30 (1 killed); VLCC Al Salmi Mar 31; refineries Mar 19-20",
+      details: "Apr 3: Mina Al-Ahmadi struck by drones 3rd time (fires in multiple units, contained, no injuries) + power/desalination plant struck 2nd time — 7th+ major attack on Kuwait. IRGC drones struck Kuwait airport fuel tanks Apr 1 (58-hr fire, radar damaged). Power/desalination plant struck Mar 30, killing 1 Indian worker. VLCC Al Salmi (2M bbl crude) struck at Dubai port Mar 31. Kuwait intercepted 97 BMs + 283 drones cumulatively. KPC FM on all crude exports. Al-Ahmadi (466k bpd) offline after repeated drone strikes. Mina Abdullah (454k bpd) also struck Mar 19. Al-Zour at reduced rates. ~900 kb/d refining affected; ~500 kb/d available. Kafco fuel storage struck. Subiya power plant fire. Export via Hormuz severely disrupted."
     },
     infrastructure: [
       { name: "Greater Burgan (Burgan/Magwa/Ahmadi)", type: "Oil Field", capacity: "~1.7 mb/d", status: "partial" },
@@ -213,7 +219,7 @@ const COUNTRY_STATUS_DATA = [
       { name: "Raudhatain Field", type: "Oil Field", capacity: "~140,000 bpd", status: "partial" },
       { name: "Sabriya Field", type: "Oil Field", capacity: "~140,000 bpd", status: "partial" },
       { name: "Northern Kuwait Fields (GC-29/30/31)", type: "Oil/Gas Field", capacity: "~210,000 bpd", status: "partial" },
-      { name: "Mina Al-Ahmadi Refinery", type: "Refinery", capacity: "466,000 bpd", status: "shutdown" },
+      { name: "Mina Al-Ahmadi Refinery", type: "Refinery", capacity: "466,000 bpd", status: "shutdown", notes: "Struck 3rd time by drones Apr 3 (fires in multiple units, contained); previously struck Mar 19-20; KPC expects 3-4 months to restore post-war" },
       { name: "Mina Abdullah Refinery", type: "Refinery", capacity: "270,000 bpd", status: "partial", notes: "One unit struck by drone Mar 19; fire contained; operating at reduced rates" },
       { name: "Al-Zour Refinery", type: "Refinery", capacity: "615,000 bpd", status: "partial" },
       { name: "Mina Al-Ahmadi Terminal", type: "Export Terminal", capacity: "~1.5 mb/d", status: "shutdown", notes: "FM declared on crude exports; refinery adjacent struck by drones Mar 19-20" },
@@ -239,7 +245,10 @@ const COUNTRY_STATUS_DATA = [
       { id: 12, title: "Firefighters extinguish airport fuel tank blaze after 58-hour battle - Kuwait Times", url: "https://kuwaittimes.com/article/41557/kuwait/firefighters-extinguish-airport-fuel-tank-blaze-after-58-hour-battle/", date: "2026-04-01" },
       { id: 13, title: "Kuwait airport hit - Gulf News", url: "https://gulfnews.com/world/gulf/kuwait/major-fire-breaks-out-in-kuwait-international-airport-after-iranian-drone-attacks-1.500492703", date: "2026-04-01" },
       { id: 14, title: "Iranian attack damages Kuwait power and desalination plant, kills worker — Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/30/iranian-attack-damages-kuwait-power-and-desalination-plant-kills-worker", date: "2026-03-30" },
-      { id: 15, title: "Kuwaiti power and desalination plant hit in Iranian strike — The National", url: "https://www.thenationalnews.com/business/2026/03/30/kuwait-power-and-desalination-plant-hit-in-iranian-strike-as-ministry-reassures-on-operations/", date: "2026-03-30" }
+      { id: 15, title: "Kuwaiti power and desalination plant hit in Iranian strike — The National", url: "https://www.thenationalnews.com/business/2026/03/30/kuwait-power-and-desalination-plant-hit-in-iranian-strike-as-ministry-reassures-on-operations/", date: "2026-03-30" },
+      { id: 16, title: "Kuwait races to contain damage after drone strikes oil refinery — The National", url: "https://www.thenationalnews.com/news/mena/2026/04/03/kuwait-races-to-contain-damage-after-drone-strikes-oil-refinery/", date: "2026-04-03" },
+      { id: 17, title: "Kuwait desalination plant, oil refinery hit by missile and drone strikes — Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/3/kuwait-desalination-plant-oil-refinery-hit-by-missile-and-drone-strikes", date: "2026-04-03" },
+      { id: 18, title: "Drone strike sparks fire at Kuwait's Mina Al-Ahmadi refinery — Anadolu Agency", url: "https://www.aa.com.tr/en/middle-east/drone-strike-sparks-fire-at-kuwait-s-mina-al-ahmadi-refinery/3890099", date: "2026-04-03" }
     ]
   },
   {
@@ -325,6 +334,7 @@ const COUNTRY_STATUS_DATA = [
       { name: "East-West Pipeline", type: "Pipeline", capacity: "~7 mb/d (converted)", status: "operational" },
       { name: "SABIC Yanbu Complex", type: "Petrochemical", capacity: "Various", status: "operational" },
       { name: "SAMREF Refinery (Yanbu)", type: "Refinery", capacity: "400,000 bpd", status: "partial" },
+      { name: "Manifa Field", type: "Offshore Oil", capacity: "~600,000 bpd", status: "shutdown", notes: "Shut with other offshore fields; Rystad estimates 606 kboe/d disrupted" },
       { name: "Marjan Expansion", type: "Offshore Oil", capacity: "~300,000 bpd", status: "shutdown" },
       { name: "Khurais Field", type: "Oil Field", capacity: "1,500,000 bpd", status: "operational", notes: "Saudi's 2nd largest field; onshore, unaffected by offshore shutdowns" },
       { name: "Jafurah Gas Field", type: "Gas Field", capacity: "450 mmscf/d (Phase 1)", status: "operational", notes: "Saudi's first unconventional gas; Phase 1 started 2025; inland, unaffected" },
@@ -363,26 +373,32 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1E6}\u{1F1EA}",
     status: "critical",
     statusLabel: "Escalated",
-    summary: "Iran targets 3 Abu Dhabi bridges (Sheikh Zayed, Al Maqta, Khalifa) in hit list. UAE intercepted 438 BMs + 2,012 drones + 19 CMs (12 killed, 190 injured). ADCOP at 1.62M bpd (can surge to 1.8M). S&P Platts bifurcation live Apr 1. VLCC Al Salmi struck Mar 31. >50% crude offline. ~2,000 vessels trapped in Gulf (IMO). UN Hormuz vote Saturday Apr 5. Brent volatile $99-$110. Apr 6 deadline.",
+    summary: "Iran targets 3 Abu Dhabi bridges (Sheikh Zayed, Al Maqta, Khalifa) in hit list. UAE intercepted 438 BMs + 2,012 drones + 19 CMs (12 killed, 190 injured). ADCOP at 1.62M bpd (can surge to 1.8M). S&P Platts bifurcation live Apr 1. VLCC Al Salmi struck Mar 31. >50% crude offline. ~2,000 vessels trapped in Gulf (IMO). UN Hormuz vote Saturday Apr 5. Brent volatile $99-$110. Apr 6 deadline. HABSHAN GAS SHUT AGAIN Apr 3 — debris from intercepted missile caused fire; 2nd shutdown since war began (Bloomberg).",
     metrics: {
-      headline: "Iran targets 3 Abu Dhabi bridges; ADCOP at 1.62M bpd (1.8M surge capacity); WH: Hormuz not core objective",
-      productionOffline: "1+ Bcf/d gas + 417 kb/d refining; ADCOP at 1.62M bpd (71% utilization)",
-      keyFigure: ">50% of UAE crude output offline; Brent ~$106; Iran bridge targeting escalation"
+      headline: "HABSHAN GAS SHUT AGAIN Apr 3 (2nd time); Iran targets 3 Abu Dhabi bridges; ADCOP at 1.62M bpd; Brent ~$109",
+      productionOffline: "Habshan 6.1 Bcf/d shut Apr 3 + Shah 1 Bcf/d + 417 kb/d refining; ADCOP at 1.62M bpd",
+      keyFigure: ">50% of UAE crude offline; ~2.5 Bcf/d gas offline; Brent ~$109; Iran bridge targeting escalation"
     },
     production: {
       oil: { preWar: 3400, current: 1600, unit: "kb/d" },
-      gas: { preWar: 6.5, current: 5.5, unit: "Bcf/d" },
+      gas: { preWar: 6.5, current: 4.0, unit: "Bcf/d" },
       refining: { capacity: 1222, affected: 417, available: 805, unit: "kb/d" },
       lng: { preWar: 6.0, current: 0.0, unit: "Mtpa" },
       notes: {
         oil: "Offshore offline; ADCOP at 1.62M bpd (record); Fujairah loadings avg 1.9M bpd Mar 20-24 (up 57% YoY); maintenance deferred; >50% crude shut-in",
-        gas: "Habshan resumed Mar 23; Shah still shut (~1 Bcf/d); offshore associated gas reduced",
+        gas: "Habshan SHUT AGAIN Apr 3 — debris from intercepted missile caused fire (2nd shutdown since war began, Bloomberg); Shah still shut (~1 Bcf/d); ~2.5 Bcf/d gas offline; offshore associated gas reduced",
         refining: "Ruwais-2 shut (417 kb/d); 805 kb/d available; Jebel Ali operational",
         lng: "Das Island LNG at minimal capacity; Hormuz blocked; transaction-by-transaction basis",
         ports: "Fujairah loadings at 1.9M bpd via ADCOP; ADCOP at 1.62M bpd (71% utilization, can surge to 1.8M bpd); S&P Platts Inside/Outside Strait pricing live Apr 1; DXB fuel terminal shut; Musaffah at partial ops"
       }
     },
     events: [
+      {
+        date: "2026-04-03",
+        title: "Habshan gas complex shut AGAIN after intercepted missile debris causes fire — 2nd shutdown since war began",
+        description: "Abu Dhabi halted operations at Habshan, the UAE's largest gas processing facility (6.1 Bcf/d capacity, ~60% of domestic gas supply), after debris from an intercepted incoming missile fell in the area and caused a fire. This is the second time the Habshan complex has been shut since the war began (first: Mar 19-23). Abu Dhabi Media Office confirmed the shutdown. Habshan processes gas from onshore and offshore Abu Dhabi fields across five plants and 14 processing units. The shutdown comes as UAE deals with cumulative 438 BMs + 2,012 drones + 19 CMs intercepted since Feb 28. — Bloomberg, MEED, Anadolu Agency",
+        isNew: true
+      },
       {
         date: "2026-04-02",
         title: "Sheikh Khaled chairs ADNOC resilience meeting; EGA Al Taweelah fully halted — power plant destroyed",
@@ -488,8 +504,8 @@ const COUNTRY_STATUS_DATA = [
     ],
     oilGasImpact: {
       severity: "critical",
-      summary: "Iran targets 3 Abu Dhabi bridges; ADCOP at 1.62M bpd (can surge 1.8M); WH: Hormuz not core objective; 438 BMs + 2,012 drones intercepted",
-      details: "Iran published bridge target list including Sheikh Zayed, Al Maqta, and Khalifa bridges in Abu Dhabi after B1 destruction. WH says Hormuz reopening 'not a core objective' — raises prospect of prolonged disruption. UAE intercepted 438 BMs + 2,012 drones + 19 CMs (12 killed, 190 injured). ADCOP at 1.62M bpd (71% utilization, can surge to 1.8M bpd temporarily). VLCC Al Salmi struck at Dubai Mar 31. EGA Al Taweelah struck Mar 29. S&P Platts Inside/Outside Strait pricing live Apr 1. >50% crude offline. UN vote postponed. IEA warns April losses 'twice March'. Iran deployed anti-ship cruise missiles to Abu Musa and Tunbs islands."
+      summary: "HABSHAN GAS SHUT AGAIN Apr 3; Iran targets 3 Abu Dhabi bridges; ADCOP at 1.62M bpd; 438 BMs + 2,012 drones intercepted; Brent ~$109",
+      details: "Habshan gas complex (6.1 Bcf/d, ~60% of UAE domestic gas) shut AGAIN Apr 3 — debris from intercepted missile caused fire; 2nd shutdown since war began (Bloomberg Apr 3). Iran published bridge target list including Sheikh Zayed, Al Maqta, and Khalifa bridges in Abu Dhabi after B1 destruction. WH says Hormuz reopening 'not a core objective' — raises prospect of prolonged disruption. UAE intercepted 438 BMs + 2,012 drones + 19 CMs (12 killed, 190 injured). ADCOP at 1.62M bpd (71% utilization, can surge to 1.8M bpd temporarily). VLCC Al Salmi struck at Dubai Mar 31. EGA Al Taweelah struck Mar 29. S&P Platts Inside/Outside Strait pricing live Apr 1. >50% crude offline. UN vote Saturday Apr 5. IEA warns April losses 'twice March'. Iran deployed anti-ship cruise missiles to Abu Musa and Tunbs islands. Rystad: total disrupted upstream 11,535 kboe/d oil+cond across region."
     },
     infrastructure: [
       { name: "Shah Gas Field (ADNOC/Oxy)", type: "Sour Gas Processing", capacity: "~1 Bcf/d gas, 50k bpd condensate", status: "shutdown" },
@@ -503,10 +519,10 @@ const COUNTRY_STATUS_DATA = [
       { name: "Bu Hasa Field", type: "Onshore Oil", capacity: "~650,000 bpd", status: "operational" },
       { name: "Bab Field", type: "Onshore Oil/Gas", capacity: "~300,000 bpd", status: "operational" },
       { name: "Asab Field", type: "Onshore Oil/Gas", capacity: "~60,000 bpd", status: "operational" },
-      { name: "Habshan ASR Gas Complex", type: "Gas Processing", capacity: "~1.0 Bcf/d", status: "operational" },
+      { name: "Habshan ASR Gas Complex", type: "Gas Processing", capacity: "~1.0 Bcf/d", status: "shutdown", notes: "Shut Apr 3 along with main Habshan complex — 2nd wartime shutdown" },
       { name: "Ruwais Refinery Complex", type: "Refinery", capacity: "922,000 bpd total", status: "partial" },
       { name: "Ruwais Refinery 2 (West)", type: "Refinery", capacity: "417,000 bpd", status: "shutdown" },
-      { name: "Habshan Gas Processing", type: "Gas Processing", capacity: "~3.5 Bcf/d", status: "operational" },
+      { name: "Habshan Gas Processing", type: "Gas Processing", capacity: "~3.5 Bcf/d", status: "shutdown", notes: "Shut Apr 3 — debris from intercepted missile caused fire; 2nd shutdown since war began (1st: Mar 19-23); ~60% of UAE domestic gas" },
       { name: "Habshan-Fujairah Pipeline", type: "Pipeline", capacity: "1.5 mb/d", status: "operational" },
       { name: "Fujairah Oil Terminal", type: "Export Terminal", capacity: "~1M bpd Murban crude", status: "partial", notes: "Loadings partially resumed; avg 1.9M bpd Mar 20-24 (up 57% YoY) via ADCOP pipeline bypass; earlier drone attacks 14-17 Mar" },
       { name: "Das Island LNG/LPG (ADGAS)", type: "LNG/LPG Plant", capacity: "~5.8 Mtpa", status: "shutdown" },
@@ -550,7 +566,9 @@ const COUNTRY_STATUS_DATA = [
       { id: 24, title: "S&P Platts FOB Arab Gulf Inside Strait assessments from Apr 1 - S&P Global", url: "https://www.spglobal.com/energy/en/pricing-benchmarks/our-methodology/subscriber-notes/033026-platts-to-launch-new-fob-arab-gulf-inside-strait-spot-differential-assessments-april-1-maintain-existing-fob-arab-gulf-differentials", date: "2026-03-30" },
       { id: 25, title: "LME aluminium +6% to $3,492/t after EGA/Alba strikes - AlCircle", url: "https://www.alcircle.com/news/iranian-strikes-hit-ega-and-alba-s-aluminium-smelters-workers-injured-facilities-damaged-117823", date: "2026-03-30" },
       { id: 26, title: "Sheikh Khaled chairs ADNOC resilience meeting — The National", url: "https://www.thenationalnews.com/business/2026/04/02/sheikh-khaled-leads-meeting-of-adnoc-executives-on-resilience-planning/", date: "2026-04-02" },
-      { id: 27, title: "EGA Al Taweelah fully halted — power plant destroyed, potlines solidified — Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-04-01/top-gulf-aluminum-producer-ega-halted-smelter-after-iran-strike", date: "2026-04-01" }
+      { id: 27, title: "EGA Al Taweelah fully halted — power plant destroyed, potlines solidified — Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-04-01/top-gulf-aluminum-producer-ega-halted-smelter-after-iran-strike", date: "2026-04-01" },
+      { id: 28, title: "Abu Dhabi halts operations at Habshan gas facility after attack — Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-04-03/abu-dhabi-halts-operations-at-main-gas-facility-after-attack", date: "2026-04-03" },
+      { id: 29, title: "UAE suspends operations at Habshan gas complex — MEED", url: "https://www.meed.com/uae-suspends-operations-at-habshan-gas-complex", date: "2026-04-03" }
     ]
   },
   {
@@ -922,7 +940,7 @@ const COUNTRY_STATUS_DATA = [
         gas: "Asaluyeh processing hit; ~100 MMcm/d offline (~12% of South Pars); Fajr Jam fire; nuclear talks suspended indefinitely",
         refining: "Tehran Refinery (250 kb/d) destroyed; Bandar Abbas curtailed; Siraf condensate operational; Isfahan steel/pharma struck Apr 1; B1 bridge collapse disrupts Tehran-Karaj logistics",
         lng: "No LNG export capacity; South Pars disruption affects domestic supply",
-        ports: "Kharg loading avg 1.84 mb/d; Jask bypass at ~300k bpd; 225 Kpler crossings since Mar 1 (94% decline); 247 MR+ tankers stranded in MEG (6% of global DWT), 984 tankers in broader ME (22% of global fleet); ~2,000 vessels total trapped (IMO); toll legalized; Philippines gets toll-free passage (US ally); IRGC toll at $2M/vessel in yuan; Iran-Oman transit protocol in final drafting"
+        ports: "Kharg loading avg 1.84 mb/d; Jask bypass at ~300k bpd; 225 Kpler crossings since Mar 1 (94% decline); 2,190 ships trapped west of Hormuz (50 VLCCs, 12 VLGCs — Kpler/AP Apr 2); toll legalized; Philippines gets toll-free passage; IRGC toll at $2M/vessel in yuan; Iran-Oman transit protocol in final drafting; first non-Iranian VLCCs (Dhalkut + Habrut) exited Apr 2 (Argus)"
       }
     },
     events: [
@@ -1786,6 +1804,72 @@ const FM_DECLARATIONS_DATA = [
 
 // ---------- TABLE 3: Shutdowns Without FM ----------
 const SHUTDOWNS_NO_FM_DATA = [
+  {
+    id: "sd-032",
+    company: "Kuwait (Mina Al-Ahmadi Refinery — 3rd Strike)",
+    country: "Kuwait",
+    flag: "\u{1F1F0}\u{1F1FC}",
+    date: "2026-04-03",
+    status: "struck",
+    statusLabel: "Struck",
+    isNew: true,
+    summary: "Mina Al-Ahmadi refinery (~466k bpd) struck by drones for 3rd time during conflict. Fires in several operational units, contained by firefighters. No injuries. KPC confirmed attack. Several units shut as precaution.",
+    details: {
+      volumeAffected: "~466,000 bpd refinery (already offline from previous strikes Mar 19-20)",
+      commodity: "Refined Products (gasoline, diesel, jet fuel)",
+      duration: "Since 3 Apr 2026, fires contained",
+      reason: "Iranian drone attack — 3rd strike on this facility. Part of broader Apr 3 double-strike on Kuwait (refinery + desalination plant).",
+      financialImpact: "Cumulative damage extends repair timeline; KPC expects 3-4 months post-war to restore."
+    },
+    sources: [
+      { id: 1, title: "Kuwait races to contain damage after drone strikes oil refinery — The National", url: "https://www.thenationalnews.com/news/mena/2026/04/03/kuwait-races-to-contain-damage-after-drone-strikes-oil-refinery/", date: "2026-04-03" },
+      { id: 2, title: "Kuwait desalination plant, oil refinery hit — Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/3/kuwait-desalination-plant-oil-refinery-hit-by-missile-and-drone-strikes", date: "2026-04-03" }
+    ]
+  },
+  {
+    id: "sd-031",
+    company: "Kuwait (Power/Desalination Plant — 2nd Strike)",
+    country: "Kuwait",
+    flag: "\u{1F1F0}\u{1F1FC}",
+    date: "2026-04-03",
+    status: "struck",
+    statusLabel: "Struck",
+    isNew: true,
+    summary: "Kuwait power and desalination plant struck by Iranian missiles Apr 3, hours after Al-Ahmadi refinery strike. 2nd attack on Kuwait desalination infrastructure (1st was Mar 30, killing 1 Indian worker). Kuwait is 100% desalination-dependent for fresh water.",
+    details: {
+      volumeAffected: "Power generation and desalinated water supply affected",
+      commodity: "Power, Water",
+      duration: "Since 3 Apr 2026, damage assessment ongoing",
+      reason: "Iranian missile attack on civilian water/power infrastructure. Part of broader Apr 3 double-strike on Kuwait. Kuwait 100% dependent on desalination for fresh water.",
+      financialImpact: "Critical civilian infrastructure — threatens Kuwait's entire water supply chain."
+    },
+    sources: [
+      { id: 1, title: "Kuwait desalination plant, oil refinery hit — Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/3/kuwait-desalination-plant-oil-refinery-hit-by-missile-and-drone-strikes", date: "2026-04-03" },
+      { id: 2, title: "Kuwait says Iranian attack damaged desalination plant — AP/WDRB", url: "https://www.wdrb.com/news/national/kuwait-says-an-iranian-attack-damaged-a-desalination-plant-after-an-earlier-assault-on-an/article_5eeef813-3782-553e-bb47-e37499d2c11e.html", date: "2026-04-03" }
+    ]
+  },
+  {
+    id: "sd-030",
+    company: "ADNOC (Habshan Gas Complex — 2nd Shutdown)",
+    country: "UAE",
+    flag: "\u{1F1E6}\u{1F1EA}",
+    date: "2026-04-03",
+    status: "shutdown",
+    statusLabel: "Shutdown",
+    isNew: true,
+    summary: "Habshan gas processing complex (6.1 Bcf/d, ~60% of UAE domestic gas) shut AGAIN after debris from intercepted missile caused fire. Second wartime shutdown — first was Mar 19-23. Abu Dhabi Media Office confirmed. Five plants and 14 processing units offline.",
+    details: {
+      volumeAffected: "6.1 Bcf/d gas processing capacity (~60% of UAE domestic gas supply)",
+      commodity: "Natural Gas",
+      duration: "Since 3 Apr 2026, ongoing — previous shutdown lasted 4 days (Mar 19-23)",
+      reason: "Debris from intercepted incoming missile fell on Habshan gas facility area, causing fire. Abu Dhabi Media Office confirmed shutdown while authorities responded.",
+      financialImpact: "UAE domestic gas supply severely disrupted; affects power generation, desalination, and industrial output across Abu Dhabi. Combined with Shah shutdown (~1 Bcf/d), ~2.5 Bcf/d gas offline."
+    },
+    sources: [
+      { id: 1, title: "Abu Dhabi halts operations at Habshan gas facility after attack — Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-04-03/abu-dhabi-halts-operations-at-main-gas-facility-after-attack", date: "2026-04-03" },
+      { id: 2, title: "UAE suspends operations at Habshan gas complex — MEED", url: "https://www.meed.com/uae-suspends-operations-at-habshan-gas-complex", date: "2026-04-03" }
+    ]
+  },
   {
     id: "sd-027",
     company: "Shell-CNOOC (CSPC Huizhou Cracker)",
