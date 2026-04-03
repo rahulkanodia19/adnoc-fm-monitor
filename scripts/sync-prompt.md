@@ -319,6 +319,16 @@ Update the `data.js` file with any new findings. Preserve the exact same schema 
 - `FM_DECLARATIONS_DATA` — array of force majeure declarations. Each has: id, company, country, flag, date, status (active|partially_lifted|lifted), statusLabel, isNew, summary, details, sources
 - `SHUTDOWNS_NO_FM_DATA` — array of non-FM shutdowns. Each has: id, company, country, flag, date, status, statusLabel, isNew, summary, details, sources
 
+### CRITICAL: Additive-only updates (DO NOT DELETE DATA)
+
+**This is the #1 cause of data loss in the news pipeline.** You MUST follow these rules:
+
+1. **NEVER delete text from country summaries** — only APPEND new information. If a summary says "WH: Hormuz not core objective" and you find new data, ADD your findings to the end, do NOT remove the WH statement.
+2. **NEVER shorten a summary** — every summary must be equal or longer after your edit. If you find yourself rewriting a summary to be shorter, STOP and append instead.
+3. **NEVER remove source citations** — existing source IDs and URLs must all be preserved. Only add new ones.
+4. **NEVER delete events from the events array** — only add new events or update existing event status.
+5. **Before editing any country entry**, read `data-previous.json` and compare. After editing, verify the entry didn't lose any data from the previous version.
+
 ### Rules
 - Pre-war baseline values (`preWar` fields in production objects) must NEVER change — these are fixed reference points
 - Production notes (`production.notes`) MUST be updated to reflect current operational status each sync
@@ -392,7 +402,20 @@ Each country's `infrastructure[]` array MUST always include at least these criti
 - [ ] Each country has production.notes with oil, gas, refining, ports keys (and lng where applicable)
 - [ ] Refining math: capacity - affected = available (within rounding)
 
-## Step 4b: Self-validate before finishing
+## Step 4b: Data loss verification (CRITICAL)
+
+After writing data.js, read `data-previous.json` and verify NO DATA WAS LOST:
+
+1. For each of the 9 countries, compare the `summary` field length:
+   - If the new summary is SHORTER than the previous one, you LOST data. Fix it by appending the missing content back.
+2. Count the sources array for each country — the new count must be >= the previous count.
+3. Count FM declarations — must be >= previous count (you can only ADD, never remove).
+4. Count shutdowns — must be >= previous count.
+5. Check that no event entries were deleted from any country's events array.
+
+**If any data was lost, READ data-previous.json and RESTORE the missing content before proceeding.**
+
+## Step 4c: Self-validate before finishing
 
 After writing data.js, verify:
 1. The file has valid JavaScript syntax (all brackets/braces matched, no trailing commas after last array element)
