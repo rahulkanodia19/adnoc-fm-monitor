@@ -1,28 +1,52 @@
 {
-  "timestamp": "2026-04-03T19:00:00.000Z",
+  "timestamp": "2026-04-03T21:00:00.000Z",
   "success": true,
-  "changes": "Day 37 evening update: Iran fired new missile/drone salvos at Israel + Gulf states in retaliation for US bridge strikes. Trump claims '3 big Iranian bridges' destroyed. Brent surged ~$108-112. UN Hormuz vote delayed to Sat Apr 5 (Good Friday). Bahrain resolution authorizes 'all defensive means necessary' for 6+ months — China/France/Russia broke silence procedure opposing. Added Aster Chemicals & Energy (Singapore) FM declaration (fm-029). Added Shell-CNOOC Huizhou cracker shutdown (sd-027) and Lotte Chemical Yeosu shutdown (sd-026). Updated Brent price range across all country summaries. Iran continues ~25 missiles + ~120 drones/day at Gulf. >1,900 killed in Iran since war began.",
+  "changes": "Timestamp updated to Apr 3 21:00 UTC. UAE cumulative intercept stats added (438 BMs, 2,012 drones, 19 CMs — 12 killed, 190 injured). Qatar summary updated with Fitch rating risk flag. Iran oilGasImpact updated with Goldman $150 warning and Abu Musa/Tunbs anti-ship missile deployment. COSCO container carrier transits added to Iran Day 36 event. No new FM declarations or shutdowns found in last 14 hours. All 29 FM declarations and 27 shutdowns verified current.",
   "countriesCount": 9,
   "fmCount": 29,
   "shutdownsCount": 27,
   "newEvents": [
-    "Iran fired new missile salvos at Israel + Gulf states Apr 3 in retaliation for B1 bridge strikes — PBS, NBC News, Manila Times",
-    "Trump claims US destroyed '3 big Iranian bridges' (beyond B1 Karaj alone) — ABC7",
-    "Bahrain revised UN Hormuz resolution: 'all defensive means necessary' for 6+ months; China/France/Russia broke silence procedure — Al-Monitor, Washington Post, The National",
-    "Iran continues ~25 missiles + ~120 drones/day at Gulf states; >1,900 killed in Iran since war began — NBC News",
-    "Brent surged to ~$108-112 on Apr 3 after bridge strikes and Iran retaliation; WTI ~$107 — CNBC, OilPrice.com"
+    "UAE cumulative intercept data: 438 BMs, 2,012 drones, 19 CMs intercepted since Feb 28 — 12 killed (3 military), 190 injured — Wikipedia citing UAE MoD",
+    "Iran deployed advanced anti-ship cruise missiles to Abu Musa and Tunbs islands — CNBC, FinancialContent",
+    "Two COSCO ultra-large container carriers (CSCL Indian Ocean, CSCL Arctic Ocean) transited Hormuz after failed Mar 27 attempt — Argus Media",
+    "Goldman Sachs warns Brent could test $150 if naval coalition can't secure passage within 14 days — FinancialContent, Bloomberg",
+    "Fitch flags Qatar credit rating risk on prolonged LNG disruption — AGBI",
+    "Brent touched $110.12 on Apr 2 before settling in $108-112 range — FinancialContent"
   ],
-  "newFMDeclarations": [
-    "fm-029: Aster Chemicals & Energy (Singapore) — FM on ethylene (1.15 Mtpa), propylene (500k tpa), benzene (290k tpa), styrene monomer; declared 6 Mar 2026 — OE Digital, ICIS, S&P Global"
-  ],
-  "newShutdowns": [
-    "sd-027: Shell-CNOOC (CSPC) Huizhou 1.2M tpa ethylene cracker — shut 5 Mar due to ME naphtha disruption — Hydrocarbon Processing, TankTerminals",
-    "sd-026: Lotte Chemical Yeosu — all facilities halted 27 Mar (restart May 29) after S. Korea naphtha export ban — Seoul Economic Daily, ICIS"
-  ],
+  "newFMDeclarations": [],
+  "newShutdowns": [],
+  "noNewFmReason": "No new force majeure declarations found in last 14 hours. Formosa Plastics Corp downstream FM (Apr 1) was the most recent, already captured as fm-027. Monitoring continues for potential new downstream FMs as naphtha supply constraints worsen in April.",
   "sourcesChecked": {
-    "tier1": ["Reuters", "Bloomberg", "S&P Global/Platts", "Kpler", "Rystad Energy", "Argus Media", "Vortexa", "ICIS"],
-    "tier2": ["Al Jazeera", "CNBC", "CNN", "PBS", "NPR", "The National (UAE)", "Gulf News", "Washington Post", "ABC7", "Manila Times", "Al-Monitor", "Seoul Economic Daily"],
-    "tier3": ["OilPrice.com", "gCaptain", "Hellenic Shipping News", "UANI", "Hydrocarbon Processing", "C&EN", "TankTerminals", "ChemAnalyst", "Worldnews.com", "The War Zone"]
+    "tier1": [
+      "Kpler (cited in CNBC, Argus)",
+      "S&P Global / Platts (bifurcation launch Apr 1)",
+      "Bloomberg (oil prices, Saudi exports, tanker attacks)",
+      "Reuters (UN vote, diplomatic context)",
+      "Argus Media (Hormuz traffic, refinery impacts, COSCO transits)",
+      "Rystad Energy ($25B repair bill cited)",
+      "Vortexa (Iranian crude tracking to China)"
+    ],
+    "tier2": [
+      "Al Jazeera (comprehensive war live blogs, Iran retaliation)",
+      "CNBC (oil prices, IEA warnings, Hormuz traffic, Iran-Oman protocol)",
+      "The National UAE (Iraq Syria exports, Bahrain resolution)",
+      "Gulf News (Kuwait airport, Al Salmi tanker)",
+      "France 24 (Houthis, Hormuz military planning)",
+      "Washington Post (Hormuz coalition, Pentagon planning)"
+    ],
+    "tier3": [
+      "OilPrice.com (Saudi production cuts, Aramco strategy)",
+      "World Oil (Shah gas, Iraq FM)",
+      "Hellenic Shipping News (Oman coastal route)",
+      "FinancialContent (Brent $110.12, naphtha $1000, Goldman $150 warning)",
+      "Windward Maritime Intelligence (March shipping data — loadings -76%)",
+      "UANI (April 2 shipping update, 12 vessels transited)"
+    ]
+  },
+  "premiumSourceAccess": {
+    "terminal.kpler.com": "skipped — no Chrome MCP browser session available",
+    "portal.rystadenergy.com": "skipped — no Chrome MCP browser session available",
+    "connect.spglobal.com": "skipped — no Chrome MCP browser session available"
   },
   "validationResult": "112/112 checks passed"
 }
