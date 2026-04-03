@@ -7,7 +7,7 @@
       "flag": "🇶🇦",
       "status": "critical",
       "statusLabel": "FM Declared",
-      "summary": "AQUA 1 tanker (QatarEnergy charter) struck by Iranian cruise missiles 17nm north of Ras Laffan Apr 1 — Qatar intercepted 2 of 3 missiles. All 77 Mtpa LNG halted since Mar 2. Mar 18 strikes destroyed 2 LNG trains + Pearl GTL (12.8 Mtpa knocked out for 3-5 yrs). FM extended through mid-June. UN Hormuz vote Sat Apr 5 — China/Russia oppose force authorization. Iran retaliates after US bridge strikes Apr 3 — vows 'crushing' attacks. UK-led 40+ nation coalition demands reopening. Brent ~$108-112. OPEC+ Apr 5 critical. Apr 6 Trump deadline looms.",
+      "summary": "AQUA 1 tanker (QatarEnergy charter) struck by Iranian cruise missiles 17nm north of Ras Laffan Apr 1 — Qatar intercepted 2 of 3 missiles. All 77 Mtpa LNG halted since Mar 2. Mar 18 strikes destroyed 2 LNG trains + Pearl GTL (12.8 Mtpa knocked out for 3-5 yrs). FM extended through mid-June. Fitch flags rating risk on prolonged disruption. UN Hormuz vote Sat Apr 5 — China/Russia oppose force authorization. Iran retaliates after US bridge strikes Apr 3 — vows 'crushing' attacks. UK-led 40+ nation coalition demands reopening. Brent ~$108-112. OPEC+ Apr 5 critical. Apr 6 Trump deadline looms.",
       "metrics": {
         "headline": "AQUA 1 tanker struck Apr 1; ~20% of global LNG offline; UN Hormuz vote Sat Apr 5; OPEC+ same day",
         "productionOffline": "77 Mtpa LNG + all downstream",
@@ -965,9 +965,9 @@
       "flag": "🇦🇪",
       "status": "critical",
       "statusLabel": "Escalated",
-      "summary": "S&P Platts Inside/Outside Strait bifurcation live Apr 1. UAE intercepted 5 BMs + 35 drones Apr 1; Bangladeshi worker killed in Fujairah by shrapnel. IRGC threatens 17 US tech firms. VLCC Al Salmi struck at Dubai port Mar 31. ADCOP at 1.62M bpd. >50% crude offline. Iran retaliates after US bridge strikes Apr 3 — vows 'crushing' attacks on regional infrastructure. UN Hormuz vote Sat Apr 5. UAE signatory to 40+ nation coalition. Brent ~$108-112. Apr 6 deadline looms.",
+      "summary": "S&P Platts Inside/Outside Strait bifurcation live Apr 1. UAE intercepted 438 BMs + 2,012 drones + 19 CMs total since Feb 28 (12 killed, 190 injured). IRGC threatens 17 US tech firms. VLCC Al Salmi struck at Dubai port Mar 31. ADCOP at 1.62M bpd. >50% crude offline. Iran retaliates after US bridge strikes Apr 3 — vows 'crushing' attacks on regional infrastructure. UN Hormuz vote Sat Apr 5. UAE signatory to 40+ nation coalition. Brent ~$108-112. Apr 6 deadline looms.",
       "metrics": {
-        "headline": "UAE intercepted 5 BMs + 35 drones Apr 1; S&P Platts bifurcation live; UN Hormuz vote Sat Apr 5",
+        "headline": "UAE intercepted 438 BMs + 2,012 drones + 19 CMs since Feb 28 (12 killed); S&P Platts bifurcation live; UN Hormuz vote Sat Apr 5",
         "productionOffline": "1+ Bcf/d gas + 417 kb/d refining; ADCOP at 1.62M bpd",
         "keyFigure": ">50% of UAE crude output offline; Brent ~$108-112; Iran vows regional retaliation"
       },
@@ -1101,8 +1101,8 @@
       ],
       "oilGasImpact": {
         "severity": "critical",
-        "summary": "VLCC Al Salmi struck at Dubai Mar 31; EGA struck Mar 29; ADCOP at 1.62M bpd; UAE signatory to 40+ nation Hormuz coalition",
-        "details": "VLCC Al Salmi (2M bbl crude) struck by Iranian drone at Dubai port Mar 31 — fire, hull damage, oil spill risk; WTI spiked to $106.70. UAE intercepted 5 BMs + 35 drones Apr 1; Bangladeshi killed in Fujairah. EGA Al Taweelah struck Mar 29 (6 injured; LME aluminium +6% to $3,492/t). UAE signatory to UK-led 40+ nation coalition (Apr 2) demanding immediate Hormuz reopening — sanctions threat, military planners next week. S&P Platts Inside/Outside Strait pricing live Apr 1. ADCOP at record 1.62M bpd. >50% crude offline. Ruwais-2 shut. Shah still shut. March loadings west of Hormuz down 76%. IEA warns April supply losses will be 'twice March'."
+        "summary": "UAE intercepted 438 BMs + 2,012 drones + 19 CMs total (12 killed, 190 injured); ADCOP at 1.62M bpd; UAE signatory to 40+ nation Hormuz coalition",
+        "details": "As of Apr 1, UAE has intercepted 438 ballistic missiles, 2,012 drones, and 19 cruise missiles from Iran — 12 killed (3 military), 190 injured. VLCC Al Salmi (2M bbl crude) struck by Iranian drone at Dubai port Mar 31 — fire, hull damage, oil spill risk. EGA Al Taweelah struck Mar 29 (6 injured; LME aluminium +6% to $3,492/t). UAE signatory to UK-led 40+ nation coalition (Apr 2) demanding immediate Hormuz reopening — sanctions threat, military planners next week. S&P Platts Inside/Outside Strait pricing live Apr 1. ADCOP at record 1.62M bpd. >50% crude offline. Ruwais-2 shut. Shah still shut. March loadings west of Hormuz down 76%. IEA warns April supply losses will be 'twice March'. Iran deployed anti-ship cruise missiles to Abu Musa and Tunbs islands."
       },
       "infrastructure": [
         {
@@ -2378,7 +2378,7 @@
         {
           "date": "2026-04-03",
           "title": "Day 36: UK-led 40+ nation coalition demands immediate Hormuz reopening; Iran demands guaranteed ceasefire; Apr 6 deadline 3 days away",
-          "description": "UK FM Cooper chaired virtual summit of 40+ nations Apr 2 (Thursday) — chairman's statement demands 'immediate and unconditional' Hormuz reopening, threatens sanctions if strait stays closed, military planners to meet next week for mine-clearing and commercial shipping security. Iran demands 'guaranteed ceasefire' via intermediaries but calls US demands 'maximalist and irrational'. Iran and Oman drafting transit protocol to 'monitor and coordinate' Strait passage; 3 Omani-flagged vessels (2 VLCCs + 1 LNG carrier) entered Hormuz hugging Oman's coastline — alternative route to normal Iranian-waters path. StanChart warns OPEC+ could abandon voluntary output cuts entirely at Apr 5 meeting. IEA warns April supply losses will be 'twice March' — world losing 4.5-5 mb/d, doubling by mid-April. Shell warns of April fuel crunch in Europe; Macquarie: 2 more months could send oil to $200. Kpler: 214 crossings Mar 1-Apr 1 (94% decline). Brent volatile $105-112. — Al Jazeera, Euronews, CNBC, Reuters, Rigzone, Military.com",
+          "description": "UK FM Cooper chaired virtual summit of 40+ nations Apr 2 (Thursday) — chairman's statement demands 'immediate and unconditional' Hormuz reopening, threatens sanctions if strait stays closed, military planners to meet next week for mine-clearing and commercial shipping security. Iran demands 'guaranteed ceasefire' via intermediaries but calls US demands 'maximalist and irrational'. Iran and Oman drafting transit protocol to 'monitor and coordinate' Strait passage; 3 Omani-flagged vessels (2 VLCCs + 1 LNG carrier) entered Hormuz hugging Oman's coastline — alternative route to normal Iranian-waters path. Two COSCO ultra-large container carriers (CSCL Indian Ocean + CSCL Arctic Ocean) also transited after failed Mar 27 attempt. Iran deployed advanced anti-ship cruise missiles to Abu Musa and Tunbs islands. StanChart warns OPEC+ could abandon voluntary output cuts entirely at Apr 5 meeting. IEA warns April supply losses will be 'twice March' — world losing 4.5-5 mb/d, doubling by mid-April. Shell warns of April fuel crunch in Europe; Macquarie: 2 more months could send oil to $200. Kpler: 214 crossings Mar 1-Apr 1 (94% decline). Brent volatile $105-112. — Al Jazeera, Euronews, CNBC, Reuters, Rigzone, Military.com, Argus Media",
           "isNew": true
         },
         {
@@ -2481,7 +2481,7 @@
       "oilGasImpact": {
         "severity": "critical",
         "summary": "Day 37: Iran retaliates with new missile salvos after US bridge strikes; UN Hormuz vote Sat Apr 5; Brent $108-112; Apr 6 deadline looms",
-        "details": "Day 37 (Apr 3): Iran fired new missile/drone salvos at Israel and Gulf states in retaliation for B1 bridge strike. Trump claims US destroyed '3 big Iranian bridges'. Brent surged ~$108-112; WTI ~$107. UN Hormuz vote delayed to Sat Apr 5 — Bahrain resolution authorizes 'all defensive means necessary' for 6+ months; China/France/Russia broke silence procedure opposing force authorization. Iran continues ~25 missiles + ~120 drones/day at Gulf states; >1,900 killed in Iran since war began. Iran-Oman transit protocol being drafted. UK-led 40+ nation coalition demands immediate reopening. IEA warns April losses 'twice March' — world losing 4.5-5 mb/d. OPEC+ Apr 5 meeting most critical since formation. Apr 6 Trump deadline for power plant strikes. Kharg loading 1.84 mb/d. Rystad: $25B infrastructure repair bill."
+        "details": "Day 37 (Apr 3): Iran fired new missile/drone salvos at Israel and Gulf states in retaliation for B1 bridge strike. Trump claims US destroyed '3 big Iranian bridges'. Brent touched $110.12 on Apr 2, volatile at $108-112; WTI ~$107. Goldman Sachs warns $150 if naval coalition can't secure passage within 14 days. UN Hormuz vote delayed to Sat Apr 5 — Bahrain resolution authorizes 'all defensive means necessary' for 6+ months; China/France/Russia broke silence procedure opposing force authorization. Iran continues ~25 missiles + ~120 drones/day at Gulf states; >1,900 killed in Iran since war began. Iran deployed anti-ship cruise missiles to Abu Musa and Tunbs islands. Iran-Oman transit protocol being drafted. UK-led 40+ nation coalition demands immediate reopening. IEA warns April losses 'twice March' — world losing 4.5-5 mb/d. OPEC+ Apr 5 meeting most critical since formation. Apr 6 Trump deadline for power plant strikes. Kharg loading 1.84 mb/d. Rystad: $25B infrastructure repair bill."
       },
       "infrastructure": [
         {
