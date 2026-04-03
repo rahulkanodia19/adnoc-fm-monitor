@@ -3,9 +3,9 @@
   "_source": "seed",
   "prices": {
     "wti": {
-      "current": 100.12,
-      "previousClose": 101.38,
-      "high52w": 102.88,
+      "current": 111.54,
+      "previousClose": 100.12,
+      "high52w": 111.54,
       "low52w": 55.27,
       "history": [
         {
@@ -5011,13 +5011,17 @@
         {
           "date": "2026-04-01",
           "price": 100.12
+        },
+        {
+          "date": "2026-04-02",
+          "price": 111.54
         }
       ]
     },
     "brent": {
-      "current": 128.46,
-      "previousClose": 127.24,
-      "high52w": 128.46,
+      "current": 141.365,
+      "previousClose": 128.46,
+      "high52w": 141.365,
       "low52w": 60.2,
       "history": [
         {
@@ -10079,6 +10083,10 @@
         {
           "date": "2026-04-01",
           "price": 128.46
+        },
+        {
+          "date": "2026-04-02",
+          "price": 141.365
         }
       ]
     },
@@ -35319,8 +35327,8 @@
       ]
     },
     "lng_nwe": {
-      "current": 15.742,
-      "previousClose": 16.609,
+      "current": 16.731,
+      "previousClose": 15.742,
       "high52w": 20.728,
       "low52w": 8.585,
       "history": [
@@ -51251,6 +51259,10 @@
         {
           "date": "2026-04-01",
           "price": 15.742
+        },
+        {
+          "date": "2026-04-02",
+          "price": 16.731
         }
       ]
     },
@@ -55287,8 +55299,8 @@
       ]
     },
     "henry_hub": {
-      "current": 2.836,
-      "previousClose": 2.905,
+      "current": 2.839,
+      "previousClose": 2.836,
       "high52w": 6.8,
       "low52w": 2.705,
       "history": [
@@ -71219,13 +71231,17 @@
         {
           "date": "2026-04-01",
           "price": 2.836
+        },
+        {
+          "date": "2026-04-02",
+          "price": 2.839
         }
       ]
     },
     "awrp": {
-      "current": 2.2,
-      "previousClose": 1.9,
-      "high52w": 2.2,
+      "current": 2.45,
+      "previousClose": 2.2,
+      "high52w": 2.45,
       "low52w": 0.65,
       "history": [
         {
@@ -74767,6 +74783,10 @@
         {
           "date": "2026-04-01",
           "price": 2.2
+        },
+        {
+          "date": "2026-04-02",
+          "price": 2.45
         }
       ]
     }
