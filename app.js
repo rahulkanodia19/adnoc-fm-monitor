@@ -1648,29 +1648,32 @@ function updateStats(activeTab) {
         refAffected += refLoss;
         if (oilLoss > 0 || gasLoss > 0 || refLoss > 0) impactedCount++;
       });
-      // Get recent highlights from countries with new events
-      const recentHighlights = COUNTRY_STATUS_DATA
+      // Get crisp factual highlights from recently updated countries
+      const updatedCountries = COUNTRY_STATUS_DATA
         .filter(c => c.isNew || (c.events && c.events.some(e => e.isNew)))
-        .map(c => ({ country: c.country, headline: c.metrics?.headline }))
-        .filter(h => h.headline);
-      const hl1 = recentHighlights[0]?.headline || '';
-      const hl2 = recentHighlights[1]?.headline || '';
+        .map(c => c.country + ': ' + (c.metrics?.productionOffline || '').substring(0, 80))
+        .filter(h => h.length > 5);
       stats = [
-        { label: 'Oil Offline (kb/d)', value: formatNum(Math.round(oilOffline)), color: 'text-red-600', change: recentHighlights.length, subtitle: hl1 },
-        { label: 'Gas Offline (Bcf/d)', value: formatNum(Math.round(gasOffline * 10) / 10), color: 'text-amber-600', change: recentHighlights.length, subtitle: hl2 },
-        { label: 'Refining Affected (kb/d)', value: formatNum(Math.round(refAffected)), color: 'text-orange-600', change: recentHighlights.length },
-        { label: 'Countries Impacted', value: impactedCount, color: 'text-blue-600', change: recentHighlights.length },
+        { label: 'Oil Offline (kb/d)', value: formatNum(Math.round(oilOffline)), color: 'text-red-600', change: updatedCountries.length, subtitle: updatedCountries[0] || '' },
+        { label: 'Gas Offline (Bcf/d)', value: formatNum(Math.round(gasOffline * 10) / 10), color: 'text-amber-600', change: updatedCountries.length, subtitle: updatedCountries[1] || '' },
+        { label: 'Refining Affected (kb/d)', value: formatNum(Math.round(refAffected)), color: 'text-orange-600', change: updatedCountries.length, subtitle: updatedCountries[2] || '' },
+        { label: 'Countries Impacted', value: impactedCount, color: 'text-blue-600', change: updatedCountries.length, subtitle: updatedCountries[3] || '' },
       ];
       break;
     }
-    case 'country-matrix':
+    case 'country-matrix': {
+      const cUpdated = COUNTRY_STATUS_DATA
+        .filter(c => c.isNew)
+        .map(c => c.country + ': ' + (c.metrics?.productionOffline || '').substring(0, 80))
+        .filter(h => h.length > 5);
       stats = [
-        { label: 'Countries Monitored', value: COUNTRY_STATUS_DATA.length, color: 'text-blue-600', change: countNew(COUNTRY_STATUS_DATA) },
-        { label: 'Critical / Conflict', value: COUNTRY_STATUS_DATA.filter(c => ['critical', 'conflict', 'high'].includes(c.status)).length, color: 'text-red-600', change: countNew(COUNTRY_STATUS_DATA, c => ['critical', 'conflict', 'high'].includes(c.status)) },
-        { label: 'Elevated Risk', value: COUNTRY_STATUS_DATA.filter(c => c.status === 'elevated').length, color: 'text-amber-600', change: countNew(COUNTRY_STATUS_DATA, c => c.status === 'elevated') },
-        { label: 'Stable', value: COUNTRY_STATUS_DATA.filter(c => c.status === 'stable').length, color: 'text-emerald-600', change: countNew(COUNTRY_STATUS_DATA, c => c.status === 'stable') },
+        { label: 'Countries Monitored', value: COUNTRY_STATUS_DATA.length, color: 'text-blue-600', change: countNew(COUNTRY_STATUS_DATA), subtitle: cUpdated[0] || '' },
+        { label: 'Critical / Conflict', value: COUNTRY_STATUS_DATA.filter(c => ['critical', 'conflict', 'high'].includes(c.status)).length, color: 'text-red-600', change: countNew(COUNTRY_STATUS_DATA, c => ['critical', 'conflict', 'high'].includes(c.status)), subtitle: cUpdated[1] || '' },
+        { label: 'Elevated Risk', value: COUNTRY_STATUS_DATA.filter(c => c.status === 'elevated').length, color: 'text-amber-600', change: countNew(COUNTRY_STATUS_DATA, c => c.status === 'elevated'), subtitle: cUpdated[2] || '' },
+        { label: 'Stable', value: COUNTRY_STATUS_DATA.filter(c => c.status === 'stable').length, color: 'text-emerald-600', change: countNew(COUNTRY_STATUS_DATA, c => c.status === 'stable'), subtitle: cUpdated[3] || '' },
       ];
       break;
+    }
     case 'fm-declarations':
       stats = [
         { label: 'Total Declarations', value: FM_DECLARATIONS_DATA.length, color: 'text-blue-600', change: countNew(FM_DECLARATIONS_DATA) },
