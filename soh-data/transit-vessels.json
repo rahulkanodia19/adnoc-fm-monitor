@@ -54,6 +54,32 @@
       "isTransiting": true
     },
     {
+      "name": "Danisa",
+      "imo": "9172739",
+      "mmsi": "352004406",
+      "vesselTypeClass": "VLGC",
+      "state": "loaded",
+      "flagName": "Panama",
+      "deadWeight": 49723,
+      "commodityTypes": [
+        "lpg"
+      ],
+      "capacity": 76929,
+      "speed": 7.3,
+      "course": 40,
+      "lat": 26.74243,
+      "lng": 56.121086,
+      "aisDestination": null,
+      "product": "Butane",
+      "controller": "Pertamina",
+      "lastPortCall": {
+        "start": "2026-03-30T00:00:00",
+        "end": "2026-03-31T00:00:00"
+      },
+      "transitDirection": "entering",
+      "isTransiting": true
+    },
+    {
       "name": "Sohar LNG",
       "imo": "9210816",
       "mmsi": "357186000",
@@ -75,34 +101,8 @@
       "product": "lng",
       "controller": "ADNOC Gas",
       "lastPortCall": {
-        "start": "2026-02-25T03:19:20",
-        "end": "2026-02-25T03:19:20"
-      },
-      "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
-      "name": "Elpis",
-      "imo": "9212400",
-      "mmsi": "620999876",
-      "vesselTypeClass": "Handy/MR1",
-      "state": "loaded",
-      "flagName": "Panama",
-      "deadWeight": 35775,
-      "commodityTypes": [
-        "liquids"
-      ],
-      "capacity": 40533,
-      "speed": 8.1,
-      "course": 45,
-      "lat": 26.600243,
-      "lng": 55.915955,
-      "aisDestination": null,
-      "product": "Methanol",
-      "controller": "IMS LTD",
-      "lastPortCall": {
-        "start": "2026-03-30T09:55:22",
-        "end": "2026-03-30T14:17:47"
+        "start": "2026-04-02T07:19:00",
+        "end": "2026-04-02T07:19:00"
       },
       "transitDirection": "entering",
       "isTransiting": true
@@ -131,33 +131,6 @@
         "end": "2026-03-17T21:59:19"
       },
       "transitDirection": "exiting",
-      "isTransiting": true
-    },
-    {
-      "name": "Uma",
-      "imo": "9258870",
-      "mmsi": "750057000",
-      "vesselTypeClass": "Aframax/LR2",
-      "state": "ballast",
-      "flagName": "Barbados",
-      "deadWeight": 114761,
-      "commodityTypes": [
-        "liquids"
-      ],
-      "capacity": 121270,
-      "speed": 6.2,
-      "course": 55,
-      "lat": 26.744062,
-      "lng": 56.174465,
-      "destination": "Kharg Island",
-      "destinationEta": "2026-04-02T22:00:00",
-      "aisDestination": null,
-      "product": "High Sulfur Fuel Oil",
-      "lastPortCall": {
-        "start": "2026-03-31T15:39:00",
-        "end": "2026-03-31T15:39:00"
-      },
-      "transitDirection": "entering",
       "isTransiting": true
     },
     {
@@ -230,7 +203,7 @@
       "lat": 25.61433,
       "lng": 56.45076,
       "destination": "Dibba Port",
-      "destinationEta": "2026-04-05T18:00:06.656312",
+      "destinationEta": "2026-04-05T21:00:06.739814",
       "aisDestination": null,
       "product": "Minerals",
       "controller": "Nanjing King Ship Management",
@@ -367,11 +340,11 @@
     }
   ],
   "exitingCount": 4,
-  "enteringCount": 10,
-  "totalTransiting": 14,
+  "enteringCount": 9,
+  "totalTransiting": 13,
   "uaeExiting": 0,
   "uaeEntering": 0,
   "adnocExiting": 0,
   "adnocEntering": 1,
-  "syncTimestamp": "2026-04-03T06:07:50.414Z"
+  "syncTimestamp": "2026-04-03T06:26:10.931Z"
 }

@@ -2418,7 +2418,7 @@ const WAR_RISK_PREMIUM_DATA = {
     rate: 5.0,
     min: 1.0,
     max: 10.0,
-    source: "HormuzTracker.com / Insurance Journal"
+    source: "Insurance Journal / CBS News / McGill & Partners / HormuzTracker"
   },
   history: [
     { date: "2026-01-01", rate: 0.15, event: "Stable pre-crisis baseline", source: "S&P Global / Lloyd's List" },
@@ -2450,6 +2450,6 @@ const WAR_RISK_PREMIUM_DATA = {
     { date: "2026-03-31", rate: 5.00, event: "Stable at crisis levels", source: "House of Saud" },
     { date: "2026-04-01", rate: 5.00, event: "Stable at 5%; S&P Platts Inside/Outside Strait bifurcation launches; Lloyd's: double-digit millions per trip", source: "Lloyd's List / Insurance Journal" },
     { date: "2026-04-02", rate: 5.00, event: "Stable at 5%; de-escalation signals from Trump speech but Apr 6 deadline uncertainty; 0.8-1.5% base, 2.5% transit, 5% US/UK/Israeli nexus", source: "Insurance Journal / P&C 360" },
-    { date: "2026-04-03", rate: 5.00, event: "Stable at 5%; Iran allows Philippine-flagged vessels through Strait (modest de-escalation); Apr 6 deadline looms; tiered structure holds: 0.8-1.5% base, 2.5% transit, 5% nexus", source: "HormuzTracker / Lloyd's List / Insurance Journal" }
+    { date: "2026-04-03", rate: 5.00, event: "Stable at 5%; marine war risk hardening at April renewals despite property-cat softening; McGill & Partners quotes 3.5-10% range; Iran allows Philippine-flagged vessels (modest de-escalation); Apr 6 deadline uncertainty; tiered: 0.8-1.5% base, 2.5% transit, 5% nexus", source: "Insurance Journal / CBS News / McGill & Partners / HormuzTracker" }
   ]
 };

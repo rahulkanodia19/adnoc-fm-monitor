@@ -1,21 +1,6 @@
 {
   "series": [
     {
-      "date": "2024-04-02",
-      "datasets": [
-        {
-          "datasetName": "flows",
-          "values": {
-            "volume": 461817,
-            "volume_gas": 263549725.56,
-            "mass": 209415.53681999998,
-            "energy": 11273952.997112185
-          }
-        }
-      ],
-      "periodEndDate": "2024-04-02T23:59:59.999Z"
-    },
-    {
       "date": "2024-04-03",
       "datasets": [
         {
@@ -10964,6 +10949,21 @@
         }
       ],
       "periodEndDate": "2026-04-02T23:59:59.999Z"
+    },
+    {
+      "date": "2026-04-03",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 0,
+            "volume_gas": 0,
+            "mass": 0,
+            "energy": 0
+          }
+        }
+      ],
+      "periodEndDate": "2026-04-03T23:59:59.999Z"
     }
   ],
   "metadata": null

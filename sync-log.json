@@ -1,67 +1,28 @@
 {
-  "timestamp": "2026-04-03T14:30:00.000Z",
+  "timestamp": "2026-04-03T19:00:00.000Z",
   "success": true,
-  "changes": "Day 36 update: UK-led 40+ nation coalition (expanded from initial 35) demands 'immediate and unconditional' Hormuz reopening with sanctions threat and military planners meeting next week. Iran demands guaranteed ceasefire but calls US demands 'maximalist and irrational'. IEA warns April oil supply losses will be 'twice March' — world losing 4.5-5 mb/d, doubling mid-April. Kpler: 214 crossings Mar 1-Apr 1 (94% decline). Brent volatile $105-112. Rubio: war objectives in 'weeks not months'. Apr 6 deadline 3 days away. OPEC+ Apr 5 critical. No new FM declarations or infrastructure attacks found for Apr 3.",
+  "changes": "Day 37 evening update: Iran fired new missile/drone salvos at Israel + Gulf states in retaliation for US bridge strikes. Trump claims '3 big Iranian bridges' destroyed. Brent surged ~$108-112. UN Hormuz vote delayed to Sat Apr 5 (Good Friday). Bahrain resolution authorizes 'all defensive means necessary' for 6+ months — China/France/Russia broke silence procedure opposing. Added Aster Chemicals & Energy (Singapore) FM declaration (fm-029). Added Shell-CNOOC Huizhou cracker shutdown (sd-027) and Lotte Chemical Yeosu shutdown (sd-026). Updated Brent price range across all country summaries. Iran continues ~25 missiles + ~120 drones/day at Gulf. >1,900 killed in Iran since war began.",
   "countriesCount": 9,
-  "fmCount": 28,
-  "shutdownsCount": 25,
+  "fmCount": 29,
+  "shutdownsCount": 27,
   "newEvents": [
-    "UK Hormuz summit Apr 2: expanded to 40+ nations; chairman's statement demands immediate reopening; sanctions threat; military planners next week; Cooper: Iran 'hijacking shipping route'; US excluded — Al Jazeera, Euronews, Military.com",
-    "IEA Birol: April supply losses will be 'twice March'; weighing second coordinated release daily/hourly; jet fuel/diesel shortages reaching Europe Apr/May — CNBC",
-    "Iran demands guaranteed ceasefire via intermediaries; calls US demands 'maximalist and irrational'; no direct talks confirmed — CNBC/Reuters",
-    "Kpler transit data: 214 commodity crossings Mar 1-Apr 1 (94% decline); 131 oil/gas tankers; 60% Iran-linked — Kpler, Anadolu Agency",
-    "World losing 4.5-5 mb/d through ~Apr 19; doubling to largest crude supply loss in history — CNBC, Wikipedia/Economic Impact",
-    "Brent volatile $105-112 range; US gas past $4/gal for first time since 2022 — Fortune, CNBC",
-    "Rubio: war objectives achievable in 'weeks not months' without ground troops — France 24, Irish Times",
-    "Casualty toll: 3,000+ killed across region, 1,900+ in Iran, 1,200+ in Lebanon, 19 in Israel, 13 US service members — Wikipedia, CNN, NPR"
+    "Iran fired new missile salvos at Israel + Gulf states Apr 3 in retaliation for B1 bridge strikes — PBS, NBC News, Manila Times",
+    "Trump claims US destroyed '3 big Iranian bridges' (beyond B1 Karaj alone) — ABC7",
+    "Bahrain revised UN Hormuz resolution: 'all defensive means necessary' for 6+ months; China/France/Russia broke silence procedure — Al-Monitor, Washington Post, The National",
+    "Iran continues ~25 missiles + ~120 drones/day at Gulf states; >1,900 killed in Iran since war began — NBC News",
+    "Brent surged to ~$108-112 on Apr 3 after bridge strikes and Iran retaliation; WTI ~$107 — CNBC, OilPrice.com"
   ],
-  "noNewFmReason": "No new FM declarations found for April 2-3. All 28 existing FMs remain active. Lotte Chemical Yeosu restart confirmed for May 29 (pre-existing). YNCC-Lotte merger review underway.",
+  "newFMDeclarations": [
+    "fm-029: Aster Chemicals & Energy (Singapore) — FM on ethylene (1.15 Mtpa), propylene (500k tpa), benzene (290k tpa), styrene monomer; declared 6 Mar 2026 — OE Digital, ICIS, S&P Global"
+  ],
+  "newShutdowns": [
+    "sd-027: Shell-CNOOC (CSPC) Huizhou 1.2M tpa ethylene cracker — shut 5 Mar due to ME naphtha disruption — Hydrocarbon Processing, TankTerminals",
+    "sd-026: Lotte Chemical Yeosu — all facilities halted 27 Mar (restart May 29) after S. Korea naphtha export ban — Seoul Economic Daily, ICIS"
+  ],
   "sourcesChecked": {
-    "tier1": [
-      "Kpler (214 transit crossings Mar-Apr data, 94% decline confirmed)",
-      "S&P Global / Platts (Inside/Outside Strait bifurcation continues)",
-      "IEA (Birol: April losses doubling, second release being assessed)",
-      "Bloomberg (oil prices, Brent $111.69 Apr 2 morning)",
-      "Reuters (Iran demands guaranteed ceasefire via intermediaries)"
-    ],
-    "tier2": [
-      "Al Jazeera (40+ nation coalition, Iran ceasefire position, Day 34 coverage)",
-      "CNBC (IEA April supply warning, Brent pricing, ceasefire demands, Trump speech recap)",
-      "CNN (Day 33-34 liveblog, casualty toll updates)",
-      "NPR (Trump address, Iran war Day 36 context)",
-      "Washington Post (UK summit 40+ nations details)",
-      "Gulf News (Day 34 summary, Iran strikes update)",
-      "Euronews (40+ nation coalition launch, Hormuz summit)",
-      "France 24 (Rubio: weeks not months)",
-      "CBS News (Trump primetime speech, CENTCOM targets)",
-      "Fortune (oil prices $111.69 Apr 2, $104.86 Apr 1)",
-      "Military.com (UK gathers 40+ countries for Hormuz)"
-    ],
-    "tier3": [
-      "Seoul Economic Daily (Lotte Chemical Yeosu restart May 29)",
-      "Argus Media (YNCC-Lotte merger review, South Korea restructuring)",
-      "Wikipedia (Timeline of 2026 Iran war, Economic impact, Hormuz crisis)",
-      "Britannica (2026 Iran war overview)"
-    ]
+    "tier1": ["Reuters", "Bloomberg", "S&P Global/Platts", "Kpler", "Rystad Energy", "Argus Media", "Vortexa", "ICIS"],
+    "tier2": ["Al Jazeera", "CNBC", "CNN", "PBS", "NPR", "The National (UAE)", "Gulf News", "Washington Post", "ABC7", "Manila Times", "Al-Monitor", "Seoul Economic Daily"],
+    "tier3": ["OilPrice.com", "gCaptain", "Hellenic Shipping News", "UANI", "Hydrocarbon Processing", "C&EN", "TankTerminals", "ChemAnalyst", "Worldnews.com", "The War Zone"]
   },
-  "validationChecklist": {
-    "allCountriesPresent": true,
-    "preWarBaselinesLocked": true,
-    "refiningMathCorrect": true,
-    "productionNotesComplete": true,
-    "isNewFlagsAccurate": true,
-    "syntaxValid": true,
-    "statusEnumsValid": true,
-    "lngNotesWhereApplicable": true,
-    "validationScript": "112/112 checks passed"
-  },
-  "keyRisks": [
-    "APR 6 DEADLINE (3 DAYS): Trump deadline to reopen Hormuz or escalate to power plants, desalination, Kharg Island",
-    "OPEC+ APR 5 (2 DAYS): Most consequential meeting since formation — stick with 206 kb/d increase or reverse?",
-    "IEA SECOND RELEASE: Birol assessing daily/hourly if second coordinated release needed; jet fuel/diesel shortages hitting Asia, reaching Europe Apr-May",
-    "SUPPLY DOUBLING: 4.5-5 mb/d loss doubling by mid-April — largest crude supply disruption in history",
-    "DIPLOMACY STALLED: Iran demands guaranteed ceasefire; Kharazi (mediation lead) injured Apr 1; no direct US-Iran talks",
-    "DUAL CHOKEPOINT: Houthi Bab al-Mandeb closure threat + Hormuz = near-total ME export blockade",
-    "PETROCHEMICAL CASCADE: Naphtha past $1,000/mt; cracker shutdowns cascading across Asia and Europe"
-  ]
+  "validationResult": "112/112 checks passed"
 }

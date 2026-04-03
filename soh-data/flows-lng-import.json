@@ -1,21 +1,6 @@
 {
   "series": [
     {
-      "date": "2024-04-02",
-      "datasets": [
-        {
-          "datasetName": "flows",
-          "values": {
-            "volume": 397931,
-            "volume_gas": 227091263.07999998,
-            "mass": 180445.79126,
-            "energy": 9714357.397180807
-          }
-        }
-      ],
-      "periodEndDate": "2024-04-02T23:59:59.999Z"
-    },
-    {
       "date": "2024-04-03",
       "datasets": [
         {
@@ -293,7 +278,7 @@
           "values": {
             "volume": 1711890,
             "volume_gas": 977030697.8399999,
-            "mass": 774968.6164800001,
+            "mass": 774968.61648,
             "energy": 41351228.24020717
           }
         }
@@ -399,7 +384,7 @@
             "volume": 509680,
             "volume_gas": 290940504.21999997,
             "mass": 230820.84219999998,
-            "energy": 12323201.806057196
+            "energy": 12323201.806057198
           }
         }
       ],
@@ -442,7 +427,7 @@
           "datasetName": "flows",
           "values": {
             "volume": 1233448,
-            "volume_gas": 703904104.6399999,
+            "volume_gas": 703904104.64,
             "mass": 559319.33008,
             "energy": 30111136.611216195
           }
@@ -517,8 +502,8 @@
           "datasetName": "flows",
           "values": {
             "volume": 1149630,
-            "volume_gas": 656104933.1999999,
-            "mass": 523072.97789999994,
+            "volume_gas": 656104933.2,
+            "mass": 523072.9779,
             "energy": 27927322.699045192
           }
         }
@@ -533,8 +518,8 @@
           "values": {
             "volume": 1145352,
             "volume_gas": 653629479.3599999,
-            "mass": 519371.31791999994,
-            "energy": 27960522.486501005
+            "mass": 519371.31792,
+            "energy": 27960522.48650101
           }
         }
       ],
@@ -548,7 +533,7 @@
           "values": {
             "volume": 281036,
             "volume_gas": 160422820,
-            "mass": 129567.878,
+            "mass": 129567.87800000001,
             "energy": 6694349.075109916
           }
         }
@@ -772,9 +757,9 @@
           "datasetName": "flows",
           "values": {
             "volume": 852195,
-            "volume_gas": 486378358.12,
+            "volume_gas": 486378358.11999995,
             "mass": 388902.64064,
-            "energy": 20611249.18698051
+            "energy": 20611249.186980505
           }
         }
       ],
@@ -1087,7 +1072,7 @@
           "datasetName": "flows",
           "values": {
             "volume": 761786,
-            "volume_gas": 434736034.48,
+            "volume_gas": 434736034.47999996,
             "mass": 345439.47956,
             "energy": 18596845.845558096
           }
@@ -4161,10 +4146,10 @@
         {
           "datasetName": "flows",
           "values": {
-            "volume": 259212,
-            "volume_gas": 147927104.15999997,
-            "mass": 117542.27351999999,
-            "energy": 6327926.222480861
+            "volume": 262212,
+            "volume_gas": 149640104.15999997,
+            "mass": 118892.27351999999,
+            "energy": 6397286.221592071
           }
         }
       ],
@@ -5302,7 +5287,7 @@
           "datasetName": "flows",
           "values": {
             "volume": 367406,
-            "volume_gas": 209679764.55999997,
+            "volume_gas": 209679764.56,
             "mass": 166511.92682,
             "energy": 8934818.653586704
           }
@@ -5752,7 +5737,7 @@
           "datasetName": "flows",
           "values": {
             "volume": 890023,
-            "volume_gas": 508011996.36,
+            "volume_gas": 508011996.35999995,
             "mass": 408431.43492,
             "energy": 21349144.662125938
           }
@@ -10402,7 +10387,7 @@
           "datasetName": "flows",
           "values": {
             "volume": 1575876,
-            "volume_gas": 899320915.68,
+            "volume_gas": 899320915.6799998,
             "mass": 714596.73096,
             "energy": 38470545.59116958
           }
@@ -10964,6 +10949,21 @@
         }
       ],
       "periodEndDate": "2026-04-02T23:59:59.999Z"
+    },
+    {
+      "date": "2026-04-03",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 0,
+            "volume_gas": 0,
+            "mass": 0,
+            "energy": 0
+          }
+        }
+      ],
+      "periodEndDate": "2026-04-03T23:59:59.999Z"
     }
   ],
   "metadata": null

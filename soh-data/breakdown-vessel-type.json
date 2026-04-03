@@ -9,8 +9,8 @@
     {
       "label": "MR",
       "total": 124,
-      "ballast": 71,
-      "laden": 53
+      "ballast": 69,
+      "laden": 55
     },
     {
       "label": "VLCC",
@@ -20,63 +20,63 @@
     },
     {
       "label": "Handysize",
-      "total": 104,
+      "total": 105,
       "ballast": 64,
-      "laden": 40
+      "laden": 41
     },
     {
       "label": "Supramax",
-      "total": 70,
-      "ballast": 33,
+      "total": 71,
+      "ballast": 34,
       "laden": 37
     },
     {
       "label": "Intermediate Tankers",
-      "total": 60,
-      "ballast": 17,
-      "laden": 43
+      "total": 61,
+      "ballast": 19,
+      "laden": 42
     },
     {
       "label": "Panamax",
-      "total": 53,
+      "total": 52,
       "ballast": 35,
-      "laden": 18
+      "laden": 17
     },
     {
       "label": "Aframax/LR2",
-      "total": 48,
-      "ballast": 23,
+      "total": 49,
+      "ballast": 24,
       "laden": 25
     },
     {
       "label": "Panamax/LR1",
       "total": 46,
-      "ballast": 20,
-      "laden": 26
+      "ballast": 19,
+      "laden": 27
     },
     {
       "label": "Handy/MR1",
       "total": 40,
-      "ballast": 20,
-      "laden": 20
+      "ballast": 17,
+      "laden": 23
     },
     {
       "label": "Kamsarmax",
       "total": 39,
+      "ballast": 26,
+      "laden": 13
+    },
+    {
+      "label": "SGC",
+      "total": 32,
       "ballast": 27,
-      "laden": 12
+      "laden": 5
     },
     {
       "label": "Suezmax/LR3",
       "total": 31,
       "ballast": 10,
       "laden": 21
-    },
-    {
-      "label": "SGC",
-      "total": 31,
-      "ballast": 26,
-      "laden": 5
     },
     {
       "label": "Ultramax",
@@ -87,8 +87,8 @@
     {
       "label": "VLGC",
       "total": 27,
-      "ballast": 16,
-      "laden": 11
+      "ballast": 15,
+      "laden": 12
     },
     {
       "label": "Handymax",
@@ -98,8 +98,8 @@
     },
     {
       "label": "MGC",
-      "total": 12,
-      "ballast": 5,
+      "total": 13,
+      "ballast": 6,
       "laden": 7
     },
     {
@@ -129,8 +129,8 @@
     {
       "label": "Capesize",
       "total": 5,
-      "ballast": 2,
-      "laden": 3
+      "ballast": 3,
+      "laden": 2
     },
     {
       "label": "Baby Capes",
@@ -151,6 +151,6 @@
       "laden": 1
     }
   ],
-  "total": 1034,
-  "syncTimestamp": "2026-04-03T06:07:50.414Z"
+  "total": 1039,
+  "syncTimestamp": "2026-04-03T06:26:10.931Z"
 }

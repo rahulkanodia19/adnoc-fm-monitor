@@ -1,368 +1,374 @@
 {
-  "lastUpdated": "2026-04-02T06:27:31.872Z",
+  "lastUpdated": "2026-04-03T07:09:23.756Z",
   "iran_crude": [
-    "Iran maintains ~2.0 mb/d crude exports despite being the belligerent — Kharg Island loading continues under IRGC military protection, with volumes dipping to 1.6 mb/d (16–22 Mar) before recovering to 2.0 mb/d (23–29 Mar) as convoy escort operations stabilized.",
-    "China emerged as the sole identified buyer at 148 kbd/d in 23–29 Mar, consistent with bilateral yuan payment arrangements and IRGC-tolled Hormuz passage ($2M/vessel per NBC News). The vast majority of Iran's crude is moving to undisclosed destinations — likely dark-fleet transfers to Chinese teapot refineries.",
-    "With CENTCOM reporting 2,000+ targets destroyed and Hengam Island (inside the Strait) struck Apr 1, Iran's ability to sustain Kharg loadings depends entirely on whether the Apr 6 deadline triggers further escalation."
+    "Iran remains the only Gulf state maintaining near-normal crude loadings, averaging ~2.0 mb/d in 9–15 Mar and 23–29 Mar, with a dip to 1.5 mb/d in 16–22 Mar — broadly in line with pre-crisis run-rates, per Kpler tracking of Kharg Island loadings at ~1.84 mb/d.",
+    "China appeared as the sole identified buyer in 23–29 Mar (~148 kbd), consistent with Iran's 'friendly nation' Hormuz transit policy granting passage to Chinese, Russian, Indian, Iraqi, and Pakistani vessels — effectively turning Iran's adversary status into a crude marketing advantage.",
+    "The US struck 90+ military targets on Kharg Island on Mar 13 but deliberately spared oil infrastructure, per Bloomberg — Tehran's export lifeline intact for now, though Trump is reportedly weighing seizure of the island, which would remove ~2 mb/d from global supply at a stroke."
   ],
   "iran_naphtha": [
-    "Iran's naphtha exports collapsed to zero after 9–15 Mar (46 kbd/d, all to UAE), as the Hormuz closure severed short-haul Gulf product trade routes. The UAE was Iran's sole naphtha buyer — highlighting how intra-Gulf petrochemical feedstock flows have been entirely eliminated by the conflict."
+    "Iran naphtha exports collapsed to zero after a single 46 kbd cargo to the UAE in 9–15 Mar — consistent with the broader shutdown of intra-Gulf refined product trade as Hormuz transits became untenable for non-Iranian flagged tankers."
   ],
   "iraq_crude": [
-    "Iraq crude exports revived to 250 kbd/d (23–29 Mar) — entirely via the Kirkuk-Ceyhan pipeline to Turkey, restarted Mar 17 after being offline since 2023. This represents a 93% collapse from Iraq's pre-war ~3.5 mb/d export capacity, with the Oil Ministry's FM on all foreign-operated fields leaving Basra output at just 800 kbd/d as storage fills.",
-    "The Kirkuk-Ceyhan pipeline is now Iraq's sole lifeline to global markets at 250 kbd/d maximum throughput. The BP/Castrol warehouse drone attack in Irbil (Apr 1) signals that even this route faces IRGC targeting risk — any disruption would reduce Iraq's exports to near zero.",
-    "Turkey is the exclusive customer, receiving every barrel via pipeline — a total dependency that gives Ankara significant leverage in post-conflict negotiations."
+    "Iraq's seaborne crude exports are functionally dead — Basra output at ~800 kbd vs pre-war 3.3 mb/d — but the Kirkuk-Ceyhan pipeline to Turkey restarted mid-March and has stabilised at its ~250 kbd capacity (23–29 Mar and 30 Mar–2 Apr), now Iraq's sole crude export route.",
+    "The 92% collapse in Iraqi exports (from ~3.3 mb/d to 0.25 mb/d) reflects the Iraq Oil Ministry's Mar 20 FM declaration on all foreign-operated oilfields. Onshore storage at Basra is filling rapidly, with IEA warning zero Hormuz cargo transits expected in April.",
+    "Iraq has reportedly begun routing fuel oil overland through Syria as a stopgap. But with Basra terminals offline and Kirkuk-Ceyhan maxed at 250 kbd, the country has effectively lost 93% of its export capacity — the single largest national supply disruption in the crisis."
   ],
   "iraq_naphtha": [
-    "Effectively zero — one tiny 27 kbd/d cargo to UAE appeared 30 Mar–1 Apr, likely residual stored volumes. Basra refining is at minimal throughput under FM conditions and the Kurdistan Khor Mor gas processing plant has halted, eliminating NGL-derived naphtha output."
+    "Iraq naphtha exports are negligible and sporadic (~13–20 kbd), with a small cargo to the UAE appearing in 30 Mar–2 Apr — likely residual volumes from limited Kurdish region processing rather than southern operations, which are shut under the FM declaration."
   ],
   "kuwait_crude": [
-    "Kuwait's crude exports have been functionally eliminated: zero in three of four weeks, with a single 78 kbd/d blip in 16–22 Mar (likely a tanker that loaded before the full blockade). KPC's FM on 1.2 mb/d of crude exports, the Al-Ahmadi refinery drone strikes (Mar 19–20), and the IRGC airport fuel tank attack (Apr 1, 58-hour fire) have shut the country's entire export apparatus.",
-    "With no pipeline bypass and every export terminal inside the Gulf, Kuwait is the most completely trade-isolated Gulf producer. KPC estimates 3–4 months to restore full capacity even post-war."
+    "Kuwait crude exports have been effectively zeroed out since the conflict began — a single anomalous 78 kbd reading in 16–22 Mar aside, no loadings have occurred across all four weeks tracked.",
+    "KPC's FM declaration, compounded by IRGC drone strikes on Al-Ahmadi refinery (Mar 19-20) and Kuwait airport fuel tanks (Apr 1), has eliminated Kuwait's entire ~2.6 mb/d export baseline. With no pipeline bypass route and 3–4 months estimated for post-war restoration, Kuwait faces the longest recovery timeline of any Gulf exporter."
   ],
   "kuwait_gasoil_diesel": [
-    "Collapsed from 102 kbd/d (9–15 Mar, half going to Qatar for domestic needs) to zero in all subsequent weeks. Al-Ahmadi refinery destruction has eliminated Kuwait's refined product export capacity — this 615 kbd refinery complex was Kuwait's sole major export refinery.",
-    "The initial Qatar-bound diesel flow (48 kbd/d) was itself a crisis indicator: Qatar receiving Kuwaiti diesel reflects the total shutdown of Qatar's own Laffan Refineries."
+    "Kuwait diesel exports collapsed from 102 kbd in 9–15 Mar (with Qatar as sole buyer at 48 kbd) to zero for the following three weeks — consistent with Al-Ahmadi refinery going offline after the Mar 19-20 drone strikes and Bapco FM halting regional product flows."
   ],
   "kuwait_gasoline": [
-    "A single week of 64 kbd/d to Saudi Arabia (9–15 Mar), then zero. Same driver as diesel — Al-Ahmadi offline means no feedstock to produce exportable gasoline. Saudi Arabia briefly buying Kuwaiti gasoline (before the strikes) underscores the unusual intra-Gulf product reshuffling in the crisis's first week."
+    "A single 64 kbd gasoline cargo went to Saudi Arabia in 9–15 Mar before Kuwait's refined product exports ceased entirely — Al-Ahmadi refinery destruction and KPC's blanket FM have eliminated all downstream export capability."
   ],
   "oman_crude": [
-    "Oman is the crisis's biggest beneficiary: crude exports surged 144% from 550 kbd/d (9–15 Mar) to 1,340 kbd/d (30 Mar–1 Apr), driven entirely by its non-Hormuz export position at Mina Al-Fahal on the Gulf of Oman. Inland production is intact at ~950 kbd/d.",
-    "China is the dominant buyer (>80% share across all weeks), with Taiwan appearing for 269 kbd/d in 16–22 Mar — likely Formosa Petrochemical seeking non-Hormuz crude to partially restart its naphtha crackers running at 50% capacity.",
-    "Oman crude is commanding a significant premium over Brent (per Kpler), and the Salalah port resumption (Mar 31, after the Mar 29 drone strike destroyed a crane) shows that even Oman is not fully insulated from IRGC targeting."
+    "Oman has emerged as the crisis's biggest crude export winner, doubling output from 550 kbd (9–15 Mar) to 1.1 mb/d (23–29 Mar) — driven entirely by its geographic position outside the Hormuz chokepoint and inland production base (~950 kbd intact).",
+    "China is absorbing virtually all Omani crude, with Taiwan appearing briefly as a second buyer in 16–22 Mar (269 kbd). Oman's benchmark has surged to $152–153/bbl for May delivery, reflecting extreme Asian premium for non-Hormuz barrels.",
+    "Three Omani-flagged vessels (2 VLCCs + 1 LNG carrier) transited Hormuz via an alternative coastal route on Apr 2, with an Iran-Oman transit protocol being drafted — potentially reopening a narrow corridor that could further boost Oman's role as a Gulf-to-Asia bridge."
   ],
   "oman_lng": [
-    "Oman LNG's 10.4 Mtpa facility is exporting 23–43 ktons/day, rotating between India, Thailand, Japan, Taiwan, and China. India has become the anchor buyer at 21–23 ktons/d in recent weeks — likely backfilling QatarEnergy's contracted 7.5 Mtpa to Petronet LNG (now under FM).",
-    "With Qatar's 77 Mtpa offline and Asian spot LNG prices surging ~39% (per ICIS), Oman LNG is commanding steep premiums. The facility's outside-Hormuz location makes it one of only three functioning LNG export points in the wider Gulf region (alongside US Gulf Coast and Australian NWS)."
+    "Oman LNG's 10.4 Mtpa facility — critically positioned outside Hormuz — is running at capacity and commanding significant Asian spot premiums with Qatar's 77 Mtpa offline. Exports averaged 30–43 ktons/day across March, diversified across India, Japan, Thailand, China, and Taiwan.",
+    "India has become the dominant buyer, rising from zero in 9–15 Mar to sole recipient in 30 Mar–2 Apr (17.2 ktons/day), consistent with Petronet LNG's FM on Qatar contracts and India's scramble for alternative LNG supply.",
+    "Japan and China disappeared from the buyer list after 16–22 Mar — likely securing US spot and Australian contracts instead as JKM prices hit $20.39/MMBtu, 2x pre-crisis forecasts."
   ],
   "oman_kero_jet": [
-    "Intermittent jet fuel exports of 25–46 kbd/d in 16–29 Mar, exclusively to Djibouti — almost certainly military/coalition logistics supply for operations in the Horn of Africa and Red Sea corridor. Zero volumes in the most recent period suggest loading schedule variability rather than a structural change."
+    "Oman jet fuel exports appeared only in 16–22 Mar (25 kbd) and 23–29 Mar (46 kbd), both going exclusively to Djibouti — likely supplying the major military base complex (US, French, Chinese) that has become a logistics hub for the Hormuz crisis response."
   ],
   "oman_gasoil_diesel": [
-    "Diesel exports nearly quadrupled from 50 kbd/d (9–15 Mar, Pakistan only) to 184 kbd/d (23–29 Mar), with the customer base broadening to include South Africa, Singapore, and Mauritius. Oman's Duqm refinery (230 kbd capacity) is filling the vacuum left by Kuwait's Al-Ahmadi and Bahrain's Sitra (405 kbd combined) going offline.",
-    "The geographic reach of Oman's diesel — Pakistan, South Africa, Mauritius, Singapore — reveals just how far the product shortage has radiated from the Gulf. These are markets that would normally source from Gulf refiners closer to the Hormuz chokepoint."
+    "Oman diesel exports surged 4.6x from 50 kbd (9–15 Mar) to 229 kbd (23–29 Mar), filling the vacuum left by Kuwait and UAE refinery shutdowns — with buyer base expanding from Pakistan alone to five countries including South Africa, Mozambique, Mauritius, and Singapore.",
+    "The rapid diversification into African and Southeast Asian markets reflects Oman's Duqm refinery leveraging its Indian Ocean access to serve customers cut off from traditional Gulf diesel supply chains. Pakistan remains the anchor buyer at ~50 kbd throughout."
   ],
   "oman_gasoline": [
-    "Gasoline exports tripled from 43 kbd/d (9–15 Mar) to 120 kbd/d (23–29 Mar), with Pakistan (73 kbd/d) and Saudi Arabia (47 kbd/d) emerging as buyers. Saudi Arabia purchasing gasoline from Oman is a striking crisis indicator — the kingdom is redirecting its own refinery output toward maximizing crude pipeline throughput on the constrained Yanbu system.",
-    "African markets (Tanzania, Sudan, South Africa) appeared in earlier weeks, demonstrating Oman's emergence as an alternative refined product hub for Indian Ocean markets cut off from traditional Gulf suppliers."
+    "Oman gasoline exports nearly tripled from 43 kbd (9–15 Mar) to 120 kbd (23–29 Mar), with Saudi Arabia appearing as a buyer at 47 kbd — a remarkable reversal where the world's largest oil exporter is importing gasoline from its smaller neighbour.",
+    "African markets (Tanzania, Sudan, South Africa) and Pakistan are the primary beneficiaries of Oman's expanded refinery output. The surge reflects Oman's Duqm and Sohar refineries stepping into the gap left by BAPCO (Bahrain, 405 kbd struck) and Al-Ahmadi (Kuwait, offline)."
   ],
   "oman_naphtha": [
-    "Declined from 72 kbd/d (9–15 Mar, South Korea) to zero by 23–29 Mar. With global naphtha surging past $1,000/mt (per ICIS) and South Korea's YNCC declaring FM on ethylene production, Oman is likely retaining feedstock for its own Sohar petrochemical complex rather than exporting at even elevated prices."
+    "Oman naphtha exports dried up after two weeks — South Korea took 72 kbd in 9–15 Mar, India 29 kbd in 16–22 Mar, then zero. Feedstock-starved Asian crackers (FPCC at ~50% capacity, YNCC under FM) may be outbid by crude buyers or switching to alternative feedstocks."
   ],
   "qatar_crude": [
-    "Zero exports in three of four weeks; the sole blip (117 kbd/d in 16–22 Mar, half to UAE) was likely stored crude moving from floating storage to UAE's ADCOP pipeline system for re-export. All Qatar offshore oil fields (~440 kbd) have been shut since early March under QatarEnergy's blanket FM covering all hydrocarbon exports.",
-    "With Laffan Refineries 1 and 2 offline and no pipeline bypass, Qatar has zero crude export optionality until the Strait reopens."
+    "Qatar crude exports are effectively zero — all offshore fields (~440 kbd) shut since early March under QatarEnergy's comprehensive FM declaration. A single 117 kbd reading in 16–22 Mar (to UAE) appears to be a final cargo from pre-crisis storage rather than new production.",
+    "With Laffan Refineries 1 and 2 offline and the entire Ras Laffan/Mesaieed complex shut, Qatar has no path to resuming crude flows until the conflict ends. The Mar 18 Iranian strike on Ras Laffan caused damage that QatarEnergy estimates will take 3–5 years to repair."
   ],
   "qatar_lng": [
-    "Trace volumes only — 6.5–18.4 ktons/day in 16–29 Mar to Kuwait and Pakistan, likely residual stored LNG moving via short-haul Gulf routes. Qatar's main production (77 Mtpa, ~20% of global LNG supply) has been halted since Mar 2.",
-    "The AQUA 1 tanker missile strike (Apr 1) and QatarEnergy's admission that 12.8 Mtpa of liquefaction capacity suffered physical damage mean full restart is 3–5 years away even post-conflict. FM has been extended through mid-June with Edison notified of 10 lost cargoes — this is not a pause, it is a structural removal of global LNG supply."
+    "Qatar LNG exports have collapsed from ~211 ktons/day (pre-crisis, ~77 Mtpa annualised) to a trickle of 6–18 ktons/day — a 92% reduction representing the single largest commodity supply disruption in the crisis.",
+    "The tiny residual volumes (totalling ~243 ktons over 4 weeks) are going exclusively to Kuwait and Pakistan via short intra-Gulf routes, likely from pre-loaded storage. QatarEnergy extended FM through mid-June to global buyers including Italy, Belgium, South Korea, and China (Mar 24), with Edison notified of FM on 10 cargoes.",
+    "Iran's Mar 18 strike on Ras Laffan damaged 12.8 Mtpa of capacity with a 3–5 year repair timeline. Even if Hormuz reopens, Qatar can only restart ~64 Mtpa of its 77 Mtpa nameplate — a structural LNG deficit that will persist well beyond any ceasefire."
   ],
   "saudi_arabia_crude": [
-    "Saudi crude exports climbed from ~4.0 mb/d (9–15 Mar) to ~6.1 mb/d (23–29 Mar) as the East-West Pipeline to Yanbu reached maximum capacity (~4.5 mb/d port throughput, per Argus), with 37–40 VLCCs loading at Yanbu this month alone.",
-    "Egypt dominates at 1.5 mb/d (~25% of total) — these are SUMED pipeline transshipments to Mediterranean buyers, not Egyptian consumption. China (1.1 mb/d) and India (1.0 mb/d) are the true end-customers via Red Sea routing. Myanmar appeared as a new buyer at 572 kbd/d — an unusual strategic fuel purchase.",
-    "The pipeline bypass is working but capped: even at max throughput, Yanbu recovers only ~65% of pre-crisis Ras Tanura volumes (~6.4 mb/d). South Korea and Japan are intermittent buyers — their absence in W13 suggests SPR drawdowns are replacing Saudi spot purchases. The Apr 5 OPEC+ meeting will be critical for signaling post-crisis production plans."
+    "Saudi crude exports recovered to ~6.2 mb/d (23–29 Mar) via the East-West Pipeline to Yanbu, up from 3.9 mb/d in the first post-crisis week — approaching the pipeline's maximum 7 mb/d throughput reported by Fortune. Aramco is slashing Asia supply allocations for a second consecutive month.",
+    "Egypt has emerged as the largest crude destination (1.0–2.0 mb/d across all weeks), reflecting the Yanbu-SUMED pipeline routing Saudi barrels to the Mediterranean — effectively re-exporting to European refiners who lost direct Gulf access.",
+    "China and India remain the 2nd and 3rd largest buyers (~1.0–1.7 mb/d each), but Myanmar (572 kbd, 23–29 Mar) and Malaysia appeared as new buyers — signalling Southeast Asian refiners are scrambling for non-Hormuz supply as traditional Gulf flows evaporate.",
+    "The pipeline bypass is working but capped — with Yanbu at maximum throughput, Saudi exports are structurally limited to ~5–6 mb/d versus pre-war ~7 mb/d through Hormuz, and the Red Sea route faces its own Bab el-Mandeb security risks."
   ],
   "saudi_arabia_kero_jet": [
-    "Volatile jet fuel exports (0–115 kbd/d) reflecting lumpy tanker loading schedules at Yanbu. UK received the largest single cargo at 95 kbd/d (16–22 Mar). Jet fuel is a lower priority than crude and diesel for constrained Red Sea pipeline capacity, keeping flows intermittent."
+    "Saudi jet fuel exports are volatile — 46 kbd (9–15 Mar), spiking to 95 kbd to the UK (16–22 Mar), dropping to zero (23–29 Mar), then surging to 172 kbd (30 Mar–2 Apr) — reflecting lumpy Yanbu loadings and prioritisation of crude over products in the constrained pipeline.",
+    "The UK appearing as the sole identified buyer in 16–22 Mar likely reflects a strategic military supply arrangement routing via the Red Sea, given the massive NATO/coalition naval presence in the region."
   ],
   "saudi_arabia_gasoil_diesel": [
-    "Saudi diesel exports held steady at 380–780 kbd/d with a remarkably diversified customer base: Egypt (anchor at 140–285 kbd/d), plus Kenya, Italy, Netherlands, Belgium, Turkey, Slovenia, Spain, Malaysia, Pakistan, Djibouti, and Sudan. The Red Sea route is functioning as a robust alternative to Hormuz-dependent flows.",
-    "This spread across Europe, Africa, and Asia partially fills the 1+ mb/d regional refining gap left by Kuwait's Al-Ahmadi (615 kbd) and Bahrain's Sitra (405 kbd) going offline. Saudi Yanbu refineries are the last major functioning export refineries in the Gulf region."
+    "Saudi diesel exports are averaging ~500–650 kbd via Yanbu, serving an unusually diversified buyer base spanning three continents: Egypt and Kenya in Africa, Italy/Netherlands/Belgium/Spain/Slovenia in Europe, and Malaysia/Pakistan in Asia.",
+    "The shift from Asia-dominated pre-war diesel flows to a pan-European/African customer mix reflects Yanbu's Red Sea geography — Mediterranean buyers who previously had no Saudi diesel supply chain are now the path of least resistance, while East Asian buyers are cut off.",
+    "Kenya's emergence as a top buyer (107–153 kbd) alongside traditional Middle East clients signals East Africa's acute diesel vulnerability — likely replacing UAE and Bahrain-sourced barrels lost to refinery shutdowns and FM declarations."
   ],
   "saudi_arabia_gasoline": [
-    "Gasoline exports peaked at 365 kbd/d (16–22 Mar, dominated by Singapore at 138 kbd/d) then faded to zero by 30 Mar–1 Apr, as Saudi prioritized crude and diesel volumes on constrained Yanbu pipeline capacity. The product hierarchy is clear: crude first, then diesel, with gasoline and naphtha getting residual allocation.",
-    "Customer mix shifted entirely to non-traditional markets — Singapore, Malaysia, Kenya, Sudan, South Africa — as Japan and South Korea (normally major Saudi product buyers) draw on SPR reserves instead."
+    "Saudi gasoline exports peaked at 374 kbd (16–22 Mar) via Yanbu before declining to 229 kbd (23–29 Mar) and zero in early April — suggesting Aramco is prioritising crude and diesel in its constrained pipeline allocation.",
+    "Singapore emerged as the anchor buyer (42–138 kbd), likely reflecting its role as Asia's gasoline trading hub. Malaysia (91 kbd in 16–22 Mar) and East African markets (Kenya, Sudan) are filling via the Red Sea route."
   ],
   "saudi_arabia_naphtha": [
-    "Moderate naphtha exports of 73–132 kbd/d, primarily to Indonesia and Japan. With global naphtha past $1,000/mt and multiple Asian crackers declaring FM (Formosa, YNCC, Chandra Asri), Saudi is allocating NGL-derived naphtha to its own SATORP and Petro Rabigh complexes rather than exporting — a rational choice given the kingdom's domestic petrochemical revenue targets."
+    "Saudi naphtha exports are steady at 73–133 kbd via Yanbu, with Indonesia and Japan alternating as buyers — a lifeline for Asian naphtha crackers like FPCC (Taiwan, ~50% capacity) and YNCC (South Korea, under FM) that have lost Gulf feedstock from every other supplier."
   ],
   "uae_crude": [
-    "UAE crude exports swung from 2.1 mb/d (9–15 Mar) to 1.1 mb/d (16–22 Mar) back to 3.1 mb/d (23–29 Mar), reflecting ADCOP pipeline flow variability and Fujairah tanker loading schedules. ADCOP is at a record 1.6 mb/d (per Kpler), making the Habshan-Fujairah corridor the UAE's only functioning export route.",
-    "Customer base is 100% Asian: India (up to 700 kbd/d), South Korea (514 kbd/d), Japan (486 kbd/d), Thailand, Vietnam, Philippines, and Pakistan. The complete absence of European buyers reflects the Red Sea routing disadvantage versus Saudi Yanbu.",
-    "Fujairah itself is now under direct attack — UAE intercepted 5 ballistic missiles + 35 drones on Apr 1 (per Washington Post), with a Bangladeshi worker killed. Any sustained damage to Fujairah port would cut the UAE's last crude export artery, potentially removing another 1.6 mb/d from global supply."
+    "UAE crude exports via ADCOP (Fujairah) surged to 3.1 mb/d (23–29 Mar) — a record per S&P Platts — before collapsing to just 242 kbd (30 Mar–2 Apr), reflecting the extreme loading lumpiness of Fujairah's single pipeline with limited storage.",
+    "The buyer mix is Asia's most diversified: India (700 kbd), South Korea (514 kbd), Japan (257 kbd), Vietnam (257 kbd), and Philippines (139 kbd) all appeared in 23–29 Mar, as ADNOC prices crude under a new Inside/Outside Strait bifurcation structure launched Apr 1.",
+    "Fujairah loadings averaged ~1.6 mb/d over the four-week period — roughly 57% of UAE's pre-war ~2.8 mb/d total exports, per World Oil. With Ruwais Refinery-2 offline and Shah Gas still shut, ADCOP crude is essentially the UAE's only functioning export channel."
   ],
   "uae_gasoil_diesel": [
-    "Collapsed from 73 kbd/d (9–15 Mar, Pakistan) to zero in all subsequent weeks. Ruwais Refinery-2 offline and Shah Gas Field shut (~1 Bcf/d) have eliminated UAE's product export capacity. With neighboring Bahrain's Sitra (405 kbd) also destroyed, the lower Gulf has zero functioning export refineries."
+    "UAE diesel exports collapsed to zero after a single 73 kbd cargo to Pakistan in 9–15 Mar — Ruwais Refinery-2 going offline eliminated the UAE's main diesel export source, and the Fujairah bunkering hub (world's 2nd largest) remains paralysed under MEE and Pearl Marine FM declarations."
   ],
   "uae_naphtha": [
-    "Near-zero with a single 46 kbd/d cargo to Taiwan (23–29 Mar) — likely Formosa Petrochemical securing any available non-Hormuz naphtha as its crackers run at ~50% capacity. UAE naphtha production is severely curtailed by the Ruwais shutdown; Fujairah bunkering hub FM has further constrained downstream output."
-  ],
-  "russia_crude": [
-    "Russia's crude exports declined 19% from ~6.7 mb/d (9-15 Mar) to ~5.5 mb/d (23-29 Mar) as Asian buyers reached absorption limits, though volumes remain the highest of any non-Gulf exporter and well above pre-crisis norms as Moscow fills the Hormuz supply vacuum.",
-    "China remains the anchor buyer at ~1.3 mb/d (23-29 Mar), down from 2.3 mb/d the prior week, while India slipped to 0.8 mb/d from 1.5 mb/d -- both are saturating storage and refining capacity after a month of surge buying. Philippines took its first ESPO cargo in six years (212 kbd, 16-22 Mar), signaling Southeast Asian diversification that per Rigzone reflects US sanctions waivers enabling energy-starved nations to tap Russian barrels.",
-    "European buyers persist despite the sanctions framework: Italy (~660 kbd), France (~307 kbd), Netherlands (~252 kbd), and Turkey (~666 kbd) all took significant volumes in 23-29 Mar, collectively absorbing ~1.9 mb/d -- more than India. Turkey in particular surged 3.5x from the prior week, likely acting as a blending/re-export hub.",
-    "Risk ahead: Russia's gasoline export ban (effective 1 Apr) and declining diesel/naphtha exports suggest Moscow is prioritizing domestic supply, which could cap crude export growth even as global demand intensifies ahead of the critical OPEC+ Apr 5 meeting."
-  ],
-  "russia_lng": [
-    "Russian LNG exports held at ~80-110 ktons/d across March, with Europe still absorbing the majority -- France (21-31 ktons/d), Belgium, Spain, and Netherlands are the top buyers -- racing to stock up before the EU's ban on Russian LNG purchases takes effect April 25.",
-    "China's share is volatile (9-28 ktons/d week to week) while Japan (18-21 ktons/d) and South Korea (~9 ktons/d) provide steady Asian demand, filling the gap left by Qatar's 77 Mtpa offline. Per ICIS LNG Edge, Asian spot prices have surged ~39%, making Russian cargoes competitive even at a discount to spot.",
-    "With Arctic LNG-2 still below nameplate capacity and Yamal as the primary export facility, Russia cannot materially scale LNG output to fill the ~20% global supply gap from Qatar -- the benefit is margin expansion on existing volumes, not volume growth."
-  ],
-  "russia_gasoil_diesel": [
-    "Russian diesel exports collapsed 64% from ~1,005 kbd (9-15 Mar) to ~360 kbd (23-29 Mar) before rebounding to ~785 kbd in 30 Mar-1 Apr, reflecting both tightening domestic supply priorities and lumpy cargo scheduling. Turkey remains the dominant buyer at 211-362 kbd, functioning as a key transit and blending hub for Russian barrels.",
-    "Brazil emerged as a significant buyer (107-243 kbd when present) but dropped out entirely in 23-29 Mar, while new African markets (Togo, Ghana, Morocco, Benin) and conflict-affected Syria are absorbing smaller volumes. The customer mix increasingly skews toward countries with weak sanctions enforcement.",
-    "Russia's gasoline export ban from April 1 -- confirmed by zero gasoline shipments since mid-March -- signals Moscow is hoarding refined products for domestic needs as global fuel prices surge past $4/gallon in the US."
-  ],
-  "russia_gasoline": [
-    "Russian gasoline exports effectively ceased after 9-15 Mar (a single 37.5 kbd cargo to Libya), with zero shipments in every subsequent week. This aligns with Moscow's announced gasoline export ban effective April 1, implemented as domestic fuel prices spiked amid the global crisis.",
-    "The ban removes ~100-150 kbd of pre-crisis Russian gasoline from global markets, compounding the supply squeeze for African and Middle Eastern buyers who had begun sourcing Russian product."
-  ],
-  "russia_naphtha": [
-    "Russian naphtha exports declined steadily from ~677 kbd (9-15 Mar) to ~358 kbd (23-29 Mar) before dropping to zero in the latest partial week, as Asian petrochemical crackers that depend on Gulf-sourced naphtha scramble for alternatives. Indonesia appeared as a new buyer (115 kbd, 16-22 Mar) -- consistent with Chandra Asri's FM declaration citing Middle East feedstock loss.",
-    "China and India remain the core buyers but at shrinking volumes (China from 231 to 81 kbd, India from 155 to 51 kbd), suggesting either Russian supply constraints or competition from US naphtha cargoes now reaching Asia at steep premiums."
-  ],
-  "us_crude": [
-    "US crude exports surged 14% to ~4.4 mb/d (23-29 Mar), the highest weekly rate of the crisis, as Gulf Coast loadings ramped to fill the Hormuz void -- per Bloomberg, Asia-bound April loadings reached ~60 million barrels, the most since April 2023.",
-    "Customer mix diversified dramatically: 15 countries took US crude in 23-29 Mar versus 12 two weeks earlier. New crisis-driven buyers include China (224 kbd), Australia (86 kbd), Peru (71 kbd), and Denmark (205 kbd). Per Nation Thailand, cargoes to Taiwan priced at $12-13/bbl over Brent -- unheard-of premiums reflecting desperation for non-Gulf supply.",
-    "South Korea (~306 kbd), Japan (~480 kbd), and Taiwan (~399 kbd) are the anchor Asian buyers, collectively taking ~1.2 mb/d or 27% of total US crude exports -- nearly double the pre-crisis Asian share of ~35 million barrels/month.",
-    "Europe remains critical: Netherlands surged to 904 kbd (23-29 Mar), France, UK, and Spain each taking 200-310 kbd. The transatlantic crude trade is now structurally larger than at any point since the shale export ban was lifted."
-  ],
-  "us_lng": [
-    "US LNG exports held remarkably steady at ~370-400 ktons/d across all four weeks, confirming that all 8 US terminals including Sabine Pass and Corpus Christi are running at or above nameplate capacity (~110% utilization per Fortune). With Qatar's 77 Mtpa offline, the US is now the world's largest LNG exporter.",
-    "Customer distribution is broadening: 20 countries received US LNG in 9-15 Mar, including new crisis-driven buyers like Bangladesh (9-10 ktons/d), Thailand (11-34 ktons/d), and India (20-24 ktons/d). Europe still absorbs the plurality -- Netherlands, France, Germany, Spain, and Italy collectively take ~40-50% of cargoes.",
-    "The ~375 ktons/d US export rate (~2.6 Mtpa annualized per week) fills roughly a third of Qatar's lost 77 Mtpa, underscoring why Asian spot LNG prices have surged ~39%. Golden Pass LNG's first train (6 Mtpa) and Corpus Christi Train 5 (1.5 Mtpa) coming online provide incremental relief but cannot close the gap."
-  ],
-  "us_lpg": [
-    "US LPG exports rose 14% to ~168 ktons/d (23-29 Mar) as Gulf Coast terminals at Enterprise and Targa fill the void left by Saudi, UAE, and Qatari NGL shutdowns -- the world's three largest LPG exporters are all offline or severely curtailed.",
-    "Japan remains the anchor buyer (~29-33 ktons/d every week), but the most notable shift is surging Southeast Asian demand: Indonesia doubled to 13.4 ktons/d, China appeared at 13.2 ktons/d, and Thailand/Vietnam are taking regular cargoes. Per ICIS, China's PDH plant operators are scrambling for US cargoes at sharply higher prices.",
-    "The LPG-naphtha spread now structurally favors increased US exports as both feedstocks face Gulf-linked supply constraints, supporting further volume growth into Q2."
-  ],
-  "us_kero_jet": [
-    "US jet fuel exports surged 52% from 214 kbd (9-15 Mar) to 326 kbd (16-22 Mar), with Europe emerging as the primary demand driver -- UK took 87 kbd and Netherlands 43 kbd in 23-29 Mar. This reflects the acute European jet fuel shortage after ~30% of Europe's imports were cut off by Hormuz, per Argus Media.",
-    "The customer base shifted dramatically from Latin America-dominated (Brazil, Mexico, Chile in W11) to Europe-dominated (UK, Netherlands absorbing 60%+ by 30 Mar-1 Apr). Jet crack spreads in Europe remain at $65-68/bbl, well above the Singapore peak of $40/bbl, pulling US cargoes east across the Atlantic."
-  ],
-  "us_gasoil_diesel": [
-    "US diesel exports surged 56% to ~1,871 kbd (23-29 Mar), the highest weekly rate of the crisis, driven by a massive ramp in European buying -- Netherlands alone took 354 kbd, UK 129 kbd, and new buyers Spain and Morocco appeared. This followed the EU Commission's call for member states to curb demand and postpone refinery maintenance.",
-    "Latin America and Africa remain the volume base (Peru 187 kbd, Chile 108 kbd, Australia 87 kbd, South Africa 43 kbd), but the structural shift toward European buyers signals that EU refineries cannot replace Gulf-sourced middle distillates domestically despite the Commission's efforts.",
-    "Australia appeared as a diesel buyer (43-100 kbd across all weeks) for the first time in the dataset, per Export Finance Australia's new underwriting facility for fuel imports amid the Hormuz crisis."
-  ],
-  "us_gasoline": [
-    "US gasoline exports remained stable at ~690-826 kbd, almost entirely directed at the Western Hemisphere -- Mexico (~148-338 kbd), Colombia, Ecuador, and Central American nations dominate. Unlike diesel and jet, gasoline has not seen a crisis-driven geographic reshuffling.",
-    "Notable exceptions: Japan appeared as a buyer (46 kbd, 23-29 Mar) and Australia took 87 kbd (16-22 Mar), both unprecedented -- reflecting that even gasoline-sufficient nations are building precautionary stockpiles amid uncertainty over when Gulf flows resume. US domestic prices at $4/gallon may limit further export growth."
-  ],
-  "us_naphtha": [
-    "US naphtha exports surged 81% to 759 kbd (16-22 Mar) before settling at ~546 kbd (23-29 Mar), driven by South Korea's panic buying -- S. Korea took 251 kbd in a single week as its naphtha crackers face feedstock starvation after the Gulf shutdown cut off 77% of its naphtha imports, per ICIS.",
-    "Japan (75-114 kbd) and Venezuela (~64-102 kbd) are steady buyers, while Brazil (57-87 kbd) provides Latin American demand. The crisis has turned the US from a secondary naphtha supplier to a critical lifeline for Asian petrochemical complexes, with naphtha prices past $1,000/mt globally."
+    "UAE naphtha exports emerged from zero in 23–29 Mar with a 46 kbd cargo to Taiwan, rising to 80 kbd in 30 Mar–2 Apr — likely sourced from Fujairah storage or Habshan gas complex (which resumed Mar 23 after a 4-day emergency shutdown), providing a small relief to naphtha-starved Asian crackers."
   ],
   "eu_27_crude": [
-    "EU-27 crude exports are minimal and structurally irrelevant (~46-198 kbd), limited to intra-European transfers (Finland, UK, Netherlands) and a single Turkey cargo. The EU is a net crude importer and these small re-export flows reflect refinery balancing, not a crisis response.",
-    "Zero Gulf exposure in any week -- as expected for an import-dependent bloc with no Middle Eastern crude re-export infrastructure."
+    "EU-27 crude re-exports are marginal (~0.05-0.20 mb/d) and concentrated on intra-European destinations (UK, Finland) with zero Gulf-origin barrels in any week.",
+    "Volumes dropped to zero in 30 Mar-2 Apr, consistent with the European Commission's Mar 31 directive urging member states to prioritize domestic supply and defer non-emergency refinery maintenance."
   ],
   "eu_27_kero_jet": [
-    "EU jet fuel exports collapsed 77% from ~146 kbd (9-15 Mar) to just ~34 kbd (23-29 Mar) as the bloc retains barrels for domestic aviation amid the most severe jet fuel shortage since Hormuz closed. Per Kpler, ~30% of Europe's jet imports normally transit the Gulf, and jet crack spreads are holding at $65-68/bbl.",
-    "The bounce to ~173 kbd (30 Mar-1 Apr) is driven by Netherlands-to-Netherlands/France/Portugal intra-EU transfers, not genuine export recovery. The European Commission's March 31 directive to postpone refinery maintenance is aimed at keeping middle distillate output maximized."
+    "EU jet fuel exports collapsed 77% to just 34 kbd/d (23-29 Mar) from 146 kbd/d the prior fortnight, as European refiners retained cargoes domestically amid acute ME product supply loss -- IEA warned diesel and jet markets are 'particularly vulnerable' to extended Hormuz disruption.",
+    "Exports rebounded to ~130 kbd/d in 30 Mar-2 Apr with UK taking 72 kbd/d, suggesting the drawdown was a brief inventory-building pulse rather than a structural shift; watch for further volatility as the EU Commission weighs export restrictions."
   ],
   "eu_27_gasoil_diesel": [
-    "EU diesel exports halved from ~1,120-1,180 kbd (9-22 Mar) to ~608 kbd (23-29 Mar), a clear signal that the bloc is retaining refined products for domestic needs. Poland, historically the top intra-EU re-exporter, fell from 245 kbd to 49 kbd as Eastern European supply tightens.",
-    "The customer base shifted from broad distribution (28 destinations in 9-15 Mar) to concentrated regional flows (20 destinations in 23-29 Mar), with Africa (Morocco, Mauritania) and Mediterranean neighbors (Croatia, Slovenia) absorbing smaller volumes. The EU is structurally transitioning from a diesel exporter to a net importer as the crisis drags on.",
-    "New buyers like Lebanon (30-56 kbd) and Egypt (13-93 kbd) reflect Middle Eastern nations that can no longer source from Gulf refineries, adding emergency demand onto an already stressed European refining system."
+    "EU diesel exports fell 36% to ~760 kbd/d (23-29 Mar) from ~1.19 mb/d the prior week, directly following the European Commission's Mar 31 call to preserve domestic product availability -- OPIS reports the crisis has 'left Europe in the hands of US diesel producers.'",
+    "Destination mix diversified toward Mediterranean and West Africa (Croatia 96 kbd/d, Italy 84 kbd/d, Mauritania 49 kbd/d), suggesting EU diesel is partly replacing lost Gulf supplies in regional markets that previously drew from ME refineries.",
+    "With Middle East exports contributing ~23M mt of EU diesel imports in 2024 now effectively offline, the simultaneous contraction in EU diesel exports signals refiners are pivoting to backfill domestic shortfalls rather than re-exporting."
   ],
   "eu_27_gasoline": [
-    "EU gasoline exports bucked the diesel trend, rising 27% to ~1,425 kbd (23-29 Mar) -- the highest weekly rate in the dataset -- as the bloc has relative surplus in gasoline versus acute shortage in middle distillates. Africa is the dominant growth market: Kenya (111 kbd), Egypt (151 kbd), Ghana (49 kbd), and South Africa (147 kbd) collectively took ~460 kbd.",
-    "Saudi Arabia appeared as a buyer in 9-15 Mar (37 kbd) -- a striking reversal that underscores how Gulf producers with shuttered refineries (Bapco Sitra offline, Aramco refinery throughput cuts) now need to import finished fuels.",
-    "The US appeared as a buyer at 79-108 kbd in multiple weeks, an unusual transatlantic gasoline flow that reflects regional dislocations in the global product market."
+    "EU gasoline exports held steady at ~1.1-1.4 mb/d through March, bucking the diesel contraction -- Africa emerged as the key growth market with Egypt surging to 151 kbd/d (23-29 Mar), Kenya steady at ~111 kbd/d, and Senegal appearing at 73 kbd/d as ME-sourced product vanished.",
+    "Saudi Arabia imported EU gasoline (37 kbd/d) in 9-15 Mar -- a striking reversal for the world's largest crude exporter, reflecting the severity of Gulf refinery disruptions including BAPCO Sitra destruction (405 kbd/d offline) and Kuwait Al-Ahmadi drone strikes.",
+    "Partial-week data (30 Mar-2 Apr) shows exports dropping to ~853 kbd/d with cargoes redirecting to southern Africa (Namibia 176 kbd/d, South Africa 166 kbd/d), filling a vacuum as ME refined product supply evaporates further in April."
   ],
   "eu_27_naphtha": [
-    "EU naphtha exports remained stable at ~355-413 kbd through 23-29 Mar but the customer base shifted dramatically toward Asia: Japan surged to 103 kbd (23-29 Mar) and China appeared at 49 kbd, reflecting the desperate search for petrochemical feedstock after Gulf naphtha supplies were severed.",
-    "South Korea (73 kbd in 9-15 Mar) was an early buyer -- consistent with YNCC's FM declaration citing total Middle East naphtha suspension. Naphtha prices above $1,000/mt are making long-haul EU-to-Asia shipments economic for the first time in years.",
-    "The 30 Mar-1 Apr period collapsed to just 93 kbd (Spain only), potentially signaling EU refineries are starting to retain naphtha for domestic petrochemical use as LyondellBasell's FM on European polyolefins compounds feedstock competition within the bloc."
+    "EU naphtha exports held at ~350-410 kbd/d but the buyer mix shifted dramatically: Japan surged from zero to 103 kbd/d (23-29 Mar) and China appeared at 49 kbd/d, as both scramble for non-Gulf feedstock after South Korea's Mar 27 naphtha export ban and FPCC's 50% cracker rate cuts in Taiwan.",
+    "South Korea took 73 kbd/d in 9-15 Mar but disappeared entirely by late March -- consistent with Seoul's export ban to preserve domestic supply -- while intra-European flows (Spain, Belgium, Italy) provide baseline demand for refinery integration."
+  ],
+  "russia_crude": [
+    "Russian crude exports declined 20% from ~6.7 mb/d (9-15 Mar) to ~5.4 mb/d (23-29 Mar), with China still dominant at 1.3 mb/d but India falling sharply to 803 kbd/d from 1.6 mb/d -- partly reflecting India's 'friendly nation' Hormuz transit deal with Iran reducing urgency for Russian alternatives.",
+    "Turkey emerged as a major incremental buyer, surging to 666 kbd/d (23-29 Mar) from 116 kbd/d, likely acting as a refining and re-export hub; Italy and France remain consistent at 300-660 kbd/d each via shadow fleet (56% of Russian crude now shipped on sanctioned vessels per CREA).",
+    "Israel imported Russian crude (105 kbd/d, 9-15 Mar) while Philippines appeared at 212 kbd/d (16-22 Mar) consistent with Petron's 2.48M bbl deal -- the crisis is generating previously unthinkable trade flows.",
+    "With the EU Russian LNG ban (Apr 25), Russia's own gasoline export ban (Apr 1), and OPEC+ meeting Apr 5, expect further concentration of Russian crude flows on fewer Asian buyers at steepening discounts."
+  ],
+  "russia_lng": [
+    "Russian LNG exports averaged 80-111 ktons/d, with EU nations (France, Belgium, Spain, Netherlands) collectively taking ~50-70% of volumes -- a race to lock in cargoes before the EU's Apr 25 ban on Russian LNG purchases takes effect.",
+    "China's share was volatile (9-28 ktons/d across weeks), and Asian buyers showed less urgency for Russian LNG compared to crude, partly because US LNG is filling the Qatar gap with Cheniere running at 110% nameplate utilization.",
+    "Post-Apr 25 expect a sharp reorientation toward China, India, and Turkey as EU access closes; Arctic LNG-2 remains below capacity, capping Russia's ability to fully benefit from the ~39% surge in Asian spot LNG prices."
+  ],
+  "russia_gasoil_diesel": [
+    "Russian diesel exports plunged 64% from ~1.0 mb/d (9-15 Mar) to ~360 kbd/d (23-29 Mar), with Turkey absorbing the majority at 211 kbd/d and Brazil the only other consistent buyer -- Syria received 64 kbd/d in early March but disappeared as logistics unraveled.",
+    "The collapse reflects both reduced Russian refinery runs (Moscow's gasoline export ban Apr 1 signals domestic fuel prioritization) and loss of the Egypt/Ghana/Sudan customer base that appeared in earlier weeks but subsequently dropped out."
+  ],
+  "russia_gasoline": [
+    "Russia's gasoline exports were negligible -- a single 37.5 kbd/d cargo to Libya in 9-15 Mar, followed by three consecutive weeks of zero exports, formalizing Russia's Apr 1 gasoline export ban that prioritizes domestic supply amid surging pump prices."
+  ],
+  "russia_naphtha": [
+    "Russian naphtha exports declined 37% from ~677 kbd/d to ~428 kbd/d over March, with Saudi Arabia importing 71 kbd/d (9-15 Mar) -- a remarkable reversal as the kingdom sources Russian feedstock for petrochemical crackers while its own NGL output is curtailed by offshore field shutdowns.",
+    "Indonesia appeared as a new buyer at 115 kbd/d (16-22 Mar), consistent with Chandra Asri's FM declaration citing Middle East feedstock loss; partial-week W14 data (82 kbd/d, Morocco only) suggests a sharp near-term drop as Russia diverts more feed to domestic refineries."
+  ],
+  "russia_sulphur": [
+    "Russian sulphur exports are negligible (0.4-19 ktons/d) and almost entirely to Morocco for OCP Group's phosphate fertilizer production; China appeared briefly at 11 ktons/d (23-29 Mar) as Gulf sulphur supplies from Qatar and UAE smelters ceased entirely following FM declarations."
+  ],
+  "us_crude": [
+    "US crude exports surged 15% to ~4.5 mb/d (23-29 Mar), near all-time records, as the world scrambles for non-Gulf barrels -- Netherlands (716 kbd/d), South Korea (509 kbd/d), and Japan (480 kbd/d) were the largest takers with Brent at $108-112.",
+    "China appeared as a US crude buyer at 224 kbd/d (23-29 Mar) -- a significant geopolitical signal given ongoing trade tensions -- while India took 249 kbd/d, supplementing its naval-escorted Gulf crude convoys under Operation Urja Suraksha.",
+    "The buyer base expanded to 15 countries in 23-29 Mar including first-time destinations Denmark (205 kbd/d), Spain (410 kbd/d), and Australia (86 kbd/d), signaling structural substitution of Gulf barrels rather than temporary spot trades.",
+    "With IEA warning April losses could be 'twice March' and OPEC+ set to meet Apr 5, US Gulf Coast exporters are positioned as the marginal swing supplier -- but pipeline-to-port logistics cap near-term upside at approximately 4.5-5.0 mb/d."
+  ],
+  "us_lng": [
+    "US LNG exports held steady at ~350-376 ktons/d, reflecting all 8 terminals running at maximum capacity -- Sabine Pass at 110% nameplate -- as the US becomes the world's largest LNG exporter with Qatar's 77 Mtpa fully offline.",
+    "Destination mix rotating toward Asia: Thailand appeared at 34 ktons/d (23-29 Mar), Bangladesh at 9-10 ktons/d, and India at 18-20 ktons/d, filling the gap left by QatarEnergy's FM which supplied 41% of India's LNG.",
+    "Europe remains a major destination (Netherlands 42-72 ktons/d, France 31-73 ktons/d, Germany 10-41 ktons/d) as the EU scrambles to replace both Qatar LNG and impending Apr 25 Russian LNG ban -- Golden Pass LNG start-up adds incremental capacity."
+  ],
+  "us_lpg": [
+    "US LPG exports rose 11% from ~148 ktons/d (9-15 Mar) to ~164 ktons/d (23-29 Mar) as Saudi, UAE, and Qatari NGL supply collapsed -- Argus confirms the LPG-naphtha spread now strongly favors US Gulf Coast cargoes.",
+    "Japan is the anchor buyer at 28-33 ktons/d, but new Asian destinations are emerging: Indonesia rose to 14 ktons/d, China surged to 22 ktons/d (30 Mar-2 Apr), and Thailand appeared at 11 ktons/d, consistent with China's PDH plant operators scrambling for feedstock per ICIS.",
+    "Watch for further acceleration as Enterprise and Targa Gulf Coast terminals ramp to serve the structural gap -- Gulf NGL producers estimate 3-4 months to restore capacity post-conflict per KPC."
+  ],
+  "us_kero_jet": [
+    "US jet fuel exports rose 47% from ~214 kbd/d (9-15 Mar) to ~314 kbd/d (23-29 Mar), with the UK emerging as the dominant buyer at 134 kbd/d -- reflecting Europe's acute jet fuel vulnerability as ME refineries go offline and the EU Commission urged member states to defer refinery maintenance.",
+    "Netherlands consistently took 44-76 kbd/d as the ARA hub channels US jet imports into continental Europe; Latin American buyers (Mexico, Brazil, Peru) provide baseline demand but are being displaced by higher-margin European flows."
+  ],
+  "us_gasoil_diesel": [
+    "US diesel exports surged 51% to ~1.82 mb/d (23-29 Mar) -- the highest level in the four-week window -- as Netherlands jumped to 349 kbd/d and Peru to 173 kbd/d, confirming OPIS's assessment that the 'Middle East crisis leaves Europe in the hands of US diesel producers.'",
+    "Geographic reach expanded dramatically: Australia appeared at 87 kbd/d, Morocco at 43 kbd/d, and Canada at 40 kbd/d, while traditional Caribbean/Latin American buyers (Jamaica 54 kbd/d, Guatemala 43 kbd/d, Trinidad 41 kbd/d) maintained steady draws.",
+    "With EU diesel exports contracting 36% the same week and IEA flagging diesel/jet as 'particularly vulnerable,' US Gulf Coast refineries face their strongest margin environment in years -- but at the cost of $4+/gallon domestic gasoline prices."
+  ],
+  "us_gasoline": [
+    "US gasoline exports remained stable at ~810-830 kbd/d through March, primarily serving the Americas -- Mexico alone took 158-311 kbd/d -- but notable new buyers appeared: Japan (46 kbd/d, 23-29 Mar) and Australia (87 kbd/d, 16-22 Mar), reflecting Asian fuel shortages reaching non-traditional markets.",
+    "The stability masks growing domestic tension: with US gas past $4/gal and Brent at $108-112, DOE may face pressure to curtail product exports if prices continue rising -- the same political dynamic that drove Russia's Apr 1 gasoline export ban."
+  ],
+  "us_naphtha": [
+    "US naphtha exports spiked 81% to ~759 kbd/d (16-22 Mar), driven by South Korea taking 251 kbd/d as ME naphtha vanished -- YNCC declared FM on ethylene production due to 'total Middle East naphtha supply suspension,' and Seoul banned naphtha exports Mar 27.",
+    "Japan is a consistent buyer at 76-122 kbd/d, while Venezuela (113-150 kbd/d) and Colombia (92 kbd/d) rely on US naphtha as refinery diluent; UK appeared at 75 kbd/d in 30 Mar-2 Apr, an unusual trans-Atlantic flow likely supplying European petrochem crackers facing LyondellBasell's FM on polyolefins.",
+    "With naphtha surging past $1,000/mt per Formosa Plastics and Asian crackers running at 50% rates, US Gulf Coast naphtha is commanding structural premiums that may persist well beyond the Hormuz closure."
   ],
   "australia_crude": [
-    "Australia's crude exports are small (~183-280 kbd) and entirely directed at Asia-Pacific neighbors -- South Korea is the anchor buyer at 93-146 kbd, with Singapore, Thailand, Brunei, and Japan rotating as secondary buyers.",
-    "The steady volumes reflect Australia's modest ~300 kbd production base, which is outside the Gulf disruption zone and commanding premium pricing. Oman and Australia are the only significant Asia-facing crude exporters with no Hormuz exposure, giving both outsized pricing power."
+    "Australian crude exports are small (~180-280 kbd/d) but strategically vital: South Korea is the anchor buyer at 93-146 kbd/d, while Japan appeared at 162 kbd/d (30 Mar-2 Apr), likely diversifying its 94.2% ME crude dependence as onshore inventories fell 9% below seasonal average per Reuters.",
+    "With Australia and Singapore agreeing to maintain bilateral energy flows, Australian condensate and light crude are commanding significant premiums as non-Hormuz alternatives for Asia-Pacific refiners."
   ],
   "australia_lng": [
-    "Australia's LNG exports declined 33% from ~252 ktons/d (9-15 Mar) to ~169 ktons/d (23-29 Mar), compounding the global shortage at the worst possible time -- this drop coincides with the Santos-operated Barossa/Darwin LNG temporary shutdown reported by IBTimes. Japan remains the anchor buyer at ~71 ktons/d, unwavering.",
-    "Per the Diplomat, Australia and Singapore signed an agreement to maintain oil and gas flows, reflecting the strategic importance of Australian LNG with Qatar's 77 Mtpa offline. The customer base is exclusively Asian -- Japan, China, South Korea, Taiwan, Thailand, and Singapore -- with no European cargoes.",
-    "At ~169-185 ktons/d (annualized ~62-68 Mtpa), Australia is running well below its ~87 Mtpa nameplate capacity. If the Barossa outage extends or other facilities face maintenance issues, the Asia-Pacific LNG supply picture deteriorates further against Daiwa Institute's warning that a 10% cut to Japan's ME LNG imports would push GDP negative."
+    "Australian LNG exports declined from ~252 ktons/d (9-15 Mar) to ~169 ktons/d (23-29 Mar) -- likely reflecting production already at maximum capacity with no room to ramp, rather than demand weakness, given the massive Qatar supply gap.",
+    "Japan remains the anchor at 48-71 ktons/d, but Thailand emerged as a consistent new buyer (11-20 ktons/d across all four weeks), consistent with Thailand's growing LNG import dependency as domestic gas from Gulf of Thailand depletes.",
+    "Australia's ~90 Mtpa LNG capacity (~246 ktons/d) is the single largest source of non-disrupted LNG for Asia -- with Qatar's 77 Mtpa fully offline and US terminals maxed out, any Australian supply interruption would be catastrophic for regional energy security."
   ],
   "australia_naphtha": [
-    "Australia's naphtha exports are negligible (~49 kbd sporadically), with only Singapore as a buyer. Australia's limited refining infrastructure means it has minimal naphtha surplus for export -- the country is itself increasingly import-dependent for refined products amid the crisis."
+    "Australian naphtha exports are sporadic and minimal (~49 kbd/d in two of four weeks, entirely to Singapore), reflecting Australia's position as a net crude/condensate exporter rather than a refined products producer -- Asian naphtha demand must be met by US and EU suppliers."
   ],
   "china_crude": [
-    "China's crude imports fell 30% from ~11.4 mb/d (9–15 Mar) to ~7.7 mb/d (30 Mar–1 Apr), yet Beijing appears relatively calm — per The Diplomat, China's 1.2–1.3 billion barrel strategic/commercial reserve offers ~100 days of cover, and pipeline-delivered crude (ESPO, Kazakhstan, Myanmar ~1,020 kbd) provides a Hormuz-independent floor.",
-    "Russia held steady at ~2.2 mb/d throughout the crisis while Saudi Arabia disappeared entirely by 23–29 Mar; Brazil surged to become the top supplier at 2.2 mb/d in early April, with Angola (1.4 mb/d) also filling the gap — a radical reshuffling of China's supply base in under four weeks.",
-    "Gulf share collapsed from 44% to 14%, but Iran continues flowing ~1.1 mb/d to China — Tehran reportedly allows China-bound vessels through the Hormuz blockade, giving Beijing a geopolitical hedge unavailable to Japan or South Korea.",
-    "With the OPEC+ April 5 meeting looming as the most consequential since the alliance's formation, China's ability to maintain ~7.7 mb/d through diversification and reserves buys time, but any prolongation past April would test even Beijing's stockpile depth."
+    "China's crude imports plunged 38% from ~11.2 mb/d (9-15 Mar) to ~7.0 mb/d (30 Mar-2 Apr) as the Hormuz closure systematically eliminated Gulf suppliers -- Saudi Arabia, Iraq, UAE, and Kuwait all vanished from the supplier list by late March, collapsing Gulf share from 44% to 19%.",
+    "Russia remains the anchor at ~2.0-2.3 mb/d throughout, but cannot fill a ~4 mb/d Gulf gap alone; Brazil (1.4 mb/d), Angola (1.3 mb/d), and Oman (0.5 mb/d) have emerged as critical swing suppliers, while pipeline-locked volumes (ESPO ~600 kbd, Kazakhstan ~220 kbd, Myanmar ~200 kbd) provide ~1.0 mb/d of Hormuz-independent floor.",
+    "Beijing's Jan-Feb strategic stockpiling (11.99 mb/d, +16% YoY per Bloomberg) provided a buffer, but the March drawdown trajectory suggests inventories are now depleting rapidly -- the fuel export ban since Mar 4-5 and Shell-CNOOC Huizhou cracker shutdown signal domestic rationing has begun.",
+    "With OPEC+ meeting Apr 5 and the Apr 6 deadline looming, China faces a structural supply deficit: even if Hormuz partially reopens, rebuilding Gulf supply chains to pre-crisis levels will take weeks as 3,200 vessels remain trapped in the Gulf (4% of global tonnage)."
   ],
   "china_lng": [
-    "China's LNG imports collapsed 39% to 81.7 ktons/d in 23–29 Mar as QatarEnergy's FM eliminated China's largest Gulf supplier — Qatar fell from 45.2 ktons/d to zero by mid-March, consistent with the FM extension to Chinese contracts on Mar 24.",
-    "Australia emerged as the lifeline supplier (25.6–58.1 ktons/d), while Oman's non-Hormuz terminal began delivering 25.6 ktons/d in 30 Mar–1 Apr — the first Gulf LNG to reach China in two weeks, signaling a partial recovery.",
-    "Asian LNG spot prices surged ~39% per Bloomberg Intelligence and Europe is losing cargoes as traders divert flexible supply eastward per Euronews — China's Power of Siberia pipeline gas provides partial insulation, but the loss of Qatar's 20% global share is driving industrial gas users toward costly coal-switching."
+    "Qatar LNG -- previously China's top Gulf gas supplier at 45 ktons/d (34% share in 9-15 Mar) -- dropped to zero by 23-29 Mar following QatarEnergy's FM extension to Chinese contracts on Mar 24, removing ~20% of global LNG supply from the market.",
+    "Australia surged to fill the gap, peaking at 52.4 ktons/d (30 Mar-2 Apr), with Malaysia, PNG, and Russia providing supplementary volumes; Oman LNG (outside Hormuz) re-emerged at 19.2 ktons/d in early April, offering the only Gulf-proximate alternative.",
+    "Total imports fell 39% from 133.8 to 81.7 ktons/d in 23-29 Mar before partially recovering to 116.2 ktons/d -- Power of Siberia pipeline gas provides partial insulation, but spot LNG costs have surged ~39%, squeezing margins for Chinese PDH plants and city gas distributors."
   ],
   "china_lpg": [
-    "US Gulf Coast LPG dominates China's import mix at ~28 ktons/d average — double the next supplier — as Saudi, UAE, and Qatari NGL-linked LPG dried up; China, the world's largest LPG importer, faces sharply higher PDH feedstock costs per ICIS.",
-    "Iran remains a notable LPG supplier to China at 10–22 ktons/d, exploiting IRGC toll-collection transit through Hormuz (~$2M/vessel in yuan per Vortexa), while Gulf share oscillated between 9% and 49% depending on Iranian flow timing.",
-    "Total imports fell 31% from 59 to 41 ktons/d by early April; further tightening is likely as Saudi and UAE NGL production remains offline and competition for US cargoes intensifies with Japan and South Korea."
+    "US Gulf Coast terminals (Enterprise, Targa) have become China's dominant LPG supplier at 24-30 ktons/d, replacing Saudi/Qatar/UAE NGL-linked volumes that collapsed alongside upstream shutdowns; Iran continues trickling LPG through IRGC-tolled Hormuz passage at 5-15 ktons/d.",
+    "Total LPG imports declined 35% from 59.1 to 38.3 ktons/d (30 Mar-2 Apr), tightening feedstock for China's world-leading PDH plant fleet; the LPG-naphtha spread has shifted as both feedstocks face Gulf-linked constraints, per ICIS."
   ],
   "china_kero_jet": [
-    "China's jet fuel/kerosene imports effectively ceased after a single 24 kbd cargo from South Korea in 9–15 Mar, reflecting China's domestic fuel export ban (since Mar 4–5) and the broader collapse in regional refined product trade — self-sufficiency in jet fuel limits direct impact, but aviation demand destruction from $105+ Brent is the bigger concern."
+    "Jet fuel imports collapsed from 24 kbd (9-15 Mar, entirely South Korea-sourced) to zero by 16-22 Mar and remained at zero through early April -- consistent with China's fuel export ban and South Korea's own product conservation measures amid cratering crude supply."
   ],
   "china_gasoil_diesel": [
-    "China's gasoil/diesel imports — already minimal at ~12–15 kbd — are sourced entirely from intra-Asian trade (South Korea, Japan) with zero Gulf exposure; volumes edged to zero by 30 Mar–1 Apr as regional refinery throughput cuts constrained available exports."
+    "Diesel imports, already minimal at 10-15 kbd from regional refiners (South Korea, Japan), fell to zero by 30 Mar-2 Apr; China's domestic refining capacity is sufficient when crude feedstock is available, but the sharp crude import decline suggests product tightness is imminent."
   ],
   "china_naphtha": [
-    "China's naphtha imports collapsed 71% from 409 kbd (9–15 Mar) to 119 kbd (30 Mar–1 Apr) as Gulf suppliers — Kuwait, Qatar, UAE — disappeared entirely by 23–29 Mar, with Gulf share crashing from 46% to zero.",
-    "Russia became the sole naphtha supplier by early April at 119 kbd, consistent with Shell-CNOOC's Huizhou ethylene cracker shutdown and Wanhua Chemical's FM on Middle East supplies — both reducing feedstock demand even as available supply dried up.",
-    "With naphtha past $1,000/mt and 3,200 Chinese-linked vessels trapped in the Gulf (4% of global tonnage per S&P Global), further cracker shutdowns are likely; Formosa Plastics in Taiwan already cut to ~50% capacity on the same Gulf naphtha disruption."
+    "Gulf naphtha suppliers were systematically eliminated: Kuwait (124 kbd in 9-15 Mar) vanished after Al-Ahmadi drone strikes, Qatar and UAE followed, and Gulf share crashed from 46% to zero by 23-29 Mar -- directly triggering Shell-CNOOC's Huizhou ethylene cracker shutdown and Wanhua Chemical's FM declaration.",
+    "Russia stepped in as the primary replacement at 89-106 kbd, joined by non-traditional sources including Norway (77 kbd), Thailand (48 kbd), India (136 kbd in 30 Mar-2 Apr), and South Korea -- but total imports still fell 45% from 409 to 225 kbd, well below China's ~600 kbd petrochemical demand, pointing to sustained cracker curtailments."
   ],
   "india_crude": [
-    "India's crude imports recovered from 3.6 mb/d (9–15 Mar) to 4.2 mb/d (23–29 Mar), supported by Operation Urja Suraksha — the Indian Navy's frontline warship escort of India-bound tankers through Hormuz — which enabled Saudi (0.95 mb/d) and UAE (0.49 mb/d) deliveries to resume mid-month.",
-    "Russia is India's dominant supplier at 53% average share across March, surging to an extraordinary 3.9 mb/d (65%) in 30 Mar–1 Apr; India-Russia talks on expanded crude purchases restarted Mar 19, cementing Moscow as New Delhi's indispensable energy partner during the crisis.",
-    "Gulf share swung wildly (6%→25%→36%→0%) week by week, reflecting the convoy-dependent nature of Hormuz deliveries; Iran's 'friendly nation' safe-passage status gives India a diplomatic edge, but the trade deficit is set to widen by >$4B in March alone per Business Today.",
-    "The diversification to Brazil (0.9 mb/d), US (0.5 mb/d), and West African crudes in early April shows India building redundancy, but with MRPL cutting 500 kbd in refinery throughput, the downstream impact is already cascading through the economy."
+    "India's crude imports surged to ~6.1 mb/d (30 Mar-2 Apr) from a crisis low of ~3.6 mb/d (9-15 Mar), driven by Russia exploding to 3.3 mb/d (55% share) -- a direct result of India-Russia crude supply talks restarted Mar 19 and Operation Urja Suraksha naval escorts through Hormuz.",
+    "Gulf suppliers re-emerged intermittently: Saudi at 0.78-0.95 mb/d and UAE at 0.45-0.49 mb/d (likely cargoes loaded via Yanbu/ADCOP bypass pipelines), while new sources -- Brazil (0.68 mb/d), Nigeria (0.41 mb/d), Ecuador (0.30 mb/d) -- show aggressive multi-source diversification.",
+    "Iran's 'friendly nation' safe-passage status for India is enabling Hormuz transits under naval escort, but India's crude trade deficit is still set to widen by >$4B in March per Business Today; MRPL's 500 kbd refinery throughput cuts and Gujarat Gas's 50% industrial supply cut underscore that domestic supply remains severely strained despite rising imports."
   ],
   "india_lng": [
-    "India's LNG imports were volatile (35→31→79→66 ktons/d) as Petronet LNG's FM on Qatar contracts removed 41% of India's pre-crisis LNG supply; Qatar has been completely absent from the supply chain since early March.",
-    "Oman's non-Hormuz Qalhat terminal provided a critical 32 ktons/d lifeline in 23–29 Mar, while Nigeria (17–20 ktons/d), Angola, and US spot cargoes rotate as replacement suppliers — but total volumes remain well below India's ~100+ ktons/d pre-crisis run rate.",
-    "Gujarat Gas imposed 50% industrial supply cuts while the Petroleum Ministry assured 'sufficient stock' on Mar 27 — India is negotiating Russian LNG purchases after the Puri-Sorokin meeting, but pipeline gas from Russia remains years away, leaving acute spot price exposure (~39% surge)."
+    "Qatar -- formerly 41% of India's LNG supply -- is completely absent, consistent with Petronet LNG's FM declaration; Oman (outside Hormuz) emerged as the top Gulf replacement at 32.1 ktons/d in 23-29 Mar, while Nigeria (17-21 ktons/d) and Angola (10-34 ktons/d) became critical African swing sources.",
+    "Total LNG imports rebounded sharply from 31.2 ktons/d (16-22 Mar) to 78.6 ktons/d (23-29 Mar) -- more than doubling -- as US spot cargoes (19.3 ktons/d) and diversified African supply partially compensated for the Qatar gap; India-Russia LNG talks following the Puri-Sorokin meeting Mar 19 may unlock additional volumes."
   ],
   "india_lpg": [
-    "India's LPG imports are being sustained by a two-track model: US Gulf Coast cargoes (8–16 ktons/d baseline) plus Indian Navy-escorted Gulf deliveries — tankers Pine Gas and Jag Vasant (92,000t combined) successfully transited Hormuz under Operation Urja Suraksha, arriving at Indian ports Mar 26–28.",
-    "Gulf suppliers (Qatar, Saudi, Kuwait) continue providing 29–61% of LPG volumes week to week, enabled by the naval escort framework, and the W14 surge to 28.9 ktons/d suggests the model is scaling up — but sustained high volumes require continued naval commitment.",
-    "Cooking fuel LPG is politically critical in India; any sustained shortfall would have domestic electoral consequences, making the Navy's Hormuz escort mission as much a political imperative as a strategic one."
+    "Indian Navy-escorted LPG convoys (Pine Gas and Jag Vasant, 92,000t combined) under Operation Urja Suraksha produced a dramatic result: LPG imports nearly tripled from 14.6 ktons/d (23-29 Mar) to 33.9 ktons/d (30 Mar-2 Apr), with Gulf share surging from 29% to 70% as Kuwait, Qatar, Saudi, UAE, and even Iran volumes resumed.",
+    "Iran's re-appearance as a supplier at 6.8 ktons/d confirms India's 'friendly nation' safe-passage is enabling flows that other Asian importers cannot access; the US remains the baseline non-Gulf supplier at ~8.6-10.4 ktons/d, providing structural diversification."
   ],
   "india_naphtha": [
-    "Russia has become India's near-monopoly naphtha supplier, surging from 53 kbd (9–15 Mar) to 275 kbd (30 Mar–1 Apr) — a 5x increase — as UAE supply disappeared and Indian refiners desperately sought feedstock after MRPL's FM on gasoline exports.",
-    "Oman is the only Gulf source still delivering naphtha to India (~46–68 kbd), leveraging its non-Hormuz export position; total naphtha imports actually surged 237% from W11 to W14 as refiners compete for any available barrels.",
-    "The Russia+Oman duopoly creates dangerous concentration risk — any disruption to either source would cascade through India's petrochemical and refining sectors; diversification to Middle Eastern alternatives is impossible while Hormuz remains contested."
+    "India's naphtha imports more than doubled from 101 kbd (9-15 Mar) to 257 kbd (30 Mar-2 Apr), with Russia surging from 53 to 206 kbd -- India appears to be absorbing Russian naphtha barrels displaced from European markets, creating a new structural trade flow.",
+    "Oman is the only Gulf naphtha supplier at 46-51 kbd (benefiting from its position outside Hormuz), while UAE naphtha that appeared in 9-15 Mar (48 kbd) has not returned; rising Indian naphtha imports are likely feeding both domestic petrochemical demand and re-exports to naphtha-starved Asian crackers."
   ],
   "japan_crude": [
-    "Japan remains the most Gulf-dependent major importer at 89–100% Gulf share across all four weeks — zero diversification to Russia, Brazil, or Africa — reflecting deeply entrenched long-term contracts with Saudi Arabia and UAE that leave no alternative supply infrastructure.",
-    "Total imports fell 47% from 2.0 mb/d (9–15 Mar) to 1.1 mb/d (23–29 Mar), the lowest weekly level since 2016 per Vortexa, forcing Japan's largest-ever SPR release of 80 mb from 10 national stockpile sites — with METI warning additional releases may be needed past April.",
-    "Saudi and UAE are the only meaningful suppliers; Iraq, Kuwait, Oman, and Qatar provide trace volumes at best. With onshore crude inventories 9% below the seasonal average and ME dependence at 93.5%, Japan faces the most acute crude supply emergency among major Asian importers — every day of continued Hormuz disruption accelerates the SPR drawdown clock."
+    "Japan's crude imports collapsed 63% from ~2.0 mb/d (9-15 Mar) to ~0.75 mb/d (30 Mar-2 Apr) -- the sharpest decline among major Asian importers -- with Gulf share remaining at 95-100% throughout because Japan has no alternative supplier relationships (unlike China/India which pivoted to Russia).",
+    "Saudi Arabia (0.50 mb/d) and UAE (0.13 mb/d) remain the only suppliers, delivering via Yanbu East-West Pipeline and ADCOP pipeline to Fujairah respectively; the 80 mb SPR release (Japan's largest ever, per Reuters) is the sole buffer preventing refinery shutdowns, and METI has warned additional releases may be needed past April.",
+    "Japan's structural vulnerability is now fully exposed: 94.2% ME crude dependence with zero Russian or Atlantic Basin supply alternatives means every barrel must transit Hormuz or bypass pipelines operating at maximum capacity -- a supply chain with zero resilience if the Apr 6 deadline passes without resolution."
   ],
   "japan_lng": [
-    "Japan's LNG imports declined 53% from 201 to 94 ktons/d across March, driven by QatarEnergy's FM and thinning spot availability as Asian JKM prices surged ~39%; the Daiwa Institute warns even a 10% ME LNG import cut would push Japan's GDP negative — current cuts far exceed that threshold.",
-    "Australia remains the critical lifeline (24–111 ktons/d) but cannot fully replace lost Gulf volumes; Canada emerged as a surprise major supplier at 48 ktons/d in 30 Mar–1 Apr, while Qatar dwindled from 10.7 ktons/d to zero.",
-    "Europe is losing LNG cargoes as traders divert flexible supply to higher-priced Asian markets per Euronews — Japan's only structural relief lies in accelerating US LNG spot purchases, which Cheniere and other US terminals are running at 110%+ nameplate capacity to accommodate."
+    "Japan LNG imports halved from 201 ktons/d (9-15 Mar) to 90.1 ktons/d (30 Mar-2 Apr); Australia -- the backstop supplier -- swung wildly from 80.8 to 111.1 back down to 17.9 ktons/d, suggesting Australian export capacity is being competed away by other Asian buyers.",
+    "Qatar LNG dropped to zero by 23-29 Mar (from 10.7 ktons/d), consistent with Shell and TotalEnergies FM declarations on Qatar-sourced offtake; Japan is now scrambling across 8+ suppliers (Australia, Canada, Malaysia, PNG, Indonesia, Brunei, Mozambique, US) but total volumes are inadequate.",
+    "With JKM spot at $20.39/MMBtu (2x pre-crisis forecast per CME Group), and Daiwa Institute warning that a 10% ME LNG import cut would push Japan GDP negative, the LNG supply chain is the country's most acute near-term economic risk."
   ],
   "japan_lpg": [
-    "Japan has completely pivoted to US LPG, with the United States supplying virtually 100% of imports across all four weeks; volumes actually increased from 26.6 to 60.9 ktons/d, suggesting active strategic stockbuilding ahead of potential extended disruptions.",
-    "Zero Gulf LPG is reaching Japan — a complete structural break from pre-crisis patterns that favored Saudi and UAE NGL exports; the US Gulf Coast's Enterprise and Targa export terminals are the sole supply artery for Japan's residential heating and petrochemical feedstock needs."
+    "Japan's LPG imports are 100% US-sourced throughout the crisis, rising from 26.6 to 48.5 ktons/d (9 Mar-2 Apr) -- US Gulf Coast terminals have effectively replaced all former Middle East LPG supply, representing the cleanest and most resilient energy supply chain in Japan's import portfolio.",
+    "The near-doubling of US LPG volumes suggests Japanese buyers moved rapidly on long-haul US cargoes, likely at significant freight premiums given Cape of Good Hope rerouting by major container lines."
   ],
   "japan_kero_jet": [
-    "Japan's jet fuel/kerosene imports are sourced entirely from South Korea, rising from 31 to 115 kbd across March — South Korea's refining complex is functioning as Japan's de facto refined products backstop, with Seoul's naphtha export ban (Mar 27) not yet constraining distillate product flows."
+    "Jet fuel imports from South Korea held steady at 31-87 kbd throughout the crisis, actually increasing from 30.8 kbd (9-15 Mar) to 86.5 kbd (30 Mar-2 Apr) -- South Korean refineries are maintaining product runs and prioritizing Japan supply even as their own crude imports decline.",
+    "This intra-Asian refined product trade is a critical lifeline for Japanese aviation and military operations; any disruption to South Korean refinery operations would immediately cascade to Japanese transport fuel supply."
   ],
   "japan_gasoil_diesel": [
-    "Japan's gasoil/diesel imports are small (10–53 kbd) and sourced entirely from intra-Asian trade (South Korea and Brunei), with zero Gulf exposure; regional refining cooperation is managing this segment without material disruption."
+    "Diesel imports remain small and regional (7-53 kbd) sourced from South Korea and intermittently Brunei (49.6 kbd in 16-22 Mar); the declining trend from 52.7 to 7.2 kbd reflects tightening of regional product availability as crude feedstock dries up across Northeast Asian refineries."
   ],
   "japan_gasoline": [
-    "Japan's gasoline imports surged from 27 kbd (9–15 Mar) to 85 kbd (23–29 Mar), sourced almost entirely from South Korea, before India emerged as a new supplier at 66 kbd in 30 Mar–1 Apr — a novel India→Japan gasoline trade route created by the crisis as Indian refiners (despite MRPL's FM) redirect exportable surplus to premium Asian buyers.",
-    "The tripling of gasoline imports reflects domestic refinery throughput cuts driven by crude supply shortfalls; Japan's downstream sector is increasingly dependent on regional neighbors to maintain fuel supply to consumers."
+    "Gasoline imports tripled from 27.2 kbd (9-15 Mar) to 85.4 kbd (23-29 Mar) as domestic refinery throughput declines forced Japan to increase finished product purchases; India emerged as a new gasoline supplier at 49.5 kbd in 30 Mar-2 Apr, reflecting MRPL/Indian refineries redirecting product from export markets.",
+    "The shift from crude-processing to finished-product imports is a structural indicator that Japan's refining sector is rationing crude feedstock -- a costly adaptation given the premium on finished products versus crude in the current market."
   ],
   "japan_naphtha": [
-    "Japan's naphtha imports swung wildly (86–317 kbd) with Gulf share oscillating from 41% to 100% (a single Qatar cargo in 16–22 Mar) to 32% — Kuwait disappeared entirely while UAE maintained erratic deliveries, reflecting the convoy-dependent nature of Gulf naphtha trade.",
-    "South Korea (115 kbd) and the US (99 kbd) emerged as key non-Gulf sources in 30 Mar–1 Apr, alongside UAE's persistent but diminishing volumes — a fragile patchwork for Japan's petrochemical sector that remains fundamentally dependent on Gulf NGL-derived naphtha."
+    "Naphtha imports swung violently: from 289 kbd (9-15 Mar) to just 86 kbd (16-22 Mar) when only Qatar remained, then recovered to 200 kbd (23-29 Mar) as UAE naphtha via ADCOP (126 kbd) filled the gap -- Kuwait's disappearance (from 70 kbd) aligns with Al-Ahmadi refinery strikes Mar 19-20.",
+    "US naphtha emerged at 75 kbd in 30 Mar-2 Apr alongside UAE (77 kbd) and South Korea (42 kbd); Japanese petrochemical producers have been forced to curb output (per TankTerminals), with the naphtha shortage cascading through ethylene, propylene, and polyolefin chains."
   ],
   "south_korea_crude": [
-    "South Korea suffered the most extreme crude import contraction among major Asian importers, plunging 79% from 3.2 mb/d (9–15 Mar) to 0.66 mb/d (30 Mar–1 Apr), with the US as the sole supplier in early April — an unprecedented 100% concentration on a single source.",
-    "Gulf share collapsed from 76% to 0% in four weeks as Saudi, Iraq, Kuwait, and UAE deliveries dried up; the government launched an SPR swap on Mar 31, but with ME crude accounting for 77% of pre-crisis imports, the structural gap is enormous.",
-    "The petrochemical sector is devastated: Lotte Chemical shut Yeosu (restart not until May 29), LG Chem shut Yeosu No. 2, and YNCC declared FM on ethylene — with inventories 10% above seasonal norms from earlier stockbuilding providing the only cushion before the OPEC+ April 5 meeting outcome."
+    "South Korea's crude imports fell 54% from ~3.2 mb/d (9-15 Mar) to ~1.5 mb/d (30 Mar-2 Apr) as Gulf suppliers collapsed: Saudi went from 1.15 to near-zero, Iraq from 0.55 to zero, Kuwait from 0.26 to zero; Gulf share fell from 76% to 31%.",
+    "The US surged to become South Korea's top crude supplier at 0.75 mb/d (30 Mar-2 Apr), up from 0.68 mb/d -- a complete structural reversal from Korea's traditional Gulf-heavy slate; Mexico (0.26 mb/d) appeared as a new source, and UAE (0.45 mb/d via ADCOP) is the sole remaining Gulf lifeline.",
+    "Lotte Yeosu halted operations (restart May 29), LG Chem shut Yeosu No. 2, and Korea's naphtha export ban since Mar 27 signal deep refining-sector distress; the SPR swap (2 mb initial, 20+ mb queued per Seoul Economic Daily) is buying time, but inventories are 13% above seasonal norms only because demand destruction is outpacing drawdowns."
   ],
   "south_korea_lng": [
-    "South Korea's LNG position is the most resilient in the batch — KOGAS reports inventory exceeding mandatory reserves, and Qatar's pre-crisis share was only ~14% of 2026 imports, cushioning the blow of the QatarEnergy FM compared to Japan or India.",
-    "Australia (43–67 ktons/d) and Malaysia (20–43 ktons/d) anchor the supply base; new long-term contracts (Woodside 0.5 Mtpa/10.5yr commenced 2026; TotalEnergies 1 Mtpa from end-2027) provide structural support that pre-dated the crisis.",
-    "Gulf share fell from 8% to 0% by 23–29 Mar, with Russia (21 ktons/d) appearing in early April — the broad pre-crisis diversification insulates Korea's gas supply far better than Japan, whose LNG imports fell 53% over the same period."
+    "South Korea's LNG imports fell 44% from 200 ktons/d to 112 ktons/d, but the country is better positioned than Japan: Qatar share was only ~14% of 2026 imports, and KOGAS confirms mandatory reserves are exceeded; new long-term contracts with Woodside (0.5 Mtpa) and TotalEnergies (1 Mtpa) add further insulation.",
+    "Australia (34-68 ktons/d) and Malaysia (20-51 ktons/d) are the twin pillars of supply, while Gulf LNG fell to zero by 23-29 Mar; Russia re-emerged at 15.9 ktons/d in 30 Mar-2 Apr as EU's April 25 Russian LNG ban paradoxically redirects cargoes toward Asian buyers."
   ],
   "south_korea_lpg": [
-    "South Korea receives 100% of LPG imports from North America (US ~80%, Canada ~20%) with zero Gulf exposure throughout March — a pre-crisis diversification that proved prescient as Saudi, UAE, and Qatari NGL supply collapsed region-wide.",
-    "Total volumes are modest (9–39 ktons/d) and adequate for remaining petrochemical operations, though the far more severe naphtha shortage is the binding constraint for Korea's cracker fleet — LPG as alternative feedstock is limited by cracker design."
+    "South Korea's LPG imports are 100% North American (US + Canada), with zero Gulf exposure throughout the crisis; volumes fell from 17.8 to 9.4 ktons/d through March before spiking to 28.1 ktons/d in early April, suggesting a large US cargo arrival after the LPG-naphtha spread shifted to favor increased imports.",
+    "The complete absence of Middle Eastern LPG -- historically a significant feedstock for Korean PDH crackers -- is contributing to YNCC's FM declaration on ethylene production due to total ME naphtha/LPG supply suspension."
   ],
   "south_korea_gasoil_diesel": [
-    "Small intra-Asian gasoil/diesel trade volumes (7–65 kbd) from Japan, China, and Russia reflect mutual refining support among Northeast Asian neighbors; the segment has zero Gulf exposure and is operating without material disruption."
+    "Diesel imports are minimal and volatile (0-65 kbd), sourced regionally from Japan, China, and Russia; volumes collapsed to zero by 30 Mar-2 Apr, consistent with regional refineries conserving product amid declining crude runs and tightening supply across Northeast Asia."
   ],
   "south_korea_gasoline": [
-    "Gasoline imports collapsed from 108 kbd (9–15 Mar, from Japan) to zero by 23–29 Mar, reflecting South Korea's sufficient domestic refining capacity and the naphtha export ban (Mar 27) redirecting feedstock to domestic fuel production over petrochemical use."
+    "Gasoline imports collapsed from 108 kbd (9-15 Mar, Japan-sourced) to zero by 23-29 Mar and remained at zero -- reflecting either sufficient domestic refinery output for the shrinking demand base or an inability to source affordable cargoes in a market where finished product premiums have surged alongside crude prices at $108-112/bbl."
   ],
   "south_korea_naphtha": [
-    "South Korea faces the most severe naphtha crisis in Asia: Gulf share crashed from 96% (UAE, Qatar, Bahrain supplying 469 kbd in 9–15 Mar) to 0% in four weeks, devastating the country's petrochemical sector where ME accounts for 77% of naphtha imports.",
-    "Naphtha surging past $1,000/mt triggered cascading shutdowns — Lotte Chemical (Yeosu), LG Chem (Yeosu No. 2), YNCC FM on ethylene — while the government imposed a naphtha export ban on Mar 27 and Korea signed the UK 35-nation Hormuz reopening joint statement.",
-    "Replacement sources (US 109, Algeria 100, Russia 84, Greece 69 kbd in 30 Mar–1 Apr) are smaller, fragmented, and far more expensive than pre-crisis Gulf NGL-derived naphtha; restoring Korea's $60B+ petrochemical export sector requires Hormuz reopening — alternative supply routes are structurally insufficient."
+    "The most dramatic supply chain restructuring in the batch: Gulf naphtha went from 96% (501 kbd from UAE, Qatar, Bahrain, Saudi in 9-15 Mar) to 0% by 30 Mar-2 Apr, replaced by a wildly diversified mix of India (86 kbd), US (82 kbd), Algeria (75 kbd), Russia (59 kbd), and Greece (52 kbd).",
+    "Total volumes fell 32% from 522 to 353 kbd despite the diversification, directly triggering YNCC's FM on ethylene production; South Korea's Mar 27 naphtha export ban is conserving domestic supply but the structural shift from Gulf to Mediterranean/Atlantic Basin naphtha adds 15-25 days of shipping transit time, creating persistent inventory vulnerability."
   ],
   "thailand_crude": [
-    "Thailand's crude imports fell 39% from ~1.25 mb/d (9–15 Mar) to ~0.76 mb/d (23–29 Mar) as the Hormuz closure progressively choked supply — but the composition shifted dramatically: Gulf share surged from 29% to 93% by 23–29 Mar as UAE cargoes (via ADCOP pipeline to Fujairah, outside Hormuz) became virtually the only supply available after US, Brazilian, and Libyan cargoes dried up.",
-    "Bangkok's bilateral transit deal with Tehran on Mar 28 — putting Thailand alongside India, Pakistan, and Malaysia on Iran's 'friendly nation' list — came as a Bangchak tanker anchored since Mar 11 finally cleared the Strait. Deputy PM Phiphat is also opening talks on Russian crude purchases, signaling Thailand's willingness to diversify beyond traditional Western-aligned supply chains.",
-    "Early W14 data (30 Mar–1 Apr) shows a worrying drop to ~0.41 mb/d with supply fragmenting to Indonesia and Nigeria — suggesting the Iran transit deal hasn't yet translated into sustained flow. With Thailand having limited strategic reserves and declining domestic Gulf of Thailand production, the IEA's warning of a worsening April supply crunch applies acutely here."
+    "Thailand's crude imports contracted 35% from ~1,250 kbd (9-15 Mar) to ~815 kbd (23-29 Mar) as Gulf supply chains fractured, before plunging to ~251 kbd in the partial week of 30 Mar-2 Apr as cargoes thinned further.",
+    "UAE has become the dominant supplier at 88% share (23-29 Mar), with the US, Brazil, Libya, and Saudi Arabia all disappearing from the supplier mix since mid-March -- a dangerous concentration given Hormuz risk to UAE-origin cargoes routed through Fujairah.",
+    "Bangkok secured a bilateral Hormuz transit deal with Iran on Mar 28, joining India and Malaysia in 'friendly nation' passage -- but the deal's practical value remains unproven, and Nigeria/Indonesia emerged as new suppliers in late March signaling active diversification away from Gulf dependence.",
+    "With ~90-95 days of reserves per the Energy Ministry and ~60% pre-crisis ME crude dependence, Thailand faces a tightening window if Hormuz remains closed past April -- especially as PTT scrambles to lock in US and West African alternatives per S&P Global."
   ],
   "thailand_lng": [
-    "Thailand's LNG imports have remained resilient at 25–60 ktons/d throughout March, with zero Qatar dependence — a structural advantage over neighbors like Japan and Taiwan. Australia is the anchor supplier (~20 ktons/d consistently), supplemented by a remarkably diverse mix: Canada, Mozambique, Malaysia, Oman, China, and US cargoes all appeared across the four weeks.",
-    "The first US LNG cargo arrived in the 30 Mar–1 Apr window (23.6 ktons/d), alongside Chinese re-exports (23.4 ktons/d) — reflecting Cheniere's status as the world's largest LNG exporter with Qatar offline and the scramble to place spot cargoes in premium Asian markets where prices have surged ~39%."
+    "Thailand's LNG imports held relatively steady at 25-45 ktons/d through March, with zero Gulf-origin cargoes in most weeks -- reflecting the country's pre-existing diversification toward Australia, which has anchored supply at 10-20 ktons/d throughout the crisis.",
+    "The supplier base broadened remarkably: Mozambique, Canada, Malaysia, Oman, China, and the US all delivered cargoes across March, a textbook crisis-driven diversification that insulates Thailand better than most Asian importers dependent on Qatar.",
+    "Oman LNG appeared for the first time in 23-29 Mar (~10 ktons/d), exploiting its non-Hormuz export position to capture the Asian spot premium with Qatar's 77 Mtpa offline -- expect Oman volumes to grow if Hormuz closure persists."
   ],
   "thailand_gasoil_diesel": [
-    "Thailand's diesel imports are small (~8–46 kbd) and entirely sourced from regional Asian refineries (Malaysia, India, China, South Korea) with zero Gulf exposure. The spike to 45.5 kbd in 16–22 Mar from India likely reflects opportunistic purchasing as Indian refiners — despite MRPL's FM on gasoline — redirected diesel volumes to capture regional premiums."
+    "Thailand's diesel imports are small but volatile, spiking from ~8 kbd (9-15 Mar) to ~46 kbd (16-22 Mar) on a single Indian cargo, then falling back to ~8 kbd as Malaysia resumed as the steady supplier.",
+    "Zero Gulf-origin diesel across all four weeks confirms Thailand's product supply chain is regionally sourced (Malaysia, India, South Korea, China) and largely insulated from the Hormuz chokepoint -- though underlying crude feedstock constraints at regional refineries remain a second-order risk."
   ],
   "thailand_gasoline": [
-    "Gasoline imports tripled from 5.4 kbd (9–15 Mar) to 15.7 kbd (23–29 Mar) as domestic refinery throughput declined in step with crude supply cuts, forcing Thailand to lean on Singapore and Malaysia's refining hubs. The early W14 surge to 49.4 kbd signals accelerating dependence on product imports — a costly shift with crack spreads elevated across Asia.",
-    "South Korea appeared as a new gasoline supplier in 30 Mar–1 Apr (6.7 kbd), suggesting Thailand is casting a wider net as Singapore's export capacity tightens amid region-wide demand for refined products."
+    "Thailand's gasoline imports nearly tripled from ~5 kbd (9-15 Mar) to ~16 kbd (23-29 Mar), with Malaysia joining Singapore as a second supplier mid-March -- consistent with regional refinery product rebalancing as crude feedstock tightens across Southeast Asia.",
+    "All supply comes from Singapore and Malaysia with zero Gulf exposure, but the upward volume trend suggests domestic refining shortfalls are beginning to bite as Thai refiners face higher crude input costs from the crisis."
   ],
   "thailand_naphtha": [
-    "Naphtha imports collapsed from 36.7 kbd (9–15 Mar, 100% from Bahrain's Sitra refinery) to effectively zero — a direct casualty of Bapco's FM after the refinery was struck and its 405 kb/d capacity taken offline. Only a single small Singapore cargo (3.2 kbd) arrived in 23–29 Mar.",
-    "This is an existential threat to Thailand's petrochemical sector: with naphtha past $1,000/mt globally and Gulf supply eliminated, Thai crackers face the same feedstock crisis that has already forced FPCC (Taiwan) and YNCC (South Korea) into force majeure."
+    "Thailand's naphtha imports collapsed from 37 kbd (9-15 Mar, 100% Bahrain-sourced) to effectively zero by late March after Bapco's Sitra refinery was destroyed by missile strikes and declared FM on all operations.",
+    "A tiny Singapore-origin cargo (~3 kbd, 23-29 Mar) provided marginal relief, but the near-total loss of naphtha feedstock mirrors the crisis hitting FPCC in Taiwan and YNCC in South Korea -- Thai petrochemical crackers face acute feedstock stress if alternative naphtha supply from non-Gulf sources isn't secured rapidly."
   ],
   "vietnam_crude": [
-    "Vietnam's crude imports collapsed from ~286 kbd (9–15 Mar, 100% Kuwait) to zero by 23–29 Mar — the most complete supply wipeout of any importer in this crisis. Kuwait's KPC FM and the Hormuz closure severed ~80% of Vietnam's crude lifeline in a single stroke; a lone Nigerian cargo (88 kbd, 16–22 Mar) was the only non-Gulf barrel to arrive.",
-    "Nghi Son Refinery, which supplies ~40% of Vietnam's petroleum products and was built specifically for Kuwaiti crude, reports sufficient stock through end-May after the government mobilized 4 million emergency barrels. PM Chinh's emergency Decree 72/2026 slashing MFN oil tariffs to 0% and direct calls to Kuwait's PM signal the severity — Vietnam has also asked Japan and South Korea for help accessing alternative crude sources.",
-    "The zero-import weeks are unsustainable. Vietnam is negotiating with Russia and has expressed interest in US and West African grades, but these are months-long shipping routes. Without Hormuz reopening, Vietnam faces a product-import dependency spiral as refinery runs drop."
+    "Vietnam's crude imports collapsed from ~286 kbd (9-15 Mar, 100% Kuwait) to zero by 23-29 Mar -- the most complete supply wipeout among Asian importers, reflecting Vietnam's extreme ~80% pre-crisis dependence on a single Gulf supplier.",
+    "A single Nigerian cargo (~88 kbd, 16-22 Mar) briefly filled the gap before flows ceased entirely, exposing the Nghi Son Refinery's near-total reliance on Kuwaiti crude that PM Chinh's direct call to Kuwait's PM has so far failed to restore.",
+    "Hanoi's emergency measures -- Decree 72/2026 cutting fuel import tariffs to 0% and securing 4 million additional barrels from international partners -- buy weeks, not months; without Hormuz reopening or a structural pivot to US/Russian crude, Vietnam's refinery throughput will continue declining."
   ],
   "vietnam_kero_jet": [
-    "Jet fuel imports held steady at 17–27 kbd, sourced entirely from China and Singapore with zero Gulf exposure. Singapore entered as a second supplier in 23–29 Mar (13.3 kbd alongside China's 13.7 kbd), providing geographic diversification. These volumes are modest and manageable — Vietnam's aviation sector is small relative to its growing refined-product deficit."
+    "Vietnam's jet fuel imports remain entirely sourced from China (~14-20 kbd) and Singapore (~13 kbd), with zero Gulf exposure -- a structural feature of its regional product supply chain.",
+    "Volumes are modest but stable at 17-27 kbd through March, suggesting Vietnam's aviation fuel needs are being met through intra-Asian product trade even as crude feedstock for its own refineries has dried up."
   ],
   "vietnam_gasoil_diesel": [
-    "Diesel imports nearly tripled from 77 kbd (9–15 Mar) to 218 kbd (23–29 Mar) as crude-starved refineries cut runs — a textbook downstream cascade where lost crude supply converts into surging product import demand. South Korea dominates at 158 kbd/d in the latest full week, effectively becoming Vietnam's diesel lifeline.",
-    "New suppliers are appearing: Taiwan shipped 48 kbd in 23–29 Mar and India emerged at 93 kbd in early W14 — reflecting the regional product reshuffle as Middle East refined exports vanish and every Asian refiner with spare capacity finds premium outlets. Vietnam's emergency tariff cuts to 0% are directly enabling these flows."
+    "Vietnam's diesel imports nearly tripled from ~77 kbd (9-15 Mar) to ~218 kbd (23-29 Mar), with South Korea supplying 72-100% of volumes -- a direct consequence of Nghi Son Refinery running at reduced capacity after Kuwait crude supply ceased.",
+    "Taiwan appeared as a new diesel supplier in 23-29 Mar (~48 kbd), likely reflecting FPCC's export of refined products as it draws down crude inventories while its crackers run at reduced rates.",
+    "The rising import trend signals growing domestic product shortfalls; India also appeared as a supplier in 30 Mar-2 Apr (~40 kbd), suggesting Vietnam is casting a wider net as regional refinery capacity tightens across Asia."
   ],
   "vietnam_gasoline": [
-    "Gasoline imports declined from 43 kbd (9–15 Mar) to 23 kbd (23–29 Mar), sourced exclusively from Singapore's refining hub with a Japanese cargo appearing only in W11. The falling volumes are counter-intuitive amid a crude supply crisis — likely reflecting both demand destruction (higher fuel prices curbing consumption) and Singapore's own tightening product availability.",
-    "Vietnam's fuel contingency plan, activated in mid-March, includes strategic reserve drawdowns and rationing measures that may be suppressing import signals in the data."
+    "Vietnam's gasoline imports dropped from ~43 kbd (9-15 Mar) to ~17-23 kbd through mid-to-late March before recovering to ~30 kbd in early April -- virtually 100% sourced from Singapore throughout, with Japan providing one early cargo.",
+    "The steady Singapore dependence is manageable for now, but Singapore's own refining margins are under pressure from tighter Gulf-origin crude and naphtha feedstock, which could constrain availability if the crisis extends past April."
   ],
   "vietnam_naphtha": [
-    "After three consecutive zero-import weeks, a large Russian naphtha cargo arrived in 30 Mar–1 Apr at 113 kbd — a striking signal of Vietnam's pivot toward Russian supply enabled by the US sanctions waiver on 30 Russia-linked tankers in Asian waters (valid through Apr 11).",
-    "This is likely a one-off spot purchase rather than a sustainable supply chain, but it demonstrates how the Hormuz crisis is rewiring Asian petrochemical feedstock trade. With the sanctions waiver expiry approaching Apr 11, the window for follow-on Russian cargoes is narrow unless extended."
+    "Vietnam received zero naphtha imports for three consecutive weeks (9 Mar-29 Mar) before a large Russian cargo appeared at ~85 kbd in 30 Mar-2 Apr -- a significant structural shift and likely the first tangible result of Hanoi's discussions with Moscow on bilateral energy trade.",
+    "This Russian naphtha arrival aligns with the broader trend of Moscow backfilling Gulf-linked supply gaps across Asia; if sustained, it would represent a fundamental reorientation of Vietnam's petrochemical feedstock supply chain away from Gulf dependence."
   ],
   "united_states_crude": [
-    "US crude imports declined 23% from ~3.1 mb/d (9–15 Mar) to ~2.4 mb/d (23–29 Mar), but the supplier diversification is remarkable: 13 countries delivered crude in W13, with Venezuela (473 kbd) and Canada (173 kbd) anchoring a Western Hemisphere supply chain alongside Mexico, Guyana, Brazil, Colombia, Argentina, Ecuador, and even Ghana.",
-    "Gulf barrels (Saudi + Iraq) persisted at ~654 kbd in 23–29 Mar — Saudi crude flowing via the East-West Pipeline to Yanbu on the Red Sea, and Iraqi crude via the Kirkuk-Ceyhan pipeline through Turkey. These non-Hormuz pipeline bypass routes are keeping Gulf barrels available to US Gulf Coast refineries, though Saudi volumes fell from 589 to 485 kbd over the month.",
-    "With US gasoline at $4/gal and the Brent-WTI spread collapsing to 2026 lows on de-escalation signals, the critical question is whether the OPEC+ Apr 5 meeting — the most pivotal since the group's formation — will release additional barrels or hold discipline. EIA forecasts Brent above $95/bbl through May before falling below $80 if the crisis eases."
+    "US crude imports declined from ~3.1 mb/d (9-15 Mar) to ~2.4 mb/d (23-29 Mar) -- a 22% contraction -- but Gulf-origin barrels (Saudi + Iraq) have proved surprisingly resilient at 500-710 kbd daily, suggesting some Aramco cargoes are still transiting via Red Sea/Suez or were loaded pre-closure.",
+    "The Western Hemisphere supply fortress held firm: Venezuela (~473-493 kbd), Mexico (~252-280 kbd), Canada (~173-481 kbd), and Guyana/Brazil provided the backbone, while new suppliers appeared -- Ghana (77 kbd, 23-29 Mar) and Ecuador -- reflecting US refiners actively broadening their Atlantic Basin crude slate.",
+    "Saudi Arabia remained the #1 or #2 supplier in 3 of 4 weeks, averaging ~480 kbd -- likely reflecting Yanbu pipeline-routed cargoes bypassing Hormuz, consistent with Aramco's East-West Pipeline running at maximum 7 mb/d capacity.",
+    "With Brent at $108-112 and US gas past $4/gal per CNBC, the relatively modest ~8% US dependence on Persian Gulf crude is limiting the direct physical impact, but the global price surge transmits the pain regardless of import source."
   ],
   "united_states_kero_jet": [
-    "South Korea is the dominant jet fuel supplier to the US, delivering 60–217 kbd across all four weeks. The volumes are volatile — dipping to 60 kbd in 16–22 Mar then surging to 217 kbd in early W14 — reflecting cargo scheduling rather than structural shifts. Canada provides a consistent 24–35 kbd baseload.",
-    "Zero Gulf exposure in US jet fuel imports provides insulation, though the global supply tightness (with Middle East refinery shutdowns from Bapco, KPC, and FPCC reducing output) puts upward pressure on Asian jet fuel cracks, which will eventually pass through to US airline costs."
+    "US jet fuel imports are almost entirely sourced from South Korea (60-162 kbd daily across March), with Canada providing a steady ~24-35 kbd supplement -- zero Gulf exposure reflects the Pacific Basin product trade rebalancing as Korean refiners export surplus products while competing for non-Gulf crude.",
+    "China disappeared as a jet fuel supplier after providing ~44 kbd in early March, consistent with Beijing's fuel export ban imposed Mar 4-5 to protect domestic supply -- Taiwan briefly appeared (~10 kbd, 23-29 Mar) filling part of that gap."
   ],
   "united_states_gasoil_diesel": [
-    "Canada dominates US diesel imports at 89–178 kbd, providing 80–100% of volumes across all four weeks via pipeline and cross-border flows. The addition of Mexico, Argentina, and South Korea as marginal suppliers reflects the global hunt for distillate barrels, but the Canada-centric supply chain is structurally insulated from Hormuz.",
-    "Zero Gulf diesel exposure, combined with the US being a major diesel exporter in normal times, means the domestic supply-side risk is minimal — the price impact is entirely a function of global crack spread contagion rather than physical shortages."
+    "US diesel imports are dominated by Canada at 89-151 kbd daily with zero Gulf exposure, showing the North American pipeline-linked supply chain is insulated from Hormuz disruptions.",
+    "Turkey provided a notable ~64 kbd cargo in early March (9-15 Mar) but disappeared thereafter; South Korea emerged as a small but growing supplier (~5-21 kbd) from late March, reflecting Asian refinery product rebalancing toward the US market."
   ],
   "united_states_gasoline": [
-    "US gasoline imports declined 24% from 371 kbd (9–15 Mar) to 283 kbd (23–29 Mar), with Canada holding steady at ~98 kbd while other sources fluctuated. Notably, India appeared as a gasoline supplier at 44–49 kbd in weeks 12–13, likely redirected MRPL volumes seeking premium outlets despite India's own FM declarations on gasoline exports.",
-    "The Caribbean supply chain (Bahamas, USVI) remains active at 74–131 kbd, providing nearby, fast-turnaround barrels that help buffer East Coast demand. With US gas at $4/gal heading into summer driving season, these import volumes will be closely watched alongside SPR releases (45.2 mb delivered of 172 mb authorized)."
+    "US gasoline imports held at 289-371 kbd through March before surging to ~545 kbd in 30 Mar-2 Apr, with the supplier mix broadening to include India (~44-49 kbd) and South Korea (~25 kbd) alongside traditional Atlantic Basin sources -- a direct response to domestic refinery margins being squeezed by $108+ Brent crude.",
+    "Canada remains the anchor supplier at ~98-202 kbd, but the appearance of Indian gasoline is notable: MRPL declared FM on gasoline exports in early March, yet other Indian refiners are clearly finding it profitable to ship product to the US at current crack spreads.",
+    "The Bahamas and US Virgin Islands provide consistent transshipment volumes (~42-107 kbd combined), while UK gasoline arrivals have been volatile (5-120 kbd) -- the overall trend is toward a more diversified but higher-cost gasoline import slate."
   ],
   "united_states_naphtha": [
-    "US naphtha imports shifted from European sources (Belgium, Netherlands, France at 67 kbd in 9–15 Mar) to South American and African origins (Angola 49 kbd, Brazil 36 kbd in 23–29 Mar) — likely reflecting LyondellBasell's FM on European polyolefins freeing up European naphtha for export, while South American barrels arrived as the supply chain reoriented.",
-    "The volumes are modest (46–96 kbd) and the US is largely self-sufficient in naphtha via domestic refining, so this dataset reflects marginal arbitrage flows rather than a supply security concern."
+    "US naphtha imports shifted dramatically from European sources (Belgium, Netherlands, France at ~67 kbd combined, 9-15 Mar) to South American/African origins (Angola, Brazil, Argentina at ~96 kbd, 23-29 Mar), suggesting European crackers are retaining naphtha domestically as Gulf feedstock tightens.",
+    "LyondellBasell's FM on European polyolefins due to naphtha cost surges of $250-300/mt explains the European supply withdrawal -- with crackers operating at reduced rates to avoid losses, surplus naphtha for US export has evaporated."
   ],
   "taiwan_crude": [
-    "Taiwan's crude imports collapsed 66% from ~864 kbd (9–15 Mar) to just ~294 kbd (23–29 Mar) as Gulf suppliers disappeared one by one: Kuwait dropped out after W11 (KPC FM), Saudi Arabia after W12, leaving the United States as Taiwan's sole crude supplier at ~294 kbd. This is the most concentrated single-source dependency of any major importer in the crisis.",
-    "The W14 partial data shows a recovery to ~698 kbd (all US), suggesting larger US cargoes are being arranged. But Taiwan's refining capacity (~1.2 mb/d nameplate) is running far below potential, directly constraining FPCC's naphtha cracker operations already at 50% and threatening cascading shutdowns across the island's petrochemical complex.",
-    "Taiwan's extreme energy vulnerability — 97.7% import-dependent, just 11 days of gas reserves, and over a third of gas supply routed through Hormuz — has prompted President Lai to announce restarting shuttered nuclear reactors, marking a historic reversal of the DPP's nuclear-free policy."
+    "Taiwan's crude imports collapsed 66% from ~864 kbd (9-15 Mar) to ~294 kbd (23-29 Mar) as Kuwait and Saudi Arabia disappeared entirely from the supplier mix, leaving the US as the sole source -- a precarious single-supplier dependency replacing the pre-crisis Gulf dependency.",
+    "Gulf share plunged from 66% (Kuwait + Saudi at ~286 kbd each, 9-15 Mar) to 0% by 23-29 Mar, the most rapid supplier wipeout among major Asian importers; Taiwan's ~150 days of oil reserves per the Atlantic Council provide a buffer, but summer electricity demand could surge 40% above February levels.",
+    "The US is now supplying 100% of Taiwan's crude at ~294-524 kbd -- a remarkable strategic shift that deepens Taiwan's energy dependence on Washington, with implications for cross-strait dynamics and semiconductor supply chain continuity per Atlantic Council analysis.",
+    "FPCC's crackers at ~50-70% capacity with naphtha stocks depleted create a cascading risk: if crude arrivals slow further, Taiwan faces not just a fuel shortage but a petrochemical crisis that disrupts global PVC and polyethylene supply chains."
   ],
   "taiwan_lng": [
-    "Taiwan executed a rapid LNG diversification away from Qatar (26 ktons/d in 9–15 Mar → zero by W14), with Australia emerging as the dominant supplier at 22–51 ktons/d and accounting for over half of imports by 30 Mar–1 Apr. New sources including Equatorial Guinea, Oman (outside Hormuz), and US cargoes filled the gap left by QatarEnergy's FM.",
-    "With just 11 days of gas reserves — the lowest in East Asia — and gas-fired plants providing 53% of electricity, Taiwan's Ministry of Economic Affairs says it has secured alternative LNG through April. The rising trajectory (68→76 ktons/d across the month) suggests procurement is keeping pace, but any cargo delay or bid failure could trigger power rationing within days.",
-    "Oman LNG's 10.4 Mtpa facility, positioned outside the Hormuz chokepoint, has become a critical swing supplier commanding significant spot premiums — Taiwan drew 10 ktons/d from Oman in both W12 and W13."
+    "Taiwan's LNG imports held at 61-76 ktons/d but underwent a radical source rotation: Qatar dropped from 38% share (26 ktons/d, 9-15 Mar) to zero by late March as QatarEnergy's FM extended to all Asian buyers, with Australia stepping up to 41-57 ktons/d to fill the gap.",
+    "With only 11 days of natural gas inventory -- far below Japan and South Korea's reserves -- Taiwan is the most LNG-vulnerable economy in East Asia; the appearance of Equatorial Guinea (~10 ktons/d, 23-29 Mar) and US LNG (~18 ktons/d, 30 Mar-2 Apr) shows emergency procurement is active but volumes are modest vs. lost Qatari supply.",
+    "Oman maintained a steady ~10 ktons/d contribution from its non-Hormuz 10.4 Mtpa facility, but summer power demand could push Taiwan's gas needs 40% higher than current levels -- if Qatar LNG remains offline through mid-June per QatarEnergy's FM timeline, power rationing and semiconductor fabrication disruptions become a real risk."
   ],
   "taiwan_gasoil_diesel": [
-    "Diesel imports fell sharply from 97 kbd (9–15 Mar, from South Korea) to 18 kbd (23–29 Mar), reflecting both reduced domestic demand as industrial activity slows and FPCC's lower refinery runs reducing diesel output. Russia appeared as a supplier in W12 (3.8 kbd) and dominated W14 (49.7 kbd) — another signal of Asia's growing Russian product dependency.",
-    "The shift from South Korean to Russian and Chinese diesel reflects both price arbitrage (Russian barrels at discount) and South Korea's own tightening supply as Lotte Chemical halted its Yeosu plant and the naphtha export ban redirects Korean refinery output toward domestic use."
+    "Taiwan's diesel imports fell from ~97 kbd (9-15 Mar, South Korea) to just ~18 kbd (23-29 Mar) before recovering to ~48 kbd in early April as Russia emerged as the dominant supplier (~37 kbd) alongside China (~10 kbd).",
+    "The Russia pivot for diesel is notable: with South Korea's own refiners under naphtha pressure and fuel exports constrained by their own supply crunch, Taiwan is quietly turning to Russian product -- a politically sensitive but supply-chain-rational response to the crisis."
   ],
   "taiwan_gasoline": [
-    "Gasoline imports are negligible — a single Japanese cargo of 25 kbd in 16–22 Mar was the only flow across four weeks. Taiwan is largely self-sufficient in gasoline from CPC Corporation's refineries, and lower domestic driving demand amid the energy crisis is further reducing any import need."
+    "Taiwan's gasoline imports are negligible -- zero in most weeks with a single Japanese cargo (~25 kbd, 16-22 Mar) -- reflecting FPCC's domestic refining capacity meeting the island's relatively small gasoline demand even at reduced operating rates."
   ],
   "taiwan_naphtha": [
-    "Taiwan's naphtha imports collapsed from 147 kbd (9–15 Mar, 100% Gulf — UAE 128 kbd + Iraq 20 kbd) to absolute zero by 23–29 Mar. This is the most consequential commodity disruption for Taiwan's economy: FPCC's Mailiao crackers are now at 50% capacity, Formosa Plastics declared FM on multiple ethylene products effective Apr 1, and Formosa Chemicals followed on Mar 25.",
-    "The wipeout is absolute — UAE and Iraq were Taiwan's only naphtha suppliers, and both require Hormuz transit. With naphtha past $1,000/mt globally and no alternative supply appearing in the data, Taiwan's petrochemical sector faces potential full shutdown. The Atlantic Council has called this a test of Taiwan's energy resilience, and the cascading PVC shortage is already disrupting global construction supply chains.",
-    "This dataset is the clearest illustration of chokepoint risk in the entire crisis: a $30+ billion petrochemical industry reduced to zero feedstock in under three weeks."
+    "Taiwan's naphtha imports -- the lifeblood of FPCC's crackers -- collapsed from 147 kbd (100% Gulf-sourced: UAE 128 kbd + Iraq 20 kbd, 9-15 Mar) to zero by 23-29 Mar, directly triggering Formosa Plastics Corp's April 1 FM on PVC, HDPE, and polyethylene.",
+    "Iraq's naphtha disappeared after Baghdad's FM on all foreign-operated oilfields (Mar 20), while UAE naphtha persisted one additional week (~95 kbd, 16-22 Mar via ADCOP pipeline route) before also ceasing -- the complete loss of both Gulf naphtha sources leaves FPCC's #2 and #3 crackers facing potential full shutdown.",
+    "With no replacement naphtha cargoes arriving and naphtha prices past $1,000/mt per Formosa reporting, Taiwan's petrochemical output is effectively halving -- cascading through global construction (PVC) and packaging (HDPE) supply chains, exactly the downstream crisis the Atlantic Council warned about."
   ],
   "china_gasoline": [
     "Negligible gasoline imports — typically < 100 kbd/week for China."
@@ -540,9 +546,6 @@
   ],
   "russia_kero_jet": [
     "Negligible kero_jet exports — typically < 100 kbd/week for Russian Federation."
-  ],
-  "russia_sulphur": [
-    "Negligible sulphur exports — typically < 100 ktons/week for Russian Federation."
   ],
   "saudi_arabia_lng": [
     "Negligible lng exports — typically < 100 ktons/week for Saudi Arabia."
