@@ -72,9 +72,9 @@ claude -p "$(cat scripts/sync-prompt.md)
 ADDITIONAL INSTRUCTIONS FOR LOCAL BROWSER-AUTHENTICATED RUN:
 You have access to a Chrome browser via the chrome-devtools MCP tools.
 The browser is logged into premium data platforms. Use the browser to:
-1. Navigate to terminal.kpler.com — check tanker/LNG flow dashboards for latest Gulf/Hormuz data
-2. Navigate to portal.rystadenergy.com/home — check production analytics and supply disruption reports
-3. Navigate to connect.spglobal.com — check latest market analysis, Platts assessments, and CERA reports
+1. Navigate to terminal.kpler.com/intelligence — read latest intelligence articles, then check /cargo/flows for Gulf disruptions
+2. Navigate to portal.rystadenergy.com/dashboards/detail/1047/0 — Middle East Conflict Oil & Gas Impact dashboard (read ALL sections), then check /home for alerts
+3. Navigate to connect.spglobal.com/home — read news feed, search for 'force majeure' and 'Hormuz' for latest Platts assessments and CERA reports
 Also use WebSearch for publicly available data as usual.
 Combine browser-sourced data with web search results for the most comprehensive update.
 When citing data obtained via browser from premium sources, note the source clearly." \

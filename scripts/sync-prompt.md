@@ -200,43 +200,93 @@ Write `energy-news-data.json` with this structure:
 
 ## Step 3c: Premium browser-authenticated search (if browser tools available)
 
-If you have access to Chrome DevTools MCP tools (mcp__chrome-devtools__*), use them to check authenticated premium platforms for data that supplements your web searches. Focus on the SAME data as Steps 1-3: country status, FM declarations, shutdowns, and production impacts. Do NOT search for prices, flows, or vessel tracking here.
+If you have access to Chrome DevTools MCP tools (mcp__chrome-devtools__*), use them to check authenticated premium platforms for data that supplements your web searches.
 
-### What to check on each platform
+**IMPORTANT: Premium source searches are the HIGHEST PRIORITY part of this sync.** Web search (Steps 3-3b) provides public data. Premium platforms provide EXCLUSIVE data — field-level production analytics, infrastructure damage assessments, and intelligence reports that cannot be found elsewhere. You MUST navigate to each platform and perform thorough searches. Skipping is only acceptable if login/MFA blocks access.
 
-**terminal.kpler.com**
-- Check "Alerts" or "News" section for latest Gulf/Hormuz disruption reports
-- Look for production disruption alerts for the 9 tracked countries
-- Check for any new FM declarations or facility shutdown reports
-- Note any data that contradicts or enhances your web search findings
+Focus areas across all platforms:
+- Latest Gulf/Hormuz military developments and their impact on oil & gas
+- New force majeure declarations or lifted FMs
+- Country-level production/export changes for all 9 tracked countries
+- Infrastructure damage assessments and repair timelines
+- Downstream impacts on importing countries (Asia, Europe, Americas)
+- OPEC+ emergency responses
+- Shipping/tanker disruptions and war risk premium changes
 
-**portal.rystadenergy.com**
-- Check latest supply disruption reports / intelligence alerts
-- Look for field-level production analytics for Gulf countries
-- Check for infrastructure damage assessments or repair timelines
-- Note any production volume updates not found in public sources
+### Platform 1: terminal.kpler.com (minimum 5 actions)
 
-**connect.spglobal.com**
-- Check latest Platts news/commentary on Gulf disruptions
-- Look for new FM declarations or status changes in their coverage
-- Check infrastructure damage or restart reports
-- Note any country status assessments or production impact analyses
+1. Navigate to `terminal.kpler.com/intelligence` → read latest intelligence articles on Gulf crisis
+2. Navigate to `terminal.kpler.com/cargo/flows` → check Gulf crude/LNG/LPG flow disruptions, compare with pre-crisis baselines
+3. Navigate to `terminal.kpler.com/map` → check vessel congestion at Strait of Hormuz, any blockages or diversions
+4. Search within Kpler for "force majeure" — check for alerts or new FM reports
+5. Search within Kpler for "Hormuz" OR "Gulf disruption" — check latest analytical reports
+6. Note any production/flow data with specific numbers that contradicts or enhances your web search findings
+
+### Platform 2: portal.rystadenergy.com (minimum 5 actions)
+
+1. Navigate to `portal.rystadenergy.com/home` → check dashboard alerts and notifications
+2. Navigate to `portal.rystadenergy.com/dashboards/detail/1047/0` → **Middle East Conflict – Oil & Gas Infrastructure Impact Analysis** — this is the PRIMARY dashboard. Read ALL sections thoroughly:
+   - Country-by-country production impact data
+   - Infrastructure damage assessments (which facilities are destroyed/damaged/operational)
+   - Field-level production estimates (kb/d, Bcf/d, Mtpa)
+   - Repair timelines and restart forecasts
+   - Economic impact estimates
+3. Search within Rystad for "Gulf" or "Hormuz" — check supply disruption intelligence reports
+4. Search within Rystad for "force majeure" — check recent FM alerts
+5. Check any country-level production analytics dashboards for the 9 tracked countries
+6. Note any field-level data, repair timelines, or damage assessments not available from public sources
+
+### Platform 3: connect.spglobal.com (minimum 5 actions)
+
+1. Navigate to `connect.spglobal.com/home` → read the latest news feed headlines, focus on Gulf/Middle East items
+2. Search for "force majeure" in the platform — check recent FM declarations
+3. Search for "Hormuz" OR "Gulf" — check market commentary and disruption analysis
+4. Search for "LNG" + "Gulf" — check LNG market disruption coverage and price impact
+5. Check commodity insights section for crude/gas/products pricing impact analysis
+6. Note any country status assessments, new FM declarations, or production impact data
 
 ### Rules for browser search
 - Only enhance data.js with VERIFIED information from these platforms
-- Cite the platform in source entries (e.g., "Rystad supply disruption alert — Mar 28")
+- Cite the platform in source entries (e.g., "Rystad Middle East Conflict dashboard — Apr 3")
 - If a platform requires login/MFA and you cannot access it, skip it and note in sync-log.json
-- Do NOT use browser for prices, vessel counts, or flow data — those are separate tabs
+- Do NOT use browser for prices, vessel counts, or flow data — those are separate pipelines
+- Do NOT skip a platform because it takes time — premium data is highest priority
 
-### Required: Premium Source Access Summary
-After completing Step 3c, you MUST output a summary to the console:
+### Required: Premium Source Findings Report
+
+After completing Step 3c, you MUST output a DETAILED findings report. This is mandatory.
+
 ```
-Premium Source Access:
-  - terminal.kpler.com: [accessed / login required / skipped / error]
-  - portal.rystadenergy.com: [accessed / login required / skipped / error]
-  - connect.spglobal.com: [accessed / login required / skipped / error]
+Premium Source Findings:
+
+=== terminal.kpler.com ===
+Status: [accessed / login required / skipped / error]
+Pages visited: [list URLs navigated]
+Findings:
+  - [List EACH data point found. Be specific with numbers, dates, countries]
+  - Example: "Qatar LNG: 0 cargoes loaded past 7 days (confirms total shutdown)"
+  - Example: "3 VLCCs loaded at Das Island in last 48hrs — UAE crude exports resuming"
+  - If no new data: "Accessed — no new findings beyond web search results"
+
+=== portal.rystadenergy.com ===
+Status: [accessed / login required / skipped / error]
+Pages visited: [list URLs, especially /dashboards/detail/1047/0]
+Findings:
+  - [List EACH data point from the Middle East Conflict dashboard]
+  - Example: "Iraq Basra output revised to 2.8 mb/d (Rystad field-level estimate)"
+  - Example: "Qatar infrastructure damage: 12.8 Mtpa capacity out for 3-5 yrs (Rystad)"
+  - If no new data: "Accessed — dashboard data consistent with existing data.js"
+
+=== connect.spglobal.com ===
+Status: [accessed / login required / skipped / error]
+Pages visited: [list URLs navigated]
+Findings:
+  - [List EACH data point found]
+  - Example: "Platts: New FM declared by XYZ for crude loading at Port ABC"
+  - If no new data: "Accessed — no new FM declarations or status changes found"
 ```
-This summary is mandatory even if all platforms are skipped (e.g., no Chrome MCP tools available).
+
+If a platform was skipped, state the reason. This report is MANDATORY even if all platforms are skipped.
 
 ---
 
