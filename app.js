@@ -313,13 +313,14 @@ function renderProductionTable(title, unit, rows, type) {
     const changeStr = isCapacity ? formatNum(c) : (c <= 0 ? formatNum(c) : '+' + formatNum(c));
     const rowBg = i % 2 === 1 ? 'bg-navy-50/50' : '';
 
+    const notesHtml = r.notes || '';
     return `<tr class="${rowBg}">
       <td class="px-2 py-1.5 sm:px-3 sm:py-2 text-sm">${r.country}</td>
       <td class="px-2 py-1.5 sm:px-3 sm:py-2 text-sm text-right tabular-nums text-navy-900 font-medium">${formatNum(a)}</td>
       <td class="px-2 py-1.5 sm:px-3 sm:py-2 text-sm text-right tabular-nums ${isCapacity ? 'text-red-600' : ''} font-medium">${formatNum(b)}</td>
       <td class="px-2 py-1.5 sm:px-3 sm:py-2 text-sm text-right tabular-nums ${changeClass}">${changeStr}</td>
-      <td class="px-2 py-1.5 sm:px-3 sm:py-2 text-xs text-navy-700 hidden sm:table-cell">${r.notes || ''}</td>
-    </tr>`;
+      <td class="px-2 py-1.5 sm:px-3 sm:py-2 text-xs text-navy-700 hidden sm:table-cell">${notesHtml}</td>
+    </tr>${notesHtml ? `<tr class="sm:hidden ${rowBg}"><td colspan="4" class="px-2 pb-2 pt-0 text-xs text-navy-600"><span class="font-semibold text-navy-500">Note:</span> ${notesHtml}</td></tr>` : ''}`;
   }).join('');
 
   const totalChangeClass = (!isCapacity && totalC < 0) ? 'text-red-600 font-bold' : 'text-navy-900 font-bold';
@@ -390,14 +391,15 @@ function renderKeyPortsTable() {
   portsByCountry.forEach(({ country, terminals }) => {
     terminals.forEach(t => {
       const rowBg = rowIdx % 2 === 1 ? 'bg-navy-50/50' : '';
+      const tNotes = t.notes || '';
       rowsHtml += `<tr class="${rowBg}">
         <td class="px-2 py-1 sm:px-3 sm:py-1.5 text-sm text-navy-700">${country}</td>
         <td class="px-2 py-1 sm:px-3 sm:py-1.5 text-sm font-medium text-navy-900">${t.name}</td>
         <td class="px-2 py-1 sm:px-3 sm:py-1.5 text-right">
           <span class="text-[10px] font-semibold uppercase px-2 py-0.5 rounded border ${statusBg[t.status] || 'bg-navy-100 text-navy-600 border-navy-300'}">${statusLabel[t.status] || t.status}</span>
         </td>
-        <td class="px-2 py-1 sm:px-3 sm:py-1.5 text-xs text-navy-700 hidden sm:table-cell">${t.notes || ''}</td>
-      </tr>`;
+        <td class="px-2 py-1 sm:px-3 sm:py-1.5 text-xs text-navy-700 hidden sm:table-cell">${tNotes}</td>
+      </tr>${tNotes ? `<tr class="sm:hidden ${rowBg}"><td colspan="3" class="px-2 pb-2 pt-0 text-xs text-navy-600"><span class="font-semibold text-navy-500">Note:</span> ${tNotes}</td></tr>` : ''}`;
       rowIdx++;
     });
   });
@@ -1646,20 +1648,23 @@ function updateStats(activeTab) {
         refAffected += refLoss;
         if (oilLoss > 0 || gasLoss > 0 || refLoss > 0) impactedCount++;
       });
+      const countriesUpdated = COUNTRY_STATUS_DATA.filter(c =>
+        c.isNew || (c.events && c.events.some(e => e.isNew))
+      ).length;
       stats = [
-        { label: 'Oil Offline (kb/d)', value: formatNum(Math.round(oilOffline)), color: 'text-red-600', change: 0 },
-        { label: 'Gas Offline (Bcf/d)', value: formatNum(Math.round(gasOffline * 10) / 10), color: 'text-amber-600', change: 0 },
-        { label: 'Refining Affected (kb/d)', value: formatNum(Math.round(refAffected)), color: 'text-orange-600', change: 0 },
-        { label: 'Countries Impacted', value: impactedCount, color: 'text-blue-600', change: 0 },
+        { label: 'Oil Offline (kb/d)', value: formatNum(Math.round(oilOffline)), color: 'text-red-600', change: countriesUpdated },
+        { label: 'Gas Offline (Bcf/d)', value: formatNum(Math.round(gasOffline * 10) / 10), color: 'text-amber-600', change: countriesUpdated },
+        { label: 'Refining Affected (kb/d)', value: formatNum(Math.round(refAffected)), color: 'text-orange-600', change: countriesUpdated },
+        { label: 'Countries Impacted', value: impactedCount, color: 'text-blue-600', change: countriesUpdated },
       ];
       break;
     }
     case 'country-matrix':
       stats = [
-        { label: 'Countries Monitored', value: COUNTRY_STATUS_DATA.length, color: 'text-blue-600', change: 0 },
+        { label: 'Countries Monitored', value: COUNTRY_STATUS_DATA.length, color: 'text-blue-600', change: countNew(COUNTRY_STATUS_DATA) },
         { label: 'Critical / Conflict', value: COUNTRY_STATUS_DATA.filter(c => ['critical', 'conflict', 'high'].includes(c.status)).length, color: 'text-red-600', change: countNew(COUNTRY_STATUS_DATA, c => ['critical', 'conflict', 'high'].includes(c.status)) },
-        { label: 'Elevated Risk', value: COUNTRY_STATUS_DATA.filter(c => c.status === 'elevated').length, color: 'text-amber-600', change: 0 },
-        { label: 'Stable', value: COUNTRY_STATUS_DATA.filter(c => c.status === 'stable').length, color: 'text-emerald-600', change: 0 },
+        { label: 'Elevated Risk', value: COUNTRY_STATUS_DATA.filter(c => c.status === 'elevated').length, color: 'text-amber-600', change: countNew(COUNTRY_STATUS_DATA, c => c.status === 'elevated') },
+        { label: 'Stable', value: COUNTRY_STATUS_DATA.filter(c => c.status === 'stable').length, color: 'text-emerald-600', change: countNew(COUNTRY_STATUS_DATA, c => c.status === 'stable') },
       ];
       break;
     case 'fm-declarations':
@@ -1706,7 +1711,7 @@ function updateStats(activeTab) {
     const borderClass = borderMap[s.color] || 'border-l-navy-300';
     const icon = iconMap[s.color] || '';
     const changeColor = s.change > 0 ? 'text-emerald-600' : 'text-navy-400';
-    const changeText = s.change > 0 ? `+${s.change} new` : 'Steady';
+    const changeText = s.change > 0 ? `${s.change} updated` : 'Steady';
     return `
       <div class="stat-card bg-white rounded-xl p-3 sm:p-4 border border-navy-200/70 border-l-4 ${borderClass} shadow-[0_1px_3px_rgba(10,25,41,0.04)]">
         <div class="mb-1.5">${icon}</div>
