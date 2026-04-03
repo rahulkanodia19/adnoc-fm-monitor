@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-02T05:00:00.000Z",
+  "lastUpdated": "2026-04-02T23:00:00.000Z",
   "countryStatus": [
     {
       "id": "qatar",
@@ -7,11 +7,11 @@
       "flag": "🇶🇦",
       "status": "critical",
       "statusLabel": "FM Declared",
-      "summary": "AQUA 1 tanker (QatarEnergy charter) struck by Iranian cruise missiles 17nm north of Ras Laffan Apr 1 — Qatar intercepted 2 of 3 missiles. All 77 Mtpa LNG halted since Mar 2. Mar 18 strikes destroyed 2 LNG trains + Pearl GTL (12.8 Mtpa knocked out for 3-5 yrs). FM extended through mid-June. UK hosted 35-nation Hormuz summit Apr 2-3 — joint statement, military planners to follow. Brent ~$105. OPEC+ Apr 5 meeting next.",
+      "summary": "AQUA 1 tanker (QatarEnergy charter) struck by Iranian cruise missiles 17nm north of Ras Laffan Apr 1 — Qatar intercepted 2 of 3 missiles. All 77 Mtpa LNG halted since Mar 2. Mar 18 strikes destroyed 2 LNG trains + Pearl GTL (12.8 Mtpa knocked out for 3-5 yrs). FM extended through mid-June. UK-led 40+ nation coalition demands 'immediate and unconditional' Hormuz reopening — sanctions threat, military planners next week. Brent ~$111. OPEC+ Apr 5 meeting critical. Apr 6 Trump deadline looms.",
       "metrics": {
-        "headline": "AQUA 1 tanker struck Apr 1; ~20% of global LNG offline",
+        "headline": "AQUA 1 tanker struck Apr 1; ~20% of global LNG offline; 40-nation coalition demands reopening",
         "productionOffline": "77 Mtpa LNG + all downstream",
-        "keyFigure": "12.8 Mtpa damaged 3-5 yrs; tanker struck in territorial waters"
+        "keyFigure": "12.8 Mtpa damaged 3-5 yrs; IEA warns April losses will be 'twice March'"
       },
       "production": {
         "oil": {
@@ -53,8 +53,7 @@
         {
           "date": "2026-03-31",
           "title": "Emir joins Jeddah Summit condemning Iranian attacks on Gulf infrastructure",
-          "description": "Qatar's Emir Sheikh Tamim met Saudi Crown Prince MBS and Jordan's King Abdullah II in Jeddah. Leaders condemned Iranian attacks on regional civilian infrastructure and discussed coordinated response. Rystad estimates 3-5 year lead times for LNG gas turbine replacements due to global data-center electrification backlogs, extending Qatar's recovery timeline. — Al Jazeera",
-          "isNew": false
+          "description": "Qatar's Emir Sheikh Tamim met Saudi Crown Prince MBS and Jordan's King Abdullah II in Jeddah. Leaders condemned Iranian attacks on regional civilian infrastructure and discussed coordinated response. Rystad estimates 3-5 year lead times for LNG gas turbine replacements due to global data-center electrification backlogs, extending Qatar's recovery timeline. — Al Jazeera"
         },
         {
           "date": "2026-03-27",
@@ -101,8 +100,8 @@
       ],
       "oilGasImpact": {
         "severity": "critical",
-        "summary": "AQUA 1 tanker struck Apr 1; UK 35-nation summit issued joint statement; all LNG + downstream halted since Mar 2",
-        "details": "AQUA 1 fuel oil tanker (QatarEnergy charter) struck by Iranian cruise missiles in Qatar territorial waters Apr 1 — Qatar intercepted 2 of 3 missiles. UK hosted 35-nation Hormuz summit Apr 2-3: joint statement condemning Iran's closure, military planners to evaluate post-conflict options; UAE and Bahrain among signatories; US excluded. All LNG production halted since 2 Mar. QatarEnergy FM on 4 Mar. ~20% of global LNG supply offline. March oil loadings west of Hormuz down 76% (5.28M bpd vs 22.2M bpd Feb). Shell and TotalEnergies cascaded FM. Qatalum smelter shutdown (restart 6-12 months)."
+        "summary": "AQUA 1 tanker struck Apr 1; UK-led 40+ nation coalition demands Hormuz reopening; all LNG + downstream halted since Mar 2",
+        "details": "AQUA 1 fuel oil tanker (QatarEnergy charter) struck by Iranian cruise missiles in Qatar territorial waters Apr 1 — Qatar intercepted 2 of 3 missiles. UK FM Cooper chaired 40+ nation virtual summit Apr 2: chairman's statement demands 'immediate and unconditional' reopening, sanctions threat if Hormuz stays closed, military planners meeting next week for mine-clearing/shipping security; US excluded. Iran demands 'guaranteed ceasefire' — calls US demands 'maximalist and irrational'. All LNG production halted since 2 Mar. QatarEnergy FM on 4 Mar. ~20% of global LNG supply offline. IEA warns April supply losses will be 'twice March'. Kpler: 214 crossings Mar 1-Apr 1 (94% decline). Shell and TotalEnergies cascaded FM. Qatalum smelter shutdown (restart 6-12 months). OPEC+ Apr 5 meeting critical. Apr 6 Trump deadline for Hormuz reopening looms."
       },
       "infrastructure": [
         {
@@ -350,6 +349,18 @@
           "title": "UK gathers 35 nations to plot Hormuz reopening — Washington Post",
           "url": "https://www.washingtonpost.com/business/2026/04/02/hormuz-strait-shipping-summit-uk-iran/f11f7932-2e4a-11f1-aac2-f56b5ccad184_story.html",
           "date": "2026-04-02"
+        },
+        {
+          "id": 16,
+          "title": "UK-led 40+ nation coalition vows action on Hormuz — Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/4/2/uk-led-coalition-of-35-countries-vows-action-on-hormuz-strait-gridlock",
+          "date": "2026-04-02"
+        },
+        {
+          "id": 17,
+          "title": "IEA warns April oil supply losses will be 'twice March' — CNBC",
+          "url": "https://www.cnbc.com/2026/04/01/oil-price-iea-fatih-birol-brent-iran-strait-of-hormuz.html",
+          "date": "2026-04-01"
         }
       ]
     },
@@ -359,7 +370,7 @@
       "flag": "🇰🇼",
       "status": "critical",
       "statusLabel": "FM / Struck",
-      "summary": "IRGC drones struck Kuwait airport fuel tanks Apr 1 (large fire, 58 hrs to extinguish, radar damaged). VLCC Al Salmi struck at Dubai port Mar 31. KPC FM on crude exports. Al-Ahmadi refinery struck Mar 19-20. Airport + refinery + tanker all attacked.",
+      "summary": "IRGC drones struck Kuwait airport fuel tanks Apr 1 (large fire, 58 hrs to extinguish, radar damaged). VLCC Al Salmi struck at Dubai port Mar 31. KPC FM on crude exports. Al-Ahmadi refinery struck Mar 19-20. Airport + refinery + tanker all attacked. OPEC+ Apr 5 meeting critical; Apr 6 deadline looms.",
       "metrics": {
         "headline": "Kuwait airport fuel tanks struck Apr 1; Al Salmi tanker attacked Mar 31",
         "productionOffline": "Al-Ahmadi refinery + airport fuel tanks + tanker attacked",
@@ -400,7 +411,7 @@
           "date": "2026-03-31",
           "title": "VLCC Al Salmi struck by Iranian drone at Dubai port — 2M bbl cargo, fire, oil spill risk",
           "description": "Iranian drone struck the Kuwait-flagged VLCC Al Salmi (319,660 DWT) at Dubai port anchorage at ~12:10 AM on Mar 31. The tanker was fully laden with 2 million barrels of crude (from Kuwait and Saudi Arabia), bound for Qingdao, China. Hull damaged, fire broke out and was extinguished by Dubai authorities. All 24 crew safe. KPC warned of potential oil spill. WTI spiked 3.7% to $106.70/bbl. First direct attack on a fully laden VLCC at a major UAE commercial port. — Bloomberg, Gulf News, Al Jazeera",
-          "isNew": true
+          "isNew": false
         },
         {
           "date": "2026-03-19",
@@ -608,11 +619,11 @@
       "flag": "🇸🇦",
       "status": "critical",
       "statusLabel": "Shutdown",
-      "summary": "Aramco slashing Asia crude supply for 2nd month (April). 4 offshore mega-fields still shut (~2.5M bpd). East-West Pipeline at max 7M bpd; Yanbu at 4.4M bpd with 40+ VLCCs queued. Houthi Bab al-Mandeb closure threat endangers Yanbu route. Brent dropped to ~$105 on de-escalation hopes. No formal FM. OPEC+ Apr 5 meeting critical.",
+      "summary": "Aramco slashing Asia crude supply for 2nd month (April). 4 offshore mega-fields still shut (~2.5M bpd). East-West Pipeline at max 7M bpd; Yanbu at 4.4M bpd with 40+ VLCCs queued. Houthi Bab al-Mandeb closure threat endangers Yanbu route. Brent volatile $105-112 range. IEA warns April losses will be 'twice March'. No formal FM. OPEC+ Apr 5 meeting critical — most consequential since formation. Apr 6 deadline.",
       "metrics": {
-        "headline": "~2.5-3.0 mb/d offline; Aramco cuts Asia supply 2nd month",
+        "headline": "~2.5-3.0 mb/d offline; Aramco cuts Asia supply 2nd month; OPEC+ Apr 5 critical",
         "productionOffline": "4 offshore fields + storage constraints",
-        "keyFigure": "~20-25% of Saudi capacity; Brent ~$105"
+        "keyFigure": "~20-25% of Saudi capacity; Brent volatile $105-112; world losing 4.5-5 mb/d"
       },
       "production": {
         "oil": {
@@ -681,8 +692,8 @@
       ],
       "oilGasImpact": {
         "severity": "critical",
-        "summary": "~2.5-3.0 mb/d offline; Aramco cuts Asia supply 2nd month; March loadings west of Hormuz down 76%; Brent ~$105",
-        "details": "Aramco slashing Asia crude supply for 2nd consecutive month in April — only Arab Light via Yanbu available. March exports avg 4.355 mb/d (down from 7.1 Feb). March oil loadings at all ports west of Hormuz declined 76% to 5.28M bpd (from 22.2M bpd in Feb). Four offshore fields still shut since 9 Mar (~2-2.5M bpd). East-West Pipeline at max 7M bpd; Yanbu at 4.4M bpd with 40+ VLCCs queued. Brent at $105.27 (war premium deflating on de-escalation signals; Brent-WTI spread at 2026 lows). Houthis threaten Bab al-Mandeb closure. UK hosted 35-nation Hormuz summit — military planners to follow. OPEC+ Apr 5 meeting critical."
+        "summary": "~2.5-3.0 mb/d offline; Aramco cuts Asia supply 2nd month; March loadings west of Hormuz down 76%; Brent $105-112",
+        "details": "Aramco slashing Asia crude supply for 2nd consecutive month in April — only Arab Light via Yanbu available. March exports avg 4.355 mb/d (down from 7.1 Feb). March oil loadings at all ports west of Hormuz declined 76% to 5.28M bpd (from 22.2M bpd in Feb). Kpler: 214 commodity crossings Mar 1-Apr 1 (94% decline from peacetime). Four offshore fields still shut since 9 Mar (~2-2.5M bpd). East-West Pipeline at max 7M bpd; Yanbu at 4.4M bpd with 40+ VLCCs queued. Brent volatile $105-112 on war vs de-escalation signals. IEA warns April supply losses will be 'twice March' — world losing 4.5-5 mb/d, doubling by mid-April. Houthis threaten Bab al-Mandeb closure. UK-led 40+ nation coalition demands immediate Hormuz reopening, sanctions threat, military planners next week. OPEC+ Apr 5 most consequential meeting since formation. Apr 6 Trump deadline for Hormuz reopening."
       },
       "infrastructure": [
         {
@@ -954,11 +965,11 @@
       "flag": "🇦🇪",
       "status": "critical",
       "statusLabel": "Escalated",
-      "summary": "S&P Platts Inside/Outside Strait bifurcation live Apr 1. UAE intercepted 5 BMs + 35 drones Apr 1; Bangladeshi worker killed in Fujairah by shrapnel. IRGC threatens 17 US tech firms (incl. Apple, Google, Nvidia). VLCC Al Salmi struck at Dubai port Mar 31. ADCOP at 1.62M bpd. >50% crude offline. UK hosting 35-nation Hormuz summit Apr 3. Brent ~$105.",
+      "summary": "S&P Platts Inside/Outside Strait bifurcation live Apr 1. UAE intercepted 5 BMs + 35 drones Apr 1; Bangladeshi worker killed in Fujairah by shrapnel. IRGC threatens 17 US tech firms (incl. Apple, Google, Nvidia). VLCC Al Salmi struck at Dubai port Mar 31. ADCOP at 1.62M bpd. >50% crude offline. UAE signatory to UK-led 40+ nation coalition demanding Hormuz reopening. Brent volatile $105-112. Apr 6 deadline looms.",
       "metrics": {
-        "headline": "UAE intercepted 5 BMs + 35 drones Apr 1; S&P Platts bifurcation live",
+        "headline": "UAE intercepted 5 BMs + 35 drones Apr 1; S&P Platts bifurcation live; 40-nation coalition",
         "productionOffline": "1+ Bcf/d gas + 417 kb/d refining; ADCOP at 1.62M bpd",
-        "keyFigure": ">50% of UAE crude output offline; Brent ~$105/bbl"
+        "keyFigure": ">50% of UAE crude output offline; Brent volatile $105-112"
       },
       "production": {
         "oil": {
@@ -1000,8 +1011,7 @@
         {
           "date": "2026-03-31",
           "title": "VLCC Al Salmi struck by Iranian drone at Dubai port anchorage — 2M bbl cargo, fire",
-          "description": "Iranian drone struck Kuwait-flagged VLCC Al Salmi (319,660 DWT) at Dubai port anchorage at ~12:10 AM. Fully laden with 2M bbl crude bound for Qingdao, China. Hull damaged, fire extinguished by Dubai authorities. All 24 crew safe. KPC warned of potential oil spill. WTI spiked 3.7% to $106.70/bbl. First direct attack on a fully laden VLCC at a major UAE commercial port. S&P Platts launching new 'FOB Arab Gulf Inside Strait' spot differential assessments from April 1, acknowledging bifurcation of Gulf pricing. — Bloomberg, Gulf News, Al Jazeera, S&P Global",
-          "isNew": false
+          "description": "Iranian drone struck Kuwait-flagged VLCC Al Salmi (319,660 DWT) at Dubai port anchorage at ~12:10 AM. Fully laden with 2M bbl crude bound for Qingdao, China. Hull damaged, fire extinguished by Dubai authorities. All 24 crew safe. KPC warned of potential oil spill. WTI spiked 3.7% to $106.70/bbl. First direct attack on a fully laden VLCC at a major UAE commercial port. S&P Platts launching new 'FOB Arab Gulf Inside Strait' spot differential assessments from April 1, acknowledging bifurcation of Gulf pricing. — Bloomberg, Gulf News, Al Jazeera, S&P Global"
         },
         {
           "date": "2026-03-29",
@@ -1091,8 +1101,8 @@
       ],
       "oilGasImpact": {
         "severity": "critical",
-        "summary": "VLCC Al Salmi struck at Dubai Mar 31; EGA struck Mar 29; ADCOP at 1.62M bpd; UAE signatory to 35-nation Hormuz statement",
-        "details": "VLCC Al Salmi (2M bbl crude) struck by Iranian drone at Dubai port Mar 31 — fire, hull damage, oil spill risk; WTI spiked to $106.70. UAE intercepted 5 BMs + 35 drones Apr 1; Bangladeshi killed in Fujairah. EGA Al Taweelah struck Mar 29 (6 injured; LME aluminium +6% to $3,492/t). UAE signatory to UK 35-nation Hormuz summit joint statement. S&P Platts Inside/Outside Strait pricing live Apr 1. ADCOP at record 1.62M bpd. >50% crude offline. Ruwais-2 shut. Shah still shut. March loadings west of Hormuz down 76%."
+        "summary": "VLCC Al Salmi struck at Dubai Mar 31; EGA struck Mar 29; ADCOP at 1.62M bpd; UAE signatory to 40+ nation Hormuz coalition",
+        "details": "VLCC Al Salmi (2M bbl crude) struck by Iranian drone at Dubai port Mar 31 — fire, hull damage, oil spill risk; WTI spiked to $106.70. UAE intercepted 5 BMs + 35 drones Apr 1; Bangladeshi killed in Fujairah. EGA Al Taweelah struck Mar 29 (6 injured; LME aluminium +6% to $3,492/t). UAE signatory to UK-led 40+ nation coalition (Apr 2) demanding immediate Hormuz reopening — sanctions threat, military planners next week. S&P Platts Inside/Outside Strait pricing live Apr 1. ADCOP at record 1.62M bpd. >50% crude offline. Ruwais-2 shut. Shah still shut. March loadings west of Hormuz down 76%. IEA warns April supply losses will be 'twice March'."
       },
       "infrastructure": [
         {
@@ -1474,7 +1484,7 @@
           "oil": "Basra output ~800k bpd (from 3.3M); storage at max; BP Rumaila cut to 350k; Kirkuk-Ceyhan pipeline at 250k bpd (aiming 300k) — Iraq's only non-Hormuz export route",
           "gas": "Associated gas collapses with ~76% crude cuts; Khor Mor (Kurdistan) halted; Iraq lost ~3,100 MW from halted Iran gas pipeline",
           "refining": "Lanaz struck; Baiji/Basra at reduced throughput; Daura/Karbala operational for domestic",
-          "ports": "Basra Oil Terminal shut; Khor Al-Amaya shut; Kirkuk-Ceyhan to Turkey at 250k bpd (only export route); tanker shortage critical"
+          "ports": "Basra Oil Terminal shut; Khor Al-Amaya shut; Kirkuk-Ceyhan to Turkey at 250k bpd (only pipeline route); Iraq began fuel oil exports overland through Syria to bypass Hormuz; tanker shortage critical"
         }
       },
       "events": [
@@ -1764,6 +1774,12 @@
           "title": "BP/Castrol Irbil fuel warehouse attacked by drones - Yeni Safak",
           "url": "https://en.yenisafak.com/world/large-fire-erupts-in-erbil-after-drone-attack-near-us-base-3715990",
           "date": "2026-04-01"
+        },
+        {
+          "id": 12,
+          "title": "Iraq begins fuel oil exports through Syria amid Hormuz disruption - The National",
+          "url": "https://www.thenationalnews.com/business/energy/2026/04/02/iraq-begins-fuel-oil-exports-through-syria-amid-hormuz-disruption/",
+          "date": "2026-04-02"
         }
       ]
     },
@@ -1829,8 +1845,8 @@
       ],
       "oilGasImpact": {
         "severity": "critical",
-        "summary": "Batelco/AWS data center struck Apr 1; 405 kb/d refining offline; FM declared; Alba struck Mar 29; Bahrain signatory to 35-nation Hormuz statement",
-        "details": "Batelco data center (hosting AWS) struck Apr 1 — first attack on US tech infrastructure after IRGC threatened 17 US tech firms. IRGC struck Alba smelter 29 Mar (2 injured) — 5th direct attack on Bahrain. BAPCO Sitra refinery (405 kb/d) struck 4 & 9 Mar. Bapco Energies FM on all group operations. Abu Safa field shut. Bahrain among signatories to UK-hosted 35-nation Hormuz summit joint statement. UK evacuated personnel."
+        "summary": "Batelco/AWS data center struck Apr 1; 405 kb/d refining offline; FM declared; Alba struck Mar 29; Bahrain signatory to 40+ nation Hormuz coalition",
+        "details": "Batelco data center (hosting AWS) struck Apr 1 — first attack on US tech infrastructure after IRGC threatened 17 US tech firms. IRGC struck Alba smelter 29 Mar (2 injured) — 5th direct attack on Bahrain. BAPCO Sitra refinery (405 kb/d) struck 4 & 9 Mar. Bapco Energies FM on all group operations. Abu Safa field shut. Bahrain signatory to UK-led 40+ nation coalition (Apr 2) demanding immediate Hormuz reopening — sanctions threat, military planners next week. UK evacuated personnel."
       },
       "infrastructure": [
         {
@@ -1931,7 +1947,7 @@
       "flag": "🇴🇲",
       "status": "high",
       "statusLabel": "Collateral",
-      "summary": "Salalah Port struck twice (Mar 11 + Mar 29). Maersk announced gradual resumption of Salalah ops Mar 31. Duqm Port also struck. Production intact. Oman LNG commanding premium with Qatar offline.",
+      "summary": "3 Omani-flagged vessels (2 VLCCs + LNG carrier) transit Hormuz via alternative coastal route Apr 2. Iran-Oman transit protocol being drafted. Oman crude surged to $152-153/bbl. Salalah Port struck twice (Mar 11 + Mar 29), resuming. Production intact. Oman LNG commanding premium with Qatar offline.",
       "metrics": {
         "headline": "Export infrastructure damaged",
         "productionOffline": "Production intact (~650k bpd)",
@@ -1960,7 +1976,7 @@
           "unit": "Mtpa"
         },
         "notes": {
-          "oil": "Outside Hormuz; crude production intact at ~950 kb/d; commanding premium with non-Hormuz position",
+          "oil": "Outside Hormuz; crude production intact at ~950 kb/d; Oman benchmark surged to $152-153/bbl for May delivery; commanding premium with non-Hormuz position",
           "gas": "Outside Hormuz; gas processing unaffected; Khazzan (BP) at full output",
           "refining": "Outside Hormuz; Sohar and Duqm refineries operational",
           "lng": "Outside Hormuz; Oman LNG 10.4 Mtpa operational; commanding significant Asian spot premiums with Qatar offline",
@@ -1969,10 +1985,15 @@
       },
       "events": [
         {
+          "date": "2026-04-02",
+          "title": "3 Omani-flagged vessels transit Hormuz via alternative coastal route; Iran-Oman transit protocol drafted",
+          "description": "Three Omani-flagged vessels (2 VLCCs + 1 LNG carrier, all managed by Oman Ship Management Company) entered Hormuz by hugging Oman's coastline — a different route from the normal northerly path through Iranian waters. Separately, Iran and Oman drafting a protocol to 'monitor and coordinate' transit through the Strait, per Iranian official Kazem Gharibabadi. This signals potential normalization of selective access. Oman crude benchmark surged to $152-153/bbl for May delivery, reflecting strategic premium of non-Hormuz position. — Hellenic Shipping News, Zawya",
+          "isNew": true
+        },
+        {
           "date": "2026-03-31",
           "title": "Maersk announces gradual resumption of Salalah Port operations",
-          "description": "Maersk announced on Mar 30 that Salalah Port will gradually resume operations on Mar 31, following the Mar 29 drone strike that destroyed a container crane. Additional security measures in place. Port handles 3.3M+ TEU annually and serves as vital overland link to Gulf states since Hormuz closure. — Anadolu Agency, Seatrade Maritime, WorldCargo News",
-          "isNew": false
+          "description": "Maersk announced on Mar 30 that Salalah Port will gradually resume operations on Mar 31, following the Mar 29 drone strike that destroyed a container crane. Additional security measures in place. Port handles 3.3M+ TEU annually and serves as vital overland link to Gulf states since Hormuz closure. — Anadolu Agency, Seatrade Maritime, WorldCargo News"
         },
         {
           "date": "2026-03-29",
@@ -1993,8 +2014,8 @@
       ],
       "oilGasImpact": {
         "severity": "moderate",
-        "summary": "Salalah 'stop-and-start' — carriers rerouting to Pakistan; production intact; LNG commanding premiums",
-        "details": "Salalah Port 'stop-and-start' operations as of Apr 2 despite Mar 31 resumption — Hapag-Lloyd rerouting India-US East Coast service to Karachi (Niledutch Lion) instead of Salalah. Previously struck Mar 29 (crane destroyed, 1 injured) and Mar 11 (oil storage fire). ~500 vessels waiting off UAE/Oman coastlines. Oil production from inland fields (PDO, BP Khazzan) unaffected as outside Hormuz. Mina Al-Fahal and Oman LNG fully operational. Oman LNG commanding significant Asian spot premiums with Qatar's 77 Mtpa offline."
+        "summary": "Omani vessels pioneering alternative Hormuz coastal route; Iran-Oman transit protocol drafted; production intact; LNG commanding premiums",
+        "details": "Three Omani-flagged vessels (2 VLCCs + 1 LNG carrier) entered Hormuz Apr 2 via alternative route hugging Oman's coastline — bypassing normal Iranian-waters path. Iran and Oman drafting transit protocol to 'monitor and coordinate' passage. Oman crude surged to $152-153/bbl for May delivery (strategic premium). Salalah Port 'stop-and-start' operations despite Mar 31 resumption — Hapag-Lloyd rerouting to Karachi. Previously struck Mar 29 (crane destroyed) and Mar 11 (oil storage fire). Oil production from inland fields (PDO, BP Khazzan) unaffected as outside Hormuz. Mina Al-Fahal and Oman LNG fully operational. Oman LNG commanding significant Asian spot premiums with Qatar's 77 Mtpa offline."
       },
       "infrastructure": [
         {
@@ -2130,6 +2151,18 @@
           "title": "Salalah resumes as pressure mounts on SE Asian ports - WorldCargo News",
           "url": "https://www.worldcargonews.com/news/2026/03/salalah-resumes-operations-as-pressure-mounts-on-southeast-asian-ports/",
           "date": "2026-03-31"
+        },
+        {
+          "id": 10,
+          "title": "Omani vessels enter Hormuz via alternative coastal route - Hellenic Shipping News",
+          "url": "https://www.hellenicshippingnews.com/tankers-and-a-long-term-hormuz-strait-disruption-is-selective-access-here-to-stay/",
+          "date": "2026-04-02"
+        },
+        {
+          "id": 11,
+          "title": "Oman crude surges to $152-153/bbl on strategic premium - Zawya",
+          "url": "https://www.zawya.com/en/economy/gcc/record-oil-prices-highlight-omans-strategic-advantage-gd90jruc",
+          "date": "2026-04-02"
         }
       ]
     },
@@ -2298,11 +2331,11 @@
       "flag": "🇮🇷",
       "status": "critical",
       "statusLabel": "Struck / Disrupted",
-      "summary": "Day 35: Former FM Kharazi seriously injured, wife killed in Tehran strike Apr 1 — diplomacy derailed. Hengam Island (Hormuz) struck, 7 injured. UK 35-nation summit issued joint statement on Hormuz reopening. Trump primetime address Apr 1 — war ends in 2-3 weeks, threatens NATO exit. Iran 'most significant strike since first days' on Tel Aviv (14 injured). Israel struck 400+ targets. Brent ~$105. Apr 6 deadline looms. OPEC+ Apr 5 critical.",
+      "summary": "Day 36: UK-led 40+ nation coalition demands 'immediate' Hormuz reopening — sanctions threat, military planners next week. Iran demands 'guaranteed ceasefire', calls US demands 'maximalist'. Rubio: war objectives in 'weeks not months'. Kharazi injured/wife killed Apr 1. Trump: will hit Iran 'extremely hard' for 2-3 weeks. Brent volatile $105-112. IEA: April losses will be 'twice March'. World losing 4.5-5 mb/d. OPEC+ Apr 5 critical. Apr 6 deadline 3 days away.",
       "metrics": {
-        "headline": "Day 35: Kharazi injured/wife killed; Hengam struck; UK 35-nation summit; Brent ~$105",
-        "productionOffline": "South Pars phases + 14 oil fields reduced; 195 crossings in March; toll legalized",
-        "keyFigure": "~15% crude, ~13% gas disrupted; Kharg loading 1.84 mb/d; March exports down 76%"
+        "headline": "Day 36: 40+ nation coalition demands Hormuz reopening; Iran demands guaranteed ceasefire; Apr 6 deadline 3 days away",
+        "productionOffline": "South Pars phases + 14 oil fields reduced; 214 crossings Mar 1-Apr 1 (94% decline); toll legalized",
+        "keyFigure": "~15% crude, ~13% gas disrupted; Kharg loading 1.84 mb/d; world losing 4.5-5 mb/d, doubling mid-April"
       },
       "production": {
         "oil": {
@@ -2326,10 +2359,16 @@
           "gas": "Asaluyeh processing hit; ~100 MMcm/d offline (~12% of South Pars); Fajr Jam fire; nuclear talks suspended indefinitely",
           "refining": "Tehran Refinery (250 kb/d) destroyed; Bandar Abbas curtailed; Siraf condensate operational; Isfahan steel/pharma struck Apr 1; Israel hit 400+ targets in 2 days",
           "lng": "No LNG export capacity; South Pars disruption affects domestic supply",
-          "ports": "Kharg loading avg 1.84 mb/d; Jask bypass at ~300k bpd; Hengam Island struck (7 injured); toll legalized; 195 crossings in March (95% drop); IRGC toll at $2M/vessel in yuan"
+          "ports": "Kharg loading avg 1.84 mb/d; Jask bypass at ~300k bpd; Hengam Island struck (7 injured); toll legalized; Kpler: 214 crossings Mar 1-Apr 1 (94% decline from peacetime); 131 oil/gas tankers; 60% Iran-linked; IRGC toll at $2M/vessel in yuan"
         }
       },
       "events": [
+        {
+          "date": "2026-04-03",
+          "title": "Day 36: UK-led 40+ nation coalition demands immediate Hormuz reopening; Iran demands guaranteed ceasefire; Apr 6 deadline 3 days away",
+          "description": "UK FM Cooper chaired virtual summit of 40+ nations Apr 2 (Thursday) — chairman's statement demands 'immediate and unconditional' Hormuz reopening, threatens sanctions if strait stays closed, military planners to meet next week for mine-clearing and commercial shipping security. Iran demands 'guaranteed ceasefire' via intermediaries but calls US demands 'maximalist and irrational'. Iran and Oman drafting transit protocol to 'monitor and coordinate' Strait passage; 3 Omani-flagged vessels (2 VLCCs + 1 LNG carrier) entered Hormuz hugging Oman's coastline — alternative route to normal Iranian-waters path. StanChart warns OPEC+ could abandon voluntary output cuts entirely at Apr 5 meeting. IEA warns April supply losses will be 'twice March' — world losing 4.5-5 mb/d, doubling by mid-April. Shell warns of April fuel crunch in Europe; Macquarie: 2 more months could send oil to $200. Kpler: 214 crossings Mar 1-Apr 1 (94% decline). Brent volatile $105-112. — Al Jazeera, Euronews, CNBC, Reuters, Rigzone, Military.com",
+          "isNew": true
+        },
         {
           "date": "2026-04-02",
           "title": "Day 35: Former FM Kharazi injured/wife killed; Hengam Island struck; UK 35-nation Hormuz summit; March exports down 76%",
@@ -2352,7 +2391,7 @@
           "date": "2026-03-31",
           "title": "Iran Parliament approves Hormuz toll plan; IRGC drone strikes VLCC Al Salmi at Dubai",
           "description": "Iran's Parliament Security Committee approved the Strait of Hormuz Management Plan, legalizing a rial-based toll system for vessel transits covering security, safety, environmental protection, and financial arrangements. Separately, IRGC drone struck Kuwait-flagged VLCC Al Salmi (2M bbl crude) at Dubai port anchorage at ~12:10 AM — fire, hull damage, oil spill risk. WTI spiked 3.7% to $106.70. First direct attack on a fully laden VLCC at a major commercial port. — The Federal, Times of Israel, Bloomberg, Gulf News",
-          "isNew": true
+          "isNew": false
         },
         {
           "date": "2026-03-30",
@@ -2429,8 +2468,8 @@
       ],
       "oilGasImpact": {
         "severity": "critical",
-        "summary": "Day 35: Kharazi injured/wife killed; Hengam struck; UK 35-nation summit; March exports down 76%; Apr 6 deadline",
-        "details": "Day 35 (Apr 2): Former FM Kharazi seriously injured, wife killed in Tehran strike — diplomacy derailed. Hengam Island (Hormuz) struck, 7 injured. UK hosted 35-nation summit on Hormuz reopening — joint statement, military planners to follow. March oil loadings west of Hormuz declined 76% (5.28M bpd vs 22.2M bpd Feb). Trump primetime address: war to end in 2-3 weeks, threatens NATO exit. Iran massive Tel Aviv strike (14 injured). Israel struck 400+ targets. Brent at $105.27. Ryanair warns 25% European jet fuel at risk from May. OPEC+ Apr 5 critical. Apr 6 deadline looms. 195 crossings in March (95% drop). Kharg loading 1.84 mb/d. Rystad: $25B infrastructure repair bill."
+        "summary": "Day 36: 40+ nation coalition demands Hormuz reopening; Iran demands guaranteed ceasefire; IEA: April losses doubling; Apr 6 deadline 3 days away",
+        "details": "Day 36 (Apr 3): UK FM Cooper chaired 40+ nation virtual summit Apr 2 — chairman's statement demands 'immediate and unconditional' Hormuz reopening, sanctions threat, military planners next week. Iran demands 'guaranteed ceasefire' but calls US demands 'maximalist and irrational'. Rubio: war objectives in 'weeks not months'. IEA warns April oil supply losses will be 'twice March' — world losing 4.5-5 mb/d, doubling by mid-April (largest crude supply loss ever). Kpler: 214 crossings Mar 1-Apr 1 (94% decline); 131 oil/gas tankers; 60% Iran-linked. Former FM Kharazi injured, wife killed Apr 1. Hengam Island struck. Trump: hit Iran 'extremely hard' for 2-3 weeks. Brent volatile $105-112. Ryanair warns 25% European jet fuel at risk from May. OPEC+ Apr 5 critical. Apr 6 Trump deadline for power plant strikes. Kharg loading 1.84 mb/d. Rystad: $25B infrastructure repair bill. Casualty toll: 3,000+ killed across region, 1,900+ in Iran, 1,200+ in Lebanon, 19 in Israel, 13 US service members."
       },
       "infrastructure": [
         {
@@ -2963,6 +3002,42 @@
           "title": "Iran war live: Trump claims goals nearing completion - Al Jazeera",
           "url": "https://www.aljazeera.com/news/liveblog/2026/4/2/iran-war-live-trump-to-address-nation-tehran-denies-seeking-ceasefire",
           "date": "2026-04-02"
+        },
+        {
+          "id": 54,
+          "title": "UK-led coalition of 40+ countries vows action on Hormuz Strait closure - Al Jazeera",
+          "url": "https://www.aljazeera.com/news/2026/4/2/uk-led-coalition-of-35-countries-vows-action-on-hormuz-strait-gridlock",
+          "date": "2026-04-02"
+        },
+        {
+          "id": 55,
+          "title": "Over 40 countries launch coalition to secure Strait of Hormuz - Euronews",
+          "url": "https://www.euronews.com/my-europe/2026/04/02/over-40-countries-launch-coalition-to-secure-strait-of-hormuz-after-the-war",
+          "date": "2026-04-02"
+        },
+        {
+          "id": 56,
+          "title": "Oil supply crunch will worsen in April, IEA warns - CNBC",
+          "url": "https://www.cnbc.com/2026/04/01/oil-price-iea-fatih-birol-brent-iran-strait-of-hormuz.html",
+          "date": "2026-04-01"
+        },
+        {
+          "id": 57,
+          "title": "Iran demands guaranteed ceasefire to end war permanently - CNBC/Reuters",
+          "url": "https://www.cnbc.com/2026/04/01/iran-demands-guaranteed-ceasefire-to-end-war-permanently-senior-source-says.html",
+          "date": "2026-04-01"
+        },
+        {
+          "id": 58,
+          "title": "UK gathers 40+ countries to plot Hormuz reopening - Military.com",
+          "url": "https://www.military.com/daily-news/2026/04/02/uk-gathers-more-40-countries-plot-ways-of-reopening-strait-of-hormuz.html",
+          "date": "2026-04-02"
+        },
+        {
+          "id": 59,
+          "title": "Rubio says war objectives in weeks not months - France 24",
+          "url": "https://www.france24.com/en/europe/20260327-rubio-says-iran-war-to-last-weeks-no-us-ground-troops-needed",
+          "date": "2026-03-27"
         }
       ]
     }
@@ -3936,7 +4011,7 @@
       "date": "2026-03-31",
       "status": "struck",
       "statusLabel": "Struck",
-      "isNew": true,
+      "isNew": false,
       "summary": "Iranian drone struck fully laden VLCC Al Salmi (319,660 DWT) at Dubai port anchorage at ~12:10 AM Mar 31. 2M bbl crude cargo bound for Qingdao, China. Hull damaged, fire broke out and was extinguished. KPC warned of potential oil spill. WTI spiked 3.7% to $106.70.",
       "details": {
         "volumeAffected": "2 million barrels of crude on board (from Kuwait and Saudi Arabia)",
