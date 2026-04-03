@@ -2256,7 +2256,7 @@ const SHUTDOWNS_NO_FM_DATA = [
 
 const SPR_RELEASE_DATA = {
   announced: "2026-03-11",
-  asOf: "2026-04-02",
+  asOf: "2026-04-03",
   trigger: "Strait of Hormuz disruption / Iran conflict — ~20% of global oil supply at risk",
   totalCommitted: 426.0,
   totalCrude: 301,
@@ -2264,11 +2264,11 @@ const SPR_RELEASE_DATA = {
   totalReleased: 67.7,
   releasePeriodDays: 120,
   keyInsights: [
-    "DOE issued RFP for additional 10 mb SPR exchange from Bryan Mound on Apr 1; bids due Apr 6 — would bring total US awards to 55.2 mb",
-    "IEA's Birol warned April oil supply losses will be 'twice March' and the agency is assessing whether a second coordinated release is needed",
-    "EIA weekly SPR at 415.1 mb (Mar 27); physical drawdown gradual at ~0.4 mb/week despite 45.2 mb in awarded exchange contracts",
-    "South Korea swap program operational since Mar 31 with 2 mb initial contract; 20+ mb in refiner demand queued for April-May",
-    "Global release at 67.7 of 426.0 mb (15.9%) on Day 22 of 120; European releases ongoing since Mar 28 but no per-country data yet"
+    "DOE Bryan Mound 10 mb exchange bids due Apr 6; if awarded, total US contracts reach 55.2 mb of 172.2 mb commitment (32%)",
+    "EIA physical SPR at 415.1 mb (Mar 27) — only 0.3 mb/week drawdown as exchange contracts convert slowly to deliveries",
+    "IEA Director Birol warned April supply losses will be 'twice March'; agency assessing whether second coordinated release is needed",
+    "South Korea swap program active since Mar 31 with 2 mb initial contract; 20+ mb in refiner demand queued for April-May",
+    "Global release at 67.7 of 426.0 mb (15.9%) on Day 23 of 120; no new per-country figures published in last 48 hours"
   ],
   sources: [
     { title: "DOE initiates additional 10 mb SPR emergency exchange from Bryan Mound", url: "https://www.energy.gov/hgeo/articles/energy-department-initiates-additional-strategic-petroleum-reserve-emergency-exchange", date: "2026-04-01" },
