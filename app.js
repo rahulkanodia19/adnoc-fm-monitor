@@ -604,11 +604,11 @@ function initGccOverviewMap() {
         radius: 8, color: '#1e293b', weight: 1.5, fillColor: color, fillOpacity: 0.7
       }).bindPopup(`
         <div style="min-width:160px">
-          <div style="font-weight:700;font-size:12px;color:#fff;margin-bottom:2px">${inf.name}</div>
-          <div style="font-size:10px;color:#829ab1;margin-bottom:4px">${inf.type} — ${c.country}</div>
-          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Capacity</span><span style="font-weight:600;color:#fff">${inf.capacity}</span></div>
-          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Status</span><span style="font-weight:600;color:${popupStatusColor[inf.status] || '#fff'}">${inf.status}</span></div>
-          ${inf.notes ? `<div style="font-size:10px;color:#e2e8f0;margin-top:4px;border-top:1px solid #334e68;padding-top:3px">${inf.notes}</div>` : ''}
+          <div style="font-weight:700;font-size:12px;color:#0a1929;margin-bottom:2px">${inf.name}</div>
+          <div style="font-size:10px;color:#627d98;margin-bottom:4px">${inf.type} — ${c.country}</div>
+          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#627d98">Capacity</span><span style="font-weight:600;color:#0a1929">${inf.capacity}</span></div>
+          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#627d98">Status</span><span style="font-weight:600;color:${popupStatusColor[inf.status] || '#0a1929'}">${inf.status}</span></div>
+          ${inf.notes ? `<div style="font-size:10px;color:#486581;margin-top:4px;border-top:1px solid #d9e2ec;padding-top:3px">${inf.notes}</div>` : ''}
         </div>
       `, { maxWidth: 240 }).addTo(gccMapLayers.production);
     });
@@ -632,11 +632,11 @@ function initGccOverviewMap() {
       });
       L.marker([coords.lat, coords.lng], { icon }).bindPopup(`
         <div style="min-width:180px">
-          <div style="font-weight:700;font-size:12px;color:#fff;margin-bottom:2px">${inf.name}</div>
-          <div style="font-size:10px;color:#829ab1;margin-bottom:4px">${inf.type} — ${c.country}</div>
-          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Capacity</span><span style="font-weight:600;color:#fff">${inf.capacity}</span></div>
-          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Status</span><span style="font-weight:600;color:${popupStatusColor[inf.status] || '#fff'}">${inf.status}</span></div>
-          ${inf.notes ? `<div style="font-size:10px;color:#e2e8f0;margin-top:4px;border-top:1px solid #334e68;padding-top:3px">${inf.notes}</div>` : ''}
+          <div style="font-weight:700;font-size:12px;color:#0a1929;margin-bottom:2px">${inf.name}</div>
+          <div style="font-size:10px;color:#627d98;margin-bottom:4px">${inf.type} — ${c.country}</div>
+          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#627d98">Capacity</span><span style="font-weight:600;color:#0a1929">${inf.capacity}</span></div>
+          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#627d98">Status</span><span style="font-weight:600;color:${popupStatusColor[inf.status] || '#0a1929'}">${inf.status}</span></div>
+          ${inf.notes ? `<div style="font-size:10px;color:#486581;margin-top:4px;border-top:1px solid #d9e2ec;padding-top:3px">${inf.notes}</div>` : ''}
         </div>
       `, { maxWidth: 240 }).addTo(gccMapLayers.terminals);
     });
@@ -660,11 +660,11 @@ function initGccOverviewMap() {
       });
       L.marker([coords.lat, coords.lng], { icon }).bindPopup(`
         <div style="min-width:180px">
-          <div style="font-weight:700;font-size:12px;color:#fff;margin-bottom:2px">${inf.name}</div>
-          <div style="font-size:10px;color:#829ab1;margin-bottom:4px">${inf.type} — ${c.country}</div>
-          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Capacity</span><span style="font-weight:600;color:#fff">${inf.capacity}</span></div>
-          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Status</span><span style="font-weight:600;color:${popupStatusColor[inf.status] || '#fff'}">${inf.status}</span></div>
-          ${inf.notes ? `<div style="font-size:10px;color:#e2e8f0;margin-top:4px;border-top:1px solid #334e68;padding-top:3px">${inf.notes}</div>` : ''}
+          <div style="font-weight:700;font-size:12px;color:#0a1929;margin-bottom:2px">${inf.name}</div>
+          <div style="font-size:10px;color:#627d98;margin-bottom:4px">${inf.type} — ${c.country}</div>
+          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#627d98">Capacity</span><span style="font-weight:600;color:#0a1929">${inf.capacity}</span></div>
+          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#627d98">Status</span><span style="font-weight:600;color:${popupStatusColor[inf.status] || '#0a1929'}">${inf.status}</span></div>
+          ${inf.notes ? `<div style="font-size:10px;color:#486581;margin-top:4px;border-top:1px solid #d9e2ec;padding-top:3px">${inf.notes}</div>` : ''}
         </div>
       `, { maxWidth: 240 }).addTo(gccMapLayers.refining);
     });
@@ -688,11 +688,11 @@ function initGccOverviewMap() {
       });
       L.marker([coords.lat, coords.lng], { icon }).bindPopup(`
         <div style="min-width:180px">
-          <div style="font-weight:700;font-size:12px;color:#fff;margin-bottom:2px">${inf.name}</div>
-          <div style="font-size:10px;color:#829ab1;margin-bottom:4px">${inf.type} — ${c.country}</div>
-          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Capacity</span><span style="font-weight:600;color:#fff">${inf.capacity}</span></div>
-          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Status</span><span style="font-weight:600;color:${popupStatusColor[inf.status] || '#fff'}">${inf.status}</span></div>
-          ${inf.notes ? `<div style="font-size:10px;color:#e2e8f0;margin-top:4px;border-top:1px solid #334e68;padding-top:3px">${inf.notes}</div>` : ''}
+          <div style="font-weight:700;font-size:12px;color:#0a1929;margin-bottom:2px">${inf.name}</div>
+          <div style="font-size:10px;color:#627d98;margin-bottom:4px">${inf.type} — ${c.country}</div>
+          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#627d98">Capacity</span><span style="font-weight:600;color:#0a1929">${inf.capacity}</span></div>
+          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#627d98">Status</span><span style="font-weight:600;color:${popupStatusColor[inf.status] || '#0a1929'}">${inf.status}</span></div>
+          ${inf.notes ? `<div style="font-size:10px;color:#486581;margin-top:4px;border-top:1px solid #d9e2ec;padding-top:3px">${inf.notes}</div>` : ''}
         </div>
       `, { maxWidth: 240 }).addTo(gccMapLayers.industrial);
     });
@@ -705,15 +705,15 @@ function initGccOverviewMap() {
     PIPELINE_ROUTES.forEach(pipe => {
       const isGas = pipe.type === 'gas';
       const color = isGas ? '#3b82f6' : (statusColor[pipe.status] || '#6b7280');
-      const popColor = isGas ? '#60a5fa' : (popupStatusColor[pipe.status] || '#fff');
+      const popColor = isGas ? '#2563eb' : (popupStatusColor[pipe.status] || '#0a1929');
       const popupHtml = `
         <div style="min-width:180px">
-          <div style="font-weight:700;font-size:12px;color:#fff;margin-bottom:2px">${pipe.name}</div>
-          <div style="font-size:10px;color:#829ab1;margin-bottom:4px">${pipe.country}${pipe.type ? ` — ${pipe.type.charAt(0).toUpperCase() + pipe.type.slice(1)}` : ''}</div>
-          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Capacity</span><span style="font-weight:600;color:#fff">${pipe.capacity}</span></div>
-          ${pipe.currentFlow ? `<div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Current Flow</span><span style="font-weight:600;color:#fff">${pipe.currentFlow}</span></div>` : ''}
-          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#829ab1">Status</span><span style="font-weight:600;color:${popColor}">${pipe.status}</span></div>
-          ${pipe.notes ? `<div style="font-size:10px;color:#e2e8f0;margin-top:4px;border-top:1px solid #334e68;padding-top:3px">${pipe.notes}</div>` : ''}
+          <div style="font-weight:700;font-size:12px;color:#0a1929;margin-bottom:2px">${pipe.name}</div>
+          <div style="font-size:10px;color:#627d98;margin-bottom:4px">${pipe.country}${pipe.type ? ` — ${pipe.type.charAt(0).toUpperCase() + pipe.type.slice(1)}` : ''}</div>
+          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#627d98">Capacity</span><span style="font-weight:600;color:#0a1929">${pipe.capacity}</span></div>
+          ${pipe.currentFlow ? `<div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#627d98">Current Flow</span><span style="font-weight:600;color:#0a1929">${pipe.currentFlow}</span></div>` : ''}
+          <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#627d98">Status</span><span style="font-weight:600;color:${popColor}">${pipe.status}</span></div>
+          ${pipe.notes ? `<div style="font-size:10px;color:#486581;margin-top:4px;border-top:1px solid #d9e2ec;padding-top:3px">${pipe.notes}</div>` : ''}
         </div>
       `;
       // Invisible wide hit area (20px) for easy clicking
