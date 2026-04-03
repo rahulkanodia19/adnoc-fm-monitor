@@ -1649,9 +1649,10 @@ function updateStats(activeTab) {
         if (oilLoss > 0 || gasLoss > 0 || refLoss > 0) impactedCount++;
       });
       // Get crisp factual highlights from recently updated countries
+      // Note: country objects don't have isNew — check events within each country
       const updatedCountries = COUNTRY_STATUS_DATA
-        .filter(c => c.isNew || (c.events && c.events.some(e => e.isNew)))
-        .map(c => c.country + ': ' + (c.metrics?.productionOffline || '').substring(0, 80))
+        .filter(c => (c.events && c.events.some(e => e.isNew)) || c.isNew)
+        .map(c => c.country + ': ' + (c.metrics?.productionOffline || c.metrics?.headline || '').substring(0, 80))
         .filter(h => h.length > 5);
       stats = [
         { label: 'Oil Offline (kb/d)', value: formatNum(Math.round(oilOffline)), color: 'text-red-600', change: updatedCountries.length, subtitle: updatedCountries[0] || '' },
@@ -1662,15 +1663,18 @@ function updateStats(activeTab) {
       break;
     }
     case 'country-matrix': {
+      // Countries don't have isNew at root — check events within each country
+      const countNewEvents = (arr, filterFn) =>
+        arr.filter(c => (!filterFn || filterFn(c)) && c.events && c.events.some(e => e.isNew)).length;
       const cUpdated = COUNTRY_STATUS_DATA
-        .filter(c => c.isNew)
-        .map(c => c.country + ': ' + (c.metrics?.productionOffline || '').substring(0, 80))
+        .filter(c => c.events && c.events.some(e => e.isNew))
+        .map(c => c.country + ': ' + (c.metrics?.productionOffline || c.metrics?.headline || '').substring(0, 80))
         .filter(h => h.length > 5);
       stats = [
-        { label: 'Countries Monitored', value: COUNTRY_STATUS_DATA.length, color: 'text-blue-600', change: countNew(COUNTRY_STATUS_DATA), subtitle: cUpdated[0] || '' },
-        { label: 'Critical / Conflict', value: COUNTRY_STATUS_DATA.filter(c => ['critical', 'conflict', 'high'].includes(c.status)).length, color: 'text-red-600', change: countNew(COUNTRY_STATUS_DATA, c => ['critical', 'conflict', 'high'].includes(c.status)), subtitle: cUpdated[1] || '' },
-        { label: 'Elevated Risk', value: COUNTRY_STATUS_DATA.filter(c => c.status === 'elevated').length, color: 'text-amber-600', change: countNew(COUNTRY_STATUS_DATA, c => c.status === 'elevated'), subtitle: cUpdated[2] || '' },
-        { label: 'Stable', value: COUNTRY_STATUS_DATA.filter(c => c.status === 'stable').length, color: 'text-emerald-600', change: countNew(COUNTRY_STATUS_DATA, c => c.status === 'stable'), subtitle: cUpdated[3] || '' },
+        { label: 'Countries Monitored', value: COUNTRY_STATUS_DATA.length, color: 'text-blue-600', change: countNewEvents(COUNTRY_STATUS_DATA), subtitle: cUpdated[0] || '' },
+        { label: 'Critical / Conflict', value: COUNTRY_STATUS_DATA.filter(c => ['critical', 'conflict', 'high'].includes(c.status)).length, color: 'text-red-600', change: countNewEvents(COUNTRY_STATUS_DATA, c => ['critical', 'conflict', 'high'].includes(c.status)), subtitle: cUpdated[1] || '' },
+        { label: 'Elevated Risk', value: COUNTRY_STATUS_DATA.filter(c => c.status === 'elevated').length, color: 'text-amber-600', change: countNewEvents(COUNTRY_STATUS_DATA, c => c.status === 'elevated'), subtitle: cUpdated[2] || '' },
+        { label: 'Stable', value: COUNTRY_STATUS_DATA.filter(c => c.status === 'stable').length, color: 'text-emerald-600', change: countNewEvents(COUNTRY_STATUS_DATA, c => c.status === 'stable'), subtitle: cUpdated[3] || '' },
       ];
       break;
     }
