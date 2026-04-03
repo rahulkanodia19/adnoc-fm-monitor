@@ -109,6 +109,10 @@ Focus on events from the last 48 hours. Search for:
 - Shipping disruptions through Strait of Hormuz
 - Tanker diversions, insurance rate changes, war risk premiums
 - OPEC/OPEC+ emergency responses
+- Attacks on non-energy infrastructure: data centers (Batelco/AWS Bahrain), power plants,
+  desalination facilities, aluminium smelters (EGA, Alba), airports, bridges, telecom/submarine cables
+- Expanding Iranian target lists (bridge lists, tech company lists, infrastructure lists)
+- Civilian infrastructure damage and cascading effects (water, electricity, internet)
 - Downstream force majeure declarations by refineries, petrochemical plants, and industrial consumers
   in importing countries that depend on Gulf feedstock (naphtha, crude, LNG, LPG). Key regions:
   Asia-Pacific (China, India, Japan, South Korea, Taiwan, Thailand, Vietnam, Philippines, Sri Lanka,
@@ -308,6 +312,73 @@ If a platform was skipped, state the reason. This report is MANDATORY even if al
 
 ---
 
+## Step 3d: Infrastructure Attack Monitoring (MANDATORY — run ALL queries)
+
+The conflict is expanding targets beyond oil & gas to include data centers, power plants, aluminium smelters, airports, bridges, desalination, and telecom infrastructure. You MUST run EVERY search query below and check for events in the last 48 hours. If ANY query returns a new attack, disruption, shutdown, or status change not already in data.js, add it immediately.
+
+**This step exists because the pipeline previously missed a major Habshan gas complex shutdown (Bloomberg Apr 3) — a headline event that was not captured because general search queries were too broad.**
+
+### UAE / ADNOC (highest priority — this is an ADNOC dashboard)
+1. `"Habshan" attack OR fire OR shut OR shutdown 2026 April`
+2. `"Ruwais" attack OR fire OR shutdown 2026 April`
+3. `"Das Island" attack OR disruption 2026 April`
+4. `"Fujairah" terminal OR port attack 2026 April`
+5. `"ADCOP" OR "Habshan-Fujairah pipeline" disruption 2026 April`
+6. `"ADNOC" attack OR strike OR shutdown April 2026`
+7. `"Abu Dhabi" missile OR drone infrastructure April 2026`
+8. `"Jebel Ali" port OR smelter attack 2026 April`
+9. `"EGA" OR "Al Taweelah" OR "Jebel Ali smelter" 2026 April`
+10. `"Borouge" OR "ADNOC petrochemical" 2026 April`
+11. `"Dubai airport" OR "DXB" attack 2026 April`
+12. `"UAE data center" OR "UAE power plant" attack 2026 April`
+13. `"Sheikh Zayed bridge" OR "Abu Dhabi bridge" attack 2026 April`
+
+### Saudi Arabia
+14. `"Ras Tanura" OR "Abqaiq" attack 2026 April`
+15. `"Yanbu" OR "East-West pipeline" disruption 2026 April`
+16. `"Ghawar" OR "Safaniya" OR "SABIC" attack 2026 April`
+17. `"Saudi Arabia" infrastructure attack April 2026`
+
+### Qatar
+18. `"Ras Laffan" OR "North Field" attack 2026 April`
+19. `"Qatar" infrastructure attack April 2026`
+
+### Kuwait
+20. `"Mina Al-Ahmadi" OR "Al-Zour" OR "Kuwait" attack April 2026`
+
+### Iraq
+21. `"Basra oil terminal" OR "Rumaila" OR "Iraq" pipeline attack 2026 April`
+
+### Bahrain
+22. `"Sitra" OR "Alba" OR "Bahrain" data center attack 2026 April`
+
+### Iran (target of strikes)
+23. `"Kharg Island" OR "South Pars" OR "Iran refinery" strike 2026 April`
+24. `"Iran bridge" OR "Iran infrastructure" strike April 2026`
+
+### Israel
+25. `"Leviathan" OR "Tamar" OR "Karish" gas field 2026 April`
+
+### Oman
+26. `"Sohar" OR "Duqm" OR "Oman LNG" 2026 April`
+
+### Cross-cutting (non-energy expanding targets)
+27. `"data center" attack Gulf Middle East 2026 April`
+28. `"power plant" OR "desalination" attack Gulf 2026 April`
+29. `"aluminium smelter" attack Gulf 2026 April`
+30. `"submarine cable" OR "internet" disruption Gulf 2026 April`
+
+### Output requirement
+After running all 30 queries, output:
+```
+Infrastructure Monitoring Results:
+  Queries with new findings: [list query numbers and what was found]
+  Queries with no new results: [count]/30
+  New events to add to data.js: [list each with country, asset name, event description, source URL]
+```
+
+---
+
 ## Step 4: Update data.js
 
 Update the `data.js` file with any new findings. Preserve the exact same schema and variable structure:
@@ -346,6 +417,10 @@ Update the `data.js` file with any new findings. Preserve the exact same schema 
 - Keep the file header comment block with the updated timestamp
 - The file must use `const` declarations (not export)
 - Preserve the production object structure on country entries if present
+- After updating, verify each infrastructure item's `status` and `notes` fields are current:
+  - If an item was "operational" but a new attack/shutdown occurred → update status + notes
+  - If an item was "shutdown" but has resumed → update to "operational" + notes with date
+  - Infrastructure `notes` must reflect the LATEST known status, not stale information
 
 ### WAR_RISK_PREMIUM_DATA — DO NOT UPDATE
 
