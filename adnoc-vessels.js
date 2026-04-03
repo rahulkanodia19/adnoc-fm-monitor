@@ -254,6 +254,11 @@
           case 'area':
             val = areaBadge(v.area);
             break;
+          case 'cargoType':
+            val = v.cargoType
+              ? (v.state === 'ballast' ? `${esc(v.cargoType)} <span class="text-[9px] text-navy-400">(prev)</span>` : esc(v.cargoType))
+              : '-';
+            break;
           case 'voyageETD':
           case 'eta':
             val = fmtDate(v[c.key]);
@@ -472,6 +477,11 @@
             val = v.state === 'loaded'
               ? '<span class="inline-block px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-100 text-emerald-800">Loaded</span>'
               : '<span class="inline-block px-2 py-0.5 rounded-full text-[10px] font-semibold bg-slate-100 text-slate-600">Ballast</span>';
+            break;
+          case 'cargoType':
+            val = v.cargoType
+              ? (v.state === 'ballast' ? `${esc(v.cargoType)} <span class="text-[9px] text-navy-400">(prev)</span>` : esc(v.cargoType))
+              : '-';
             break;
           case 'eta':
             val = fmtDate(v[c.key]);
