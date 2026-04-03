@@ -1079,6 +1079,21 @@ function renderCountryMatrix() {
       `;
     }).join('');
 
+    // Mobile: compact list of 2 most recent events (shown below md breakpoint)
+    const mobileEvents = country.events.slice(0, 2);
+    const mobileEventsHtml = mobileEvents.map(evt => {
+      const evtNewBadge = evt.isNew ? renderNewBadge() : '';
+      return `<li class="flex items-start gap-1.5">
+          <span class="w-1 h-1 rounded-full bg-navy-400 mt-1.5 flex-shrink-0"></span>
+          <span>
+            <span class="text-navy-500 text-[11px]">${formatDateShort(evt.date)}</span>
+            <span class="text-navy-800 text-xs ml-1">${evt.title}</span>
+            ${evtNewBadge}
+          </span>
+        </li>`;
+    }).join('');
+    const moreEventsCount = country.events.length - 2;
+
     return `
     <tr class="data-row cursor-pointer ${newRowClass}" onclick="toggleExpand('${country.id}')">
       <td class="px-3 py-2.5 sm:px-5 sm:py-3.5">
@@ -1113,6 +1128,13 @@ function renderCountryMatrix() {
         </svg>
       </td>
     </tr>
+    ${country.events.length ? `<tr class="md:hidden ${newRowClass} border-t-0 cursor-pointer" onclick="toggleExpand('${country.id}')">
+      <td colspan="7" class="px-3 pb-2.5 pt-0 sm:px-5">
+        <div class="text-[10px] font-semibold text-navy-500 uppercase tracking-wider mb-1">Key Events</div>
+        <ul class="space-y-0.5">${mobileEventsHtml}</ul>
+        ${moreEventsCount > 0 ? `<div class="text-[10px] text-navy-400 mt-1 italic">+${moreEventsCount} more — tap to expand</div>` : ''}
+      </td>
+    </tr>` : ''}
     <tr id="detail-${country.id}" class="hidden">
       <td colspan="7" class="p-0">${renderCountryDetailPanel(country)}</td>
     </tr>
@@ -1648,17 +1670,17 @@ function updateStats(activeTab) {
         refAffected += refLoss;
         if (oilLoss > 0 || gasLoss > 0 || refLoss > 0) impactedCount++;
       });
-      // Get crisp factual highlights from recently updated countries
-      // Note: country objects don't have isNew — check events within each country
-      const updatedCountries = COUNTRY_STATUS_DATA
-        .filter(c => (c.events && c.events.some(e => e.isNew)) || c.isNew)
-        .map(c => c.country + ': ' + (c.metrics?.productionOffline || c.metrics?.headline || '').substring(0, 80))
-        .filter(h => h.length > 5);
+      // Get commodity-specific highlights from recently updated countries
+      const recentCountries = COUNTRY_STATUS_DATA.filter(c => c.events && c.events.some(e => e.isNew));
+      const oilHL = recentCountries.map(c => c.production?.notes?.oil).filter(Boolean)[0] || '';
+      const gasHL = recentCountries.map(c => c.production?.notes?.gas || c.production?.notes?.lng).filter(Boolean)[0] || '';
+      const refHL = recentCountries.map(c => c.production?.notes?.refining).filter(Boolean)[0] || '';
+      const countryNames = recentCountries.map(c => c.country).join(', ');
       stats = [
-        { label: 'Oil Offline (kb/d)', value: formatNum(Math.round(oilOffline)), color: 'text-red-600', change: updatedCountries.length, subtitle: updatedCountries[0] || '' },
-        { label: 'Gas Offline (Bcf/d)', value: formatNum(Math.round(gasOffline * 10) / 10), color: 'text-amber-600', change: updatedCountries.length, subtitle: updatedCountries[1] || '' },
-        { label: 'Refining Affected (kb/d)', value: formatNum(Math.round(refAffected)), color: 'text-orange-600', change: updatedCountries.length, subtitle: updatedCountries[2] || '' },
-        { label: 'Countries Impacted', value: impactedCount, color: 'text-blue-600', change: updatedCountries.length, subtitle: updatedCountries[3] || '' },
+        { label: 'Oil Offline (kb/d)', value: formatNum(Math.round(oilOffline)), color: 'text-red-600', change: 0, subtitle: oilHL.substring(0, 90) },
+        { label: 'Gas Offline (Bcf/d)', value: formatNum(Math.round(gasOffline * 10) / 10), color: 'text-amber-600', change: 0, subtitle: gasHL.substring(0, 90) },
+        { label: 'Refining Affected (kb/d)', value: formatNum(Math.round(refAffected)), color: 'text-orange-600', change: 0, subtitle: refHL.substring(0, 90) },
+        { label: 'Countries Impacted', value: impactedCount, color: 'text-blue-600', change: recentCountries.length, subtitle: countryNames },
       ];
       break;
     }
