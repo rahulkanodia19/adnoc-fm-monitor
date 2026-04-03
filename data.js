@@ -1,12 +1,12 @@
 // ============================================================
 // data.js -- ADNOC Force Majeure & Geopolitical Monitor
 // Pre-populated monitoring data from verified intelligence
-// Last updated: 2026-04-03T21:15:00.000Z
+// Last updated: 2026-04-03T19:30:00.000Z
 // Period: 28 February - 3 April 2026
 // Context: Strait of Hormuz / Gulf military escalation
 // ============================================================
 
-const LAST_UPDATED = "2026-04-03T10:00:00.000Z";
+const LAST_UPDATED = "2026-04-03T19:00:00.000Z";
 
 // ---------- TABLE 1: Country Status Matrix ----------
 const COUNTRY_STATUS_DATA = [
@@ -16,7 +16,7 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1F6}\u{1F1E6}",
     status: "critical",
     statusLabel: "FM Declared",
-    summary: "AQUA 1 tanker struck Apr 1. All 77 Mtpa LNG halted since Mar 2. 12.8 Mtpa damaged 3-5 yrs. FM extended through mid-June. S&P Global: 'Longer market impacts from war' (Apr 2 report). ~2,000 vessels trapped in Gulf (IMO). UN Hormuz vote Saturday Apr 5. Brent volatile $99-$110. OPEC+ Apr 5. Apr 6 deadline.",
+    summary: "AQUA 1 tanker struck Apr 1. All 77 Mtpa LNG halted since Mar 2. 12.8 Mtpa damaged 3-5 yrs. FM extended through mid-June. S&P Global: 'Longer market impacts from war' (Apr 2 report). ~2,000 vessels trapped in Gulf (IMO). UN Hormuz vote Saturday Apr 5 — resolution stripped of Chapter VII enforcement. Brent settled $109.03 (Apr 2). OPEC+ Apr 5. Apr 6 deadline.",
     metrics: {
       headline: "S&P: 'Longer market impacts from war'; ~2,000 vessels trapped in Gulf; ~20% global LNG offline",
       productionOffline: "77 Mtpa LNG + all downstream",
@@ -150,7 +150,7 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1F0}\u{1F1FC}",
     status: "critical",
     statusLabel: "FM / Struck",
-    summary: "Iran publishes bridge target list incl. Sheikh Jaber Sea Bridge (Kuwait). IRGC drones struck Kuwait airport fuel tanks Apr 1 (58 hrs to extinguish). Power/desal plant struck Mar 30 (1 Indian worker killed). Kuwait intercepted 97 BMs + 283 drones cumulatively. VLCC Al Salmi struck Mar 31. KPC FM on crude. Al-Ahmadi struck. UN Hormuz vote Saturday Apr 5. Brent volatile $99-$110. OPEC+ Apr 5. Apr 3: Al-Ahmadi refinery struck AGAIN (3rd time, fires in multiple units) + power/desal plant struck AGAIN (2nd time) — 7th+ major Iranian attack on Kuwait.",
+    summary: "Iran publishes bridge target list incl. Sheikh Jaber Sea Bridge (Kuwait). IRGC drones struck Kuwait airport fuel tanks Apr 1 (58 hrs to extinguish). Power/desal plant struck Mar 30 (1 Indian worker killed). Kuwait intercepted 97 BMs + 283 drones cumulatively. VLCC Al Salmi struck Mar 31. KPC FM on crude. Al-Ahmadi struck. UN Hormuz vote Saturday Apr 5 — stripped of Chapter VII. Brent settled $109.03 (Apr 2). OPEC+ Apr 5. Apr 3: Al-Ahmadi refinery struck AGAIN (3rd time, fires in multiple units) + power/desal plant struck AGAIN (2nd time) — 7th+ major Iranian attack on Kuwait.",
     metrics: {
       headline: "Apr 3: Al-Ahmadi refinery struck 3rd time + desalination plant struck 2nd time; Iran targets Sheikh Jaber bridge; 7+ major attacks",
       productionOffline: "Al-Ahmadi refinery (3x struck) + power/desal plant (2x) + airport fuel tanks + tanker attacked",
@@ -257,11 +257,11 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1F8}\u{1F1E6}",
     status: "critical",
     statusLabel: "Shutdown",
-    summary: "Iran targets King Fahd Causeway in bridge hit list. Aramco slashing Asia crude supply 2nd month. 4 offshore fields shut (~2.5M bpd). E-W Pipeline at max 7M bpd; Yanbu 4.4M bpd. Houthi Bab al-Mandeb threat. UN Hormuz vote Saturday Apr 5. Brent volatile $99-$110. OPEC+ Apr 5 — most consequential meeting. Apr 6 deadline.",
+    summary: "Iran targets King Fahd Causeway in bridge hit list. Saudi intercepted 14 drones on Apr 3 (Arab News). Aramco slashing Asia crude supply 2nd month. 4 offshore fields shut (~2.5M bpd). E-W Pipeline at max 7M bpd; Yanbu 4.4M bpd. Houthi Bab al-Mandeb threat. UN Hormuz vote Saturday Apr 5 — resolution stripped of Chapter VII enforcement. Brent settled $109.03 (Apr 2). OPEC+ Apr 5 — most consequential meeting. Apr 6 deadline.",
     metrics: {
-      headline: "Iran targets King Fahd Causeway; ~2.5-3.0 mb/d offline; WH: Hormuz not core objective",
+      headline: "14 drones intercepted Apr 3; Iran targets King Fahd Causeway; ~2.5-3.0 mb/d offline; WH: Hormuz not core objective",
       productionOffline: "4 offshore fields + storage constraints",
-      keyFigure: "~20-25% of Saudi capacity; Brent ~$106; world losing 4.5-5 mb/d"
+      keyFigure: "~20-25% of Saudi capacity; Brent settled $109.03; world losing 4.5-5 mb/d; Rystad: 11,535 kboe/d total regional upstream disrupted"
     },
     production: {
       oil: { preWar: 10400, current: 8000, unit: "kb/d" },
@@ -275,6 +275,12 @@ const COUNTRY_STATUS_DATA = [
       }
     },
     events: [
+      {
+        date: "2026-04-03",
+        title: "Saudi air defenses intercept 14 drones in early morning hours",
+        description: "Saudi Arabia's defense ministry spokesperson Gen. Turki Al-Malki confirmed the Kingdom's air defense systems intercepted and destroyed 14 drones in the early morning hours of April 3. The interception locations were not specified. This continues the pattern of daily Iranian drone attacks on Saudi territory since the conflict began. Saudi has intercepted hundreds of drones and dozens of ballistic missiles since Feb 28. — Arab News, Gulf Insider",
+        isNew: true
+      },
       {
         date: "2026-03-31",
         title: "Jeddah Summit: MBS, Qatar Emir, Jordan King condemn Iranian attacks",
@@ -317,8 +323,8 @@ const COUNTRY_STATUS_DATA = [
     ],
     oilGasImpact: {
       severity: "critical",
-      summary: "Iran targets King Fahd Causeway in bridge hit list; ~2.5-3.0 mb/d offline; WH: Hormuz not core objective; Brent ~$106",
-      details: "Iran published bridge target list including King Fahd Causeway (Saudi-Bahrain link) after B1 destruction. WH says Hormuz reopening 'not a core objective' — prolonged closure risk for Saudi exports. Aramco slashing Asia supply 2nd month — only Arab Light via Yanbu available. March exports avg 4.355 mb/d (down from 7.1 Feb). Kpler: 218 crossings Mar 1-Apr 2 (94% decline). Four offshore fields still shut (~2-2.5M bpd). E-W Pipeline at max 7M bpd; Yanbu at 4.4M bpd with 40+ VLCCs queued. Brent ~$106. IEA warns April losses 'twice March'. Houthis threaten Bab al-Mandeb. OPEC+ Apr 5 expected output hike signal. Apr 6 Trump deadline."
+      summary: "14 drones intercepted Apr 3; Iran targets King Fahd Causeway in bridge hit list; ~2.5-3.0 mb/d offline; WH: Hormuz not core objective; Brent settled $109.03",
+      details: "Saudi intercepted 14 drones in early hours Apr 3 (Arab News). Iran published bridge target list including King Fahd Causeway (Saudi-Bahrain link) after B1 destruction. WH says Hormuz reopening 'not a core objective' — prolonged closure risk for Saudi exports. Aramco slashing Asia supply 2nd month — only Arab Light via Yanbu available. March exports avg 4.355 mb/d (down from 7.1 Feb). Kpler: 218 crossings Mar 1-Apr 2 (94% decline). Four offshore fields still shut (~2-2.5M bpd). E-W Pipeline at max 7M bpd; Yanbu at 4.4M bpd with 40+ VLCCs queued. Brent settled $109.03 (Apr 2). IEA warns April losses 'twice March'. Houthis threaten Bab al-Mandeb. OPEC+ Apr 5 expected output hike signal. Apr 6 Trump deadline. Rystad: total regional upstream disrupted 11,535 kboe/d oil+cond."
     },
     infrastructure: [
       { name: "Ghawar Field", type: "Oil Field", capacity: "~3.8 mb/d", status: "operational" },
@@ -364,7 +370,8 @@ const COUNTRY_STATUS_DATA = [
       { id: 12, title: "Dubai physical crude at $126/bbl, 76% above pre-war - CNBC", url: "https://www.cnbc.com/2026/03/28/oil-gas-prices-iran-war-hormuz.html", date: "2026-03-28" },
       { id: 13, title: "Iran strikes Prince Sultan Air Base, 15+ US troops wounded - NPR", url: "https://www.npr.org/2026/03/30/nx-s1-5765967/trump-iran-israel-lebanon-kharg-island-oil", date: "2026-03-28" },
       { id: 14, title: "Jeddah Summit: MBS, Qatar Emir, Jordan King condemn attacks - Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/3/31/iran-war-live-kuwaiti-oil-tanker-hit-in-dubai-port-3-un-troops-killed", date: "2026-03-31" },
-      { id: 15, title: "Brent +55% in March, record monthly surge since 1988 - CNBC", url: "https://www.cnbc.com/2026/03/30/oil-price-today-wti-brent-yemen-houthis-israel-iran-war.html", date: "2026-03-30" }
+      { id: 15, title: "Brent +55% in March, record monthly surge since 1988 - CNBC", url: "https://www.cnbc.com/2026/03/30/oil-price-today-wti-brent-yemen-houthis-israel-iran-war.html", date: "2026-03-30" },
+      { id: 16, title: "Saudi Arabian forces intercept 14 drones — Arab News", url: "https://www.arabnews.com/node/2638641/saudi-arabia", date: "2026-04-03" }
     ]
   },
   {
@@ -373,7 +380,7 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1E6}\u{1F1EA}",
     status: "critical",
     statusLabel: "Escalated",
-    summary: "Iran targets 3 Abu Dhabi bridges (Sheikh Zayed, Al Maqta, Khalifa) in hit list. UAE intercepted 438 BMs + 2,012 drones + 19 CMs (12 killed, 190 injured). ADCOP at 1.62M bpd (can surge to 1.8M). S&P Platts bifurcation live Apr 1. VLCC Al Salmi struck Mar 31. >50% crude offline. ~2,000 vessels trapped in Gulf (IMO). UN Hormuz vote Saturday Apr 5. Brent volatile $99-$110. Apr 6 deadline. HABSHAN GAS SHUT AGAIN Apr 3 — debris from intercepted missile caused fire; 2nd shutdown since war began (Bloomberg).",
+    summary: "Iran targets 3 Abu Dhabi bridges (Sheikh Zayed, Al Maqta, Khalifa) in hit list. UAE intercepted 438+ BMs + 2,012+ drones + 19+ CMs (12 killed, 190+ injured); Apr 3 alone: 18 BMs + 4 CMs + 47 drones intercepted. ADCOP at 1.62M bpd (can surge to 1.8M). S&P Platts bifurcation live Apr 1. VLCC Al Salmi struck Mar 31. >50% crude offline. ~2,000 vessels trapped in Gulf (IMO). UN Hormuz vote Saturday Apr 5 — stripped of Chapter VII. Brent settled $109.03 (Apr 2). Apr 6 deadline. HABSHAN GAS SHUT AGAIN Apr 3 — debris from intercepted missile caused fire; 2nd shutdown since war began (Bloomberg).",
     metrics: {
       headline: "HABSHAN GAS SHUT AGAIN Apr 3 (2nd time); Iran targets 3 Abu Dhabi bridges; ADCOP at 1.62M bpd; Brent ~$109",
       productionOffline: "Habshan 6.1 Bcf/d shut Apr 3 + Shah 1 Bcf/d + 417 kb/d refining; ADCOP at 1.62M bpd",
@@ -685,7 +692,7 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1E7}\u{1F1ED}",
     status: "critical",
     statusLabel: "FM / Struck",
-    summary: "Iran targets King Fahd Causeway (Saudi-Bahrain link) in bridge hit list. Batelco/AWS struck Apr 1. Alba smelter struck Mar 29. BAPCO Sitra (405 kb/d) offline. Bapco FM on all ops. Abu Safa shut. 5th attack. Bahrain-drafted UN Hormuz resolution vote Saturday Apr 5 — authorizes 'all defensive means necessary' for 6 months; China/Russia vetoes expected.",
+    summary: "Iran targets King Fahd Causeway (Saudi-Bahrain link) in bridge hit list. Bahrain intercepted cumulative 188 BMs + 445 drones since Feb 28 (Alwast News Apr 3). Batelco/AWS struck Apr 1. Alba smelter struck Mar 29. BAPCO Sitra (405 kb/d) offline. Bapco FM on all ops. Abu Safa shut. 5th attack. Bahrain-drafted UN Hormuz resolution vote Saturday Apr 5 — stripped of Chapter VII enforcement; China/Russia vetoes expected.",
     metrics: {
       headline: "405 kb/d refining offline",
       productionOffline: "Sitra refinery + Abu Safa field",
@@ -728,8 +735,8 @@ const COUNTRY_STATUS_DATA = [
     ],
     oilGasImpact: {
       severity: "critical",
-      summary: "Iran targets King Fahd Causeway in bridge hit list; Batelco/AWS struck Apr 1; 405 kb/d refining offline; UN Hormuz vote Sat Apr 5",
-      details: "Iran published bridge target list including King Fahd Causeway (Saudi-Bahrain link) after B1 destruction — raises risk to critical Saudi pipeline/road connection. Batelco/AWS struck Apr 1 — 5th attack on Bahrain. BAPCO Sitra (405 kb/d) struck 4 & 9 Mar. Bapco Energies FM on all ops. Abu Safa shut. Bahrain-drafted UN Hormuz resolution vote Saturday Apr 5 — authorizes 'all defensive means necessary' for at least 6 months; France joins China/Russia in opposing force authorization, vetoes likely; UK-led 40+ nation coalition demands reopening."
+      summary: "Iran targets King Fahd Causeway in bridge hit list; cumulative 188 BMs + 445 drones intercepted; Batelco/AWS struck Apr 1; 405 kb/d refining offline; UN Hormuz vote Sat Apr 5",
+      details: "Iran published bridge target list including King Fahd Causeway (Saudi-Bahrain link) after B1 destruction — raises risk to critical Saudi pipeline/road connection. Bahrain Defense Force reports cumulative 188 ballistic missiles + 445 drones intercepted since Feb 28 (Alwast News Apr 3); 16 drones intercepted in past 24 hours on Apr 3. Batelco/AWS struck Apr 1 — 5th attack on Bahrain. BAPCO Sitra (405 kb/d) struck 4 & 9 Mar. Bapco Energies FM on all ops. Abu Safa shut. Bahrain-drafted UN Hormuz resolution vote Saturday Apr 5 — stripped of Chapter VII enforcement authority after opposition from China/Russia/France; 'all defensive means necessary' for at least 6 months; vetoes likely; UK-led 40+ nation coalition demands reopening."
     },
     infrastructure: [
       { name: "Bahrain Field (Awali)", type: "Oil Field", capacity: "~45,000 bpd", status: "operational" },
@@ -749,7 +756,9 @@ const COUNTRY_STATUS_DATA = [
       { id: 5, title: "IRGC strikes Alba smelter - Al Jazeera", url: "https://www.aljazeera.com/news/2026/3/29/irans-irgc-claim-attacks-on-uae-bahrain-facilities-linked-to-us-war", date: "2026-03-29" },
       { id: 6, title: "National facility fire from Iranian aggression - Times of Israel", url: "https://www.timesofisrael.com/liveblog_entry/iranian-attacks-spark-fires-at-kuwait-airport-company-facility-in-bahrain/", date: "2026-04-01" },
       { id: 7, title: "UN to vote on Hormuz resolution as China opposes authorization of force — Al-Monitor", url: "https://www.al-monitor.com/originals/2026/04/un-vote-hormuz-resolution-china-opposes-authorization-force", date: "2026-04-03" },
-      { id: 8, title: "UN Security Council delays vote on authorizing force to protect Hormuz — France 24", url: "https://www.france24.com/en/live-news/20260403-un-security-council-to-vote-on-authorizing-force-to-protect-hormuz", date: "2026-04-03" }
+      { id: 8, title: "UN Security Council delays vote on authorizing force to protect Hormuz — France 24", url: "https://www.france24.com/en/live-news/20260403-un-security-council-to-vote-on-authorizing-force-to-protect-hormuz", date: "2026-04-03" },
+      { id: 9, title: "Bahrain Defense Force reports 188 missiles + 445 drones intercepted since Feb 28 — Alwast News", url: "https://en.alwast.net/arab/urgent-bahrain-defense-force-reports/", date: "2026-04-03" },
+      { id: 10, title: "Hormuz resolution loses Chapter VII as vote delayed — House of Saud", url: "https://houseofsaud.com/unsc-hormuz-vote-collapse/", date: "2026-04-03" }
     ]
   },
   {
@@ -845,11 +854,11 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1EE}\u{1F1F1}",
     status: "conflict",
     statusLabel: "Conflict / FM",
-    summary: "Iran targets Arik Bridge (Route 87, Galilee-Golan) in bridge hit list. Chevron FM on Leviathan. Karish shut. Tamar domestic only. Iran's 'most significant strike' on Tel Aviv Apr 1 — 14 injured incl. children. Israel struck 400+ Iran targets incl. B1 bridge Apr 3. Pentagon: 90% of Iran capability degraded. DM Katz vows Lebanon occupation. Trump: war to end in 2-3 weeks. LEVIATHAN RESTART: Energy Ministry announced Leviathan resumption Apr 2; Chevron restarting platform — ~1.2 Bcf/d gas returning.",
+    summary: "Iran targets Arik Bridge (Route 87, Galilee-Golan) in bridge hit list. Chevron FM on Leviathan partially lifted. Karish shut. Tamar domestic only. Iran's 'most significant strike' on Tel Aviv Apr 1 — 14 injured incl. children. Israel struck 400+ Iran targets incl. B1 bridge Apr 3. Pentagon: 90% of Iran capability degraded. DM Katz vows Lebanon occupation. Trump: war to end in 2-3 weeks. LEVIATHAN PRODUCING: Bloomberg Apr 3 confirms Leviathan resumed after 33-day shutdown; Newmed Energy says supply for domestic + exports resuming; ~1.2 Bcf/d ramping up.",
     metrics: {
-      headline: "Leviathan RESTARTING Apr 2 (~1.2 Bcf/d returning); Karish still shut; Iran massive strike on Tel Aviv Apr 1",
-      productionOffline: "Leviathan restarting + Karish shut; Tamar domestic only",
-      keyFigure: "Egypt/Jordan gas exports halted; 416 Iranian attack waves since Feb 28; Leviathan restart signals improved maritime security"
+      headline: "Leviathan CONFIRMED PRODUCING (Bloomberg Apr 3, ~1.2 Bcf/d ramping); Karish still shut; Iran massive strike on Tel Aviv Apr 1",
+      productionOffline: "Leviathan producing + Karish shut; Tamar domestic only",
+      keyFigure: "Egypt/Jordan gas exports halted; 416 Iranian attack waves since Feb 28; Leviathan production confirms improved maritime security"
     },
     production: {
       oil: { preWar: 0, current: 0, unit: "kb/d" },
@@ -857,7 +866,7 @@ const COUNTRY_STATUS_DATA = [
       refining: { capacity: 197, affected: 60, available: 137, unit: "kb/d" },
       notes: {
         oil: "No oil production; Leviathan restart does not affect crude",
-        gas: "Leviathan restarting Apr 2 (~1.2 Bcf/d ramping up); Karish still shut (~0.6 Bcf/d); Tamar supplying domestic (~1.0 Bcf/d); gas exports to Egypt/Jordan remain halted pending security assessment",
+        gas: "Leviathan confirmed producing (Bloomberg Apr 3, ~1.2 Bcf/d ramping up after 33-day shutdown); Karish still shut (~0.6 Bcf/d); Tamar supplying domestic (~1.0 Bcf/d); gas exports to Egypt/Jordan remain halted pending security assessment — Newmed says export capacity resuming",
         refining: "Haifa damaged but mostly online",
         ports: "No major oil/LNG export terminals; Leviathan restart may enable gas export resumption if pipeline security confirmed"
       }
@@ -866,7 +875,7 @@ const COUNTRY_STATUS_DATA = [
       {
         date: "2026-04-02",
         title: "Leviathan gas field resumes operations — Energy Ministry announces restart; Chevron ramping up platform",
-        description: "Israel's Energy Ministry announced that the Leviathan natural gas field, the country's largest offshore gas platform, will resume operations after being shut down since Feb 28 due to security concerns. Chevron Mediterranean Limited is working on restarting the platform with regular production expected within hours. Leviathan produces ~1.2 Bcf/d (~12 Bcm/yr) and accounts for over 70% of Israel's electricity generation. The restart signals improved security conditions around Israel's Mediterranean coast, though gas exports to Egypt and Jordan remain halted pending further assessment. Karish field remains shut. — OilPrice.com, Times of Israel, Washington Today, Business Upturn",
+        description: "Israel's Energy Ministry announced that the Leviathan natural gas field, the country's largest offshore gas platform, will resume operations after being shut down since Feb 28 due to security concerns. Chevron Mediterranean Limited is working on restarting the platform with regular production expected within hours. Leviathan produces ~1.2 Bcf/d (~12 Bcm/yr) and accounts for over 70% of Israel's electricity generation. The restart signals improved security conditions around Israel's Mediterranean coast, though gas exports to Egypt and Jordan remain halted pending further assessment. Karish field remains shut. Bloomberg Apr 3 confirmed Leviathan has resumed after 33-day shutdown; Newmed Energy spokesperson says supply for domestic market and exports can now resume. — OilPrice.com, Times of Israel, Washington Today, Business Upturn, Bloomberg",
         isNew: true
       },
       {
@@ -893,8 +902,8 @@ const COUNTRY_STATUS_DATA = [
     ],
     oilGasImpact: {
       severity: "critical",
-      summary: "Leviathan RESTARTING Apr 2 (~1.2 Bcf/d returning); Karish still shut; exports halted; massive Iranian strike on Tel Aviv Apr 1; DM Katz vows Lebanon occupation",
-      details: "Leviathan restarting Apr 2 — Energy Ministry announced resumption, Chevron ramping up platform (~1.2 Bcf/d returning). Karish (ministry shutdown, ~0.6 Bcf/d) still offline. Tamar producing ~1.0 Bcf/d for domestic only. Gas exports to Egypt/Jordan remain halted pending security assessment. Iran fired 'most significant strike since first days' at Tel Aviv Apr 1 — 10 missiles, 14 injured incl. children. 416 attack waves from Iran since Feb 28. Israel struck 400+ targets in Iran in 2 days. Israeli strikes killed 7 in Beirut. DM Katz vowed to occupy southern Lebanon post-war. Former FM Kharazi (Iran diplomacy lead) injured in strike — diplomacy derailed. Leviathan restart signals improved security around Israel's Mediterranean coast and is a concrete indicator of partial conflict de-escalation."
+      summary: "Leviathan CONFIRMED PRODUCING (Bloomberg Apr 3, ~1.2 Bcf/d ramping); Karish still shut; exports halted; massive Iranian strike on Tel Aviv Apr 1; DM Katz vows Lebanon occupation",
+      details: "Leviathan confirmed producing Apr 3 — Bloomberg reports resumed after 33-day shutdown; Newmed Energy says supply for domestic + exports can now resume (~1.2 Bcf/d ramping up). Karish (ministry shutdown, ~0.6 Bcf/d) still offline. Tamar producing ~1.0 Bcf/d for domestic only. Gas exports to Egypt/Jordan remain halted pending security assessment. Iran fired 'most significant strike since first days' at Tel Aviv Apr 1 — 10 missiles, 14 injured incl. children. 416 attack waves from Iran since Feb 28. Israel struck 400+ targets in Iran in 2 days. Israeli strikes killed 7 in Beirut. DM Katz vowed to occupy southern Lebanon post-war. Former FM Kharazi (Iran diplomacy lead) injured in strike — diplomacy derailed. Leviathan production confirms improved security around Israel's Mediterranean coast and is a concrete indicator of partial conflict de-escalation."
     },
     infrastructure: [
       { name: "Leviathan Gas Field", type: "Offshore Gas", capacity: "~1.2 Bcf/d", status: "operational", notes: "Energy Ministry announced restart Apr 2; Chevron ramping up platform; 70%+ of Israel electricity" },
@@ -916,7 +925,8 @@ const COUNTRY_STATUS_DATA = [
       { id: 7, title: "Israel struck 400+ targets in Iran in 2 days - CBS News", url: "https://www.cbsnews.com/live-updates/iran-war-trump-nato-tehran-threatens-us-tech-companies-strait-of-hormuz/", date: "2026-04-01" },
       { id: 8, title: "Giant Leviathan Gas Field Offshore Israel Resumes Operations — OilPrice.com", url: "https://oilprice.com/Latest-Energy-News/World-News/Giant-Leviathan-Gas-Field-Offshore-Israel-Resumes-Operations.html", date: "2026-04-02" },
       { id: 9, title: "Energy Ministry announces resumption of Leviathan operations — Times of Israel", url: "https://www.timesofisrael.com/liveblog_entry/energy-ministry-announces-resumption-of-operations-at-leviathan-offshore-gas-field/", date: "2026-04-02" },
-      { id: 10, title: "Chevron's Leviathan reopening raises questions over U.S. role — CTech", url: "https://www.calcalistech.com/ctechnews/article/rkhhss3oze", date: "2026-04-02" }
+      { id: 10, title: "Chevron's Leviathan reopening raises questions over U.S. role — CTech", url: "https://www.calcalistech.com/ctechnews/article/rkhhss3oze", date: "2026-04-02" },
+      { id: 11, title: "Israel Resumes Biggest Gas Field After War Shut It for a Month — Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-04-03/israel-resumes-biggest-gas-field-after-war-shut-it-for-a-month", date: "2026-04-03" }
     ]
   },
   {
@@ -925,9 +935,9 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1EE}\u{1F1F7}",
     status: "critical",
     statusLabel: "Struck / Disrupted",
-    summary: "Day 37: B1 bridge destroyed Apr 3. IDF kills missile chief Atimi. USAF F-15E shot down over Iran. Zarif calls for settlement — first internal voice for war's end. Iran retaliates with new salvos. UN Hormuz vote Saturday Apr 5. ~2,000 vessels trapped (IMO). Brent ~$109. OPEC+ Apr 5. Apr 6 power plant deadline.",
+    summary: "Day 37: B1 bridge destroyed Apr 3. IDF kills missile chief Atimi. USAF F-15E shot down over Iran. Zarif calls for settlement — first internal voice for war's end. Pezeshkian letter to Americans urges questioning of war motives. Iran retaliates with new salvos. UN Hormuz vote Saturday Apr 5 — resolution stripped of Chapter VII enforcement. ~2,000 vessels trapped (IMO). Brent settled $109.03. OPEC+ Apr 5. Apr 6 power plant deadline.",
     metrics: {
-      headline: "Day 37: B1 bridge destroyed; IDF kills missile chief Atimi; Iran retaliates; UN vote Sat Apr 5; OPEC+ Apr 5",
+      headline: "Day 37: B1 bridge destroyed; IDF kills missile chief Atimi; Iran retaliates; Zarif calls for settlement; UN vote Sat Apr 5 (stripped of Ch.VII); OPEC+ Apr 5",
       productionOffline: "South Pars phases + 14 oil fields reduced; 225 Kpler crossings since Mar 1; toll legalized; ~2,000 vessels trapped in Gulf",
       keyFigure: "~15% crude, ~13% gas disrupted; Kharg loading 1.84 mb/d; >1,900 killed in Iran; world losing 4.5-5 mb/d"
     },
@@ -940,7 +950,7 @@ const COUNTRY_STATUS_DATA = [
         gas: "Asaluyeh processing hit; ~100 MMcm/d offline (~12% of South Pars); Fajr Jam fire; nuclear talks suspended indefinitely",
         refining: "Tehran Refinery (250 kb/d) destroyed; Bandar Abbas curtailed; Siraf condensate operational; Isfahan steel/pharma struck Apr 1; B1 bridge collapse disrupts Tehran-Karaj logistics",
         lng: "No LNG export capacity; South Pars disruption affects domestic supply",
-        ports: "Kharg loading avg 1.84 mb/d; Jask bypass at ~300k bpd; 225 Kpler crossings since Mar 1 (94% decline); 2,190 ships trapped west of Hormuz (50 VLCCs, 12 VLGCs — Kpler/AP Apr 2); toll legalized; Philippines gets toll-free passage; IRGC toll at $2M/vessel in yuan; Iran-Oman transit protocol in final drafting; first non-Iranian VLCCs (Dhalkut + Habrut) exited Apr 2 (Argus)"
+        ports: "Kharg loading avg 1.84 mb/d; Jask bypass at ~300k bpd; 225 Kpler crossings since Mar 1 (94% decline); 2,190 ships trapped west of Hormuz (50 VLCCs, 12 VLGCs — Kpler/AP Apr 2); toll legalized; Philippines gets toll-free passage; IRGC toll at $2M/vessel in yuan; Iran-Oman transit protocol in final drafting; first non-Iranian VLCCs (Dhalkut + Habrut) exited Apr 2 (Argus); CMA CGM Kribi (French-owned, Maltese-flagged) first Western European transit since war began via IRGC corridor Apr 3 (Euronews)"
       }
     },
     events: [
@@ -1061,8 +1071,8 @@ const COUNTRY_STATUS_DATA = [
     ],
     oilGasImpact: {
       severity: "critical",
-      summary: "Day 37: B1 bridge destroyed; IDF kills missile chief Atimi; Iran retaliates at Gulf states; UN vote Sat Apr 5; ~2,000 vessels trapped; Brent ~$109",
-      details: "Day 37 (Apr 3): B1 bridge (Tehran-Karaj, tallest in ME) destroyed Apr 3, 8 killed 95 wounded. IDF killed Makram Atimi, commander of central Iranian ballistic missile unit in Kermanshah, along with several battalion commanders — degrading missile launch capability. Iran fired new missile salvos at Israel + Gulf states in retaliation; vowed 'crushing' attacks on regional infrastructure incl. power plants, bridges, desalination. Iran published bridge target list including Sheikh Jaber (Kuwait), King Fahd Causeway (Saudi-Bahrain), Sheikh Zayed/Khalifa/Al Maqta (Abu Dhabi), King Hussein/Abdoun (Jordan). UN Hormuz vote Saturday Apr 5 — Bahrain revised resolution authorizes 'all defensive means necessary' for 6 months; dropped explicit force reference to overcome objections; China opposes, vetoes likely. ~2,000 vessels trapped in Gulf (IMO). Pentagon claims 90% of Iran capability degraded. Brent ~$108.95 (Apr 3). Iran continues ~25 missiles + ~120 drones/day; >1,900 killed in Iran. Kpler: 218 crossings Mar 1-Apr 2 (94% decline). OPEC+ Apr 5 — likely to stick with 206 kb/d symbolic increase. Apr 6 power plant deadline. Kharg loading 1.84 mb/d. Rystad: $25B repair bill."
+      summary: "Day 37: B1 bridge destroyed; IDF kills missile chief Atimi; Iran retaliates at Gulf states; Zarif calls for settlement; UN vote Sat Apr 5 (stripped of Ch.VII); ~2,000 vessels trapped; Brent $109.03",
+      details: "Day 37 (Apr 3): B1 bridge (Tehran-Karaj, tallest in ME) destroyed Apr 3, 8 killed 95 wounded. IDF killed Makram Atimi, commander of central Iranian ballistic missile unit in Kermanshah, along with several battalion commanders — degrading missile launch capability. Iran fired new missile salvos at Israel + Gulf states in retaliation; vowed 'crushing' attacks on regional infrastructure incl. power plants, bridges, desalination. Iran published bridge target list including Sheikh Jaber (Kuwait), King Fahd Causeway (Saudi-Bahrain), Sheikh Zayed/Khalifa/Al Maqta (Abu Dhabi), King Hussein/Abdoun (Jordan). UN Hormuz vote Saturday Apr 5 — Bahrain resolution STRIPPED of Chapter VII enforcement authority (only provision giving binding legal force + military authorization); China/Russia/France opposed; vetoes likely. Pezeshkian wrote letter to Americans urging questioning of government war motives. Zarif called for Iran to 'declare victory and make deal' — first significant internal voice for settlement. ~2,000 vessels trapped in Gulf (IMO). Pentagon claims 90% of Iran capability degraded. Brent settled $109.03 (Apr 2). Iran continues ~25 missiles + ~120 drones/day; >1,900 killed in Iran. Kpler: 218 crossings Mar 1-Apr 2 (94% decline). OPEC+ Apr 5 — likely to stick with 206 kb/d symbolic increase. Apr 6 power plant deadline. Kharg loading 1.84 mb/d. Rystad: $25B repair bill; total regional upstream disrupted 11,535 kboe/d."
     },
     infrastructure: [
       { name: "South Pars Phases 2-3", type: "Gas Field", capacity: "~50 MMcm/d", status: "shutdown" },
@@ -1176,7 +1186,9 @@ const COUNTRY_STATUS_DATA = [
       { id: 73, title: "IDF kills Iranian ballistic missile chief Makram Atimi in Kermanshah — JPost", url: "https://www.jpost.com/middle-east/article-891953", date: "2026-04-03" },
       { id: 74, title: "Iran publishes lists of regional bridges as retaliation targets — Anadolu Agency", url: "https://www.aa.com.tr/en/middle-east/iran-publishes-lists-of-regional-bridges-in-possible-tit-for-tat-retaliation-after-us-israeli-attack/3889905", date: "2026-04-03" },
       { id: 75, title: "USAF F-15E Strike Eagle shot down over Iran (IRGC claimed F-35) — The Aviationist", url: "https://theaviationist.com/2026/04/03/iran-f-15e-debris/", date: "2026-04-03" },
-      { id: 76, title: "Zarif calls for Iran to 'declare victory and make deal' — Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/4/3/iran-war-live-trump-warns-assault-on-infrastructure-hasnt-even-started", date: "2026-04-03" }
+      { id: 76, title: "Zarif calls for Iran to 'declare victory and make deal' — Al Jazeera", url: "https://www.aljazeera.com/news/liveblog/2026/4/3/iran-war-live-trump-warns-assault-on-infrastructure-hasnt-even-started", date: "2026-04-03" },
+      { id: 77, title: "French ship CMA CGM Kribi crosses Hormuz in first Western European transit — Euronews", url: "https://www.euronews.com/business/2026/04/03/french-ship-crosses-strait-of-hormuz-in-first-western-european-transit-during-iran-war", date: "2026-04-03" },
+      { id: 78, title: "War insurance costs in the Gulf risen 1,900% — Semafor", url: "https://www.semafor.com/article/04/01/2026/the-cost-of-war-insurance-in-the-gulf-has-risen-1900", date: "2026-04-01" }
     ]
   }
 ];
