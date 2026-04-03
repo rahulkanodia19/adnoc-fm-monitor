@@ -90,35 +90,24 @@ async function fetchKpler(pages) {
   console.log('[premium] Kpler: connecting...');
   const ws = await connectPage(page);
 
-  // Navigate to intelligence page
-  const currentUrl = page.url;
-  console.log('[premium] Kpler: navigating to /intelligence...');
-  await navigate(ws, 'https://terminal.kpler.com/intelligence');
-  // Extra wait for SPA to render
-  await new Promise(r => setTimeout(r, 5000));
-
-  let content = await evaluate(ws, 'document.body?.innerText?.substring(0, 8000) || "empty"');
-  const url = await evaluate(ws, 'window.location.href', 2);
-
-  // If content is too short, take screenshot as fallback
+  // Kpler SPA doesn't render via CDP navigation — take screenshot of current page
+  const content = await evaluate(ws, 'document.body?.innerText?.substring(0, 8000) || "empty"');
+  const ssData = await screenshot(ws);
   let screenshotFile = null;
-  if (!content || content.length < 50) {
-    console.log('[premium] Kpler: text extraction limited, taking screenshot...');
-    const ssData = await screenshot(ws, 51);
-    if (ssData) {
-      const ssPath = path.join(OUT_DIR, '.kpler-intelligence.png');
-      fs.writeFileSync(ssPath, Buffer.from(ssData, 'base64'));
-      screenshotFile = '.kpler-intelligence.png';
-      console.log('[premium] Kpler: screenshot saved');
-    }
+  if (ssData) {
+    fs.writeFileSync(path.join(OUT_DIR, '.kpler-screenshot.png'), Buffer.from(ssData, 'base64'));
+    screenshotFile = '.kpler-screenshot.png';
   }
 
-  // Navigate back
-  ws.send(JSON.stringify({ id: 98, method: 'Page.navigate', params: { url: currentUrl } }));
-
   ws.close();
-  console.log('[premium] Kpler: extracted', (content || '').length, 'chars');
-  return { status: 'accessed', url: url || 'terminal.kpler.com/intelligence', content: content || '', screenshot: screenshotFile };
+  console.log('[premium] Kpler:', (content || '').length, 'chars + screenshot');
+  return {
+    status: 'accessed (current page only — intelligence SPA not extractable via CDP)',
+    url: page.url,
+    content: content || '',
+    screenshot: screenshotFile,
+    note: 'Kpler intelligence page does not render via CDP. Content limited to current page. Full intelligence access requires Chrome MCP or manual browsing.',
+  };
 }
 
 async function fetchRystad(pages) {
@@ -172,6 +161,36 @@ async function fetchRystad(pages) {
   };
 }
 
+function interceptDocumentAPI(ws) {
+  return new Promise((resolve) => {
+    let reqId = null;
+    const handler = m => {
+      const d = JSON.parse(m);
+      if (d.method === 'Network.responseReceived') {
+        const url = d.params?.response?.url || '';
+        if (url.includes('masterviewer-api/v1/Document?source=phoenix')) {
+          reqId = d.params.requestId;
+        }
+      }
+    };
+    ws.on('message', handler);
+    // Return function to get the response body once navigation completes
+    resolve({
+      getBody: async () => {
+        ws.removeListener('message', handler);
+        if (!reqId) return null;
+        return new Promise((res) => {
+          ws.send(JSON.stringify({ id: 77, method: 'Network.getResponseBody', params: { requestId: reqId } }));
+          const h = m => { const d = JSON.parse(m); if (d.id === 77) { ws.removeListener('message', h); res(d.result); } };
+          ws.on('message', h);
+          setTimeout(() => { ws.removeListener('message', h); res(null); }, 5000);
+        });
+      },
+      cleanup: () => ws.removeListener('message', handler),
+    });
+  });
+}
+
 async function fetchSPGlobal(pages) {
   const page = pages.find(p => p.url.includes('connect.spglobal.com'));
   if (!page) return { status: 'no tab', content: '' };
@@ -179,18 +198,54 @@ async function fetchSPGlobal(pages) {
   console.log('[premium] S&P Connect: connecting...');
   const ws = await connectPage(page);
 
-  // Ensure we're on the home page
+  // 1. Get home page headlines + article links
   if (!page.url.includes('/home')) {
-    console.log('[premium] S&P Connect: navigating to /home...');
     await navigate(ws, 'https://connect.spglobal.com/home');
   }
+  const homeContent = await evaluate(ws, 'document.body?.innerText?.substring(0, 8000) || "empty"');
+  const linksRaw = await evaluate(ws,
+    'JSON.stringify(Array.from(document.querySelectorAll("a[href*=\'/document/show/phoenix/\']")).map(a=>({text:a.textContent.trim().substring(0,120),href:a.href})).filter(a=>a.text.length>10).slice(0,20))', 2);
 
-  const content = await evaluate(ws, 'document.body?.innerText?.substring(0, 8000) || "empty"');
-  const url = await evaluate(ws, 'window.location.href', 2);
+  let links = [];
+  try { links = JSON.parse(linksRaw || '[]'); } catch {}
 
+  // 2. Filter for Gulf/energy relevant articles
+  const KEYWORDS = ['gulf', 'iran', 'hormuz', 'lng', 'crude', 'war', 'conflict', 'rapid response', 'persian', 'energy', 'oil', 'opec', 'middle east'];
+  const relevant = links.filter(l => KEYWORDS.some(kw => l.text.toLowerCase().includes(kw))).slice(0, 3);
+  console.log('[premium] S&P Connect:', links.length, 'articles found,', relevant.length, 'Gulf-relevant');
+
+  // 3. Fetch full content for each relevant article
+  ws.send(JSON.stringify({ id: 70, method: 'Network.enable', params: {} }));
+  const articles = [];
+  for (const article of relevant) {
+    console.log('[premium] S&P Connect: fetching "' + article.text.substring(0, 60) + '"...');
+    const interceptor = await interceptDocumentAPI(ws);
+    ws.send(JSON.stringify({ id: 71, method: 'Page.navigate', params: { url: article.href } }));
+    await new Promise(r => setTimeout(r, 8000));
+    const bodyResult = await interceptor.getBody();
+    if (bodyResult && bodyResult.body) {
+      try {
+        const doc = JSON.parse(bodyResult.body).document;
+        const html = doc?.html || '';
+        const text = html.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+        articles.push({ title: article.text, content: text });
+        console.log('[premium] S&P Connect:  → ' + text.length + ' chars extracted');
+      } catch {}
+    }
+  }
+  ws.send(JSON.stringify({ id: 72, method: 'Network.disable', params: {} }));
+
+  // Navigate back to home
+  ws.send(JSON.stringify({ id: 73, method: 'Page.navigate', params: { url: 'https://connect.spglobal.com/home' } }));
+  await new Promise(r => setTimeout(r, 2000));
   ws.close();
-  console.log('[premium] S&P Connect: extracted', (content || '').length, 'chars');
-  return { status: 'accessed', url: url || 'connect.spglobal.com/home', content: content || '' };
+
+  // Combine home headlines + full article content
+  const fullContent = homeContent + '\n\n--- FULL ARTICLE CONTENT ---\n\n' +
+    articles.map(a => '=== ' + a.title + ' ===\n' + a.content).join('\n\n');
+
+  console.log('[premium] S&P Connect: total', fullContent.length, 'chars (' + articles.length + ' full articles)');
+  return { status: 'accessed', url: 'connect.spglobal.com/home', content: fullContent, articlesExtracted: articles.length };
 }
 
 async function main() {
