@@ -1,6 +1,33 @@
 {
   "vessels": [
     {
+      "name": "V Monoceros",
+      "imo": "9478470",
+      "mmsi": "563249500",
+      "vesselTypeClass": "Handysize",
+      "state": "ballast",
+      "flagName": "Singapore",
+      "deadWeight": 33145,
+      "commodityTypes": [
+        "dry"
+      ],
+      "capacity": 32432,
+      "speed": 9.8,
+      "course": 174,
+      "lat": 26.128012,
+      "lng": 55.914951,
+      "destination": "China",
+      "destinationEta": "2026-04-10T03:02:13.059034",
+      "aisDestination": null,
+      "product": "Dry Bulk",
+      "lastPortCall": {
+        "start": "2026-02-23T14:50:09",
+        "end": "2026-03-01T10:54:41"
+      },
+      "transitDirection": "exiting",
+      "isTransiting": true
+    },
+    {
       "name": "Yas Sky",
       "imo": "9145982",
       "mmsi": "351495000",
@@ -23,87 +50,6 @@
         "end": "2026-03-07T20:56:47"
       },
       "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
-      "name": "Star Line",
-      "imo": "9237618",
-      "mmsi": "306884000",
-      "vesselTypeClass": "Aframax/LR2",
-      "state": "ballast",
-      "flagName": "Panama",
-      "deadWeight": 105716,
-      "commodityTypes": [
-        "liquids"
-      ],
-      "capacity": 115602,
-      "speed": 8.3,
-      "course": 235,
-      "lat": 26.598833,
-      "lng": 55.977665,
-      "destination": "Kharg Island",
-      "destinationEta": "2026-04-05T15:00:00",
-      "aisDestination": null,
-      "product": "Iran",
-      "controller": "HEIDMAR INC",
-      "lastPortCall": {
-        "start": "2026-04-02T00:00:00",
-        "end": "2026-04-03T00:00:00"
-      },
-      "transitDirection": "unknown",
-      "isTransiting": true
-    },
-    {
-      "name": "Uhud",
-      "imo": "9254939",
-      "mmsi": "370949000",
-      "vesselTypeClass": "MR",
-      "state": "ballast",
-      "flagName": "Panama",
-      "deadWeight": 45987,
-      "commodityTypes": [
-        "liquids"
-      ],
-      "capacity": 51460,
-      "speed": 9.8,
-      "course": 107,
-      "lat": 25.507902,
-      "lng": 56.546928,
-      "destination": "Fujairah",
-      "destinationEta": "2026-04-03T15:00:08.452055",
-      "aisDestination": null,
-      "product": "Clean petroleum products",
-      "lastPortCall": {
-        "start": "2026-03-22T07:07:03",
-        "end": "2026-03-22T07:07:03"
-      },
-      "transitDirection": "exiting",
-      "isTransiting": true
-    },
-    {
-      "name": "Batis",
-      "imo": "9465760",
-      "mmsi": "422040500",
-      "vesselTypeClass": "Supramax",
-      "state": "loaded",
-      "flagName": "Iran (Islamic Republic of)",
-      "deadWeight": 53100,
-      "commodityTypes": [
-        "dry"
-      ],
-      "capacity": 51958,
-      "speed": 8.4,
-      "course": 139,
-      "lat": 26.727633,
-      "lng": 56.627308,
-      "aisDestination": null,
-      "product": "Steel",
-      "controller": "Sapid",
-      "lastPortCall": {
-        "start": "2026-03-09T13:48:27",
-        "end": "2026-03-09T16:08:21"
-      },
-      "transitDirection": "exiting",
       "isTransiting": true
     },
     {
@@ -229,7 +175,7 @@
       "lat": 25.594561,
       "lng": 56.455978,
       "destination": "Fujairah",
-      "destinationEta": "2026-04-03T18:00:06.656312",
+      "destinationEta": "2026-04-04T21:00:06.515916",
       "aisDestination": null,
       "product": "Limestone",
       "lastPortCall": {
@@ -312,12 +258,12 @@
       "isTransiting": true
     }
   ],
-  "exitingCount": 4,
+  "exitingCount": 3,
   "enteringCount": 6,
-  "totalTransiting": 12,
+  "totalTransiting": 10,
   "uaeExiting": 0,
   "uaeEntering": 0,
   "adnocExiting": 0,
   "adnocEntering": 0,
-  "syncTimestamp": "2026-04-03T21:53:09.728Z"
+  "syncTimestamp": "2026-04-03T21:54:53.079Z"
 }

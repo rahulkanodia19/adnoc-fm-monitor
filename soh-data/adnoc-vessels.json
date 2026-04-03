@@ -29,10 +29,10 @@
       "flagName": "United Arab Emirates",
       "deadWeight": 17510,
       "capacity": 19020,
-      "speed": 0.6,
-      "course": 12,
-      "lat": 25.370468,
-      "lng": 55.381081,
+      "speed": 0,
+      "course": 132,
+      "lat": 25.370533,
+      "lng": 55.38105,
       "product": "Fuel Oils",
       "destination": null,
       "departed": "2026-04-02 13:54",
@@ -210,9 +210,9 @@
       "deadWeight": 75618,
       "capacity": 83309,
       "speed": 0,
-      "course": 66,
-      "lat": 25.01,
-      "lng": 54.462582,
+      "course": 15,
+      "lat": 25.008533,
+      "lng": 54.459801,
       "product": "Clean petroleum products",
       "destination": null,
       "departed": "2026-03-07 06:06",
@@ -222,5 +222,5 @@
     }
   ],
   "count": 11,
-  "syncTimestamp": "2026-04-03T21:53:09.728Z"
+  "syncTimestamp": "2026-04-03T21:54:53.079Z"
 }

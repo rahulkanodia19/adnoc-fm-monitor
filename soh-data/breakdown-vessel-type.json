@@ -8,39 +8,39 @@
     },
     {
       "label": "MR",
-      "total": 123,
-      "ballast": 69,
-      "laden": 54
+      "total": 122,
+      "ballast": 67,
+      "laden": 55
     },
     {
       "label": "VLCC",
       "total": 116,
-      "ballast": 39,
-      "laden": 77
+      "ballast": 40,
+      "laden": 76
     },
     {
       "label": "Handysize",
-      "total": 108,
+      "total": 109,
       "ballast": 66,
-      "laden": 42
+      "laden": 43
     },
     {
       "label": "Supramax",
       "total": 72,
-      "ballast": 36,
-      "laden": 36
+      "ballast": 34,
+      "laden": 38
     },
     {
       "label": "Intermediate Tankers",
-      "total": 62,
+      "total": 61,
       "ballast": 19,
-      "laden": 43
+      "laden": 42
     },
     {
       "label": "Panamax",
-      "total": 52,
-      "ballast": 34,
-      "laden": 18
+      "total": 50,
+      "ballast": 33,
+      "laden": 17
     },
     {
       "label": "Aframax/LR2",
@@ -55,22 +55,22 @@
       "laden": 26
     },
     {
-      "label": "Handy/MR1",
-      "total": 40,
-      "ballast": 18,
-      "laden": 22
+      "label": "Kamsarmax",
+      "total": 41,
+      "ballast": 27,
+      "laden": 14
     },
     {
-      "label": "Kamsarmax",
-      "total": 39,
-      "ballast": 27,
-      "laden": 12
+      "label": "Handy/MR1",
+      "total": 40,
+      "ballast": 17,
+      "laden": 23
     },
     {
       "label": "SGC",
       "total": 32,
-      "ballast": 28,
-      "laden": 4
+      "ballast": 27,
+      "laden": 5
     },
     {
       "label": "Suezmax/LR3",
@@ -81,8 +81,8 @@
     {
       "label": "VLGC",
       "total": 28,
-      "ballast": 16,
-      "laden": 12
+      "ballast": 15,
+      "laden": 13
     },
     {
       "label": "Ultramax",
@@ -99,8 +99,8 @@
     {
       "label": "MGC",
       "total": 13,
-      "ballast": 6,
-      "laden": 7
+      "ballast": 5,
+      "laden": 8
     },
     {
       "label": "Lower Conventional",
@@ -151,6 +151,6 @@
       "laden": 1
     }
   ],
-  "total": 1047,
-  "syncTimestamp": "2026-04-03T21:53:09.728Z"
+  "total": 1046,
+  "syncTimestamp": "2026-04-03T21:54:53.079Z"
 }
