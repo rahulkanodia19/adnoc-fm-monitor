@@ -47,6 +47,12 @@ else
   echo "[sync-news] WARNING: Chrome not running. Using web search only (no premium sources)."
 fi
 
+# Pre-fetch premium source content via CDP (bypasses MCP timeout issues)
+if curl -s "http://127.0.0.1:$DEBUG_PORT/json/version" > /dev/null 2>&1; then
+  echo "[sync-news] Pre-fetching premium source content via CDP..."
+  node "$SCRIPT_DIR/fetch-premium-sources.js" || echo "[sync-news] Premium fetch failed (non-fatal)"
+fi
+
 # Run Claude agent
 echo "[sync-news] Running Claude agent (web search + premium sources)..."
 claude -p "$(cat scripts/sync-prompt.md)" \

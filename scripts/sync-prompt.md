@@ -198,9 +198,27 @@ Write `energy-news-data.json` with this structure:
 
 ---
 
-## Step 3c: Premium browser-authenticated search (if browser tools available)
+## Step 3c: Premium source data
 
-If you have access to Chrome DevTools MCP tools (mcp__chrome-devtools__*), use them to check authenticated premium platforms for data that supplements your web searches.
+Premium source content is pre-fetched from authenticated platforms before this agent runs. **First, check if pre-fetched data exists:**
+
+1. Read the file `soh-data/.premium-sources.json` — it contains extracted text/data from:
+   - **Kpler** (`terminal.kpler.com/intelligence`) — intelligence articles and market reports
+   - **Rystad** (`portal.rystadenergy.com/dashboards/detail/1047/0`) — Middle East Conflict Oil & Gas Infrastructure dashboard (may include screenshot at `soh-data/.rystad-dashboard.png`)
+   - **S&P Connect** (`connect.spglobal.com/home`) — news feed, market commentary, CERA reports
+
+2. If the file exists with content, analyze EACH platform's data and extract findings for data.js
+3. If the file doesn't exist or is empty, AND you have Chrome DevTools MCP tools, use browser fallback below
+
+### Analyzing pre-fetched content
+For each platform in `.premium-sources.json`:
+- Read the `content` field for text data
+- If a `screenshot` field exists, read that image file for visual data (charts, maps, tables)
+- Extract any data points relevant to: country status, FM declarations, shutdowns, production impacts
+- Cross-reference with your web search findings — premium data takes precedence
+
+### Browser fallback (only if pre-fetched data unavailable)
+If `soh-data/.premium-sources.json` doesn't exist or all platforms show "chrome unavailable", AND you have access to Chrome DevTools MCP tools (mcp__chrome-devtools__*), use them to check authenticated premium platforms directly.
 
 **IMPORTANT: Premium source searches are the HIGHEST PRIORITY part of this sync.** Web search (Steps 3-3b) provides public data. Premium platforms provide EXCLUSIVE data — field-level production analytics, infrastructure damage assessments, and intelligence reports that cannot be found elsewhere. You MUST navigate to each platform and perform thorough searches. Skipping is only acceptable if login/MFA blocks access.
 
