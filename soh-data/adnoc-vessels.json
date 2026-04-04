@@ -29,10 +29,10 @@
       "flagName": "United Arab Emirates",
       "deadWeight": 17510,
       "capacity": 19020,
-      "speed": 0,
-      "course": 132,
-      "lat": 25.370533,
-      "lng": 55.38105,
+      "speed": 0.8,
+      "course": 231,
+      "lat": 25.370068,
+      "lng": 55.381115,
       "product": "Fuel Oils",
       "destination": null,
       "departed": "2026-04-02 13:54",
@@ -209,10 +209,10 @@
       "flagName": "Liberia",
       "deadWeight": 75618,
       "capacity": 83309,
-      "speed": 0,
-      "course": 15,
-      "lat": 25.008533,
-      "lng": 54.459801,
+      "speed": 0.2,
+      "course": 36,
+      "lat": 25.008564,
+      "lng": 54.461044,
       "product": "Clean petroleum products",
       "destination": null,
       "departed": "2026-03-07 06:06",
@@ -222,5 +222,5 @@
     }
   ],
   "count": 11,
-  "syncTimestamp": "2026-04-04T20:30:02.027Z"
+  "syncTimestamp": "2026-04-04T20:30:45.017Z"
 }

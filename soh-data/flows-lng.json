@@ -1,21 +1,6 @@
 {
   "series": [
     {
-      "date": "2024-04-03",
-      "datasets": [
-        {
-          "datasetName": "flows",
-          "values": {
-            "volume": 677919,
-            "volume_gas": 386924404.36,
-            "mass": 309972.30392,
-            "energy": 16349227.724066004
-          }
-        }
-      ],
-      "periodEndDate": "2024-04-03T23:59:59.999Z"
-    },
-    {
       "date": "2024-04-04",
       "datasets": [
         {
@@ -429,7 +414,7 @@
             "volume": 689848,
             "volume_gas": 393735281.59999996,
             "mass": 309110.8222,
-            "energy": 16513388.696237193
+            "energy": 16513388.696237192
           }
         }
       ],
@@ -563,7 +548,7 @@
           "values": {
             "volume": 286732,
             "volume_gas": 163632217.76,
-            "mass": 130021.49272,
+            "mass": 130021.49271999998,
             "energy": 6999749.014800172
           }
         }
@@ -682,7 +667,7 @@
           "datasetName": "flows",
           "values": {
             "volume": 589933,
-            "volume_gas": 336662964.43999994,
+            "volume_gas": 336662964.44,
             "mass": 267511.01818,
             "energy": 14401541.98187893
           }
@@ -727,7 +712,7 @@
           "datasetName": "flows",
           "values": {
             "volume": 545916,
-            "volume_gas": 311585867.68,
+            "volume_gas": 311585867.67999995,
             "mass": 249749.06996,
             "energy": 13155275.794803828
           }
@@ -1162,7 +1147,7 @@
           "datasetName": "flows",
           "values": {
             "volume": 702236,
-            "volume_gas": 400793279.1999999,
+            "volume_gas": 400793279.2,
             "mass": 320567.4629,
             "energy": 16976578.707044147
           }
@@ -10964,6 +10949,21 @@
         }
       ],
       "periodEndDate": "2026-04-03T23:59:59.999Z"
+    },
+    {
+      "date": "2026-04-04",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 0,
+            "volume_gas": 0,
+            "mass": 0,
+            "energy": 0
+          }
+        }
+      ],
+      "periodEndDate": "2026-04-04T23:59:59.999Z"
     }
   ],
   "metadata": null

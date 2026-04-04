@@ -1,33 +1,6 @@
 {
   "vessels": [
     {
-      "name": "V Monoceros",
-      "imo": "9478470",
-      "mmsi": "563249500",
-      "vesselTypeClass": "Handysize",
-      "state": "ballast",
-      "flagName": "Singapore",
-      "deadWeight": 33145,
-      "commodityTypes": [
-        "dry"
-      ],
-      "capacity": 32432,
-      "speed": 9.8,
-      "course": 174,
-      "lat": 26.128012,
-      "lng": 55.914951,
-      "destination": "China",
-      "destinationEta": "2026-04-10T03:02:13.059034",
-      "aisDestination": null,
-      "product": "Dry Bulk",
-      "lastPortCall": {
-        "start": "2026-02-23T14:50:09",
-        "end": "2026-03-01T10:54:41"
-      },
-      "transitDirection": "exiting",
-      "isTransiting": true
-    },
-    {
       "name": "Yas Sky",
       "imo": "9145982",
       "mmsi": "351495000",
@@ -53,31 +26,56 @@
       "isTransiting": true
     },
     {
-      "name": "Gcl Sabarmati",
-      "imo": "9481661",
-      "mmsi": "563136500",
-      "vesselTypeClass": "Baby Capes",
-      "state": "ballast",
-      "flagName": "Singapore",
-      "deadWeight": 106528,
+      "name": "Almajd I",
+      "imo": "9232163",
+      "mmsi": "341372002",
+      "vesselTypeClass": "Supramax",
+      "state": "loaded",
+      "flagName": "Cyprus",
+      "deadWeight": 53806,
       "commodityTypes": [
         "dry"
       ],
-      "capacity": 104238,
-      "speed": 9.3,
-      "course": 229,
-      "lat": 25.595968,
-      "lng": 56.441582,
-      "destination": "Dibba Port",
-      "destinationEta": "2026-04-04T09:00:07.005371",
+      "capacity": 52649,
+      "speed": 8.7,
+      "course": 273,
+      "lat": 26.003178,
+      "lng": 55.936707,
+      "destination": "Mina Al-Ahmadi",
+      "destinationEta": "2026-04-07T06:00:00",
       "aisDestination": null,
-      "product": "Medium CV",
-      "controller": "Synergy Marine Group",
+      "product": "Cement",
       "lastPortCall": {
-        "start": "2026-03-19T10:34:15",
-        "end": "2026-03-22T10:19:35"
+        "start": "2026-04-03T18:58:59",
+        "end": "2026-04-04T11:16:50"
       },
-      "transitDirection": "unknown",
+      "transitDirection": "entering",
+      "isTransiting": true
+    },
+    {
+      "name": "Ocean Pretty",
+      "imo": "9257084",
+      "mmsi": "314001120",
+      "vesselTypeClass": "Supramax",
+      "state": "ballast",
+      "flagName": "Liberia",
+      "deadWeight": 51187,
+      "commodityTypes": [
+        "dry"
+      ],
+      "capacity": 50100,
+      "speed": 27.4,
+      "course": 133,
+      "lat": 25.606651,
+      "lng": 56.417187,
+      "aisDestination": null,
+      "product": "Steel",
+      "controller": "Kaalbye Shipping",
+      "lastPortCall": {
+        "start": "2026-03-28T16:35:00",
+        "end": "2026-03-28T16:35:00"
+      },
+      "transitDirection": "exiting",
       "isTransiting": true
     },
     {
@@ -259,11 +257,11 @@
     }
   ],
   "exitingCount": 3,
-  "enteringCount": 6,
+  "enteringCount": 7,
   "totalTransiting": 10,
   "uaeExiting": 0,
   "uaeEntering": 0,
   "adnocExiting": 0,
   "adnocEntering": 0,
-  "syncTimestamp": "2026-04-04T20:30:02.027Z"
+  "syncTimestamp": "2026-04-04T20:30:45.017Z"
 }
