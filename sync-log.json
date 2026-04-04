@@ -1,37 +1,24 @@
 {
-  "timestamp": "2026-04-03T19:30:00.000Z",
+  "timestamp": "2026-04-04T11:45:00.000Z",
   "success": true,
-  "changes": "Incremental update from Apr 3 10:00 UTC baseline. Added: (1) Saudi 14-drone interception Apr 3 event + source (Arab News); (2) Bahrain cumulative intercept totals updated to 188 BMs + 445 drones since Feb 28 (Alwast News Apr 3); (3) UN Hormuz resolution STRIPPED of Chapter VII enforcement authority — loses binding legal force + military authorization (House of Saud, WaPo); (4) Israel Leviathan CONFIRMED PRODUCING per Bloomberg Apr 3 (was 'announced restart' before); Newmed Energy says domestic + export supply resuming; (5) Zarif settlement call + Pezeshkian letter to Americans added to Iran context; (6) Rystad total upstream disrupted figure (11,535 kboe/d) added to Saudi/Iran metrics; (7) Brent price updated to $109.03 settled (Apr 2, CNBC). No new FM declarations. No new shutdowns. All isNew flags current.",
+  "changes": "Day 38 updates: (1) Mahshahr Petrochemical Zone struck Apr 4 — Fajr 1&2, Rejal, Amir Kabir, Bandar Imam hit; 5 injured (Tasnim/Anadolu); (2) Bushehr nuclear plant 4th strike — 1 killed; Rosatom evacuating 200+; (3) F-15E shot down (1 WSO missing); A-10 crashed Kuwait; 365 US injuries; (4) Iran rejects 48-hr ceasefire — 'Hormuz will never return to pre-war status quo'; (5) IRGC strikes US 82nd Airborne Bubiyan Island; (6) B1 death toll → 13; (7) Habshan casualties (1 Egyptian killed, 4 injured); (8) Dated Brent physical $141.37 (highest since 2008); Brent futures $112.42; (9) UN vote delayed to next week; (10) Zarif Foreign Affairs proposal + UAE rejection. Updated: Iran Bandar Imam infrastructure status → struck. Added 10 new Iran sources, 1 new event (Day 38). Updated summaries for 5 countries. Updated energy-news-data.json. No new FM declarations. No new shutdowns.",
   "countriesCount": 9,
   "fmCount": 29,
   "shutdownsCount": 31,
-  "newShutdowns": [],
-  "newFMDeclarations": [],
-  "noNewFmReason": "No new force majeure declarations found in 15+ web searches across Tier 1-3 sources. Last FM was Formosa Plastics Corp (effective Apr 1). Petrochemical operating rates at ~60% in Asia per Asia Business Daily but no new formal FM notifications since Apr 1.",
+  "dataLossCheck": "PASSED — all 9 countries: summaries equal or longer, sources equal or greater, events equal or greater. FM 29->29. Shutdowns 31->31.",
   "sourcesChecked": {
-    "tier1": ["Bloomberg (Leviathan Apr 3, Habshan, Iran strikes)", "S&P Global/Platts (bifurcation, LNG scenarios)", "Rystad Energy (dashboard: 11,535 kboe/d disrupted)", "Kpler (225 crossings, 94% decline)", "Argus Media (Iraq Syria route)", "UANI (shipping updates)"],
-    "tier2": ["Al Jazeera (Iran war liveblog, Kuwait strikes)", "CNBC (Brent $109.03, IEA warns, Trump speech)", "The National (Kuwait refinery, ADNOC)", "Arab News (Saudi 14 drones intercepted Apr 3)", "NPR (Iran hits Gulf refineries Apr 3)", "PBS (Iran fires on Gulf neighbors)", "CNN (F-15E shot down, 2000 vessels trapped)", "Washington Post (Hormuz resolution)", "Middle East Eye (Iraq Syria route)"],
-    "tier3": ["OilPrice.com (Leviathan, OPEC+)", "House of Saud (UNSC Chapter VII stripped)", "Alwast News (Bahrain 188 BMs + 445 drones)", "Voice of Emirates (Bahrain intercepts)", "Gulf Insider (Saudi drones)", "The Aviationist (F-15E)", "C&EN (Asia petrochemical crisis)", "Hydrocarbon Processing (Asia cracker shutdowns)"]
+    "tier1": ["S&P Global (Rapid Response Vol 4.0 via premium sources)", "Bloomberg", "Reuters", "Kpler (map only)", "Rystad (login required)"],
+    "tier2": ["Al Jazeera", "CNBC", "CBS News", "NBC News", "NPR", "Washington Post", "CNN", "Fortune", "The National", "Arab News", "Axios", "Anadolu Agency", "Gulf News", "Asharq Al-Awsat", "Hellenic Shipping News"],
+    "tier3": ["OilPrice.com", "Vortexa", "UANI", "Wikipedia", "PGJ Online", "Hydrocarbon Processing", "BIC Magazine", "American Action Forum", "Atlantic Council"]
   },
   "premiumSources": {
-    "kpler": "Intelligence SPA not extractable via CDP — map page loaded, vessel list accessible",
-    "rystad": "Accessed — Middle East Conflict dashboard: Oil+Cond 11,535 kboe/d, Gas 3,400, NGL 1,085 disrupted; Refineries 2,178 kbbl/d; Terminals 1,785 kbbl; Safaniya 1,069 kboe/d; Greater Burgan 1,010 kboe/d; Rumaila 947 kboe/d",
-    "spglobal": "Not in pre-fetched data; covered via web search"
+    "kpler": "accessed (map only — SPA not extractable via CDP)",
+    "rystad": "login required (session expired — MFA needed)",
+    "spglobal": "accessed — Rapid Response Vol 4.0 (Mar 31) extracted: Brent $120/bbl avg April, $200 scenario if May closure, GCC -200k vehicle sales, global -800k-900k units"
   },
   "infrastructureMonitoring": {
-    "summary": "No new attacks found after Apr 3 10:00 UTC. Habshan still shut (2nd shutdown). Kuwait Al-Ahmadi + desal still recovering from Apr 3 double-strike. Saudi intercepted 14 drones Apr 3. Bahrain 16 drones in 24 hrs.",
-    "queriesWithNewFindings": ["Saudi 14 drones (query 17)", "Bahrain cumulative intercepts (query 22)", "Iran bridges/infrastructure (query 24)", "Israel Leviathan confirmed (query 25)"],
-    "queriesNoNewResults": "26/30",
-    "newEventsToAdd": "Saudi 14-drone interception added to data.js"
-  },
-  "validationResults": {
-    "allCountriesPresent": true,
-    "preWarBaselinesMatch": true,
-    "noDataLoss": true,
-    "fmCountUnchanged": true,
-    "shutdownCountUnchanged": true,
-    "summariesNotShortened": true,
-    "sourcesNotReduced": true,
-    "eventsNotDeleted": true
+    "newFindings": "Habshan casualties (1 killed, 4 injured) — detail from Asharq Al-Awsat not in prior data; B1 bridge death toll revised from 8 to 13 (NPR)",
+    "queriesWithNoNewResults": "28/30",
+    "newEventsAdded": "1 (Iran Day 38 — F-15E SAR operation)"
   }
 }
