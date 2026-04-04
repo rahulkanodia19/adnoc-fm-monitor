@@ -1,23 +1,10 @@
 {
   "sinceMidnight": "2026-04-04",
-  "syncTimestamp": "2026-04-03T21:54:53.079Z",
+  "syncTimestamp": "2026-04-04T20:30:02.027Z",
   "exitedVessels": [],
-  "enteredVessels": [
-    {
-      "name": "Avon",
-      "imo": "9034705",
-      "type": "Handy",
-      "commodity": "lpg",
-      "flag": "Saint Kitts and Nevis",
-      "destination": "Djibouti",
-      "deadWeight": 23257,
-      "speed": 10.7,
-      "state": "ballast",
-      "controller": "SK"
-    }
-  ],
+  "enteredVessels": [],
   "exitedCount": 0,
-  "enteredCount": 1,
+  "enteredCount": 0,
   "tanker_exit": 0,
   "bulk_exit": 0,
   "container_exit": 0,
@@ -25,127 +12,9 @@
   "tanker_enter": 0,
   "bulk_enter": 0,
   "container_enter": 0,
-  "other_enter": 1,
-  "omanEntered": [
-    {
-      "name": "Bayaze D",
-      "imo": "9385233",
-      "type": "Handysize",
-      "commodity": "dry",
-      "flag": "Gambia",
-      "destination": "",
-      "deadWeight": 18908,
-      "speed": 9,
-      "state": "ballast",
-      "controller": "Syrian General Authority"
-    },
-    {
-      "name": "Modigliani",
-      "imo": "9615406",
-      "type": "Kamsarmax",
-      "commodity": "dry",
-      "flag": "Liberia",
-      "destination": "Fujairah",
-      "deadWeight": 81768,
-      "speed": 12.3,
-      "state": "loaded",
-      "controller": "Olam International"
-    },
-    {
-      "name": "Adventure",
-      "imo": "9749972",
-      "type": "Handysize",
-      "commodity": "dry",
-      "flag": "Marshall Islands",
-      "destination": "Muscat",
-      "deadWeight": 34487,
-      "speed": 11.5,
-      "state": "loaded",
-      "controller": ""
-    },
-    {
-      "name": "Agios Fanourios I",
-      "imo": "9759824",
-      "type": "VLCC",
-      "commodity": "liquids",
-      "flag": "Malta",
-      "destination": "Fujairah",
-      "deadWeight": 299996,
-      "speed": 11.9,
-      "state": "ballast",
-      "controller": "Eastmed"
-    },
-    {
-      "name": "Seachampion",
-      "imo": "9936939",
-      "type": "Kamsarmax",
-      "commodity": "dry",
-      "flag": "Malta",
-      "destination": "Iran",
-      "deadWeight": 82032,
-      "speed": 11.6,
-      "state": "loaded",
-      "controller": ""
-    }
-  ],
-  "omanLeft": [
-    {
-      "name": "Carpe Diem",
-      "imo": "1014967",
-      "type": "Handysize",
-      "commodity": "dry",
-      "flag": "Liberia"
-    },
-    {
-      "name": "Avon",
-      "imo": "9034705",
-      "type": "Handy",
-      "commodity": "lpg",
-      "flag": "Saint Kitts and Nevis"
-    },
-    {
-      "name": "Win Harmony",
-      "imo": "9200380",
-      "type": "Panamax",
-      "commodity": "dry",
-      "flag": "Panama"
-    },
-    {
-      "name": "Golden Glory",
-      "imo": "9246798",
-      "type": "MR",
-      "commodity": "liquids",
-      "flag": "Hong Kong"
-    },
-    {
-      "name": "Bern",
-      "imo": "9276171",
-      "type": "Panamax",
-      "commodity": "dry",
-      "flag": "Marshall Islands"
-    },
-    {
-      "name": "No.6 Ocean Pioneer",
-      "imo": "9409522",
-      "type": "Intermediate Tankers",
-      "commodity": "liquids",
-      "flag": "Marshall Islands"
-    },
-    {
-      "name": "Pvt Elena",
-      "imo": "9416795",
-      "type": "Short Sea Tankers",
-      "commodity": "liquids",
-      "flag": "Panama"
-    },
-    {
-      "name": "Seeb",
-      "imo": "9500716",
-      "type": "VLCC",
-      "commodity": "liquids",
-      "flag": "Marshall Islands"
-    }
-  ],
-  "omanEnteredCount": 5,
-  "omanLeftCount": 8
+  "other_enter": 0,
+  "omanEntered": [],
+  "omanLeft": [],
+  "omanEnteredCount": 0,
+  "omanLeftCount": 0
 }

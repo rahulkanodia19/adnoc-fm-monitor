@@ -8,18 +8,18 @@
   "adnocCount": 11,
   "totalVessels": 1046,
   "transitCount": 10,
-  "syncTimestamp": "2026-04-03T21:54:53.079Z",
+  "syncTimestamp": "2026-04-04T20:30:02.027Z",
   "deltaLabel": "24h",
   "deltas": {
-    "insideDelta": 1,
-    "outsideDelta": -2,
+    "insideDelta": 0,
+    "outsideDelta": 0,
     "adnocDelta": 0,
-    "insideBallastDelta": -3,
-    "insideLadenDelta": 4,
-    "outsideBallastDelta": -5,
-    "outsideLadenDelta": 3,
+    "insideBallastDelta": 0,
+    "insideLadenDelta": 0,
+    "outsideBallastDelta": 0,
+    "outsideLadenDelta": 0,
     "exitedSinceMidnight": 0,
-    "enteredSinceMidnight": 1
+    "enteredSinceMidnight": 0
   },
   "smallVessels": {
     "inside": 133,
