@@ -6,7 +6,7 @@
 // Context: Strait of Hormuz / Gulf military escalation
 // ============================================================
 
-const LAST_UPDATED = "2026-04-03T19:00:00.000Z";
+const LAST_UPDATED = "2026-04-04T11:00:00.000Z";
 
 // ---------- TABLE 1: Country Status Matrix ----------
 const COUNTRY_STATUS_DATA = [
