@@ -1,6 +1,62 @@
 {
   "vessels": [
     {
+      "name": "Jin Yuan Men",
+      "imo": "1029481",
+      "mmsi": "636024369",
+      "vesselTypeClass": "Ultramax",
+      "state": "loaded",
+      "flagName": "Liberia",
+      "deadWeight": 63850,
+      "commodityTypes": [
+        "dry"
+      ],
+      "capacity": 62477,
+      "speed": 6.7,
+      "course": 26,
+      "lat": 26.08322,
+      "lng": 55.852871,
+      "destination": "Singapore",
+      "destinationEta": "2026-04-14T01:06:49.822566",
+      "aisDestination": null,
+      "product": "Dry Bulk",
+      "controller": "NASCO",
+      "lastPortCall": {
+        "start": "2026-03-19T05:59:40",
+        "end": "2026-03-22T07:57:22"
+      },
+      "transitDirection": "entering",
+      "isTransiting": true
+    },
+    {
+      "name": "LYNG TRADER",
+      "imo": "1016240",
+      "mmsi": "548789000",
+      "vesselTypeClass": "Intermediate Tankers",
+      "state": "loaded",
+      "flagName": null,
+      "deadWeight": 20500,
+      "commodityTypes": [
+        "liquids"
+      ],
+      "capacity": 24188,
+      "speed": 13.6,
+      "course": 125,
+      "lat": 26.004866,
+      "lng": 55.817493,
+      "destination": "Hazira",
+      "destinationEta": "2026-04-12T04:30:00",
+      "aisDestination": null,
+      "product": "Polymeric Polyol",
+      "controller": "Nisshin Kaiun Kk",
+      "lastPortCall": {
+        "start": "2026-03-05T21:18:00",
+        "end": "2026-03-07T16:59:00"
+      },
+      "transitDirection": "exiting",
+      "isTransiting": true
+    },
+    {
       "name": "Yas Sky",
       "imo": "9145982",
       "mmsi": "351495000",
@@ -26,53 +82,27 @@
       "isTransiting": true
     },
     {
-      "name": "Divit",
-      "imo": "9194139",
-      "mmsi": "620800007",
-      "vesselTypeClass": "Aframax/LR2",
-      "state": "loaded",
-      "flagName": "Antigua and Barbuda",
-      "deadWeight": 99123,
-      "commodityTypes": [
-        "liquids"
-      ],
-      "capacity": 107264,
-      "speed": 9.5,
-      "course": 47,
-      "lat": 26.58935,
-      "lng": 55.888512,
-      "aisDestination": null,
-      "product": "Iran",
-      "controller": "Lundqvist",
-      "lastPortCall": {
-        "start": "2026-04-02T00:00:00",
-        "end": "2026-04-03T00:00:00"
-      },
-      "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
-      "name": "Nova Crest",
-      "imo": "9292046",
-      "mmsi": "613277613",
-      "vesselTypeClass": "MR",
+      "name": "Salmi",
+      "imo": "9284879",
+      "mmsi": "636016408",
+      "vesselTypeClass": "Panamax",
       "state": "ballast",
-      "flagName": "Barbados",
-      "deadWeight": 46697,
+      "flagName": "Liberia",
+      "deadWeight": 76466,
       "commodityTypes": [
-        "liquids"
+        "dry"
       ],
-      "capacity": 52220,
-      "speed": 9.8,
-      "course": 328,
-      "lat": 26.681141,
-      "lng": 56.806461,
+      "capacity": 74821,
+      "speed": 7.2,
+      "course": 294,
+      "lat": 26.075201,
+      "lng": 55.929741,
       "aisDestination": null,
-      "product": "Clean petroleum products",
-      "controller": "Sovcomflot",
+      "product": "Minerals",
+      "controller": "Combined Group Rocks Co KSCC",
       "lastPortCall": {
-        "start": "2026-01-31T02:52:03",
-        "end": "2026-01-31T02:52:03"
+        "start": "2026-03-30T13:18:42",
+        "end": "2026-04-02T16:52:16"
       },
       "transitDirection": "entering",
       "isTransiting": true
@@ -89,12 +119,12 @@
         "dry"
       ],
       "capacity": 54865,
-      "speed": 6.6,
-      "course": 206,
-      "lat": 26.045401,
-      "lng": 55.802399,
+      "speed": 6,
+      "course": 29,
+      "lat": 26.031881,
+      "lng": 55.804001,
       "destination": "Mina' Saqr",
-      "destinationEta": "2026-04-05T15:00:06.346523",
+      "destinationEta": "2026-04-06T15:00:06.364252",
       "aisDestination": null,
       "product": "Limestone",
       "controller": "Technomar Shipping",
@@ -102,7 +132,7 @@
         "start": "2026-03-02T09:19:16",
         "end": "2026-03-03T03:19:33"
       },
-      "transitDirection": "unknown",
+      "transitDirection": "entering",
       "isTransiting": true
     },
     {
@@ -117,10 +147,10 @@
         "liquids"
       ],
       "capacity": 125213,
-      "speed": 5.8,
-      "course": 107,
-      "lat": 25.992191,
-      "lng": 55.937546,
+      "speed": 8.8,
+      "course": 114,
+      "lat": 26.048164,
+      "lng": 55.893581,
       "aisDestination": null,
       "product": "High Sulfur Fuel Oil",
       "controller": "BGN",
@@ -154,6 +184,32 @@
         "end": "2022-08-16T22:05:48"
       },
       "transitDirection": "exiting",
+      "isTransiting": true
+    },
+    {
+      "name": "Chang Chang Dong Hai",
+      "imo": "9535876",
+      "mmsi": "414374000",
+      "vesselTypeClass": "Supramax",
+      "state": "loaded",
+      "flagName": "China",
+      "deadWeight": 57053,
+      "commodityTypes": [
+        "dry"
+      ],
+      "capacity": 55826,
+      "speed": 28.1,
+      "course": 24,
+      "lat": 25.889997,
+      "lng": 55.696167,
+      "aisDestination": null,
+      "product": "Phosphorus Fertilizers",
+      "controller": "Zhejiang Changchang Shipping",
+      "lastPortCall": {
+        "start": "2026-03-07T06:38:19",
+        "end": "2026-03-10T21:56:09"
+      },
+      "transitDirection": "entering",
       "isTransiting": true
     },
     {
@@ -237,6 +293,34 @@
       "isTransiting": true
     },
     {
+      "name": "Glory Tom",
+      "imo": "9701360",
+      "mmsi": "352003139",
+      "vesselTypeClass": "Ultramax",
+      "state": "loaded",
+      "flagName": "Panama",
+      "deadWeight": 63696,
+      "commodityTypes": [
+        "dry"
+      ],
+      "capacity": 62326,
+      "speed": 11.4,
+      "course": 151,
+      "lat": 25.839912,
+      "lng": 55.665771,
+      "destination": "Jakarta",
+      "destinationEta": "2026-04-15T02:00:00",
+      "aisDestination": null,
+      "product": "Dry Bulk",
+      "controller": "Dato Marine",
+      "lastPortCall": {
+        "start": "2026-03-29T04:38:17",
+        "end": "2026-03-31T10:39:16"
+      },
+      "transitDirection": "exiting",
+      "isTransiting": true
+    },
+    {
       "name": "SELEN",
       "imo": "9208459",
       "mmsi": "341935001",
@@ -285,12 +369,12 @@
       "isTransiting": true
     }
   ],
-  "exitingCount": 2,
-  "enteringCount": 8,
-  "totalTransiting": 11,
+  "exitingCount": 4,
+  "enteringCount": 10,
+  "totalTransiting": 14,
   "uaeExiting": 0,
   "uaeEntering": 0,
   "adnocExiting": 0,
   "adnocEntering": 0,
-  "syncTimestamp": "2026-04-05T09:20:15.558Z"
+  "syncTimestamp": "2026-04-05T20:13:42.453Z"
 }

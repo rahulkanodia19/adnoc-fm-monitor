@@ -210,9 +210,9 @@
       "deadWeight": 75618,
       "capacity": 83309,
       "speed": 0,
-      "course": 59,
-      "lat": 25.009266,
-      "lng": 54.462017,
+      "course": 196,
+      "lat": 25.008789,
+      "lng": 54.461182,
       "product": "Clean petroleum products",
       "destination": null,
       "departed": "2026-03-07 06:06",
@@ -222,5 +222,5 @@
     }
   ],
   "count": 11,
-  "syncTimestamp": "2026-04-05T09:20:15.558Z"
+  "syncTimestamp": "2026-04-05T20:13:42.453Z"
 }

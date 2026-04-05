@@ -8,38 +8,38 @@
     },
     {
       "label": "Dry Bulk",
-      "total": 58,
+      "total": 61,
       "ballast": 32,
-      "laden": 26
+      "laden": 29
     },
     {
       "label": "Naphtha",
       "total": 48,
-      "ballast": 31,
-      "laden": 17
+      "ballast": 33,
+      "laden": 15
     },
     {
       "label": "Clean petroleum products",
-      "total": 42,
+      "total": 41,
       "ballast": 12,
-      "laden": 30
+      "laden": 29
     },
     {
       "label": "Iran",
-      "total": 38,
-      "ballast": 26,
+      "total": 37,
+      "ballast": 25,
       "laden": 12
     },
     {
       "label": "High Sulphur Straight Run Fuel Oil",
-      "total": 33,
+      "total": 30,
       "ballast": 7,
-      "laden": 26
+      "laden": 23
     },
     {
       "label": "High Sulfur Fuel Oil",
-      "total": 29,
-      "ballast": 14,
+      "total": 28,
+      "ballast": 13,
       "laden": 15
     },
     {
@@ -49,34 +49,34 @@
       "laden": 16
     },
     {
-      "label": "Butane",
+      "label": "Propane",
       "total": 27,
+      "ballast": 19,
+      "laden": 8
+    },
+    {
+      "label": "Butane",
+      "total": 26,
       "ballast": 18,
-      "laden": 9
+      "laden": 8
     },
     {
       "label": "Steel",
       "total": 26,
-      "ballast": 16,
-      "laden": 10
+      "ballast": 17,
+      "laden": 9
     },
     {
-      "label": "Propane",
-      "total": 26,
-      "ballast": 18,
-      "laden": 8
+      "label": "Arab",
+      "total": 24,
+      "ballast": 2,
+      "laden": 22
     },
     {
       "label": "Corn",
       "total": 24,
-      "ballast": 16,
-      "laden": 8
-    },
-    {
-      "label": "Arab",
-      "total": 23,
-      "ballast": 2,
-      "laden": 21
+      "ballast": 17,
+      "laden": 7
     },
     {
       "label": "lng",
@@ -91,16 +91,10 @@
       "laden": 20
     },
     {
-      "label": "Minor Bulks",
-      "total": 17,
-      "ballast": 10,
-      "laden": 7
-    },
-    {
       "label": "Iron Ore Pellets",
       "total": 16,
-      "ballast": 13,
-      "laden": 3
+      "ballast": 12,
+      "laden": 4
     },
     {
       "label": "Fuel Oils",
@@ -109,25 +103,19 @@
       "laden": 10
     },
     {
+      "label": "Minor Bulks",
+      "total": 15,
+      "ballast": 9,
+      "laden": 6
+    },
+    {
+      "label": "Basrah Medium",
+      "total": 13,
+      "ballast": 2,
+      "laden": 11
+    },
+    {
       "label": "Alumina",
-      "total": 14,
-      "ballast": 10,
-      "laden": 4
-    },
-    {
-      "label": "Cement",
-      "total": 13,
-      "ballast": 3,
-      "laden": 10
-    },
-    {
-      "label": "Unknown",
-      "total": 13,
-      "ballast": 10,
-      "laden": 2
-    },
-    {
-      "label": "LPG",
       "total": 13,
       "ballast": 10,
       "laden": 3
@@ -139,22 +127,34 @@
       "laden": 4
     },
     {
-      "label": "Basrah Medium",
-      "total": 12,
-      "ballast": 1,
-      "laden": 11
-    },
-    {
       "label": "Sulphur",
       "total": 12,
       "ballast": 0,
       "laden": 12
     },
     {
-      "label": "Minerals",
-      "total": 11,
-      "ballast": 2,
+      "label": "Cement",
+      "total": 12,
+      "ballast": 3,
       "laden": 9
+    },
+    {
+      "label": "Unknown",
+      "total": 12,
+      "ballast": 10,
+      "laden": 1
+    },
+    {
+      "label": "Minerals",
+      "total": 12,
+      "ballast": 2,
+      "laden": 10
+    },
+    {
+      "label": "LPG",
+      "total": 12,
+      "ballast": 9,
+      "laden": 3
     },
     {
       "label": "Ultra Low Sulfur Diesel",
@@ -163,10 +163,10 @@
       "laden": 6
     },
     {
-      "label": "Chem/Bio",
+      "label": "Grey Ammonia",
       "total": 9,
-      "ballast": 2,
-      "laden": 7
+      "ballast": 4,
+      "laden": 5
     },
     {
       "label": "Gasoil",
@@ -181,16 +181,16 @@
       "laden": 0
     },
     {
+      "label": "Chem/Bio",
+      "total": 8,
+      "ballast": 2,
+      "laden": 6
+    },
+    {
       "label": "kuwait export",
       "total": 8,
       "ballast": 1,
       "laden": 7
-    },
-    {
-      "label": "basrah heavy",
-      "total": 8,
-      "ballast": 4,
-      "laden": 4
     },
     {
       "label": "Wheat",
@@ -205,9 +205,9 @@
       "laden": 0
     },
     {
-      "label": "Grey Ammonia",
-      "total": 8,
-      "ballast": 4,
+      "label": "basrah heavy",
+      "total": 7,
+      "ballast": 3,
       "laden": 4
     },
     {
@@ -241,22 +241,10 @@
       "laden": 1
     },
     {
-      "label": "Murban",
-      "total": 6,
-      "ballast": 4,
-      "laden": 2
-    },
-    {
-      "label": "Chemicals",
-      "total": 6,
+      "label": "arab extra light",
+      "total": 5,
       "ballast": 1,
-      "laden": 5
-    },
-    {
-      "label": "Hard Wheat",
-      "total": 6,
-      "ballast": 3,
-      "laden": 3
+      "laden": 4
     },
     {
       "label": "Jet",
@@ -265,16 +253,28 @@
       "laden": 2
     },
     {
-      "label": "arab extra light",
-      "total": 4,
-      "ballast": 0,
-      "laden": 4
+      "label": "Murban",
+      "total": 5,
+      "ballast": 4,
+      "laden": 1
     },
     {
-      "label": "arab heavy",
-      "total": 4,
+      "label": "Chemicals",
+      "total": 5,
+      "ballast": 0,
+      "laden": 5
+    },
+    {
+      "label": "Hard Wheat",
+      "total": 5,
       "ballast": 2,
-      "laden": 2
+      "laden": 3
+    },
+    {
+      "label": "Petcoke",
+      "total": 4,
+      "ballast": 3,
+      "laden": 1
     },
     {
       "label": "Sugar",
@@ -349,12 +349,6 @@
       "laden": 3
     },
     {
-      "label": "Petcoke",
-      "total": 3,
-      "ballast": 3,
-      "laden": 0
-    },
-    {
       "label": "Ethylene",
       "total": 3,
       "ballast": 3,
@@ -385,12 +379,6 @@
       "laden": 3
     },
     {
-      "label": "Iron Ore Fines",
-      "total": 3,
-      "ballast": 3,
-      "laden": 0
-    },
-    {
       "label": "Iron Ore Concentrate",
       "total": 2,
       "ballast": 1,
@@ -403,16 +391,16 @@
       "laden": 2
     },
     {
+      "label": "arab heavy",
+      "total": 2,
+      "ballast": 1,
+      "laden": 1
+    },
+    {
       "label": "Phosphorus Fertilizers",
       "total": 2,
       "ballast": 0,
       "laden": 2
-    },
-    {
-      "label": "Other Chemicals",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
     },
     {
       "label": "oman export",
@@ -529,7 +517,19 @@
       "laden": 0
     },
     {
+      "label": "Styrene",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
+    },
+    {
       "label": "Ground Granulated Blast Furnace Slag",
+      "total": 2,
+      "ballast": 2,
+      "laden": 0
+    },
+    {
+      "label": "Iron Ore Fines",
       "total": 2,
       "ballast": 2,
       "laden": 0
@@ -571,6 +571,12 @@
       "laden": 1
     },
     {
+      "label": "Other Chemicals",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
       "label": "Vegoils/Biofuels",
       "total": 1,
       "ballast": 1,
@@ -590,12 +596,6 @@
     },
     {
       "label": "Peas",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Ammonia",
       "total": 1,
       "ballast": 1,
       "laden": 0
@@ -745,12 +745,6 @@
       "laden": 0
     },
     {
-      "label": "Styrene",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
       "label": "Finished Steel",
       "total": 1,
       "ballast": 1,
@@ -805,18 +799,12 @@
       "laden": 0
     },
     {
-      "label": "Copper Concentrate",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
       "label": "mero",
       "total": 1,
       "ballast": 1,
       "laden": 0
     }
   ],
-  "total": 1036,
-  "syncTimestamp": "2026-04-05T09:20:15.558Z"
+  "total": 1023,
+  "syncTimestamp": "2026-04-05T20:13:42.453Z"
 }

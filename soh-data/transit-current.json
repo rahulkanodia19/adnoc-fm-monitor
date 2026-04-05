@@ -1,87 +1,99 @@
 {
   "sinceMidnight": "2026-04-05",
-  "syncTimestamp": "2026-04-05T09:20:15.558Z",
+  "syncTimestamp": "2026-04-05T20:13:42.453Z",
   "exitedVessels": [
     {
-      "name": "BLUE STAR 3",
-      "imo": "9133147",
-      "type": "Container Ship",
-      "commodity": "container",
+      "name": "Lada",
+      "imo": "9194050",
+      "type": "Mini Bulker",
+      "commodity": "dry",
       "flag": "",
-      "destination": "KARACHI",
-      "deadWeight": 4259,
-      "speed": 5.3,
-      "state": "ballast",
+      "destination": "",
+      "deadWeight": 0,
+      "speed": 0,
+      "state": "",
       "controller": ""
     },
     {
-      "name": "Ratta",
-      "imo": "9185499",
+      "name": "Divit",
+      "imo": "9194139",
+      "type": "Aframax/LR2",
+      "commodity": "liquids",
+      "flag": "Antigua and Barbuda",
+      "destination": "",
+      "deadWeight": 99123,
+      "speed": 9.2,
+      "state": "loaded",
+      "controller": "Lundqvist"
+    },
+    {
+      "name": "Louiza",
+      "imo": "9281554",
       "type": "MR",
       "commodity": "liquids",
-      "flag": "Panama",
-      "destination": "China",
-      "deadWeight": 48338,
-      "speed": 10.7,
+      "flag": "Saint Kitts and Nevis",
+      "destination": "Khor Al Zubair Port",
+      "deadWeight": 45557,
+      "speed": 9.7,
       "state": "loaded",
-      "controller": "Champion Tankers"
+      "controller": "Marine Trust"
     },
     {
-      "name": "Green Asha",
-      "imo": "9326598",
-      "type": "MGC",
-      "commodity": "lpg",
-      "flag": "India",
-      "destination": "India",
-      "deadWeight": 26424,
-      "speed": 13.4,
-      "state": "loaded",
-      "controller": "BPCL"
+      "name": "Nj Callisto",
+      "imo": "9497452",
+      "type": "Handysize",
+      "commodity": "dry",
+      "flag": "Liberia",
+      "destination": "Sohar",
+      "deadWeight": 31796,
+      "speed": 0,
+      "state": "ballast",
+      "controller": "Nsc Tank Gmbh & Cie Kg"
     },
     {
-      "name": "Ocean Thunder",
-      "imo": "9416422",
-      "type": "Suezmax/LR3",
+      "name": "Pacific Explorer",
+      "imo": "9571052",
+      "type": "Short Sea Tankers",
       "commodity": "liquids",
-      "flag": "Panama",
-      "destination": "Pengerang",
-      "deadWeight": 164737,
-      "speed": 12.7,
-      "state": "loaded",
-      "controller": "Navig8"
+      "flag": "",
+      "destination": "",
+      "deadWeight": 0,
+      "speed": 0,
+      "state": "",
+      "controller": ""
     }
   ],
   "enteredVessels": [
     {
-      "name": "Delnavaz",
-      "imo": "9387803",
-      "type": "Supramax",
-      "commodity": "dry",
-      "flag": "Iran (Islamic Republic of)",
-      "destination": "",
-      "deadWeight": 53412,
-      "speed": 8.5,
+      "name": "Interstellar",
+      "imo": "9277797",
+      "type": "Panamax/LR1",
+      "commodity": "liquids",
+      "flag": "Panama",
+      "destination": "Hamriya",
+      "deadWeight": 74999,
+      "speed": 9.1,
       "state": "ballast",
-      "controller": "Sapid"
+      "controller": "Torm"
     },
     {
-      "name": "Seachampion",
-      "imo": "9936939",
-      "type": "Kamsarmax",
-      "commodity": "dry",
-      "flag": "Malta",
+      "name": "Nova Crest",
+      "imo": "9292046",
+      "type": "MR",
+      "commodity": "liquids",
+      "flag": "Barbados",
       "destination": "",
-      "deadWeight": 82032,
-      "speed": 10.3,
-      "state": "loaded",
-      "controller": ""
+      "deadWeight": 46697,
+      "speed": 8.6,
+      "state": "ballast",
+      "controller": "Sovcomflot"
     }
   ],
-  "exitedCount": 4,
+  "exitedCount": 5,
   "enteredCount": 2,
-  "tanker_exit": 0,
-  "bulk_exit": 0,
-  "container_exit": 1,
+  "tanker_exit": 1,
+  "bulk_exit": 1,
+  "container_exit": 0,
   "other_exit": 3,
   "tanker_enter": 0,
   "bulk_enter": 0,
@@ -89,200 +101,68 @@
   "other_enter": 2,
   "omanEntered": [
     {
-      "name": "BLUE STAR 3",
-      "imo": "9133147",
-      "type": "Container Ship",
-      "commodity": "container",
-      "flag": "",
-      "destination": "KARACHI",
-      "deadWeight": 4259,
-      "speed": 5.3,
-      "state": "ballast",
-      "controller": ""
-    },
-    {
-      "name": "Riyan Star",
-      "imo": "9156761",
-      "type": "Handysize",
+      "name": "Lada",
+      "imo": "9194050",
+      "type": "Mini Bulker",
       "commodity": "dry",
-      "flag": "Panama",
+      "flag": "",
       "destination": "",
-      "deadWeight": 24086,
-      "speed": 7.5,
-      "state": "ballast",
-      "controller": "Hubei Qin Tai Shipping"
-    },
-    {
-      "name": "SERRANO",
-      "imo": "9167083",
-      "type": "Container Ship",
-      "commodity": "container",
-      "flag": "",
-      "destination": "SOHAR",
-      "deadWeight": 8350,
-      "speed": 5,
-      "state": "loaded",
-      "controller": ""
-    },
-    {
-      "name": "Ratta",
-      "imo": "9185499",
-      "type": "MR",
-      "commodity": "liquids",
-      "flag": "Panama",
-      "destination": "China",
-      "deadWeight": 48338,
-      "speed": 10.7,
-      "state": "loaded",
-      "controller": "Champion Tankers"
-    },
-    {
-      "name": "MSC TIA V",
-      "imo": "9232113",
-      "type": "Container Ship",
-      "commodity": "container",
-      "flag": "",
-      "destination": "AEKLF",
-      "deadWeight": 58768,
+      "deadWeight": 0,
       "speed": 0,
-      "state": "loaded",
+      "state": "",
       "controller": ""
     },
     {
-      "name": "ZHU CHENG XIN ZHOU",
-      "imo": "9252993",
-      "type": "Container Ship",
-      "commodity": "container",
-      "flag": "",
-      "destination": "AEFJR",
-      "deadWeight": 33670,
-      "speed": 9.6,
-      "state": "loaded",
-      "controller": ""
-    },
-    {
-      "name": "Tara Gas",
-      "imo": "9290270",
-      "type": "VLGC",
-      "commodity": "lpg",
-      "flag": "Panama",
-      "destination": "Muscat",
-      "deadWeight": 53208,
-      "speed": 15.2,
-      "state": "ballast",
-      "controller": "ICBC"
-    },
-    {
-      "name": "MSC SHRINIKA V",
-      "imo": "9292230",
-      "type": "Container Ship",
-      "commodity": "container",
-      "flag": "",
-      "destination": "SOHAR",
-      "deadWeight": 65002,
-      "speed": 0,
-      "state": "loaded",
-      "controller": ""
-    },
-    {
-      "name": "ESL DANA",
-      "imo": "9306287",
-      "type": "Container Ship",
-      "commodity": "container",
-      "flag": "",
-      "destination": "OMSOH",
-      "deadWeight": 90920,
-      "speed": 0.7,
-      "state": "loaded",
-      "controller": ""
-    },
-    {
-      "name": "Jag Pushpa",
-      "imo": "9315733",
-      "type": "MR",
-      "commodity": "liquids",
-      "flag": "India",
-      "destination": "Fujairah",
-      "deadWeight": 47848,
-      "speed": 15.3,
-      "state": "ballast",
-      "controller": "GE Shipping"
-    },
-    {
-      "name": "Green Asha",
-      "imo": "9326598",
-      "type": "MGC",
-      "commodity": "lpg",
-      "flag": "India",
-      "destination": "India",
-      "deadWeight": 26424,
-      "speed": 13.4,
-      "state": "loaded",
-      "controller": "BPCL"
-    },
-    {
-      "name": "Tk Scorpio",
-      "imo": "9346732",
+      "name": "Divit",
+      "imo": "9194139",
       "type": "Aframax/LR2",
       "commodity": "liquids",
-      "flag": "Panama",
-      "destination": "Suez Canal",
-      "deadWeight": 115934,
-      "speed": 0.4,
-      "state": "ballast",
-      "controller": "Wah Kwong Shpg"
+      "flag": "Antigua and Barbuda",
+      "destination": "",
+      "deadWeight": 99123,
+      "speed": 9.2,
+      "state": "loaded",
+      "controller": "Lundqvist"
     },
     {
-      "name": "SSF LEO",
-      "imo": "9363390",
-      "type": "Container Ship",
-      "commodity": "container",
-      "flag": "",
-      "destination": "AEFUJ",
-      "deadWeight": 33423,
-      "speed": 0,
+      "name": "Louiza",
+      "imo": "9281554",
+      "type": "MR",
+      "commodity": "liquids",
+      "flag": "Saint Kitts and Nevis",
+      "destination": "Khor Al Zubair Port",
+      "deadWeight": 45557,
+      "speed": 9.7,
+      "state": "loaded",
+      "controller": "Marine Trust"
+    },
+    {
+      "name": "Well Dream",
+      "imo": "9303364",
+      "type": "Handysize",
+      "commodity": "dry",
+      "flag": "Bahamas",
+      "destination": "China",
+      "deadWeight": 32776,
+      "speed": 17.5,
       "state": "loaded",
       "controller": ""
     },
     {
-      "name": "SSL GODAVARI",
-      "imo": "9399791",
-      "type": "Container Ship",
-      "commodity": "container",
-      "flag": "",
-      "destination": "AEKLF",
-      "deadWeight": 35376,
-      "speed": 0.8,
-      "state": "loaded",
-      "controller": ""
-    },
-    {
-      "name": "Ocean Thunder",
-      "imo": "9416422",
-      "type": "Suezmax/LR3",
-      "commodity": "liquids",
-      "flag": "Panama",
-      "destination": "Pengerang",
-      "deadWeight": 164737,
-      "speed": 12.7,
-      "state": "loaded",
-      "controller": "Navig8"
-    },
-    {
-      "name": "Margarita",
-      "imo": "9426594",
-      "type": "Panamax/LR1",
-      "commodity": "liquids",
+      "name": "Nj Callisto",
+      "imo": "9497452",
+      "type": "Handysize",
+      "commodity": "dry",
       "flag": "Liberia",
-      "destination": "Fujairah",
-      "deadWeight": 74998,
-      "speed": 13.7,
+      "destination": "Sohar",
+      "deadWeight": 31796,
+      "speed": 0,
       "state": "ballast",
-      "controller": "Dynacom"
+      "controller": "Nsc Tank Gmbh & Cie Kg"
     },
     {
-      "name": "Hermes",
-      "imo": "9515357",
+      "name": "Sky Blue",
+      "imo": "9512109",
       "type": "Short Sea Tankers",
       "commodity": "liquids",
       "flag": "",
@@ -293,202 +173,163 @@
       "controller": ""
     },
     {
-      "name": "C. Innovator",
-      "imo": "9595618",
-      "type": "VLCC",
+      "name": "Pacific Explorer",
+      "imo": "9571052",
+      "type": "Short Sea Tankers",
       "commodity": "liquids",
-      "flag": "Panama",
-      "destination": "Fujairah",
-      "deadWeight": 313999,
-      "speed": 14,
-      "state": "ballast",
-      "controller": "SK"
+      "flag": "",
+      "destination": "",
+      "deadWeight": 0,
+      "speed": 0,
+      "state": "",
+      "controller": ""
+    },
+    {
+      "name": "Volga",
+      "imo": "9598543",
+      "type": "Short Sea Tankers",
+      "commodity": "liquids",
+      "flag": "",
+      "destination": "",
+      "deadWeight": 0,
+      "speed": 0,
+      "state": "",
+      "controller": ""
+    },
+    {
+      "name": "Margherita Cosulich",
+      "imo": "9825051",
+      "type": "Short Sea Tankers",
+      "commodity": "liquids",
+      "flag": "",
+      "destination": "",
+      "deadWeight": 0,
+      "speed": 0,
+      "state": "",
+      "controller": ""
     }
   ],
   "omanLeft": [
     {
-      "name": "Salute",
-      "imo": "8912546",
-      "type": "VLGC",
-      "commodity": "lpg",
-      "flag": "Cook Islands"
-    },
-    {
-      "name": "Hawks Pride",
-      "imo": "9104445",
-      "type": "Small Tankers",
+      "name": "Advantage Passion",
+      "imo": "1045980",
+      "type": "Panamax/LR1",
       "commodity": "liquids",
-      "flag": "Palau"
-    },
-    {
-      "name": "Lotus Rising",
-      "imo": "9217656",
-      "type": "Panamax",
-      "commodity": "dry",
       "flag": "Marshall Islands"
     },
     {
-      "name": "V Gem",
-      "imo": "9221889",
-      "type": "Panamax",
+      "name": "Ebado",
+      "imo": "8821759",
+      "type": "Short Sea Tankers",
+      "commodity": "liquids",
+      "flag": "Sierra Leone"
+    },
+    {
+      "name": "Danisa",
+      "imo": "9172739",
+      "type": "VLGC",
+      "commodity": "lpg",
+      "flag": "Panama"
+    },
+    {
+      "name": "Samir",
+      "imo": "9235854",
+      "type": "Supramax",
       "commodity": "dry",
       "flag": "Panama"
     },
     {
-      "name": "Navara",
-      "imo": "9241798",
-      "type": "Handy/MR1",
-      "commodity": "liquids",
-      "flag": "Liberia"
-    },
-    {
-      "name": "Egret",
-      "imo": "9250490",
-      "type": "MR",
-      "commodity": "liquids",
-      "flag": "Hong Kong"
-    },
-    {
-      "name": "MADI",
-      "imo": "9282625",
+      "name": "Camilla",
+      "imo": "9254850",
       "type": "Panamax/LR1",
       "commodity": "liquids",
-      "flag": "Bahamas"
+      "flag": "Liberia"
     },
     {
-      "name": "FAN YA NING DE",
-      "imo": "9302554",
-      "type": "Container Ship",
-      "commodity": "container",
-      "flag": ""
+      "name": "Alexandra",
+      "imo": "9273260",
+      "type": "Panamax/LR1",
+      "commodity": "liquids",
+      "flag": "Liberia"
     },
     {
-      "name": "Tempest Dream",
-      "imo": "9308132",
+      "name": "Interstellar",
+      "imo": "9277797",
+      "type": "Panamax/LR1",
+      "commodity": "liquids",
+      "flag": "Panama"
+    },
+    {
+      "name": "Lucky Chem",
+      "imo": "9286554",
+      "type": "Intermediate Tankers",
+      "commodity": "liquids",
+      "flag": "Panama"
+    },
+    {
+      "name": "Nova Crest",
+      "imo": "9292046",
       "type": "MR",
       "commodity": "liquids",
-      "flag": "Guinea-Bissau"
+      "flag": "Barbados"
     },
     {
-      "name": "HENG HUI 5",
-      "imo": "9323015",
-      "type": "Container Ship",
-      "commodity": "container",
-      "flag": ""
-    },
-    {
-      "name": "Aya",
-      "imo": "9331397",
-      "type": "Kamsarmax",
-      "commodity": "dry",
-      "flag": "Malta"
-    },
-    {
-      "name": "Banda",
-      "imo": "9337406",
-      "type": "Aframax/LR2",
+      "name": "Liliana",
+      "imo": "9297905",
+      "type": "Suezmax/LR3",
       "commodity": "liquids",
       "flag": "Liberia"
     },
     {
-      "name": "Ioanna",
-      "imo": "9387566",
-      "type": "VLCC",
+      "name": "Tailogy",
+      "imo": "9318333",
+      "type": "MR",
       "commodity": "liquids",
-      "flag": "Liberia"
+      "flag": "Panama"
     },
     {
-      "name": "Delnavaz",
-      "imo": "9387803",
-      "type": "Supramax",
-      "commodity": "dry",
-      "flag": "Iran (Islamic Republic of)"
-    },
-    {
-      "name": "Baskar",
-      "imo": "9405942",
-      "type": "Supramax",
-      "commodity": "dry",
-      "flag": "Iran (Islamic Republic of)"
-    },
-    {
-      "name": "Yuan Shan Hu",
-      "imo": "9417189",
+      "name": "Hippolyta",
+      "imo": "9385843",
       "type": "VLCC",
-      "commodity": "liquids",
-      "flag": "China"
-    },
-    {
-      "name": "Songa Topaz",
-      "imo": "9460461",
-      "type": "Intermediate Tankers",
       "commodity": "liquids",
       "flag": "Marshall Islands"
     },
     {
-      "name": "Batis",
-      "imo": "9465760",
-      "type": "Supramax",
-      "commodity": "dry",
+      "name": "Serena",
+      "imo": "9569645",
+      "type": "VLCC",
+      "commodity": "liquids",
       "flag": "Iran (Islamic Republic of)"
     },
     {
-      "name": "Pontus",
-      "imo": "9511179",
-      "type": "Short Sea Tankers",
-      "commodity": "liquids",
-      "flag": "Palau"
+      "name": "Rui An Cheng",
+      "imo": "9742962",
+      "type": "Handysize",
+      "commodity": "dry",
+      "flag": "China"
     },
     {
-      "name": "New Giant",
-      "imo": "9516947",
-      "type": "VLCC",
-      "commodity": "liquids",
-      "flag": "Liberia"
-    },
-    {
-      "name": "Doric Breeze",
-      "imo": "9637129",
+      "name": "Niki",
+      "imo": "9820312",
       "type": "MR",
       "commodity": "liquids",
-      "flag": "Liberia"
+      "flag": "Iran (Islamic Republic of)"
     },
     {
-      "name": "CMA CGM KRIBI",
-      "imo": "9694543",
-      "type": "Container Ship",
-      "commodity": "container",
-      "flag": ""
-    },
-    {
-      "name": "COSCO SHIPPING AQUARIUS",
-      "imo": "9789623",
-      "type": "Container Ship",
-      "commodity": "container",
-      "flag": ""
-    },
-    {
-      "name": "Southern Wolf",
-      "imo": "9867267",
-      "type": "Intermediate Tankers",
-      "commodity": "liquids",
-      "flag": "Liberia"
-    },
-    {
-      "name": "Seachampion",
-      "imo": "9936939",
+      "name": "Albina",
+      "imo": "9859026",
       "type": "Kamsarmax",
       "commodity": "dry",
-      "flag": "Malta"
+      "flag": "Marshall Islands"
     },
     {
-      "name": "MSC ILARIA",
-      "imo": "9962586",
-      "type": "Container Ship",
-      "commodity": "container",
-      "flag": ""
+      "name": "Dhalkut",
+      "imo": "9888601",
+      "type": "VLCC",
+      "commodity": "liquids",
+      "flag": "Marshall Islands"
     }
   ],
-  "omanEnteredCount": 18,
-  "omanLeftCount": 26
+  "omanEnteredCount": 9,
+  "omanLeftCount": 17
 }

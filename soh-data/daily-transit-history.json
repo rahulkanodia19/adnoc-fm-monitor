@@ -2282,5 +2282,339 @@
         "flag": ""
       }
     ]
+  },
+  {
+    "date": "2026-04-06",
+    "comparedTo": "2026-04-05",
+    "gapDays": 1,
+    "exited": 5,
+    "entered": 2,
+    "tanker_exit": 1,
+    "bulk_exit": 1,
+    "container_exit": 0,
+    "other_exit": 3,
+    "tanker_enter": 0,
+    "bulk_enter": 0,
+    "container_enter": 0,
+    "other_enter": 2,
+    "exitedVessels": [
+      {
+        "name": "Lada",
+        "imo": "9194050",
+        "type": "Mini Bulker",
+        "commodity": "dry",
+        "flag": "",
+        "destination": "",
+        "deadWeight": 0,
+        "speed": 0,
+        "state": "",
+        "controller": ""
+      },
+      {
+        "name": "Divit",
+        "imo": "9194139",
+        "type": "Aframax/LR2",
+        "commodity": "liquids",
+        "flag": "Antigua and Barbuda",
+        "destination": "",
+        "deadWeight": 99123,
+        "speed": 9.2,
+        "state": "loaded",
+        "controller": "Lundqvist"
+      },
+      {
+        "name": "Louiza",
+        "imo": "9281554",
+        "type": "MR",
+        "commodity": "liquids",
+        "flag": "Saint Kitts and Nevis",
+        "destination": "Khor Al Zubair Port",
+        "deadWeight": 45557,
+        "speed": 9.7,
+        "state": "loaded",
+        "controller": "Marine Trust"
+      },
+      {
+        "name": "Nj Callisto",
+        "imo": "9497452",
+        "type": "Handysize",
+        "commodity": "dry",
+        "flag": "Liberia",
+        "destination": "Sohar",
+        "deadWeight": 31796,
+        "speed": 0,
+        "state": "ballast",
+        "controller": "Nsc Tank Gmbh & Cie Kg"
+      },
+      {
+        "name": "Pacific Explorer",
+        "imo": "9571052",
+        "type": "Short Sea Tankers",
+        "commodity": "liquids",
+        "flag": "",
+        "destination": "",
+        "deadWeight": 0,
+        "speed": 0,
+        "state": "",
+        "controller": ""
+      }
+    ],
+    "enteredVessels": [
+      {
+        "name": "Interstellar",
+        "imo": "9277797",
+        "type": "Panamax/LR1",
+        "commodity": "liquids",
+        "flag": "Panama",
+        "destination": "Hamriya",
+        "deadWeight": 74999,
+        "speed": 9.1,
+        "state": "ballast",
+        "controller": "Torm"
+      },
+      {
+        "name": "Nova Crest",
+        "imo": "9292046",
+        "type": "MR",
+        "commodity": "liquids",
+        "flag": "Barbados",
+        "destination": "",
+        "deadWeight": 46697,
+        "speed": 8.6,
+        "state": "ballast",
+        "controller": "Sovcomflot"
+      }
+    ],
+    "omanEntered": [
+      {
+        "name": "Lada",
+        "imo": "9194050",
+        "type": "Mini Bulker",
+        "commodity": "dry",
+        "flag": "",
+        "destination": "",
+        "deadWeight": 0,
+        "speed": 0,
+        "state": "",
+        "controller": ""
+      },
+      {
+        "name": "Divit",
+        "imo": "9194139",
+        "type": "Aframax/LR2",
+        "commodity": "liquids",
+        "flag": "Antigua and Barbuda",
+        "destination": "",
+        "deadWeight": 99123,
+        "speed": 9.2,
+        "state": "loaded",
+        "controller": "Lundqvist"
+      },
+      {
+        "name": "Louiza",
+        "imo": "9281554",
+        "type": "MR",
+        "commodity": "liquids",
+        "flag": "Saint Kitts and Nevis",
+        "destination": "Khor Al Zubair Port",
+        "deadWeight": 45557,
+        "speed": 9.7,
+        "state": "loaded",
+        "controller": "Marine Trust"
+      },
+      {
+        "name": "Well Dream",
+        "imo": "9303364",
+        "type": "Handysize",
+        "commodity": "dry",
+        "flag": "Bahamas",
+        "destination": "China",
+        "deadWeight": 32776,
+        "speed": 17.5,
+        "state": "loaded",
+        "controller": ""
+      },
+      {
+        "name": "Nj Callisto",
+        "imo": "9497452",
+        "type": "Handysize",
+        "commodity": "dry",
+        "flag": "Liberia",
+        "destination": "Sohar",
+        "deadWeight": 31796,
+        "speed": 0,
+        "state": "ballast",
+        "controller": "Nsc Tank Gmbh & Cie Kg"
+      },
+      {
+        "name": "Sky Blue",
+        "imo": "9512109",
+        "type": "Short Sea Tankers",
+        "commodity": "liquids",
+        "flag": "",
+        "destination": "",
+        "deadWeight": 0,
+        "speed": 0,
+        "state": "",
+        "controller": ""
+      },
+      {
+        "name": "Pacific Explorer",
+        "imo": "9571052",
+        "type": "Short Sea Tankers",
+        "commodity": "liquids",
+        "flag": "",
+        "destination": "",
+        "deadWeight": 0,
+        "speed": 0,
+        "state": "",
+        "controller": ""
+      },
+      {
+        "name": "Volga",
+        "imo": "9598543",
+        "type": "Short Sea Tankers",
+        "commodity": "liquids",
+        "flag": "",
+        "destination": "",
+        "deadWeight": 0,
+        "speed": 0,
+        "state": "",
+        "controller": ""
+      },
+      {
+        "name": "Margherita Cosulich",
+        "imo": "9825051",
+        "type": "Short Sea Tankers",
+        "commodity": "liquids",
+        "flag": "",
+        "destination": "",
+        "deadWeight": 0,
+        "speed": 0,
+        "state": "",
+        "controller": ""
+      }
+    ],
+    "omanLeft": [
+      {
+        "name": "Advantage Passion",
+        "imo": "1045980",
+        "type": "Panamax/LR1",
+        "commodity": "liquids",
+        "flag": "Marshall Islands"
+      },
+      {
+        "name": "Ebado",
+        "imo": "8821759",
+        "type": "Short Sea Tankers",
+        "commodity": "liquids",
+        "flag": "Sierra Leone"
+      },
+      {
+        "name": "Danisa",
+        "imo": "9172739",
+        "type": "VLGC",
+        "commodity": "lpg",
+        "flag": "Panama"
+      },
+      {
+        "name": "Samir",
+        "imo": "9235854",
+        "type": "Supramax",
+        "commodity": "dry",
+        "flag": "Panama"
+      },
+      {
+        "name": "Camilla",
+        "imo": "9254850",
+        "type": "Panamax/LR1",
+        "commodity": "liquids",
+        "flag": "Liberia"
+      },
+      {
+        "name": "Alexandra",
+        "imo": "9273260",
+        "type": "Panamax/LR1",
+        "commodity": "liquids",
+        "flag": "Liberia"
+      },
+      {
+        "name": "Interstellar",
+        "imo": "9277797",
+        "type": "Panamax/LR1",
+        "commodity": "liquids",
+        "flag": "Panama"
+      },
+      {
+        "name": "Lucky Chem",
+        "imo": "9286554",
+        "type": "Intermediate Tankers",
+        "commodity": "liquids",
+        "flag": "Panama"
+      },
+      {
+        "name": "Nova Crest",
+        "imo": "9292046",
+        "type": "MR",
+        "commodity": "liquids",
+        "flag": "Barbados"
+      },
+      {
+        "name": "Liliana",
+        "imo": "9297905",
+        "type": "Suezmax/LR3",
+        "commodity": "liquids",
+        "flag": "Liberia"
+      },
+      {
+        "name": "Tailogy",
+        "imo": "9318333",
+        "type": "MR",
+        "commodity": "liquids",
+        "flag": "Panama"
+      },
+      {
+        "name": "Hippolyta",
+        "imo": "9385843",
+        "type": "VLCC",
+        "commodity": "liquids",
+        "flag": "Marshall Islands"
+      },
+      {
+        "name": "Serena",
+        "imo": "9569645",
+        "type": "VLCC",
+        "commodity": "liquids",
+        "flag": "Iran (Islamic Republic of)"
+      },
+      {
+        "name": "Rui An Cheng",
+        "imo": "9742962",
+        "type": "Handysize",
+        "commodity": "dry",
+        "flag": "China"
+      },
+      {
+        "name": "Niki",
+        "imo": "9820312",
+        "type": "MR",
+        "commodity": "liquids",
+        "flag": "Iran (Islamic Republic of)"
+      },
+      {
+        "name": "Albina",
+        "imo": "9859026",
+        "type": "Kamsarmax",
+        "commodity": "dry",
+        "flag": "Marshall Islands"
+      },
+      {
+        "name": "Dhalkut",
+        "imo": "9888601",
+        "type": "VLCC",
+        "commodity": "liquids",
+        "flag": "Marshall Islands"
+      }
+    ]
   }
 ]

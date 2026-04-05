@@ -2,20 +2,20 @@
   "data": [
     {
       "label": "Unknown",
-      "total": 548,
-      "ballast": 293,
-      "laden": 254
+      "total": 549,
+      "ballast": 292,
+      "laden": 256
     },
     {
       "label": "Fujairah",
-      "total": 61,
-      "ballast": 42,
+      "total": 62,
+      "ballast": 43,
       "laden": 19
     },
     {
       "label": "Sohar",
-      "total": 28,
-      "ballast": 12,
+      "total": 30,
+      "ballast": 14,
       "laden": 16
     },
     {
@@ -26,15 +26,9 @@
     },
     {
       "label": "Sharjah",
-      "total": 14,
-      "ballast": 10,
-      "laden": 4
-    },
-    {
-      "label": "Muscat",
-      "total": 12,
-      "ballast": 9,
-      "laden": 3
+      "total": 13,
+      "ballast": 8,
+      "laden": 5
     },
     {
       "label": "Singapore",
@@ -44,27 +38,33 @@
     },
     {
       "label": "Khor Al Zubair Port",
-      "total": 12,
-      "ballast": 8,
-      "laden": 4
-    },
-    {
-      "label": "Jebel Ali",
       "total": 11,
       "ballast": 7,
       "laden": 4
     },
     {
-      "label": "Dubai Area",
-      "total": 11,
-      "ballast": 4,
-      "laden": 7
+      "label": "Jebel Ali",
+      "total": 10,
+      "ballast": 6,
+      "laden": 4
     },
     {
-      "label": "Oman",
+      "label": "Dubai Area",
       "total": 10,
       "ballast": 4,
       "laden": 6
+    },
+    {
+      "label": "Mina Al-ahmadi",
+      "total": 10,
+      "ballast": 0,
+      "laden": 10
+    },
+    {
+      "label": "Muscat",
+      "total": 10,
+      "ballast": 8,
+      "laden": 2
     },
     {
       "label": "Ruwais",
@@ -73,15 +73,9 @@
       "laden": 3
     },
     {
-      "label": "Mina Al-ahmadi",
-      "total": 8,
-      "ballast": 0,
-      "laden": 8
-    },
-    {
-      "label": "Karachi",
-      "total": 7,
-      "ballast": 2,
+      "label": "Oman",
+      "total": 9,
+      "ballast": 4,
       "laden": 5
     },
     {
@@ -89,6 +83,12 @@
       "total": 6,
       "ballast": 5,
       "laden": 1
+    },
+    {
+      "label": "Karachi",
+      "total": 6,
+      "ballast": 1,
+      "laden": 5
     },
     {
       "label": "Aekhl",
@@ -109,12 +109,6 @@
       "laden": 5
     },
     {
-      "label": "Ras Tanura",
-      "total": 4,
-      "ballast": 0,
-      "laden": 4
-    },
-    {
       "label": "Japan",
       "total": 4,
       "ballast": 0,
@@ -122,12 +116,6 @@
     },
     {
       "label": "Dibba Port",
-      "total": 4,
-      "ballast": 2,
-      "laden": 2
-    },
-    {
-      "label": "Duqm",
       "total": 4,
       "ballast": 2,
       "laden": 2
@@ -165,11 +153,11 @@
     {
       "label": "Hamriya",
       "total": 3,
-      "ballast": 2,
-      "laden": 1
+      "ballast": 3,
+      "laden": 0
     },
     {
-      "label": "Yeosu",
+      "label": "Ras Tanura",
       "total": 3,
       "ballast": 0,
       "laden": 3
@@ -185,12 +173,6 @@
       "total": 3,
       "ballast": 0,
       "laden": 3
-    },
-    {
-      "label": "Assaluyeh",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
     },
     {
       "label": "Suez Canal",
@@ -217,12 +199,6 @@
       "laden": 0
     },
     {
-      "label": "Bahrain",
-      "total": 3,
-      "ballast": 1,
-      "laden": 2
-    },
-    {
       "label": "Aefjr",
       "total": 3,
       "ballast": 0,
@@ -245,6 +221,12 @@
       "total": 2,
       "ballast": 1,
       "laden": 1
+    },
+    {
+      "label": "Yeosu",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
     },
     {
       "label": "Zhanjiang",
@@ -289,16 +271,22 @@
       "laden": 2
     },
     {
-      "label": "Kharg Island",
+      "label": "Assaluyeh",
+      "total": 2,
+      "ballast": 1,
+      "laden": 1
+    },
+    {
+      "label": "Duqm",
       "total": 2,
       "ballast": 2,
       "laden": 0
     },
     {
-      "label": "Panama",
+      "label": "Kharg Island",
       "total": 2,
-      "ballast": 0,
-      "laden": 2
+      "ballast": 2,
+      "laden": 0
     },
     {
       "label": "Bandar Abbas",
@@ -325,13 +313,13 @@
       "laden": 2
     },
     {
-      "label": "Jubail Industrial Port",
+      "label": "Das Island",
       "total": 2,
-      "ballast": 2,
-      "laden": 0
+      "ballast": 1,
+      "laden": 1
     },
     {
-      "label": "Das Island",
+      "label": "Bahrain",
       "total": 2,
       "ballast": 1,
       "laden": 1
@@ -457,19 +445,7 @@
       "laden": 1
     },
     {
-      "label": "South Korea",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
       "label": "Colombo",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Toamasina",
       "total": 1,
       "ballast": 0,
       "laden": 1
@@ -511,12 +487,6 @@
       "laden": 0
     },
     {
-      "label": "Chennai",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
       "label": "Dar Es Salam",
       "total": 1,
       "ballast": 1,
@@ -529,10 +499,10 @@
       "laden": 1
     },
     {
-      "label": "Port Qasim",
+      "label": "Qalhat",
       "total": 1,
-      "ballast": 0,
-      "laden": 1
+      "ballast": 1,
+      "laden": 0
     },
     {
       "label": "Galle",
@@ -553,10 +523,22 @@
       "laden": 1
     },
     {
+      "label": "Panama",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
       "label": "Saudi Arabia",
       "total": 1,
       "ballast": 0,
       "laden": 1
+    },
+    {
+      "label": "Jubail Industrial Port",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
     },
     {
       "label": "Ain Sukhna",
@@ -1135,6 +1117,6 @@
       "laden": 1
     }
   ],
-  "total": 1036,
-  "syncTimestamp": "2026-04-05T09:20:15.558Z"
+  "total": 1023,
+  "syncTimestamp": "2026-04-05T20:13:42.453Z"
 }

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-05T07:00:00.000Z",
+  "lastUpdated": "2026-04-06T07:30:00.000Z",
   "countryStatus": [
     {
       "id": "qatar",
@@ -7,11 +7,11 @@
       "flag": "🇶🇦",
       "status": "critical",
       "statusLabel": "FM Declared",
-      "summary": "AQUA 1 tanker struck Apr 1. All 77 Mtpa LNG halted since Mar 2. 12.8 Mtpa damaged 3-5 yrs. FM extended through mid-June. S&P Global: 'Longer market impacts from war' (Apr 2 report). ~2,000 vessels trapped in Gulf (IMO). UN Hormuz vote delayed to next week — resolution stripped of Chapter VII enforcement. Brent ~$109 (Apr 3). OPEC+ Apr 5: confirmed 206 kb/d symbolic increase. Apr 6 power plant deadline TOMORROW — Trump 48-hr ultimatum. Day 39: F-15E WSO RESCUED by US commandos; Iran rejects ultimatum; KPC HQ struck; Bahrain Bapco tank hit. MOL LPG carrier Green Sanvi transited Hormuz for India (Apr 4 — S&P Platts). MOL Sohar LNG also transited Hormuz (Apr 3).",
+      "summary": "AQUA 1 tanker struck Apr 1. All 77 Mtpa LNG halted since Mar 2. 12.8 Mtpa damaged 3-5 yrs. FM extended through mid-June. S&P Global: 'Longer market impacts from war' (Apr 2 report). ~2,000 vessels trapped in Gulf (IMO). UN Hormuz vote delayed to next week — resolution stripped of Chapter VII enforcement. Brent ~$105 (Apr 6). OPEC+ Apr 5: kept targets unchanged, no new barrels — next meeting Jun 7. Apr 6 power plant deadline TODAY — Trump 48-hr ultimatum expires 8PM ET; Trump posted 'Power Plant Day' and 'Bridge Day' warnings; Iran rejects as 'helpless, nervous'. Day 40: F-15E WSO RESCUED by US commandos + CIA deception; KPC HQ struck; KNPC/PIC damaged; Bahrain Bapco + GPIC struck; Borouge (Ruwais) suspended; SAMREF Yanbu hit Apr 3 (Greek PAC-3 first NATO intercept in Saudi). Kpler: cumulative ME oil losses surpass 300 Mbbls, surging toward 600 Mbbls by end-April. MOL LPG carrier Green Sanvi transited Hormuz for India (Apr 4 — S&P Platts). MOL Sohar LNG also transited Hormuz (Apr 3). Oman-Iran joint Hormuz management talks Apr 5. Golden Pass LNG (Texas, QE 70%) feedgas at 434 MMcf/d — first export cargo loading ~Apr 20.",
       "metrics": {
-        "headline": "S&P: 'Longer market impacts from war'; ~2,000 vessels trapped in Gulf; ~20% global LNG offline; Day 38: F-15E down over Iran",
+        "headline": "Day 40: Apr 6 deadline TODAY; cumulative ME oil losses >300 Mbbls (Kpler); ~20% global LNG offline; SAMREF Yanbu struck Apr 3 (1st NATO intercept in Saudi)",
         "productionOffline": "77 Mtpa LNG + all downstream",
-        "keyFigure": "12.8 Mtpa damaged 3-5 yrs; IEA warns April losses 'twice March'; Brent $112.42 (Apr 3); Dated Brent physical $141.37 (highest since 2008); S&P: $120/bbl avg Apr, $200 scenario if May closure"
+        "keyFigure": "12.8 Mtpa damaged 3-5 yrs; IEA warns April losses 'twice March'; Brent ~$105 (Apr 6, easing on de-escalation signals); Dated Brent physical $141.37 (highest since 2008); S&P CERA: $125/bbl avg Apr forecast"
       },
       "production": {
         "oil": {
@@ -389,11 +389,11 @@
       "flag": "🇰🇼",
       "status": "critical",
       "statusLabel": "FM / Struck",
-      "summary": "Iran publishes bridge target list incl. Sheikh Jaber Sea Bridge (Kuwait). IRGC drones struck Kuwait airport fuel tanks Apr 1 (58 hrs to extinguish). Power/desal plant struck Mar 30 (1 Indian worker killed). Kuwait intercepted 97 BMs + 283 drones cumulatively. VLCC Al Salmi struck Mar 31. KPC FM on crude. Al-Ahmadi struck. UN Hormuz vote delayed to next week (was Apr 5) — stripped of Chapter VII. Brent $112.42 (Apr 3). OPEC+ Apr 5: confirmed 206 kb/d symbolic increase. Apr 6 power plant deadline imminent. Apr 3: Al-Ahmadi refinery struck AGAIN (3rd time, fires in multiple units) + power/desal plant struck AGAIN (2nd time) — 7th+ major Iranian attack on Kuwait. Apr 5: KPC Shuwaikh HQ struck by drones — building ablaze, evacuated (Bloomberg); 2 power/desalination plants struck — 'significant material damage', 2 gen units shut (Times Kuwait). Total 9+ major Iranian attacks on Kuwait.",
+      "summary": "Iran publishes bridge target list incl. Sheikh Jaber Sea Bridge (Kuwait). IRGC drones struck Kuwait airport fuel tanks Apr 1 (58 hrs to extinguish). Power/desal plant struck Mar 30 (1 Indian worker killed). Kuwait intercepted 97 BMs + 283 drones cumulatively. VLCC Al Salmi struck Mar 31. KPC FM on crude. Al-Ahmadi struck. UN Hormuz vote delayed to next week (was Apr 5) — stripped of Chapter VII. Brent ~$105 (Apr 6). OPEC+ Apr 5: confirmed 206 kb/d symbolic increase. Apr 6 power plant deadline TODAY — Trump ultimatum expires 8PM ET. Apr 3: Al-Ahmadi refinery struck AGAIN (3rd time, fires in multiple units) + power/desal plant struck AGAIN (2nd time). Apr 5: KPC Shuwaikh HQ struck by drones — building ablaze, evacuated (Bloomberg); 2 power/desalination plants struck — 'significant material damage', 2 gen units shut (Times Kuwait); KNPC + PIC operational facilities also hit — fires and significant material damage (Cyprus Mail). Total 10+ major Iranian attacks on Kuwait.",
       "metrics": {
-        "headline": "Apr 5: KPC Shuwaikh HQ set ablaze + 2 power/desal plants struck; 9+ major attacks; OPEC+ confirms 206 kb/d; Apr 6 deadline tomorrow",
+        "headline": "Day 40: Apr 6 deadline TODAY; 10+ attacks; KPC HQ + KNPC/PIC + 2 desal plants struck Apr 5; OPEC+ no new barrels (Jun 7 next)",
         "productionOffline": "Al-Ahmadi refinery (3x struck) + KPC HQ ablaze + power/desal plants (3x struck) + airport fuel tanks + tanker attacked",
-        "keyFigure": "2.6 mb/d baseline disrupted; 9+ major attacks since conflict began; bridge targeting escalation; Brent ~$109; Apr 6 deadline imminent"
+        "keyFigure": "2.6 mb/d baseline disrupted; 10+ major attacks since conflict began; KNPC/PIC damaged; bridge targeting escalation; Brent ~$105; Apr 6 deadline TODAY"
       },
       "production": {
         "oil": {
@@ -430,7 +430,7 @@
         {
           "date": "2026-04-05",
           "title": "KPC Shuwaikh HQ struck by drones — building ablaze, evacuated; 2 power/desalination plants also hit",
-          "description": "Iranian drones struck the Shuwaikh oil sector complex housing Kuwait Petroleum Corporation (KPC) headquarters and the Ministry of Oil in early hours Apr 5, setting the building ablaze. The complex was fully evacuated; no injuries reported. Separately, Iranian drones struck two power and water desalination plants, causing 'significant material damage' — 2 power generation units shut down as emergency plans activated. No casualties. This brings total major Iranian attacks on Kuwait infrastructure to 9+ since conflict began (Al-Ahmadi x3, Mina Abdullah x1, Subiya x1, airport fuel tanks x1, power/desal plants x3, KPC HQ x1). — Bloomberg, The National, Times Kuwait, ANI, Arab Times",
+          "description": "Iranian drones struck the Shuwaikh oil sector complex housing Kuwait Petroleum Corporation (KPC) headquarters and the Ministry of Oil in early hours Apr 5, setting the building ablaze. The complex was fully evacuated; no injuries reported. Separately, Iranian drones struck two power and water desalination plants, causing 'significant material damage' — 2 power generation units shut down as emergency plans activated. KNPC and Petrochemical Industries Company (PIC) operational facilities also hit — fires and 'significant material damage' across several sites; emergency teams contained blazes (Cyprus Mail, Times Kuwait). IRGC claimed responsibility. No casualties. This brings total major Iranian attacks on Kuwait infrastructure to 10+ since conflict began (Al-Ahmadi x3, Mina Abdullah x1, Subiya x1, airport fuel tanks x1, power/desal plants x3, KPC HQ x1, KNPC/PIC x1). — Bloomberg, The National, Times Kuwait, ANI, Arab Times, Cyprus Mail",
           "isNew": true
         },
         {
@@ -716,6 +716,12 @@
           "title": "Two power and water distillation plants hit by hostile drones in Kuwait — Times Kuwait",
           "url": "https://timeskuwait.com/two-power-and-water-distillation-plants-hit-by-hostile-drones-in-kuwait/",
           "date": "2026-04-05"
+        },
+        {
+          "id": 23,
+          "title": "Kuwait Petroleum Corp reports damage at KNPC and PIC units after Iran drone attacks — Cyprus Mail",
+          "url": "https://cyprus-mail.com/2026/04/05/kuwait-petroleum-corp-reports-damage-at-units-after-iran-drone-attacks",
+          "date": "2026-04-05"
         }
       ]
     },
@@ -725,9 +731,9 @@
       "flag": "🇸🇦",
       "status": "critical",
       "statusLabel": "Shutdown",
-      "summary": "Iran targets King Fahd Causeway in bridge hit list. Saudi intercepted 14 drones on Apr 3 (Arab News). Aramco slashing Asia crude supply 2nd month. 4 offshore fields shut (~2.5M bpd). E-W Pipeline at max 7M bpd; Yanbu 4.4M bpd. Houthi Bab al-Mandeb threat. UN Hormuz vote delayed to next week — resolution stripped of Chapter VII enforcement. Brent ~$109 (Apr 3). OPEC+ Apr 5: confirmed 206 kb/d symbolic increase. Apr 6 power plant deadline TOMORROW — Trump 48-hr ultimatum to Iran: 'all Hell will reign down'. Day 39: F-15E WSO rescued by US commandos/CIA; Trump: 'we got him'. Iran rejects ultimatum.",
+      "summary": "Iran targets King Fahd Causeway in bridge hit list. Saudi intercepted 14 drones on Apr 3 (Arab News). SAMREF refinery at Yanbu HIT by Iranian drone Apr 3 — Greek PAC-3 Patriot battery intercepted 2 BMs at same complex (first NATO combat engagement in Saudi territory, House of Saud). Aramco slashing Asia crude supply 2nd month; March exports avg 3.33 mb/d (down 50% from Feb — Bloomberg). 4 offshore fields shut (~2.5M bpd). E-W Pipeline at max 7M bpd; Yanbu 4.4M bpd but now under direct attack. Houthi Bab al-Mandeb threat. UN Hormuz vote delayed to next week — stripped of Chapter VII. Brent ~$105 (Apr 6). OPEC+ Apr 5: confirmed 206 kb/d symbolic increase. Apr 6 power plant deadline TODAY — Trump ultimatum expires 8PM ET. Day 40: F-15E WSO rescued by US commandos/CIA; Trump: 'we got him'. Iran rejects ultimatum.",
       "metrics": {
-        "headline": "14 drones intercepted Apr 3; Iran targets King Fahd Causeway; ~2.5-3.0 mb/d offline; WH: Hormuz not core objective",
+        "headline": "Day 40: SAMREF Yanbu HIT Apr 3 (Greek PAC-3 first NATO intercept); 14 drones intercepted; Iran targets King Fahd Causeway; ~2.5-3.0 mb/d offline; Apr 6 deadline TODAY",
         "productionOffline": "4 offshore fields + storage constraints",
         "keyFigure": "~20-25% of Saudi capacity; Brent settled $109.03; world losing 4.5-5 mb/d; Rystad: 11,535 kboe/d total regional upstream disrupted"
       },
@@ -757,7 +763,7 @@
         "notes": {
           "oil": "4 offshore mega-fields shut (~2.5M bpd); March exports avg 3.3-4.4 mb/d (down 38-50% from 7.1 Feb); April Arab Light OSP raised to +$2.50/bbl above Oman/Dubai avg (premium surge); East-West Pipeline at max 7M bpd; Yanbu at 4.4M bpd with 40+ VLCCs queued; April term supply = Arab Light from Yanbu only",
           "gas": "Master Gas System reduced; offshore associated gas offline; onshore maintenance deferred; Jafurah Phase 1 unaffected",
-          "refining": "Ras Tanura reopened Mar 13; all onshore refineries operational; throughput constrained by crude routing to Yanbu",
+          "refining": "SAMREF Yanbu (400k bpd, Aramco/ExxonMobil) struck by Iranian drone Apr 3 — assessment underway; Greek PAC-3 intercepted 2 BMs at same complex [src:17]; Ras Tanura reopened Mar 13; throughput constrained by crude routing to Yanbu; Yanbu is now single point of failure for entire Hormuz bypass",
           "petrochemicals": "Baseline: ~18,500 kt/y ethylene-eq across SABIC Jubail/Yanbu crackers + Petro Rabigh + Sadara + YANSAB + Sharq (per Aljazira Capital Sep 2023 KSA Petrochemical Sector Report); ~2,000 kt/y reduced from offshore feedstock constraints, exports constrained by Hormuz",
           "ports": "Yanbu at ~4.4M bpd crude + 700-900k products; port bottleneck (~4.5M bpd capacity); Houthi Bab al-Mandeb closure threat endangers Red Sea route; Ras Tanura at partial ops"
         }
@@ -765,9 +771,18 @@
       "events": [
         {
           "date": "2026-04-03",
+          "title": "SAMREF Yanbu refinery struck by Iranian drone — Greek PAC-3 Patriot intercepts 2 BMs (first NATO combat engagement in Saudi)",
+          "description": "An Iranian Shahed-type one-way attack drone struck the SAMREF refinery (400k bpd, Aramco/ExxonMobil JV) at Yanbu on Apr 3, penetrating air defenses around the facility. A Greek-operated PAC-3 Patriot battery (ELDYSA — 120-130 Greek Air Force personnel, deployed since Sep 2021) intercepted two ballistic missiles aimed at the same complex — the first confirmed combat engagement by a NATO member's military in direct defense of Saudi territory. Yanbu oil loading suspended briefly during the engagement. The East-West Pipeline runs directly to SAMREF/Yanbu, making it the single point of failure for Saudi's entire Hormuz bypass architecture. — House of Saud, Marine Insight, Al Arabiya, Arab News",
+          "isNew": false,
+          "assetImpact": [
+            "SAMREF Refinery (Yanbu)"
+          ]
+        },
+        {
+          "date": "2026-04-03",
           "title": "Saudi air defenses intercept 14 drones in early morning hours",
           "description": "Saudi Arabia's defense ministry spokesperson Gen. Turki Al-Malki confirmed the Kingdom's air defense systems intercepted and destroyed 14 drones in the early morning hours of April 3. The interception locations were not specified. This continues the pattern of daily Iranian drone attacks on Saudi territory since the conflict began. Saudi has intercepted hundreds of drones and dozens of ballistic missiles since Feb 28. — Arab News, Gulf Insider",
-          "isNew": true
+          "isNew": false
         },
         {
           "date": "2026-03-31",
@@ -892,7 +907,8 @@
           "name": "SAMREF Refinery (Yanbu)",
           "type": "Refinery",
           "capacity": "400,000 bpd",
-          "status": "partial"
+          "status": "struck",
+          "notes": "Iranian drone struck Apr 3; Greek PAC-3 intercepted 2 BMs at same complex — first NATO combat engagement in Saudi (House of Saud); loading suspended briefly; assessment underway"
         },
         {
           "name": "Manifa Field",
@@ -1109,6 +1125,24 @@
           "title": "Saudi Arabian forces intercept 14 drones — Arab News",
           "url": "https://www.arabnews.com/node/2638641/saudi-arabia",
           "date": "2026-04-03"
+        },
+        {
+          "id": 17,
+          "title": "Iran drone hits SAMREF Yanbu as Greek Patriots fire — first NATO combat engagement in Saudi — House of Saud",
+          "url": "https://houseofsaud.com/iran-strikes-samref-yanbu-red-sea-bypass/",
+          "date": "2026-04-03"
+        },
+        {
+          "id": 18,
+          "title": "Iran targets Saudi Aramco-Exxon SAMREF refinery in Yanbu — Marine Insight",
+          "url": "https://www.marineinsight.com/iran-targets-saudi-aramco-exxon-samref-refinery-in-yanbu-briefly-disrupting-red-sea-oil-flows/",
+          "date": "2026-04-03"
+        },
+        {
+          "id": 19,
+          "title": "Saudi Arabia exports fell 50% in March to 3.33M bpd — Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-01/saudi-oil-exports-fell-by-50-in-march-on-iran-s-hormuz-shutdown",
+          "date": "2026-04-01"
         }
       ]
     },
@@ -1118,11 +1152,11 @@
       "flag": "🇦🇪",
       "status": "critical",
       "statusLabel": "Escalated",
-      "summary": "Iran targets 3 Abu Dhabi bridges (Sheikh Zayed, Al Maqta, Khalifa) in hit list. UAE intercepted 438+ BMs + 2,012+ drones + 19+ CMs (12 killed, 190+ injured); Apr 3 alone: 18 BMs + 4 CMs + 47 drones intercepted. ADCOP at 1.62M bpd (can surge to 1.8M). S&P Platts bifurcation live Apr 1. VLCC Al Salmi struck Mar 31. >50% crude offline. ~2,000 vessels trapped in Gulf (IMO). UN Hormuz vote delayed to next week — stripped of Chapter VII. Brent ~$109 (Apr 3). OPEC+ Apr 5: confirmed 206 kb/d symbolic increase. Apr 6 power plant deadline TOMORROW — Trump 48-hr ultimatum. HABSHAN GAS SHUT AGAIN Apr 3 — debris from intercepted missile caused fire; 1 Egyptian killed, 4 injured (Egypt/Pakistan); 2nd shutdown since war began (Bloomberg, Asharq Al-Awsat). Day 39: F-15E WSO rescued; Iran rejects ultimatum; KPC HQ struck; Bahrain Bapco tank hit.",
+      "summary": "Iran targets 3 Abu Dhabi bridges (Sheikh Zayed, Al Maqta, Khalifa) in hit list. UAE intercepted 507+ BMs + 2,191+ drones + 24+ CMs (12 killed, 190+ injured); Apr 3 alone: 18 BMs + 4 CMs + 47 drones intercepted. ADCOP at 1.62M bpd (can surge to 1.8M). S&P Platts bifurcation live Apr 1. VLCC Al Salmi struck Mar 31. >50% crude offline. ~2,000 vessels trapped in Gulf (IMO). Brent ~$105 (Apr 6). OPEC+ Apr 5: kept targets unchanged, no new barrels — next meeting Jun 7. Apr 6 power plant deadline TODAY — Trump ultimatum expires 8PM ET; warns 'Power Plant Day' / 'Bridge Day'. HABSHAN GAS SHUT AGAIN Apr 3 — debris from intercepted missile caused fire; 1 Egyptian killed, 4 injured; 2nd shutdown (Bloomberg). BOROUGE RUWAIS SUSPENDED Apr 5 — 3 fires from air defense debris; ops halted (Bloomberg, Gulf News). Fujairah partial recovery: Vopak Horizon resumed ops; 14/15 terminals now have berth access (MEES Apr 3). Day 40: F-15E WSO rescued by commandos + CIA deception; Iran rejects ultimatum. Oman-Iran Hormuz joint management talks Apr 5. Kpler: cumulative ME oil losses >300 Mbbls, surging toward 600 Mbbls by end-April.",
       "metrics": {
-        "headline": "HABSHAN GAS SHUT AGAIN Apr 3 (2nd time); Iran targets 3 Abu Dhabi bridges; ADCOP at 1.62M bpd; Brent ~$109",
-        "productionOffline": "Habshan 6.1 Bcf/d shut Apr 3 + Shah 1 Bcf/d + 417 kb/d refining; ADCOP at 1.62M bpd",
-        "keyFigure": ">50% of UAE crude offline; ~2.5 Bcf/d gas offline; Brent ~$109; Iran bridge targeting escalation"
+        "headline": "Day 40: Apr 6 deadline TODAY; BOROUGE SUSPENDED Apr 5; Habshan shut again Apr 3; Fujairah Vopak back (MEES); ADCOP at 1.62M bpd; 507 BMs + 2,191 UAVs intercepted",
+        "productionOffline": "Habshan 6.1 Bcf/d shut Apr 3 + Shah 1 Bcf/d + 417 kb/d refining + Borouge 4.5 Mtpa suspended Apr 5; ADCOP at 1.62M bpd",
+        "keyFigure": ">50% of UAE crude offline; ~2.5 Bcf/d gas offline; Borouge 4.5 Mtpa petchem suspended; Brent ~$105; Apr 6 deadline TODAY 8PM ET"
       },
       "production": {
         "oil": {
@@ -1148,8 +1182,8 @@
         },
         "petrochemicals": {
           "capacity": 4500,
-          "affected": 1800,
-          "available": 2700,
+          "affected": 4500,
+          "available": 0,
           "unit": "kt/y"
         },
         "notes": {
@@ -1157,16 +1191,25 @@
           "gas": "Habshan SHUT AGAIN Apr 3 — debris from intercepted missile caused fire (2nd shutdown since war began, Bloomberg); Shah still shut (~1 Bcf/d); ~2.5 Bcf/d gas offline; offshore associated gas reduced",
           "refining": "Ruwais-2 shut (417 kb/d); 805 kb/d available; Jebel Ali operational",
           "lng": "Das Island LNG at minimal capacity; Hormuz blocked; transaction-by-transaction basis",
-          "petrochemicals": "Baseline: 4,500 kt/y ethylene at Borouge Ruwais (ADNOC/Borealis JV, per OGJ/Borouge disclosures); Borouge partial (~40% reduced, ~1,800 kt/y offline) from Ruwais-2 refinery feedstock disruption",
+          "petrochemicals": "Baseline: 4,500 kt/y ethylene at Borouge Ruwais (ADNOC/Borealis JV, per OGJ/Borouge disclosures); Borouge SUSPENDED Apr 5 — 3 fires from air defense debris, ops halted (Bloomberg) [src:30]; previously ~40% reduced from Ruwais-2 feedstock disruption; ~4,500 kt/y now fully offline",
           "ports": "Fujairah loadings at 1.9M bpd via ADCOP; ADCOP at 1.62M bpd (71% utilization, can surge to 1.8M bpd); S&P Platts Inside/Outside Strait pricing live Apr 1; DXB fuel terminal shut; Musaffah at partial ops"
         }
       },
       "events": [
         {
+          "date": "2026-04-05",
+          "title": "Borouge petrochemical plant at Ruwais suspended after 3 fires from air defense interception debris",
+          "description": "Three fires broke out at the Borouge petrochemical plant in Ruwais, Abu Dhabi, after air defense interception debris fell on the facility. Operations suspended pending assessment. No injuries reported. Borouge (ADNOC/Borealis JV) is the UAE's largest polyolefins producer (~4.5 Mtpa). This is the second Ruwais complex impact since the war began (Ruwais Refinery-2 shut Mar 10). UAE cumulative intercepts now 507 BMs + 24 CMs + 2,191 UAVs since Feb 28. — Bloomberg, Gulf News",
+          "isNew": true,
+          "assetImpact": [
+            "Borouge Petrochemical Complex"
+          ]
+        },
+        {
           "date": "2026-04-03",
           "title": "Habshan gas complex shut AGAIN after intercepted missile debris causes fire — 2nd shutdown since war began",
           "description": "Abu Dhabi halted operations at Habshan, the UAE's largest gas processing facility (6.1 Bcf/d capacity, ~60% of domestic gas supply), after debris from an intercepted incoming missile fell in the area and caused a fire. One Egyptian national was killed during evacuation; four others (from Egypt and Pakistan) sustained minor injuries. Significant damage — assessment ongoing. Separately, 12 workers (7 Nepalese, 5 Indian) injured in Al Ajban area from intercepted missile debris (Voice of Emirates). EGA issued official statement: Al Taweelah recovery 'up to 12 months' (The National Apr 3). IRGC claimed Oracle data center strike in Dubai — Dubai Government denied as 'fake news' (Gulf News). This is the second time Habshan has been shut since the war began (first: Mar 19-23). UAE cumulative 438 BMs + 2,012 drones + 19 CMs intercepted since Feb 28. — Bloomberg, MEED, Anadolu Agency, Asharq Al-Awsat, Voice of Emirates, The National",
-          "isNew": true
+          "isNew": false
         },
         {
           "date": "2026-04-02",
@@ -1273,8 +1316,8 @@
       ],
       "oilGasImpact": {
         "severity": "critical",
-        "summary": "HABSHAN GAS SHUT AGAIN Apr 3 (1 killed, 4 injured); Iran targets 3 Abu Dhabi bridges; ADCOP at 1.62M bpd; 438 BMs + 2,012 drones intercepted; Brent $112.42",
-        "details": "Habshan gas complex (6.1 Bcf/d, ~60% of UAE domestic gas) shut AGAIN Apr 3 — debris from intercepted missile caused fire; 2nd shutdown since war began (Bloomberg Apr 3). Iran published bridge target list including Sheikh Zayed, Al Maqta, and Khalifa bridges in Abu Dhabi after B1 destruction. WH says Hormuz reopening 'not a core objective' — raises prospect of prolonged disruption. UAE intercepted 438 BMs + 2,012 drones + 19 CMs (12 killed, 190 injured). ADCOP at 1.62M bpd (71% utilization, can surge to 1.8M bpd temporarily). VLCC Al Salmi struck at Dubai Mar 31. EGA Al Taweelah struck Mar 29. S&P Platts Inside/Outside Strait pricing live Apr 1. >50% crude offline. UN Hormuz vote delayed to next week (was Apr 5). IEA warns April losses 'twice March'. Iran deployed anti-ship cruise missiles to Abu Musa and Tunbs islands. Rystad: total disrupted upstream 11,535 kboe/d oil+cond across region."
+        "summary": "BOROUGE SUSPENDED Apr 5 (3 debris fires); Habshan shut again Apr 3 (1 killed, 4 injured); Iran targets 3 Abu Dhabi bridges; ADCOP at 1.62M bpd; 507 BMs + 2,191 drones + 24 CMs intercepted; Brent ~$109",
+        "details": "Borouge petrochemical plant at Ruwais SUSPENDED Apr 5 after 3 fires from air defense interception debris — operations halted, no injuries (Bloomberg, Gulf News). UAE cumulative intercepts: 507 BMs + 24 CMs + 2,191 UAVs since Feb 28 (Alma Center). Habshan gas complex (6.1 Bcf/d, ~60% of UAE domestic gas) shut AGAIN Apr 3 — debris from intercepted missile caused fire; 2nd shutdown since war began (Bloomberg Apr 3). Iran published bridge target list including Sheikh Zayed, Al Maqta, and Khalifa bridges in Abu Dhabi after B1 destruction. OPEC+ Apr 5: kept targets unchanged, no new barrels; next meeting Jun 7. Trump warns of 'Power Plant Day' / 'Bridge Day' — Apr 6 deadline TOMORROW. Oman-Iran joint Hormuz management talks Apr 5. ADCOP at 1.62M bpd (71% utilization, can surge to 1.8M bpd temporarily). VLCC Al Salmi struck at Dubai Mar 31. EGA Al Taweelah struck Mar 29. S&P Platts Inside/Outside Strait pricing live Apr 1. >50% crude offline. Rystad: total disrupted upstream 11,535 kboe/d oil+cond across region."
       },
       "infrastructure": [
         {
@@ -1381,7 +1424,7 @@
           "type": "Export Terminal",
           "capacity": "~1M bpd Murban crude",
           "status": "partial",
-          "notes": "Loadings partially resumed; avg 1.9M bpd Mar 20-24 (up 57% YoY) via ADCOP pipeline bypass; earlier drone attacks 14-17 Mar"
+          "notes": "Partial recovery: Vopak Horizon resumed ops early Apr; 14/15 terminals now have FOTT berth access (MEES Apr 3); loadings avg 1.9M bpd Mar 20-24 (up 57% YoY) via ADCOP bypass; earlier drone attacks 14-17 Mar"
         },
         {
           "name": "Das Island LNG/LPG (ADGAS)",
@@ -1455,8 +1498,8 @@
           "name": "Borouge Petrochemical Complex",
           "type": "Petrochemical Complex",
           "capacity": "~4.5 Mtpa polyolefins",
-          "status": "partial",
-          "notes": "Feedstock disrupted by Ruwais Refinery-2 shutdown (Mar 10 drone strike); output reduced ~40%; ADNOC subsidiary"
+          "status": "shutdown",
+          "notes": "SUSPENDED Apr 5 — 3 fires from air defense interception debris; all operations halted pending assessment; no injuries (Bloomberg, Gulf News); previously ~40% reduced from Ruwais-2 feedstock loss (Mar 10)"
         },
         {
           "name": "Jebel Ali Power & Desalination Complex",
@@ -1668,6 +1711,18 @@
           "title": "UAE suspends operations at Habshan gas complex — MEED",
           "url": "https://www.meed.com/uae-suspends-operations-at-habshan-gas-complex",
           "date": "2026-04-03"
+        },
+        {
+          "id": 30,
+          "title": "Borouge suspends Abu Dhabi plant operations after multiple fires — Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-05/borouge-suspends-abu-dhabi-plant-operations-after-multiple-fires",
+          "date": "2026-04-05"
+        },
+        {
+          "id": 31,
+          "title": "Fires break out at Borouge factory after air defense interception — Gulf News",
+          "url": "https://gulfnews.com/uae/fires-break-out-at-borouge-factory-in-abu-dhabi-after-air-defense-interception-1.500496800",
+          "date": "2026-04-05"
         }
       ]
     },
@@ -1677,7 +1732,7 @@
       "flag": "🇮🇶",
       "status": "critical",
       "statusLabel": "FM / Production Halt",
-      "summary": "FM on all foreign-operated oilfields. Basra ~800k bpd as storage fills. SOMO agreed 50k bpd crude + 650k mt/month fuel oil via Syria overland to Mediterranean (Apr-Jun). Kirkuk-Ceyhan at 250k bpd (18M bbl in March). BP/Castrol Irbil struck Apr 1. Iran declared Iraqi ships EXEMPT from Hormuz restrictions (Apr 4 — Fortune) — could partially restore Basra exports. UN Hormuz vote delayed to next week. OPEC+ Apr 5: confirmed 206 kb/d increase. Apr 6 power plant deadline imminent. Day 39: F-15E WSO rescued.",
+      "summary": "FM on all foreign-operated oilfields. Basra ~800k bpd as storage fills. SOMO agreed 50k bpd crude + 650k mt/month fuel oil via Syria overland to Mediterranean (Apr-Jun). Kirkuk-Ceyhan at 250k bpd (targeting 650k via Turkey — AGBI). BP/Castrol Irbil struck Apr 1. Iran declared Iraqi ships EXEMPT from Hormuz restrictions (Apr 4 — Fortune). Buzurgan/Maysan oil field (CNOOC-operated) storage hit by 6 drones Apr 4 — no injuries; Baker Hughes facilities also attacked (Anadolu, S&P Platts). OPEC+ Apr 5: confirmed 206 kb/d increase. Apr 6 power plant deadline TODAY. Day 40: Kpler: cumulative ME oil losses >300 Mbbls.",
       "metrics": {
         "headline": "Basra output 76% down, storage critical",
         "productionOffline": "Basra ~800k from 3.3M bpd",
@@ -1717,8 +1772,17 @@
       "events": [
         {
           "date": "2026-04-04",
+          "title": "Buzurgan/Maysan oil field storage hit by 6 drones — CNOOC-operated, Baker Hughes facilities also attacked",
+          "description": "Six unidentified drones targeted storage facilities at the Buzurgan oil field in Maysan province (near Iran border) late Apr 4. The field is operated by China's CNOOC under the Missan Cluster contract (with TPAO). Baker Hughes facilities at the field were also attacked. No injuries among company employees; material damage to storage. Notable because field is Chinese-operated — questions whether mistaken target. Attack came same day Iran announced Iraq exempt from Hormuz shipping restrictions. Confirmed by Iraq Ministry of Oil. — Anadolu Agency, TASS, S&P Platts, Big News Network",
+          "isNew": true,
+          "assetImpact": [
+            "Buzurgan Field"
+          ]
+        },
+        {
+          "date": "2026-04-04",
           "title": "Iranian drone sparks fire at foreign oil company storage facility in Basra",
-          "description": "An Iranian drone strike sparked a fire at a foreign oil company's storage facility in Basra, Iraq's southern oil hub, on Apr 4. The fire was contained by emergency teams. No casualties reported. Basra oil production has collapsed from 3.1 mb/d to ~900k bpd (70%+ drop) since the conflict began, with exports from Basra completely halted. Iran declared Iraqi ships exempt from Hormuz restrictions the same day (Fortune). — The Week India",
+          "description": "An Iranian drone strike sparked a fire at a foreign oil company's storage facility in Basra's Al-Burjusiya area on Apr 4. Two drones also hit BP's North Rumalia oilfield, wounding three Iraqi workers. The fire was contained by emergency teams. Basra oil production has collapsed from 3.1 mb/d to ~900k bpd (70%+ drop) since the conflict began, with exports from Basra completely halted. Iran declared Iraqi ships exempt from Hormuz restrictions the same day (Fortune). — The Week India",
           "isNew": true
         },
         {
@@ -1800,7 +1864,8 @@
           "name": "Buzurgan Field",
           "type": "Oil Field",
           "capacity": "~90,000 bpd",
-          "status": "partial"
+          "status": "struck",
+          "notes": "6 drones hit storage facilities Apr 4; CNOOC-operated (Missan Cluster); Baker Hughes facilities also attacked; no injuries; material damage (Anadolu, S&P Platts)"
         },
         {
           "name": "Faihaa Field",
@@ -2025,6 +2090,24 @@
           "title": "Iran declared Iraqi ships exempt from Hormuz restrictions — Fortune",
           "url": "https://fortune.com/2026/04/04/iran-war-crude-oil-tankers-iraqi-ships-strait-of-hormuz/",
           "date": "2026-04-04"
+        },
+        {
+          "id": 15,
+          "title": "Drone attack targets storage facilities at Iraq's Buzurgan oil field — Anadolu Agency",
+          "url": "https://www.aa.com.tr/en/middle-east/drone-attack-targets-storage-facilities-at-iraq-s-buzurgan-oil-field/3892227",
+          "date": "2026-04-04"
+        },
+        {
+          "id": 16,
+          "title": "Oil storages at Buzurgan field attacked by drones — TASS",
+          "url": "https://tass.com/world/2111965",
+          "date": "2026-04-04"
+        },
+        {
+          "id": 17,
+          "title": "Several Mideast Gulf energy sites hit by drones — Argus Media",
+          "url": "https://www.argusmedia.com/en/news-and-insights/latest-market-news/2810200-several-mideast-gulf-energy-sites-hit-by-drones",
+          "date": "2026-04-05"
         }
       ]
     },
@@ -2034,7 +2117,7 @@
       "flag": "🇧🇭",
       "status": "critical",
       "statusLabel": "FM / Struck",
-      "summary": "Iran targets King Fahd Causeway (Saudi-Bahrain link) in bridge hit list. Bahrain intercepted cumulative 188 BMs + 445 drones since Feb 28 (Alwast News Apr 3). Batelco/AWS struck Apr 1. Alba smelter struck Mar 29. BAPCO Sitra (405 kb/d) offline. Bapco FM on all ops. Abu Safa shut. Apr 5: Bapco fuel storage tank hit by drone — fire extinguished, no injuries (BNA). 6th direct Iranian attack on Bahrain infrastructure. UN Hormuz vote delayed to next week — stripped of Chapter VII; Russia/China vetoes likely. Trump 48-hr ultimatum: Apr 6 power plant deadline imminent.",
+      "summary": "Iran targets King Fahd Causeway (Saudi-Bahrain link) in bridge hit list. Bahrain intercepted cumulative 188 BMs + 445 drones since Feb 28 (Alwast News Apr 3). Batelco/AWS struck Apr 1. Alba smelter struck Mar 29. BAPCO Sitra (405 kb/d) offline. Bapco FM on all ops. Abu Safa shut. Apr 5: Bapco fuel storage tank hit by drone — fire extinguished, no injuries (BNA). Apr 5: GPIC petrochemical units also struck by drones — fires at operational units contained, no casualties (Gulf News, Xinhua). Bahrain repelled 13-drone wave Apr 5. 7th direct Iranian attack on Bahrain infrastructure. UN Hormuz vote delayed to next week — stripped of Chapter VII. Brent ~$105 (Apr 6). Trump ultimatum: Apr 6 power plant deadline TODAY — 8PM ET. OPEC+ Apr 5: no new barrels, next Jun 7. Day 40.",
       "metrics": {
         "headline": "405 kb/d refining offline",
         "productionOffline": "Sitra refinery + Abu Safa field",
@@ -2074,9 +2157,12 @@
       "events": [
         {
           "date": "2026-04-05",
-          "title": "Bapco fuel storage tank hit by drone — fire extinguished, 6th attack on Bahrain",
-          "description": "An Iranian drone struck a Bapco Energies fuel storage tank, sparking a fire. Emergency response teams acted immediately, working with Civil Defence to contain and extinguish the blaze. No injuries reported. Damages are being assessed. Bahrain state news agency BNA confirmed the situation is under control. This is the 6th direct Iranian attack on Bahrain infrastructure since the conflict began (Sitra refinery x2, Alba smelter x2, Batelco/AWS x1, Bapco storage tank x1). — The National, GDN Online, BNA",
-          "isNew": true
+          "title": "GPIC petrochemical units struck by drones + Bapco fuel storage tank hit — 7th attack on Bahrain; 13-drone wave repelled",
+          "description": "Iranian drones struck Gulf Petrochemical Industries Company (GPIC) operational units early Apr 5, sparking fires at the 1,200 kt/y ammonia/methanol/urea complex. Fires contained, no casualties. Separately, a Bapco Energies fuel storage tank was also hit by a drone — fire extinguished, no injuries (BNA). Bahrain air defenses thwarted a 'large-scale attack involving 13 drones' (Gulf News). This brings total direct Iranian attacks on Bahrain infrastructure to 7+ since conflict began (Sitra refinery x2, Alba smelter x2, Batelco/AWS x1, Bapco storage tank x1, GPIC x1). — Gulf News, Xinhua, GDN Online, BNA, The National",
+          "isNew": true,
+          "assetImpact": [
+            "BAPCO Sitra Refinery"
+          ]
         },
         {
           "date": "2026-04-01",
@@ -2103,8 +2189,8 @@
       ],
       "oilGasImpact": {
         "severity": "critical",
-        "summary": "6 direct attacks: Bapco fuel storage tank struck Apr 5; Iran targets King Fahd Causeway in bridge hit list; cumulative 188 BMs + 445 drones intercepted; 405 kb/d refining offline; UN Hormuz vote delayed to next week",
-        "details": "Apr 5: Bapco fuel storage tank hit by drone — fire extinguished, no injuries (BNA). 6th direct Iranian attack on Bahrain. Iran published bridge target list including King Fahd Causeway (Saudi-Bahrain link) after B1 destruction — raises risk to critical Saudi pipeline/road connection. Bahrain Defense Force reports cumulative 188 ballistic missiles + 445 drones intercepted since Feb 28 (Alwast News Apr 3); 16 drones intercepted in past 24 hours on Apr 3. Batelco/AWS struck Apr 1 — 5th attack. BAPCO Sitra (405 kb/d) struck 4 & 9 Mar. Bapco Energies FM on all ops. Abu Safa shut. UN Hormuz resolution vote delayed to next week — stripped of Chapter VII enforcement authority after opposition from China/Russia/France; vetoes likely. Trump 48-hr ultimatum to Iran: Apr 6 power plant deadline imminent."
+        "summary": "7+ direct attacks: GPIC petrochemical + Bapco fuel storage tank struck Apr 5; 13-drone wave repelled; Iran targets King Fahd Causeway; cumulative 188 BMs + 445 drones intercepted; 405 kb/d refining offline",
+        "details": "Apr 5: GPIC petrochemical units struck by Iranian drones — fires at operational units, contained, no casualties (Gulf News, Xinhua). Bapco Energies fuel storage tank also hit — fire extinguished, no injuries (BNA). Bahrain repelled 'large-scale attack involving 13 drones' (Gulf News). 7th+ direct Iranian attack on Bahrain. Iran published bridge target list including King Fahd Causeway (Saudi-Bahrain link). Bahrain Defense Force cumulative: 188 BMs + 445 drones intercepted since Feb 28. Batelco/AWS struck Apr 1. BAPCO Sitra (405 kb/d) struck 4 & 9 Mar. Bapco Energies FM on all ops. Abu Safa shut. OPEC+ Apr 5: no new barrels, next Jun 7. Trump 48-hr ultimatum: Apr 6 power plant deadline TOMORROW."
       },
       "infrastructure": [
         {
@@ -2173,6 +2259,13 @@
           "capacity": "primary Bahrain DC (MW pending)",
           "status": "partial",
           "notes": "Hit Apr 1 per events log; hosts AWS Middle East region; first IRGC strike on US tech infrastructure in-theater"
+        },
+        {
+          "name": "GPIC Fertilizer Complex",
+          "type": "Petrochemical/Fertilizer",
+          "capacity": "~1,200 kt/y (ammonia + methanol + urea)",
+          "status": "struck",
+          "notes": "STRUCK Apr 5 by Iranian drones — fires at operational units, contained, no casualties (Gulf News, Xinhua); JV of SABIC/GPIC/Petrochemical Industries of Kuwait"
         }
       ],
       "sources": [
@@ -2247,6 +2340,18 @@
           "title": "Bapco Energies releases statement on Iranian drone attack — GDN Online",
           "url": "https://www.gdnonline.com/Details/1380501",
           "date": "2026-04-05"
+        },
+        {
+          "id": 13,
+          "title": "Fires erupt at Bahrain petrochemical and energy facilities after drone strikes — Gulf News",
+          "url": "https://gulfnews.com/world/gulf/bahrain/fires-erupt-at-bahrain-petrochemical-and-energy-facilities-after-drone-strikes-1.500496850",
+          "date": "2026-04-05"
+        },
+        {
+          "id": 14,
+          "title": "Bahrain GPIC and Bapco facilities targeted by Iranian drones — Xinhua",
+          "url": "https://english.news.cn/20260405/05d4cd0315bf420ca76385911334070d/c.html",
+          "date": "2026-04-05"
         }
       ]
     },
@@ -2256,7 +2361,7 @@
       "flag": "🇴🇲",
       "status": "high",
       "statusLabel": "Collateral",
-      "summary": "3 Omani-flagged vessels (2 VLCCs + LNG carrier) transit Hormuz via alternative coastal route Apr 2. Iran-Oman transit protocol being drafted to 'monitor and coordinate' passage. Oman crude surged to $152-153/bbl. Salalah Port struck twice (Mar 11 + Mar 29), resuming. Production intact (~1 mb/d). Oman LNG commanding premium with Qatar offline. MOL-owned Sohar LNG transited Hormuz Apr 3 (S&P Platts CAS). Zero Hormuz export exposure — GDP projected +0.8% from higher prices. OPEC+ Apr 5: confirmed 206 kb/d increase. Apr 6 power plant deadline imminent.",
+      "summary": "3 Omani-flagged vessels (2 VLCCs + LNG carrier) transit Hormuz via alternative coastal route Apr 2. Oman-Iran deputy FM-level talks Apr 5 on 'smooth transit' and joint Hormuz management protocol — could include permit requirements (Al Jazeera, Middle East Eye). Oman crude surged to $152-153/bbl. Salalah Port struck twice (Mar 11 + Mar 29), resuming. Production intact (~1 mb/d). Oman LNG commanding premium with Qatar offline. MOL-owned Sohar LNG first LNG carrier to transit Hormuz since war began — arrived offshore Muscat (Kpler Apr 4). Zero Hormuz export exposure — GDP projected +0.8% from higher prices. OPEC+ Apr 5: no new barrels, next Jun 7. Apr 6 power plant deadline TODAY. Day 40.",
       "metrics": {
         "headline": "Export infrastructure damaged",
         "productionOffline": "Production intact (~650k bpd)",
@@ -2488,7 +2593,7 @@
       "flag": "🇮🇱",
       "status": "conflict",
       "statusLabel": "Conflict / FM",
-      "summary": "Iran targets Arik Bridge (Route 87, Galilee-Golan) in bridge hit list. Chevron FM on Leviathan partially lifted. Karish shut. Tamar domestic only. Iran's 'most significant strike' on Tel Aviv Apr 1 — 14 injured incl. children. Israel struck 400+ Iran targets incl. B1 bridge Apr 3. Pentagon: 90% of Iran capability degraded. DM Katz vows Lebanon occupation. LEVIATHAN PRODUCING: Bloomberg Apr 3 confirms Leviathan resumed after 33-day shutdown; ~1.2 Bcf/d ramping up. Day 39 (Apr 5): F-15E WSO rescued by US commandos; Trump 48-hr ultimatum to Iran — Apr 6 power plant deadline TOMORROW. OPEC+ Apr 5: confirmed 206 kb/d increase.",
+      "summary": "Iran targets Arik Bridge (Route 87, Galilee-Golan) in bridge hit list. Chevron FM on Leviathan partially lifted. Karish shut. Tamar domestic only. Iran's 'most significant strike' on Tel Aviv Apr 1 — 14 injured incl. children. Israel struck 400+ Iran targets incl. B1 bridge Apr 3. Pentagon: 90% of Iran capability degraded. DM Katz vows Lebanon occupation. LEVIATHAN PRODUCING: Bloomberg Apr 3 confirms Leviathan resumed after 33-day shutdown; ~1.2 Bcf/d ramping up. Day 40 (Apr 6): Trump ultimatum to Iran expires 8PM ET TODAY — 'Power Plant Day' / 'Bridge Day'. OPEC+ Apr 5: confirmed 206 kb/d increase. Brent ~$105.",
       "metrics": {
         "headline": "Leviathan CONFIRMED PRODUCING (Bloomberg Apr 3, ~1.2 Bcf/d ramping); Karish still shut; Iran massive strike on Tel Aviv Apr 1",
         "productionOffline": "Leviathan producing + Karish shut; Tamar domestic only",
@@ -2530,7 +2635,7 @@
           "date": "2026-04-02",
           "title": "Leviathan gas field resumes operations — Energy Ministry announces restart; Chevron ramping up platform",
           "description": "Israel's Energy Ministry announced that the Leviathan natural gas field, the country's largest offshore gas platform, will resume operations after being shut down since Feb 28 due to security concerns. Chevron Mediterranean Limited is working on restarting the platform with regular production expected within hours. Leviathan produces ~1.2 Bcf/d (~12 Bcm/yr) and accounts for over 70% of Israel's electricity generation. The restart signals improved security conditions around Israel's Mediterranean coast, though gas exports to Egypt and Jordan remain halted pending further assessment. Karish field remains shut. Bloomberg Apr 3 confirmed Leviathan has resumed after 33-day shutdown; Newmed Energy spokesperson says supply for domestic market and exports can now resume. — OilPrice.com, Times of Israel, Washington Today, Business Upturn, Bloomberg",
-          "isNew": true
+          "isNew": false
         },
         {
           "date": "2026-04-01",
@@ -2685,11 +2790,11 @@
       "flag": "🇮🇷",
       "status": "critical",
       "statusLabel": "Struck / Disrupted",
-      "summary": "Day 38 (Apr 4): Mahshahr Petrochemical Zone struck — Fajr 1&2, Rejal, Amir Kabir, Bandar Imam plants hit; 5 killed, 170 injured (Anadolu). Bushehr nuclear plant 4th strike (1 killed); Rosatom evacuating 200+. Iran rejects 48-hr ceasefire — 'Hormuz will never return to pre-war status quo'. IRGC strikes US 82nd Airborne Bubiyan Island. B1 death toll → 13. Day 37: B1 bridge destroyed; IDF kills Atimi; Zarif calls for settlement. UN Hormuz vote delayed to next week. ~2,000 vessels trapped. Dated Brent physical $141.37 (highest since 2008). OPEC+ Apr 5: confirmed 206 kb/d symbolic increase. Day 39 (Apr 5): F-15E WSO RESCUED by US commandos + CIA subterfuge — colonel evaded capture >1 day in Iranian mountains; Trump: 'we got him'. Trump 48-hr ultimatum: 'all Hell will reign down' if Hormuz not opened by Apr 6 8PM. Iran's Gen. Aliabadi: 'gates of hell will open' if infrastructure attacks continue. Iran FM Araghchi signals willingness for talks in Pakistan. KPC Shuwaikh HQ struck + 2 Kuwait desal plants + Bahrain Bapco storage tank struck.",
+      "summary": "Day 38 (Apr 4): Mahshahr Petrochemical Zone struck — Fajr 1&2, Rejal, Amir Kabir, Bandar Imam plants hit; 5 killed, 170 injured (Anadolu). Bushehr nuclear plant 4th strike (1 killed); Rosatom evacuating 200+. Iran rejects 48-hr ceasefire — 'Hormuz will never return to pre-war status quo'. IRGC strikes US 82nd Airborne Bubiyan Island. B1 death toll → 13. Day 37: B1 bridge destroyed; IDF kills Atimi; Zarif calls for settlement. Dated Brent physical $141.37 (highest since 2008). OPEC+ Apr 5: confirmed 206 kb/d symbolic increase. Day 39 (Apr 5): F-15E WSO RESCUED by US commandos + CIA subterfuge — colonel evaded capture >1 day in Iranian mountains; Trump: 'we got him'. Day 40 (Apr 6): Trump 48-hr ultimatum EXPIRES TODAY 8PM ET — 'Power Plant Day' + 'Bridge Day' (Time, NBC News). Iran rejects as 'helpless, nervous, unbalanced'; Gen. Aliabadi: 'gates of hell will open'. Iran FM Araghchi signals willingness for Pakistan-mediated talks. SAMREF Yanbu struck Apr 3 (Greek PAC-3 first NATO intercept). Buzurgan/Maysan (CNOOC) hit Apr 4. KPC HQ + KNPC/PIC struck + 2 Kuwait desal plants + Bahrain Bapco/GPIC struck. Kharg Island exports INCREASING despite war (Iran MP energy chair, Al Arabiya Apr 4). Brent easing to ~$105 on de-escalation signals.",
       "metrics": {
-        "headline": "Day 39: F-15E WSO RESCUED; Trump 48-hr ultimatum — Apr 6 deadline TOMORROW; Iran rejects; Mahshahr 5 killed/170 injured; OPEC+ confirms 206 kb/d",
+        "headline": "Day 40: Apr 6 deadline EXPIRES TODAY 8PM ET — 'Power Plant Day' / 'Bridge Day'; F-15E WSO rescued via CIA deception; Kharg exports INCREASING; Brent ~$105; OPEC+ no new barrels (Jun 7 next)",
         "productionOffline": "South Pars phases + 14 oil fields reduced + Mahshahr petchem zone shut; 225 Kpler crossings since Mar 1; toll legalized; ~2,000 vessels trapped in Gulf",
-        "keyFigure": "~15% crude, ~13% gas disrupted; Kharg loading 1.84 mb/d; >1,900 killed in Iran; world losing 4.5-5 mb/d; Dated Brent $141.37; Apr 6 power plant deadline TOMORROW"
+        "keyFigure": "~15% crude, ~13% gas disrupted; Kharg loading avg 1.84 mb/d + INCREASING (Iran MP chair, Al Arabiya); >1,900 killed in Iran; world losing 4.5-5 mb/d; Brent ~$105; Apr 6 power plant deadline TODAY"
       },
       "production": {
         "oil": {
@@ -2727,7 +2832,7 @@
         {
           "date": "2026-04-05",
           "title": "Day 39: F-15E WSO RESCUED by US commandos + CIA; Trump 48-hr ultimatum to Iran; Iran rejects; KPC HQ struck; Bahrain Bapco tank hit",
-          "description": "US commandos rescued the missing F-15E weapons system officer (a colonel) from Iranian mountains after >1 day of evasion. CIA launched deception campaign inside Iran claiming airman already found, enabling dozens of special forces + warplanes to extract him. Trump: 'we got him — sustained injuries, but he will be just fine.' Trump issued 48-hour ultimatum: 'all Hell will reign down' if Hormuz not opened by Apr 6 8PM — power plant strikes imminent if Iran doesn't comply. Iran rejects ultimatum; Maj. Gen. Aliabadi warns 'gates of hell will be opened.' Iran FM Araghchi signals willingness for Pakistan-mediated talks. IRGC drones struck KPC Shuwaikh HQ (building ablaze, evacuated — Bloomberg), 2 Kuwait power/desal plants, and Bahrain Bapco fuel storage tank. OPEC+ Apr 5 confirmed 206 kb/d symbolic increase. Brent ~$109. — NBC News, CBS News, WaPo, Axios, Bloomberg, The National, Times Kuwait",
+          "description": "US commandos rescued the missing F-15E weapons system officer (a colonel) from a mountain crevice in Iran after >1 day of evasion. CIA launched deception campaign inside Iran, spreading false word that both crew members had already been found, buying time for the actual extraction with heavy air cover. Two US special operations aircraft were damaged/destroyed on the ground in Iran during the operation. Trump: 'we got him — sustained injuries, but he will be just fine.' Trump issued 48-hour ultimatum: 'all Hell will reign down' if Hormuz not opened by Apr 6 8PM — posted 'Power Plant Day' and 'Bridge Day' warnings on Truth Social. Iran rejects ultimatum; called Trump 'helpless, nervous, unbalanced'; Maj. Gen. Aliabadi warns 'gates of hell will be opened.' Iran FM Araghchi signals willingness for Pakistan-mediated talks. Oman-Iran deputy FM-level talks Apr 5 on 'smooth transit' and joint Hormuz management protocol. IRGC drones struck KPC Shuwaikh HQ (building ablaze — Bloomberg), 2 Kuwait power/desal plants (serious material damage — 2 gen units shut), Bahrain Bapco fuel storage tank + GPIC petrochemical units (Gulf News, Xinhua). Borouge petrochemical plant at Ruwais suspended after 3 fires from interception debris (Bloomberg). OPEC+ Apr 5: kept targets unchanged, no new barrels; next meeting Jun 7. Brent ~$109. — NBC News, CBS News, WaPo, Axios, Bloomberg, The National, Times Kuwait, Al Jazeera, Gulf News, Time",
           "isNew": true
         },
         {
@@ -2740,19 +2845,19 @@
           "date": "2026-04-03",
           "title": "Day 37: Iran fires new salvos; IDF kills missile chief; USAF F-15E shot down; Zarif calls for settlement; Brent ~$109",
           "description": "Iran launched new missile and drone salvos at Israel, UAE, and Gulf states on Apr 3. IDF killed Makram Atimi, commander of central Iranian ballistic missile unit, in Kermanshah. IRGC claimed second F-35 shoot-down but debris analysis shows it was a USAF F-15E Strike Eagle from 494th FS, RAF Lakenheath (deployed to Jordan). Former FM Javad Zarif publicly called for Iran to 'declare victory and make a deal' — first significant internal voice for settlement. Trump claimed US destroyed '3 big Iranian bridges'. Brent at ~$108.95 (intraday range $99-$110). Bahrain's revised Hormuz resolution — vote Saturday Apr 5; France joins China/Russia in opposing force authorization. Iran continues ~25 missiles + ~120 drones/day. >1,900 killed in Iran. — PBS, NBC News, JPost, The Aviationist, Al Jazeera, CNN",
-          "isNew": true
+          "isNew": false
         },
         {
           "date": "2026-04-03",
           "title": "Day 37: US strikes B1 bridge (Tehran-Karaj) — first civilian infrastructure hit; 8 killed, 95 wounded; UN Hormuz vote delayed to Saturday",
           "description": "US-Israeli airstrikes severed the B1 bridge connecting Tehran and Karaj — Iran's highest bridge, a major transport artery (under construction when struck). Death toll revised to 13 killed, 95+ wounded including families marking Nature Day (final Nowruz holiday). US claims bridge was 'military supply route for ballistic missiles'; Iran says bridge was not yet operational for military use. Trump posted: 'The biggest bridge in Iran comes tumbling down — Much more to follow!' Separately, UN Security Council vote on Bahrain-drafted resolution authorizing 'all necessary means' to secure Hormuz passage delayed from Friday to Saturday Apr 5 (Good Friday holiday). France joins China/Russia in opposing force authorization; Russia/China vetoes likely. Iran vows 'crushing' retaliation on regional infrastructure. Iran allows Philippine-flagged vessels through Hormuz (expanding permitted nations list). JMIC: 12 vessels transited Hormuz on Apr 2. Brent surged to $111.69 on Apr 2. — Axios, Times of Israel, ABC7, CNN, Al-Monitor, France 24, Manila Times, UANI",
-          "isNew": true
+          "isNew": false
         },
         {
           "date": "2026-04-03",
           "title": "Day 36: UK-led 40+ nation coalition demands immediate Hormuz reopening; Iran demands guaranteed ceasefire; Apr 6 deadline 3 days away",
           "description": "UK FM Cooper chaired virtual summit of 40+ nations Apr 2 (Thursday) — chairman's statement demands 'immediate and unconditional' Hormuz reopening, threatens sanctions if strait stays closed, military planners to meet next week for mine-clearing and commercial shipping security. Iran demands 'guaranteed ceasefire' via intermediaries but calls US demands 'maximalist and irrational'. Iran and Oman drafting transit protocol to 'monitor and coordinate' Strait passage; 3 Omani-flagged vessels (2 VLCCs + 1 LNG carrier) entered Hormuz hugging Oman's coastline — alternative route to normal Iranian-waters path. Two COSCO ultra-large container carriers (CSCL Indian Ocean + CSCL Arctic Ocean) also transited after failed Mar 27 attempt. Iran deployed advanced anti-ship cruise missiles to Abu Musa and Tunbs islands. StanChart warns OPEC+ could abandon voluntary output cuts entirely at Apr 5 meeting. IEA warns April supply losses will be 'twice March' — world losing 4.5-5 mb/d, doubling by mid-April. Shell warns of April fuel crunch in Europe; Macquarie: 2 more months could send oil to $200. Kpler: 214 crossings Mar 1-Apr 1 (94% decline). Brent volatile $105-112. — Al Jazeera, Euronews, CNBC, Reuters, Rigzone, Military.com, Argus Media",
-          "isNew": true
+          "isNew": false
         },
         {
           "date": "2026-04-02",
@@ -3664,6 +3769,424 @@
   ],
   "fmDeclarations": [
     {
+      "id": "fm-043",
+      "company": "Ineos Styrolution",
+      "country": "Germany",
+      "flag": "🇩🇪",
+      "date": "2026-03-24",
+      "status": "active",
+      "statusLabel": "Active",
+      "isNew": false,
+      "summary": "FM on multiple Novodur ABS grades due to compounding line failure at Cologne-Worringen plant. Compounds Europe's existing polymer supply tightness from Gulf crisis.",
+      "details": {
+        "volumeAffected": "Multiple Novodur and Novodur HH ABS grades (primarily black-colored)",
+        "commodity": "ABS (Acrylonitrile Butadiene Styrene)",
+        "duration": "Since 24 Mar 2026, ongoing — technical repair timeline not disclosed",
+        "reason": "Technical failure at compounding line at Cologne-Worringen plant. Mechanical issue, not Gulf-related, but compounds European polymer supply tightness.",
+        "financialImpact": "European ABS market further tightened; automotive and electronics sectors affected."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Ineos Styrolution declares FM for several Novodur grades - Plasteurope",
+          "url": "https://www.plasteurope.com/news/PETROCHEMICAL_MARKETS_t259926/",
+          "date": "2026-03-24"
+        }
+      ]
+    },
+    {
+      "id": "fm-042",
+      "company": "Industries Qatar (Fertilizer)",
+      "country": "Qatar",
+      "flag": "🇶🇦",
+      "date": "2026-03-06",
+      "status": "active",
+      "statusLabel": "Active",
+      "isNew": false,
+      "summary": "FM on urea fertilizer shipments to South America and Asia. Production halted at Ras Laffan after Iranian strikes. Part of broader QatarEnergy downstream suspension.",
+      "details": {
+        "volumeAffected": "Urea fertilizer shipments to South America and Asia",
+        "commodity": "Urea Fertilizer",
+        "duration": "Since 6 Mar 2026, ongoing — linked to QatarEnergy downstream suspension",
+        "reason": "Ras Laffan production halt + Strait of Hormuz closure blocking seaborne fertilizer exports.",
+        "financialImpact": "Global urea prices surging; South American planting season supply disrupted."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Iran's Hormuz blockade leaves fertilizer stranded - Food Ingredients First",
+          "url": "https://www.foodingredientsfirst.com/news/hormuz-fertilizer-crisis-food-ingredient-costs.html",
+          "date": "2026-03-06"
+        }
+      ]
+    },
+    {
+      "id": "fm-041",
+      "company": "HMM (Hyundai Merchant Marine)",
+      "country": "South Korea",
+      "flag": "🇰🇷",
+      "date": "2026-03-11",
+      "status": "active",
+      "statusLabel": "Active",
+      "isNew": false,
+      "summary": "FM on all Arabian Gulf, Red Sea, and Horn of Africa container bookings. $1,000/container surcharge on alternate routes. South Korea's largest shipping carrier.",
+      "details": {
+        "volumeAffected": "All container bookings for Arabian Gulf, Red Sea, Horn of Africa routes",
+        "commodity": "Maritime Shipping (Container)",
+        "duration": "Since 11 Mar 2026, indefinite",
+        "reason": "Safety risk to vessels, cargo, and crew from Iran war. Extended Gulf exclusion zone.",
+        "financialImpact": "$1,000/container surcharge applied; Korea-Gulf trade lanes fully disrupted."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "HMM Halts Middle East Shipping, Imposes $1,000 Surcharge - Seoul Economic Daily",
+          "url": "https://en.sedaily.com/finance/2026/03/11/hmm-halts-middle-east-shipping-imposes-1000-surcharge",
+          "date": "2026-03-11"
+        }
+      ]
+    },
+    {
+      "id": "fm-040",
+      "company": "LyondellBasell (Bayport PO/TBA)",
+      "country": "United States",
+      "flag": "🇺🇸",
+      "date": "2026-03-17",
+      "status": "active",
+      "statusLabel": "Active",
+      "isNew": false,
+      "summary": "FM on Americas propylene oxide and derivatives after fire at Bayport Choate plant in Pasadena, TX on Mar 12. All three PO/TBA trains offline. World's largest PO/TBA facility by volume.",
+      "details": {
+        "volumeAffected": "620,000 tonnes/year propylene oxide capacity (3 PO/TBA plants)",
+        "commodity": "Propylene Oxide (PO), Propylene Glycol, TBA, Isobutylene",
+        "duration": "Since 12 Mar 2026 (fire), FM declared ~17 Mar, ongoing",
+        "reason": "Fire at Bayport Choate — process upset caused flammable substance release ignited by flare pilot light. Industrial incident, not Gulf-related.",
+        "financialImpact": "Global propylene oxide market tightened; downstream polyurethane and glycol ether supply disrupted."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "LyondellBasell puts Americas PO and derivatives on force majeure - Chemical Week",
+          "url": "https://chemweek.com/CW/Document/114572/LyondellBasell-puts-Americas-PO-and-derivatives-on-force-majeure",
+          "date": "2026-03-17"
+        },
+        {
+          "id": 2,
+          "title": "LyondellBasell reports fire at Bayport Choate site in Texas - US News",
+          "url": "https://www.usnews.com/news/us/articles/2026-03-13/lyondellbasell-reports-fire-at-bayport-choate-site-in-texas",
+          "date": "2026-03-13"
+        }
+      ]
+    },
+    {
+      "id": "fm-039",
+      "company": "Sasol (Middle East / ORYX GTL)",
+      "country": "South Africa / Qatar",
+      "flag": "🇿🇦",
+      "date": "2026-03-03",
+      "status": "active",
+      "statusLabel": "Active",
+      "isNew": false,
+      "summary": "FM on petroleum and GTL products. ORYX GTL in Qatar (34,000 bpd, JV with QatarEnergy) shut due to gas supply loss. Natref refinery in South Africa pivoting crude sourcing. Sasol supplies ~30% of South Africa's domestic fuel.",
+      "details": {
+        "volumeAffected": "ORYX GTL 34,000 bpd shut; Natref refinery (~108,000 bpd) under supply stress",
+        "commodity": "GTL Products, Petroleum Products, Chemicals",
+        "duration": "Since 3 Mar 2026, indefinite — linked to Qatar gas supply restoration",
+        "reason": "Gulf/Hormuz crisis. ORYX GTL in Qatar shut from gas supply loss; Natref pivoting to non-ME crude.",
+        "financialImpact": "South Africa bracing for major fuel price hikes (~R7/liter increase in April); 1,000+ fuel stations running dry."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Update on Middle East Developments and Business Impacts - Sasol",
+          "url": "https://www.sasol.com/media-centre/media-releases/update-middle-east-developments-and-business-impacts",
+          "date": "2026-03-03"
+        },
+        {
+          "id": 2,
+          "title": "Sasol declares force majeure on petroleum product - African News Agency",
+          "url": "https://africannewsagency.com/sasol-declares-force-majeure-on-petroleum-product-as-natref-is-forcefully-shutdown-db52e53d-2bf4-598f-ae89-cc98d148fa8d/",
+          "date": "2026-03-03"
+        }
+      ]
+    },
+    {
+      "id": "fm-038",
+      "company": "Methanex (Egypt Plant)",
+      "country": "Egypt",
+      "flag": "🇪🇬",
+      "date": "2026-03-26",
+      "status": "active",
+      "statusLabel": "Active",
+      "isNew": false,
+      "summary": "FM / temporary shutdown of 1.3 Mtpa methanol plant in Damietta, Egypt. Lost feedstock natural gas supply from Israel after Leviathan field shutdown.",
+      "details": {
+        "volumeAffected": "1.3 million mt/year methanol plant",
+        "commodity": "Methanol",
+        "duration": "Since ~26 Mar 2026, ongoing — linked to Israeli gas pipeline restoration",
+        "reason": "Loss of feedstock natural gas supply from Israel (Leviathan field FM from Feb 28). Egyptian gas pipeline flows halted.",
+        "financialImpact": "Global methanol market tightened; Egypt losing industrial feedstock and export revenue."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Methanex Announces Temporary Interruption of Its Egypt Operations - Methanex",
+          "url": "https://www.methanex.com/news/update/methanex-announces-temporary-interruption-of-its-egypt-operations/",
+          "date": "2026-03-26"
+        },
+        {
+          "id": 2,
+          "title": "Methanex temporarily shuts down Egypt plant - Nasdaq",
+          "url": "https://www.nasdaq.com/articles/methanex-temporarily-shuts-down-egypt-plant",
+          "date": "2026-03-26"
+        }
+      ]
+    },
+    {
+      "id": "fm-037",
+      "company": "CPDC (China Petrochemical Development)",
+      "country": "Taiwan",
+      "flag": "🇹🇼",
+      "date": "2026-03-24",
+      "status": "active",
+      "statusLabel": "Active",
+      "isNew": false,
+      "summary": "FM on caprolactam, nylon 6, and acrylonitrile after upstream feedstock suppliers declared FM, causing complete cessation of raw material deliveries to Toufen and Kaohsiung plants.",
+      "details": {
+        "volumeAffected": "300,000 mt/yr caprolactam, 36,000 mt/yr nylon 6, acrylonitrile",
+        "commodity": "Caprolactam, Nylon 6, Acrylonitrile",
+        "duration": "Since 24 Mar 2026, ongoing — cascading from upstream supplier FMs",
+        "reason": "Primary feedstock suppliers declared FM, resulting in complete cessation of essential raw material deliveries. Cascading from FPCC naphtha disruptions.",
+        "financialImpact": "Taiwan downstream chemical production curtailed; nylon and caprolactam markets tightened across Asia."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "CPDC declares force majeure on caprolactam and nylon supplies - Chemical Week",
+          "url": "https://chemweek.mydigitalpublication.com/publication/?i=863204&article_id=5137221&view=articleBrowser",
+          "date": "2026-03-24"
+        }
+      ]
+    },
+    {
+      "id": "fm-036",
+      "company": "GAIL (India) Limited",
+      "country": "India",
+      "flag": "🇮🇳",
+      "date": "2026-03-06",
+      "status": "active",
+      "statusLabel": "Active",
+      "isNew": false,
+      "summary": "Cascading FM to downstream industrial customers (incl. GNFC, 60% DCQ cut) after Petronet LNG invoked FM. LNG allocation reduced to zero from Petronet. India's largest gas utility.",
+      "details": {
+        "volumeAffected": "LNG allocation reduced to zero from Petronet; GNFC cut to 60% of DCQ",
+        "commodity": "RLNG (Re-gasified LNG), Natural Gas",
+        "duration": "Since 6 Mar 2026, ongoing — cascading from Petronet LNG FM",
+        "reason": "Petronet LNG invoked FM due to Strait of Hormuz disruption and Ras Laffan halt; GAIL passed FM to downstream customers.",
+        "financialImpact": "Indian industrial gas consumers facing severe supply cuts; fertilizer production disrupted."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "GAIL says LNG supply cut to zero after Petronet invokes force majeure - Business Today",
+          "url": "https://www.businesstoday.in/latest/corporate/story/west-asia-tensions-gail-says-lng-supply-cut-to-zero-after-petronet-invokes-force-majeure-519203-2026-03-05",
+          "date": "2026-03-05"
+        },
+        {
+          "id": 2,
+          "title": "GAIL declares force majeure on contractual supplies to GNFC - Indian Chemical News",
+          "url": "https://www.indianchemicalnews.com/gas/gail-declares-force-majeure-on-contractual-supplies-to-gnfc-29615",
+          "date": "2026-03-06"
+        }
+      ]
+    },
+    {
+      "id": "fm-035",
+      "company": "Hanwha Solutions",
+      "country": "South Korea",
+      "flag": "🇰🇷",
+      "date": "2026-03-12",
+      "status": "active",
+      "statusLabel": "Active",
+      "isNew": false,
+      "summary": "FM on ethylene dichloride (EDC) supply from Yeosu unit. YNCC (50% owned by Hanwha) already under FM. Warned of broader polyolefin supply disruptions.",
+      "details": {
+        "volumeAffected": "EDC (ethylene dichloride) supply from Yeosu complex",
+        "commodity": "Ethylene Dichloride (EDC), with warning on polyolefins",
+        "duration": "Since ~12 Mar 2026, ongoing — linked to naphtha supply recovery",
+        "reason": "Naphtha feedstock disruption from Strait of Hormuz blockade; YNCC (50% owned) already in FM.",
+        "financialImpact": "South Korean EDC and PVC supply chains disrupted; downstream construction and packaging affected."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Hanwha Solutions declares FM on supplies of EDC from Yeosu unit - PolymerUpdate",
+          "url": "https://www.polymerupdate.com/News/Details/1447130",
+          "date": "2026-03-12"
+        },
+        {
+          "id": 2,
+          "title": "Fears of force majeure spread across industries - Korea Times",
+          "url": "https://www.koreatimes.co.kr/business/companies/20260313/fears-of-force-majeure-spread-across-industries-as-iran-war-continues",
+          "date": "2026-03-13"
+        }
+      ]
+    },
+    {
+      "id": "fm-034",
+      "company": "IRPC (PTT Group)",
+      "country": "Thailand",
+      "flag": "🇹🇭",
+      "date": "2026-03-06",
+      "status": "active",
+      "statusLabel": "Active",
+      "isNew": false,
+      "summary": "FM on petroleum products and petrochemicals. Crude vessels avoiding Hormuz transit; suspended product supply during conflict. IRPC operates 215,000 bpd refinery + petrochemical complex in Rayong.",
+      "details": {
+        "volumeAffected": "~215,000 bpd refinery + petrochemical complex",
+        "commodity": "Petroleum Products, Petrochemicals",
+        "duration": "Since 6 Mar 2026, ongoing",
+        "reason": "Crude vessels avoiding Strait of Hormuz transit. Thailand imported ~70% of crude from ME pre-crisis.",
+        "financialImpact": "Thai petrochemical supply curtailed; domestic fuel prices rising."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Strait of Hormuz closure hits Asia's chemical industry - C&EN",
+          "url": "https://cen.acs.org/business/petrochemicals/Strait-Hormuz-closure-hits-Asias/104/web/2026/03",
+          "date": "2026-03-06"
+        },
+        {
+          "id": 2,
+          "title": "Hormuz Disruption Forces Thai Petrochemical Giants - DPRJ Universal",
+          "url": "https://dprjuniversal.com/news/strait-of-hormuz-disruption-forces-thai-petrochemical-giants-to-cut-production-and-raise-prices",
+          "date": "2026-03-06"
+        }
+      ]
+    },
+    {
+      "id": "fm-033",
+      "company": "SCG Chemicals / Rayong Olefins (ROC)",
+      "country": "Thailand",
+      "flag": "🇹🇭",
+      "date": "2026-03-10",
+      "status": "active",
+      "statusLabel": "Active",
+      "isNew": false,
+      "summary": "FM on olefins (ethylene, propylene) due to Hormuz feedstock disruption. 50-60% of naphtha/propane supply affected. Temporary suspension costing ~150M baht/month in fixed costs.",
+      "details": {
+        "volumeAffected": "800,000 t/yr ethylene + 400,000 t/yr propylene capacity",
+        "commodity": "Olefins (Ethylene, Propylene)",
+        "duration": "Partial suspension from 6 Mar, formal FM letter 10 Mar 2026, ongoing",
+        "reason": "Strait of Hormuz closure disrupting naphtha and propane feedstock procurement. 50-60% of feedstock supply affected.",
+        "financialImpact": "~150 million baht/month in fixed costs during suspension. Thailand's olefins supply curtailed."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "SCG issues force majeure at Thai Rayong petchem complex - Argus Media",
+          "url": "https://www.argusmedia.com/en/news-and-insights/latest-market-news/2797451-scg-issues-force-majeure-at-thai-rayong-petchem-complex",
+          "date": "2026-03-10"
+        },
+        {
+          "id": 2,
+          "title": "Rayong Olefins Temporarily Suspends Operations - SCG News Channel",
+          "url": "https://www.scgnewschannel.com/en/scg-news/rayong-olefins-temporarily-suspends-operations-due-to-middle-east-situation/",
+          "date": "2026-03-10"
+        }
+      ]
+    },
+    {
+      "id": "fm-032",
+      "company": "Dow (Jubail Ethanolamines)",
+      "country": "Saudi Arabia / Europe",
+      "flag": "🇸🇦",
+      "date": "2026-03-10",
+      "status": "active",
+      "statusLabel": "Active",
+      "isNew": false,
+      "summary": "FM on Jubail-sourced ethanolamines to European markets due to inability to safely transit vessels through Strait of Hormuz.",
+      "details": {
+        "volumeAffected": "Jubail-sourced ethanolamines to European customers",
+        "commodity": "Ethanolamines",
+        "duration": "Since 10 Mar 2026, ongoing",
+        "reason": "Ongoing regional instability and security constraints; inability to safely transit Strait of Hormuz.",
+        "financialImpact": "European ethanolamine supply disrupted; downstream detergent and personal care sectors affected."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Dow Declared Force Majeure on Ethanolamines - PU Daily",
+          "url": "https://www.pudaily.com/Home/NewsDetails/57093",
+          "date": "2026-03-10"
+        }
+      ]
+    },
+    {
+      "id": "fm-031",
+      "company": "Sadara Chemical (Aramco-Dow JV)",
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦",
+      "date": "2026-03-31",
+      "status": "active",
+      "statusLabel": "Active",
+      "isNew": false,
+      "summary": "Full complex shutdown and FM. World's largest integrated chemicals complex (26 units) at Jubail. 1.5M mt/yr ethylene + 400k mt/yr propylene + 24 downstream units offline.",
+      "details": {
+        "volumeAffected": "3+ million mt/yr total petrochemical capacity (1.5M ethylene, 400k propylene, 24 other units)",
+        "commodity": "Petrochemicals (Ethylene, Propylene, Polyethylene, MDI, TDI, Amines, Glycols)",
+        "duration": "Full shutdown from 31 Mar 2026, ongoing",
+        "reason": "Supply chain disruption from Hormuz closure + March 19 strikes on Jubail petrochemical plants. Unable to export product or receive feedstock.",
+        "financialImpact": "3+ million mt/yr removed from global petrochemical markets. Major impact on ME chemical exports."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Aramco-Dow joint venture Sadara Chemical halts production - Arab News",
+          "url": "https://www.arabnews.com/node/2638284/business-economy",
+          "date": "2026-03-31"
+        },
+        {
+          "id": 2,
+          "title": "Saudi chemical plant shuts down as war disrupts supply chains - Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-31/saudi-chemical-plant-shuts-down-as-war-disrupts-supply-chains",
+          "date": "2026-03-31"
+        }
+      ]
+    },
+    {
+      "id": "fm-030",
+      "company": "SABIC",
+      "country": "Saudi Arabia",
+      "flag": "🇸🇦",
+      "date": "2026-03-27",
+      "status": "active",
+      "statusLabel": "Active",
+      "isNew": false,
+      "summary": "FM on multiple petrochemical products from Jubail complex including MMA, MEG, DEG, styrene, methanol, and urea. Hormuz blockade + strikes on Jubail area. World's 4th largest chemical company.",
+      "details": {
+        "volumeAffected": "Multiple product lines at Jubail complex (MMA, MEG, DEG, styrene, methanol, urea)",
+        "commodity": "Petrochemicals (MMA, MEG, DEG, Styrene, Methanol, Urea)",
+        "duration": "Since 27 Mar 2026, ongoing — includes SABIC Agri-Nutrients urea FM from 6 Mar",
+        "reason": "Strait of Hormuz blockade preventing exports + Iranian strikes on Jubail area infrastructure.",
+        "financialImpact": "Global chemicals shortage aggravated. SABIC is world's 4th largest chemical company."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Saudi SABIC force majeure aggravates global chemicals shortage - ICIS",
+          "url": "https://www.icis.com/explore/resources/news/2026/03/30/11193220/insight-saudi-sabic-force-majeure-aggravates-global-chemicals-shortage",
+          "date": "2026-03-30"
+        },
+        {
+          "id": 2,
+          "title": "Iran's Hormuz blockade leaves fertilizer stranded - Food Ingredients First",
+          "url": "https://www.foodingredientsfirst.com/news/hormuz-fertilizer-crisis-food-ingredient-costs.html",
+          "date": "2026-03-06"
+        }
+      ]
+    },
+    {
       "id": "fm-029",
       "company": "Aster Chemicals & Energy",
       "country": "Singapore",
@@ -3872,9 +4395,9 @@
       "date": "2026-03-04",
       "status": "active",
       "statusLabel": "Active",
-      "summary": "FM on all LNG exports globally. Extended Mar 24 to Italy, Belgium, South Korea, China. Mar 27: Edison notified of 10-cargo FM through mid-June. All downstream halted. ~20% of global LNG supply removed. Restart impossible until conflict ends.",
+      "summary": "FM on all LNG exports globally. Extended Mar 24 to Italy, Belgium, South Korea, China. Mar 25: Orlen (Poland) notified of FM on 2 LNG cargoes. Mar 27: Edison notified of 10-cargo FM through mid-June. All downstream halted. ~20% of global LNG supply removed. Restart impossible until conflict ends.",
       "details": {
-        "volumeAffected": "~7 million tonnes/month (~20% global LNG supply); all downstream halted. Mar 24: FM extended to Italy, Belgium, South Korea, China. Mar 27: Edison notified of FM on 10 LNG cargoes Apr-mid Jun 2026.",
+        "volumeAffected": "~7 million tonnes/month (~20% global LNG supply); all downstream halted. Mar 24: FM extended to Italy, Belgium, South Korea, China. Mar 25: Orlen (Poland, 2 cargoes). Mar 27: Edison notified of FM on 10 LNG cargoes Apr-mid Jun 2026.",
         "commodity": "LNG, Polymers, Methanol, Urea, Aluminium",
         "duration": "Indefinite - all production halted since 2 Mar. Mar 18 missile strikes knocked out 12.8 Mtpa (17%) for 3-5 years. CEO: no restart until conflict ends + 2 weeks minimum. Final March cargo expected by 30 Mar.",
         "reason": "Iranian drone strikes on Ras Laffan and Mesaieed facilities; Strait of Hormuz blocked. Mar 18 follow-up missile attack destroyed 2 LNG trains and Pearl GTL Train 2.",
@@ -4592,6 +5115,462 @@
     }
   ],
   "shutdowns": [
+    {
+      "id": "sd-050",
+      "company": "Reliance Industries (Jamnagar)",
+      "country": "India",
+      "flag": "🇮🇳",
+      "date": "2026-03-10",
+      "status": "ongoing",
+      "statusLabel": "Feedstock Diverted",
+      "isNew": false,
+      "summary": "Government emergency order forced Reliance to divert propane/butane from petrochemical use to LPG household production. ~4 cargo/month alkylate exports curtailed. World's largest refining complex.",
+      "details": {
+        "volumeAffected": "Propane/butane diverted from petrochemical use; ~4 cargo/month alkylate exports curtailed",
+        "commodity": "Alkylates, Petrochemical Propane/Butane",
+        "duration": "Since ~10 Mar 2026, ongoing — government emergency order",
+        "reason": "Indian government barred refiners from using propane/butane for petrochemicals, mandating diversion to LPG for household use amid Gulf supply crisis.",
+        "financialImpact": "Jamnagar petrochemical output reduced; Indian petrochemical producers face raw material shortages."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Indian petrochemical producers face raw material shortages amid LPG mandate - S&P Global",
+          "url": "https://www.spglobal.com/energy/en/news-research/latest-news/chemicals/031026-indian-petrochemical-producers-face-raw-material-shortages-amid-lpg-mandate",
+          "date": "2026-03-10"
+        }
+      ]
+    },
+    {
+      "id": "sd-049",
+      "company": "Orlen (Plock Petrochemical Complex)",
+      "country": "Poland",
+      "flag": "🇵🇱",
+      "date": "2026-03-10",
+      "status": "ongoing",
+      "statusLabel": "Curtailed",
+      "isNew": false,
+      "summary": "Cracker production curtailed at Plock due to naphtha feedstock cost surge making operations uneconomical. 700,000 t/yr ethylene + 385,000 t/yr propylene capacity affected.",
+      "details": {
+        "volumeAffected": "700,000 t/yr ethylene + 385,000 t/yr propylene capacity",
+        "commodity": "Ethylene, Propylene",
+        "duration": "Since ~10 Mar 2026, ongoing",
+        "reason": "Naphtha feedstock cost surge past $1,000/mt from Hormuz blockade making European cracker operations uneconomical.",
+        "financialImpact": "Polish petrochemical output curtailed; Central European polymer supply tightened."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Hormuz Crisis Week 3: 50% of Global PE Supply Disrupted - Syntex America",
+          "url": "https://syntexamerica.com/blog/hormuz-crisis-week-3-pe-shortage-price-spiral-2026",
+          "date": "2026-03-10"
+        }
+      ]
+    },
+    {
+      "id": "sd-048",
+      "company": "OMV (Burghausen Cracker)",
+      "country": "Germany",
+      "flag": "🇩🇪",
+      "date": "2026-03-10",
+      "status": "ongoing",
+      "statusLabel": "Curtailed",
+      "isNew": false,
+      "summary": "Cracker production curtailed at Burghausen due to naphtha feedstock cost surge. 485,000 t/yr ethylene + 225,000 t/yr propylene capacity affected.",
+      "details": {
+        "volumeAffected": "485,000 t/yr ethylene + 225,000 t/yr propylene capacity",
+        "commodity": "Ethylene, Propylene",
+        "duration": "Since ~10 Mar 2026, ongoing",
+        "reason": "Naphtha feedstock cost surge past $1,000/mt from Hormuz blockade making operations uneconomical.",
+        "financialImpact": "German petrochemical output reduced; downstream polymer supply tightened."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Hormuz Crisis Week 3: 50% of Global PE Supply Disrupted - Syntex America",
+          "url": "https://syntexamerica.com/blog/hormuz-crisis-week-3-pe-shortage-price-spiral-2026",
+          "date": "2026-03-10"
+        }
+      ]
+    },
+    {
+      "id": "sd-047",
+      "company": "Chevron (Wheatstone LNG)",
+      "country": "Australia",
+      "flag": "🇦🇺",
+      "date": "2026-03-26",
+      "status": "shutdown",
+      "statusLabel": "Shutdown",
+      "isNew": false,
+      "summary": "Both Wheatstone LNG trains (8.9 Mtpa) remain offline after extensive cyclone damage to air-cooled heat exchangers. Repairs taking 'weeks, not days'. Chevron stock fell 6% (~$25B). Worst Australian LNG disruption from Cyclone Narelle.",
+      "details": {
+        "volumeAffected": "8.9 Mtpa LNG capacity — both production trains offline",
+        "commodity": "LNG",
+        "duration": "Since 26 Mar 2026, ongoing — extensive cyclone damage, repairs weeks-long",
+        "reason": "Severe Tropical Cyclone Narelle caused extensive damage to air-cooled heat exchangers (fin fans). Damage worse than previous cyclones.",
+        "financialImpact": "Chevron stock fell 6% (~$25B market cap). Australian LNG supply reduced during global LNG crisis."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Chevron says extensive cyclone damage keeps Wheatstone LNG offline - Mining Weekly",
+          "url": "https://www.miningweekly.com/article/chevron-says-extensive-cyclone-damage-keeps-wheatstone-lng-offline-2026-03-31",
+          "date": "2026-03-31"
+        },
+        {
+          "id": 2,
+          "title": "Chevron's Wheatstone LNG Plant Remains Offline - MarineLink",
+          "url": "https://www.marinelink.com/news/chevrons-wheatstone-lng-plant-remains-537516",
+          "date": "2026-03-31"
+        }
+      ]
+    },
+    {
+      "id": "sd-046",
+      "company": "Valero Energy (Port Arthur Refinery)",
+      "country": "United States",
+      "flag": "🇺🇸",
+      "date": "2026-03-23",
+      "status": "partially_resumed",
+      "statusLabel": "Partially Resumed",
+      "isNew": false,
+      "summary": "380,000 bpd refinery fully shut after explosion at 47,000 bpd diesel hydrotreater unit. Blast heard 11 miles away. No injuries. Most units restarted ~Mar 26 but hydrotreater remains offline.",
+      "details": {
+        "volumeAffected": "380,000 bpd refinery (full shutdown); 47,000 bpd diesel hydrotreater remains offline",
+        "commodity": "Gasoline, Diesel, Jet Fuel",
+        "duration": "Full shutdown 23-26 Mar 2026; partial restart ~26 Mar; hydrotreater still offline",
+        "reason": "Explosion and fire at 47,000 bpd diesel hydrotreater unit — unforeseeable release of process fluid ignited. Industrial incident, not Gulf-related.",
+        "financialImpact": "Removed 415,000 bpd from market during tight supply period. Diesel supply further strained."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Valero Shuts Major Refinery After Explosion as Fuel Markets Tighten - OilPrice",
+          "url": "https://oilprice.com/Latest-Energy-News/World-News/Valero-Shuts-Major-Refinery-After-Explosion-as-Fuel-Markets-Tighten.html",
+          "date": "2026-03-23"
+        },
+        {
+          "id": 2,
+          "title": "Port Arthur refinery explosion removes 415k bpd from market - Wood Mackenzie",
+          "url": "https://www.woodmac.com/news/opinion/port-arthur-refinery-explosion-removes-415k-bpd-from-market/",
+          "date": "2026-03-24"
+        }
+      ]
+    },
+    {
+      "id": "sd-045",
+      "company": "GS Caltex (Yeosu Refinery)",
+      "country": "South Korea",
+      "flag": "🇰🇷",
+      "date": "2026-03-25",
+      "status": "ongoing",
+      "statusLabel": "Run Cuts",
+      "isNew": false,
+      "summary": "Cut daily crude refining from 800,000 bpd to 675,000 bpd (125,000 bpd reduction) due to crude supply crunch. Issued supply availability notice (explicitly 'not FM' but warned of polyolefin/aromatics disruptions).",
+      "details": {
+        "volumeAffected": "125,000 bpd reduction (800k to 675k bpd); polyolefin and aromatics supply at risk",
+        "commodity": "Crude Refining, Polyolefins, Aromatics",
+        "duration": "Since 25 Mar 2026, ongoing",
+        "reason": "Crude supply crunch from Middle East conflict. Issued supply notice to customers (explicitly not FM).",
+        "financialImpact": "South Korea's 2nd largest refiner reducing throughput; domestic fuel and polymer supply at risk."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "GS Caltex Cuts Refining Volume Amid Crude Supply Crunch - Seoul Economic Daily",
+          "url": "https://en.sedaily.com/finance/2026/03/25/gs-caltex-cuts-refining-volume-amid-crude-supply-crunch",
+          "date": "2026-03-25"
+        },
+        {
+          "id": 2,
+          "title": "Force Majeure Crises Spread: Refiners Cut Output - Seoul Economic Daily",
+          "url": "https://en.sedaily.com/finance/2026/03/25/force-majeure-crises-spread-refiners-cut-output-automakers",
+          "date": "2026-03-25"
+        }
+      ]
+    },
+    {
+      "id": "sd-044",
+      "company": "Idemitsu Kosan (Ichihara + Shunan Crackers)",
+      "country": "Japan",
+      "flag": "🇯🇵",
+      "date": "2026-03-16",
+      "status": "ongoing",
+      "statusLabel": "Curtailed",
+      "isNew": false,
+      "summary": "Two ethylene plants at reduced rates; warned of full production stop if Hormuz blockade continues. Japan imports >60% of naphtha from ME.",
+      "details": {
+        "volumeAffected": "Two ethylene plants (Ichihara, Chiba + Shunan, Yamaguchi) at reduced rates",
+        "commodity": "Ethylene",
+        "duration": "Since ~16 Mar 2026, ongoing — warned of full halt if blockade persists",
+        "reason": "Naphtha procurement difficulties from Hormuz blockade. Japan imports >60% of naphtha, ~70% from Middle East.",
+        "financialImpact": "Japanese ethylene production curtailed; downstream polymer supply at risk."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Idemitsu Kosan Cuts Ethylene Production - Nippon.com",
+          "url": "https://www.nippon.com/en/news/yjj2026031600897/",
+          "date": "2026-03-16"
+        },
+        {
+          "id": 2,
+          "title": "Hormuz closure risks halt in Idemitsu's Japan ethylene production - Nikkei Asia",
+          "url": "https://asia.nikkei.com/spotlight/iran-tensions/hormuz-closure-risks-halt-in-idemitsu-s-japan-ethylene-production",
+          "date": "2026-03-16"
+        }
+      ]
+    },
+    {
+      "id": "sd-043",
+      "company": "Mitsubishi Chemical (Kamisu + Kurashiki Crackers)",
+      "country": "Japan",
+      "flag": "🇯🇵",
+      "date": "2026-03-07",
+      "status": "ongoing",
+      "statusLabel": "Curtailed",
+      "isNew": false,
+      "summary": "Cut ethylene output at Kamisu (Ibaraki) facility (~8% of Japan's total ethylene capacity) and Kurashiki (Okayama) JV cracker with Asahi Kasei. Preemptive naphtha supply measures.",
+      "details": {
+        "volumeAffected": "Kamisu facility (~8% of Japan's ethylene) + Kurashiki JV cracker at reduced rates",
+        "commodity": "Ethylene",
+        "duration": "Since 7 Mar 2026, ongoing",
+        "reason": "Naphtha supply concerns from Strait of Hormuz closure; preemptive cuts to avoid full halt.",
+        "financialImpact": "Japan's 2nd largest chemical company reducing output; cascading effects on domestic polymer supply."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Mitsubishi Chemical cuts ethylene output - Japan Times",
+          "url": "https://www.japantimes.co.jp/business/2026/03/10/companies/mitsubishi-chemical-cut-ethylene-production/",
+          "date": "2026-03-10"
+        },
+        {
+          "id": 2,
+          "title": "Mitsubishi Chemical Cuts Ethylene Production - Nippon.com",
+          "url": "https://www.nippon.com/en/news/yjj2026030900560/",
+          "date": "2026-03-09"
+        }
+      ]
+    },
+    {
+      "id": "sd-042",
+      "company": "Mitsui Chemicals (Ichihara + Takaishi Crackers)",
+      "country": "Japan",
+      "flag": "🇯🇵",
+      "date": "2026-03-10",
+      "status": "ongoing",
+      "statusLabel": "Curtailed",
+      "isNew": false,
+      "summary": "Began ethylene production cuts at Ichihara (Chiba) and Takaishi (Osaka) plants. Seeking non-ME naphtha sources to maintain operations.",
+      "details": {
+        "volumeAffected": "Two ethylene plants operating at reduced rates",
+        "commodity": "Ethylene",
+        "duration": "Since ~10 Mar 2026, ongoing",
+        "reason": "Anticipated naphtha supply shortages from Middle East; seeking non-ME naphtha sources.",
+        "financialImpact": "Japanese chemical supply chain tightened; downstream polymer production affected."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Mitsui Chemicals Begins Ethylene Production Cuts - Nippon.com",
+          "url": "https://www.nippon.com/en/news/yjj2026031000788/",
+          "date": "2026-03-10"
+        },
+        {
+          "id": 2,
+          "title": "Mitsui Chemicals cuts output amid Iran crisis - Hydrocarbon Processing",
+          "url": "https://www.hydrocarbonprocessing.com/news/2026/03/mitsui-chemicals-cuts-output-with-other-japanese-companies-amid-iran-crisis/",
+          "date": "2026-03-10"
+        }
+      ]
+    },
+    {
+      "id": "sd-041",
+      "company": "PRefChem (Petronas-Aramco JV)",
+      "country": "Malaysia",
+      "flag": "🇲🇾",
+      "date": "2026-03-15",
+      "status": "shutdown",
+      "statusLabel": "Shutdown",
+      "isNew": false,
+      "summary": "300,000 bpd crude unit shut at Pengerang (Johor) due to lack of crude feedstock. 70%+ of seaborne crude imports came via Strait of Hormuz. Steam cracker and RFCC also shut.",
+      "details": {
+        "volumeAffected": "300,000 bpd crude unit + 1.2M mt/yr steam cracker + 70k bpd RFCC gasoline unit",
+        "commodity": "Crude Refining, Petrochemicals",
+        "duration": "Since mid-Mar 2026, ongoing",
+        "reason": "Lack of crude feedstock; >70% of seaborne crude imports came via Strait of Hormuz. Saudi Aramco deliveries disrupted.",
+        "financialImpact": "Malaysia's largest refinery offline; SE Asian fuel and petrochemical supply tightened."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Refineries in Malaysia, Singapore cut output - Media Selangor",
+          "url": "https://mediaselangor.com/en/2026/03/347271",
+          "date": "2026-03-15"
+        },
+        {
+          "id": 2,
+          "title": "Asian refineries cut runs as Iran war disrupts supplies - The Edge Malaysia",
+          "url": "https://theedgemalaysia.com/node/796685",
+          "date": "2026-03-15"
+        }
+      ]
+    },
+    {
+      "id": "sd-040",
+      "company": "ExxonMobil (Singapore Refinery)",
+      "country": "Singapore",
+      "flag": "🇸🇬",
+      "date": "2026-03-10",
+      "status": "ongoing",
+      "statusLabel": "Run Cuts",
+      "isNew": false,
+      "summary": "592,000 bpd Singapore refinery cut to ~50% utilisation (from ~80%). ~65% of crude sourced via Hormuz. World's second largest single-site refinery.",
+      "details": {
+        "volumeAffected": "592,000 bpd site cut to ~50% utilisation (~296,000 bpd effective throughput)",
+        "commodity": "Crude Refining, Refined Products",
+        "duration": "Since ~10 Mar 2026, ongoing",
+        "reason": "Crude delivery delays from Middle East; ~65% of crude sourced via Strait of Hormuz.",
+        "financialImpact": "Singapore's largest refinery at half capacity; regional fuel supply tightened."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Refineries cut runs as war on Iran disrupts exports - Baird Maritime",
+          "url": "https://www.bairdmaritime.com/offshore/refining-processing/factbox-refineries-cut-runs-as-war-on-iran-disrupts-exports",
+          "date": "2026-03-10"
+        }
+      ]
+    },
+    {
+      "id": "sd-039",
+      "company": "Sinopec (China-wide Crude Run Cuts)",
+      "country": "China",
+      "flag": "🇨🇳",
+      "date": "2026-03-16",
+      "status": "ongoing",
+      "statusLabel": "Run Cuts",
+      "isNew": false,
+      "summary": "World's largest refiner cut crude runs by 600,000-700,000 bpd (~10% of 5.2M bpd throughput). Beijing-directed measures to manage Middle East crude supply gap. China imports ~50% of crude from ME.",
+      "details": {
+        "volumeAffected": "600,000-700,000 bpd crude run reduction (~10% of Sinopec's 5.2M bpd total throughput)",
+        "commodity": "Crude Refining",
+        "duration": "Since mid-Mar 2026, ongoing — Beijing-directed",
+        "reason": "Middle East crude supply squeeze from Hormuz closure. China imports ~50% of crude from Middle East. Government-directed measures to preserve domestic fuel supply.",
+        "financialImpact": "World's largest refiner curtailing operations; Chinese refined product output reduced; domestic fuel supply prioritized over exports."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "China's Top Oil Refiner Cuts Activity by 10% - Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-03-16/china-s-top-refiner-to-cut-activity-by-10-as-war-hits-supply",
+          "date": "2026-03-16"
+        },
+        {
+          "id": 2,
+          "title": "Sinopec Slashes Refining Runs as Hormuz Disruption Squeezes Crude Supply - OilPrice",
+          "url": "https://oilprice.com/Latest-Energy-News/World-News/Sinopec-Slashes-Refining-Runs-as-Hormuz-Disruption-Squeezes-Crude-Supply.html",
+          "date": "2026-03-16"
+        }
+      ]
+    },
+    {
+      "id": "sd-038",
+      "company": "Borouge (Ruwais Petrochemical Plant)",
+      "country": "UAE",
+      "flag": "🇦🇪",
+      "date": "2026-04-05",
+      "status": "shutdown",
+      "statusLabel": "Suspended",
+      "isNew": true,
+      "summary": "Three fires broke out at Borouge petrochemical plant in Ruwais after air defense interception debris fell on the facility. Operations suspended pending assessment. No injuries. Borouge is UAE's largest polyolefins producer (~4.5 Mtpa). Second Ruwais complex impact since war began.",
+      "details": {
+        "volumeAffected": "~4.5 Mtpa polyolefins (polyethylene, polypropylene)",
+        "commodity": "Petrochemicals (Polyolefins)",
+        "duration": "Since 5 Apr 2026, ongoing — damage assessment pending",
+        "reason": "Air defense interception debris fell on Borouge plant causing three separate fires. ADNOC/Borealis JV. Part of pattern of collateral damage from Iran's intensifying aerial attacks and UAE interceptions.",
+        "financialImpact": "UAE's entire Borouge polyolefins output halted. Combined with Ruwais Refinery-2 shutdown (Mar 10), the Ruwais industrial complex is substantially offline."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Borouge suspends Abu Dhabi plant operations after multiple fires — Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-04-05/borouge-suspends-abu-dhabi-plant-operations-after-multiple-fires",
+          "date": "2026-04-05"
+        },
+        {
+          "id": 2,
+          "title": "Fires break out at Borouge factory after air defense interception — Gulf News",
+          "url": "https://gulfnews.com/uae/fires-break-out-at-borouge-factory-in-abu-dhabi-after-air-defense-interception-1.500496800",
+          "date": "2026-04-05"
+        }
+      ]
+    },
+    {
+      "id": "sd-037",
+      "company": "GPIC (Bahrain Petrochemical)",
+      "country": "Bahrain",
+      "flag": "🇧🇭",
+      "date": "2026-04-05",
+      "status": "struck",
+      "statusLabel": "Struck",
+      "isNew": true,
+      "summary": "Iranian drones struck Gulf Petrochemical Industries Company (GPIC) operational units, sparking fires. Fires contained, no casualties. GPIC is a JV of SABIC/GPIC/Petrochemical Industries of Kuwait producing ammonia, methanol, and urea (~1,200 kt/y). 7th direct Iranian attack on Bahrain infrastructure.",
+      "details": {
+        "volumeAffected": "~1,200 kt/y ammonia/methanol/urea production",
+        "commodity": "Petrochemicals (Ammonia, Methanol, Urea)",
+        "duration": "Since 5 Apr 2026, damage assessment ongoing",
+        "reason": "Iranian drone strike on Bahrain petrochemical infrastructure. Part of broader 13-drone wave repelled by Bahrain air defenses.",
+        "financialImpact": "GPIC fertilizer output disrupted; ammonia and urea markets tightening amid Gulf supply destruction."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Fires erupt at Bahrain petrochemical and energy facilities after drone strikes — Gulf News",
+          "url": "https://gulfnews.com/world/gulf/bahrain/fires-erupt-at-bahrain-petrochemical-and-energy-facilities-after-drone-strikes-1.500496850",
+          "date": "2026-04-05"
+        },
+        {
+          "id": 2,
+          "title": "Bahrain GPIC and Bapco facilities targeted by Iranian drones — Xinhua",
+          "url": "https://english.news.cn/20260405/05d4cd0315bf420ca76385911334070d/c.html",
+          "date": "2026-04-05"
+        }
+      ]
+    },
+    {
+      "id": "sd-036",
+      "company": "Iraq (Basra/Al-Burjasiya Oil Complex + BP North Rumaila — 2nd Strike)",
+      "country": "Iraq",
+      "flag": "🇮🇶",
+      "date": "2026-04-04",
+      "status": "struck",
+      "statusLabel": "Struck",
+      "isNew": true,
+      "summary": "Iranian drone hit foreign-owned storage facility at Al-Burjasiya oil complex (2nd time in days). Separately, two drones struck BP's North Rumaila oilfield, wounding 3 workers. Basra oil production collapsed to ~900k bpd (70%+ from 3.1M).",
+      "details": {
+        "volumeAffected": "Al-Burjasiya storage + North Rumaila field (~350k bpd)",
+        "commodity": "Crude Oil",
+        "duration": "Since 4 Apr 2026, fires contained",
+        "reason": "Continued Iranian drone attacks on southern Iraq oil infrastructure. Al-Burjasiya hit for 2nd time; BP North Rumaila also targeted. 3 workers wounded at Rumaila.",
+        "financialImpact": "Basra exports remain completely halted. Storage facilities sustaining repeated damage."
+      },
+      "sources": [
+        {
+          "id": 1,
+          "title": "Iranian drone attack sparks fire in Iraq's oil storage facility in Basra — The Week India",
+          "url": "https://www.theweek.in/news/middle-east/2026/04/04/iranian-drone-attack-sparks-fire-in-iraqs-oil-storage-facility-in-basra-amid-crisis.html",
+          "date": "2026-04-04"
+        },
+        {
+          "id": 2,
+          "title": "For the 2nd time in days, suicide drone ignites fire at Al-Burjasiya oil complex — Voice of Emirates",
+          "url": "https://www.voiceofemirates.com/en/news/2026/04/04/for-the-second-time-in-days-a-suicide-drone-ignites-a-fire-at-the-al-burjasiya-oil-complex-in-basra/",
+          "date": "2026-04-04"
+        }
+      ]
+    },
     {
       "id": "sd-035",
       "company": "Kuwait (KPC Shuwaikh HQ)",

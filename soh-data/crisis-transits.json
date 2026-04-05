@@ -1,14 +1,14 @@
 {
   "crisisStart": "2026-02-28",
-  "totalVessels": 199,
+  "totalVessels": 186,
   "totalUAE": 0,
   "totalADNOC": 7,
   "dailyCounts": [
     {
       "date": "2026-04-05",
-      "count": 8,
-      "tankers": 5,
-      "bulk": 2,
+      "count": 16,
+      "tankers": 10,
+      "bulk": 5,
       "container": 1,
       "other": 0,
       "uae": 0,
@@ -16,9 +16,9 @@
     },
     {
       "date": "2026-04-04",
-      "count": 21,
-      "tankers": 13,
-      "bulk": 8,
+      "count": 13,
+      "tankers": 6,
+      "bulk": 7,
       "container": 0,
       "other": 0,
       "uae": 0,
@@ -26,9 +26,9 @@
     },
     {
       "date": "2026-04-03",
-      "count": 18,
-      "tankers": 6,
-      "bulk": 11,
+      "count": 13,
+      "tankers": 5,
+      "bulk": 7,
       "container": 1,
       "other": 0,
       "uae": 0,
@@ -36,8 +36,8 @@
     },
     {
       "date": "2026-04-02",
-      "count": 12,
-      "tankers": 10,
+      "count": 9,
+      "tankers": 7,
       "bulk": 2,
       "container": 0,
       "other": 0,
@@ -46,9 +46,9 @@
     },
     {
       "date": "2026-04-01",
-      "count": 5,
+      "count": 6,
       "tankers": 4,
-      "bulk": 1,
+      "bulk": 2,
       "container": 0,
       "other": 0,
       "uae": 0,
@@ -76,8 +76,8 @@
     },
     {
       "date": "2026-03-29",
-      "count": 5,
-      "tankers": 3,
+      "count": 4,
+      "tankers": 2,
       "bulk": 2,
       "container": 0,
       "other": 0,
@@ -86,9 +86,9 @@
     },
     {
       "date": "2026-03-28",
-      "count": 7,
+      "count": 6,
       "tankers": 2,
-      "bulk": 5,
+      "bulk": 4,
       "container": 0,
       "other": 0,
       "uae": 0,
@@ -96,8 +96,8 @@
     },
     {
       "date": "2026-03-27",
-      "count": 2,
-      "tankers": 2,
+      "count": 1,
+      "tankers": 1,
       "bulk": 0,
       "container": 0,
       "other": 0,
@@ -156,8 +156,8 @@
     },
     {
       "date": "2026-03-21",
-      "count": 2,
-      "tankers": 2,
+      "count": 1,
+      "tankers": 1,
       "bulk": 0,
       "container": 0,
       "other": 0,
@@ -176,9 +176,9 @@
     },
     {
       "date": "2026-03-19",
-      "count": 4,
+      "count": 3,
       "tankers": 2,
-      "bulk": 2,
+      "bulk": 1,
       "container": 0,
       "other": 0,
       "uae": 0,
@@ -207,8 +207,8 @@
     {
       "date": "2026-03-16",
       "count": 1,
-      "tankers": 1,
-      "bulk": 0,
+      "tankers": 0,
+      "bulk": 1,
       "container": 0,
       "other": 0,
       "uae": 0,
@@ -346,8 +346,8 @@
     },
     {
       "date": "2026-03-02",
-      "count": 5,
-      "tankers": 3,
+      "count": 4,
+      "tankers": 2,
       "bulk": 2,
       "container": 0,
       "other": 0,
@@ -377,6 +377,20 @@
   ],
   "vessels": [
     {
+      "name": "Sirius Sky",
+      "imo": "9817559",
+      "vesselTypeClass": "Ultramax",
+      "state": "ballast",
+      "flagName": "Singapore",
+      "controller": "Mitsubishi",
+      "product": "Alumina",
+      "destination": null,
+      "deadWeight": 60514,
+      "speed": 0.1,
+      "departureDate": "2026-04-05",
+      "commodity": "dry"
+    },
+    {
       "name": "Sea Lion",
       "imo": "9827944",
       "vesselTypeClass": "Handy/MR1",
@@ -386,7 +400,7 @@
       "product": "Chem/Bio",
       "destination": null,
       "deadWeight": 28310,
-      "speed": 1.3,
+      "speed": 2,
       "departureDate": "2026-04-05",
       "commodity": "liquids"
     },
@@ -400,7 +414,7 @@
       "product": "Sugar",
       "destination": null,
       "deadWeight": 82566,
-      "speed": 0.2,
+      "speed": 0.5,
       "departureDate": "2026-04-05",
       "commodity": "dry"
     },
@@ -414,7 +428,7 @@
       "product": "LPG",
       "destination": "Khor Fakkan Anchorage",
       "deadWeight": 2981,
-      "speed": 0.1,
+      "speed": 0.4,
       "departureDate": "2026-04-05",
       "commodity": "lpg"
     },
@@ -433,6 +447,76 @@
       "commodity": "lpg"
     },
     {
+      "name": "Ratta",
+      "imo": "9185499",
+      "vesselTypeClass": "MR",
+      "state": "loaded",
+      "flagName": "Panama",
+      "controller": "Champion Tankers",
+      "product": "Methanol",
+      "destination": "China",
+      "deadWeight": 48338,
+      "speed": 10.6,
+      "departureDate": "2026-04-05",
+      "commodity": "liquids"
+    },
+    {
+      "name": "Jasmine 8",
+      "imo": "9218789",
+      "vesselTypeClass": "Panamax",
+      "state": "ballast",
+      "flagName": "Marshall Islands",
+      "controller": "",
+      "product": "Steel",
+      "destination": null,
+      "deadWeight": 74410,
+      "speed": 1.8,
+      "departureDate": "2026-04-05",
+      "commodity": "dry"
+    },
+    {
+      "name": "Flora Dolce",
+      "imo": "9258595",
+      "vesselTypeClass": "MR",
+      "state": "loaded",
+      "flagName": "Barbados",
+      "controller": "",
+      "product": "Naphtha",
+      "destination": null,
+      "deadWeight": 47288,
+      "speed": 2.2,
+      "departureDate": "2026-04-05",
+      "commodity": "liquids"
+    },
+    {
+      "name": "Reef",
+      "imo": "9263382",
+      "vesselTypeClass": "Intermediate Tankers",
+      "state": "ballast",
+      "flagName": "Panama",
+      "controller": "",
+      "product": "Naphtha",
+      "destination": null,
+      "deadWeight": 18736,
+      "speed": 6.6,
+      "departureDate": "2026-04-05",
+      "commodity": "liquids"
+    },
+    {
+      "name": "Miami Pride",
+      "imo": "9274941",
+      "vesselTypeClass": "Supramax",
+      "state": "loaded",
+      "flagName": "Iran (Islamic Republic of)",
+      "controller": "Islamic Republic of Iran Shipping Lines ",
+      "product": "Steel",
+      "destination": null,
+      "deadWeight": 52466,
+      "speed": 9,
+      "departureDate": "2026-04-05",
+      "commodity": "dry"
+    },
+    {
       "name": "Octa Divine",
       "imo": "9275751",
       "vesselTypeClass": "Panamax/LR1",
@@ -442,7 +526,35 @@
       "product": "Fuel Oils",
       "destination": null,
       "deadWeight": 70313,
-      "speed": 0,
+      "speed": 3,
+      "departureDate": "2026-04-05",
+      "commodity": "liquids"
+    },
+    {
+      "name": "Green Asha",
+      "imo": "9326598",
+      "vesselTypeClass": "MGC",
+      "state": "loaded",
+      "flagName": "India",
+      "controller": "BPCL",
+      "product": "Butane",
+      "destination": "India",
+      "deadWeight": 26424,
+      "speed": 12.2,
+      "departureDate": "2026-04-05",
+      "commodity": "lpg"
+    },
+    {
+      "name": "Ocean Thunder",
+      "imo": "9416422",
+      "vesselTypeClass": "Suezmax/LR3",
+      "state": "loaded",
+      "flagName": "Panama",
+      "controller": "Navig8",
+      "product": "basrah heavy",
+      "destination": "Pengerang",
+      "deadWeight": 164737,
+      "speed": 12.9,
       "departureDate": "2026-04-05",
       "commodity": "liquids"
     },
@@ -456,7 +568,7 @@
       "product": "Clean petroleum products",
       "destination": "Eastern Africa",
       "deadWeight": 45953,
-      "speed": 20,
+      "speed": 0,
       "departureDate": "2026-04-05",
       "commodity": "liquids"
     },
@@ -470,7 +582,7 @@
       "product": "Alumina",
       "destination": null,
       "deadWeight": 81091,
-      "speed": 4.1,
+      "speed": 0,
       "departureDate": "2026-04-05",
       "commodity": "dry"
     },
@@ -488,20 +600,6 @@
       "commodity": "container"
     },
     {
-      "name": "Niki",
-      "imo": "9820312",
-      "vesselTypeClass": "MR",
-      "state": "loaded",
-      "flagName": "Iran (Islamic Republic of)",
-      "controller": "",
-      "product": "Clean petroleum products",
-      "destination": null,
-      "deadWeight": 49288,
-      "speed": 9.1,
-      "departureDate": "2026-04-04",
-      "commodity": "liquids"
-    },
-    {
       "name": "Jal Kalp",
       "imo": "9907835",
       "vesselTypeClass": "Kamsarmax",
@@ -514,20 +612,6 @@
       "speed": 0,
       "departureDate": "2026-04-04",
       "commodity": "dry"
-    },
-    {
-      "name": "Advantage Passion",
-      "imo": "1045980",
-      "vesselTypeClass": "Panamax/LR1",
-      "state": "loaded",
-      "flagName": "Marshall Islands",
-      "controller": "OQT",
-      "product": "Clean petroleum products",
-      "destination": "Toamasina",
-      "deadWeight": 73778,
-      "speed": 13.6,
-      "departureDate": "2026-04-04",
-      "commodity": "liquids"
     },
     {
       "name": "Hero",
@@ -553,63 +637,21 @@
       "product": "High Sulfur Fuel Oil",
       "destination": "China",
       "deadWeight": 47087,
-      "speed": 10.8,
+      "speed": 0,
       "departureDate": "2026-04-04",
       "commodity": "liquids"
     },
     {
-      "name": "Flora Dolce",
-      "imo": "9258595",
+      "name": "Louiza",
+      "imo": "9281554",
       "vesselTypeClass": "MR",
-      "state": "ballast",
-      "flagName": "Barbados",
-      "controller": "",
-      "product": "High Sulfur Fuel Oil",
-      "destination": null,
-      "deadWeight": 47288,
-      "speed": 19.2,
-      "departureDate": "2026-04-04",
-      "commodity": "liquids"
-    },
-    {
-      "name": "Alexandra",
-      "imo": "9273260",
-      "vesselTypeClass": "Panamax/LR1",
       "state": "loaded",
-      "flagName": "Liberia",
-      "controller": "Torm",
-      "product": "High Sulphur Straight Run Fuel Oil",
-      "destination": "Duqm",
-      "deadWeight": 72719,
-      "speed": 8.4,
-      "departureDate": "2026-04-04",
-      "commodity": "liquids"
-    },
-    {
-      "name": "Lucky Chem",
-      "imo": "9286554",
-      "vesselTypeClass": "Intermediate Tankers",
-      "state": "loaded",
-      "flagName": "Panama",
-      "controller": "",
-      "product": "Chem/Bio",
-      "destination": "Port Qasim",
-      "deadWeight": 19817,
-      "speed": 11.8,
-      "departureDate": "2026-04-04",
-      "commodity": "liquids"
-    },
-    {
-      "name": "Liliana",
-      "imo": "9297905",
-      "vesselTypeClass": "Suezmax/LR3",
-      "state": "loaded",
-      "flagName": "Liberia",
-      "controller": "",
-      "product": "High Sulphur Straight Run Fuel Oil",
-      "destination": "Panama",
-      "deadWeight": 158344,
-      "speed": 11.9,
+      "flagName": "Saint Kitts and Nevis",
+      "controller": "Marine Trust",
+      "product": "Methanol",
+      "destination": "Khor Al Zubair Port",
+      "deadWeight": 45557,
+      "speed": 9.7,
       "departureDate": "2026-04-04",
       "commodity": "liquids"
     },
@@ -628,20 +670,6 @@
       "commodity": "dry"
     },
     {
-      "name": "Tailogy",
-      "imo": "9318333",
-      "vesselTypeClass": "MR",
-      "state": "loaded",
-      "flagName": "Panama",
-      "controller": "",
-      "product": "Chemicals",
-      "destination": "China",
-      "deadWeight": 47036,
-      "speed": 9.9,
-      "departureDate": "2026-04-04",
-      "commodity": "liquids"
-    },
-    {
       "name": "Prive Angel",
       "imo": "9397468",
       "vesselTypeClass": "MR",
@@ -652,20 +680,6 @@
       "destination": null,
       "deadWeight": 51246,
       "speed": 2.4,
-      "departureDate": "2026-04-04",
-      "commodity": "liquids"
-    },
-    {
-      "name": "Ocean Thunder",
-      "imo": "9416422",
-      "vesselTypeClass": "Suezmax/LR3",
-      "state": "loaded",
-      "flagName": "Panama",
-      "controller": "Navig8",
-      "product": "basrah heavy",
-      "destination": "Pengerang",
-      "deadWeight": 164737,
-      "speed": 12.7,
       "departureDate": "2026-04-04",
       "commodity": "liquids"
     },
@@ -707,7 +721,7 @@
       "product": "Hot Rolled Coils",
       "destination": null,
       "deadWeight": 55092,
-      "speed": 0,
+      "speed": 0.1,
       "departureDate": "2026-04-04",
       "commodity": "dry"
     },
@@ -763,37 +777,9 @@
       "product": "Chem/Bio",
       "destination": null,
       "deadWeight": 27500,
-      "speed": 1.7,
+      "speed": 1.6,
       "departureDate": "2026-04-04",
       "commodity": "liquids"
-    },
-    {
-      "name": "Rui An Cheng",
-      "imo": "9742962",
-      "vesselTypeClass": "Handysize",
-      "state": "ballast",
-      "flagName": "China",
-      "controller": "COSCO",
-      "product": "Copper Concentrate",
-      "destination": "Duqm",
-      "deadWeight": 37930,
-      "speed": 11.5,
-      "departureDate": "2026-04-04",
-      "commodity": "dry"
-    },
-    {
-      "name": "Albina",
-      "imo": "9859026",
-      "vesselTypeClass": "Kamsarmax",
-      "state": "loaded",
-      "flagName": "Marshall Islands",
-      "controller": "",
-      "product": "Minor Bulks",
-      "destination": "Fujairah",
-      "deadWeight": 81780,
-      "speed": 12,
-      "departureDate": "2026-04-03",
-      "commodity": "dry"
     },
     {
       "name": "Lahore",
@@ -805,7 +791,7 @@
       "product": "Murban",
       "destination": "Fujairah",
       "deadWeight": 112100,
-      "speed": 0,
+      "speed": 10.8,
       "departureDate": "2026-04-03",
       "commodity": "liquids"
     },
@@ -819,7 +805,7 @@
       "product": "Propane",
       "destination": "Oman",
       "deadWeight": 5150,
-      "speed": 0.5,
+      "speed": 1,
       "departureDate": "2026-04-03",
       "commodity": "lpg"
     },
@@ -833,21 +819,7 @@
       "product": "Grey Ammonia",
       "destination": null,
       "deadWeight": 17779,
-      "speed": 0.4,
-      "departureDate": "2026-04-03",
-      "commodity": "lpg"
-    },
-    {
-      "name": "Danisa",
-      "imo": "9172739",
-      "vesselTypeClass": "VLGC",
-      "state": "loaded",
-      "flagName": "Panama",
-      "controller": "Pertamina",
-      "product": "Butane",
-      "destination": null,
-      "deadWeight": 49723,
-      "speed": 10.8,
+      "speed": 20.2,
       "departureDate": "2026-04-03",
       "commodity": "lpg"
     },
@@ -866,6 +838,20 @@
       "commodity": "dry"
     },
     {
+      "name": "Divit",
+      "imo": "9194139",
+      "vesselTypeClass": "Aframax/LR2",
+      "state": "loaded",
+      "flagName": "Antigua and Barbuda",
+      "controller": "Lundqvist",
+      "product": "Iran",
+      "destination": null,
+      "deadWeight": 99123,
+      "speed": 9.2,
+      "departureDate": "2026-04-03",
+      "commodity": "liquids"
+    },
+    {
       "name": "Dynasty",
       "imo": "9196371",
       "vesselTypeClass": "Handysize",
@@ -875,21 +861,7 @@
       "product": "Alumina",
       "destination": "Suez Canal",
       "deadWeight": 27786,
-      "speed": 11.3,
-      "departureDate": "2026-04-03",
-      "commodity": "dry"
-    },
-    {
-      "name": "Samir",
-      "imo": "9235854",
-      "vesselTypeClass": "Supramax",
-      "state": "ballast",
-      "flagName": "Panama",
-      "controller": "",
-      "product": "Alumina",
-      "destination": "Chennai",
-      "deadWeight": 52510,
-      "speed": 10.6,
+      "speed": 10.8,
       "departureDate": "2026-04-03",
       "commodity": "dry"
     },
@@ -931,23 +903,9 @@
       "product": "Gasoline",
       "destination": null,
       "deadWeight": 45706,
-      "speed": 11,
+      "speed": 10.3,
       "departureDate": "2026-04-03",
       "commodity": "liquids"
-    },
-    {
-      "name": "Miami Pride",
-      "imo": "9274941",
-      "vesselTypeClass": "Supramax",
-      "state": "loaded",
-      "flagName": "Iran (Islamic Republic of)",
-      "controller": "Islamic Republic of Iran Shipping Lines ",
-      "product": "Steel",
-      "destination": null,
-      "deadWeight": 52466,
-      "speed": 9,
-      "departureDate": "2026-04-03",
-      "commodity": "dry"
     },
     {
       "name": "Bright Ocean",
@@ -959,7 +917,7 @@
       "product": "Steel",
       "destination": "Sohar",
       "deadWeight": 53702,
-      "speed": 1.2,
+      "speed": 0,
       "departureDate": "2026-04-03",
       "commodity": "dry"
     },
@@ -973,35 +931,7 @@
       "product": "Corn",
       "destination": "Sohar",
       "deadWeight": 76948,
-      "speed": 0.1,
-      "departureDate": "2026-04-03",
-      "commodity": "dry"
-    },
-    {
-      "name": "Hippolyta",
-      "imo": "9385843",
-      "vesselTypeClass": "VLCC",
-      "state": "loaded",
-      "flagName": "Marshall Islands",
-      "controller": "",
-      "product": "Murban",
-      "destination": "Yeosu",
-      "deadWeight": 320014,
-      "speed": 12.8,
-      "departureDate": "2026-04-03",
-      "commodity": "liquids"
-    },
-    {
-      "name": "Squireship",
-      "imo": "9391646",
-      "vesselTypeClass": "Capesize",
-      "state": "ballast",
-      "flagName": "Liberia",
-      "controller": "Seanergy",
-      "product": "Dry Bulk",
-      "destination": null,
-      "deadWeight": 170018,
-      "speed": 0,
+      "speed": 0.8,
       "departureDate": "2026-04-03",
       "commodity": "dry"
     },
@@ -1033,34 +963,6 @@
       "commodity": "container"
     },
     {
-      "name": "Dhalkut",
-      "imo": "9888601",
-      "vesselTypeClass": "VLCC",
-      "state": "loaded",
-      "flagName": "Marshall Islands",
-      "controller": "CNPC",
-      "product": "arab heavy",
-      "destination": "Muscat",
-      "deadWeight": 299997,
-      "speed": 0,
-      "departureDate": "2026-04-02",
-      "commodity": "liquids"
-    },
-    {
-      "name": "Ratta",
-      "imo": "9185499",
-      "vesselTypeClass": "MR",
-      "state": "loaded",
-      "flagName": "Panama",
-      "controller": "Champion Tankers",
-      "product": "Methanol",
-      "destination": "China",
-      "deadWeight": 48338,
-      "speed": 10.7,
-      "departureDate": "2026-04-02",
-      "commodity": "liquids"
-    },
-    {
       "name": "Sohar LNG",
       "imo": "9210816",
       "vesselTypeClass": "Lower Conventional",
@@ -1070,23 +972,9 @@
       "product": "lng",
       "destination": "Muscat",
       "deadWeight": 71997,
-      "speed": 5.2,
+      "speed": 15.6,
       "departureDate": "2026-04-02",
       "commodity": "lng"
-    },
-    {
-      "name": "Pop",
-      "imo": "9307944",
-      "vesselTypeClass": "Panamax/LR1",
-      "state": "loaded",
-      "flagName": "Marshall Islands",
-      "controller": "ATL",
-      "product": "Clean petroleum products",
-      "destination": "Oman",
-      "deadWeight": 73981,
-      "speed": 0.6,
-      "departureDate": "2026-04-02",
-      "commodity": "liquids"
     },
     {
       "name": "Jag Pushpa",
@@ -1098,7 +986,7 @@
       "product": "Ultra Low Sulfur Diesel",
       "destination": "Fujairah",
       "deadWeight": 47848,
-      "speed": 15.3,
+      "speed": 23.3,
       "departureDate": "2026-04-02",
       "commodity": "liquids"
     },
@@ -1112,7 +1000,7 @@
       "product": "Western Russia Crude",
       "destination": "Suez Canal",
       "deadWeight": 115934,
-      "speed": 0.4,
+      "speed": 0.5,
       "departureDate": "2026-04-02",
       "commodity": "liquids"
     },
@@ -1126,7 +1014,7 @@
       "product": "Naphtha",
       "destination": "Fujairah",
       "deadWeight": 50922,
-      "speed": 1.4,
+      "speed": 1,
       "departureDate": "2026-04-02",
       "commodity": "liquids"
     },
@@ -1223,7 +1111,7 @@
       "controller": "Akron Trade & Trans.",
       "destination": null,
       "deadWeight": 45991,
-      "speed": 3.9,
+      "speed": 2.5,
       "departureDate": "2026-04-01",
       "commodity": "liquids"
     },
@@ -1240,6 +1128,20 @@
       "speed": 0.2,
       "departureDate": "2026-04-01",
       "commodity": "liquids"
+    },
+    {
+      "name": "Well Dream",
+      "imo": "9303364",
+      "vesselTypeClass": "Handysize",
+      "state": "loaded",
+      "flagName": "Bahamas",
+      "controller": "",
+      "product": "Dry Bulk",
+      "destination": "China",
+      "deadWeight": 32776,
+      "speed": 17.5,
+      "departureDate": "2026-04-01",
+      "commodity": "dry"
     },
     {
       "name": "Abu Dhabi-Iii",
@@ -1265,7 +1167,7 @@
       "product": "mero",
       "destination": "Fujairah",
       "deadWeight": 299996,
-      "speed": 0,
+      "speed": 3,
       "departureDate": "2026-04-01",
       "commodity": "liquids"
     },
@@ -1333,9 +1235,9 @@
       "flagName": "Singapore",
       "controller": "Thoresen Shipping SNG",
       "product": "Wheat",
-      "destination": "Muscat",
+      "destination": "Qalhat",
       "deadWeight": 55695,
-      "speed": 0,
+      "speed": 12.1,
       "departureDate": "2026-03-31",
       "commodity": "dry"
     },
@@ -1349,7 +1251,7 @@
       "product": "Naphtha",
       "destination": "Fujairah",
       "deadWeight": 74998,
-      "speed": 13.7,
+      "speed": 13.9,
       "departureDate": "2026-03-31",
       "commodity": "liquids"
     },
@@ -1363,7 +1265,7 @@
       "product": "Iron Ore Pellets",
       "destination": null,
       "deadWeight": 34676,
-      "speed": 5.6,
+      "speed": 0.1,
       "departureDate": "2026-03-30",
       "commodity": "dry"
     },
@@ -1377,7 +1279,7 @@
       "product": "Dry Bulk",
       "destination": null,
       "deadWeight": 50785,
-      "speed": 9.5,
+      "speed": 1,
       "departureDate": "2026-03-30",
       "commodity": "dry"
     },
@@ -1405,7 +1307,7 @@
       "product": "Iron Ore Pellets",
       "destination": "Fujairah",
       "deadWeight": 81788,
-      "speed": 0.2,
+      "speed": 0.1,
       "departureDate": "2026-03-29",
       "commodity": "dry"
     },
@@ -1419,7 +1321,7 @@
       "product": "Hard Wheat",
       "destination": "New Hamad",
       "deadWeight": 46786,
-      "speed": 0.1,
+      "speed": 0,
       "departureDate": "2026-03-29",
       "commodity": "dry"
     },
@@ -1433,21 +1335,7 @@
       "product": "Iran",
       "destination": "Fujairah",
       "deadWeight": 319360,
-      "speed": 0.4,
-      "departureDate": "2026-03-29",
-      "commodity": "liquids"
-    },
-    {
-      "name": "Camilla",
-      "imo": "9254850",
-      "vesselTypeClass": "Panamax/LR1",
-      "state": "loaded",
-      "flagName": "Liberia",
-      "controller": "",
-      "product": "High Sulphur Straight Run Fuel Oil",
-      "destination": "Duqm",
-      "deadWeight": 70142,
-      "speed": 6,
+      "speed": 0.6,
       "departureDate": "2026-03-29",
       "commodity": "liquids"
     },
@@ -1464,20 +1352,6 @@
       "speed": 5.7,
       "departureDate": "2026-03-29",
       "commodity": "liquids"
-    },
-    {
-      "name": "Janki",
-      "imo": "9110925",
-      "vesselTypeClass": "Handysize",
-      "state": "loaded",
-      "flagName": "Barbados",
-      "controller": "",
-      "product": "Steel",
-      "destination": null,
-      "deadWeight": 34372,
-      "speed": 1.2,
-      "departureDate": "2026-03-28",
-      "commodity": "dry"
     },
     {
       "name": "Ocean Pretty",
@@ -1545,7 +1419,7 @@
       "product": "Gasoline",
       "destination": "Fujairah",
       "deadWeight": 52384,
-      "speed": 0.1,
+      "speed": 0.5,
       "departureDate": "2026-03-28",
       "commodity": "liquids"
     },
@@ -1564,20 +1438,6 @@
       "commodity": "dry"
     },
     {
-      "name": "Interstellar",
-      "imo": "9277797",
-      "vesselTypeClass": "Panamax/LR1",
-      "state": "loaded",
-      "flagName": "Panama",
-      "controller": "Torm",
-      "product": "Naphtha",
-      "destination": "Hamriya",
-      "deadWeight": 74999,
-      "speed": 8.6,
-      "departureDate": "2026-03-27",
-      "commodity": "liquids"
-    },
-    {
       "name": "Elora 1",
       "imo": "9295311",
       "vesselTypeClass": "Handy/MR1",
@@ -1587,7 +1447,7 @@
       "product": "Palm Oil",
       "destination": "Oman",
       "deadWeight": 40218,
-      "speed": 0,
+      "speed": 0.6,
       "departureDate": "2026-03-27",
       "commodity": "liquids"
     },
@@ -1601,7 +1461,7 @@
       "product": "LPG",
       "destination": "Sohar",
       "deadWeight": 4319,
-      "speed": 0.1,
+      "speed": 0.4,
       "departureDate": "2026-03-26",
       "commodity": "lpg"
     },
@@ -1615,7 +1475,7 @@
       "product": "Propane",
       "destination": null,
       "deadWeight": 5632,
-      "speed": 0,
+      "speed": 0.1,
       "departureDate": "2026-03-26",
       "commodity": "lpg"
     },
@@ -1643,7 +1503,7 @@
       "product": "Iron Ore Pellets",
       "destination": "Sohar",
       "deadWeight": 28392,
-      "speed": 4.3,
+      "speed": 0,
       "departureDate": "2026-03-26",
       "commodity": "dry"
     },
@@ -1657,7 +1517,7 @@
       "product": "Naphtha",
       "destination": null,
       "deadWeight": 37164,
-      "speed": 0.2,
+      "speed": 0,
       "departureDate": "2026-03-26",
       "commodity": "liquids"
     },
@@ -1671,7 +1531,7 @@
       "product": "Naphtha",
       "destination": null,
       "deadWeight": 24333,
-      "speed": 0.2,
+      "speed": 5.5,
       "departureDate": "2026-03-26",
       "commodity": "liquids"
     },
@@ -1685,7 +1545,7 @@
       "product": "Jet",
       "destination": "Fujairah",
       "deadWeight": 47999,
-      "speed": 0.4,
+      "speed": 30,
       "departureDate": "2026-03-26",
       "commodity": "liquids"
     },
@@ -1769,7 +1629,7 @@
       "product": "Murban",
       "destination": "Fujairah",
       "deadWeight": 313999,
-      "speed": 14,
+      "speed": 10.8,
       "departureDate": "2026-03-25",
       "commodity": "liquids"
     },
@@ -1839,7 +1699,7 @@
       "product": "Hard Wheat",
       "destination": "Fujairah",
       "deadWeight": 56632,
-      "speed": 0.1,
+      "speed": 0,
       "departureDate": "2026-03-23",
       "commodity": "dry"
     },
@@ -1867,7 +1727,7 @@
       "product": "Propane",
       "destination": "Fujairah",
       "deadWeight": 5771,
-      "speed": 0,
+      "speed": 0.1,
       "departureDate": "2026-03-22",
       "commodity": "lpg"
     },
@@ -1909,7 +1769,7 @@
       "product": "Clean petroleum products",
       "destination": "Fujairah",
       "deadWeight": 45987,
-      "speed": 0,
+      "speed": 0.1,
       "departureDate": "2026-03-22",
       "commodity": "liquids"
     },
@@ -1926,20 +1786,6 @@
       "speed": 3,
       "departureDate": "2026-03-22",
       "commodity": "dry"
-    },
-    {
-      "name": "Reef",
-      "imo": "9263382",
-      "vesselTypeClass": "Intermediate Tankers",
-      "state": "loaded",
-      "flagName": "Panama",
-      "controller": "",
-      "product": "Naphtha",
-      "destination": null,
-      "deadWeight": 18736,
-      "speed": 0,
-      "departureDate": "2026-03-21",
-      "commodity": "liquids"
     },
     {
       "name": "Liwa-V",
@@ -1965,7 +1811,7 @@
       "product": "Naphtha",
       "destination": null,
       "deadWeight": 42616,
-      "speed": 0.1,
+      "speed": 1.1,
       "departureDate": "2026-03-20",
       "commodity": "liquids"
     },
@@ -1993,7 +1839,7 @@
       "product": "High Sulfur Fuel Oil",
       "destination": null,
       "deadWeight": 70681,
-      "speed": 0,
+      "speed": 9,
       "departureDate": "2026-03-20",
       "commodity": "liquids"
     },
@@ -2021,7 +1867,7 @@
       "product": "Naphtha",
       "destination": null,
       "deadWeight": 51303,
-      "speed": 0.1,
+      "speed": 0,
       "departureDate": "2026-03-20",
       "commodity": "liquids"
     },
@@ -2035,7 +1881,7 @@
       "product": "High Sulfur Fuel Oil",
       "destination": null,
       "deadWeight": 47197,
-      "speed": 0,
+      "speed": 5.1,
       "departureDate": "2026-03-20",
       "commodity": "liquids"
     },
@@ -2049,7 +1895,7 @@
       "product": "Methanol",
       "destination": null,
       "deadWeight": 46042,
-      "speed": 0,
+      "speed": 0.4,
       "departureDate": "2026-03-20",
       "commodity": "liquids"
     },
@@ -2077,7 +1923,7 @@
       "product": "Naphtha",
       "destination": "Sikka",
       "deadWeight": 50239,
-      "speed": 0.7,
+      "speed": 0.8,
       "departureDate": "2026-03-20",
       "commodity": "liquids"
     },
@@ -2105,23 +1951,9 @@
       "product": "Propane",
       "destination": "Sohar",
       "deadWeight": 54800,
-      "speed": 0.4,
+      "speed": 0.1,
       "departureDate": "2026-03-19",
       "commodity": "lpg"
-    },
-    {
-      "name": "Jasmine 8",
-      "imo": "9218789",
-      "vesselTypeClass": "Panamax",
-      "state": "ballast",
-      "flagName": "Marshall Islands",
-      "controller": "",
-      "product": "Steel",
-      "destination": null,
-      "deadWeight": 74410,
-      "speed": 20.1,
-      "departureDate": "2026-03-19",
-      "commodity": "dry"
     },
     {
       "name": "Dan",
@@ -2147,7 +1979,7 @@
       "product": "High Sulfur Fuel Oil",
       "destination": "Oman",
       "deadWeight": 47198,
-      "speed": 0.2,
+      "speed": 1.2,
       "departureDate": "2026-03-18",
       "commodity": "liquids"
     },
@@ -2175,7 +2007,7 @@
       "product": "Chem/Bio",
       "destination": null,
       "deadWeight": 20896,
-      "speed": 0.1,
+      "speed": 0,
       "departureDate": "2026-03-18",
       "commodity": "liquids"
     },
@@ -2203,7 +2035,7 @@
       "product": "High Sulfur Fuel Oil",
       "destination": null,
       "deadWeight": 70156,
-      "speed": 0,
+      "speed": 0.4,
       "departureDate": "2026-03-17",
       "commodity": "liquids"
     },
@@ -2231,7 +2063,7 @@
       "product": "Phosrock",
       "destination": "Sohar",
       "deadWeight": 27782,
-      "speed": 0.4,
+      "speed": 0.1,
       "departureDate": "2026-03-17",
       "commodity": "dry"
     },
@@ -2250,18 +2082,18 @@
       "commodity": "liquids"
     },
     {
-      "name": "Serena",
-      "imo": "9569645",
-      "vesselTypeClass": "VLCC",
+      "name": "Nj Callisto",
+      "imo": "9497452",
+      "vesselTypeClass": "Handysize",
       "state": "ballast",
-      "flagName": "Iran (Islamic Republic of)",
-      "controller": "NIOC",
-      "product": "Iran",
-      "destination": null,
-      "deadWeight": 317536,
-      "speed": 13.6,
+      "flagName": "Liberia",
+      "controller": "Nsc Tank Gmbh & Cie Kg",
+      "product": "Steel Plates",
+      "destination": "Sohar",
+      "deadWeight": 31796,
+      "speed": 0,
       "departureDate": "2026-03-16",
-      "commodity": "liquids"
+      "commodity": "dry"
     },
     {
       "name": "Luna Ii",
@@ -2301,7 +2133,7 @@
       "product": "Western Russia Crude",
       "destination": null,
       "deadWeight": 309097,
-      "speed": 0.8,
+      "speed": 29.9,
       "departureDate": "2026-03-14",
       "commodity": "liquids"
     },
@@ -2315,7 +2147,7 @@
       "product": "Sugar",
       "destination": "Sohar",
       "deadWeight": 87375,
-      "speed": 0.1,
+      "speed": 0,
       "departureDate": "2026-03-14",
       "commodity": "dry"
     },
@@ -2371,7 +2203,7 @@
       "product": "Grey Ammonia",
       "destination": "Muscat",
       "deadWeight": 30309,
-      "speed": 0,
+      "speed": 1.2,
       "departureDate": "2026-03-13",
       "commodity": "lpg"
     },
@@ -2385,7 +2217,7 @@
       "product": "Arab",
       "destination": "Muscat",
       "deadWeight": 159021,
-      "speed": 8.3,
+      "speed": 0.4,
       "departureDate": "2026-03-13",
       "commodity": "liquids"
     },
@@ -2441,7 +2273,7 @@
       "product": "Ethylene",
       "destination": "Fujairah",
       "deadWeight": 23495,
-      "speed": 1,
+      "speed": 0.1,
       "departureDate": "2026-03-11",
       "commodity": "lpg"
     },
@@ -2469,7 +2301,7 @@
       "product": "Iran",
       "destination": "Sohar",
       "deadWeight": 105661,
-      "speed": 0.6,
+      "speed": 0.8,
       "departureDate": "2026-03-11",
       "commodity": "liquids"
     },
@@ -2525,7 +2357,7 @@
       "product": "Steel",
       "destination": "Sohar",
       "deadWeight": 53224,
-      "speed": 0.2,
+      "speed": 0.1,
       "departureDate": "2026-03-11",
       "commodity": "dry"
     },
@@ -2581,7 +2413,7 @@
       "product": "Butane",
       "destination": null,
       "deadWeight": 49618,
-      "speed": 8.3,
+      "speed": 1.2,
       "departureDate": "2026-03-08",
       "commodity": "lpg"
     },
@@ -2595,7 +2427,7 @@
       "product": "Chem/Bio",
       "destination": null,
       "deadWeight": 19999,
-      "speed": 2,
+      "speed": 0.6,
       "departureDate": "2026-03-08",
       "commodity": "liquids"
     },
@@ -2637,7 +2469,7 @@
       "product": "basrah heavy",
       "destination": null,
       "deadWeight": 299999,
-      "speed": 0.1,
+      "speed": 0.7,
       "departureDate": "2026-03-08",
       "commodity": "liquids"
     },
@@ -2651,7 +2483,7 @@
       "product": "Dry Bulk",
       "destination": "Sohar",
       "deadWeight": 55085,
-      "speed": 0.1,
+      "speed": 1.3,
       "departureDate": "2026-03-08",
       "commodity": "dry"
     },
@@ -2707,7 +2539,7 @@
       "product": "Steel",
       "destination": "China",
       "deadWeight": 55718,
-      "speed": 0.1,
+      "speed": 17.3,
       "departureDate": "2026-03-06",
       "commodity": "dry"
     },
@@ -2721,7 +2553,7 @@
       "product": "Dry Bulk",
       "destination": null,
       "deadWeight": 76801,
-      "speed": 2.4,
+      "speed": 1,
       "departureDate": "2026-03-06",
       "commodity": "dry"
     },
@@ -2777,7 +2609,7 @@
       "product": "Dry Bulk",
       "destination": null,
       "deadWeight": 55625,
-      "speed": 0.3,
+      "speed": 0,
       "departureDate": "2026-03-06",
       "commodity": "dry"
     },
@@ -2791,7 +2623,7 @@
       "product": "Coal Tar",
       "destination": null,
       "deadWeight": 19336,
-      "speed": 0.1,
+      "speed": 0,
       "departureDate": "2026-03-06",
       "commodity": "liquids"
     },
@@ -2805,7 +2637,7 @@
       "product": "Minor Bulks",
       "destination": "Jebel Ali",
       "deadWeight": 64100,
-      "speed": 8.5,
+      "speed": 0,
       "departureDate": "2026-03-05",
       "commodity": "dry"
     },
@@ -2833,7 +2665,7 @@
       "product": "Cement",
       "destination": "Shuwaikh",
       "deadWeight": 28674,
-      "speed": 0.6,
+      "speed": 3.9,
       "departureDate": "2026-03-05",
       "commodity": "dry"
     },
@@ -2861,7 +2693,7 @@
       "product": "Iron Ore Pellets",
       "destination": null,
       "deadWeight": 28379,
-      "speed": 0.3,
+      "speed": 0,
       "departureDate": "2026-03-05",
       "commodity": "dry"
     },
@@ -2943,9 +2775,9 @@
       "flagName": "Panama",
       "controller": "Seven Islands Shpg.",
       "product": "Fuel Oils",
-      "destination": null,
+      "destination": "Fujairah",
       "deadWeight": 45934,
-      "speed": 0,
+      "speed": 9.1,
       "departureDate": "2026-03-04",
       "commodity": "liquids"
     },
@@ -2959,7 +2791,7 @@
       "product": "WTI midland",
       "destination": "Cape Town",
       "deadWeight": 299996,
-      "speed": 0.1,
+      "speed": 0,
       "departureDate": "2026-03-03",
       "commodity": "liquids"
     },
@@ -2987,7 +2819,7 @@
       "product": "Ethylene",
       "destination": null,
       "deadWeight": 6148,
-      "speed": 0,
+      "speed": 0.8,
       "departureDate": "2026-03-02",
       "commodity": "lpg"
     },
@@ -3006,20 +2838,6 @@
       "commodity": "dry"
     },
     {
-      "name": "Green Asha",
-      "imo": "9326598",
-      "vesselTypeClass": "MGC",
-      "state": "loaded",
-      "flagName": "India",
-      "controller": "BPCL",
-      "product": "Butane",
-      "destination": "India",
-      "deadWeight": 26424,
-      "speed": 13.4,
-      "departureDate": "2026-03-02",
-      "commodity": "lpg"
-    },
-    {
       "name": "Portland",
       "imo": "9550151",
       "vesselTypeClass": "Handysize",
@@ -3029,7 +2847,7 @@
       "product": "Dry Bulk",
       "destination": "Fujairah",
       "deadWeight": 28462,
-      "speed": 0.1,
+      "speed": 0.6,
       "departureDate": "2026-03-02",
       "commodity": "dry"
     },
@@ -3043,7 +2861,7 @@
       "product": "Alumina",
       "destination": "Fujairah",
       "deadWeight": 82952,
-      "speed": 0.1,
+      "speed": 1.2,
       "departureDate": "2026-03-01",
       "commodity": "dry"
     },
@@ -3057,7 +2875,7 @@
       "product": "Minor Bulks",
       "destination": null,
       "deadWeight": 49361,
-      "speed": 2.5,
+      "speed": 9.8,
       "departureDate": "2026-03-01",
       "commodity": "dry"
     },
@@ -3155,10 +2973,10 @@
       "product": "High Sulfur Fuel Oil",
       "destination": null,
       "deadWeight": 72768,
-      "speed": 0.2,
+      "speed": 0.3,
       "departureDate": "2026-02-28",
       "commodity": "liquids"
     }
   ],
-  "syncTimestamp": "2026-04-05T09:20:15.558Z"
+  "syncTimestamp": "2026-04-05T20:13:42.453Z"
 }
