@@ -15,6 +15,10 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 
+# Shared preflight helpers
+# shellcheck source=lib/common.sh
+source "$SCRIPT_DIR/lib/common.sh"
+
 PERIODS="${PERIODS:-recent quarterly yearly}"
 
 echo "[insights] =========================================="
@@ -22,6 +26,18 @@ echo "[insights] Flow Insights Generation (periods: $PERIODS)"
 echo "[insights] =========================================="
 
 cd "$PROJECT_DIR"
+
+# --- Standalone preflight (skipped when orchestrated by master-sync) ---
+# Upstream files (flows output) — WARN only: insights can still run on
+# stale flow data if needed. Real check is flow-summary.json below.
+if [ -z "$MASTER_SYNC" ]; then
+  echo "[insights] Running preflight checks..."
+  check_data_file "import-data.js" 100000 "import-data.js"
+  check_data_file "export-data.js" 100000 "export-data.js"
+  check_file_exists "flow-summary.json" "flow-summary.json"
+  print_preflight_summary
+  # Non-critical: fallback to existing batch files if flow-summary.json missing
+fi
 
 # Split flow-summary.json into batch files + fm-context.json
 echo "[insights] Splitting flow-summary.json into batches..."

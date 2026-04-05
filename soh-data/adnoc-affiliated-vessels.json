@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T18:30:42.218Z",
+  "generatedAt": "2026-04-05T18:42:21.995Z",
   "zone": "global",
   "deepEnrichment": true,
   "playerIdsQueried": [
@@ -33,19 +33,19 @@
     4271
   ],
   "counts": {
-    "owned": 70,
-    "beneficialOwned": 69,
+    "owned": 89,
+    "beneficialOwned": 88,
     "controlled": 111,
-    "managed": 46,
-    "operated": 43,
-    "commercialManaged": 46,
+    "managed": 57,
+    "operated": 50,
+    "commercialManaged": 57,
     "charteredOnly": 104,
     "tradeCounterpartyOnly": 892,
-    "total": 1127,
-    "fleet": 235,
-    "fleetCore": 187,
-    "fleetMixed": 14,
-    "fleetAffiliate": 34
+    "total": 1132,
+    "fleet": 240,
+    "fleetCore": 186,
+    "fleetMixed": 17,
+    "fleetAffiliate": 37
   },
   "fleet": {
     "core": [
@@ -534,6 +534,150 @@
         "category": "fleet"
       },
       {
+        "id": 118666,
+        "imo": "9937799",
+        "name": "Al Bahyah",
+        "deadWeight": 299425,
+        "vesselTypeClass": "VLCC",
+        "flagName": "Liberia",
+        "currentController": "Abu Dhabi National Oil Company ",
+        "relationships": [
+          "owner",
+          "beneficialOwner",
+          "controller",
+          "operator",
+          "manager",
+          "commercialManager",
+          "thirdPartyOperator"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "controller",
+            "tier": "core",
+            "share": null
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "owner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "beneficialOwner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "manager",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "operator",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "commercialManager",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "thirdPartyOperator",
+            "tier": "core",
+            "share": 1
+          }
+        ],
+        "primaryRelationship": "owner",
+        "affiliation": "core",
+        "category": "fleet"
+      },
+      {
+        "id": 118730,
+        "imo": "9928009",
+        "name": "Hafeet",
+        "deadWeight": 299425,
+        "vesselTypeClass": "VLCC",
+        "flagName": "Liberia",
+        "currentController": "Abu Dhabi National Oil Company ",
+        "relationships": [
+          "owner",
+          "beneficialOwner",
+          "controller",
+          "operator",
+          "manager",
+          "commercialManager",
+          "thirdPartyOperator"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "controller",
+            "tier": "core",
+            "share": null
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "owner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "beneficialOwner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "manager",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "operator",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "commercialManager",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "thirdPartyOperator",
+            "tier": "core",
+            "share": 1
+          }
+        ],
+        "primaryRelationship": "owner",
+        "affiliation": "core",
+        "category": "fleet"
+      },
+      {
         "id": 118258,
         "imo": "9928023",
         "name": "Arzanah",
@@ -713,6 +857,62 @@
         "tradesAsBuyer": 2,
         "tradesAsSeller": 2,
         "lastTradeDate": "2026-01-13",
+        "primaryRelationship": "owner",
+        "affiliation": "core",
+        "category": "fleet"
+      },
+      {
+        "id": 102699,
+        "imo": "9828390",
+        "name": "Tarif",
+        "deadWeight": 114799,
+        "vesselTypeClass": "Aframax/LR2",
+        "flagName": "Liberia",
+        "currentController": "Abu Dhabi National Oil Company ",
+        "relationships": [
+          "owner",
+          "beneficialOwner",
+          "controller",
+          "operator",
+          "thirdPartyOperator"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "controller",
+            "tier": "core",
+            "share": null
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "owner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "beneficialOwner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "operator",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "thirdPartyOperator",
+            "tier": "core",
+            "share": 1
+          }
+        ],
         "primaryRelationship": "owner",
         "affiliation": "core",
         "category": "fleet"
@@ -1345,6 +1545,46 @@
         "tradesAsBuyer": 5,
         "tradesAsSeller": 5,
         "lastTradeDate": "2026-07-16",
+        "primaryRelationship": "owner",
+        "affiliation": "core",
+        "category": "fleet"
+      },
+      {
+        "id": 102861,
+        "imo": "9831294",
+        "name": "Navig8 Precision",
+        "deadWeight": 109994,
+        "vesselTypeClass": "Aframax/LR2",
+        "flagName": "Marshall Islands",
+        "currentController": "Abu Dhabi National Oil Company ",
+        "relationships": [
+          "owner",
+          "beneficialOwner",
+          "controller"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "controller",
+            "tier": "core",
+            "share": null
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "owner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "beneficialOwner",
+            "tier": "core",
+            "share": 1
+          }
+        ],
         "primaryRelationship": "owner",
         "affiliation": "core",
         "category": "fleet"
@@ -2101,6 +2341,78 @@
         "tradesAsBuyer": 2,
         "tradesAsSeller": 3,
         "lastTradeDate": "2026-03-02",
+        "primaryRelationship": "owner",
+        "affiliation": "core",
+        "category": "fleet"
+      },
+      {
+        "id": 84992,
+        "imo": "9487251",
+        "name": "Diyyinah-I",
+        "deadWeight": 74954,
+        "vesselTypeClass": "Panamax/LR1",
+        "flagName": "Liberia",
+        "currentController": "Abu Dhabi National Oil Company ",
+        "relationships": [
+          "owner",
+          "beneficialOwner",
+          "controller",
+          "operator",
+          "manager",
+          "commercialManager",
+          "thirdPartyOperator"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "controller",
+            "tier": "core",
+            "share": null
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "owner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "beneficialOwner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "manager",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "operator",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "commercialManager",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "thirdPartyOperator",
+            "tier": "core",
+            "share": 1
+          }
+        ],
         "primaryRelationship": "owner",
         "affiliation": "core",
         "category": "fleet"
@@ -3057,6 +3369,46 @@
         "category": "fleet"
       },
       {
+        "id": 124197,
+        "imo": "1066908",
+        "name": "Jiangnan H2749",
+        "deadWeight": 65500,
+        "vesselTypeClass": "VLAC",
+        "flagName": null,
+        "currentController": "Abu Dhabi National Oil Company ",
+        "relationships": [
+          "owner",
+          "beneficialOwner",
+          "controller"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "controller",
+            "tier": "core",
+            "share": null
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "owner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "beneficialOwner",
+            "tier": "core",
+            "share": 1
+          }
+        ],
+        "primaryRelationship": "owner",
+        "affiliation": "core",
+        "category": "fleet"
+      },
+      {
         "id": 101847,
         "imo": "9801732",
         "name": "Al Karama",
@@ -3423,6 +3775,286 @@
         "tradesAsBuyer": 3,
         "tradesAsSeller": 4,
         "lastTradeDate": "2026-03-02",
+        "primaryRelationship": "owner",
+        "affiliation": "core",
+        "category": "fleet"
+      },
+      {
+        "id": 127466,
+        "imo": "1079008",
+        "name": "Jiangnan H2823",
+        "deadWeight": 61500,
+        "vesselTypeClass": null,
+        "flagName": "Singapore",
+        "currentController": "Abu Dhabi National Oil Company ",
+        "relationships": [
+          "owner",
+          "beneficialOwner",
+          "controller"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "controller",
+            "tier": "core",
+            "share": null
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "owner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "beneficialOwner",
+            "tier": "core",
+            "share": 1
+          }
+        ],
+        "primaryRelationship": "owner",
+        "affiliation": "core",
+        "category": "fleet"
+      },
+      {
+        "id": 127467,
+        "imo": "1079022",
+        "name": "Jiangnan H2825",
+        "deadWeight": 61500,
+        "vesselTypeClass": null,
+        "flagName": "Singapore",
+        "currentController": "Abu Dhabi National Oil Company ",
+        "relationships": [
+          "owner",
+          "beneficialOwner",
+          "controller"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "controller",
+            "tier": "core",
+            "share": null
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "owner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "beneficialOwner",
+            "tier": "core",
+            "share": 1
+          }
+        ],
+        "primaryRelationship": "owner",
+        "affiliation": "core",
+        "category": "fleet"
+      },
+      {
+        "id": 127468,
+        "imo": "1079034",
+        "name": "Jiangnan H2827",
+        "deadWeight": 61500,
+        "vesselTypeClass": null,
+        "flagName": "Singapore",
+        "currentController": "Abu Dhabi National Oil Company ",
+        "relationships": [
+          "owner",
+          "beneficialOwner",
+          "controller"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "controller",
+            "tier": "core",
+            "share": null
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "owner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "beneficialOwner",
+            "tier": "core",
+            "share": 1
+          }
+        ],
+        "primaryRelationship": "owner",
+        "affiliation": "core",
+        "category": "fleet"
+      },
+      {
+        "id": 127469,
+        "imo": "1079046",
+        "name": "Jiangnan H2828",
+        "deadWeight": 61500,
+        "vesselTypeClass": null,
+        "flagName": "Singapore",
+        "currentController": "Abu Dhabi National Oil Company ",
+        "relationships": [
+          "owner",
+          "beneficialOwner",
+          "controller"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "controller",
+            "tier": "core",
+            "share": null
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "owner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "beneficialOwner",
+            "tier": "core",
+            "share": 1
+          }
+        ],
+        "primaryRelationship": "owner",
+        "affiliation": "core",
+        "category": "fleet"
+      },
+      {
+        "id": 127470,
+        "imo": "1079096",
+        "name": "Jiangnan H2829",
+        "deadWeight": 61500,
+        "vesselTypeClass": null,
+        "flagName": "Singapore",
+        "currentController": "Abu Dhabi National Oil Company ",
+        "relationships": [
+          "owner",
+          "beneficialOwner",
+          "controller"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "controller",
+            "tier": "core",
+            "share": null
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "owner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "beneficialOwner",
+            "tier": "core",
+            "share": 1
+          }
+        ],
+        "primaryRelationship": "owner",
+        "affiliation": "core",
+        "category": "fleet"
+      },
+      {
+        "id": 127471,
+        "imo": "1079137",
+        "name": "Jiangnan H2830",
+        "deadWeight": 61500,
+        "vesselTypeClass": null,
+        "flagName": "Singapore",
+        "currentController": "Abu Dhabi National Oil Company ",
+        "relationships": [
+          "owner",
+          "beneficialOwner",
+          "controller"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "controller",
+            "tier": "core",
+            "share": null
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "owner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "beneficialOwner",
+            "tier": "core",
+            "share": 1
+          }
+        ],
+        "primaryRelationship": "owner",
+        "affiliation": "core",
+        "category": "fleet"
+      },
+      {
+        "id": 127472,
+        "imo": "1079149",
+        "name": "Jiangnan H2831",
+        "deadWeight": 61500,
+        "vesselTypeClass": null,
+        "flagName": "Singapore",
+        "currentController": "Abu Dhabi National Oil Company ",
+        "relationships": [
+          "owner",
+          "beneficialOwner",
+          "controller"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "controller",
+            "tier": "core",
+            "share": null
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "owner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "beneficialOwner",
+            "tier": "core",
+            "share": 1
+          }
+        ],
         "primaryRelationship": "owner",
         "affiliation": "core",
         "category": "fleet"
@@ -5027,54 +5659,6 @@
         "category": "fleet"
       },
       {
-        "id": 118666,
-        "imo": "9937799",
-        "name": "Al Bahyah",
-        "deadWeight": 299425,
-        "vesselTypeClass": "VLCC",
-        "flagName": "Liberia",
-        "currentController": "Abu Dhabi National Oil Company ",
-        "relationships": [
-          "controller"
-        ],
-        "matchedPlayers": [
-          {
-            "id": 1832,
-            "name": "Abu Dhabi National Oil Company ",
-            "role": "controller",
-            "tier": "core",
-            "share": null
-          }
-        ],
-        "primaryRelationship": "controller",
-        "affiliation": "core",
-        "category": "fleet"
-      },
-      {
-        "id": 118730,
-        "imo": "9928009",
-        "name": "Hafeet",
-        "deadWeight": 299425,
-        "vesselTypeClass": "VLCC",
-        "flagName": "Liberia",
-        "currentController": "Abu Dhabi National Oil Company ",
-        "relationships": [
-          "controller"
-        ],
-        "matchedPlayers": [
-          {
-            "id": 1832,
-            "name": "Abu Dhabi National Oil Company ",
-            "role": "controller",
-            "tier": "core",
-            "share": null
-          }
-        ],
-        "primaryRelationship": "controller",
-        "affiliation": "core",
-        "category": "fleet"
-      },
-      {
         "id": 120688,
         "imo": "1023322",
         "name": "New Spiros",
@@ -5146,54 +5730,6 @@
         "tradesAsBuyer": 0,
         "tradesAsSeller": 3,
         "lastTradeDate": "2025-12-08",
-        "primaryRelationship": "controller",
-        "affiliation": "core",
-        "category": "fleet"
-      },
-      {
-        "id": 102699,
-        "imo": "9828390",
-        "name": "Tarif",
-        "deadWeight": 114799,
-        "vesselTypeClass": "Aframax/LR2",
-        "flagName": "Liberia",
-        "currentController": "Abu Dhabi National Oil Company ",
-        "relationships": [
-          "controller"
-        ],
-        "matchedPlayers": [
-          {
-            "id": 1832,
-            "name": "Abu Dhabi National Oil Company ",
-            "role": "controller",
-            "tier": "core",
-            "share": null
-          }
-        ],
-        "primaryRelationship": "controller",
-        "affiliation": "core",
-        "category": "fleet"
-      },
-      {
-        "id": 102861,
-        "imo": "9831294",
-        "name": "Navig8 Precision",
-        "deadWeight": 109994,
-        "vesselTypeClass": "Aframax/LR2",
-        "flagName": "Marshall Islands",
-        "currentController": "Abu Dhabi National Oil Company ",
-        "relationships": [
-          "controller"
-        ],
-        "matchedPlayers": [
-          {
-            "id": 1832,
-            "name": "Abu Dhabi National Oil Company ",
-            "role": "controller",
-            "tier": "core",
-            "share": null
-          }
-        ],
         "primaryRelationship": "controller",
         "affiliation": "core",
         "category": "fleet"
@@ -5319,30 +5855,6 @@
         "category": "fleet"
       },
       {
-        "id": 84992,
-        "imo": "9487251",
-        "name": "Diyyinah-I",
-        "deadWeight": 74954,
-        "vesselTypeClass": "Panamax/LR1",
-        "flagName": "Liberia",
-        "currentController": "Abu Dhabi National Oil Company ",
-        "relationships": [
-          "controller"
-        ],
-        "matchedPlayers": [
-          {
-            "id": 1832,
-            "name": "Abu Dhabi National Oil Company ",
-            "role": "controller",
-            "tier": "core",
-            "share": null
-          }
-        ],
-        "primaryRelationship": "controller",
-        "affiliation": "core",
-        "category": "fleet"
-      },
-      {
         "id": 69284,
         "imo": "9210816",
         "name": "Sohar LNG",
@@ -5395,198 +5907,6 @@
         "category": "fleet"
       },
       {
-        "id": 124197,
-        "imo": "1066908",
-        "name": "Jiangnan H2749",
-        "deadWeight": 65500,
-        "vesselTypeClass": "VLAC",
-        "flagName": null,
-        "currentController": "Abu Dhabi National Oil Company ",
-        "relationships": [
-          "controller"
-        ],
-        "matchedPlayers": [
-          {
-            "id": 1832,
-            "name": "Abu Dhabi National Oil Company ",
-            "role": "controller",
-            "tier": "core",
-            "share": null
-          }
-        ],
-        "primaryRelationship": "controller",
-        "affiliation": "core",
-        "category": "fleet"
-      },
-      {
-        "id": 127466,
-        "imo": "1079008",
-        "name": "Jiangnan H2823",
-        "deadWeight": 61500,
-        "vesselTypeClass": null,
-        "flagName": "Singapore",
-        "currentController": "Abu Dhabi National Oil Company ",
-        "relationships": [
-          "controller"
-        ],
-        "matchedPlayers": [
-          {
-            "id": 1832,
-            "name": "Abu Dhabi National Oil Company ",
-            "role": "controller",
-            "tier": "core",
-            "share": null
-          }
-        ],
-        "primaryRelationship": "controller",
-        "affiliation": "core",
-        "category": "fleet"
-      },
-      {
-        "id": 127467,
-        "imo": "1079022",
-        "name": "Jiangnan H2825",
-        "deadWeight": 61500,
-        "vesselTypeClass": null,
-        "flagName": "Singapore",
-        "currentController": "Abu Dhabi National Oil Company ",
-        "relationships": [
-          "controller"
-        ],
-        "matchedPlayers": [
-          {
-            "id": 1832,
-            "name": "Abu Dhabi National Oil Company ",
-            "role": "controller",
-            "tier": "core",
-            "share": null
-          }
-        ],
-        "primaryRelationship": "controller",
-        "affiliation": "core",
-        "category": "fleet"
-      },
-      {
-        "id": 127468,
-        "imo": "1079034",
-        "name": "Jiangnan H2827",
-        "deadWeight": 61500,
-        "vesselTypeClass": null,
-        "flagName": "Singapore",
-        "currentController": "Abu Dhabi National Oil Company ",
-        "relationships": [
-          "controller"
-        ],
-        "matchedPlayers": [
-          {
-            "id": 1832,
-            "name": "Abu Dhabi National Oil Company ",
-            "role": "controller",
-            "tier": "core",
-            "share": null
-          }
-        ],
-        "primaryRelationship": "controller",
-        "affiliation": "core",
-        "category": "fleet"
-      },
-      {
-        "id": 127469,
-        "imo": "1079046",
-        "name": "Jiangnan H2828",
-        "deadWeight": 61500,
-        "vesselTypeClass": null,
-        "flagName": "Singapore",
-        "currentController": "Abu Dhabi National Oil Company ",
-        "relationships": [
-          "controller"
-        ],
-        "matchedPlayers": [
-          {
-            "id": 1832,
-            "name": "Abu Dhabi National Oil Company ",
-            "role": "controller",
-            "tier": "core",
-            "share": null
-          }
-        ],
-        "primaryRelationship": "controller",
-        "affiliation": "core",
-        "category": "fleet"
-      },
-      {
-        "id": 127470,
-        "imo": "1079096",
-        "name": "Jiangnan H2829",
-        "deadWeight": 61500,
-        "vesselTypeClass": null,
-        "flagName": "Singapore",
-        "currentController": "Abu Dhabi National Oil Company ",
-        "relationships": [
-          "controller"
-        ],
-        "matchedPlayers": [
-          {
-            "id": 1832,
-            "name": "Abu Dhabi National Oil Company ",
-            "role": "controller",
-            "tier": "core",
-            "share": null
-          }
-        ],
-        "primaryRelationship": "controller",
-        "affiliation": "core",
-        "category": "fleet"
-      },
-      {
-        "id": 127471,
-        "imo": "1079137",
-        "name": "Jiangnan H2830",
-        "deadWeight": 61500,
-        "vesselTypeClass": null,
-        "flagName": "Singapore",
-        "currentController": "Abu Dhabi National Oil Company ",
-        "relationships": [
-          "controller"
-        ],
-        "matchedPlayers": [
-          {
-            "id": 1832,
-            "name": "Abu Dhabi National Oil Company ",
-            "role": "controller",
-            "tier": "core",
-            "share": null
-          }
-        ],
-        "primaryRelationship": "controller",
-        "affiliation": "core",
-        "category": "fleet"
-      },
-      {
-        "id": 127472,
-        "imo": "1079149",
-        "name": "Jiangnan H2831",
-        "deadWeight": 61500,
-        "vesselTypeClass": null,
-        "flagName": "Singapore",
-        "currentController": "Abu Dhabi National Oil Company ",
-        "relationships": [
-          "controller"
-        ],
-        "matchedPlayers": [
-          {
-            "id": 1832,
-            "name": "Abu Dhabi National Oil Company ",
-            "role": "controller",
-            "tier": "core",
-            "share": null
-          }
-        ],
-        "primaryRelationship": "controller",
-        "affiliation": "core",
-        "category": "fleet"
-      },
-      {
         "id": 74770,
         "imo": "9307736",
         "name": "Nv Aquamarine",
@@ -5626,30 +5946,6 @@
         "tradesAsBuyer": 0,
         "tradesAsSeller": 1,
         "lastTradeDate": "2026-03-03",
-        "primaryRelationship": "controller",
-        "affiliation": "core",
-        "category": "fleet"
-      },
-      {
-        "id": 97132,
-        "imo": "9719408",
-        "name": "Delma",
-        "deadWeight": 53991,
-        "vesselTypeClass": "VLGC",
-        "flagName": "Liberia",
-        "currentController": "Abu Dhabi National Oil Company ",
-        "relationships": [
-          "controller"
-        ],
-        "matchedPlayers": [
-          {
-            "id": 1832,
-            "name": "Abu Dhabi National Oil Company ",
-            "role": "controller",
-            "tier": "core",
-            "share": null
-          }
-        ],
         "primaryRelationship": "controller",
         "affiliation": "core",
         "category": "fleet"
@@ -9970,6 +10266,126 @@
         "category": "fleet"
       },
       {
+        "id": 118279,
+        "imo": "9947366",
+        "name": "Navig8 Pride Lhj",
+        "deadWeight": 109999,
+        "vesselTypeClass": "Aframax/LR2",
+        "flagName": "Singapore",
+        "currentController": "Navig8",
+        "relationships": [
+          "owner",
+          "beneficialOwner",
+          "controller",
+          "operator",
+          "manager",
+          "commercialManager",
+          "thirdPartyOperator"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 9905,
+            "name": "Navig8",
+            "role": "controller",
+            "tier": "affiliate",
+            "share": null
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "owner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "beneficialOwner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 9905,
+            "name": "Navig8",
+            "role": "manager",
+            "tier": "affiliate",
+            "share": 1
+          },
+          {
+            "id": 9905,
+            "name": "Navig8",
+            "role": "operator",
+            "tier": "affiliate",
+            "share": 1
+          },
+          {
+            "id": 9905,
+            "name": "Navig8",
+            "role": "commercialManager",
+            "tier": "affiliate",
+            "share": 1
+          },
+          {
+            "id": 9905,
+            "name": "Navig8",
+            "role": "thirdPartyOperator",
+            "tier": "affiliate",
+            "share": 1
+          }
+        ],
+        "primaryRelationship": "owner",
+        "affiliation": "mixed",
+        "category": "fleet"
+      },
+      {
+        "id": 118241,
+        "imo": "9947378",
+        "name": "Navig8 Providence",
+        "deadWeight": 109995,
+        "vesselTypeClass": "Aframax/LR2",
+        "flagName": "Marshall Islands",
+        "currentController": "Repsol",
+        "relationships": [
+          "owner",
+          "beneficialOwner",
+          "manager",
+          "commercialManager"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "owner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "beneficialOwner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 9905,
+            "name": "Navig8",
+            "role": "manager",
+            "tier": "affiliate",
+            "share": 1
+          },
+          {
+            "id": 9905,
+            "name": "Navig8",
+            "role": "commercialManager",
+            "tier": "affiliate",
+            "share": 1
+          }
+        ],
+        "primaryRelationship": "owner",
+        "affiliation": "mixed",
+        "category": "fleet"
+      },
+      {
         "id": 84782,
         "imo": "9482859",
         "name": "Navig8 Messi",
@@ -10033,6 +10449,78 @@
         "tradesAsBuyer": 0,
         "tradesAsSeller": 1,
         "lastTradeDate": "2021-05-01",
+        "primaryRelationship": "owner",
+        "affiliation": "mixed",
+        "category": "fleet"
+      },
+      {
+        "id": 97132,
+        "imo": "9719408",
+        "name": "Delma",
+        "deadWeight": 53991,
+        "vesselTypeClass": "VLGC",
+        "flagName": "Liberia",
+        "currentController": "Abu Dhabi National Oil Company ",
+        "relationships": [
+          "owner",
+          "beneficialOwner",
+          "controller",
+          "operator",
+          "manager",
+          "commercialManager",
+          "thirdPartyOperator"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "controller",
+            "tier": "core",
+            "share": null
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "owner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "beneficialOwner",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "manager",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 4271,
+            "name": "Wanhua Chemical Group Co. Ltd.",
+            "role": "operator",
+            "tier": "affiliate",
+            "share": 1
+          },
+          {
+            "id": 1832,
+            "name": "Abu Dhabi National Oil Company ",
+            "role": "commercialManager",
+            "tier": "core",
+            "share": 1
+          },
+          {
+            "id": 4271,
+            "name": "Wanhua Chemical Group Co. Ltd.",
+            "role": "thirdPartyOperator",
+            "tier": "affiliate",
+            "share": 1
+          }
+        ],
         "primaryRelationship": "owner",
         "affiliation": "mixed",
         "category": "fleet"
@@ -10824,6 +11312,86 @@
     ],
     "affiliate": [
       {
+        "id": 120435,
+        "imo": "1013846",
+        "name": "Gas Minjiang",
+        "deadWeight": 60322,
+        "vesselTypeClass": "VLEC",
+        "flagName": "Liberia",
+        "currentController": "Wanhua Chemical Group Co. Ltd.",
+        "relationships": [
+          "owner",
+          "beneficialOwner",
+          "controller"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 4271,
+            "name": "Wanhua Chemical Group Co. Ltd.",
+            "role": "controller",
+            "tier": "affiliate",
+            "share": null
+          },
+          {
+            "id": 4271,
+            "name": "Wanhua Chemical Group Co. Ltd.",
+            "role": "owner",
+            "tier": "affiliate",
+            "share": 1
+          },
+          {
+            "id": 4271,
+            "name": "Wanhua Chemical Group Co. Ltd.",
+            "role": "beneficialOwner",
+            "tier": "affiliate",
+            "share": 1
+          }
+        ],
+        "primaryRelationship": "owner",
+        "affiliation": "affiliate",
+        "category": "fleet"
+      },
+      {
+        "id": 120434,
+        "imo": "1013834",
+        "name": "Gas Yongjiang",
+        "deadWeight": 59624,
+        "vesselTypeClass": "VLEC",
+        "flagName": "Liberia",
+        "currentController": "Wanhua Chemical Group Co. Ltd.",
+        "relationships": [
+          "owner",
+          "beneficialOwner",
+          "controller"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 4271,
+            "name": "Wanhua Chemical Group Co. Ltd.",
+            "role": "controller",
+            "tier": "affiliate",
+            "share": null
+          },
+          {
+            "id": 4271,
+            "name": "Wanhua Chemical Group Co. Ltd.",
+            "role": "owner",
+            "tier": "affiliate",
+            "share": 1
+          },
+          {
+            "id": 4271,
+            "name": "Wanhua Chemical Group Co. Ltd.",
+            "role": "beneficialOwner",
+            "tier": "affiliate",
+            "share": 1
+          }
+        ],
+        "primaryRelationship": "owner",
+        "affiliation": "affiliate",
+        "category": "fleet"
+      },
+      {
         "id": 65523,
         "imo": "9100217",
         "name": "Golden Resource",
@@ -10862,6 +11430,46 @@
           {
             "id": 4271,
             "name": "Wanhua Chemical Group Co. Ltd.",
+            "role": "beneficialOwner",
+            "tier": "affiliate",
+            "share": 1
+          }
+        ],
+        "primaryRelationship": "owner",
+        "affiliation": "affiliate",
+        "category": "fleet"
+      },
+      {
+        "id": 119896,
+        "imo": "9973925",
+        "name": "Navig8 Estelle",
+        "deadWeight": 49160,
+        "vesselTypeClass": "MR",
+        "flagName": "Liberia",
+        "currentController": "Navig8",
+        "relationships": [
+          "owner",
+          "beneficialOwner",
+          "controller"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 9905,
+            "name": "Navig8",
+            "role": "controller",
+            "tier": "affiliate",
+            "share": null
+          },
+          {
+            "id": 9905,
+            "name": "Navig8",
+            "role": "owner",
+            "tier": "affiliate",
+            "share": 1
+          },
+          {
+            "id": 9905,
+            "name": "Navig8",
             "role": "beneficialOwner",
             "tier": "affiliate",
             "share": 1
@@ -11184,30 +11792,6 @@
         "category": "fleet"
       },
       {
-        "id": 118279,
-        "imo": "9947366",
-        "name": "Navig8 Pride Lhj",
-        "deadWeight": 109999,
-        "vesselTypeClass": "Aframax/LR2",
-        "flagName": "Singapore",
-        "currentController": "Navig8",
-        "relationships": [
-          "controller"
-        ],
-        "matchedPlayers": [
-          {
-            "id": 9905,
-            "name": "Navig8",
-            "role": "controller",
-            "tier": "affiliate",
-            "share": null
-          }
-        ],
-        "primaryRelationship": "controller",
-        "affiliation": "affiliate",
-        "category": "fleet"
-      },
-      {
         "id": 81571,
         "imo": "9426441",
         "name": "Ionic Artemis",
@@ -11376,54 +11960,6 @@
         "category": "fleet"
       },
       {
-        "id": 120435,
-        "imo": "1013846",
-        "name": "Gas Minjiang",
-        "deadWeight": 60322,
-        "vesselTypeClass": "VLEC",
-        "flagName": "Liberia",
-        "currentController": "Wanhua Chemical Group Co. Ltd.",
-        "relationships": [
-          "controller"
-        ],
-        "matchedPlayers": [
-          {
-            "id": 4271,
-            "name": "Wanhua Chemical Group Co. Ltd.",
-            "role": "controller",
-            "tier": "affiliate",
-            "share": null
-          }
-        ],
-        "primaryRelationship": "controller",
-        "affiliation": "affiliate",
-        "category": "fleet"
-      },
-      {
-        "id": 120434,
-        "imo": "1013834",
-        "name": "Gas Yongjiang",
-        "deadWeight": 59624,
-        "vesselTypeClass": "VLEC",
-        "flagName": "Liberia",
-        "currentController": "Wanhua Chemical Group Co. Ltd.",
-        "relationships": [
-          "controller"
-        ],
-        "matchedPlayers": [
-          {
-            "id": 4271,
-            "name": "Wanhua Chemical Group Co. Ltd.",
-            "role": "controller",
-            "tier": "affiliate",
-            "share": null
-          }
-        ],
-        "primaryRelationship": "controller",
-        "affiliation": "affiliate",
-        "category": "fleet"
-      },
-      {
         "id": 124403,
         "imo": "1077567",
         "name": "Jiangnan",
@@ -11552,7 +12088,11 @@
         "flagName": "Liberia",
         "currentController": "Navig8",
         "relationships": [
-          "controller"
+          "controller",
+          "operator",
+          "manager",
+          "commercialManager",
+          "thirdPartyOperator"
         ],
         "matchedPlayers": [
           {
@@ -11561,30 +12101,34 @@
             "role": "controller",
             "tier": "affiliate",
             "share": null
-          }
-        ],
-        "primaryRelationship": "controller",
-        "affiliation": "affiliate",
-        "category": "fleet"
-      },
-      {
-        "id": 119896,
-        "imo": "9973925",
-        "name": "Navig8 Estelle",
-        "deadWeight": 49160,
-        "vesselTypeClass": "MR",
-        "flagName": "Liberia",
-        "currentController": "Navig8",
-        "relationships": [
-          "controller"
-        ],
-        "matchedPlayers": [
+          },
           {
             "id": 9905,
             "name": "Navig8",
-            "role": "controller",
+            "role": "manager",
             "tier": "affiliate",
-            "share": null
+            "share": 1
+          },
+          {
+            "id": 9905,
+            "name": "Navig8",
+            "role": "operator",
+            "tier": "affiliate",
+            "share": 1
+          },
+          {
+            "id": 9905,
+            "name": "Navig8",
+            "role": "commercialManager",
+            "tier": "affiliate",
+            "share": 1
+          },
+          {
+            "id": 9905,
+            "name": "Navig8",
+            "role": "thirdPartyOperator",
+            "tier": "affiliate",
+            "share": 1
           }
         ],
         "primaryRelationship": "controller",
@@ -11660,6 +12204,134 @@
           }
         ],
         "primaryRelationship": "controller",
+        "affiliation": "affiliate",
+        "category": "fleet"
+      },
+      {
+        "id": 116974,
+        "imo": "9916824",
+        "name": "Zakher",
+        "deadWeight": 55211,
+        "vesselTypeClass": "VLGC",
+        "flagName": "Liberia",
+        "currentController": null,
+        "relationships": [
+          "manager",
+          "commercialManager"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 4271,
+            "name": "Wanhua Chemical Group Co. Ltd.",
+            "role": "manager",
+            "tier": "affiliate",
+            "share": 1
+          },
+          {
+            "id": 4271,
+            "name": "Wanhua Chemical Group Co. Ltd.",
+            "role": "commercialManager",
+            "tier": "affiliate",
+            "share": 1
+          }
+        ],
+        "primaryRelationship": "manager",
+        "affiliation": "affiliate",
+        "category": "fleet"
+      },
+      {
+        "id": 116970,
+        "imo": "9916836",
+        "name": "Rabdan",
+        "deadWeight": 55145,
+        "vesselTypeClass": "VLGC",
+        "flagName": "Liberia",
+        "currentController": null,
+        "relationships": [
+          "manager",
+          "commercialManager"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 4271,
+            "name": "Wanhua Chemical Group Co. Ltd.",
+            "role": "manager",
+            "tier": "affiliate",
+            "share": 1
+          },
+          {
+            "id": 4271,
+            "name": "Wanhua Chemical Group Co. Ltd.",
+            "role": "commercialManager",
+            "tier": "affiliate",
+            "share": 1
+          }
+        ],
+        "primaryRelationship": "manager",
+        "affiliation": "affiliate",
+        "category": "fleet"
+      },
+      {
+        "id": 117123,
+        "imo": "9923085",
+        "name": "Al Salam",
+        "deadWeight": 54000,
+        "vesselTypeClass": "VLGC",
+        "flagName": "Liberia",
+        "currentController": "Saudi Aramco",
+        "relationships": [
+          "manager",
+          "commercialManager"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 4271,
+            "name": "Wanhua Chemical Group Co. Ltd.",
+            "role": "manager",
+            "tier": "affiliate",
+            "share": 1
+          },
+          {
+            "id": 4271,
+            "name": "Wanhua Chemical Group Co. Ltd.",
+            "role": "commercialManager",
+            "tier": "affiliate",
+            "share": 1
+          }
+        ],
+        "primaryRelationship": "manager",
+        "affiliation": "affiliate",
+        "category": "fleet"
+      },
+      {
+        "id": 117124,
+        "imo": "9923097",
+        "name": "Baynounah",
+        "deadWeight": 54000,
+        "vesselTypeClass": "VLGC",
+        "flagName": "Liberia",
+        "currentController": null,
+        "relationships": [
+          "manager",
+          "commercialManager"
+        ],
+        "matchedPlayers": [
+          {
+            "id": 4271,
+            "name": "Wanhua Chemical Group Co. Ltd.",
+            "role": "manager",
+            "tier": "affiliate",
+            "share": 1
+          },
+          {
+            "id": 4271,
+            "name": "Wanhua Chemical Group Co. Ltd.",
+            "role": "commercialManager",
+            "tier": "affiliate",
+            "share": 1
+          }
+        ],
+        "primaryRelationship": "manager",
         "affiliation": "affiliate",
         "category": "fleet"
       }

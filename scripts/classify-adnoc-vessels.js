@@ -753,8 +753,20 @@ async function writeExcel(output, fleetVessels, tradeOnlyVessels, allVessels) {
   }
 
   const xlsxPath = OUT_FILE.replace(/\.json$/, '.xlsx');
-  XLSX.writeFile(wb, xlsxPath);
-  console.log(`[classify-adnoc] Wrote ${xlsxPath}`);
+  try {
+    XLSX.writeFile(wb, xlsxPath);
+    console.log(`[classify-adnoc] Wrote ${xlsxPath}`);
+  } catch (e) {
+    if (e.code === 'EBUSY' || /locked/i.test(e.message)) {
+      const ts = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
+      const fallbackPath = xlsxPath.replace(/\.xlsx$/, `-${ts}.xlsx`);
+      console.log(`[classify-adnoc] ⚠ ${xlsxPath} is locked (likely open in Excel). Writing to fallback: ${fallbackPath}`);
+      XLSX.writeFile(wb, fallbackPath);
+      console.log(`[classify-adnoc] Wrote ${fallbackPath}`);
+    } else {
+      throw e;
+    }
+  }
 }
 
 main().catch(e => {

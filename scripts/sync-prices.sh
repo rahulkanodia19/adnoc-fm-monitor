@@ -19,11 +19,24 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 
+# Shared preflight helpers
+# shellcheck source=lib/common.sh
+source "$SCRIPT_DIR/lib/common.sh"
+
 echo "[sync-prices] =========================================="
 echo "[sync-prices] ADNOC FM Monitor — Market Prices Sync"
 echo "[sync-prices] =========================================="
 
 cd "$PROJECT_DIR"
+
+# --- Standalone preflight (skipped when orchestrated by master-sync) ---
+if [ -z "$MASTER_SYNC" ]; then
+  echo "[sync-prices] Running preflight checks..."
+  check_platts_env
+  check_file_exists "data.js" "data.js"
+  print_preflight_summary
+  preflight_abort_if_critical platts_env "data.js"
+fi
 
 # ---- Step 0: Murban Front-Month (Investing.com / IFAD continuation) ----
 echo "[sync-prices] [1/4] Fetching Murban front-month from Investing.com..."

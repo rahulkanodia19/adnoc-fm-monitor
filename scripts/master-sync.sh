@@ -29,6 +29,10 @@ set -o pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
+
+# Shared helpers: preflight checks, log rotation, heartbeat
+# shellcheck source=lib/common.sh
+source "$SCRIPT_DIR/lib/common.sh"
 DEBUG_PORT=9222
 CHROME_PATH="${CHROME_PATH:-/c/Program Files/Google/Chrome/Application/chrome.exe}"
 CHROME_DATA_DIR="${CHROME_DATA_DIR:-C:/ChromeProfiles/ClaudeSync}"
@@ -51,6 +55,7 @@ done
 
 cd "$PROJECT_DIR"
 mkdir -p sync-logs
+purge_old_logs "$PROJECT_DIR/sync-logs" 7
 
 # --- Cleanup on exit (prevents zombie processes on Windows) ---
 cleanup() {
@@ -136,6 +141,7 @@ run_pipeline() {
   local attempt=1
   local logfile="sync-logs/${name}.log"
 
+  rotate_log "$logfile"  # preserve previous run's log (date-stamped)
   > "$logfile"  # truncate log
 
   while [ $attempt -le $max_retries ]; do
@@ -168,7 +174,10 @@ run_pipeline() {
     write_progress "data_collection"
 
     local cmd_start=$(date +%s)
-    if "$@" >> "$logfile" 2>&1; then
+    # Tee to log file (clean) AND terminal (prefixed with pipeline name).
+    # sed -u is unbuffered so user sees live output in Git Bash.
+    # pipefail (set above) preserves command's exit code across the pipe.
+    if "$@" 2>&1 | tee -a "$logfile" | sed -u "s/^/  [$name] /"; then
       PIPELINE_TIME[$name]=$(elapsed $cmd_start)
       return 0
     fi
@@ -527,6 +536,33 @@ const http=require('http'),WebSocket=require('ws');
   log "  Premium health ... ✓ pre-flight gate passed"
 fi
 
+# --- Populate preflight results + print summary ---
+# Translate existing ad-hoc status vars into PREFLIGHT_RESULTS for the summary.
+if [ "$CHROME_OK" = true ]; then
+  _pf_set "chrome" "PASS" "running on port $DEBUG_PORT"
+else
+  _pf_set "chrome" "FAIL" "not responding after 3 attempts"
+fi
+if [ "$KPLER_TOKEN_OK" = true ]; then
+  _pf_set "kpler_token" "PASS" "${TOK_LEN:-cached} chars"
+else
+  _pf_set "kpler_token" "WARN" "no token (SOH + Flows will skip)"
+fi
+if [ "$MINT_NEEDS_REFRESH" = false ]; then
+  _pf_set "mint_token" "PASS" "valid"
+else
+  _pf_set "mint_token" "WARN" "using cache"
+fi
+if [ -f "$PROJECT_DIR/.platts-token.json" ]; then
+  _pf_set "platts_token" "PASS" "refresh token cached"
+else
+  _pf_set "platts_token" "WARN" "will do full auth"
+fi
+
+echo ""
+print_preflight_summary
+preflight_abort_if_critical chrome
+
 # --- Pre-sync backup ---
 backup_data
 write_progress "preflight"
@@ -604,6 +640,13 @@ fi
 
 hr
 
+# --- Start heartbeat while waiting for parallel jobs ---
+# Prints "… still running: ..." every 90s for any pipeline still
+# marked running. Covers silent API-call stretches when tee output
+# goes quiet. Killed after all collect_result calls finish.
+start_heartbeat &
+HEARTBEAT_PID=$!
+
 # --- Wait for parallel jobs ---
 
 collect_result() {
@@ -637,6 +680,9 @@ collect_result "$FLOWS_PID" "flows" "$LABEL_FLOWS" \
 
 collect_result "$ADNOC_PID" "adnoc" "$LABEL_ADNOC" \
   "node -e \"const d=JSON.parse(require('fs').readFileSync('soh-data/adnoc-fleet-data.json'));console.log(d.count+' fleet + '+(JSON.parse(require('fs').readFileSync('soh-data/adnoc-chartered-data.json')).count||0)+' chartered')\""
+
+# --- Stop heartbeat (all parallel jobs complete) ---
+kill $HEARTBEAT_PID 2>/dev/null || true
 
 # ============================================================
 # PHASE 1.5: SEQUENTIAL DATA.JS WRITERS

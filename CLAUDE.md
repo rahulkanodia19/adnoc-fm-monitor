@@ -78,7 +78,7 @@ npm run verify        # Check freshness of all data files → sync-status.json
 - `claude -p` subprocesses CANNOT run from within Claude Code (nesting fails)
 - Run `npm run sync:all` from a **separate terminal** (Git Bash, PowerShell)
 - Node.js pipelines (SOH, Flows, Platts) CAN run from Claude Code via Bash tool
-- Windows Task Scheduler triggers `scripts/sync-scheduled.bat` daily at 11 PM UAE
+- Windows Task Scheduler triggers `scripts/sync-scheduled.bat` daily at 12:00 AM local machine time. Register/update via `powershell.exe -File scripts/register-task.ps1` (self-elevating).
 
 ## Authentication
 

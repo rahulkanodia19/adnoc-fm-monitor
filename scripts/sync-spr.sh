@@ -14,11 +14,24 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 
+# Shared preflight helpers
+# shellcheck source=lib/common.sh
+source "$SCRIPT_DIR/lib/common.sh"
+
 echo "[sync-spr] =========================================="
 echo "[sync-spr] ADNOC FM Monitor — SPR Release Data Sync"
 echo "[sync-spr] =========================================="
 
 cd "$PROJECT_DIR"
+
+# --- Standalone preflight (skipped when orchestrated by master-sync) ---
+if [ -z "$MASTER_SYNC" ]; then
+  echo "[sync-spr] Running preflight checks..."
+  check_chrome
+  check_file_exists "data.js" "data.js"
+  print_preflight_summary
+  preflight_abort_if_critical chrome "data.js"
+fi
 
 # 1. Pre-fetch SPR source pages (IEA, DOE, EIA) via Node curl.
 # This offloads slow HTTP fetches from Claude's turn budget — claude reads
