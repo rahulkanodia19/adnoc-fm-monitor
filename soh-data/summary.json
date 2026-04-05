@@ -8,7 +8,7 @@
   "adnocCount": 11,
   "totalVessels": 1044,
   "transitCount": 10,
-  "syncTimestamp": "2026-04-04T20:30:45.017Z",
+  "syncTimestamp": "2026-04-05T07:42:12.605Z",
   "deltaLabel": "24h",
   "deltas": {
     "insideDelta": -7,
@@ -18,8 +18,8 @@
     "insideLadenDelta": -7,
     "outsideBallastDelta": 5,
     "outsideLadenDelta": 0,
-    "exitedSinceMidnight": 8,
-    "enteredSinceMidnight": 2
+    "exitedSinceMidnight": 0,
+    "enteredSinceMidnight": 0
   },
   "smallVessels": {
     "inside": 133,
