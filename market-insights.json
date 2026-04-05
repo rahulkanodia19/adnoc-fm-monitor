@@ -1,52 +1,92 @@
 {
-  "generated_at": "2026-04-05T12:00:00Z",
+  "generated_at": "2026-04-05T15:30:00Z",
   "model": "claude-opus-4.6",
-  "asOfDate": "2026-04-02",
+  "asOfDate": "2026-04-05",
   "insights": [
     {
       "type": "top_mover",
+      "severity": "warning",
+      "title": "Gasoil rockets to 52W high $284.97 as Gulf refinery outages compound",
+      "detail": "Gasoil +$46.51 (+19.5%) to new peak; crack to Murban at $170/bbl. Sitra FM-004 (405 kb/d) + Ruwais-2 sd-009 (417 kb/d) + Al-Ahmadi sd-018 (730 kb/d) = ~1,550 kb/d offline.",
+      "metrics": [
+        { "label": "1d Change", "value": "+$46.51 (+19.5%)" },
+        { "label": "Gasoil-Murban Crack", "value": "+$170.13/bbl" },
+        { "label": "5d Return", "value": "+35.6%" },
+        { "label": "Refining Offline", "value": "~1,550 kb/d" }
+      ],
+      "related_event": {
+        "type": "shutdown",
+        "date": "2026-04-02",
+        "summary": "Sitra FM-004 (405 kb/d) + Ruwais-2 sd-009 (417 kb/d) + Al-Ahmadi sd-018 (730 kb/d) compound"
+      }
+    },
+    {
+      "type": "spread",
+      "severity": "warning",
+      "title": "WTI-Brent inverts to -$2.51 as WTI hits 52W high $111.54",
+      "detail": "WTI +$11.42 (+11.4%) surpasses Brent for first time in crisis. Iraq FM-024 (Basra 900k from 3.3M bpd) + VLCC struck at Dubai sd-023; SPR at just 15.9% of 426 mb committed.",
+      "metrics": [
+        { "label": "WTI 1d", "value": "+$11.42 (+11.4%)" },
+        { "label": "Brent-WTI", "value": "-$2.51/bbl (inverted)" },
+        { "label": "Murban Premium", "value": "+$5.81 vs Brent" },
+        { "label": "Iraq Output", "value": "900k bpd (from 3.3M)" }
+      ],
+      "related_event": {
+        "type": "shutdown",
+        "date": "2026-03-31",
+        "summary": "VLCC Al Salmi struck at Dubai port (2M bbl cargo); hull damage + fire; WTI spiked same session"
+      }
+    },
+    {
+      "type": "anomaly",
+      "severity": "warning",
+      "title": "AWRP hits 52W high $2.45/bbl; hull-value war risk at 33x pre-crisis",
+      "detail": "Platts AWRP +$0.25 (+11.4%); hull-value rate at 5.0% from 0.15% pre-conflict. VLCC struck at Dubai sd-023 triggers repricing; US DFC doubles Hormuz reinsurance to $40B.",
+      "metrics": [
+        { "label": "AWRP", "value": "$2.45/bbl (52W high)" },
+        { "label": "Hull-Value Rate", "value": "5.0% (from 0.15%)" },
+        { "label": "1d Change", "value": "+$0.25 (+11.4%)" },
+        { "label": "US Reinsurance", "value": "$40B DFC program" }
+      ],
+      "related_event": {
+        "type": "awrp",
+        "date": "2026-04-05",
+        "summary": "US DFC doubles Hormuz reinsurance to $40B; Chubb-led syndicate; hull rates stable at 5% tiered"
+      }
+    },
+    {
+      "type": "trend",
+      "severity": "bearish",
+      "title": "Ammonia hits 52W high $650/mt as petchem FM cascade goes global",
+      "detail": "Ammonia +$25 (+4%) to new peak, +36.8% since Feb. Five petchem FMs in March (fm-025/26/27/28/29). Naphtha >$1,000/mt per Formosa FM-027; Qatar 2,140 kt/y petchem 100% offline.",
+      "metrics": [
+        { "label": "Ammonia", "value": "$650/mt (52W high)" },
+        { "label": "Since Feb", "value": "+$175 (+36.8%)" },
+        { "label": "Active Petchem FMs", "value": "10 declarations" },
+        { "label": "Qatar Petchem", "value": "0/2,140 kt/y online" }
+      ],
+      "related_event": {
+        "type": "fm",
+        "date": "2026-04-01",
+        "summary": "Formosa Plastics FM-027 on PVC/HDPE/PE; FPCC at ~50% capacity; naphtha >$1,000/mt from Gulf disruption"
+      }
+    },
+    {
+      "type": "correlation_break",
       "severity": "bullish",
-      "title": "Crude complex surges 10%+; Brent and WTI hit 52-week highs",
-      "detail": "Brent settled $141.37/bbl (+10.1%), WTI $111.54 (+11.4%), Murban $114.84 (+10.8%). All three benchmarks moved in lockstep on Hormuz escalation.",
+      "title": "TTF plunges 8.4% while JKM holds — Leviathan restart eases Europe",
+      "detail": "TTF -$1.51 to $16.47 extending correction from 52W high $22.50; JKM flat at $17.86. Chevron Leviathan FM-005 partially lifted Apr 2; domestic gas ramping, export FM remains.",
       "metrics": [
-        {"label": "Brent", "value": "$141.37/bbl (+10.1%)"},
-        {"label": "WTI", "value": "$111.54/bbl (+11.4%)"},
-        {"label": "Murban", "value": "$114.84/bbl (+10.8%)"},
-        {"label": "Brent 5-day", "value": "+29.0%"}
-      ]
-    },
-    {
-      "type": "spread",
-      "severity": "warning",
-      "title": "Gasoil-Murban crack explodes to $170/bbl on refinery squeeze",
-      "detail": "Gasoil surged 19.5% to new 52W high of $284.97; crack over Murban widened $65 in 5 days from $105 to $170, signaling acute diesel scarcity.",
-      "metrics": [
-        {"label": "Gasoil", "value": "$284.97/bbl (+19.5%)"},
-        {"label": "Gasoil-Murban", "value": "+$170.1/bbl"},
-        {"label": "5-day crack chg", "value": "+$65.3"}
-      ]
-    },
-    {
-      "type": "cross",
-      "severity": "warning",
-      "title": "AWRP hits 52W high at $2.45/bbl ahead of Apr 6 deadline",
-      "detail": "Platts war risk premium up 44% in 5 days to new high; hull-rate steady at 5% with 2.5% transit surcharge. Apr 6 deadline adds uncertainty.",
-      "metrics": [
-        {"label": "AWRP $/bbl", "value": "$2.45 (+11.4%)"},
-        {"label": "Hull %", "value": "5.0%"},
-        {"label": "5-day", "value": "+44.1%"}
-      ]
-    },
-    {
-      "type": "spread",
-      "severity": "warning",
-      "title": "Brent-Murban spread blows out to $26.5/bbl on transit risk",
-      "detail": "Gulf-origin Murban within 0.2% of 52W high but Brent pulled far ahead to new record; widening spread reflects rerouting premium and Hormuz avoidance.",
-      "metrics": [
-        {"label": "Brent-Murban", "value": "+$26.53/bbl"},
-        {"label": "Murban vs 52W high", "value": "-0.2%"},
-        {"label": "Brent 52W", "value": "NEW HIGH"}
-      ]
+        { "label": "TTF 1d", "value": "-$1.51 (-8.4%)" },
+        { "label": "JKM 1d", "value": "+$0.13 (+0.7%)" },
+        { "label": "JKM-NWE Spread", "value": "+$1.13/MMBtu" },
+        { "label": "Leviathan", "value": "~1.2 Bcf/d ramping" }
+      ],
+      "related_event": {
+        "type": "fm",
+        "date": "2026-04-02",
+        "summary": "Chevron Leviathan FM-005 partially lifted; restart announced; domestic ramping, export FM active"
+      }
     }
   ]
 }
