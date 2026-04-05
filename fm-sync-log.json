@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-04-05T18:30:00.000Z",
+  "success": true,
+  "changes": "Added 14 new FM declarations and 12 new shutdown entries across 4 global regions + Gulf cascade. Updated fm-001 QatarEnergy FM to include Poland/Orlen. Coverage expanded to Saudi Arabia (SABIC, Sadara, Dow), Thailand (SCG, IRPC), South Korea (Hanwha, HMM), Japan (Mitsui, Mitsubishi, Idemitsu), India (GAIL, Reliance), Taiwan (CPDC), Egypt (Methanex), South Africa (Sasol), US (LyondellBasell Bayport, Valero), Germany (Ineos Styrolution, OMV), Poland (Orlen), China (Sinopec), Singapore (ExxonMobil), Malaysia (PRefChem), Australia (Chevron Wheatstone).",
+  "fmCountBefore": 29,
+  "fmCountAfter": 43,
+  "shutdownCountBefore": 37,
+  "shutdownCountAfter": 49,
+  "newFmEntries": [
+    { "id": "fm-030", "company": "SABIC", "country": "Saudi Arabia", "date": "2026-03-27" },
+    { "id": "fm-031", "company": "Sadara Chemical (Aramco-Dow JV)", "country": "Saudi Arabia", "date": "2026-03-31" },
+    { "id": "fm-032", "company": "Dow (Jubail Ethanolamines)", "country": "Saudi Arabia / Europe", "date": "2026-03-10" },
+    { "id": "fm-033", "company": "SCG Chemicals / Rayong Olefins", "country": "Thailand", "date": "2026-03-10" },
+    { "id": "fm-034", "company": "IRPC (PTT Group)", "country": "Thailand", "date": "2026-03-06" },
+    { "id": "fm-035", "company": "Hanwha Solutions", "country": "South Korea", "date": "2026-03-12" },
+    { "id": "fm-036", "company": "GAIL (India) Limited", "country": "India", "date": "2026-03-06" },
+    { "id": "fm-037", "company": "CPDC", "country": "Taiwan", "date": "2026-03-24" },
+    { "id": "fm-038", "company": "Methanex (Egypt Plant)", "country": "Egypt", "date": "2026-03-26" },
+    { "id": "fm-039", "company": "Sasol (ORYX GTL)", "country": "South Africa / Qatar", "date": "2026-03-03" },
+    { "id": "fm-040", "company": "LyondellBasell (Bayport PO/TBA)", "country": "United States", "date": "2026-03-17" },
+    { "id": "fm-041", "company": "HMM (Hyundai Merchant Marine)", "country": "South Korea", "date": "2026-03-11" },
+    { "id": "fm-042", "company": "Industries Qatar (Fertilizer)", "country": "Qatar", "date": "2026-03-06" },
+    { "id": "fm-043", "company": "Ineos Styrolution", "country": "Germany", "date": "2026-03-24" }
+  ],
+  "newShutdownEntries": [
+    { "id": "sd-039", "company": "Sinopec (China-wide)", "country": "China", "date": "2026-03-16" },
+    { "id": "sd-040", "company": "ExxonMobil (Singapore)", "country": "Singapore", "date": "2026-03-10" },
+    { "id": "sd-041", "company": "PRefChem (Petronas-Aramco JV)", "country": "Malaysia", "date": "2026-03-15" },
+    { "id": "sd-042", "company": "Mitsui Chemicals", "country": "Japan", "date": "2026-03-10" },
+    { "id": "sd-043", "company": "Mitsubishi Chemical", "country": "Japan", "date": "2026-03-07" },
+    { "id": "sd-044", "company": "Idemitsu Kosan", "country": "Japan", "date": "2026-03-16" },
+    { "id": "sd-045", "company": "GS Caltex", "country": "South Korea", "date": "2026-03-25" },
+    { "id": "sd-046", "company": "Valero Energy (Port Arthur)", "country": "United States", "date": "2026-03-23" },
+    { "id": "sd-047", "company": "Chevron (Wheatstone LNG)", "country": "Australia", "date": "2026-03-26" },
+    { "id": "sd-048", "company": "OMV (Burghausen Cracker)", "country": "Germany", "date": "2026-03-10" },
+    { "id": "sd-049", "company": "Orlen (Plock)", "country": "Poland", "date": "2026-03-10" },
+    { "id": "sd-050", "company": "Reliance Industries (Jamnagar)", "country": "India", "date": "2026-03-10" }
+  ],
+  "statusChanges": [],
+  "regionsCovered": {
+    "asia": ["Singapore", "China", "India", "Japan", "South Korea", "Taiwan", "Thailand", "Malaysia", "Indonesia", "Vietnam", "Philippines"],
+    "europe": ["Germany", "Netherlands", "France", "Italy", "UK", "Spain", "Poland", "Belgium", "Greece", "Turkey"],
+    "americas": ["United States", "Canada", "Mexico", "Brazil", "Argentina", "Venezuela", "Colombia"],
+    "africa_oceania": ["Nigeria", "Angola", "Egypt", "Libya", "Algeria", "Australia", "New Zealand", "Mozambique", "South Africa"]
+  },
+  "searchQueriesRun": 48,
+  "sourcesChecked": [
+    "ICIS", "Argus Media", "S&P Global", "C&EN", "Chemical Week", "Bloomberg", "Reuters",
+    "Arab News", "OilPrice", "Hydrocarbon Processing", "Nikkei Asia", "Seoul Economic Daily",
+    "Korea Times", "Japan Times", "Nippon.com", "Business Today India", "Indian Chemical News",
+    "Food Ingredients First", "Plasteurope", "PolymerUpdate", "MarineLink", "Mining Weekly",
+    "Sasol.com", "Methanex.com", "Gulf News", "The National", "Al Jazeera", "Baird Maritime",
+    "Wood Mackenzie", "Boiling Cold", "Media Selangor", "The Edge Malaysia", "Syntex America",
+    "US News", "Nasdaq", "African News Agency", "PU Daily", "SCG News Channel", "DPRJ Universal"
+  ]
+}

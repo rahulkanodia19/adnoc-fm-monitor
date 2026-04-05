@@ -1294,6 +1294,309 @@ const COUNTRY_STATUS_DATA = [
 // ---------- TABLE 2: Force Majeure Declarations ----------
 const FM_DECLARATIONS_DATA = [
   {
+    id: "fm-043",
+    company: "Ineos Styrolution",
+    country: "Germany",
+    flag: "\u{1F1E9}\u{1F1EA}",
+    date: "2026-03-24",
+    status: "active",
+    statusLabel: "Active",
+    isNew: false,
+    summary: "FM on multiple Novodur ABS grades due to compounding line failure at Cologne-Worringen plant. Compounds Europe's existing polymer supply tightness from Gulf crisis.",
+    details: {
+      volumeAffected: "Multiple Novodur and Novodur HH ABS grades (primarily black-colored)",
+      commodity: "ABS (Acrylonitrile Butadiene Styrene)",
+      duration: "Since 24 Mar 2026, ongoing — technical repair timeline not disclosed",
+      reason: "Technical failure at compounding line at Cologne-Worringen plant. Mechanical issue, not Gulf-related, but compounds European polymer supply tightness.",
+      financialImpact: "European ABS market further tightened; automotive and electronics sectors affected."
+    },
+    sources: [
+      { id: 1, title: "Ineos Styrolution declares FM for several Novodur grades - Plasteurope", url: "https://www.plasteurope.com/news/PETROCHEMICAL_MARKETS_t259926/", date: "2026-03-24" }
+    ]
+  },
+  {
+    id: "fm-042",
+    company: "Industries Qatar (Fertilizer)",
+    country: "Qatar",
+    flag: "\u{1F1F6}\u{1F1E6}",
+    date: "2026-03-06",
+    status: "active",
+    statusLabel: "Active",
+    isNew: false,
+    summary: "FM on urea fertilizer shipments to South America and Asia. Production halted at Ras Laffan after Iranian strikes. Part of broader QatarEnergy downstream suspension.",
+    details: {
+      volumeAffected: "Urea fertilizer shipments to South America and Asia",
+      commodity: "Urea Fertilizer",
+      duration: "Since 6 Mar 2026, ongoing — linked to QatarEnergy downstream suspension",
+      reason: "Ras Laffan production halt + Strait of Hormuz closure blocking seaborne fertilizer exports.",
+      financialImpact: "Global urea prices surging; South American planting season supply disrupted."
+    },
+    sources: [
+      { id: 1, title: "Iran's Hormuz blockade leaves fertilizer stranded - Food Ingredients First", url: "https://www.foodingredientsfirst.com/news/hormuz-fertilizer-crisis-food-ingredient-costs.html", date: "2026-03-06" }
+    ]
+  },
+  {
+    id: "fm-041",
+    company: "HMM (Hyundai Merchant Marine)",
+    country: "South Korea",
+    flag: "\u{1F1F0}\u{1F1F7}",
+    date: "2026-03-11",
+    status: "active",
+    statusLabel: "Active",
+    isNew: false,
+    summary: "FM on all Arabian Gulf, Red Sea, and Horn of Africa container bookings. $1,000/container surcharge on alternate routes. South Korea's largest shipping carrier.",
+    details: {
+      volumeAffected: "All container bookings for Arabian Gulf, Red Sea, Horn of Africa routes",
+      commodity: "Maritime Shipping (Container)",
+      duration: "Since 11 Mar 2026, indefinite",
+      reason: "Safety risk to vessels, cargo, and crew from Iran war. Extended Gulf exclusion zone.",
+      financialImpact: "$1,000/container surcharge applied; Korea-Gulf trade lanes fully disrupted."
+    },
+    sources: [
+      { id: 1, title: "HMM Halts Middle East Shipping, Imposes $1,000 Surcharge - Seoul Economic Daily", url: "https://en.sedaily.com/finance/2026/03/11/hmm-halts-middle-east-shipping-imposes-1000-surcharge", date: "2026-03-11" }
+    ]
+  },
+  {
+    id: "fm-040",
+    company: "LyondellBasell (Bayport PO/TBA)",
+    country: "United States",
+    flag: "\u{1F1FA}\u{1F1F8}",
+    date: "2026-03-17",
+    status: "active",
+    statusLabel: "Active",
+    isNew: false,
+    summary: "FM on Americas propylene oxide and derivatives after fire at Bayport Choate plant in Pasadena, TX on Mar 12. All three PO/TBA trains offline. World's largest PO/TBA facility by volume.",
+    details: {
+      volumeAffected: "620,000 tonnes/year propylene oxide capacity (3 PO/TBA plants)",
+      commodity: "Propylene Oxide (PO), Propylene Glycol, TBA, Isobutylene",
+      duration: "Since 12 Mar 2026 (fire), FM declared ~17 Mar, ongoing",
+      reason: "Fire at Bayport Choate — process upset caused flammable substance release ignited by flare pilot light. Industrial incident, not Gulf-related.",
+      financialImpact: "Global propylene oxide market tightened; downstream polyurethane and glycol ether supply disrupted."
+    },
+    sources: [
+      { id: 1, title: "LyondellBasell puts Americas PO and derivatives on force majeure - Chemical Week", url: "https://chemweek.com/CW/Document/114572/LyondellBasell-puts-Americas-PO-and-derivatives-on-force-majeure", date: "2026-03-17" },
+      { id: 2, title: "LyondellBasell reports fire at Bayport Choate site in Texas - US News", url: "https://www.usnews.com/news/us/articles/2026-03-13/lyondellbasell-reports-fire-at-bayport-choate-site-in-texas", date: "2026-03-13" }
+    ]
+  },
+  {
+    id: "fm-039",
+    company: "Sasol (Middle East / ORYX GTL)",
+    country: "South Africa / Qatar",
+    flag: "\u{1F1FF}\u{1F1E6}",
+    date: "2026-03-03",
+    status: "active",
+    statusLabel: "Active",
+    isNew: false,
+    summary: "FM on petroleum and GTL products. ORYX GTL in Qatar (34,000 bpd, JV with QatarEnergy) shut due to gas supply loss. Natref refinery in South Africa pivoting crude sourcing. Sasol supplies ~30% of South Africa's domestic fuel.",
+    details: {
+      volumeAffected: "ORYX GTL 34,000 bpd shut; Natref refinery (~108,000 bpd) under supply stress",
+      commodity: "GTL Products, Petroleum Products, Chemicals",
+      duration: "Since 3 Mar 2026, indefinite — linked to Qatar gas supply restoration",
+      reason: "Gulf/Hormuz crisis. ORYX GTL in Qatar shut from gas supply loss; Natref pivoting to non-ME crude.",
+      financialImpact: "South Africa bracing for major fuel price hikes (~R7/liter increase in April); 1,000+ fuel stations running dry."
+    },
+    sources: [
+      { id: 1, title: "Update on Middle East Developments and Business Impacts - Sasol", url: "https://www.sasol.com/media-centre/media-releases/update-middle-east-developments-and-business-impacts", date: "2026-03-03" },
+      { id: 2, title: "Sasol declares force majeure on petroleum product - African News Agency", url: "https://africannewsagency.com/sasol-declares-force-majeure-on-petroleum-product-as-natref-is-forcefully-shutdown-db52e53d-2bf4-598f-ae89-cc98d148fa8d/", date: "2026-03-03" }
+    ]
+  },
+  {
+    id: "fm-038",
+    company: "Methanex (Egypt Plant)",
+    country: "Egypt",
+    flag: "\u{1F1EA}\u{1F1EC}",
+    date: "2026-03-26",
+    status: "active",
+    statusLabel: "Active",
+    isNew: false,
+    summary: "FM / temporary shutdown of 1.3 Mtpa methanol plant in Damietta, Egypt. Lost feedstock natural gas supply from Israel after Leviathan field shutdown.",
+    details: {
+      volumeAffected: "1.3 million mt/year methanol plant",
+      commodity: "Methanol",
+      duration: "Since ~26 Mar 2026, ongoing — linked to Israeli gas pipeline restoration",
+      reason: "Loss of feedstock natural gas supply from Israel (Leviathan field FM from Feb 28). Egyptian gas pipeline flows halted.",
+      financialImpact: "Global methanol market tightened; Egypt losing industrial feedstock and export revenue."
+    },
+    sources: [
+      { id: 1, title: "Methanex Announces Temporary Interruption of Its Egypt Operations - Methanex", url: "https://www.methanex.com/news/update/methanex-announces-temporary-interruption-of-its-egypt-operations/", date: "2026-03-26" },
+      { id: 2, title: "Methanex temporarily shuts down Egypt plant - Nasdaq", url: "https://www.nasdaq.com/articles/methanex-temporarily-shuts-down-egypt-plant", date: "2026-03-26" }
+    ]
+  },
+  {
+    id: "fm-037",
+    company: "CPDC (China Petrochemical Development)",
+    country: "Taiwan",
+    flag: "\u{1F1F9}\u{1F1FC}",
+    date: "2026-03-24",
+    status: "active",
+    statusLabel: "Active",
+    isNew: false,
+    summary: "FM on caprolactam, nylon 6, and acrylonitrile after upstream feedstock suppliers declared FM, causing complete cessation of raw material deliveries to Toufen and Kaohsiung plants.",
+    details: {
+      volumeAffected: "300,000 mt/yr caprolactam, 36,000 mt/yr nylon 6, acrylonitrile",
+      commodity: "Caprolactam, Nylon 6, Acrylonitrile",
+      duration: "Since 24 Mar 2026, ongoing — cascading from upstream supplier FMs",
+      reason: "Primary feedstock suppliers declared FM, resulting in complete cessation of essential raw material deliveries. Cascading from FPCC naphtha disruptions.",
+      financialImpact: "Taiwan downstream chemical production curtailed; nylon and caprolactam markets tightened across Asia."
+    },
+    sources: [
+      { id: 1, title: "CPDC declares force majeure on caprolactam and nylon supplies - Chemical Week", url: "https://chemweek.mydigitalpublication.com/publication/?i=863204&article_id=5137221&view=articleBrowser", date: "2026-03-24" }
+    ]
+  },
+  {
+    id: "fm-036",
+    company: "GAIL (India) Limited",
+    country: "India",
+    flag: "\u{1F1EE}\u{1F1F3}",
+    date: "2026-03-06",
+    status: "active",
+    statusLabel: "Active",
+    isNew: false,
+    summary: "Cascading FM to downstream industrial customers (incl. GNFC, 60% DCQ cut) after Petronet LNG invoked FM. LNG allocation reduced to zero from Petronet. India's largest gas utility.",
+    details: {
+      volumeAffected: "LNG allocation reduced to zero from Petronet; GNFC cut to 60% of DCQ",
+      commodity: "RLNG (Re-gasified LNG), Natural Gas",
+      duration: "Since 6 Mar 2026, ongoing — cascading from Petronet LNG FM",
+      reason: "Petronet LNG invoked FM due to Strait of Hormuz disruption and Ras Laffan halt; GAIL passed FM to downstream customers.",
+      financialImpact: "Indian industrial gas consumers facing severe supply cuts; fertilizer production disrupted."
+    },
+    sources: [
+      { id: 1, title: "GAIL says LNG supply cut to zero after Petronet invokes force majeure - Business Today", url: "https://www.businesstoday.in/latest/corporate/story/west-asia-tensions-gail-says-lng-supply-cut-to-zero-after-petronet-invokes-force-majeure-519203-2026-03-05", date: "2026-03-05" },
+      { id: 2, title: "GAIL declares force majeure on contractual supplies to GNFC - Indian Chemical News", url: "https://www.indianchemicalnews.com/gas/gail-declares-force-majeure-on-contractual-supplies-to-gnfc-29615", date: "2026-03-06" }
+    ]
+  },
+  {
+    id: "fm-035",
+    company: "Hanwha Solutions",
+    country: "South Korea",
+    flag: "\u{1F1F0}\u{1F1F7}",
+    date: "2026-03-12",
+    status: "active",
+    statusLabel: "Active",
+    isNew: false,
+    summary: "FM on ethylene dichloride (EDC) supply from Yeosu unit. YNCC (50% owned by Hanwha) already under FM. Warned of broader polyolefin supply disruptions.",
+    details: {
+      volumeAffected: "EDC (ethylene dichloride) supply from Yeosu complex",
+      commodity: "Ethylene Dichloride (EDC), with warning on polyolefins",
+      duration: "Since ~12 Mar 2026, ongoing — linked to naphtha supply recovery",
+      reason: "Naphtha feedstock disruption from Strait of Hormuz blockade; YNCC (50% owned) already in FM.",
+      financialImpact: "South Korean EDC and PVC supply chains disrupted; downstream construction and packaging affected."
+    },
+    sources: [
+      { id: 1, title: "Hanwha Solutions declares FM on supplies of EDC from Yeosu unit - PolymerUpdate", url: "https://www.polymerupdate.com/News/Details/1447130", date: "2026-03-12" },
+      { id: 2, title: "Fears of force majeure spread across industries - Korea Times", url: "https://www.koreatimes.co.kr/business/companies/20260313/fears-of-force-majeure-spread-across-industries-as-iran-war-continues", date: "2026-03-13" }
+    ]
+  },
+  {
+    id: "fm-034",
+    company: "IRPC (PTT Group)",
+    country: "Thailand",
+    flag: "\u{1F1F9}\u{1F1ED}",
+    date: "2026-03-06",
+    status: "active",
+    statusLabel: "Active",
+    isNew: false,
+    summary: "FM on petroleum products and petrochemicals. Crude vessels avoiding Hormuz transit; suspended product supply during conflict. IRPC operates 215,000 bpd refinery + petrochemical complex in Rayong.",
+    details: {
+      volumeAffected: "~215,000 bpd refinery + petrochemical complex",
+      commodity: "Petroleum Products, Petrochemicals",
+      duration: "Since 6 Mar 2026, ongoing",
+      reason: "Crude vessels avoiding Strait of Hormuz transit. Thailand imported ~70% of crude from ME pre-crisis.",
+      financialImpact: "Thai petrochemical supply curtailed; domestic fuel prices rising."
+    },
+    sources: [
+      { id: 1, title: "Strait of Hormuz closure hits Asia's chemical industry - C&EN", url: "https://cen.acs.org/business/petrochemicals/Strait-Hormuz-closure-hits-Asias/104/web/2026/03", date: "2026-03-06" },
+      { id: 2, title: "Hormuz Disruption Forces Thai Petrochemical Giants - DPRJ Universal", url: "https://dprjuniversal.com/news/strait-of-hormuz-disruption-forces-thai-petrochemical-giants-to-cut-production-and-raise-prices", date: "2026-03-06" }
+    ]
+  },
+  {
+    id: "fm-033",
+    company: "SCG Chemicals / Rayong Olefins (ROC)",
+    country: "Thailand",
+    flag: "\u{1F1F9}\u{1F1ED}",
+    date: "2026-03-10",
+    status: "active",
+    statusLabel: "Active",
+    isNew: false,
+    summary: "FM on olefins (ethylene, propylene) due to Hormuz feedstock disruption. 50-60% of naphtha/propane supply affected. Temporary suspension costing ~150M baht/month in fixed costs.",
+    details: {
+      volumeAffected: "800,000 t/yr ethylene + 400,000 t/yr propylene capacity",
+      commodity: "Olefins (Ethylene, Propylene)",
+      duration: "Partial suspension from 6 Mar, formal FM letter 10 Mar 2026, ongoing",
+      reason: "Strait of Hormuz closure disrupting naphtha and propane feedstock procurement. 50-60% of feedstock supply affected.",
+      financialImpact: "~150 million baht/month in fixed costs during suspension. Thailand's olefins supply curtailed."
+    },
+    sources: [
+      { id: 1, title: "SCG issues force majeure at Thai Rayong petchem complex - Argus Media", url: "https://www.argusmedia.com/en/news-and-insights/latest-market-news/2797451-scg-issues-force-majeure-at-thai-rayong-petchem-complex", date: "2026-03-10" },
+      { id: 2, title: "Rayong Olefins Temporarily Suspends Operations - SCG News Channel", url: "https://www.scgnewschannel.com/en/scg-news/rayong-olefins-temporarily-suspends-operations-due-to-middle-east-situation/", date: "2026-03-10" }
+    ]
+  },
+  {
+    id: "fm-032",
+    company: "Dow (Jubail Ethanolamines)",
+    country: "Saudi Arabia / Europe",
+    flag: "\u{1F1F8}\u{1F1E6}",
+    date: "2026-03-10",
+    status: "active",
+    statusLabel: "Active",
+    isNew: false,
+    summary: "FM on Jubail-sourced ethanolamines to European markets due to inability to safely transit vessels through Strait of Hormuz.",
+    details: {
+      volumeAffected: "Jubail-sourced ethanolamines to European customers",
+      commodity: "Ethanolamines",
+      duration: "Since 10 Mar 2026, ongoing",
+      reason: "Ongoing regional instability and security constraints; inability to safely transit Strait of Hormuz.",
+      financialImpact: "European ethanolamine supply disrupted; downstream detergent and personal care sectors affected."
+    },
+    sources: [
+      { id: 1, title: "Dow Declared Force Majeure on Ethanolamines - PU Daily", url: "https://www.pudaily.com/Home/NewsDetails/57093", date: "2026-03-10" }
+    ]
+  },
+  {
+    id: "fm-031",
+    company: "Sadara Chemical (Aramco-Dow JV)",
+    country: "Saudi Arabia",
+    flag: "\u{1F1F8}\u{1F1E6}",
+    date: "2026-03-31",
+    status: "active",
+    statusLabel: "Active",
+    isNew: false,
+    summary: "Full complex shutdown and FM. World's largest integrated chemicals complex (26 units) at Jubail. 1.5M mt/yr ethylene + 400k mt/yr propylene + 24 downstream units offline.",
+    details: {
+      volumeAffected: "3+ million mt/yr total petrochemical capacity (1.5M ethylene, 400k propylene, 24 other units)",
+      commodity: "Petrochemicals (Ethylene, Propylene, Polyethylene, MDI, TDI, Amines, Glycols)",
+      duration: "Full shutdown from 31 Mar 2026, ongoing",
+      reason: "Supply chain disruption from Hormuz closure + March 19 strikes on Jubail petrochemical plants. Unable to export product or receive feedstock.",
+      financialImpact: "3+ million mt/yr removed from global petrochemical markets. Major impact on ME chemical exports."
+    },
+    sources: [
+      { id: 1, title: "Aramco-Dow joint venture Sadara Chemical halts production - Arab News", url: "https://www.arabnews.com/node/2638284/business-economy", date: "2026-03-31" },
+      { id: 2, title: "Saudi chemical plant shuts down as war disrupts supply chains - Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-03-31/saudi-chemical-plant-shuts-down-as-war-disrupts-supply-chains", date: "2026-03-31" }
+    ]
+  },
+  {
+    id: "fm-030",
+    company: "SABIC",
+    country: "Saudi Arabia",
+    flag: "\u{1F1F8}\u{1F1E6}",
+    date: "2026-03-27",
+    status: "active",
+    statusLabel: "Active",
+    isNew: false,
+    summary: "FM on multiple petrochemical products from Jubail complex including MMA, MEG, DEG, styrene, methanol, and urea. Hormuz blockade + strikes on Jubail area. World's 4th largest chemical company.",
+    details: {
+      volumeAffected: "Multiple product lines at Jubail complex (MMA, MEG, DEG, styrene, methanol, urea)",
+      commodity: "Petrochemicals (MMA, MEG, DEG, Styrene, Methanol, Urea)",
+      duration: "Since 27 Mar 2026, ongoing — includes SABIC Agri-Nutrients urea FM from 6 Mar",
+      reason: "Strait of Hormuz blockade preventing exports + Iranian strikes on Jubail area infrastructure.",
+      financialImpact: "Global chemicals shortage aggravated. SABIC is world's 4th largest chemical company."
+    },
+    sources: [
+      { id: 1, title: "Saudi SABIC force majeure aggravates global chemicals shortage - ICIS", url: "https://www.icis.com/explore/resources/news/2026/03/30/11193220/insight-saudi-sabic-force-majeure-aggravates-global-chemicals-shortage", date: "2026-03-30" },
+      { id: 2, title: "Iran's Hormuz blockade leaves fertilizer stranded - Food Ingredients First", url: "https://www.foodingredientsfirst.com/news/hormuz-fertilizer-crisis-food-ingredient-costs.html", date: "2026-03-06" }
+    ]
+  },
+  {
     id: "fm-029",
     company: "Aster Chemicals & Energy",
     country: "Singapore",
@@ -1432,9 +1735,9 @@ const FM_DECLARATIONS_DATA = [
     date: "2026-03-04",
     status: "active",
     statusLabel: "Active",
-    summary: "FM on all LNG exports globally. Extended Mar 24 to Italy, Belgium, South Korea, China. Mar 27: Edison notified of 10-cargo FM through mid-June. All downstream halted. ~20% of global LNG supply removed. Restart impossible until conflict ends.",
+    summary: "FM on all LNG exports globally. Extended Mar 24 to Italy, Belgium, South Korea, China. Mar 25: Orlen (Poland) notified of FM on 2 LNG cargoes. Mar 27: Edison notified of 10-cargo FM through mid-June. All downstream halted. ~20% of global LNG supply removed. Restart impossible until conflict ends.",
     details: {
-      volumeAffected: "~7 million tonnes/month (~20% global LNG supply); all downstream halted. Mar 24: FM extended to Italy, Belgium, South Korea, China. Mar 27: Edison notified of FM on 10 LNG cargoes Apr-mid Jun 2026.",
+      volumeAffected: "~7 million tonnes/month (~20% global LNG supply); all downstream halted. Mar 24: FM extended to Italy, Belgium, South Korea, China. Mar 25: Orlen (Poland, 2 cargoes). Mar 27: Edison notified of FM on 10 LNG cargoes Apr-mid Jun 2026.",
       commodity: "LNG, Polymers, Methanol, Urea, Aluminium",
       duration: "Indefinite - all production halted since 2 Mar. Mar 18 missile strikes knocked out 12.8 Mtpa (17%) for 3-5 years. CEO: no restart until conflict ends + 2 weeks minimum. Final March cargo expected by 30 Mar.",
       reason: "Iranian drone strikes on Ras Laffan and Mesaieed facilities; Strait of Hormuz blocked. Mar 18 follow-up missile attack destroyed 2 LNG trains and Pearl GTL Train 2.",
@@ -1914,6 +2217,266 @@ const FM_DECLARATIONS_DATA = [
 
 // ---------- TABLE 3: Shutdowns Without FM ----------
 const SHUTDOWNS_NO_FM_DATA = [
+  {
+    id: "sd-050",
+    company: "Reliance Industries (Jamnagar)",
+    country: "India",
+    flag: "\u{1F1EE}\u{1F1F3}",
+    date: "2026-03-10",
+    status: "ongoing",
+    statusLabel: "Feedstock Diverted",
+    isNew: false,
+    summary: "Government emergency order forced Reliance to divert propane/butane from petrochemical use to LPG household production. ~4 cargo/month alkylate exports curtailed. World's largest refining complex.",
+    details: {
+      volumeAffected: "Propane/butane diverted from petrochemical use; ~4 cargo/month alkylate exports curtailed",
+      commodity: "Alkylates, Petrochemical Propane/Butane",
+      duration: "Since ~10 Mar 2026, ongoing — government emergency order",
+      reason: "Indian government barred refiners from using propane/butane for petrochemicals, mandating diversion to LPG for household use amid Gulf supply crisis.",
+      financialImpact: "Jamnagar petrochemical output reduced; Indian petrochemical producers face raw material shortages."
+    },
+    sources: [
+      { id: 1, title: "Indian petrochemical producers face raw material shortages amid LPG mandate - S&P Global", url: "https://www.spglobal.com/energy/en/news-research/latest-news/chemicals/031026-indian-petrochemical-producers-face-raw-material-shortages-amid-lpg-mandate", date: "2026-03-10" }
+    ]
+  },
+  {
+    id: "sd-049",
+    company: "Orlen (Plock Petrochemical Complex)",
+    country: "Poland",
+    flag: "\u{1F1F5}\u{1F1F1}",
+    date: "2026-03-10",
+    status: "ongoing",
+    statusLabel: "Curtailed",
+    isNew: false,
+    summary: "Cracker production curtailed at Plock due to naphtha feedstock cost surge making operations uneconomical. 700,000 t/yr ethylene + 385,000 t/yr propylene capacity affected.",
+    details: {
+      volumeAffected: "700,000 t/yr ethylene + 385,000 t/yr propylene capacity",
+      commodity: "Ethylene, Propylene",
+      duration: "Since ~10 Mar 2026, ongoing",
+      reason: "Naphtha feedstock cost surge past $1,000/mt from Hormuz blockade making European cracker operations uneconomical.",
+      financialImpact: "Polish petrochemical output curtailed; Central European polymer supply tightened."
+    },
+    sources: [
+      { id: 1, title: "Hormuz Crisis Week 3: 50% of Global PE Supply Disrupted - Syntex America", url: "https://syntexamerica.com/blog/hormuz-crisis-week-3-pe-shortage-price-spiral-2026", date: "2026-03-10" }
+    ]
+  },
+  {
+    id: "sd-048",
+    company: "OMV (Burghausen Cracker)",
+    country: "Germany",
+    flag: "\u{1F1E9}\u{1F1EA}",
+    date: "2026-03-10",
+    status: "ongoing",
+    statusLabel: "Curtailed",
+    isNew: false,
+    summary: "Cracker production curtailed at Burghausen due to naphtha feedstock cost surge. 485,000 t/yr ethylene + 225,000 t/yr propylene capacity affected.",
+    details: {
+      volumeAffected: "485,000 t/yr ethylene + 225,000 t/yr propylene capacity",
+      commodity: "Ethylene, Propylene",
+      duration: "Since ~10 Mar 2026, ongoing",
+      reason: "Naphtha feedstock cost surge past $1,000/mt from Hormuz blockade making operations uneconomical.",
+      financialImpact: "German petrochemical output reduced; downstream polymer supply tightened."
+    },
+    sources: [
+      { id: 1, title: "Hormuz Crisis Week 3: 50% of Global PE Supply Disrupted - Syntex America", url: "https://syntexamerica.com/blog/hormuz-crisis-week-3-pe-shortage-price-spiral-2026", date: "2026-03-10" }
+    ]
+  },
+  {
+    id: "sd-047",
+    company: "Chevron (Wheatstone LNG)",
+    country: "Australia",
+    flag: "\u{1F1E6}\u{1F1FA}",
+    date: "2026-03-26",
+    status: "shutdown",
+    statusLabel: "Shutdown",
+    isNew: false,
+    summary: "Both Wheatstone LNG trains (8.9 Mtpa) remain offline after extensive cyclone damage to air-cooled heat exchangers. Repairs taking 'weeks, not days'. Chevron stock fell 6% (~$25B). Worst Australian LNG disruption from Cyclone Narelle.",
+    details: {
+      volumeAffected: "8.9 Mtpa LNG capacity — both production trains offline",
+      commodity: "LNG",
+      duration: "Since 26 Mar 2026, ongoing — extensive cyclone damage, repairs weeks-long",
+      reason: "Severe Tropical Cyclone Narelle caused extensive damage to air-cooled heat exchangers (fin fans). Damage worse than previous cyclones.",
+      financialImpact: "Chevron stock fell 6% (~$25B market cap). Australian LNG supply reduced during global LNG crisis."
+    },
+    sources: [
+      { id: 1, title: "Chevron says extensive cyclone damage keeps Wheatstone LNG offline - Mining Weekly", url: "https://www.miningweekly.com/article/chevron-says-extensive-cyclone-damage-keeps-wheatstone-lng-offline-2026-03-31", date: "2026-03-31" },
+      { id: 2, title: "Chevron's Wheatstone LNG Plant Remains Offline - MarineLink", url: "https://www.marinelink.com/news/chevrons-wheatstone-lng-plant-remains-537516", date: "2026-03-31" }
+    ]
+  },
+  {
+    id: "sd-046",
+    company: "Valero Energy (Port Arthur Refinery)",
+    country: "United States",
+    flag: "\u{1F1FA}\u{1F1F8}",
+    date: "2026-03-23",
+    status: "partially_resumed",
+    statusLabel: "Partially Resumed",
+    isNew: false,
+    summary: "380,000 bpd refinery fully shut after explosion at 47,000 bpd diesel hydrotreater unit. Blast heard 11 miles away. No injuries. Most units restarted ~Mar 26 but hydrotreater remains offline.",
+    details: {
+      volumeAffected: "380,000 bpd refinery (full shutdown); 47,000 bpd diesel hydrotreater remains offline",
+      commodity: "Gasoline, Diesel, Jet Fuel",
+      duration: "Full shutdown 23-26 Mar 2026; partial restart ~26 Mar; hydrotreater still offline",
+      reason: "Explosion and fire at 47,000 bpd diesel hydrotreater unit — unforeseeable release of process fluid ignited. Industrial incident, not Gulf-related.",
+      financialImpact: "Removed 415,000 bpd from market during tight supply period. Diesel supply further strained."
+    },
+    sources: [
+      { id: 1, title: "Valero Shuts Major Refinery After Explosion as Fuel Markets Tighten - OilPrice", url: "https://oilprice.com/Latest-Energy-News/World-News/Valero-Shuts-Major-Refinery-After-Explosion-as-Fuel-Markets-Tighten.html", date: "2026-03-23" },
+      { id: 2, title: "Port Arthur refinery explosion removes 415k bpd from market - Wood Mackenzie", url: "https://www.woodmac.com/news/opinion/port-arthur-refinery-explosion-removes-415k-bpd-from-market/", date: "2026-03-24" }
+    ]
+  },
+  {
+    id: "sd-045",
+    company: "GS Caltex (Yeosu Refinery)",
+    country: "South Korea",
+    flag: "\u{1F1F0}\u{1F1F7}",
+    date: "2026-03-25",
+    status: "ongoing",
+    statusLabel: "Run Cuts",
+    isNew: false,
+    summary: "Cut daily crude refining from 800,000 bpd to 675,000 bpd (125,000 bpd reduction) due to crude supply crunch. Issued supply availability notice (explicitly 'not FM' but warned of polyolefin/aromatics disruptions).",
+    details: {
+      volumeAffected: "125,000 bpd reduction (800k to 675k bpd); polyolefin and aromatics supply at risk",
+      commodity: "Crude Refining, Polyolefins, Aromatics",
+      duration: "Since 25 Mar 2026, ongoing",
+      reason: "Crude supply crunch from Middle East conflict. Issued supply notice to customers (explicitly not FM).",
+      financialImpact: "South Korea's 2nd largest refiner reducing throughput; domestic fuel and polymer supply at risk."
+    },
+    sources: [
+      { id: 1, title: "GS Caltex Cuts Refining Volume Amid Crude Supply Crunch - Seoul Economic Daily", url: "https://en.sedaily.com/finance/2026/03/25/gs-caltex-cuts-refining-volume-amid-crude-supply-crunch", date: "2026-03-25" },
+      { id: 2, title: "Force Majeure Crises Spread: Refiners Cut Output - Seoul Economic Daily", url: "https://en.sedaily.com/finance/2026/03/25/force-majeure-crises-spread-refiners-cut-output-automakers", date: "2026-03-25" }
+    ]
+  },
+  {
+    id: "sd-044",
+    company: "Idemitsu Kosan (Ichihara + Shunan Crackers)",
+    country: "Japan",
+    flag: "\u{1F1EF}\u{1F1F5}",
+    date: "2026-03-16",
+    status: "ongoing",
+    statusLabel: "Curtailed",
+    isNew: false,
+    summary: "Two ethylene plants at reduced rates; warned of full production stop if Hormuz blockade continues. Japan imports >60% of naphtha from ME.",
+    details: {
+      volumeAffected: "Two ethylene plants (Ichihara, Chiba + Shunan, Yamaguchi) at reduced rates",
+      commodity: "Ethylene",
+      duration: "Since ~16 Mar 2026, ongoing — warned of full halt if blockade persists",
+      reason: "Naphtha procurement difficulties from Hormuz blockade. Japan imports >60% of naphtha, ~70% from Middle East.",
+      financialImpact: "Japanese ethylene production curtailed; downstream polymer supply at risk."
+    },
+    sources: [
+      { id: 1, title: "Idemitsu Kosan Cuts Ethylene Production - Nippon.com", url: "https://www.nippon.com/en/news/yjj2026031600897/", date: "2026-03-16" },
+      { id: 2, title: "Hormuz closure risks halt in Idemitsu's Japan ethylene production - Nikkei Asia", url: "https://asia.nikkei.com/spotlight/iran-tensions/hormuz-closure-risks-halt-in-idemitsu-s-japan-ethylene-production", date: "2026-03-16" }
+    ]
+  },
+  {
+    id: "sd-043",
+    company: "Mitsubishi Chemical (Kamisu + Kurashiki Crackers)",
+    country: "Japan",
+    flag: "\u{1F1EF}\u{1F1F5}",
+    date: "2026-03-07",
+    status: "ongoing",
+    statusLabel: "Curtailed",
+    isNew: false,
+    summary: "Cut ethylene output at Kamisu (Ibaraki) facility (~8% of Japan's total ethylene capacity) and Kurashiki (Okayama) JV cracker with Asahi Kasei. Preemptive naphtha supply measures.",
+    details: {
+      volumeAffected: "Kamisu facility (~8% of Japan's ethylene) + Kurashiki JV cracker at reduced rates",
+      commodity: "Ethylene",
+      duration: "Since 7 Mar 2026, ongoing",
+      reason: "Naphtha supply concerns from Strait of Hormuz closure; preemptive cuts to avoid full halt.",
+      financialImpact: "Japan's 2nd largest chemical company reducing output; cascading effects on domestic polymer supply."
+    },
+    sources: [
+      { id: 1, title: "Mitsubishi Chemical cuts ethylene output - Japan Times", url: "https://www.japantimes.co.jp/business/2026/03/10/companies/mitsubishi-chemical-cut-ethylene-production/", date: "2026-03-10" },
+      { id: 2, title: "Mitsubishi Chemical Cuts Ethylene Production - Nippon.com", url: "https://www.nippon.com/en/news/yjj2026030900560/", date: "2026-03-09" }
+    ]
+  },
+  {
+    id: "sd-042",
+    company: "Mitsui Chemicals (Ichihara + Takaishi Crackers)",
+    country: "Japan",
+    flag: "\u{1F1EF}\u{1F1F5}",
+    date: "2026-03-10",
+    status: "ongoing",
+    statusLabel: "Curtailed",
+    isNew: false,
+    summary: "Began ethylene production cuts at Ichihara (Chiba) and Takaishi (Osaka) plants. Seeking non-ME naphtha sources to maintain operations.",
+    details: {
+      volumeAffected: "Two ethylene plants operating at reduced rates",
+      commodity: "Ethylene",
+      duration: "Since ~10 Mar 2026, ongoing",
+      reason: "Anticipated naphtha supply shortages from Middle East; seeking non-ME naphtha sources.",
+      financialImpact: "Japanese chemical supply chain tightened; downstream polymer production affected."
+    },
+    sources: [
+      { id: 1, title: "Mitsui Chemicals Begins Ethylene Production Cuts - Nippon.com", url: "https://www.nippon.com/en/news/yjj2026031000788/", date: "2026-03-10" },
+      { id: 2, title: "Mitsui Chemicals cuts output amid Iran crisis - Hydrocarbon Processing", url: "https://www.hydrocarbonprocessing.com/news/2026/03/mitsui-chemicals-cuts-output-with-other-japanese-companies-amid-iran-crisis/", date: "2026-03-10" }
+    ]
+  },
+  {
+    id: "sd-041",
+    company: "PRefChem (Petronas-Aramco JV)",
+    country: "Malaysia",
+    flag: "\u{1F1F2}\u{1F1FE}",
+    date: "2026-03-15",
+    status: "shutdown",
+    statusLabel: "Shutdown",
+    isNew: false,
+    summary: "300,000 bpd crude unit shut at Pengerang (Johor) due to lack of crude feedstock. 70%+ of seaborne crude imports came via Strait of Hormuz. Steam cracker and RFCC also shut.",
+    details: {
+      volumeAffected: "300,000 bpd crude unit + 1.2M mt/yr steam cracker + 70k bpd RFCC gasoline unit",
+      commodity: "Crude Refining, Petrochemicals",
+      duration: "Since mid-Mar 2026, ongoing",
+      reason: "Lack of crude feedstock; >70% of seaborne crude imports came via Strait of Hormuz. Saudi Aramco deliveries disrupted.",
+      financialImpact: "Malaysia's largest refinery offline; SE Asian fuel and petrochemical supply tightened."
+    },
+    sources: [
+      { id: 1, title: "Refineries in Malaysia, Singapore cut output - Media Selangor", url: "https://mediaselangor.com/en/2026/03/347271", date: "2026-03-15" },
+      { id: 2, title: "Asian refineries cut runs as Iran war disrupts supplies - The Edge Malaysia", url: "https://theedgemalaysia.com/node/796685", date: "2026-03-15" }
+    ]
+  },
+  {
+    id: "sd-040",
+    company: "ExxonMobil (Singapore Refinery)",
+    country: "Singapore",
+    flag: "\u{1F1F8}\u{1F1EC}",
+    date: "2026-03-10",
+    status: "ongoing",
+    statusLabel: "Run Cuts",
+    isNew: false,
+    summary: "592,000 bpd Singapore refinery cut to ~50% utilisation (from ~80%). ~65% of crude sourced via Hormuz. World's second largest single-site refinery.",
+    details: {
+      volumeAffected: "592,000 bpd site cut to ~50% utilisation (~296,000 bpd effective throughput)",
+      commodity: "Crude Refining, Refined Products",
+      duration: "Since ~10 Mar 2026, ongoing",
+      reason: "Crude delivery delays from Middle East; ~65% of crude sourced via Strait of Hormuz.",
+      financialImpact: "Singapore's largest refinery at half capacity; regional fuel supply tightened."
+    },
+    sources: [
+      { id: 1, title: "Refineries cut runs as war on Iran disrupts exports - Baird Maritime", url: "https://www.bairdmaritime.com/offshore/refining-processing/factbox-refineries-cut-runs-as-war-on-iran-disrupts-exports", date: "2026-03-10" }
+    ]
+  },
+  {
+    id: "sd-039",
+    company: "Sinopec (China-wide Crude Run Cuts)",
+    country: "China",
+    flag: "\u{1F1E8}\u{1F1F3}",
+    date: "2026-03-16",
+    status: "ongoing",
+    statusLabel: "Run Cuts",
+    isNew: false,
+    summary: "World's largest refiner cut crude runs by 600,000-700,000 bpd (~10% of 5.2M bpd throughput). Beijing-directed measures to manage Middle East crude supply gap. China imports ~50% of crude from ME.",
+    details: {
+      volumeAffected: "600,000-700,000 bpd crude run reduction (~10% of Sinopec's 5.2M bpd total throughput)",
+      commodity: "Crude Refining",
+      duration: "Since mid-Mar 2026, ongoing — Beijing-directed",
+      reason: "Middle East crude supply squeeze from Hormuz closure. China imports ~50% of crude from Middle East. Government-directed measures to preserve domestic fuel supply.",
+      financialImpact: "World's largest refiner curtailing operations; Chinese refined product output reduced; domestic fuel supply prioritized over exports."
+    },
+    sources: [
+      { id: 1, title: "China's Top Oil Refiner Cuts Activity by 10% - Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-03-16/china-s-top-refiner-to-cut-activity-by-10-as-war-hits-supply", date: "2026-03-16" },
+      { id: 2, title: "Sinopec Slashes Refining Runs as Hormuz Disruption Squeezes Crude Supply - OilPrice", url: "https://oilprice.com/Latest-Energy-News/World-News/Sinopec-Slashes-Refining-Runs-as-Hormuz-Disruption-Squeezes-Crude-Supply.html", date: "2026-03-16" }
+    ]
+  },
   {
     id: "sd-038",
     company: "Borouge (Ruwais Petrochemical Plant)",
