@@ -3281,7 +3281,7 @@ const SHUTDOWNS_NO_FM_DATA = [
 
 const SPR_RELEASE_DATA = {
   announced: "2026-03-11",
-  asOf: "2026-04-03T17:30:00Z",
+  asOf: "2026-04-05",
   trigger: "Strait of Hormuz disruption / Iran conflict — ~20% of global oil supply at risk",
   totalCommitted: 426.0,
   totalCrude: 301,
@@ -3289,13 +3289,14 @@ const SPR_RELEASE_DATA = {
   totalReleased: 67.7,
   releasePeriodDays: 120,
   keyInsights: [
-    "DOE Bryan Mound 10 mb exchange RFP open with bids due Apr 6; if awarded, total US exchange contracts reach 55.2 mb (32% of 172.2 mb)",
-    "US physical SPR at 415.1 mb (week ending Mar 27) with only 0.3 mb drawdown; next EIA weekly report due Apr 8",
-    "IEA Director Birol warned April supply losses will be 'twice March' and agency is assessing need for second coordinated release",
-    "Australia passed new fuel security law (Apr 1); South Korea swap program active with 20+ mb in refiner demand queued for April-May",
-    "Global release at 67.7 of 426.0 mb (15.9%) on Day 23 of 120; no new per-country barrel figures published since Apr 1"
+    "DOE Bryan Mound 10 mb exchange RFP bids due tomorrow Apr 6; if awarded, total US contracts reach 55.2 mb (32% of 172.2 mb commitment)",
+    "US SPR at 415.1 mb (week ending Mar 27); 45.2 mb contracted deliveries began Apr 1 through May 31; next EIA weekly report Apr 8",
+    "IEA weighing second coordinated release as Birol warns April supply losses will be 'twice March'; EU 'will not rule out' additional action",
+    "South Korea swap program active with 20+ mb refiner demand queued for Apr-May; Canada ramping 140K bpd additional production since Apr 1",
+    "Global release at 67.7 of 426.0 mb (15.9%) on Day 25 of 120; no new per-country barrel figures published since Apr 1"
   ],
   sources: [
+    { title: "How long can the EU's oil reserves last? — 20 EU states contributing 91.7 mb at ~2.5 mb/day pace", url: "https://www.euronews.com/my-europe/2026/04/03/how-long-can-the-eus-oil-reserves-last", date: "2026-04-03" },
     { title: "Australia passes law to trade and stock fuel alongside rare earths amid energy crisis", url: "https://www.bloomberg.com/news/articles/2026-04-01/australia-passes-law-to-trade-stock-fuel-alongside-rare-earths", date: "2026-04-01" },
     { title: "DOE initiates additional 10 mb SPR emergency exchange from Bryan Mound", url: "https://www.energy.gov/hgeo/articles/energy-department-initiates-additional-strategic-petroleum-reserve-emergency-exchange", date: "2026-04-01" },
     { title: "Oil supply crunch will worsen in April, IEA warns as it weighs further stock releases", url: "https://www.cnbc.com/2026/04/01/oil-price-iea-fatih-birol-brent-iran-strait-hormuz.html", date: "2026-04-01" },
