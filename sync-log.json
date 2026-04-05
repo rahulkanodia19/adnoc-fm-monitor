@@ -1,40 +1,28 @@
 {
-  "timestamp": "2026-04-05T07:35:00.000Z",
+  "timestamp": "2026-04-05T18:30:00.000Z",
   "success": true,
-  "changes": "Day 39 updates: (1) Kuwait: KPC Shuwaikh HQ set ablaze by drones Apr 5 + 2 power/desal plants struck — 9+ total attacks (Bloomberg, The National, Times Kuwait); (2) Bahrain: Bapco fuel storage tank hit by drone Apr 5, fire extinguished — 6th attack (GDN Online, BNA); (3) Iran: F-15E WSO rescued Apr 5 by US commandos + CIA subterfuge; Trump 48-hr ultimatum — Apr 6 power plant deadline imminent; Mahshahr petchem casualties updated to 5 killed/170 injured (Anadolu); Iran rejects ultimatum; (4) OPEC+ Apr 5: confirmed 206 kb/d symbolic increase; (5) UN Hormuz vote delayed to next week — Russia/China vetoes likely; (6) All 9 countries updated with OPEC+ result, Apr 6 deadline proximity, Day 39 context; (7) Iraq: Iran declared Iraqi ships exempt from Hormuz restrictions (Fortune Apr 4); (8) S&P Platts: MOL LPG carrier Green Sanvi transited Hormuz for India (Apr 4); Sohar LNG transited Hormuz (Apr 3); Shuaiba port resumed ops; Mahshahr petchem hub hit; Bushehr 4th strike; (9) 3 new shutdown entries added (sd-033, sd-034, sd-035); (10) energy-news-data.json updated with 15 country/commodity headlines. No new FM declarations.",
+  "changes": "Day 39 evening sync: Added Borouge petrochemical plant suspension (Apr 5 — 3 fires from air defense debris, Bloomberg/Gulf News); Added GPIC petrochemical strike in Bahrain (Apr 5 — drones, 13-drone wave repelled, Gulf News/Xinhua); Added Iraq Al-Burjasiya/BP North Rumaila 2nd strike (Apr 4 — 3 workers wounded); Updated UAE intercept stats to 507 BMs + 24 CMs + 2,191 UAVs (Alma Center); Updated OPEC+ Apr 5 outcome — no new barrels, next meeting Jun 7; Updated Oman-Iran joint Hormuz management talks (deputy FM-level Apr 5); Updated Trump 'Power Plant Day' / 'Bridge Day' rhetoric; Updated F-15E WSO rescue operational details (CIA deception campaign, mountain crevice extraction); UAE petrochemicals revised to 4,500 kt/y fully offline (Borouge suspended). All 9 countries present. No FM declarations added (no new FMs found in last 48 hours). 3 new shutdown entries added (sd-036 to sd-038).",
   "countriesCount": 9,
   "fmCount": 29,
-  "shutdownsCount": 34,
-  "newEvents": {
-    "kuwait": ["KPC Shuwaikh HQ struck by drones Apr 5", "2 power/desalination plants struck Apr 5"],
-    "bahrain": ["Bapco fuel storage tank hit by drone Apr 5"],
-    "iran": ["Day 39: F-15E WSO rescued; Trump 48-hr ultimatum; Mahshahr casualties updated 5 killed/170 injured"]
-  },
-  "newShutdowns": ["sd-033 (Bahrain Bapco storage tank)", "sd-034 (Kuwait power/desal 3rd strike)", "sd-035 (KPC Shuwaikh HQ)"],
-  "newFMDeclarations": "None — no new FM declarations found in last 48 hours",
-  "dataLossCheck": "PASSED — all 9 countries: summaries equal or longer, sources equal or greater, events equal or greater. FM 29->29. Shutdowns 31->34.",
-  "premiumSources": {
-    "kpler": "accessed (SPA not extractable via CDP)",
-    "rystad": "accessed (Power BI dashboard not fully rendered)",
-    "spglobal": "accessed (general content, no conflict-specific intel)",
-    "plattsCore": "accessed — 15 articles: Mahshahr petchem hub struck (6 plants), MOL Green Sanvi LPG carrier Hormuz transit, Sohar LNG Hormuz transit, Bushehr 4th strike, Shuaiba port resumed, Japan crude tanker arrivals plummeting, Kuwait desal plant confirmed struck Apr 3, oil futures +$10/b on Trump threats"
-  },
+  "shutdownsCount": 37,
   "sourcesChecked": {
-    "tier1": ["S&P Global Platts (plattsCore - 15 articles)", "Kpler (navigation only)", "Rystad (dashboard shell)", "Bloomberg", "Reuters/CNBC", "Argus Media"],
-    "tier2": ["Al Jazeera", "The National (UAE)", "CBS News", "NBC News", "CNN", "Washington Post", "Axios", "NPR", "Fox News", "Times Kuwait", "Arab Times", "GDN Online (Bahrain)", "Anadolu Agency", "Seoul Economic Daily"],
-    "tier3": ["OilPrice.com", "Fortune", "Wikipedia (2026 Iran war)", "UANI", "Times of Israel", "Free Malaysia Today", "ANI"]
+    "tier1": ["Bloomberg", "S&P Global Platts", "Reuters", "Kpler", "Rystad Energy", "Argus Media", "ICIS"],
+    "tier2": ["Al Jazeera", "The National (UAE)", "Gulf News", "CNBC", "CBS News", "NBC News", "Washington Post", "Axios", "Middle East Eye", "Times of Israel", "Arab News"],
+    "tier3": ["OilPrice.com", "Anadolu Agency", "GDN Online", "Times Kuwait", "Voice of Emirates", "Xinhua", "Alma Center", "Euronews", "PGJ Online"]
   },
-  "infrastructureMonitoring": {
-    "newFindings": "KPC Shuwaikh HQ ablaze (Bloomberg Apr 5); 2 Kuwait power/desal plants struck (Times Kuwait Apr 5); Bahrain Bapco storage tank drone attack (GDN Apr 5); Mahshahr casualties corrected to 5 killed/170 injured (Anadolu)",
-    "queriesWithNoNewResults": "20/24",
-    "newEventsAdded": "4 (Kuwait x2, Bahrain x1, Iran Day 39 x1)"
+  "premiumSources": {
+    "kpler": "accessed — Sohar LNG transit news, Hormuz transit patterns article",
+    "rystad": "accessed — Middle East Conflict dashboard",
+    "spconnect": "accessed — S&P Global intelligence articles",
+    "plattscore": "accessed — Platts insights feed"
   },
-  "validationCheck": {
-    "passed": true,
-    "countriesPresent": 9,
-    "baselineErrors": 0,
-    "productionNotesErrors": 0,
-    "refiningMathErrors": 0,
-    "statusValueErrors": 0
-  }
+  "newEvents": [
+    "Borouge petrochemical plant at Ruwais suspended Apr 5 (Bloomberg, Gulf News)",
+    "GPIC petrochemical plant in Bahrain struck by drones Apr 5 (Gulf News, Xinhua)",
+    "Iraq Al-Burjasiya oil complex + BP North Rumaila hit Apr 4 (Voice of Emirates, The Week India)",
+    "Oman-Iran deputy FM talks on Hormuz joint management Apr 5 (Al Jazeera, Middle East Eye)",
+    "OPEC+ Apr 5 outcome: no new barrels, next meeting Jun 7 (The National, Bloomberg)",
+    "Trump 'Power Plant Day' / 'Bridge Day' rhetoric — Apr 6 deadline TOMORROW (Business Today, NBC News)",
+    "UAE cumulative intercepts: 507 BMs + 24 CMs + 2,191 UAVs (Alma Center)"
+  ]
 }
