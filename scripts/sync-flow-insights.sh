@@ -65,7 +65,7 @@ for PERIOD in $PERIODS; do
       continue
     fi
     echo "[insights]   batch $BATCH/$PERIOD: $NAME → $OUTFILE"
-    claude -p "$PROMPT
+    NODE_OPTIONS="--max-old-space-size=4096" claude -p "$PROMPT
 
 YOUR BATCH: Read \`$INFILE\` for your datasets.
 ANALYSIS WINDOW: $PERIOD (recent = last 4 weeks; quarterly = last 13 weeks; yearly = last 12 months).

@@ -46,7 +46,7 @@ if [ "$SKIP_AWRP" = "1" ]; then
 else
   echo "[sync-prices] [3/4] Updating war risk premium data..."
 
-  claude -p "$(cat "$SCRIPT_DIR/sync-prices-awrp-prompt.md")" \
+  NODE_OPTIONS="--max-old-space-size=4096" claude -p "$(cat "$SCRIPT_DIR/sync-prices-awrp-prompt.md")" \
     --allowedTools "Edit,Read,WebSearch,WebFetch,Glob,Grep" \
     --max-turns 20
 
@@ -69,7 +69,7 @@ if [ "$SKIP_INSIGHTS" = "1" ] || [ "$MASTER_SYNC" = "1" ]; then
   echo "[sync-prices] [4/4] Market insights skipped (SKIP_INSIGHTS or MASTER_SYNC set)"
 else
   echo "[sync-prices] [4/4] Generating market insights..."
-  claude -p "$(cat "$SCRIPT_DIR/sync-market-insights-prompt.md")" \
+  NODE_OPTIONS="--max-old-space-size=4096" claude -p "$(cat "$SCRIPT_DIR/sync-market-insights-prompt.md")" \
     --allowedTools "Read,Write" \
     --max-turns 12
   # Validate output parses as JSON

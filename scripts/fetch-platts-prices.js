@@ -37,7 +37,7 @@ const SEARCH_URL = 'https://api.platts.com/platts-platform/search/v2/symbol/sear
 const HISTORY_URL = 'https://api.platts.com/platts-platform/search/v2/symbol/history';
 
 const SYMBOLS = {
-  PCAAS00: { key: 'brent',       label: 'Dated Brent',                bate: 'Close' },
+  ICLL001: { key: 'brent',       label: 'ICE Brent Settlement Mo01',  bate: 'Close' },
   PCACG00: { key: 'wti',         label: 'WTI Cushing Mo01',           bate: 'Close' },
   // Murban removed — now sourced from IFAD (ICE) via scrape-murban-ice.js → murban-history.json
   AFUJB00: { key: 'gasoline',    label: 'Gasoline 95 RON Arab Gulf',  bate: 'Close' },
@@ -309,7 +309,8 @@ function updateSeed(priceItems) {
 }
 
 // ---------- History Backfill ----------
-async function backfillHistory(token, symbols) {
+async function backfillHistory(token, symbols, startDate) {
+  const start = startDate || '2023-01-01';
   const resp = await fetch(HISTORY_URL, {
     method: 'POST',
     headers: {
@@ -320,7 +321,7 @@ async function backfillHistory(token, symbols) {
     },
     body: JSON.stringify({
       Symbols: symbols,
-      startDate: '2025-01-01',
+      startDate: start,
       endDate: new Date().toISOString().substring(0, 10),
     }),
   });
@@ -344,6 +345,49 @@ async function backfillHistory(token, symbols) {
   return result;
 }
 
+// Auto-backfill any symbols with insufficient history (<260 entries)
+async function autoBackfillShort(token, seed) {
+  // Find symbols with short history
+  const keyToSym = {};
+  for (const [sym, cfg] of Object.entries(SYMBOLS)) keyToSym[cfg.key] = sym;
+
+  const needBackfill = [];
+  for (const [key, data] of Object.entries(seed.prices || {})) {
+    const hist = data.history || [];
+    const sym = keyToSym[key];
+    if (sym && hist.length < 260) {
+      needBackfill.push({ sym, key, currentLen: hist.length });
+    }
+  }
+  if (needBackfill.length === 0) return false;
+
+  console.log(`  Auto-backfilling ${needBackfill.length} symbol(s) with short history:`);
+  needBackfill.forEach(x => console.log(`    ${x.sym} (${x.key}): ${x.currentLen} entries`));
+
+  const symbols = needBackfill.map(x => x.sym);
+  const histories = await backfillHistory(token, symbols);
+
+  let updated = false;
+  for (const { key } of needBackfill) {
+    const newHist = histories[key];
+    if (!newHist || newHist.length === 0) continue;
+    seed.prices[key].history = newHist;
+    // Recompute 52W high/low + previousClose
+    const window = newHist.slice(-260);
+    const prices = window.map(h => h.price);
+    seed.prices[key].high52w = Math.max(...prices);
+    seed.prices[key].low52w = Math.min(...prices);
+    if (newHist.length >= 2) {
+      seed.prices[key].previousClose = newHist[newHist.length - 2].price;
+    }
+    const latest = newHist[newHist.length - 1];
+    seed.prices[key].current = latest.price;
+    console.log(`    ${key}: backfilled to ${newHist.length} entries (${newHist[0].date} → ${latest.date})`);
+    updated = true;
+  }
+  return updated;
+}
+
 // ---------- Main ----------
 async function main() {
   console.log('[1/4] Obtaining Platts Platform token...');
@@ -361,27 +405,18 @@ async function main() {
   console.log('[3/4] Updating seed data...');
   updateSeed(items);
 
-  // Backfill AWRP history if seed has < 30 data points
+  // Auto-backfill any symbols with short history (<260 entries)
   let seed;
   try { seed = JSON.parse(fs.readFileSync(SEED_FILE, 'utf-8')); } catch { seed = null; }
-  const awrpHist = seed?.prices?.awrp?.history || [];
-  if (awrpHist.length < 30) {
-    console.log('\n[4/4] Backfilling AWRP history...');
-    const histories = await backfillHistory(token, ['AWARA00']);
-    if (histories.awrp && histories.awrp.length > 0) {
-      seed.prices.awrp.history = histories.awrp;
-      const recent = histories.awrp.slice(-260);
-      const prices = recent.map(h => h.price);
-      seed.prices.awrp.high52w = Math.max(...prices);
-      seed.prices.awrp.low52w = Math.min(...prices);
-      if (histories.awrp.length >= 2) {
-        seed.prices.awrp.previousClose = histories.awrp[histories.awrp.length - 2].price;
-      }
+  if (seed) {
+    console.log('\n[4/4] Auto-backfilling short histories...');
+    const updated = await autoBackfillShort(token, seed);
+    if (updated) {
       fs.writeFileSync(SEED_FILE, JSON.stringify(seed, null, 2));
-      console.log(`  Backfilled ${histories.awrp.length} AWRP data points (${histories.awrp[0].date} → ${histories.awrp[histories.awrp.length - 1].date})`);
+      console.log('  Seed updated with backfilled history');
+    } else {
+      console.log('  All symbols have sufficient history (skipping backfill)');
     }
-  } else {
-    console.log('\n[4/4] AWRP history OK (' + awrpHist.length + ' points, skipping backfill)');
   }
 
   console.log('\nDone.');

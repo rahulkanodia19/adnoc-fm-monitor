@@ -1,6 +1,6 @@
 {
-  "checkedAt": "2026-04-05T08:36:29.224Z",
-  "interactive": false,
+  "checkedAt": "2026-04-05T16:02:13.673Z",
+  "interactive": true,
   "aborted": false,
   "results": [
     {
@@ -8,9 +8,9 @@
       "url": "https://terminal.kpler.com/insight",
       "status": "ok",
       "landedAt": "https://terminal.kpler.com/insight",
-      "contentLength": 24438,
+      "contentLength": 23143,
       "loginAttempts": 1,
-      "message": "OK (24438 chars)"
+      "message": "OK (23143 chars)"
     },
     {
       "name": "Rystad ME",
@@ -34,10 +34,10 @@
       "name": "Platts Core",
       "url": "https://core.spglobal.com/#platts/landingpage",
       "status": "ok",
-      "landedAt": "https://core.spglobal.com/#platts/landingpage",
-      "contentLength": 981,
+      "landedAt": "https://core.spglobal.com/#platts/allInsights",
+      "contentLength": 12271,
       "loginAttempts": 1,
-      "message": "OK (981 chars)"
+      "message": "OK (12271 chars)"
     }
   ]
 }

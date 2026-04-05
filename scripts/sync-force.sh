@@ -27,7 +27,7 @@ echo ""
 echo "[sync-force] ── Step 1/3: Web Search Sync (public data) ──"
 cd "$PROJECT_DIR"
 
-claude -p "$(cat scripts/sync-prompt.md)" \
+NODE_OPTIONS="--max-old-space-size=4096" claude -p "$(cat scripts/sync-prompt.md)" \
   --allowedTools "Edit,Write,Read,WebSearch,WebFetch,Glob,Grep,Bash(git diff*),Bash(git status*)" \
   --max-turns 45
 
@@ -79,7 +79,7 @@ fi
 
 # Run browser-enhanced sync (builds on the data.js already updated by Step 1)
 if [ "$CHROME_PID" != "SKIP" ]; then
-  claude -p "Read data.js to see the current state (just updated by web search).
+  NODE_OPTIONS="--max-old-space-size=4096" claude -p "Read data.js to see the current state (just updated by web search).
 Now ENHANCE it with premium data from the authenticated browser.
 
 You have access to a Chrome browser via chrome-devtools MCP tools.

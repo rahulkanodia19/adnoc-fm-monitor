@@ -2,21 +2,24 @@
 # ==============================================================
 # master-sync.sh — Unified daily sync orchestrator
 #
-# Runs ALL 6 data pipelines with:
+# Runs ALL 9 data pipelines with:
 #   - Live progress reporting (terminal + sync-progress.json)
 #   - Retry logic (3 attempts per pipeline, 0/10/30s backoff)
-#   - Pre-sync data backup + rollback on failure
+#   - Pre-sync data backup + rollback on failure (cascading restore)
 #   - Per-pipeline log files (sync-logs/)
 #   - Windows toast notifications for action-required events
 #   - Robust Chrome pre-flight (3x restart, login detection)
 #
-# Pipelines:
-#   1. News/FM/Production (Claude + Chrome MCP + web search)
-#   2. SOH Vessels (sync-soh.js via JWT token)
-#   3. Platts Prices (fetch-platts-prices.js via Okta)
-#   4. SPR Releases (Claude + web search) — after #1
-#   5. Import/Export Flows (sync-flows.js via JWT token)
-#   6. Flow Insights (4 Claude batches) — after #5
+# Pipelines (Phase 1 parallel: 1-4. Phase 1.5 sequential data.js writers: 5-8):
+#   1. SOH Vessels (sync-soh.js via JWT token)
+#   2. Platts Prices (fetch-platts-prices.js via Okta)
+#   3. Import/Export Flows (sync-flows.js via JWT token)
+#   4. ADNOC Fleet (sync-adnoc-fleet.js)
+#   5. News/Country Status (Claude + Chrome MCP + web search)
+#   6. FM/Shutdowns (Claude + web search, global scope 35 countries)
+#   7. SPR Releases (Claude + web search)
+#   8. War Risk Premium (Claude + web search)
+#   9. Flow Insights (4 Claude batches) — after #3
 #
 # Usage: npm run sync:all
 #   or:  bash scripts/master-sync.sh
@@ -38,7 +41,7 @@ TIMESTAMP_UTC=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
 
 # Pipeline status tracking
 declare -A PIPELINE_STATUS PIPELINE_TIME PIPELINE_DETAIL PIPELINE_ATTEMPT
-PIPELINES="news_fm soh prices flows adnoc spr awrp insights"
+PIPELINES="news fm soh prices flows adnoc spr awrp insights"
 for p in $PIPELINES; do
   PIPELINE_STATUS[$p]="pending"
   PIPELINE_TIME[$p]=""
@@ -150,8 +153,11 @@ run_pipeline() {
         extract_kpler_token_quiet
       fi
 
-      # Restart Chrome for browser-dependent pipelines
-      if [[ "$name" == "news_fm" || "$name" == "spr" ]]; then
+      # Restart Chrome for browser-dependent pipelines.
+      # SPR is NOT browser-dependent (uses built-in WebSearch/WebFetch only,
+      # no chrome-devtools MCP tools). Pre-fetching via fetch-spr-sources.js
+      # uses Node curl, not Chrome.
+      if [[ "$name" == "news" || "$name" == "fm" ]]; then
         log "  Restarting Chrome before retry..."
         kill_chrome
         start_chrome || true
@@ -220,9 +226,18 @@ backup_data() {
 restore_pipeline() {
   local name="$1"
   case "$name" in
-    news_fm)
-      log "  Restoring data.js from backup"
-      cp .sync-backup/data.js data.js 2>/dev/null || true ;;
+    news)
+      log "  Restoring data.js from pre-news backup"
+      cp .sync-backup/data.js.pre-news data.js 2>/dev/null || cp .sync-backup/data.js data.js 2>/dev/null || true ;;
+    fm)
+      # Cascade: restore from the highest-successful upstream writer
+      if [ "${PIPELINE_STATUS[news]}" = "ok" ]; then
+        log "  Restoring data.js from post-news backup (News succeeded, FM failed)"
+        cp .sync-backup/data.js.post-news data.js 2>/dev/null || true
+      else
+        log "  Restoring data.js from pre-news backup (News + FM both failed)"
+        cp .sync-backup/data.js.pre-news data.js 2>/dev/null || cp .sync-backup/data.js data.js 2>/dev/null || true
+      fi ;;
     prices)
       log "  Restoring market-prices-seed.json + murban-history.json + market-insights.json from backup"
       cp .sync-backup/market-prices-seed.json market-prices-seed.json 2>/dev/null || true
@@ -239,20 +254,35 @@ restore_pipeline() {
       log "  Restoring flow-insights.json from backup"
       cp .sync-backup/flow-insights.json flow-insights.json 2>/dev/null || true ;;
     spr)
-      # Only restore data.js if news_fm also failed (otherwise news_fm already wrote it)
-      if [ "${PIPELINE_STATUS[news_fm]}" != "ok" ]; then
-        log "  Restoring data.js from backup (SPR + News/FM both failed)"
-        cp .sync-backup/data.js data.js 2>/dev/null || true
+      # Cascade: restore from highest-successful upstream writer
+      if [ "${PIPELINE_STATUS[fm]}" = "ok" ]; then
+        log "  Restoring data.js from post-fm backup (FM ok, SPR failed)"
+        cp .sync-backup/data.js.post-fm data.js 2>/dev/null || true
+      elif [ "${PIPELINE_STATUS[news]}" = "ok" ]; then
+        log "  Restoring data.js from post-news backup (News ok, FM+SPR failed)"
+        cp .sync-backup/data.js.post-news data.js 2>/dev/null || true
+      else
+        log "  Restoring data.js from pre-news backup (News+FM+SPR all failed)"
+        cp .sync-backup/data.js.pre-news data.js 2>/dev/null || cp .sync-backup/data.js data.js 2>/dev/null || true
       fi ;;
     adnoc)
       log "  Restoring adnoc fleet data from backup"
       cp .sync-backup/soh-data/adnoc-fleet-data.json soh-data/ 2>/dev/null || true
       cp .sync-backup/soh-data/adnoc-chartered-data.json soh-data/ 2>/dev/null || true ;;
     awrp)
-      # Only restore data.js if news_fm and spr also failed
-      if [ "${PIPELINE_STATUS[news_fm]}" != "ok" ] && [ "${PIPELINE_STATUS[spr]}" != "ok" ]; then
-        log "  Restoring data.js from backup (AWRP + SPR + News/FM all failed)"
-        cp .sync-backup/data.js data.js 2>/dev/null || true
+      # Cascade: restore from highest-successful upstream writer
+      if [ "${PIPELINE_STATUS[spr]}" = "ok" ]; then
+        log "  Restoring data.js from post-spr backup (SPR ok, AWRP failed)"
+        cp .sync-backup/data.js.post-spr data.js 2>/dev/null || true
+      elif [ "${PIPELINE_STATUS[fm]}" = "ok" ]; then
+        log "  Restoring data.js from post-fm backup (FM ok, SPR+AWRP failed)"
+        cp .sync-backup/data.js.post-fm data.js 2>/dev/null || true
+      elif [ "${PIPELINE_STATUS[news]}" = "ok" ]; then
+        log "  Restoring data.js from post-news backup (News ok, FM+SPR+AWRP failed)"
+        cp .sync-backup/data.js.post-news data.js 2>/dev/null || true
+      else
+        log "  Restoring data.js from pre-news backup (News+FM+SPR+AWRP all failed)"
+        cp .sync-backup/data.js.pre-news data.js 2>/dev/null || cp .sync-backup/data.js data.js 2>/dev/null || true
       fi ;;
   esac
 }
@@ -272,7 +302,7 @@ write_progress "preflight"
 
 # --- Kill stale sync processes from previous runs ---
 STALE_KILLED=0
-for proc_name in "sync-news" "sync-spr" "sync-prices" "sync-flows" "sync-soh" "master-sync" "download-server" "sync-flow-insights"; do
+for proc_name in "sync-news" "sync-fm" "sync-spr" "sync-prices" "sync-flows" "sync-soh" "master-sync" "download-server" "sync-flow-insights"; do
   while read -r pid; do
     [ -z "$pid" ] && continue
     [ "$pid" = "$$" ] && continue  # don't kill ourselves
@@ -507,20 +537,11 @@ echo ""
 # PHASE 1: PARALLEL DATA COLLECTION
 # ============================================================
 
-log "PHASE 1 — Data Collection"
+log "PHASE 1 — Parallel Data Collection (4 pipelines)"
 write_progress "data_collection"
 
-# [1/6] News/FM/Production
-LABEL_NEWS="[1/6] News/FM/Production ..."
-log "  $LABEL_NEWS ⏳ running"
-(
-  run_pipeline "news_fm" "$LABEL_NEWS" 3 bash "$SCRIPT_DIR/sync-news.sh"
-  exit $?
-) &
-NEWS_PID=$!
-
-# [2/5] SOH Vessels
-LABEL_SOH="[2/6] SOH Vessels .........."
+# [1/9] SOH Vessels
+LABEL_SOH="[1/9] SOH Vessels .........."
 if [ "$KPLER_TOKEN_OK" = true ]; then
   log "  $LABEL_SOH ⏳ running"
   (
@@ -540,8 +561,8 @@ else
   SOH_PID=""
 fi
 
-# [3/6] Platts Prices (+ Murban front-month from Investing.com)
-LABEL_PRICES="[3/6] Platts Prices ........"
+# [2/9] Platts Prices (+ Murban front-month from Investing.com)
+LABEL_PRICES="[2/9] Platts Prices ........"
 log "  $LABEL_PRICES ⏳ running"
 (
   run_pipeline "prices" "$LABEL_PRICES" 3 bash -c "node \"$SCRIPT_DIR/scrape-murban-investing.js\" && node \"$SCRIPT_DIR/fetch-platts-prices.js\""
@@ -549,8 +570,8 @@ log "  $LABEL_PRICES ⏳ running"
 ) &
 PRICES_PID=$!
 
-# [4/6] Import/Export Flows
-LABEL_FLOWS="[4/6] Import/Export Flows .."
+# [3/9] Import/Export Flows
+LABEL_FLOWS="[3/9] Import/Export Flows .."
 if [ "$KPLER_TOKEN_OK" = true ]; then
   log "  $LABEL_FLOWS ⏳ running"
   (
@@ -565,8 +586,8 @@ else
   FLOWS_PID=""
 fi
 
-# [5/8] ADNOC Fleet
-LABEL_ADNOC="[5/8] ADNOC Fleet ........."
+# [4/9] ADNOC Fleet
+LABEL_ADNOC="[4/9] ADNOC Fleet ........."
 if [ "$KPLER_TOKEN_OK" = true ]; then
   log "  $LABEL_ADNOC ⏳ running"
   (
@@ -614,18 +635,69 @@ collect_result "$SOH_PID" "soh" "$LABEL_SOH" \
 collect_result "$FLOWS_PID" "flows" "$LABEL_FLOWS" \
   "node -e \"const s=require('fs').statSync('import-data.js').size+require('fs').statSync('export-data.js').size;console.log(Math.round(s/1024/1024)+' MB total')\""
 
-collect_result "$NEWS_PID" "news_fm" "$LABEL_NEWS" \
-  "echo 'agent complete'"
-
 collect_result "$ADNOC_PID" "adnoc" "$LABEL_ADNOC" \
   "node -e \"const d=JSON.parse(require('fs').readFileSync('soh-data/adnoc-fleet-data.json'));console.log(d.count+' fleet + '+(JSON.parse(require('fs').readFileSync('soh-data/adnoc-chartered-data.json')).count||0)+' chartered')\""
 
-# [5/6] SPR Releases (sequential — after News/FM, both write data.js)
+# ============================================================
+# PHASE 1.5: SEQUENTIAL DATA.JS WRITERS
+# ============================================================
+# News → FM → SPR → AWRP (cascading data.js ownership)
+
 echo ""
-LABEL_SPR="[5/6] SPR Releases ........."
+log "PHASE 1.5 — Sequential data.js writers (News → FM → SPR → AWRP)"
+write_progress "data_collection"
+
+# [5/9] News / Country Status
+LABEL_NEWS="[5/9] News/Country Status .."
+log "  $LABEL_NEWS ⏳ running"
+cp data.js .sync-backup/data.js.pre-news 2>/dev/null || true
+NEWS_START=$(date +%s)
+if run_pipeline "news" "$LABEL_NEWS" 3 bash "$SCRIPT_DIR/sync-news.sh"; then
+  cp data.js .sync-backup/data.js.post-news 2>/dev/null || true
+  PIPELINE_STATUS[news]="ok"
+  PIPELINE_DETAIL[news]="country status + news"
+  PIPELINE_TIME[news]=$(elapsed $NEWS_START)
+  log "  $LABEL_NEWS ✓ done (${PIPELINE_TIME[news]})"
+else
+  PIPELINE_STATUS[news]="failed"
+  PIPELINE_DETAIL[news]="failed after 3 attempts"
+  PIPELINE_TIME[news]=$(elapsed $NEWS_START)
+  log "  $LABEL_NEWS ✗ FAILED"
+  restore_pipeline "news"
+  notify "News Failed" "News pipeline failed after 3 attempts."
+fi
+write_progress "data_collection"
+
+# [6/9] FM / Shutdowns (sequential — after News, both write data.js)
+echo ""
+LABEL_FM="[6/9] FM/Shutdowns ........."
+log "  $LABEL_FM ⏳ running"
+cp data.js .sync-backup/data.js.pre-fm 2>/dev/null || true
+FM_START=$(date +%s)
+if run_pipeline "fm" "$LABEL_FM" 3 bash "$SCRIPT_DIR/sync-fm.sh"; then
+  cp data.js .sync-backup/data.js.post-fm 2>/dev/null || true
+  PIPELINE_STATUS[fm]="ok"
+  PIPELINE_DETAIL[fm]="global FM/shutdowns"
+  PIPELINE_TIME[fm]=$(elapsed $FM_START)
+  log "  $LABEL_FM ✓ done (${PIPELINE_TIME[fm]})"
+else
+  PIPELINE_STATUS[fm]="failed"
+  PIPELINE_DETAIL[fm]="failed after 3 attempts"
+  PIPELINE_TIME[fm]=$(elapsed $FM_START)
+  log "  $LABEL_FM ✗ FAILED"
+  restore_pipeline "fm"
+  notify "FM Failed" "FM pipeline failed after 3 attempts."
+fi
+write_progress "data_collection"
+
+# [7/9] SPR Releases (sequential — after FM, all write data.js)
+echo ""
+LABEL_SPR="[7/9] SPR Releases ........."
 log "  $LABEL_SPR ⏳ running"
+cp data.js .sync-backup/data.js.pre-spr 2>/dev/null || true
 SPR_START=$(date +%s)
 if run_pipeline "spr" "$LABEL_SPR" 3 bash "$SCRIPT_DIR/sync-spr.sh"; then
+  cp data.js .sync-backup/data.js.post-spr 2>/dev/null || true
   PIPELINE_STATUS[spr]="ok"
   PIPELINE_DETAIL[spr]="web search complete"
   PIPELINE_TIME[spr]=$(elapsed $SPR_START)
@@ -640,12 +712,13 @@ else
 fi
 write_progress "data_collection"
 
-# [6/6] War Risk Premium AWRP (sequential — after SPR, also writes data.js)
+# [8/9] War Risk Premium AWRP (sequential — last data.js writer)
 echo ""
-LABEL_AWRP="[6/6] War Risk Premium ....."
+LABEL_AWRP="[8/9] War Risk Premium ....."
 log "  $LABEL_AWRP ⏳ running"
+cp data.js .sync-backup/data.js.pre-awrp 2>/dev/null || true
 AWRP_START=$(date +%s)
-if run_pipeline "awrp" "$LABEL_AWRP" 3 claude -p "$(cat "$SCRIPT_DIR/sync-prices-awrp-prompt.md")" \
+if run_pipeline "awrp" "$LABEL_AWRP" 3 env NODE_OPTIONS="--max-old-space-size=4096" claude -p "$(cat "$SCRIPT_DIR/sync-prices-awrp-prompt.md")" \
   --allowedTools "Edit,Read,WebSearch,WebFetch,Glob,Grep" \
   --max-turns 20; then
   PIPELINE_STATUS[awrp]="ok"
@@ -693,7 +766,7 @@ if [ "${PIPELINE_STATUS[flows]}" = "ok" ] && [ -f "$PROJECT_DIR/flow-summary.jso
     write_progress "flow_insights"
     log "  Batch $batch_num/4 $BATCH_DESC ... ⏳"
 
-    if claude -p "$PROMPT
+    if NODE_OPTIONS="--max-old-space-size=4096" claude -p "$PROMPT
 
 YOUR BATCH: Read \`$BATCH_FILE\` for your datasets.
 Web searches: Focus on $BATCH_FOCUS.
@@ -757,7 +830,7 @@ node "$SCRIPT_DIR/verify-sync.js" > /dev/null 2>&1
 log "  Freshness verification ..... ✓ sync-status.json written"
 
 # Commit all changes
-ALL_FILES="data.js data-previous.json sync-log.json energy-news-data.json market-prices-seed.json murban-history.json market-insights.json import-data.js export-data.js flow-insights.json flow-summary.json sync-status.json"
+ALL_FILES="data.js data-previous.json sync-log.json fm-sync-log.json energy-news-data.json market-prices-seed.json murban-history.json market-insights.json import-data.js export-data.js flow-insights.json flow-summary.json sync-status.json"
 SOH_FILES="soh-data/summary.json soh-data/vessel-matrix.json soh-data/adnoc-vessels.json soh-data/map-positions.json soh-data/vessels.json soh-data/transit-vessels.json soh-data/crisis-transits.json soh-data/breakdown-product.json soh-data/breakdown-vessel-type.json soh-data/breakdown-destination.json"
 
 CHANGED=false
@@ -804,7 +877,7 @@ if [ $TOTAL_SECS -ge 60 ]; then TOTAL_TIME="$((TOTAL_SECS/60))m$((TOTAL_SECS%60)
 sep
 log "SUMMARY"
 
-LABELS="news_fm:News/FM/Production soh:SOH_Vessels prices:Platts_Prices flows:Import/Export_Flows spr:SPR_Releases awrp:War_Risk_Premium insights:Flow_Insights"
+LABELS="news:News/Country_Status fm:FM/Shutdowns soh:SOH_Vessels prices:Platts_Prices flows:Import/Export_Flows adnoc:ADNOC_Fleet spr:SPR_Releases awrp:War_Risk_Premium insights:Flow_Insights"
 
 FAIL_COUNT=0
 for entry in $LABELS; do

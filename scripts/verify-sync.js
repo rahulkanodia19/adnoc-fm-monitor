@@ -61,9 +61,9 @@ function fileSizeMB(rel) {
   return fs.statSync(p).size / (1024 * 1024);
 }
 
-// ---------- Pipeline 1: News/FM/Production ----------
+// ---------- Pipeline 1a: News/Country Status ----------
 
-function checkNewsFM() {
+function checkNews() {
   const pipeline = { status: 'failed', dataAsOf: null, lastUpdated: null, details: '' };
 
   const code = readFile('data.js');
@@ -93,18 +93,46 @@ function checkNewsFM() {
     countryMatches && countryMatches.some(m => m.includes(c))
   );
 
-  // Count FM declarations (IDs like "fm-001", "fm-024")
-  const fmCount = (code.match(/id:\s*"fm-\d+"/g) || []).length;
-
-  // Count shutdowns (IDs like "sd-001", "sd-024")
-  const sdCount = (code.match(/id:\s*"sd-\d+"/g) || []).length;
-
-  pipeline.details = `${foundCountries.length}/9 countries, ${fmCount} FMs, ${sdCount} shutdowns`;
+  pipeline.details = `${foundCountries.length}/9 countries`;
 
   if (foundCountries.length < 9) {
     pipeline.status = 'failed';
     pipeline.details += ` — MISSING: ${expectedCountries.filter(c => !foundCountries.includes(c)).join(', ')}`;
   }
+
+  return pipeline;
+}
+
+// ---------- Pipeline 1b: FM / Shutdowns ----------
+
+function checkFM() {
+  const pipeline = { status: 'failed', dataAsOf: null, lastUpdated: null, details: '' };
+
+  const raw = readFile('fm-sync-log.json');
+  if (!raw) {
+    pipeline.details = 'fm-sync-log.json not found';
+    return pipeline;
+  }
+
+  let log;
+  try {
+    log = JSON.parse(raw);
+  } catch (e) {
+    pipeline.details = 'fm-sync-log.json invalid JSON';
+    return pipeline;
+  }
+
+  pipeline.lastUpdated = log.timestamp;
+  pipeline.dataAsOf = formatDate(log.timestamp);
+  const hours = hoursAgo(log.timestamp);
+  pipeline.status = freshness(hours, 26, 72);
+
+  const code = readFile('data.js');
+  const fmCount = code ? (code.match(/id:\s*"fm-\d+"/g) || []).length : 0;
+  const sdCount = code ? (code.match(/id:\s*"sd-\d+"/g) || []).length : 0;
+  pipeline.details = `${fmCount} FMs, ${sdCount} shutdowns`;
+
+  if (log.success === false) pipeline.status = 'failed';
 
   return pipeline;
 }
@@ -441,7 +469,8 @@ function checkFlowInsights() {
 
 console.log('\n===== SYNC STATUS VERIFICATION =====\n');
 
-status.pipelines.news_fm = checkNewsFM();
+status.pipelines.news = checkNews();
+status.pipelines.fm = checkFM();
 status.pipelines.prices = checkPrices();
 status.pipelines.war_risk = checkWarRiskPremium();
 status.pipelines.spr = checkSPR();
@@ -462,7 +491,8 @@ const colors = { ok: '\x1b[32m', stale: '\x1b[33m', failed: '\x1b[31m', skipped:
 const reset = '\x1b[0m';
 
 const pipelineLabels = {
-  news_fm: 'News/FM/Production',
+  news: 'News/Country Status',
+  fm: 'FM/Shutdowns',
   prices: 'Platts Prices',
   war_risk: 'War Risk Premium',
   spr: 'SPR Releases',

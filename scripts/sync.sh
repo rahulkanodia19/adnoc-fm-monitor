@@ -23,7 +23,7 @@ echo "[sync] =========================================="
 echo "[sync] Running Claude Code sync (web search only)..."
 cd "$PROJECT_DIR"
 
-claude -p "$(cat scripts/sync-prompt.md)" \
+NODE_OPTIONS="--max-old-space-size=4096" claude -p "$(cat scripts/sync-prompt.md)" \
   --allowedTools "Edit,Write,Read,WebSearch,WebFetch,Glob,Grep,Bash(git diff*),Bash(git status*)" \
   --max-turns 45
 

@@ -26,7 +26,7 @@ cd "$PROJECT_DIR"
 TOOLS="Read,WebSearch,WebFetch,Glob,Grep,Write"
 
 echo "[audit] Running Claude agent to audit recent headline coverage..."
-cat scripts/audit-prompt.md | claude -p - \
+cat scripts/audit-prompt.md | NODE_OPTIONS="--max-old-space-size=4096" claude -p - \
   --allowedTools "$TOOLS" \
   --max-turns 30
 

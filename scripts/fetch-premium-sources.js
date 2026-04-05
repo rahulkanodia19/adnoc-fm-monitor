@@ -9,8 +9,8 @@
  * Platforms:
  *   1. terminal.kpler.com/insight — Kpler Insight articles
  *   2. portal.rystadenergy.com/dashboards/detail/1047/0 — Rystad ME Conflict dashboard (screenshot)
- *   3. connect.spglobal.com/home — S&P Connect news feed
- *   4. core.spglobal.com — S&P Platts Core insights (Crude Oil, Refined Products, LNG, Chemicals, Shipping)
+ *   3. connect.spglobal.com/home — S&P Connect news feed (full article bodies via masterviewer-api)
+ *   4. core.spglobal.com/#platts/allInsights — Platts Core unified News & Insights feed
  *
  * Output: soh-data/.premium-sources.json + soh-data/.rystad-dashboard.png
  *
@@ -168,35 +168,60 @@ async function fetchRystad(pages) {
   };
 }
 
-function interceptDocumentAPI(ws) {
+// Event-driven wait: resolves as soon as a Network.responseReceived
+// matches the url substring, else returns null after timeoutMs.
+// The masterviewer-api response can arrive 8-20s after navigation —
+// the previous fixed 8s wait caused 0 articles extracted on most runs.
+function waitForNetworkResponse(ws, urlSubstring, timeoutMs = 25000) {
   return new Promise((resolve) => {
-    let reqId = null;
+    const start = Date.now();
+    let done = false;
     const handler = m => {
-      const d = JSON.parse(m);
-      if (d.method === 'Network.responseReceived') {
-        const url = d.params?.response?.url || '';
-        if (url.includes('masterviewer-api/v1/Document?source=phoenix')) {
-          reqId = d.params.requestId;
+      if (done) return;
+      try {
+        const d = JSON.parse(m);
+        if (d.method === 'Network.responseReceived') {
+          const url = d.params?.response?.url || '';
+          if (url.includes(urlSubstring)) {
+            done = true;
+            ws.removeListener('message', handler);
+            resolve({ requestId: d.params.requestId, url, elapsed: Date.now() - start });
+          }
         }
-      }
+      } catch {}
     };
     ws.on('message', handler);
-    // Return function to get the response body once navigation completes
-    resolve({
-      getBody: async () => {
-        ws.removeListener('message', handler);
-        if (!reqId) return null;
-        return new Promise((res) => {
-          ws.send(JSON.stringify({ id: 77, method: 'Network.getResponseBody', params: { requestId: reqId } }));
-          const h = m => { const d = JSON.parse(m); if (d.id === 77) { ws.removeListener('message', h); res(d.result); } };
-          ws.on('message', h);
-          setTimeout(() => { ws.removeListener('message', h); res(null); }, 5000);
-        });
-      },
-      cleanup: () => ws.removeListener('message', handler),
-    });
+    setTimeout(() => {
+      if (!done) { done = true; ws.removeListener('message', handler); resolve(null); }
+    }, timeoutMs);
   });
 }
+
+function getResponseBody(ws, requestId, timeoutMs = 10000) {
+  const id = nextMsgId();
+  return new Promise((resolve) => {
+    ws.send(JSON.stringify({ id, method: 'Network.getResponseBody', params: { requestId } }));
+    const h = m => { const d = JSON.parse(m); if (d.id === id) { ws.removeListener('message', h); resolve(d.result); } };
+    ws.on('message', h);
+    setTimeout(() => { ws.removeListener('message', h); resolve(null); }, timeoutMs);
+  });
+}
+
+// Poll document.querySelectorAll(sel).length > minCount every intervalMs
+// up to timeoutMs. Returns the count that satisfied (or 0 on timeout).
+async function waitForSelector(ws, selector, { minCount = 1, timeoutMs = 25000, intervalMs = 500 } = {}) {
+  const start = Date.now();
+  while (Date.now() - start < timeoutMs) {
+    const count = await evaluate(ws, `document.querySelectorAll(${JSON.stringify(selector)}).length`);
+    if (typeof count === 'number' && count >= minCount) return count;
+    await new Promise(r => setTimeout(r, intervalMs));
+  }
+  return 0;
+}
+
+// Shared monotonic message ID counter (CDP commands need unique IDs).
+let _msgIdCounter = 1000;
+function nextMsgId() { return ++_msgIdCounter; }
 
 async function fetchSPGlobal(pages) {
   const page = pages.find(p => p.url.includes('connect.spglobal.com'));
@@ -218,26 +243,50 @@ async function fetchSPGlobal(pages) {
 
   // 2. Filter for Gulf/energy relevant articles
   const KEYWORDS = ['gulf', 'iran', 'hormuz', 'lng', 'crude', 'war', 'conflict', 'rapid response', 'persian', 'energy', 'oil', 'opec', 'middle east'];
-  const relevant = links.filter(l => KEYWORDS.some(kw => l.text.toLowerCase().includes(kw))).slice(0, 3);
+  const relevant = links.filter(l => KEYWORDS.some(kw => l.text.toLowerCase().includes(kw))).slice(0, 5);
   console.log('[premium] S&P Connect:', links.length, 'articles found,', relevant.length, 'Gulf-relevant');
 
-  // 3. Fetch full content for each relevant article
+  // 3. Fetch full content for each relevant article — event-driven.
+  // The masterviewer-api response can land anywhere from 4s to 18s
+  // after navigation depending on server load; previous fixed 8s wait
+  // caused reqId=null and 0 articles extracted.
   ws.send(JSON.stringify({ id: 70, method: 'Network.enable', params: {} }));
   const articles = [];
   for (const article of relevant) {
     console.log('[premium] S&P Connect: fetching "' + article.text.substring(0, 60) + '"...');
-    const interceptor = await interceptDocumentAPI(ws);
-    ws.send(JSON.stringify({ id: 71, method: 'Page.navigate', params: { url: article.href } }));
-    await new Promise(r => setTimeout(r, 8000));
-    const bodyResult = await interceptor.getBody();
+    // Start watching for the article API response BEFORE navigation
+    const waitPromise = waitForNetworkResponse(ws, 'masterviewer-api/v1/Document?source=phoenix', 25000);
+    ws.send(JSON.stringify({ id: nextMsgId(), method: 'Page.navigate', params: { url: article.href } }));
+    const captured = await waitPromise;
+    if (!captured) {
+      console.log('[premium] S&P Connect:  → timed out waiting for masterviewer-api (25s)');
+      continue;
+    }
+    // Network.responseReceived fires on headers; body may still be
+    // streaming. Let it settle, then retry once if getResponseBody
+    // initially returns null.
+    await new Promise(r => setTimeout(r, 1500));
+    let bodyResult = await getResponseBody(ws, captured.requestId, 10000);
+    if (!bodyResult || !bodyResult.body) {
+      await new Promise(r => setTimeout(r, 2000));
+      bodyResult = await getResponseBody(ws, captured.requestId, 10000);
+    }
     if (bodyResult && bodyResult.body) {
       try {
         const doc = JSON.parse(bodyResult.body).document;
         const html = doc?.html || '';
         const text = html.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
-        articles.push({ title: article.text, content: text });
-        console.log('[premium] S&P Connect:  → ' + text.length + ' chars extracted');
-      } catch {}
+        if (text.length > 200) {
+          articles.push({ title: article.text, content: text });
+          console.log('[premium] S&P Connect:  → ' + text.length + ' chars extracted in ' + captured.elapsed + 'ms');
+        } else {
+          console.log('[premium] S&P Connect:  → body too short (' + text.length + ' chars), skipping');
+        }
+      } catch (e) {
+        console.log('[premium] S&P Connect:  → JSON parse failed: ' + e.message);
+      }
+    } else {
+      console.log('[premium] S&P Connect:  → getResponseBody returned null');
     }
   }
   ws.send(JSON.stringify({ id: 72, method: 'Network.disable', params: {} }));
@@ -252,7 +301,9 @@ async function fetchSPGlobal(pages) {
     articles.map(a => '=== ' + a.title + ' ===\n' + a.content).join('\n\n');
 
   console.log('[premium] S&P Connect: total', fullContent.length, 'chars (' + articles.length + ' full articles)');
-  return { status: 'accessed', url: 'connect.spglobal.com/home', content: fullContent, articlesExtracted: articles.length };
+  // Distinguish between successful extraction and silent failure
+  const status = articles.length > 0 ? 'accessed' : 'no-articles-extracted';
+  return { status, url: 'connect.spglobal.com/home', content: fullContent, articlesExtracted: articles.length };
 }
 
 async function fetchPlattsCore(pages) {
@@ -287,96 +338,105 @@ async function fetchPlattsCore(pages) {
     };
   }
 
-  // Sector pages to scrape — all 5 key Platts sectors
-  const SECTORS = [
-    { name: 'Crude Oil',        url: 'https://core.spglobal.com/#platts/allInsights?keySector=Crude%20Oil' },
-    { name: 'Refined Products', url: 'https://core.spglobal.com/#platts/allInsights?keySector=Refined%20Products' },
-    { name: 'LNG',              url: 'https://core.spglobal.com/#platts/allInsights?keySector=LNG%20Service' },
-    { name: 'Chemicals',        url: 'https://core.spglobal.com/#platts/allInsights?keySector=Chemicals' },
-    { name: 'Shipping',         url: 'https://core.spglobal.com/#platts/allInsights?keySector=Shipping' },
-  ];
+  // allInsights WITHOUT a keySector filter shows the full feed across
+  // all entitled services (~74K records). Previous per-sector filter
+  // URLs hit subscription walls because keySector values (Crude Oil,
+  // Refined Products, Chemicals) mapped to service codes the user
+  // isn't on. No filter = all entitled content = Gulf stories appear.
+  console.log('[premium] Platts Core: loading allInsights feed...');
+  await evaluate(ws, `window.location.href = 'https://core.spglobal.com/#platts/allInsights'`, 80);
 
-  const KEYWORDS = ['gulf', 'iran', 'hormuz', 'lng', 'crude', 'war', 'conflict', 'persian', 'energy', 'oil', 'opec',
-    'middle east', 'qatar', 'kuwait', 'saudi', 'uae', 'iraq', 'bahrain', 'oman', 'israel', 'strait',
-    'tanker', 'freight', 'shipping', 'force majeure', 'shutdown', 'disruption', 'escalation'];
+  // Wait for article links to render. The Platts SPA takes 20-25s to
+  // populate the list (multiple sequential API calls). Poll for the
+  // article link selector rather than sleeping a fixed duration.
+  const linkCount = await waitForSelector(ws, 'a[href*="insightsArticle"]', { minCount: 10, timeoutMs: 30000 });
+  console.log('[premium] Platts Core: article links rendered:', linkCount);
 
-  const allHeadlines = [];
+  const landedUrl = await evaluate(ws, 'window.location.href', 81);
+  const bodyLen = await evaluate(ws, '(document.body?.innerText || "").length', 82);
 
-  for (const sector of SECTORS) {
-    console.log('[premium] Platts Core: loading ' + sector.name + ' insights...');
+  // Extract article links. Href pattern: #platts/insightsArticle?articleID=<GUID>&insightsType=<Top News|News|Blog|Rationale|Market Commentary|Spotlight>
+  const linksRaw = await evaluate(ws, `
+    JSON.stringify(
+      Array.from(document.querySelectorAll('a[href*="insightsArticle"]'))
+        .map(a => {
+          const href = a.getAttribute('href') || '';
+          const text = (a.textContent || '').trim();
+          const idMatch = href.match(/articleID=([a-f0-9-]+)/i);
+          const typeMatch = href.match(/insightsType=([^&]+)/i);
+          return {
+            articleID: idMatch ? idMatch[1] : null,
+            title: text.substring(0, 200),
+            insightsType: typeMatch ? decodeURIComponent(typeMatch[1]) : '',
+            href: href.substring(0, 250),
+          };
+        })
+        .filter(l => l.articleID && l.title.length > 5)
+    )
+  `, 83);
 
-    // Navigate to sector page (hash-based SPA — trigger via location.hash)
-    await evaluate(ws, `window.location.href = '${sector.url}'`, 80);
-    await new Promise(r => setTimeout(r, 6000)); // Wait for SPA to render
+  let allLinks = [];
+  try { allLinks = JSON.parse(linksRaw || '[]'); } catch {}
 
-    // Extract article headlines/summaries from the insights list
-    const articlesRaw = await evaluate(ws, `
-      JSON.stringify(
-        Array.from(document.querySelectorAll('article, [class*="insight"], [class*="article"], [class*="card"], [class*="result"]'))
-          .map(el => ({
-            title: (el.querySelector('h2, h3, h4, [class*="title"], [class*="headline"]') || {}).textContent?.trim() || '',
-            summary: (el.querySelector('p, [class*="summary"], [class*="description"], [class*="snippet"]') || {}).textContent?.trim() || '',
-            date: (el.querySelector('time, [class*="date"], [class*="time"]') || {}).textContent?.trim() || '',
-          }))
-          .filter(a => a.title.length > 5)
-          .slice(0, 15)
-      )
-    `, 81);
-
-    let articles = [];
-    try { articles = JSON.parse(articlesRaw || '[]'); } catch {}
-
-    // Fallback: if structured extraction fails, grab raw text
-    if (articles.length === 0) {
-      const rawText = await evaluate(ws, 'document.body?.innerText?.substring(0, 10000) || "empty"', 82);
-      allHeadlines.push({ sector: sector.name, rawContent: rawText || '', articles: [] });
-      console.log('[premium] Platts Core: ' + sector.name + ' — fallback text (' + (rawText || '').length + ' chars)');
-    } else {
-      allHeadlines.push({ sector: sector.name, articles, rawContent: '' });
-      console.log('[premium] Platts Core: ' + sector.name + ' — ' + articles.length + ' articles found');
-    }
+  // Dedup by articleID (Top News + News sections often show the same story)
+  const seen = new Set();
+  const unique = [];
+  for (const l of allLinks) {
+    if (!seen.has(l.articleID)) { seen.add(l.articleID); unique.push(l); }
   }
 
-  // Build combined content
-  const totalArticles = allHeadlines.reduce((sum, s) => sum + s.articles.length, 0);
-  let content = '';
-  for (const sector of allHeadlines) {
-    content += '=== PLATTS CORE: ' + sector.sector.toUpperCase() + ' ===\n';
-    if (sector.articles.length > 0) {
-      for (const a of sector.articles) {
-        content += '• ' + a.title + (a.date ? ' (' + a.date + ')' : '') + '\n';
-        if (a.summary) content += '  ' + a.summary + '\n';
-      }
-    } else if (sector.rawContent) {
-      content += sector.rawContent.substring(0, 3000) + '\n';
+  // Filter for Gulf/energy relevant keywords
+  const KEYWORDS = ['gulf', 'iran', 'hormuz', 'lng', 'crude', 'war', 'conflict', 'persian', 'energy', 'oil', 'opec',
+    'middle east', 'qatar', 'kuwait', 'saudi', 'uae', 'iraq', 'bahrain', 'oman', 'israel', 'strait',
+    'tanker', 'freight', 'shipping', 'force majeure', 'shutdown', 'disruption', 'escalation', 'refinery',
+    'petchem', 'petrochemical', 'ras laffan', 'bushehr', 'mahshahr', 'opec+', 'fujairah', 'abu dhabi', 'dubai'];
+  const gulfRelevant = unique.filter(l =>
+    KEYWORDS.some(kw => l.title.toLowerCase().includes(kw))
+  );
+
+  // Group by insightsType for structured output
+  const byType = {};
+  for (const l of unique) {
+    const t = l.insightsType || 'Other';
+    if (!byType[t]) byType[t] = [];
+    byType[t].push(l);
+  }
+
+  // Build content string — one line per article, grouped by type,
+  // Gulf-relevant articles marked with [GULF] prefix
+  let content = 'PLATTS CORE — News & Insights feed (landed: ' + landedUrl + ')\n';
+  content += 'Total unique articles: ' + unique.length + ', Gulf-relevant: ' + gulfRelevant.length + '\n\n';
+  for (const [type, items] of Object.entries(byType)) {
+    content += '=== ' + type.toUpperCase() + ' (' + items.length + ') ===\n';
+    for (const l of items.slice(0, 30)) {
+      const isGulf = KEYWORDS.some(kw => l.title.toLowerCase().includes(kw));
+      content += (isGulf ? '[GULF] ' : '') + '• ' + l.title + '\n';
     }
     content += '\n';
   }
 
-  // Filter for Gulf-relevant headlines
-  const relevant = allHeadlines.flatMap(s => s.articles)
-    .filter(a => KEYWORDS.some(kw => (a.title + ' ' + a.summary).toLowerCase().includes(kw)));
-
   ws.close();
 
-  // Content validation — check if we got real data or just an empty SPA shell
-  const totalRawChars = allHeadlines.reduce((sum, s) => sum + (s.rawContent || '').length, 0);
-  const hasContent = totalArticles > 0 || totalRawChars > 200;
-  const status = hasContent ? 'accessed' : 'no content';
+  // Status classification
+  let status;
+  if (unique.length === 0 && bodyLen < 2000) status = 'no-content';
+  else if (unique.length === 0) status = 'no-articles';
+  else status = 'accessed';
 
-  if (!hasContent) {
-    console.warn('[premium] Platts Core: NO CONTENT — page loaded but no articles or meaningful text extracted');
-  }
-  console.log('[premium] Platts Core:', status, '- total', totalArticles, 'articles,', relevant.length, 'Gulf-relevant');
+  console.log('[premium] Platts Core:', status,
+    '- total', unique.length, 'articles (' + Object.keys(byType).length + ' types),',
+    gulfRelevant.length, 'Gulf-relevant');
 
   return {
     status,
-    url: 'core.spglobal.com',
-    sectors: SECTORS.map(s => s.name),
+    url: 'core.spglobal.com/#platts/allInsights',
+    landedUrl,
     content,
-    totalArticles,
-    gulfRelevant: relevant.length,
-    headlines: allHeadlines,
+    totalArticles: unique.length,
+    gulfRelevant: gulfRelevant.length,
+    byType: Object.fromEntries(Object.entries(byType).map(([k, v]) => [k, v.length])),
+    articles: unique.slice(0, 100),
+    gulfArticles: gulfRelevant,
   };
 }
 

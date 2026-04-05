@@ -1,3 +1,40 @@
+/* === Brand tokens === */
+:root {
+  --adnoc-blue: #0055A5;
+  --adnoc-blue-hover: #004080;
+  --deep-navy: #102a43;
+  --darker-navy: #0a1929;
+  --ballast: #0F4C81;
+  --laden: #8A2D1A;
+}
+
+/* Canonical card shadow */
+.shadow-card { box-shadow: 0 1px 3px rgba(10, 25, 41, 0.04); }
+.shadow-card-hover { transition: box-shadow 0.15s ease, transform 0.15s ease; }
+.shadow-card-hover:hover { box-shadow: 0 4px 12px rgba(10, 25, 41, 0.08); transform: translateY(-1px); }
+
+/* Keyboard focus rings (accessibility) */
+.tab-btn:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: -2px;
+  border-radius: 2px;
+}
+.focus-ring:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 1px;
+  border-radius: 4px;
+}
+
+/* ADNOC brand utility classes */
+.bg-adnoc-blue { background-color: var(--adnoc-blue); }
+.bg-adnoc-blue:hover { background-color: var(--adnoc-blue-hover); }
+.text-adnoc-blue { color: var(--adnoc-blue); }
+.border-adnoc-blue { border-color: var(--adnoc-blue); }
+.bg-deep-navy { background-color: var(--deep-navy); }
+.bg-darker-navy { background-color: var(--darker-navy); }
+.bg-adnoc-blue-soft { background-color: rgba(0, 85, 165, 0.1); }
+.border-adnoc-blue-soft { border-color: rgba(0, 85, 165, 0.3); }
+
 /* Custom scrollbar for light theme */
 ::-webkit-scrollbar {
   width: 8px;
@@ -12,6 +49,15 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #9fb3c8;
+}
+
+/* Hide horizontal scrollbar on tab navigation (all viewports) */
+nav > div {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+nav > div::-webkit-scrollbar {
+  display: none;
 }
 
 /* Smooth expand/collapse animation */
@@ -210,14 +256,10 @@ a.source-link:hover {
   .stat-card {
     padding: 0.75rem;
   }
-  /* Hide tab bar scrollbar on mobile + scroll snap */
+  /* Mobile scroll snap on tab bar (scrollbar already hidden globally) */
   nav > div {
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
     scroll-snap-type: x mandatory;
-  }
-  nav > div::-webkit-scrollbar {
-    display: none;
   }
   .tab-btn {
     scroll-snap-align: center;

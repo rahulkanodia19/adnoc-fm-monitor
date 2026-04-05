@@ -280,7 +280,17 @@
         }
         return `<td class="px-2 py-2 ${c.hide}">${val}</td>`;
       }).join('');
-      return `<tr class="border-t border-navy-200 hover:bg-navy-50 text-xs">${cells}</tr>`;
+      return `<tr class="border-t border-navy-200 hover:bg-navy-50 text-xs">${cells}</tr>
+      <tr class="md:hidden border-t-0 text-[11px]">
+        <td colspan="${columns.length}" class="px-2 pb-2 pt-0 text-navy-600">
+          <div class="flex flex-wrap gap-x-3 gap-y-0.5">
+            ${v.vesselType ? `<span><span class="text-navy-500 uppercase tracking-wider text-[9px] mr-1">Type</span>${esc(v.vesselType)}</span>` : ''}
+            ${v.currentLocation ? `<span><span class="text-navy-500 uppercase tracking-wider text-[9px] mr-1">Loc</span>${esc(v.currentLocation)}</span>` : ''}
+            ${v.destinationPort ? `<span><span class="text-navy-500 uppercase tracking-wider text-[9px] mr-1">Dest</span>${esc(v.destinationPort)}</span>` : ''}
+            ${v.eta ? `<span><span class="text-navy-500 uppercase tracking-wider text-[9px] mr-1">ETA</span>${fmtDate(v.eta)}</span>` : ''}
+          </div>
+        </td>
+      </tr>`;
     }).join('');
 
     // Area filter options
@@ -316,7 +326,7 @@
         <p class="text-[10px] text-navy-500 italic">ADNOC L&S Fleet Vessel Tracking — Live Kpler + MINT data</p>
       </div>
       <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
-        <h3 class="text-xl font-extrabold text-[#0055A5] flex items-center gap-2">
+        <h3 class="text-xl font-extrabold text-adnoc-blue flex items-center gap-2">
           <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 17h2l.5-1.5L7 11l1.5 6H18l2-4h1"/></svg>
           ADNOC Fleet Tracker
         </h3>
@@ -324,27 +334,27 @@
 
       <!-- KPI Cards -->
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-4">
-        <div class="bg-white border border-navy-200 rounded-lg p-3">
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3">
           <div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Total Vessels</div>
           <div class="text-2xl font-extrabold text-navy-900">${summary.total || 0}</div>
         </div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3">
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3">
           <div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Area of Interest</div>
           <div class="text-2xl font-extrabold text-navy-900">${summary.inAreaOfInterest || 0}</div>
         </div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3">
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3">
           <div class="text-[10px] font-semibold uppercase tracking-wider text-red-600"><span class="inline-block w-2 h-2 rounded-full bg-red-500 mr-1"></span>SOH</div>
           <div class="text-2xl font-extrabold text-navy-900">${areas['Strait of Hormuz'] || 0}</div>
         </div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3">
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3">
           <div class="text-[10px] font-semibold uppercase tracking-wider text-cyan-600"><span class="inline-block w-2 h-2 rounded-full bg-cyan-500 mr-1"></span>Gulf of Oman</div>
           <div class="text-2xl font-extrabold text-navy-900">${areas['Gulf of Oman'] || 0}</div>
         </div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3">
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3">
           <div class="text-[10px] font-semibold uppercase tracking-wider text-orange-600"><span class="inline-block w-2 h-2 rounded-full bg-orange-500 mr-1"></span>Red Sea</div>
           <div class="text-2xl font-extrabold text-navy-900">${areas['Red Sea'] || 0}</div>
         </div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3">
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3">
           <div class="text-[10px] font-semibold uppercase tracking-wider text-indigo-600"><span class="inline-block w-2 h-2 rounded-full bg-indigo-500 mr-1"></span>Arabian Sea</div>
           <div class="text-2xl font-extrabold text-navy-900">${areas['Arabian Sea'] || 0}</div>
         </div>
@@ -365,33 +375,33 @@
       <!-- Controls -->
       <div class="flex flex-wrap items-center gap-2 mb-3">
         <input type="text" id="adnoc-fleet-search" placeholder="Search vessel, IMO, port..."
-          class="px-3 py-1.5 text-xs border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 w-48"
+          class="px-3 py-1.5 text-xs border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 w-full sm:w-48"
           value="${state.filter.replace(/"/g, '&quot;')}">
-        <div class="flex items-center gap-1" id="adnoc-fleet-area-chips">
+        <div class="flex flex-wrap items-center gap-1" id="adnoc-fleet-area-chips">
           ${areaOptions.map(a => {
             const label = a === 'all' ? 'All' : a === 'aoi' ? 'AOI' : a;
             const active = state.areaFilter === a;
-            return `<button data-area="${a}" class="px-2.5 py-1 text-[10px] font-semibold rounded-full border transition-colors ${active ? 'bg-[#0055A5] text-white border-[#0055A5]' : 'bg-white text-navy-600 border-navy-300 hover:border-navy-400'}">${label}</button>`;
+            return `<button data-area="${a}" class="px-2.5 py-1 text-[10px] font-semibold rounded-full border transition-colors ${active ? 'bg-adnoc-blue text-white border-adnoc-blue' : 'bg-white text-navy-600 border-navy-300 hover:border-navy-400'}">${label}</button>`;
           }).join('')}
         </div>
-        <span class="text-navy-300">|</span>
-        <div class="flex items-center gap-1" id="adnoc-fleet-bound-chips">
+        <span class="text-navy-300 hidden sm:inline">|</span>
+        <div class="flex flex-wrap items-center gap-1" id="adnoc-fleet-bound-chips">
           ${boundOptions.map(b => {
             const label = b === 'all' ? 'All' : b;
             const active = state.boundFilter === b;
-            return `<button data-bound="${b}" class="px-2.5 py-1 text-[10px] font-semibold rounded-full border transition-colors ${active ? 'bg-[#0055A5] text-white border-[#0055A5]' : 'bg-white text-navy-600 border-navy-300 hover:border-navy-400'}">${label}</button>`;
+            return `<button data-bound="${b}" class="px-2.5 py-1 text-[10px] font-semibold rounded-full border transition-colors ${active ? 'bg-adnoc-blue text-white border-adnoc-blue' : 'bg-white text-navy-600 border-navy-300 hover:border-navy-400'}">${label}</button>`;
           }).join('')}
         </div>
-        <button id="adnoc-fleet-export" class="px-3 py-1.5 text-xs font-semibold bg-[#0055A5] text-white rounded-lg hover:bg-[#004080] transition-colors ml-auto">
+        <button id="adnoc-fleet-export" class="px-3 py-1.5 text-xs font-semibold bg-adnoc-blue text-white rounded-lg transition-colors focus-ring ml-auto">
           Export Excel
         </button>
         <span class="text-[10px] text-navy-400">${sorted.length} of ${allVessels.length} vessels</span>
       </div>
 
       <!-- Table -->
-      <div class="overflow-x-auto rounded-xl border border-navy-200 shadow-sm bg-white">
+      <div class="rounded-xl border border-navy-200/70 shadow-sm bg-white">
         <table class="w-full text-left" id="adnoc-fleet-table">
-          <thead class="bg-[#0a1929] text-white text-[10px] font-mono uppercase tracking-wider">
+          <thead class="sticky top-16 z-10 bg-darker-navy text-white text-[10px] font-mono uppercase tracking-wider">
             <tr>${theadCells}</tr>
           </thead>
           <tbody>${rows || '<tr><td colspan="20" class="px-4 py-8 text-center text-navy-400">No vessels match your filters</td></tr>'}</tbody>
@@ -509,13 +519,13 @@
     const portChips = portOptions.map(p => {
       const label = p === 'all' ? `All (${allC.length})` : `${p} (${byPort[p] || 0})`;
       const active = state.cPortFilter === p;
-      return `<button data-cport="${p}" class="px-2.5 py-1 text-[10px] font-semibold rounded-full border transition-colors ${active ? 'bg-[#0055A5] text-white border-[#0055A5]' : 'bg-white text-navy-600 border-navy-300 hover:border-navy-400'}">${label}</button>`;
+      return `<button data-cport="${p}" class="px-2.5 py-1 text-[10px] font-semibold rounded-full border transition-colors ${active ? 'bg-adnoc-blue text-white border-adnoc-blue' : 'bg-white text-navy-600 border-navy-300 hover:border-navy-400'}">${label}</button>`;
     }).join('');
 
     return `
     <div class="mt-8 mb-4">
       <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
-        <h3 class="text-xl font-extrabold text-[#0055A5] flex items-center gap-2">
+        <h3 class="text-xl font-extrabold text-adnoc-blue flex items-center gap-2">
           <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0H21"/></svg>
           Chartered / FOB Vessels at ADNOC Ports
         </h3>
@@ -523,19 +533,19 @@
       </div>
 
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
-        <div class="bg-white border border-navy-200 rounded-lg p-3">
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3">
           <div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Total at ADNOC Ports</div>
           <div class="text-2xl font-extrabold text-navy-900">${summary.total || 0}</div>
         </div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3">
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3">
           <div class="text-[10px] font-semibold uppercase tracking-wider text-emerald-600">Loaded</div>
           <div class="text-2xl font-extrabold text-navy-900">${summary.loaded || 0}</div>
         </div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3">
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3">
           <div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Ballast</div>
           <div class="text-2xl font-extrabold text-navy-900">${summary.ballast || 0}</div>
         </div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3">
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3">
           <div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Ports Active</div>
           <div class="text-2xl font-extrabold text-navy-900">${Object.keys(byPort).length}</div>
         </div>
@@ -543,19 +553,19 @@
 
       <div class="flex flex-wrap items-center gap-2 mb-3">
         <input type="text" id="adnoc-chartered-search" placeholder="Search vessel, IMO, port..."
-          class="px-3 py-1.5 text-xs border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 w-48"
+          class="px-3 py-1.5 text-xs border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 w-full sm:w-48"
           value="${state.cFilter.replace(/"/g, '&quot;')}">
-        <div class="flex items-center gap-1" id="adnoc-chartered-port-chips">
+        <div class="flex flex-wrap items-center gap-1" id="adnoc-chartered-port-chips">
           ${portChips}
         </div>
-        <button id="adnoc-chartered-export" class="px-3 py-1.5 text-xs font-semibold bg-[#0055A5] text-white rounded-lg hover:bg-[#004080] transition-colors ml-auto">
+        <button id="adnoc-chartered-export" class="px-3 py-1.5 text-xs font-semibold bg-adnoc-blue text-white rounded-lg transition-colors focus-ring ml-auto">
           Export Excel
         </button>
       </div>
 
-      <div class="overflow-x-auto rounded-xl border border-navy-200 shadow-sm bg-white">
+      <div class="rounded-xl border border-navy-200/70 shadow-sm bg-white">
         <table class="w-full text-left" id="adnoc-chartered-table">
-          <thead class="bg-[#0a1929] text-white text-[10px] font-mono uppercase tracking-wider">
+          <thead class="sticky top-16 z-10 bg-darker-navy text-white text-[10px] font-mono uppercase tracking-wider">
             <tr>${cHead}</tr>
           </thead>
           <tbody>${cRows || '<tr><td colspan="12" class="px-4 py-8 text-center text-navy-400">No vessels at ADNOC ports</td></tr>'}</tbody>
@@ -783,7 +793,7 @@
     const areaChips = areaOptions.map(a => {
       const label = a === 'all' ? `All (${allU.length})` : `${a} (${byArea[a] || 0})`;
       const active = state.uAreaFilter === a;
-      return `<button data-uarea="${a}" class="px-2.5 py-1 text-[10px] font-semibold rounded-full border transition-colors ${active ? 'bg-[#0055A5] text-white border-[#0055A5]' : 'bg-white text-navy-600 border-navy-300 hover:border-navy-400'}">${label}</button>`;
+      return `<button data-uarea="${a}" class="px-2.5 py-1 text-[10px] font-semibold rounded-full border transition-colors ${active ? 'bg-adnoc-blue text-white border-adnoc-blue' : 'bg-white text-navy-600 border-navy-300 hover:border-navy-400'}">${label}</button>`;
     }).join('');
 
     // Dest port chip filters
@@ -791,13 +801,13 @@
     const destPortChips = destPortOptions.map(p => {
       const label = p === 'all' ? `All (${allU.length})` : `${p} (${byDestPort[p] || 0})`;
       const active = state.uDestPortFilter === p;
-      return `<button data-udestport="${p}" class="px-2.5 py-1 text-[10px] font-semibold rounded-full border transition-colors ${active ? 'bg-[#0055A5] text-white border-[#0055A5]' : 'bg-white text-navy-600 border-navy-300 hover:border-navy-400'}">${label}</button>`;
+      return `<button data-udestport="${p}" class="px-2.5 py-1 text-[10px] font-semibold rounded-full border transition-colors ${active ? 'bg-adnoc-blue text-white border-adnoc-blue' : 'bg-white text-navy-600 border-navy-300 hover:border-navy-400'}">${label}</button>`;
     }).join('');
 
     return `
     <div class="mt-8 mb-4">
       <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
-        <h3 class="text-xl font-extrabold text-[#0055A5] flex items-center gap-2">
+        <h3 class="text-xl font-extrabold text-adnoc-blue flex items-center gap-2">
           <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"/></svg>
           Non-ADNOC Vessels Inbound to UAE (Outside Strait)
         </h3>
@@ -807,19 +817,19 @@
       <p class="text-[10px] text-navy-500 italic mb-3">Non-ADNOC L&amp;S vessels outside the Strait of Hormuz with destination set to UAE ports</p>
 
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
-        <div class="bg-white border border-navy-200 rounded-lg p-3">
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3">
           <div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Total UAE-Bound</div>
           <div class="text-2xl font-extrabold text-navy-900">${summary.total || 0}</div>
         </div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3">
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3">
           <div class="text-[10px] font-semibold uppercase tracking-wider text-emerald-600">Under Way</div>
           <div class="text-2xl font-extrabold text-navy-900">${summary.underWay || 0}</div>
         </div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3">
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3">
           <div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Loaded</div>
           <div class="text-2xl font-extrabold text-navy-900">${summary.loaded || 0}</div>
         </div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3">
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3">
           <div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Dest. Ports</div>
           <div class="text-2xl font-extrabold text-navy-900">${Object.keys(byDestPort).length}</div>
         </div>
@@ -827,23 +837,23 @@
 
       <div class="flex flex-wrap items-center gap-2 mb-3">
         <input type="text" id="adnoc-uae-inbound-search" placeholder="Search vessel, IMO, port..."
-          class="px-3 py-1.5 text-xs border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 w-48"
+          class="px-3 py-1.5 text-xs border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 w-full sm:w-48"
           value="${state.uFilter.replace(/"/g, '&quot;')}">
         <div class="flex items-center gap-1 flex-wrap" id="adnoc-uae-inbound-area-chips">
           ${areaChips}
         </div>
-        <span class="text-navy-300">|</span>
+        <span class="text-navy-300 hidden sm:inline">|</span>
         <div class="flex items-center gap-1 flex-wrap" id="adnoc-uae-inbound-destport-chips">
           ${destPortChips}
         </div>
-        <button id="adnoc-uae-inbound-export" class="px-3 py-1.5 text-xs font-semibold bg-[#0055A5] text-white rounded-lg hover:bg-[#004080] transition-colors ml-auto">
+        <button id="adnoc-uae-inbound-export" class="px-3 py-1.5 text-xs font-semibold bg-adnoc-blue text-white rounded-lg transition-colors focus-ring ml-auto">
           Export Excel
         </button>
       </div>
 
-      <div class="overflow-x-auto rounded-xl border border-navy-200 shadow-sm bg-white">
+      <div class="rounded-xl border border-navy-200/70 shadow-sm bg-white">
         <table class="w-full text-left" id="adnoc-uae-inbound-table">
-          <thead class="bg-[#0a1929] text-white text-[10px] font-mono uppercase tracking-wider">
+          <thead class="sticky top-16 z-10 bg-darker-navy text-white text-[10px] font-mono uppercase tracking-wider">
             <tr>${uHead}</tr>
           </thead>
           <tbody>${uRows || '<tr><td colspan="12" class="px-4 py-8 text-center text-navy-400">No non-ADNOC vessels inbound to UAE</td></tr>'}</tbody>

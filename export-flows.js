@@ -274,36 +274,42 @@
     const priorIdx = lastCompleteIdx - 1;
 
     function periodRate(idx) {
-      if (idx < 0 || idx >= totals.length) return { val: 0, days: 0, rate: 0, label: '', period: null };
+      if (idx < 0 || idx >= totals.length) return { val: 0, days: 0, rate: 0, displayVal: 0, label: '', period: null };
       const val = totals[idx] || 0;
       const days = base[idx] ? base[idx].d : 0;
       const rate = days > 0 ? val / days / 1000 : 0;
-      return { val, days, rate, label: periods[idx] || '', period: periods[idx] || null };
+      // displayVal: period total (Mt) for mass-based commodities, daily rate (mbbl/d) for volume-based
+      const displayVal = isMassBased() ? val / 1000 : rate;
+      return { val, days, rate, displayVal, label: periods[idx] || '', period: periods[idx] || null };
     }
     const lastComplete = periodRate(lastCompleteIdx);
     const partial = periodRate(partialIdx);
     const prior = periodRate(priorIdx);
 
-    const pctChangeLastVsPrior = prior.rate > 0 ? ((lastComplete.rate - prior.rate) / prior.rate * 100) : 0;
-    const pctChangePartialVsLast = lastComplete.rate > 0 && lastIsPartial ? ((partial.rate - lastComplete.rate) / lastComplete.rate * 100) : 0;
+    // % change comparisons use displayVal so mass-based and volume-based comparisons are apples-to-apples
+    const pctChangeLastVsPrior = prior.displayVal > 0 ? ((lastComplete.displayVal - prior.displayVal) / prior.displayVal * 100) : 0;
+    const pctChangePartialVsLast = lastComplete.displayVal > 0 && lastIsPartial ? ((partial.displayVal - lastComplete.displayVal) / lastComplete.displayVal * 100) : 0;
 
     const fullBase = lastIsPartial ? base.slice(0, -1) : base;
     const fullTotals = lastIsPartial ? totals.slice(0, -1) : totals;
-    const avgRate = fullBase.length > 0 ? fullBase.reduce((s, rec, i) => s + (rec.d > 0 ? fullTotals[i] / rec.d / 1000 : 0), 0) / fullBase.length : 0;
+    const avgRate = fullBase.length > 0 ? fullBase.reduce((s, rec, i) => {
+      const v = isMassBased() ? fullTotals[i] / 1000 : (rec.d > 0 ? fullTotals[i] / rec.d / 1000 : 0);
+      return s + v;
+    }, 0) / fullBase.length : 0;
 
     return {
       curr: lastIsPartial ? partial.val : lastComplete.val,
-      currRate: lastIsPartial ? partial.rate : lastComplete.rate,
+      currRate: lastIsPartial ? partial.displayVal : lastComplete.displayVal,  // always displayVal now
       currDays: lastIsPartial ? partial.days : lastComplete.days,
       currPeriod: lastIsPartial ? partial.period : lastComplete.period,
       currIdx: lastIdx,
-      prevRate: lastComplete.rate,
+      prevRate: lastComplete.displayVal,
       pctChange: lastIsPartial ? pctChangePartialVsLast : pctChangeLastVsPrior,
       lastIsPartial,
       lastComplete, partial, prior,
       lastCompleteIdx, partialIdx, priorIdx,
       pctChangeLastVsPrior, pctChangePartialVsLast,
-      avgRate,
+      avgRate,  // already branched above — Mt for mass-based, mbbl/d for volume-based
     };
   }
 
@@ -315,6 +321,10 @@
 
   function toDisplay(val) { return val / 1000; }
   function toRate(val, days) { return days > 0 ? val / days / 1000 : 0; }
+
+  // Unified display helpers: mass-based → period total in Mt; volume-based → daily rate in mbbl/d.
+  function getDisplayUnit() { return isMassBased() ? getUnit() : getRateUnit(); }
+  function toDisplayVal(val, days) { return isMassBased() ? toDisplay(val) : toRate(val, days); }
 
   function fmtNum(n) {
     if (Math.abs(n) >= 1000000) return (n / 1000000).toFixed(1) + 'M';
@@ -403,7 +413,7 @@
 
   function renderKPICards(kpis) {
     if (!kpis.currRate && kpis.currRate !== 0) return '';
-    const displayUnit = getRateUnit();
+    const displayUnit = getDisplayUnit();
     const rangeLabel = state.timeRange === 'all' ? 'All-Time' : state.timeRange.toUpperCase();
 
     function fmtPeriod(periodStr) {
@@ -448,8 +458,8 @@
       const parFooter = `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-amber-50 text-amber-700">Partial in-flight (${par.days}d)</span>`;
       return `
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-          ${kpiCard('sky-400', svgChart, 'sky-500', 'Last Complete', fmtPeriod(lc.period), lc.rate, fmtPctBadge(kpis.pctChangeLastVsPrior) + '<span class="text-[10px] text-navy-400">vs prior</span>', lcFooter)}
-          ${kpiCard('amber-400', svgClock, 'amber-500', 'Current Partial', fmtPeriod(par.period), par.rate, fmtPctBadge(kpis.pctChangePartialVsLast) + '<span class="text-[10px] text-navy-400">vs last complete</span>', parFooter)}
+          ${kpiCard('sky-400', svgChart, 'sky-500', 'Last Complete', fmtPeriod(lc.period), lc.displayVal, fmtPctBadge(kpis.pctChangeLastVsPrior) + '<span class="text-[10px] text-navy-400">vs prior</span>', lcFooter)}
+          ${kpiCard('amber-400', svgClock, 'amber-500', 'Current Partial', fmtPeriod(par.period), par.displayVal, fmtPctBadge(kpis.pctChangePartialVsLast) + '<span class="text-[10px] text-navy-400">vs last complete</span>', parFooter)}
           ${kpiCard('navy-400', svgBars, 'navy-500', rangeLabel + ' Avg', '(excl. partial)', kpis.avgRate, '', avgFooter)}
         </div>`;
     }
@@ -457,7 +467,7 @@
     const currFooter = `<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium bg-sky-50 text-sky-700">${viewLabel}</span>`;
     return `
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-        ${kpiCard('sky-400', svgChart, 'sky-500', fmtPeriod(lc.period) || 'Current Period', '', lc.rate, fmtPctBadge(kpis.pctChangeLastVsPrior) + '<span class="text-[10px] text-navy-400">vs prior</span>', currFooter)}
+        ${kpiCard('sky-400', svgChart, 'sky-500', fmtPeriod(lc.period) || 'Current Period', '', lc.displayVal, fmtPctBadge(kpis.pctChangeLastVsPrior) + '<span class="text-[10px] text-navy-400">vs prior</span>', currFooter)}
         ${kpiCard('navy-400', svgBars, 'navy-500', rangeLabel + ' Avg', '', kpis.avgRate, '', avgFooter)}
       </div>
     `;
@@ -466,7 +476,7 @@
   function generateInsights(timeline, kpis) {
     const { totals, topDestinations, countrySeriesData, base } = timeline;
     if (!totals || totals.length < 3) return [];
-    const unit = getRateUnit();
+    const unit = getDisplayUnit();
     const isPartial = kpis.lastIsPartial;
     const insights = [];
     const exporterLabel = getExporterLabel();
@@ -504,8 +514,8 @@
     if (refIdx < 1) return [];
     const refDays = base[refIdx].d || 1;
     const prevDays = base[prevIdx].d || 1;
-    const refVal = toRate(totals[refIdx], refDays);
-    const prevVal = toRate(totals[prevIdx], prevDays);
+    const refVal = toDisplayVal(totals[refIdx], refDays);
+    const prevVal = toDisplayVal(totals[prevIdx], prevDays);
     const refLabel = periodStr(base[refIdx]);
 
     // Zero-volume edge case
@@ -521,7 +531,7 @@
     const endIdx = isPartial ? totals.length - 2 : totals.length - 1;
     const fullRates = [];
     for (let i = 0; i <= endIdx; i++) {
-      fullRates.push(toRate(totals[i], base[i].d || 1));
+      fullRates.push(toDisplayVal(totals[i], base[i].d || 1));
     }
     if (fullRates.length === 0) return insights;
     const displayAvg = kpis.avgRate;
@@ -542,7 +552,7 @@
     let asianRefTotal = 0;
     const allDests = topDestinations || [];
     for (const c of Object.keys(countrySeriesData)) {
-      if (ASIAN_BUYERS.includes(c)) asianRefTotal += toRate(countrySeriesData[c][refIdx] || 0, refDays);
+      if (ASIAN_BUYERS.includes(c)) asianRefTotal += toDisplayVal(countrySeriesData[c][refIdx] || 0, refDays);
     }
     const asianShareRef = refVal > 0 ? (asianRefTotal / refVal * 100) : 0;
 
@@ -578,7 +588,7 @@
     }
     // Partial-period in-flight tracker (when current period is partial)
     if (isPartial && kpis.partial && kpis.partial.days > 0) {
-      const partialVal = toRate(totals[kpis.partialIdx], kpis.partial.days);
+      const partialVal = toDisplayVal(totals[kpis.partialIdx], kpis.partial.days);
       const parLabel = periodStr(base[kpis.partialIdx]);
       const pctVsLast = refVal > 0 ? ((partialVal - refVal) / refVal * 100) : 0;
       const parDirWord = pctVsLast >= 0 ? 'up' : 'down';
@@ -593,12 +603,12 @@
     if (allDests.length >= 2) {
       // Sort top 5 by current-period value (largest first)
       const top = allDests.slice(0, Math.min(5, allDests.length))
-        .sort((a, b) => toRate(countrySeriesData[b][refIdx] || 0, refDays) - toRate(countrySeriesData[a][refIdx] || 0, refDays));
+        .sort((a, b) => toDisplayVal(countrySeriesData[b][refIdx] || 0, refDays) - toDisplayVal(countrySeriesData[a][refIdx] || 0, refDays));
       const details = [];
 
       for (const c of top) {
-        const curr = toRate(countrySeriesData[c][refIdx] || 0, refDays);
-        const prev = toRate(countrySeriesData[c][prevIdx] || 0, prevDays);
+        const curr = toDisplayVal(countrySeriesData[c][refIdx] || 0, refDays);
+        const prev = toDisplayVal(countrySeriesData[c][prevIdx] || 0, prevDays);
         const diff = curr - prev;
         const pctOfTotal = refVal > 0 ? (curr / refVal * 100) : 0;
         let changeStr = '';
@@ -616,12 +626,12 @@
 
       // Summary line: concentration risk or Asian share
       if (top.length >= 2 && refVal > 0) {
-        const top1Val = toRate(countrySeriesData[top[0]][refIdx] || 0, refDays);
+        const top1Val = toDisplayVal(countrySeriesData[top[0]][refIdx] || 0, refDays);
         const top1Share = (top1Val / refVal * 100);
         if (top1Share >= 90) {
           b2 += ` <strong>Single-buyer dependency:</strong> ${displayName(top[0])} takes ${top1Share.toFixed(0)}% — loss of this market would eliminate nearly all export revenue.`;
         } else {
-          const top2Val = top1Val + toRate(countrySeriesData[top[1]][refIdx] || 0, refDays);
+          const top2Val = top1Val + toDisplayVal(countrySeriesData[top[1]][refIdx] || 0, refDays);
           const top2Share = (top2Val / refVal * 100);
           if (top2Share >= 60) b2 += ` ${displayName(top[0])} and ${displayName(top[1])} at ${top2Share.toFixed(0)}% creates revenue concentration risk.`;
         }
@@ -854,7 +864,7 @@
 
         ${state.commodity === 'crude' ? `
         <div class="mb-6">
-          <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5">
+          <div class="chart-card bg-white rounded-xl border border-navy-200/70 shadow-sm p-5">
             <h3 class="text-lg font-bold text-navy-800 mb-0.5" id="ef-chart-rate-title">${state.view === 'daily' ? 'Daily Export Rate' : state.view === 'weekly' ? 'Weekly Export Rate' : 'Monthly Export Rate'}</h3>
             <p class="text-xs text-navy-400 mb-3">Average daily rate per period (${getRateUnit()})</p>
             <div class="chart-container">
@@ -864,7 +874,7 @@
         </div>
         ` : `
         <div class="mb-6">
-          <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5">
+          <div class="chart-card bg-white rounded-xl border border-navy-200/70 shadow-sm p-5">
             <h3 class="text-lg font-bold text-navy-800 mb-0.5" id="ef-chart-trend-title">Total Export Volume</h3>
             <p class="text-xs text-navy-400 mb-3">Cumulative volume per period (${getUnit()})</p>
             <div class="chart-container">
@@ -875,16 +885,16 @@
         `}
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
-          <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5 md:col-span-2">
+          <div class="chart-card bg-white rounded-xl border border-navy-200/70 shadow-sm p-5 md:col-span-2">
             <h3 class="text-lg font-bold text-navy-800 mb-0.5">Destination Breakdown</h3>
-            <p class="text-xs text-navy-400 mb-3" id="chart-ef-origin-stacked-subtitle">Daily rate by top buyer countries (${getRateUnit()})</p>
+            <p class="text-xs text-navy-400 mb-3" id="chart-ef-origin-stacked-subtitle">${isMassBased() ? 'Period volume' : 'Daily rate'} by top buyer countries (${getDisplayUnit()})</p>
             <div class="chart-container">
               <canvas id="chart-ef-origin-stacked"></canvas>
             </div>
           </div>
-          <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5">
+          <div class="chart-card bg-white rounded-xl border border-navy-200/70 shadow-sm p-5">
             <h3 class="text-lg font-bold text-navy-800 mb-0.5" id="ef-chart-donut-title">Current Period Mix</h3>
-            <p class="text-xs text-navy-400 mb-3" id="ef-chart-donut-subtitle">Latest period rate breakdown (${getRateUnit()})</p>
+            <p class="text-xs text-navy-400 mb-3" id="ef-chart-donut-subtitle">Latest period ${isMassBased() ? 'volume' : 'rate'} breakdown (${getDisplayUnit()})</p>
             <div id="ef-chart-donut-container">
               <div class="chart-container">
                 <canvas id="chart-ef-donut"></canvas>
@@ -894,7 +904,7 @@
         </div>
 
         <div class="mb-6">
-          <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5">
+          <div class="chart-card bg-white rounded-xl border border-navy-200/70 shadow-sm p-5">
             <h3 class="text-lg font-bold text-navy-800 mb-0.5">Destination Share Over Time</h3>
             <p class="text-xs text-navy-400 mb-3">Percentage contribution of each buyer</p>
             <div class="chart-container chart-container-sm">
@@ -905,18 +915,18 @@
 
         <div id="ef-pipeline-callout"></div>
 
-        <div class="bg-white rounded-xl border border-navy-200 shadow-sm overflow-hidden mb-4">
-          <div class="h-1 bg-gradient-to-r from-sky-400 via-amber-400 to-sky-400"></div>
+        <div class="bg-white rounded-xl border border-navy-200/70 shadow-sm mb-4">
+          <div class="h-1 bg-gradient-to-r from-sky-400 via-amber-400 to-sky-400 rounded-t-xl"></div>
           <div class="px-5 py-4 border-b border-navy-200 flex items-center justify-between">
             <div>
               <h3 class="text-lg font-bold text-navy-800">Top Destinations Breakdown</h3>
-              <p class="text-xs text-navy-400 mt-0.5">Daily rate by destination country (${getRateUnit()})</p>
+              <p class="text-xs text-navy-500 mt-0.5">${isMassBased() ? 'Period volume' : 'Daily rate'} by destination country (${getDisplayUnit()})</p>
             </div>
             <span class="text-xs font-semibold text-navy-500 bg-navy-100 px-2.5 py-1 rounded-full" id="ef-table-subtitle"></span>
           </div>
-          <div class="overflow-x-auto">
+          <div>
             <table class="w-full text-left" id="ef-table-wrapper">
-              <thead id="ef-thead" class="bg-navy-50 text-navy-600 text-xs uppercase tracking-wider"></thead>
+              <thead id="ef-thead" class="sticky top-16 z-10 bg-navy-50 text-navy-500 text-xs uppercase tracking-wider"></thead>
               <tbody id="ef-tbody" class="divide-y divide-navy-100"></tbody>
             </table>
           </div>
@@ -959,7 +969,7 @@
       ctx.fillText(fmtNum(total), cx, cy - 8);
       ctx.font = '11px system-ui, sans-serif';
       ctx.fillStyle = '#627d98';
-      ctx.fillText(getRateUnit(), cx, cy + 10);
+      ctx.fillText(getDisplayUnit(), cx, cy + 10);
       ctx.restore();
     }
   };
@@ -1008,7 +1018,7 @@
 
     // Converted data
     const displayTotals = totals.map(v => toDisplay(v));
-    const rateTotals = totals.map((v, i) => toRate(v, base[i] ? base[i].d : 0));
+    const rateTotals = totals.map((v, i) => toDisplayVal(v, base[i] ? base[i].d : 0));
 
     // Helper: split a series into two datasets — complete bars + partial bar (dashed).
     function splitPartialDatasets(seriesData, color, label, unitStr) {
@@ -1106,17 +1116,18 @@
 
       const ds = topDestinations.map(c => ({
         label: c,
-        data: countrySeriesData[c].slice(0, sliceEnd).map((v, i) => toRate(v, sBase[i] ? sBase[i].d : 0)),
+        data: countrySeriesData[c].slice(0, sliceEnd).map((v, i) => toDisplayVal(v, sBase[i] ? sBase[i].d : 0)),
         backgroundColor: destColors[c],
         borderColor: destColors[c],
         borderWidth: 1.5, fill: true, pointRadius: 0, tension: 0.3,
       }));
-      ds.push({ label: 'Others', data: others.slice(0, sliceEnd).map((v, i) => toRate(v, sBase[i] ? sBase[i].d : 0)), backgroundColor: '#94a3b8', borderColor: '#94a3b8', borderWidth: 1.5, fill: true, pointRadius: 0, tension: 0.3 });
+      ds.push({ label: 'Others', data: others.slice(0, sliceEnd).map((v, i) => toDisplayVal(v, sBase[i] ? sBase[i].d : 0)), backgroundColor: '#94a3b8', borderColor: '#94a3b8', borderWidth: 1.5, fill: true, pointRadius: 0, tension: 0.3 });
 
       // Subtitle update with exclusion note
       const subtitleEl = document.getElementById('chart-ef-origin-stacked-subtitle');
       if (subtitleEl) {
-        const baseText = 'Daily rate by top buyer countries (' + getRateUnit() + ')';
+        const prefix = isMassBased() ? 'Period volume' : 'Daily rate';
+        const baseText = `${prefix} by top buyer countries (${getDisplayUnit()})`;
         const periodName = state.view === 'monthly' ? 'month' : 'week';
         subtitleEl.textContent = excludeLast
           ? `${baseText} — partial ${periodName} excluded (only ${dLast}d)`
@@ -1129,9 +1140,9 @@
           responsive: true, maintainAspectRatio: false,
           plugins: {
             legend: SHARED_LEGEND,
-            tooltip: { ...commonTooltip, mode: 'index', callbacks: { label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y.toFixed(2)} ${getRateUnit()}` } },
+            tooltip: { ...commonTooltip, mode: 'index', callbacks: { label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y.toFixed(2)} ${getDisplayUnit()}` } },
           },
-          scales: { x: commonScaleX, y: { ...commonScaleY, stacked: true, title: { display: true, text: getRateUnit(), color: tickColor, font: { size: 10 } } } },
+          scales: { x: commonScaleX, y: { ...commonScaleY, stacked: true, title: { display: true, text: getDisplayUnit(), color: tickColor, font: { size: 10 } } } },
           interaction: { intersect: false, mode: 'index' },
         },
       });
@@ -1172,12 +1183,12 @@
     if (topDestinations.length > 0) {
       const donutLabels = [...topDestinations, 'Others'];
       const donutColors = donutLabels.map(c => destColors[c]);
-      const donutUnit = getRateUnit();
+      const donutUnit = getDisplayUnit();
 
       function buildDonutData(idx) {
         const days = base[idx] ? base[idx].d : 0;
-        const dArr = topDestinations.map(c => toRate(countrySeriesData[c][idx] || 0, days));
-        return [...dArr, toRate(others[idx] || 0, days)];
+        const dArr = topDestinations.map(c => toDisplayVal(countrySeriesData[c][idx] || 0, days));
+        return [...dArr, toDisplayVal(others[idx] || 0, days)];
       }
       function fmtDonutPeriod(idx) {
         if (idx < 0 || !base[idx]) return '';
@@ -1247,7 +1258,7 @@
         charts.donutPartial = mkDonut('chart-ef-donut-partial', buildDonutData(kpis.partialIdx), false);
       } else {
         if (titleEl) titleEl.textContent = 'Current Period Mix';
-        if (subtitleEl) subtitleEl.textContent = 'Latest period rate breakdown (' + donutUnit + ')';
+        if (subtitleEl) subtitleEl.textContent = 'Latest period ' + (isMassBased() ? 'volume' : 'rate') + ' breakdown (' + donutUnit + ')';
         if (container) {
           container.innerHTML = `<div class="chart-container"><canvas id="chart-ef-donut"></canvas></div>`;
         }
@@ -1287,11 +1298,11 @@
 
     function valFor(countryArr, idx, days) {
       if (idx < 0) return 0;
-      return toRate(countryArr[idx] || 0, days);
+      return toDisplayVal(countryArr[idx] || 0, days);
     }
     const mainTotal = valFor(totals, mainIdx, mainDays);
     const partialTotal = valFor(totals, partialIdx, partialDays);
-    const avgTotal = base.reduce((s, rec, i) => s + toRate(totals[i], rec.d), 0) / base.length;
+    const avgTotal = base.reduce((s, rec, i) => s + toDisplayVal(totals[i], rec.d), 0) / base.length;
 
     function periodHeaderFor(idx) {
       if (idx < 0 || !base[idx]) return '';
@@ -1306,7 +1317,7 @@
     const partialHeader = periodHeaderFor(partialIdx);
     const rangeAvgLabel = (state.timeRange === 'all' ? 'All-Time' : state.timeRange.toUpperCase()) + ' Avg';
 
-    if (subtitle) subtitle.textContent = getRateUnit();
+    if (subtitle) subtitle.textContent = getDisplayUnit();
 
     if (dualMode) {
       thead.innerHTML = `<tr>
@@ -1334,7 +1345,7 @@
       const mainShare = mainTotal > 0 ? (mainVal / mainTotal * 100) : 0;
       const partialVal = valFor(countrySeriesData[c], partialIdx, partialDays);
       const partialShare = partialTotal > 0 ? (partialVal / partialTotal * 100) : 0;
-      const periodAvg = base.reduce((s, rec, idx) => s + toRate(countrySeriesData[c][idx] || 0, rec.d), 0) / base.length;
+      const periodAvg = base.reduce((s, rec, idx) => s + toDisplayVal(countrySeriesData[c][idx] || 0, rec.d), 0) / base.length;
       const avgShare = avgTotal > 0 ? (periodAvg / avgTotal * 100) : 0;
       return { rank: i + 1, country: c, mainVal, mainShare, partialVal, partialShare, periodAvg, avgShare, color: destColors[c] };
     });
@@ -1343,7 +1354,7 @@
     const othersMainShare = mainTotal > 0 ? (othersMain / mainTotal * 100) : 0;
     const othersPartial = valFor(others, partialIdx, partialDays);
     const othersPartialShare = partialTotal > 0 ? (othersPartial / partialTotal * 100) : 0;
-    const othersAvg = base.reduce((s, rec, i) => s + toRate(others[i] || 0, rec.d), 0) / base.length;
+    const othersAvg = base.reduce((s, rec, i) => s + toDisplayVal(others[i] || 0, rec.d), 0) / base.length;
     const othersAvgShare = avgTotal > 0 ? (othersAvg / avgTotal * 100) : 0;
     rows.push({ rank: rows.length + 1, country: 'Others', mainVal: othersMain, mainShare: othersMainShare, partialVal: othersPartial, partialShare: othersPartialShare, periodAvg: othersAvg, avgShare: othersAvgShare, color: '#94a3b8' });
 
@@ -1361,6 +1372,13 @@
               ${pipelineMap[r.country] ? `<span class="text-[10px] font-semibold px-1.5 py-0.5 bg-sky-100 text-sky-700 rounded" title="Includes pipeline flow: ${pipelineMap[r.country].label} (~${pipelineMap[r.country].currentThroughput} kbd)">PIPE</span>` : ''}
             </div>
           </td>`;
+      const colCount = dualMode ? 7 : 6;
+      const detailRow = `
+        <tr class="sm:hidden ${evenClass} border-t-0">
+          <td colspan="${colCount}" class="px-3 pb-2 pt-0 text-[11px] text-navy-500">
+            <span class="text-navy-500 uppercase tracking-wider text-[9px] mr-1">${rangeAvgLabel}</span>${r.periodAvg.toFixed(2)}${!dualMode ? ` <span class="text-navy-300 mx-1">&middot;</span><span class="text-navy-500 uppercase tracking-wider text-[9px] mr-1">Avg Share</span>${r.avgShare.toFixed(1)}%` : ''}
+          </td>
+        </tr>`;
       if (dualMode) {
         return `
         <tr class="hover:bg-sky-50/50 transition-colors ${evenClass}">
@@ -1370,7 +1388,7 @@
           <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-amber-700">${r.partialVal.toFixed(2)}</td>
           <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-amber-700">${r.partialShare.toFixed(1)}%</td>
           <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-navy-600 hidden sm:table-cell">${r.periodAvg.toFixed(2)}</td>
-        </tr>`;
+        </tr>${detailRow}`;
       }
       return `
         <tr class="hover:bg-sky-50/50 transition-colors ${evenClass}">
@@ -1379,7 +1397,7 @@
           <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-navy-700">${r.mainShare.toFixed(1)}%</td>
           <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-navy-700 hidden sm:table-cell">${r.periodAvg.toFixed(2)}</td>
           <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-navy-600 hidden sm:table-cell">${r.avgShare.toFixed(1)}%</td>
-        </tr>`;
+        </tr>${detailRow}`;
     }).join('');
 
     // Total row

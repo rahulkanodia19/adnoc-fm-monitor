@@ -311,12 +311,19 @@
 
   // ---------- Rendering ----------
 
+  function isMassBased() {
+    // Mass-based (Mt period total): lng, lpg, sulphur
+    // Volume-based (mbbl/d daily rate): crude, kero_jet, gasoil_diesel, gasoline, naphtha
+    return ['lng', 'lpg', 'sulphur'].includes(state.commodity);
+  }
+
   function getUnit() {
-    return state.commodity === 'lng' ? 'Mt' : 'mbbl';
+    return isMassBased() ? 'Mt' : 'mbbl';
   }
 
   function getRateUnit() {
-    return state.commodity === 'crude' ? 'mbbl/d' : 'Mt/d';
+    // Mass-based commodities never show /d — use period total Mt instead.
+    return isMassBased() ? 'Mt' : 'mbbl/d';
   }
 
   function toDisplay(val) {
@@ -328,10 +335,8 @@
   }
 
   function isCrude() {
-    // Volume-based commodities (kbd) vs mass-based (Mt)
-    // kbd: crude, kero_jet, gasoil_diesel, gasoline, naphtha
-    // Mt: lng, lpg, sulphur
-    return !['lng', 'lpg', 'sulphur'].includes(state.commodity);
+    // Historically named — actually distinguishes volume-based (true) from mass-based (false).
+    return !isMassBased();
   }
 
   function fmtNum(n) {
@@ -885,7 +890,7 @@
 
         ${crude ? `
         <div class="mb-6">
-          <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5">
+          <div class="chart-card bg-white rounded-xl border border-navy-200/70 shadow-sm p-5">
             <h3 class="text-lg font-bold text-navy-800 mb-0.5" id="chart-rate-title">${state.view === 'daily' ? 'Daily Import Rate' : state.view === 'weekly' ? 'Weekly Import Rate' : 'Monthly Import Rate'}</h3>
             <p class="text-xs text-navy-400 mb-3">Average daily rate per period (${rateUnit})</p>
             <div class="chart-container">
@@ -895,7 +900,7 @@
         </div>
         ` : `
         <div class="mb-6">
-          <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5">
+          <div class="chart-card bg-white rounded-xl border border-navy-200/70 shadow-sm p-5">
             <h3 class="text-lg font-bold text-navy-800 mb-0.5" id="chart-trend-title">Total Import Volume</h3>
             <p class="text-xs text-navy-400 mb-3">Cumulative volume per period (${unit})</p>
             <div class="chart-container">
@@ -906,14 +911,14 @@
         `}
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
-          <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5 md:col-span-2">
+          <div class="chart-card bg-white rounded-xl border border-navy-200/70 shadow-sm p-5 md:col-span-2">
             <h3 class="text-lg font-bold text-navy-800 mb-0.5">Origin Breakdown</h3>
             <p class="text-xs text-navy-400 mb-3" id="chart-origin-stacked-subtitle">${crude ? 'Daily rate by top source countries (' + rateUnit + ')' : 'Stacked volume by top source countries (' + unit + ')'}</p>
             <div class="chart-container">
               <canvas id="chart-origin-stacked"></canvas>
             </div>
           </div>
-          <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5">
+          <div class="chart-card bg-white rounded-xl border border-navy-200/70 shadow-sm p-5">
             <h3 class="text-lg font-bold text-navy-800 mb-0.5" id="chart-donut-title">Current Period Mix</h3>
             <p class="text-xs text-navy-400 mb-3" id="chart-donut-subtitle">${crude ? 'Latest period rate breakdown (' + rateUnit + ')' : 'Latest period supplier breakdown (' + unit + ')'}</p>
             <div id="chart-donut-container">
@@ -925,7 +930,7 @@
         </div>
 
         <div class="mb-6">
-          <div class="chart-card bg-white rounded-xl border border-navy-200 shadow-sm p-5">
+          <div class="chart-card bg-white rounded-xl border border-navy-200/70 shadow-sm p-5">
             <h3 class="text-lg font-bold text-navy-800 mb-0.5">Origin Share Over Time</h3>
             <p class="text-xs text-navy-400 mb-3">Percentage contribution of each supplier</p>
             <div class="chart-container chart-container-sm">
@@ -936,18 +941,18 @@
 
         <div id="if-pipeline-callout"></div>
 
-        <div class="bg-white rounded-xl border border-navy-200 shadow-sm overflow-hidden mb-4">
-          <div class="h-1 bg-gradient-to-r from-sky-400 via-amber-400 to-sky-400"></div>
+        <div class="bg-white rounded-xl border border-navy-200/70 shadow-sm mb-4">
+          <div class="h-1 bg-gradient-to-r from-sky-400 via-amber-400 to-sky-400 rounded-t-xl"></div>
           <div class="px-5 py-4 border-b border-navy-200 flex items-center justify-between">
             <div>
               <h3 class="text-lg font-bold text-navy-800">Top Suppliers Breakdown</h3>
-              <p class="text-xs text-navy-400 mt-0.5">${crude ? 'Daily rate by origin country (' + rateUnit + ')' : 'Volume by origin country (' + unit + ')'}</p>
+              <p class="text-xs text-navy-500 mt-0.5">${crude ? 'Daily rate by origin country (' + rateUnit + ')' : 'Volume by origin country (' + unit + ')'}</p>
             </div>
             <span class="text-xs font-semibold text-navy-500 bg-navy-100 px-2.5 py-1 rounded-full" id="if-table-subtitle"></span>
           </div>
-          <div class="overflow-x-auto">
+          <div>
             <table class="w-full text-left" id="if-supplier-table-wrapper">
-              <thead id="if-supplier-thead" class="bg-navy-50 text-navy-600 text-xs uppercase tracking-wider"></thead>
+              <thead id="if-supplier-thead" class="sticky top-16 z-10 bg-navy-50 text-navy-500 text-xs uppercase tracking-wider"></thead>
               <tbody id="if-supplier-table" class="divide-y divide-navy-100"></tbody>
             </table>
           </div>
@@ -1432,6 +1437,13 @@
               ${pipelineMap[r.country] ? `<span class="text-[10px] font-semibold px-1.5 py-0.5 bg-sky-100 text-sky-700 rounded" title="Includes pipeline flow: ${pipelineMap[r.country].label} (~${pipelineMap[r.country].currentThroughput} kbd)">PIPE</span>` : ''}
             </div>
           </td>`;
+      const colCount = dualMode ? 7 : 6;
+      const detailRow = `
+        <tr class="sm:hidden ${evenClass} border-t-0">
+          <td colspan="${colCount}" class="px-3 pb-2 pt-0 text-[11px] text-navy-500">
+            <span class="text-navy-500 uppercase tracking-wider text-[9px] mr-1">${rangeAvgLabel}</span>${r.periodAvg.toFixed(precision)}${!dualMode ? ` <span class="text-navy-300 mx-1">&middot;</span><span class="text-navy-500 uppercase tracking-wider text-[9px] mr-1">Avg Share</span>${r.avgShare.toFixed(1)}%` : ''}
+          </td>
+        </tr>`;
       if (dualMode) {
         return `
         <tr class="hover:bg-sky-50/50 transition-colors ${evenClass}">
@@ -1441,7 +1453,7 @@
           <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-amber-700">${r.partialVal.toFixed(precision)}</td>
           <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-amber-700">${r.partialShare.toFixed(1)}%</td>
           <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-navy-600 hidden sm:table-cell">${r.periodAvg.toFixed(precision)}</td>
-        </tr>`;
+        </tr>${detailRow}`;
       }
       return `
         <tr class="hover:bg-sky-50/50 transition-colors ${evenClass}">
@@ -1450,7 +1462,7 @@
           <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-navy-700">${r.mainShare.toFixed(1)}%</td>
           <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-navy-700 hidden sm:table-cell">${r.periodAvg.toFixed(precision)}</td>
           <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-navy-600 hidden sm:table-cell">${r.avgShare.toFixed(1)}%</td>
-        </tr>`;
+        </tr>${detailRow}`;
     }).join('');
 
     // Total row

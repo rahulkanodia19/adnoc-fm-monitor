@@ -1,12 +1,16 @@
-# Daily Data Sync — ADNOC FM Monitor
+# News & Country Status Sync — ADNOC FM Monitor
 
-You are an energy intelligence analyst updating the ADNOC Force Majeure & Geopolitical Monitor dashboard. Your job is to search for the latest developments in the Gulf/Hormuz military escalation crisis and update the data files accordingly.
+You are an energy intelligence analyst updating the ADNOC Force Majeure & Geopolitical Monitor dashboard. Your job is to search for the latest developments in the Gulf/Hormuz military escalation crisis and update the **country status and news** data.
+
+**You update ONLY** `COUNTRY_STATUS_DATA` (the 9 Gulf countries) and `energy-news-data.json`. **`FM_DECLARATIONS_DATA` and `SHUTDOWNS_NO_FM_DATA` are INPUT CONTEXT ONLY — DO NOT MODIFY THESE ARRAYS.** They are maintained by the separate sync-fm pipeline that runs after yours.
 
 ---
 
 ## Step 1: Read current data
 
-Read the file `data.js` in the project root. Note the schema, the current countries, FM declarations, and shutdowns. This is your baseline.
+Read the file `data.js` in the project root. Note the schema, the current countries, FM declarations, and shutdowns. The country status is your editable baseline. The FM_DECLARATIONS_DATA and SHUTDOWNS_NO_FM_DATA arrays are INPUT CONTEXT ONLY — use them to understand the current global FM/shutdown state when writing your country summaries and events, but do not modify them.
+
+**Snapshot counts for invariant check**: record `fmCountBefore = FM_DECLARATIONS_DATA.length` and `shutdownsCountBefore = SHUTDOWNS_NO_FM_DATA.length`. After writing data.js, these counts MUST be unchanged.
 
 ## Step 2: Save previous data (CRITICAL — do NOT skip)
 
@@ -209,7 +213,8 @@ Premium source content is pre-fetched from authenticated platforms before this a
 1. Read the file `soh-data/.premium-sources.json` — it contains extracted text/data from:
    - **Kpler** (`terminal.kpler.com/intelligence`) — intelligence articles and market reports
    - **Rystad** (`portal.rystadenergy.com/dashboards/detail/1047/0`) — Middle East Conflict Oil & Gas Infrastructure dashboard (may include screenshot at `soh-data/.rystad-dashboard.png`)
-   - **S&P Connect** (`connect.spglobal.com/home`) — news feed, market commentary, CERA reports
+   - **S&P Connect** (`connect.spglobal.com/home`) — news feed with full article bodies (5 Gulf-relevant strategic reports + market commentary, ~30-40K chars of content)
+   - **Platts Core** (`core.spglobal.com/#platts/allInsights`) — unified News & Insights feed: article headlines grouped by type (Top News, News, Spotlight, Market Commentary, Rationale). Gulf-relevant items are prefixed with `[GULF]` in the `content` field.
 
 2. If the file exists with content, analyze EACH platform's data and extract findings for data.js
 3. If the file doesn't exist or is empty, AND you have Chrome DevTools MCP tools, use browser fallback below
@@ -398,8 +403,8 @@ Update the `data.js` file with any new findings. Preserve the exact same schema 
   - `petrochemicals: { capacity: <kt/y>, affected: <kt/y>, available: <kt/y>, unit: "kt/y" }` — ethylene-equivalent nameplate capacity across all crackers/downstream. Seeded as a pre-war baseline (do NOT modify `capacity`). Update `affected` (offline kt/y) and `available` (capacity − affected) from news. Math: `capacity - affected = available` (±5% tolerance).
 - Each infrastructure item (especially terminals/ports) should include a `notes` field with a short terminal-specific status note (e.g., "Loading suspended after drone strikes Mar 14-17"). Schema: `{ name, type, capacity, status, notes }`
 - **assetImpact[] on events**: when an event describes damage/shutdown at a specific named facility, add an `assetImpact` array to the event with the matching infrastructure names. Format: `{ date, title, description, isNew, assetImpact: ["Habshan Gas Complex", "Habshan-5 LNG Train"] }`. Every string MUST exactly match a `name` in that country's `infrastructure[]`. If the facility isn't in infrastructure[], ADD it there first, then reference it. Validator will reject typos.
-- `FM_DECLARATIONS_DATA` — array of force majeure declarations. Each has: id, company, country, flag, date, status (active|partially_lifted|lifted), statusLabel, isNew, summary, details, sources
-- `SHUTDOWNS_NO_FM_DATA` — array of non-FM shutdowns. Each has: id, company, country, flag, date, status, statusLabel, isNew, summary, details, sources
+
+**NOTE**: `FM_DECLARATIONS_DATA` and `SHUTDOWNS_NO_FM_DATA` are managed by the sync-fm pipeline (runs after you). **You MUST NOT modify these arrays.** Treat them as read-only context.
 
 ### CRITICAL: Additive-only updates (DO NOT DELETE DATA)
 
@@ -409,7 +414,8 @@ Update the `data.js` file with any new findings. Preserve the exact same schema 
 2. **NEVER shorten a summary** — every summary must be equal or longer after your edit. If you find yourself rewriting a summary to be shorter, STOP and append instead.
 3. **NEVER remove source citations** — existing source IDs and URLs must all be preserved. Only add new ones.
 4. **NEVER delete events from the events array** — only add new events or update existing event status.
-5. **Before editing any country entry**, read `data-previous.json` and compare. After editing, verify the entry didn't lose any data from the previous version.
+5. **NEVER modify `FM_DECLARATIONS_DATA` or `SHUTDOWNS_NO_FM_DATA`** — these are owned by sync-fm pipeline. Their array lengths and contents MUST be identical before and after your edit.
+6. **Before editing any country entry**, read `data-previous.json` and compare. After editing, verify the entry didn't lose any data from the previous version.
 
 ### Rules
 - Pre-war baseline values (`preWar` fields in production objects) must NEVER change — these are fixed reference points
@@ -431,10 +437,9 @@ For each of the 6 note fields per country (oil, gas, refining, lng, petrochemica
 3. **Numeric precision with units**: oil/refining in `kb/d`, gas in `Bcf/d`, petchem in `kt/y`, LNG in `Mtpa`. Always include the unit.
 4. **Recency**: the note must reference an event/source dated within the last 14 days, OR be prefixed with "Baseline:" if describing pre-crisis structural state.
 5. **No cross-contamination**: after writing, re-scan all 6 notes for the country. Flag any text that overlaps commodities across unrelated fields.
-- If no new FM declarations are found in the last 7 days, note this in sync-log.json with a reason
 - Mark items as `isNew: true` if they occurred in the last 48 hours, otherwise `isNew: false`
-- Keep all existing entries, update their status if changed
-- Add new entries if found from web search
+- Keep all existing country entries; update their status/summary/events if changed
+- If you discover a new FM declaration or plant shutdown during your web search, **do NOT add it to FM_DECLARATIONS_DATA / SHUTDOWNS_NO_FM_DATA** (owned by sync-fm pipeline). Instead, log the finding under `fmCandidatesForFmPipeline[]` in sync-log.json (schema below). The sync-fm pipeline will verify and add the entry with proper global enrichment.
 - Include real source URLs where possible — prefer URLs from Tier 1 and Tier 2 sources
 - Keep the file header comment block with the updated timestamp
 - The file must use `const` declarations (not export)
@@ -489,8 +494,6 @@ Each country's `infrastructure[]` array MUST always include at least these criti
 ### Validation checklist (verify before writing)
 - [ ] All 9 countries present in COUNTRY_STATUS_DATA
 - [ ] Each country has events, infrastructure, oilGasImpact, and sources arrays
-- [ ] Each FM declaration has company, date, status, details, and sources
-- [ ] Each shutdown has company, date, status, details, and sources
 - [ ] All source URLs are real and accessible (not fabricated)
 - [ ] isNew flags reflect <48hr recency accurately
 - [ ] No schema changes to variable names or structure
@@ -500,6 +503,9 @@ Each country's `infrastructure[]` array MUST always include at least these criti
 - [ ] Refining math: capacity - affected = available (within rounding)
 - [ ] Petrochemicals math (where capacity > 0): capacity - affected = available
 - [ ] assetImpact[] entries on events match country.infrastructure[].name exactly (no typos)
+- [ ] **FM_DECLARATIONS_DATA.length is UNCHANGED from your Step 1 baseline snapshot**
+- [ ] **SHUTDOWNS_NO_FM_DATA.length is UNCHANGED from your Step 1 baseline snapshot**
+- [ ] Contents of both FM arrays are byte-for-byte identical to Step 1 (you did not touch them)
 
 ## Step 4b: Data loss verification (CRITICAL)
 
@@ -508,11 +514,24 @@ After writing data.js, read `data-previous.json` and verify NO DATA WAS LOST:
 1. For each of the 9 countries, compare the `summary` field length:
    - If the new summary is SHORTER than the previous one, you LOST data. Fix it by appending the missing content back.
 2. Count the sources array for each country — the new count must be >= the previous count.
-3. Count FM declarations — must be >= previous count (you can only ADD, never remove).
-4. Count shutdowns — must be >= previous count.
-5. Check that no event entries were deleted from any country's events array.
+3. Check that no event entries were deleted from any country's events array.
+4. Verify FM_DECLARATIONS_DATA.length === fmCountBefore (you did NOT touch this array).
+5. Verify SHUTDOWNS_NO_FM_DATA.length === shutdownsCountBefore (you did NOT touch this array).
 
-**If any data was lost, READ data-previous.json and RESTORE the missing content before proceeding.**
+**If any country data was lost, READ data-previous.json and RESTORE the missing content before proceeding. If FM/shutdown counts changed, you have bugged the file — re-read data.js, restore the original FM arrays from data-previous.json, and re-write.**
+
+## Step 4d: HARD GUARDRAILS (verify after writing data.js)
+
+These arrays are managed by the **sync-fm pipeline**, NOT by you:
+- `FM_DECLARATIONS_DATA`
+- `SHUTDOWNS_NO_FM_DATA`
+
+After you write data.js, verify:
+- `FM_DECLARATIONS_DATA.length` is UNCHANGED from the pre-edit count (`fmCountBefore`).
+- `SHUTDOWNS_NO_FM_DATA.length` is UNCHANGED from the pre-edit count (`shutdownsCountBefore`).
+- The contents of both arrays are IDENTICAL to what you read in Step 1 (no added, removed, or modified entries).
+
+If during your search you discovered a new FM/shutdown that should be tracked, **do NOT add it to the arrays directly**. Instead, log it in `sync-log.json` under a new `fmCandidatesForFmPipeline[]` array (schema in Step 5). The sync-fm pipeline runs after you and will verify and add the entry with proper regional search enrichment.
 
 ## Step 4c: Self-validate before finishing
 
@@ -520,11 +539,11 @@ After writing data.js, verify:
 1. The file has valid JavaScript syntax (all brackets/braces matched, no trailing commas after last array element)
 2. All 9 countries are present in COUNTRY_STATUS_DATA
 3. All preWar values match the locked baselines table above
-4. Every FM/shutdown entry has id, company, date, status, details.volumeAffected, details.commodity, sources
-5. Every country has production.notes with at least oil, gas, refining, petrochemicals, ports keys
-6. Refining/petrochemicals math: capacity - affected = available (within rounding)
-7. All status values are valid enum values
-8. Every event.assetImpact[] string matches an existing infrastructure[].name in the same country
+4. Every country has production.notes with at least oil, gas, refining, petrochemicals, ports keys
+5. Refining/petrochemicals math: capacity - affected = available (within rounding)
+6. All country status values are valid enum values
+7. Every event.assetImpact[] string matches an existing infrastructure[].name in the same country
+8. FM_DECLARATIONS_DATA and SHUTDOWNS_NO_FM_DATA arrays are UNCHANGED (length + contents)
 
 If any check fails, fix the issue before proceeding to Step 5.
 
@@ -537,8 +556,18 @@ Write a `sync-log.json` file with:
   "success": true,
   "changes": "<brief summary of what changed, or 'No new changes found'>",
   "countriesCount": <number>,
-  "fmCount": <number>,
-  "shutdownsCount": <number>,
+  "fmCountSnapshot": <FM_DECLARATIONS_DATA.length — unchanged from pre-edit>,
+  "shutdownsCountSnapshot": <SHUTDOWNS_NO_FM_DATA.length — unchanged from pre-edit>,
+  "fmCandidatesForFmPipeline": [
+    {
+      "type": "fm" | "shutdown",
+      "company": "<company name>",
+      "country": "<country string>",
+      "date": "YYYY-MM-DD",
+      "summary": "<one-line summary of the discovered event>",
+      "sourceUrl": "https://..."
+    }
+  ],
   "sourcesChecked": {
     "tier1": ["<list of Tier 1 sources that returned results>"],
     "tier2": ["<list of Tier 2 sources that returned results>"],
@@ -546,6 +575,8 @@ Write a `sync-log.json` file with:
   }
 }
 ```
+
+**`fmCandidatesForFmPipeline[]`** is a handoff array: if you discovered a new FM/shutdown during your search that isn't yet in FM_DECLARATIONS_DATA or SHUTDOWNS_NO_FM_DATA, list it here as a hint for the sync-fm pipeline that runs after you. Do NOT add the entry to the arrays yourself. Leave this as an empty array if no candidates were found.
 
 ## Important
 

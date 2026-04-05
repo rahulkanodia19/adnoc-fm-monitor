@@ -1,12 +1,15 @@
 #!/bin/bash
 # ==============================================================
-# sync-news.sh — News/FM/Production data sync via Claude agent
+# sync-news.sh — News/Country Status sync via Claude agent
+#
+# FM/shutdowns are handled by a separate sync-fm pipeline.
 #
 # Searches premium and public sources, updates data.js with:
-# - COUNTRY_STATUS_DATA (9 countries)
-# - FM_DECLARATIONS_DATA
-# - SHUTDOWNS_NO_FM_DATA
-# - energy-news-data.json
+# - COUNTRY_STATUS_DATA (9 Gulf countries)
+# - energy-news-data.json (48 commodity×country headlines)
+#
+# Reads FM_DECLARATIONS_DATA + SHUTDOWNS_NO_FM_DATA as INPUT
+# CONTEXT ONLY (do not modify).
 #
 # Requires: Chrome running on port 9222 (for premium site access)
 #
@@ -20,21 +23,50 @@ PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 DEBUG_PORT=9222
 
 echo "[sync-news] =========================================="
-echo "[sync-news] ADNOC FM Monitor — News/FM/Production Sync"
+echo "[sync-news] ADNOC FM Monitor — News/Country Status Sync"
 echo "[sync-news] =========================================="
 
 cd "$PROJECT_DIR"
 
+# Lock file to prevent concurrent runs
+LOCKFILE="$PROJECT_DIR/.sync-news.lock"
+if [ -f "$LOCKFILE" ]; then
+  PID=$(cat "$LOCKFILE" 2>/dev/null || echo "")
+  if [ -n "$PID" ] && kill -0 "$PID" 2>/dev/null; then
+    echo "[sync-news] Another sync-news is running (pid $PID). Abort."
+    exit 1
+  fi
+fi
+echo $$ > "$LOCKFILE"
+
 # Ctrl+C rollback: restore data files to HEAD and do not commit/push.
-# Fires before the commit block (lines ~76-88). Does not run under MASTER_SYNC=1
+# Fires before the commit block. Does not run under MASTER_SYNC=1
 # (master-sync.sh owns the commit; its own cleanup trap handles interrupts there).
 cleanup_on_interrupt() {
   echo ""
   echo "[sync-news] INTERRUPTED — rolling back uncommitted data files and skipping commit/push."
   git -C "$PROJECT_DIR" checkout HEAD -- data.js data-previous.json sync-log.json energy-news-data.json 2>/dev/null || true
+  rm -f "$LOCKFILE"
   exit 130
 }
 trap cleanup_on_interrupt INT TERM
+trap 'rm -f "$LOCKFILE"' EXIT
+
+# Snapshot FM/shutdown arrays BEFORE agent runs (for invariant check)
+SNAPSHOT_DIR="$PROJECT_DIR/.sync-backup"
+mkdir -p "$SNAPSHOT_DIR"
+node -e "
+const fs = require('fs');
+const code = fs.readFileSync('data.js', 'utf8');
+const fm = (code.match(/const FM_DECLARATIONS_DATA = \[[\s\S]*?\n\];/) || [''])[0];
+const sd = (code.match(/const SHUTDOWNS_NO_FM_DATA = \[[\s\S]*?\n\];/) || [''])[0];
+if (!fm || !sd) {
+  console.error('[sync-news] Could not extract FM arrays for invariant snapshot.');
+  process.exit(1);
+}
+fs.writeFileSync('.sync-backup/.news-pre-snapshot.json', JSON.stringify({ fm, sd }));
+console.log('[sync-news] Pre-edit FM array snapshot saved.');
+" || { echo "[sync-news] Pre-snapshot failed."; exit 1; }
 
 # Check if Chrome is available for premium sources
 TOOLS="Edit,Write,Read,WebSearch,WebFetch,Glob,Grep,Bash(git diff*),Bash(git status*)"
@@ -83,11 +115,33 @@ fi
 
 # Run Claude agent
 echo "[sync-news] Running Claude agent (web search + premium sources)..."
-cat scripts/sync-prompt.md | claude -p - \
+cat scripts/sync-news-prompt.md | NODE_OPTIONS="--max-old-space-size=4096" claude -p - \
   --allowedTools "$TOOLS" \
   --max-turns 50
 
 echo "[sync-news] Agent complete."
+
+# Invariant check: verify agent did NOT modify FM/shutdown arrays
+echo "[sync-news] Checking invariants (FM/shutdown arrays must be unchanged)..."
+if ! node -e "
+const fs = require('fs');
+const snap = JSON.parse(fs.readFileSync('.sync-backup/.news-pre-snapshot.json', 'utf8'));
+const code = fs.readFileSync('data.js', 'utf8');
+const fmAfter = (code.match(/const FM_DECLARATIONS_DATA = \[[\s\S]*?\n\];/) || [''])[0];
+const sdAfter = (code.match(/const SHUTDOWNS_NO_FM_DATA = \[[\s\S]*?\n\];/) || [''])[0];
+let failed = [];
+if (snap.fm !== fmAfter) failed.push('FM_DECLARATIONS_DATA');
+if (snap.sd !== sdAfter) failed.push('SHUTDOWNS_NO_FM_DATA');
+if (failed.length) {
+  console.error('[sync-news] INVARIANT VIOLATION — these arrays were modified:', failed.join(', '));
+  process.exit(1);
+}
+console.log('[sync-news] Invariants ok — FM/shutdown arrays unchanged.');
+"; then
+  echo "[sync-news] Restoring data.js from git."
+  git -C "$PROJECT_DIR" checkout -- data.js
+  exit 1
+fi
 
 # Fix LAST_UPDATED with actual machine time (rounded to previous hour)
 NOW=$(node -e "const d=new Date();d.setMinutes(0,0,0);process.stdout.write(d.toISOString())")
@@ -107,7 +161,7 @@ if [ -z "$MASTER_SYNC" ]; then
   if ! git -C "$PROJECT_DIR" diff --quiet data.js data-previous.json sync-log.json energy-news-data.json 2>/dev/null; then
     TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M UTC")
     git -C "$PROJECT_DIR" add data.js data-previous.json sync-log.json energy-news-data.json
-    git -C "$PROJECT_DIR" commit -m "chore: news/fm data sync ($TIMESTAMP)"
+    git -C "$PROJECT_DIR" commit -m "chore: news/country status sync ($TIMESTAMP)"
     git -C "$PROJECT_DIR" push origin master && echo "[sync-news] Pushed to origin/master" || echo "[sync-news] ⚠ Push to master failed"
     git -C "$PROJECT_DIR" push origin master:main && echo "[sync-news] Pushed to origin/main" || echo "[sync-news] ⚠ Push to main failed"
   else

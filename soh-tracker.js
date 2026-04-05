@@ -112,7 +112,7 @@
     if (!uae && !adnoc) return v.flagName || '-';
     let badges = '';
     if (uae) badges += '<span class="bg-sky-100 text-sky-700 text-[10px] font-bold px-1.5 py-0.5 rounded">UAE</span> ';
-    if (adnoc) badges += '<span class="bg-[#0055A5]/10 text-[#0055A5] text-[10px] font-bold px-1.5 py-0.5 rounded">ADNOC</span> ';
+    if (adnoc) badges += '<span class="bg-adnoc-blue-soft text-adnoc-blue text-[10px] font-bold px-1.5 py-0.5 rounded">ADNOC</span> ';
     if (!uae) badges += `<span class="text-navy-500 text-[10px]">${v.flagName || ''}</span>`;
     return badges;
   }
@@ -384,7 +384,7 @@
           <p class="text-xs text-navy-500 mt-0.5">Data: Kpler Terminal + S&amp;P MINT (containers)</p>
         </div>
         <button id="soh-export-btn" onclick="window.__sohExportXlsx()"
-          class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-navy-600 bg-white border border-navy-200 rounded-lg hover:border-navy-400 hover:text-navy-800 transition-colors">
+          class="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-navy-600 bg-white border border-navy-200/70 rounded-lg hover:border-navy-400 hover:text-navy-800 transition-colors">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V3"/></svg>
           Export Excel
         </button>
@@ -400,7 +400,7 @@
     <div class="soh-section mt-6" id="soh-map">
       <h3 class="text-sm font-bold text-navy-900 uppercase tracking-wider mb-3">Live Hormuz Traffic Picture</h3>
       <div class="relative rounded-xl overflow-hidden border border-navy-200 shadow-sm">
-        <div id="soh-map-container" class="h-[420px] lg:h-[520px] w-full bg-[#0a1929]"></div>
+        <div id="soh-map-container" class="h-[320px] sm:h-[420px] lg:h-[520px] w-full bg-darker-navy"></div>
       </div>
       <p class="text-[10px] text-navy-400 mt-2">Source: Kpler AIS + S&amp;P MINT (containers). Vessel locations may be imprecise due to GPS interference in the region.</p>
     </div>`;
@@ -472,7 +472,7 @@
         ${renderToggle('View', 'flowView', [['daily', 'Daily'], ['weekly', 'Weekly'], ['monthly', 'Monthly']])}
         ${renderToggle('Range', 'flowRange', [['1w', '1W'], ['2w', '2W'], ['3w', '3W'], ['1m', '1M'], ['2m', '2M']])}
       </div>
-      <div class="bg-white rounded-xl border border-navy-200 p-3 sm:p-5">
+      <div class="bg-white rounded-xl border border-navy-200/70 p-3 sm:p-5">
         <p class="text-xs font-semibold text-navy-700 mb-1">Volume via Hormuz</p>
         <p class="text-[10px] text-navy-400 mb-2">${{all:'All commodity',crude:'Crude/condensate',lng:'Refined products, LNG, dry bulk & other',lpg:'LPG'}[state.flowCommodity]} flows via Hormuz (${{all:'bbl/day',crude:'bbl/day',lng:'bbl/day',lpg:'mmt/day'}[state.flowCommodity]}) — Source: Kpler</p>
         <div class="h-[280px] sm:h-[320px]"><canvas id="soh-flow-export-chart"></canvas></div>
@@ -480,7 +480,7 @@
 
       <h3 class="text-sm font-bold text-navy-900 uppercase tracking-wider mt-6 mb-3">Vessel Transits via Hormuz</h3>
       <p class="text-xs text-navy-500 mb-3">Vessel exits (&uarr;) and entries (&darr;) through the Strait of Hormuz by type. Dashed red line = crisis start (28 Feb). Range toggle applies.</p>
-      <div class="bg-white rounded-xl border border-navy-200 p-3 sm:p-5">
+      <div class="bg-white rounded-xl border border-navy-200/70 p-3 sm:p-5">
         <p class="text-xs font-semibold text-navy-700 mb-1">Daily Vessel Exits &amp; Entries by Type</p>
         <p class="text-[10px] text-navy-400 mb-2">Sources: IMF PortWatch (pre-23 Mar, total transits) | Kpler (23-30 Mar, approx exits) | Kpler + MINT midnight snapshots (31 Mar+, exits &amp; entries)</p>
         <p class="text-[10px] text-navy-400 mb-2">Solid bars = exits | Faded bars = entries (stacked on top)</p>
@@ -837,6 +837,13 @@
         <td class="px-3 py-2.5 hidden md:table-cell text-navy-600">${v.destination || '-'}</td>
         <td class="px-3 py-2.5 hidden lg:table-cell text-right font-mono">${fmtNum(v.deadWeight)}</td>
         <td class="px-3 py-2.5 hidden lg:table-cell text-right font-mono">${v.capacity ? fmtNum(v.capacity) : '-'}</td>
+      </tr>
+      <tr class="md:hidden border-t-0 text-[11px]">
+        <td colspan="8" class="px-3 pb-2.5 pt-0 text-navy-600">
+          <div class="sm:hidden mb-0.5"><span class="text-navy-500 uppercase tracking-wider text-[9px] mr-1">Type</span>${v.type || '-'}</div>
+          <div><span class="text-navy-500 uppercase tracking-wider text-[9px] mr-1">From</span>${v.departed || '-'} <span class="text-navy-400 mx-1">&rarr;</span> <span class="text-navy-500 uppercase tracking-wider text-[9px] mr-1">To</span>${v.destination || '-'}</div>
+          <div class="lg:hidden text-navy-500 text-[10px] mt-0.5">DWT ${fmtNum(v.deadWeight)}${v.capacity ? ` &middot; Cap ${fmtNum(v.capacity)} m&sup3;` : ''}</div>
+        </td>
       </tr>`;
     }).join('');
 
@@ -846,24 +853,24 @@
         <p class="text-[10px] text-navy-500 italic">Strait of Hormuz Vessel Tracking - Curated live list</p>
       </div>
       <div class="flex items-center justify-between mb-4">
-        <h3 class="text-xl font-extrabold text-[#0055A5] flex items-center gap-2">
+        <h3 class="text-xl font-extrabold text-adnoc-blue flex items-center gap-2">
           <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 17h2l.5-1.5L7 11l1.5 6H18l2-4h1"/></svg>
           ADNOC Vessels in Hormuz
         </h3>
       </div>
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
-        <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">ADNOC Vessels in Hormuz</div><div class="text-2xl font-extrabold text-navy-900">${vessels.length}</div></div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500"><span class="inline-block w-2 h-2 rounded-full bg-amber-500 mr-1"></span>Anchored</div><div class="text-2xl font-extrabold text-navy-900">${anchored}</div></div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500"><span class="inline-block w-2 h-2 rounded-full bg-amber-400 mr-1"></span>Moored</div><div class="text-2xl font-extrabold text-navy-900">${moored}</div></div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500"><span class="inline-block w-2 h-2 rounded-full bg-emerald-500 mr-1"></span>Under Way</div><div class="text-2xl font-extrabold text-navy-900">${underway}</div></div>
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">ADNOC Vessels in Hormuz</div><div class="text-2xl font-extrabold text-navy-900">${vessels.length}</div></div>
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500"><span class="inline-block w-2 h-2 rounded-full bg-amber-500 mr-1"></span>Anchored</div><div class="text-2xl font-extrabold text-navy-900">${anchored}</div></div>
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500"><span class="inline-block w-2 h-2 rounded-full bg-amber-400 mr-1"></span>Moored</div><div class="text-2xl font-extrabold text-navy-900">${moored}</div></div>
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500"><span class="inline-block w-2 h-2 rounded-full bg-emerald-500 mr-1"></span>Under Way</div><div class="text-2xl font-extrabold text-navy-900">${underway}</div></div>
       </div>
       <div class="bg-amber-50 border border-amber-200 rounded-lg px-4 py-2.5 mb-4 text-xs text-amber-800">
         <span class="font-bold uppercase tracking-wider text-[10px]">Live Vessel Tracking Disclaimer</span><br>
         AIS/GPS location services within the Mideast Gulf are subject to interference due to the ongoing hostilities, vessels may appear in irregular and imprecise locations.
       </div>
-      <div class="overflow-x-auto rounded-xl border border-navy-200 shadow-sm bg-white">
+      <div class="rounded-xl border border-navy-200/70 shadow-sm bg-white">
         <table class="w-full text-left min-w-[700px]">
-          <thead class="bg-[#0a1929] text-white text-[10px] font-mono uppercase tracking-wider">
+          <thead class="sticky top-16 z-10 bg-darker-navy text-white text-[10px] font-mono uppercase tracking-wider">
             <tr>
               <th class="px-3 py-2.5">Vessel Name</th>
               <th class="px-3 py-2.5 hidden sm:table-cell">Type</th>
@@ -903,7 +910,15 @@
         <td class="px-3 py-2.5 text-right font-mono">${cls.laden}</td>
         <td class="px-3 py-2.5 text-right font-mono font-bold">${cls.total}</td>
         <td class="px-3 py-2.5 text-right font-mono hidden sm:table-cell">${share}%</td>
-        <td class="px-3 py-2.5 hidden md:table-cell"><div class="soh-mix-bar w-24"><div style="width:${mixB}%;background:#0F4C81" class="h-full"></div><div style="width:${mixL}%;background:#8A2D1A" class="h-full"></div></div></td>
+        <td class="px-3 py-2.5 hidden md:table-cell"><div class="soh-mix-bar w-16 sm:w-24"><div style="width:${mixB}%;background:var(--ballast)" class="h-full"></div><div style="width:${mixL}%;background:var(--laden)" class="h-full"></div></div></td>
+      </tr>
+      <tr class="md:hidden border-t-0 text-[11px] bg-navy-50">
+        <td colspan="6" class="px-3 pb-2 pt-0">
+          <div class="flex items-center gap-2 text-navy-600">
+            <span class="sm:hidden"><span class="text-navy-500 uppercase tracking-wider text-[9px] mr-1">Share</span>${share}%</span>
+            <div class="flex items-center gap-1.5 flex-1"><span class="text-navy-500 uppercase tracking-wider text-[9px]">Mix</span><div class="soh-mix-bar w-16 flex-shrink-0"><div style="width:${mixB}%;background:var(--ballast)" class="h-full"></div><div style="width:${mixL}%;background:var(--laden)" class="h-full"></div></div><span class="text-[10px] text-navy-500">${mixB}/${mixL}</span></div>
+          </div>
+        </td>
       </tr>`;
     }).join('');
 
@@ -930,15 +945,15 @@
         </div>
       </div>
       <div class="grid grid-cols-3 gap-3 mb-4">
-        <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Total Vessels</div><div class="text-2xl font-extrabold text-navy-900">${gt.total}</div></div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500"><span class="inline-block w-2 h-2 rounded-full mr-1" style="background:#0F4C81"></span>Ballast</div><div class="text-2xl font-extrabold text-navy-900">${gt.ballast}</div></div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500"><span class="inline-block w-2 h-2 rounded-full mr-1" style="background:#8A2D1A"></span>Laden</div><div class="text-2xl font-extrabold text-navy-900">${gt.laden}</div></div>
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Total Vessels</div><div class="text-2xl font-extrabold text-navy-900">${gt.total}</div></div>
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500"><span class="inline-block w-2 h-2 rounded-full mr-1" style="background:var(--ballast)"></span>Ballast</div><div class="text-2xl font-extrabold text-navy-900">${gt.ballast}</div></div>
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500"><span class="inline-block w-2 h-2 rounded-full mr-1" style="background:var(--laden)"></span>Laden</div><div class="text-2xl font-extrabold text-navy-900">${gt.laden}</div></div>
       </div>
       <div class="flex flex-col lg:flex-row gap-4 mb-4">
-        <div class="lg:w-[65%] bg-white rounded-xl border border-navy-200 p-4"><p class="text-[10px] uppercase tracking-wider text-navy-500 font-semibold mb-2">Category Composition</p><div class="h-[300px]"><canvas id="soh-category-chart"></canvas></div></div>
-        <div class="lg:w-[35%] bg-white rounded-xl border border-navy-200 p-4"><p class="text-[10px] uppercase tracking-wider text-navy-500 font-semibold mb-2">Status Mix</p><div class="h-[300px]"><canvas id="soh-status-donut"></canvas></div></div>
+        <div class="lg:w-[65%] bg-white rounded-xl border border-navy-200/70 p-4"><p class="text-[10px] uppercase tracking-wider text-navy-500 font-semibold mb-2">Category Composition</p><div class="h-[300px]"><canvas id="soh-category-chart"></canvas></div></div>
+        <div class="lg:w-[35%] bg-white rounded-xl border border-navy-200/70 p-4"><p class="text-[10px] uppercase tracking-wider text-navy-500 font-semibold mb-2">Status Mix</p><div class="h-[300px]"><canvas id="soh-status-donut"></canvas></div></div>
       </div>
-      <div class="overflow-x-auto rounded-xl border border-navy-200 shadow-sm bg-white">
+      <div class="overflow-x-auto rounded-xl border border-navy-200/70 shadow-sm bg-white">
         <table class="w-full text-left min-w-[400px]">
           <thead class="bg-navy-900 text-white text-[10px] uppercase tracking-wider">
             <tr><th class="px-3 py-2.5">Class</th><th class="px-3 py-2.5 text-right">Ballast</th><th class="px-3 py-2.5 text-right">Laden</th><th class="px-3 py-2.5 text-right">Total</th><th class="px-3 py-2.5 text-right hidden sm:table-cell">Share</th><th class="px-3 py-2.5 hidden md:table-cell">Mix</th></tr>
@@ -951,7 +966,7 @@
       ${pvFiltered.length > 0 ? `
       <div class="mt-4">
         <p class="text-[10px] uppercase tracking-wider text-navy-500 font-semibold mb-2">Estimated Laden Cargo by Product (${region === 'inside' ? 'Inside Gulf' : 'Outside Gulf'})</p>
-        <div class="overflow-x-auto rounded-xl border border-navy-200 shadow-sm bg-white">
+        <div class="overflow-x-auto rounded-xl border border-navy-200/70 shadow-sm bg-white">
           <table class="w-full text-left">
             <thead class="bg-navy-100 text-[10px] uppercase tracking-wider text-navy-600"><tr><th class="px-3 py-2">Commodity</th><th class="px-3 py-2 text-right">Vessels</th><th class="px-3 py-2 text-right">Est. Capacity</th><th class="px-3 py-2">Unit</th><th class="px-3 py-2 text-right hidden sm:table-cell">Share</th><th class="px-3 py-2 hidden md:table-cell">Top Products</th></tr></thead>
             <tbody>${pvRows}</tbody>
@@ -975,8 +990,8 @@
         data: {
           labels: matrix.map(c => c.label),
           datasets: [
-            { label: 'Ballast', data: matrix.map(c => c.ballast), backgroundColor: '#0F4C81' },
-            { label: 'Laden', data: matrix.map(c => c.laden), backgroundColor: '#8A2D1A' },
+            { label: 'Ballast', data: matrix.map(c => c.ballast), backgroundColor: 'rgb(15, 76, 129)' },
+            { label: 'Laden', data: matrix.map(c => c.laden), backgroundColor: 'rgb(138, 45, 26)' },
           ],
         },
         options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'top', labels: { font: { size: 10 } } }, datalabels: { display: false } }, scales: { x: { stacked: true, ticks: { font: { size: 10 } }, grid: { color: '#e5e7eb' } }, y: { stacked: true, ticks: { font: { size: 10 } } } } },
@@ -988,7 +1003,7 @@
       if (statusDonut) statusDonut.destroy();
       statusDonut = new Chart(donutCanvas, {
         type: 'doughnut',
-        data: { labels: ['Ballast', 'Laden'], datasets: [{ data: [gt.ballast, gt.laden], backgroundColor: ['#0F4C81', '#8A2D1A'], borderWidth: 2, borderColor: '#fff' }] },
+        data: { labels: ['Ballast', 'Laden'], datasets: [{ data: [gt.ballast, gt.laden], backgroundColor: ['rgb(15, 76, 129)', 'rgb(138, 45, 26)'], borderWidth: 2, borderColor: '#fff' }] },
         options: { responsive: true, maintainAspectRatio: false, cutout: '60%', plugins: { legend: { position: 'bottom', labels: { font: { size: 11 } } }, datalabels: { color: '#fff', font: { weight: 'bold', size: 12 }, textAlign: 'center', formatter: (value, ctx) => { const total = ctx.dataset.data.reduce((a, b) => a + b, 0); if (!value || !total) return ''; return `${value}\n(${(value / total * 100).toFixed(0)}%)`; }, display: (ctx) => ctx.dataset.data[ctx.dataIndex] > 0 } } },
       });
     }
@@ -1003,7 +1018,7 @@
     const rows = items.map((item, i) => `
       <tr class="border-t border-navy-200 text-xs ${i % 2 ? 'bg-navy-50' : 'bg-white'} hover:bg-sky-50">
         <td class="px-3 py-2 font-medium text-navy-800">${item.label}</td><td class="px-3 py-2 text-right font-mono">${item.total}</td><td class="px-3 py-2 text-right font-mono">${item.ballast}</td><td class="px-3 py-2 text-right font-mono">${item.laden}</td>
-        <td class="px-3 py-2 hidden sm:table-cell"><div class="soh-mix-bar w-20"><div style="width:${item.total > 0 ? (item.ballast / item.total * 100).toFixed(0) : 0}%;background:#0F4C81" class="h-full"></div><div style="width:${item.total > 0 ? (item.laden / item.total * 100).toFixed(0) : 0}%;background:#8A2D1A" class="h-full"></div></div></td>
+        <td class="px-3 py-2 hidden sm:table-cell"><div class="soh-mix-bar w-20"><div style="width:${item.total > 0 ? (item.ballast / item.total * 100).toFixed(0) : 0}%;background:var(--ballast)" class="h-full"></div><div style="width:${item.total > 0 ? (item.laden / item.total * 100).toFixed(0) : 0}%;background:var(--laden)" class="h-full"></div></div></td>
       </tr>`).join('');
 
     return `
@@ -1015,8 +1030,8 @@
         <button onclick="window.__sohSetBreakdown('destination')" class="px-3 py-1.5 rounded-lg text-xs font-medium ${tab === 'destination' ? 'bg-navy-900 text-white' : 'bg-white border border-navy-200 text-navy-600 hover:bg-navy-50'}">By Destination</button>
       </div>
       <div class="flex flex-col lg:flex-row gap-4">
-        <div class="lg:w-[55%] bg-white rounded-xl border border-navy-200 p-4"><div class="h-[300px]"><canvas id="soh-product-chart"></canvas></div></div>
-        <div class="lg:w-[45%] overflow-x-auto rounded-xl border border-navy-200 shadow-sm bg-white">
+        <div class="lg:w-[55%] bg-white rounded-xl border border-navy-200/70 p-4"><div class="h-[300px]"><canvas id="soh-product-chart"></canvas></div></div>
+        <div class="lg:w-[45%] overflow-x-auto rounded-xl border border-navy-200/70 shadow-sm bg-white">
           <table class="w-full text-left"><thead class="bg-navy-100 text-[10px] uppercase tracking-wider text-navy-600"><tr><th class="px-3 py-2">${tab === 'product' ? 'Product' : tab === 'vesselType' ? 'Vessel Type' : 'Destination'}</th><th class="px-3 py-2 text-right">Total</th><th class="px-3 py-2 text-right">Ballast</th><th class="px-3 py-2 text-right">Laden</th><th class="px-3 py-2 hidden sm:table-cell">Mix</th></tr></thead><tbody>${rows}</tbody></table>
         </div>
       </div>
@@ -1075,13 +1090,13 @@
       <h3 class="text-sm font-bold text-navy-900 uppercase tracking-wider mb-3">Vessels In Transit</h3>
       <p class="text-xs text-navy-500 mb-3">Commodity vessels actively transiting the Strait (speed &gt; 3 kn) — Source: Kpler AIS + S&amp;P MINT</p>
       <div class="grid grid-cols-3 sm:grid-cols-5 gap-3 mb-4">
-        <div class="bg-white border border-navy-200 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Exiting Gulf</div><div class="text-2xl font-extrabold text-red-600">${exiting}</div></div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Entering Gulf</div><div class="text-2xl font-extrabold text-emerald-600">${entering}</div></div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Total Transit</div><div class="text-2xl font-extrabold text-navy-900">${vessels.length}</div></div>
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Exiting Gulf</div><div class="text-2xl font-extrabold text-red-600">${exiting}</div></div>
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Entering Gulf</div><div class="text-2xl font-extrabold text-emerald-600">${entering}</div></div>
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Total Transit</div><div class="text-2xl font-extrabold text-navy-900">${vessels.length}</div></div>
         <div class="bg-white border border-sky-200 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-sky-600">UAE Flagged</div><div class="text-2xl font-extrabold text-sky-700">${uaeTotal}</div></div>
-        <div class="bg-white border border-[#0055A5]/30 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-[#0055A5]">ADNOC</div><div class="text-2xl font-extrabold text-[#0055A5]">${adnocTotal}</div></div>
+        <div class="bg-white border border-adnoc-blue-soft rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-adnoc-blue">ADNOC</div><div class="text-2xl font-extrabold text-adnoc-blue">${adnocTotal}</div></div>
       </div>
-      <div class="overflow-x-auto rounded-xl border border-navy-200 shadow-sm bg-white">
+      <div class="overflow-x-auto rounded-xl border border-navy-200/70 shadow-sm bg-white">
         <table class="w-full text-left min-w-[500px]">
           <thead class="bg-navy-100 text-[10px] uppercase tracking-wider text-navy-600">
             <tr><th class="px-3 py-2.5 w-8">#</th><th class="px-3 py-2.5">Name</th><th class="px-3 py-2.5">Direction</th><th class="px-3 py-2.5 hidden sm:table-cell">Flag</th><th class="px-3 py-2.5 hidden sm:table-cell">Type</th><th class="px-3 py-2.5">Cargo</th><th class="px-3 py-2.5 hidden md:table-cell">Product</th><th class="px-3 py-2.5 hidden md:table-cell">Destination</th><th class="px-3 py-2.5 hidden lg:table-cell text-right">DWT</th><th class="px-3 py-2.5 text-right">Speed</th><th class="px-3 py-2.5 hidden lg:table-cell text-right">Course</th></tr>
@@ -1096,7 +1111,7 @@
   const isVesselUAE = (v) => (v.flag || v.flagName || '') === 'United Arab Emirates';
   const isVesselADNOC = (v) => { const c = (v.controller || '').toLowerCase(); return c.includes('adnoc') || c.includes('abu dhabi'); };
   function uaeBadge(v) {
-    if (isVesselADNOC(v)) return '<span class="bg-[#0055A5]/10 text-[#0055A5] text-[10px] font-bold px-1.5 py-0.5 rounded">ADNOC</span>';
+    if (isVesselADNOC(v)) return '<span class="bg-adnoc-blue-soft text-adnoc-blue text-[10px] font-bold px-1.5 py-0.5 rounded">ADNOC</span>';
     if (isVesselUAE(v)) return '<span class="bg-sky-100 text-sky-700 text-[10px] font-bold px-1.5 py-0.5 rounded">UAE</span>';
     return '';
   }
@@ -1178,7 +1193,7 @@
                 ${d.entered ? `<span class="text-red-500">&darr;${d.entered} entered</span>` : ''}
                 <span class="text-navy-500">${total} total</span>
                 ${uaeCount ? `<span class="text-sky-700">UAE: ${uaeCount}</span>` : ''}
-                ${adnocCount ? `<span class="text-[#0055A5]">ADNOC: ${adnocCount}</span>` : ''}
+                ${adnocCount ? `<span class="text-adnoc-blue">ADNOC: ${adnocCount}</span>` : ''}
               </span>
             </div>
           </summary>
@@ -1198,8 +1213,8 @@
       <h3 class="text-sm font-bold text-navy-900 uppercase tracking-wider mb-3">Vessel Transit Log &mdash; Hormuz Crossings</h3>
       <p class="text-xs text-navy-500 mb-3">Vessels crossing the Strait of Hormuz since crisis start (Feb 28). Feb 28&ndash;Mar 31: Kpler lastPortCall (approx exits). Apr 1+: Kpler + MINT midnight snapshots (exits &amp; entries).</p>
       <div class="grid grid-cols-2 gap-3 mb-4">
-        <div class="bg-white border border-navy-200 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Pre-Crisis Avg</div><div class="text-2xl font-extrabold text-navy-900">~${preCrisisAvg}</div><div class="text-[10px] text-navy-400">vessels/day (IMF Feb)</div></div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Post-Crisis Avg</div><div class="text-2xl font-extrabold text-amber-600">~${postCrisisAvg}</div><div class="text-[10px] text-navy-400">exits/day (${days.length} days)</div></div>
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Pre-Crisis Avg</div><div class="text-2xl font-extrabold text-navy-900">~${preCrisisAvg}</div><div class="text-[10px] text-navy-400">vessels/day (IMF Feb)</div></div>
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Post-Crisis Avg</div><div class="text-2xl font-extrabold text-amber-600">~${postCrisisAvg}</div><div class="text-[10px] text-navy-400">exits/day (${days.length} days)</div></div>
       </div>
       <div class="max-h-[600px] overflow-y-auto flex flex-col gap-2">${dayAccordions}</div>
     </div>
@@ -1263,8 +1278,8 @@
       <h3 class="text-sm font-bold text-navy-900 uppercase tracking-wider mb-3">Gulf of Oman &mdash; Zone Arrivals &amp; Departures</h3>
       <p class="text-xs text-navy-500 mb-3">Vessels entering or leaving the monitoring zone (lat 22-32, lng 46-60) from the open ocean side. Detected via midnight snapshot comparison.</p>
       <div class="grid grid-cols-2 gap-3 mb-4">
-        <div class="bg-white border border-navy-200 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Arrived in Zone</div><div class="text-2xl font-extrabold text-emerald-600">${totalArrived}</div></div>
-        <div class="bg-white border border-navy-200 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Departed Zone</div><div class="text-2xl font-extrabold text-red-500">${totalDeparted}</div></div>
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Arrived in Zone</div><div class="text-2xl font-extrabold text-emerald-600">${totalArrived}</div></div>
+        <div class="bg-white border border-navy-200/70 rounded-lg p-3 text-center"><div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Departed Zone</div><div class="text-2xl font-extrabold text-red-500">${totalDeparted}</div></div>
       </div>
       <div class="max-h-[400px] overflow-y-auto flex flex-col gap-2">${dayAccordions}</div>
     </div>`;
@@ -1277,7 +1292,7 @@
     if (!sv) return '';
     return `
     <div class="soh-section mt-6" id="soh-small-vessels">
-      <div class="bg-navy-50 border border-navy-200 rounded-xl p-4">
+      <div class="bg-navy-50 border border-navy-200/70 rounded-xl p-4">
         <h3 class="text-xs font-bold text-navy-500 uppercase tracking-wider mb-2">Small / Coastal Vessels (Excluded from counts above)</h3>
         <div class="flex items-center gap-6 text-sm">
           <div><span class="font-bold text-navy-900">${fmtNum(sv.total)}</span> <span class="text-navy-500">total</span></div>

@@ -4,6 +4,24 @@ You are an energy intelligence analyst updating the SPR (Strategic Petroleum Res
 
 ---
 
+## Step 0: Read pre-fetched source pages (do this FIRST)
+
+Before any web searching, read the pre-fetched IEA/DOE/EIA source content from `soh-data/.spr-sources.json`. This file is written by `scripts/fetch-spr-sources.js` and contains tag-stripped body text from 4 authoritative pages:
+
+- **`iea_news`** — IEA news feed: recent article titles with dates (collective-action updates, oil-stock coverage, Middle East disruption notes)
+- **`doe_newsroom`** — DOE newsroom: US press releases (SPR exchange RFPs, drawdown announcements)
+- **`doe_spr`** — DOE Strategic Petroleum Reserve landing page (program info + latest inventory callouts)
+- **`eia_weekly`** — EIA Weekly Petroleum Status Report index (release schedule, "Data for week ending ..." + "Release Date: ..." metadata)
+
+Extract from this file:
+- Most-recent article/press-release titles + dates relevant to SPR / oil-stock releases / Middle East disruption
+- Any barrel figures or dates mentioned inline
+- Next EIA release date (for pacing expectations)
+
+If a source has `"status": "error"`, fall back to a single live `WebFetch` for that specific URL only. Do NOT WebFetch sources that are already `"status": "ok"` — their content is in the JSON.
+
+---
+
 ## Step 1: Read current data
 
 1. Read `data.js` — find the `SPR_RELEASE_DATA` object. Note:
@@ -20,24 +38,11 @@ You are an energy intelligence analyst updating the SPR (Strategic Petroleum Res
 
 ### Freshness enforcement (CRITICAL)
 
-- Every search query MUST include the current month and year (e.g., "March 2026") to force recent results
+- Every search query MUST include the current month and year (e.g., "April 2026") to force recent results
 - When evaluating search results, ONLY use data published **today or yesterday** (within 48 hours of now)
 - If a search result doesn't have a clear publication date from the last 48 hours, SKIP it — do not use stale data
 - If the current `asOf` in data.js is already today's date, still verify whether any new updates exist since the last sync
 - If no new data is found at all, still update `asOf` to today's date
-
-### Tier 0 — Direct Data Fetches (WebFetch)
-
-Before web searching, directly fetch these known authoritative data pages and extract barrel figures:
-
-| URL | What it provides |
-|-----|-----------------|
-| `https://www.iea.org/topics/oil-stocks` | IEA oil stocks landing — aggregate release progress, member country breakdown |
-| `https://www.iea.org/news` | IEA news feed — press releases with barrel figures, collective action updates |
-| `https://www.energy.gov/ceser/strategic-petroleum-reserve` | US DOE SPR page — current US inventory level and release volumes |
-| `https://www.eia.gov/petroleum/supply/weekly/` | EIA Weekly Petroleum Status Report — US SPR drawdown figures in Table 1 |
-
-These are the most authoritative sources. Extract specific barrel numbers directly from the page content before running any web searches.
 
 ### Tier 1 — Official Agency Site Searches
 
@@ -56,60 +61,24 @@ Search each major contributing country's official energy agency. These are the h
 | **United Kingdom** | DESNZ | `UK "oil stocking" OR "compulsory stocks" release DESNZ 2026` |
 | **Australia** | DISR | `Australia "strategic fuel reserve" OR "IEA obligation" release 2026` |
 
-### Tier 2 — News Wires & Financial Press
+### Tier 2 — News & Citation Searches
 
-Search major news outlets with SPR-specific queries. These often cite Tier 1 data with additional context.
+Core wire services + broad citation queries. Skip these if Tier 1 already yielded fresh, consistent figures.
 
-| Source | Search query |
-|--------|-------------|
-| **Reuters** | `site:reuters.com "IEA" OR "SPR" OR "oil stock release" OR "strategic reserve" barrels million 2026` |
-| **Bloomberg** | `site:bloomberg.com "IEA release" OR "SPR drawdown" OR "strategic petroleum" barrels 2026` |
-| **Financial Times** | `site:ft.com "oil stock release" OR "SPR" OR "IEA reserves" 2026` |
-| **Wall Street Journal** | `site:wsj.com "strategic petroleum reserve" OR "IEA release" 2026` |
-| **CNBC** | `site:cnbc.com "SPR release" OR "IEA oil stocks" barrels 2026` |
-| **Al Jazeera** | `site:aljazeera.com IEA "oil reserve" OR "SPR" release 2026` |
-| **S&P Global / Platts** | `site:spglobal.com "IEA release" OR "SPR" OR "strategic reserve" oil 2026` |
-| **Argus Media** | `site:argusmedia.com "IEA" OR "SPR" "oil stocks" release 2026` |
-
-### Tier 3 — Citation-Based Searches
-
-These catch articles from ANY outlet that cite official SPR data — regardless of which website published them:
-
-- `"according to the IEA" OR "IEA said" OR "IEA data" oil stock release million barrels 2026`
-- `"according to DOE" OR "DOE data" OR "Energy Department" SPR release barrels 2026`
-- `"million barrels released" OR "barrels from strategic reserves" IEA 2026`
-- `"IEA member" OR "IEA countries" "oil release" progress update March 2026`
-- `"JOGMEC" OR "Japan released" strategic oil reserve barrels 2026`
-- `"KNOC" OR "South Korea released" strategic petroleum reserve 2026`
-
-### Tier 4 — Industry Trade Publications & Energy Aggregators
-
-Only search these if Tiers 1-3 didn't yield enough data:
-
-| Source | Search query |
-|--------|-------------|
-| **OilPrice.com** | `site:oilprice.com "IEA release" OR "SPR" OR "strategic reserve" 2026` |
-| **Rigzone** | `site:rigzone.com "IEA" OR "SPR" oil stock release 2026` |
-| **Oil & Gas Journal** | `site:ogj.com "strategic petroleum" OR "IEA release" 2026` |
-| **World Oil** | `site:worldoil.com "SPR" OR "IEA" oil release 2026` |
-| **Energy Intelligence** | `site:energyintel.com "IEA" OR "SPR" oil stock release 2026` |
-| **Hellenic Shipping News** | `site:hellenicshippingnews.com "SPR" OR "IEA" oil stocks 2026` |
-
-### Fallback searches (only if Tiers 0-4 return no new data)
-
-- `"oil reserves" OR "oil stocks" released barrels March 2026` (broader, date-specific)
-- `IEA Hormuz oil emergency release latest update` (crisis-framed)
-- `OPEC IEA strategic reserve coordination 2026` (policy angle)
-- `crude oil inventory drawdown strategic reserves week March 2026` (inventory angle)
+| Search |
+|--------|
+| `site:reuters.com "IEA" OR "SPR" OR "oil stock release" barrels million 2026` |
+| `site:bloomberg.com "IEA release" OR "SPR drawdown" OR "strategic petroleum" barrels 2026` |
+| `site:ft.com "oil stock release" OR "SPR" OR "IEA reserves" 2026` |
+| `"according to the IEA" OR "IEA said" oil stock release million barrels 2026` |
+| `"million barrels released" OR "barrels from strategic reserves" IEA April 2026` |
+| `"JOGMEC" OR "KNOC" OR "Japan released" strategic oil reserve barrels 2026` |
 
 ### Search execution order
 
-1. **Tier 0 (WebFetch)** — direct data pages first (4 fetches)
-2. **Tier 1** — official agency site searches (10 queries)
-3. **Tier 2** — news wires & financial press (8 queries)
-4. **Tier 3** — citation-based searches (6 queries)
-5. **Tier 4** — trade publications (6 queries) — only if Tiers 1-3 didn't yield enough
-6. **Fallback** — only if nothing found in Tiers 0-4
+1. **Step 0 (pre-fetched content)** — extract signals from `.spr-sources.json`
+2. **Tier 1 (official agencies, 10 queries)** — authoritative search results
+3. **Tier 2 (news/citation, 6 queries)** — only if Tier 1 missed specific country figures
 
 ### What to look for in results
 
@@ -117,7 +86,7 @@ Only search these if Tiers 1-3 didn't yield enough data:
 - **IEA aggregate progress updates** — periodic press releases with total release figures and per-country breakdowns
 - **Country-specific announcements**: Japan METI/JOGMEC, South Korea KNOC, Canada NRCan, Germany EBV, individual European energy agencies
 - **Reuters / Bloomberg / FT articles** citing updated release figures with specific barrel amounts (e.g., "X million barrels released")
-- **EIA Weekly Petroleum Status Report** — Table 1 shows US SPR inventory level; compute weekly drawdown by comparing to previous week
+- **EIA Weekly Petroleum Status Report** — Table 4 row for SPR inventory; weekly drawdown = prior-week level − current-week level
 - **Any IEA revision** to committed amounts (rare — only if officially announced)
 
 ### Freshness check on each result
@@ -125,7 +94,6 @@ Only search these if Tiers 1-3 didn't yield enough data:
 - Verify the article/report date is within 48 hours
 - Cross-reference numbers across at least 2 sources before updating a country's `released` value
 - If conflicting numbers found, prefer the official source hierarchy: **IEA > national agency (DOE/EIA/JOGMEC/KNOC/NRCan/EBV) > news wire (Reuters/Bloomberg) > other media**
-- For WebFetch results, check the page's own "last updated" or "as of" date
 
 ---
 

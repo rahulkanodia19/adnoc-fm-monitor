@@ -10,9 +10,9 @@
   // ---------- Constants ----------
 
   const COMMODITIES = {
-    wti:         { label: 'WTI Crude',         category: 'crude',   unit: '$/bbl',   color: '#0ea5e9' },
-    brent:       { label: 'Dated Brent',       category: 'crude',   unit: '$/bbl',   color: '#f59e0b' },
-    murban:      { label: 'Murban (Front-Month)', category: 'crude', unit: '$/bbl',   color: '#10b981' },
+    wti:         { label: 'WTI Futures (M1)',   category: 'crude',   unit: '$/bbl',   color: '#0ea5e9' },
+    brent:       { label: 'Brent Futures (M1)', category: 'crude',   unit: '$/bbl',   color: '#f59e0b' },
+    murban:      { label: 'Murban Futures (M1)',category: 'crude',   unit: '$/bbl',   color: '#10b981' },
     gasoline:    { label: 'Gasoline 95 RON',   category: 'product', unit: '$/bbl',   color: '#ef4444' },
     jetfuel:     { label: 'Jet Kero',          category: 'product', unit: '$/bbl',   color: '#ec4899' },
     gasoil:      { label: 'Gasoil 10 ppm',     category: 'product', unit: '$/bbl',   color: '#8b5cf6' },
@@ -63,9 +63,14 @@
   // ---------- Helpers ----------
 
   function getVisibleCommodities() {
-    // LNG + petchem have their own dedicated charts — exclude them from the main chart
+    // LNG always excluded (has dedicated section). Petchem included only when category='petchem' (different unit from crude/products).
     return Object.entries(COMMODITIES)
-      .filter(([, cfg]) => cfg.category !== 'lng' && cfg.category !== 'petchem' && (state.category === 'all' || cfg.category === state.category))
+      .filter(([, cfg]) => {
+        if (cfg.category === 'lng') return false;
+        if (state.category === 'petchem') return cfg.category === 'petchem';
+        if (state.category === 'all') return cfg.category !== 'petchem';
+        return cfg.category === state.category;
+      })
       .map(([key]) => key);
   }
 
@@ -86,7 +91,7 @@
     if (val == null || !Number.isFinite(val)) return '—';
     const cfg = COMMODITIES[key];
     if (!cfg) return '$' + val.toFixed(1);
-    const precisionByUnit = { '$/bbl': 1, '$/MMBtu': 3, '$/mt': 0, '%': 2 };
+    const precisionByUnit = { '$/bbl': 1, '$/MMBtu': 1, '$/mt': 0, '%': 2 };
     const p = precisionByUnit[cfg.unit] ?? 1;
     if (cfg.unit === '$/mt') return '$' + val.toFixed(p);
     if (cfg.unit === '$/bbl') return '$' + val.toFixed(p);
@@ -274,23 +279,12 @@
              ${ins.metrics.map(m => `<span><span class="text-navy-600 font-medium">${m.label}</span> <span class="tabular-nums text-navy-800">${m.value}</span></span>`).join('')}
            </div>`
         : '';
-      // related_event sub-line (optional)
-      let relatedHtml = '';
-      if (ins.related_event && ins.related_event.summary) {
-        const rd = ins.related_event.date ? formatAbsDate(ins.related_event.date) : '';
-        const rSummary = ins.related_event.summary;
-        const rLink = ins.related_event.source_url
-          ? `<a href="${ins.related_event.source_url}" target="_blank" rel="noopener" class="text-navy-500 hover:text-amber-600 underline decoration-dotted">${rSummary}</a>`
-          : rSummary;
-        relatedHtml = `<div class="text-[10px] text-navy-500 mt-1 italic"><span class="mr-1">🔗</span>Related: ${rLink}${rd ? ` <span class="text-navy-400">(${rd})</span>` : ''}</div>`;
-      }
       return `
         <li class="flex gap-2.5 ${sev.border} border-l-2 pl-2.5 py-0.5">
           <div class="flex-1">
             <div class="text-[13px] font-semibold text-navy-800 leading-snug">${ins.title || ''}</div>
             ${ins.detail ? `<div class="text-xs text-navy-500 leading-snug mt-0.5">${ins.detail}</div>` : ''}
             ${metricsHtml}
-            ${relatedHtml}
           </div>
         </li>`;
     }).join('');
@@ -298,7 +292,7 @@
     const asOf = data.asOfDate ? formatAbsDate(data.asOfDate) : (data.generated_at ? formatAbsDate(data.generated_at) : '');
 
     return `
-      <div class="bg-white rounded-xl border border-navy-200 shadow-sm p-3 sm:p-4 mb-4">
+      <div class="bg-white rounded-xl border border-navy-200/70 shadow-sm p-3 sm:p-4 mb-4">
         <div class="flex items-center gap-2 mb-3">
           <span class="w-1.5 h-5 rounded-full bg-amber-500"></span>
           <h3 class="text-sm font-bold text-navy-800">Key Insights</h3>
@@ -405,12 +399,12 @@
   function renderSourceBanner() {
     if (!state.data) return '';
     const src = state.data._source;
-    if (!src || src === 'live') return '';
+    // Suppress banner for 'live' and 'stale' — only show for actual fallback/error states
+    if (!src || src === 'live' || src === 'stale') return '';
     const lastUpd = state.data.lastUpdated ? formatAbsDate(state.data.lastUpdated) : 'latest';
     const msgs = {
       seed: `Showing seed data (as of ${lastUpd}).`,
       'seed-fallback': `API unavailable — showing cached data (as of ${lastUpd}).`,
-      stale: `Showing latest available data (as of ${lastUpd}).`,
     };
     return `
       <div class="bg-amber-50 border border-amber-200 rounded-lg p-3 mb-4 text-sm text-amber-800 flex items-center gap-2">
@@ -440,7 +434,7 @@
       <div class="flex flex-col gap-3 mb-6">
         <div class="flex flex-wrap items-center gap-2">
           ${renderToggle('Category', 'category', [
-            ['crude', 'Crude'], ['product', 'Products'], ['petchem', 'Petchem'], ['all', 'All']
+            ['crude', 'Crude'], ['product', 'Products'], ['petchem', 'Petchem'], ['spread', 'Spread'], ['all', 'All']
           ])}
         </div>
         <div class="flex flex-wrap items-center gap-2">
@@ -526,16 +520,21 @@
     const up = change >= 0;
     const cc = up ? 'text-emerald-600' : 'text-red-600';
     return `
-      <div class="bg-white rounded-xl p-4 sm:p-5 border border-navy-200/70 border-l-4 border-l-emerald-500 shadow-[0_1px_3px_rgba(10,25,41,0.04)] mb-4">
+      <div class="bg-white rounded-xl p-4 sm:p-5 border border-navy-200/70 border-l-4 border-l-emerald-500 shadow-card mb-4">
         <div class="flex items-center justify-between">
           <div>
-            <div class="text-xs font-semibold text-emerald-600 uppercase tracking-wider mb-1">ADNOC Benchmark — Murban (Front-Month)</div>
+            <div class="text-xs font-semibold text-emerald-600 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+              <span>ADNOC Benchmark — Murban Futures (IFAD Front-Month)</span>
+              <span class="inline-flex items-center cursor-help text-navy-400 hover:text-navy-600" title="IFAD (ICE Futures Abu Dhabi) only trades futures — there is no IFAD spot market. The front-month contract represents ~2 months forward delivery per the Murban DB contract spec. For physical cargo spot prices, see Platts Dated Murban (separate assessment, not shown here).">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 16v-4m0-4h.01"/></svg>
+              </span>
+            </div>
             <div class="flex items-baseline gap-3">
               <span class="text-3xl sm:text-4xl font-extrabold tabular-nums text-navy-900">${fmtPrice(current)}</span>
               <span class="text-lg font-bold tabular-nums ${cc}">${fmtChange(change)}</span>
               <span class="text-sm font-medium tabular-nums ${cc}">(${fmtPct(changePct)})</span>
             </div>
-            <div class="text-[11px] text-navy-400 mt-1">$/bbl · IFAD Front-Month Continuation · Investing.com</div>
+            <div class="text-[11px] text-navy-400 mt-1">$/bbl · IFAD front-month contract (~2mo forward delivery) · Investing.com</div>
           </div>
         </div>
       </div>
@@ -565,7 +564,7 @@
         <div id="mp-kpis"></div>
 
         <div id="mp-main-price-section" class="mb-6">
-          <div class="bg-white rounded-xl border border-navy-200 shadow-sm p-3 sm:p-5">
+          <div class="bg-white rounded-xl border border-navy-200/70 shadow-sm p-3 sm:p-5">
             <h3 class="text-sm sm:text-base font-bold text-navy-800 mb-3">Price History</h3>
             <div class="chart-container">
               <canvas id="mp-chart-price"></canvas>
@@ -574,7 +573,7 @@
         </div>
 
         <div id="mp-spreads-section" class="mb-6 hidden">
-          <div class="bg-white rounded-xl border border-navy-200 shadow-sm p-3 sm:p-5">
+          <div class="bg-white rounded-xl border border-navy-200/70 shadow-sm p-3 sm:p-5">
             <div class="flex items-center gap-2 mb-3">
               <span class="w-1.5 h-5 rounded-full bg-pink-500"></span>
               <h3 class="text-sm sm:text-base font-bold text-navy-800">Product Cracks vs Murban</h3>
@@ -587,8 +586,8 @@
           </div>
         </div>
 
-        <div class="mb-6">
-          <div class="bg-white rounded-xl border border-navy-200 shadow-sm p-3 sm:p-5">
+        <div id="mp-lng-section" class="mb-6">
+          <div class="bg-white rounded-xl border border-navy-200/70 shadow-sm p-3 sm:p-5">
             <div class="flex items-center gap-2 mb-3">
               <span class="w-1.5 h-5 rounded-full bg-cyan-500"></span>
               <h3 class="text-sm sm:text-base font-bold text-navy-800">LNG & Natural Gas Benchmarks</h3>
@@ -601,22 +600,9 @@
           </div>
         </div>
 
-        <div id="mp-petchem-section" class="mb-6 hidden">
-          <div class="bg-white rounded-xl border border-navy-200 shadow-sm p-3 sm:p-5">
-            <div class="flex items-center gap-2 mb-3">
-              <span class="w-1.5 h-5 rounded-full bg-teal-500"></span>
-              <h3 class="text-sm sm:text-base font-bold text-navy-800">Petrochemicals</h3>
-              <span class="text-[10px] text-navy-400 ml-auto">$/mt</span>
-            </div>
-            <div id="mp-petchem-kpis"></div>
-            <div class="chart-container">
-              <canvas id="mp-chart-petchem"></canvas>
-            </div>
-          </div>
-        </div>
 
-        <div class="mb-6">
-          <div class="bg-white rounded-xl border border-navy-200 shadow-sm p-3 sm:p-5">
+        <div id="mp-awrp-section" class="mb-6">
+          <div class="bg-white rounded-xl border border-navy-200/70 shadow-sm p-3 sm:p-5">
             <div class="flex items-center gap-2 mb-3">
               <span class="w-1.5 h-5 rounded-full bg-red-500"></span>
               <h3 class="text-sm sm:text-base font-bold text-navy-800">War Risk Premium — Strait of Hormuz</h3>
@@ -630,7 +616,7 @@
           </div>
         </div>
 
-        <div class="bg-white rounded-xl border border-navy-200 shadow-sm overflow-hidden mb-6">
+        <div id="mp-price-table-section" class="bg-white rounded-xl border border-navy-200/70 shadow-sm overflow-hidden mb-6">
           <div class="px-3 py-3 sm:px-5 sm:py-4 border-b border-navy-100">
             <h3 class="text-sm sm:text-base font-bold text-navy-800">Price Comparison</h3>
           </div>
@@ -722,7 +708,12 @@
               padding: 10,
               mode: 'index', intersect: false,
               callbacks: {
-                label: ctx => ctx.dataset.label + ': ' + fmtPrice(ctx.parsed.y)
+                label: ctx => {
+                  // Resolve key from dataset label for unit-aware formatting
+                  const entry = Object.entries(COMMODITIES).find(([, c]) => c.label === ctx.dataset.label);
+                  const k = entry ? entry[0] : visible[0];
+                  return ctx.dataset.label + ': ' + fmtCommodityValue(ctx.parsed.y, k);
+                }
               }
             },
             datalabels: { display: false },
@@ -739,7 +730,7 @@
               position: 'left',
               grid: { color: 'rgba(16,42,67,0.06)' },
               ticks: { color: '#627d98', font: { size: 10 }, callback: v => '$' + v.toFixed(0) },
-              title: { display: true, text: '$/bbl', color: '#627d98', font: { size: 10 } },
+              title: { display: true, text: (COMMODITIES[visible[0]]?.unit || '$/bbl'), color: '#627d98', font: { size: 10 } },
             },
           },
           interaction: { intersect: false, mode: 'index' },
@@ -752,9 +743,6 @@
 
     // --- Separate LNG chart ---
     drawLngChart(prices);
-
-    // --- Petrochemicals chart ---
-    drawCategoryChart('mp-chart-petchem', 'petchem');
 
     // --- War Risk Premium dual-axis chart ---
     drawAwrpChart(prices);
@@ -824,7 +812,7 @@
             titleFont: { size: 12, weight: '600' }, bodyFont: { size: 11 },
             padding: 10,
             callbacks: {
-              label: ctx => ctx.dataset.label + ': $' + ctx.parsed.y.toFixed(3) + '/MMBtu'
+              label: ctx => ctx.dataset.label + ': $' + ctx.parsed.y.toFixed(1) + '/MMBtu'
             }
           },
           datalabels: { display: false },
@@ -1385,6 +1373,11 @@
           <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-navy-700 hidden sm:table-cell">${highStr}</td>
           <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-navy-700 hidden sm:table-cell">${lowStr}</td>
         </tr>
+        <tr class="sm:hidden ${evenClass} border-t-0">
+          <td colspan="6" class="px-3 pb-2 pt-0 text-[11px] text-navy-500">
+            <span class="text-navy-500 uppercase tracking-wider text-[9px] mr-1">High</span>${highStr} <span class="text-navy-300 mx-1">&middot;</span> <span class="text-navy-500 uppercase tracking-wider text-[9px] mr-1">Low</span>${lowStr}
+          </td>
+        </tr>
       `;
     }).join('');
 
@@ -1448,7 +1441,7 @@
                   <span class="w-1.5 h-3 rounded-full" style="background:${cfg.color}"></span>
                   <span class="text-[10px] text-navy-500 font-medium uppercase">${cfg.label}</span>
                 </div>
-                <div class="font-bold text-navy-900 text-base">$${current.toFixed(current < 10 ? 3 : 2)}</div>
+                <div class="font-bold text-navy-900 text-base">$${current.toFixed(1)}</div>
                 <div class="${cc} text-xs font-medium">${fmtChange(change)} (${arrow} ${fmtPct(changePct)})</div>
               </div>`;
           }).join('')}
@@ -1457,32 +1450,40 @@
     }
 
     renderSpreadKpis();
-    renderCategoryKpis('mp-petchem-kpis', 'petchem');
     renderAwrpKpis();
     drawCharts();
     renderPriceTable();
     bindControlEvents();
 
-    // Toggle spreads section visibility (products/all only + has data)
-    const spreadsSection = document.getElementById('mp-spreads-section');
-    if (spreadsSection) {
-      const visibleCat = state.category === 'product' || state.category === 'all';
-      const hasData = state.data?.prices && !!computeFuelSpreads(state.data.prices);
-      spreadsSection.classList.toggle('hidden', !(visibleCat && hasData));
-    }
+    // Section visibility — when category='spread', show ONLY the spreads section
+    const isSpread = state.category === 'spread';
+    const toggleHidden = (id, hidden) => {
+      const el = document.getElementById(id);
+      if (el) el.classList.toggle('hidden', hidden);
+    };
 
-    // Toggle petchem section visibility (petchem/all only + has data)
-    const petchemSection = document.getElementById('mp-petchem-section');
-    if (petchemSection) {
-      const visibleCat = state.category === 'petchem' || state.category === 'all';
-      petchemSection.classList.toggle('hidden', !(visibleCat && hasCategoryData('petchem')));
-    }
+    // Spreads section — visible on product/all/spread IF data exists
+    const hasSpreadData = state.data?.prices && !!computeFuelSpreads(state.data.prices);
+    const spreadsVisible = isSpread || (state.category === 'product' || state.category === 'all');
+    toggleHidden('mp-spreads-section', !(spreadsVisible && hasSpreadData));
 
-    // Hide main Price History chart on petchem category (dedicated section below handles it)
-    const mainPriceSection = document.getElementById('mp-main-price-section');
-    if (mainPriceSection) {
-      mainPriceSection.classList.toggle('hidden', state.category === 'petchem');
-    }
+    // Main Price History — hidden on spread only (petchem now rendered in main chart)
+    toggleHidden('mp-main-price-section', isSpread);
+
+    // LNG section — hidden on spread (show on crude/product/petchem/all)
+    toggleHidden('mp-lng-section', isSpread);
+
+    // AWRP section — hidden on spread
+    toggleHidden('mp-awrp-section', isSpread);
+
+    // Price Comparison table — hidden on spread
+    toggleHidden('mp-price-table-section', isSpread);
+
+    // Murban Spotlight — hidden on spread (it's also hidden on non-crude/all via renderMurbanSpotlight's own check)
+    toggleHidden('mp-murban-spotlight', isSpread);
+
+    // Main KPI cards — hidden on spread
+    toggleHidden('mp-kpis', isSpread);
   }
 
   function bindControlEvents() {

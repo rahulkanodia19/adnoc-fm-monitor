@@ -84,12 +84,12 @@
           </svg>
           <span id="sync-status-text" class="hidden sm:inline">Auto-synced daily</span>
         </div>
-        <div class="hidden sm:flex items-center gap-2 bg-navy-100 px-3 py-1.5 rounded-lg text-sm text-navy-600 border border-navy-200">
-          <svg class="w-4 h-4 text-navy-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <div class="flex items-center gap-1.5 sm:gap-2 bg-navy-100 px-2 py-1 sm:px-3 sm:py-1.5 rounded-lg text-[11px] sm:text-sm text-navy-600 border border-navy-200">
+          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-navy-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           <span class="hidden sm:inline">Updated:</span>
-          <span id="last-updated" class="text-navy-800 font-medium"></span>
+          <span id="last-updated" class="text-navy-800 font-medium whitespace-nowrap"></span>
         </div>
       </div>
     </div>
@@ -106,14 +106,14 @@
         <svg class="w-4 h-4 inline-block sm:mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
         </svg>
-        <span class="sm:hidden">Prod</span><span class="hidden sm:inline">Production Overview</span>
+        <span class="sm:hidden">Prod</span><span class="hidden sm:inline">Production</span>
       </button>
       <button data-tab="country-matrix"
         class="tab-btn px-3 py-3 text-xs sm:px-5 sm:py-3.5 sm:text-sm font-medium border-b-2 border-transparent text-navy-500 hover:text-navy-700 whitespace-nowrap transition-all">
         <svg class="w-4 h-4 inline-block sm:mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
         </svg>
-        <span class="sm:hidden">Countries</span><span class="hidden sm:inline">Country Status</span>
+        <span class="sm:hidden">Countries</span><span class="hidden sm:inline">Countries</span>
       </button>
       <button data-tab="import-flows"
         class="tab-btn px-3 py-3 text-xs sm:px-5 sm:py-3.5 sm:text-sm font-medium border-b-2 border-transparent text-navy-500 hover:text-navy-700 whitespace-nowrap transition-all">
@@ -134,14 +134,14 @@
         <svg class="w-4 h-4 inline-block sm:mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
         </svg>
-        <span class="sm:hidden">Prices</span><span class="hidden sm:inline">Market Prices</span>
+        <span class="sm:hidden">Prices</span><span class="hidden sm:inline">Prices</span>
       </button>
       <button data-tab="soh-tracker"
         class="tab-btn px-3 py-3 text-xs sm:px-5 sm:py-3.5 sm:text-sm font-medium border-b-2 border-transparent text-navy-500 hover:text-navy-700 whitespace-nowrap transition-all">
         <svg class="w-4 h-4 inline-block sm:mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
         </svg>
-        <span class="sm:hidden">SOH</span><span class="hidden sm:inline">SOH Tracker</span>
+        <span class="sm:hidden">SOH</span><span class="hidden sm:inline">SOH</span>
       </button>
       <button data-tab="adnoc-vessels"
         class="tab-btn px-3 py-3 text-xs sm:px-5 sm:py-3.5 sm:text-sm font-medium border-b-2 border-transparent text-navy-500 hover:text-navy-700 whitespace-nowrap transition-all">
@@ -155,7 +155,7 @@
         <svg class="w-4 h-4 inline-block sm:mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6V7.5z" />
         </svg>
-        <span class="sm:hidden">SPR</span><span class="hidden sm:inline">SPR Status</span>
+        <span class="sm:hidden">SPR</span><span class="hidden sm:inline">SPR</span>
       </button>
       <!-- DISABLED: Shipping tab (re-enable when AIS data quality is ready)
       <button data-tab="shipping"
@@ -171,7 +171,7 @@
         <svg class="w-4 h-4 inline-block sm:mr-1.5 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
         </svg>
-        <span class="sm:hidden">FM</span><span class="hidden sm:inline">FM Declarations</span>
+        <span class="sm:hidden">FM</span><span class="hidden sm:inline">FM</span>
       </button>
       <button data-tab="shutdowns"
         class="tab-btn px-3 py-3 text-xs sm:px-5 sm:py-3.5 sm:text-sm font-medium border-b-2 border-transparent text-navy-500 hover:text-navy-700 whitespace-nowrap transition-all">
@@ -200,7 +200,7 @@
     <!-- Panel 1: Country Status Matrix -->
     <div data-panel="country-matrix" class="hidden">
       <div id="country-matrix-header" class="flex items-center justify-end mb-3"></div>
-      <div class="overflow-x-auto scroll-shadow touch-scroll rounded-xl border border-navy-200/70 shadow-[0_1px_3px_rgba(10,25,41,0.04)] bg-white">
+      <div class="overflow-x-auto scroll-shadow touch-scroll rounded-xl border border-navy-200/70 shadow-card bg-white">
         <table class="w-full text-left min-w-[400px] lg:min-w-[900px]">
           <thead class="bg-navy-100 text-navy-600 text-xs uppercase tracking-wider">
             <tr>
@@ -258,7 +258,7 @@
     <!-- Panel 3: FM Declarations -->
     <div data-panel="fm-declarations" class="hidden">
       <div id="fm-declarations-header" class="flex items-center justify-end mb-3"></div>
-      <div class="overflow-x-auto scroll-shadow touch-scroll rounded-xl border border-navy-200/70 shadow-[0_1px_3px_rgba(10,25,41,0.04)] bg-white">
+      <div class="overflow-x-auto scroll-shadow touch-scroll rounded-xl border border-navy-200/70 shadow-card bg-white">
         <table class="w-full text-left min-w-[360px] lg:min-w-[900px]">
           <thead class="bg-navy-100 text-navy-600 text-xs uppercase tracking-wider">
             <tr>
@@ -280,7 +280,7 @@
     <!-- Panel 3: No FM -->
     <div data-panel="shutdowns" class="hidden">
       <div id="shutdowns-header" class="flex items-center justify-end mb-3"></div>
-      <div class="overflow-x-auto scroll-shadow touch-scroll rounded-xl border border-navy-200/70 shadow-[0_1px_3px_rgba(10,25,41,0.04)] bg-white">
+      <div class="overflow-x-auto scroll-shadow touch-scroll rounded-xl border border-navy-200/70 shadow-card bg-white">
         <table class="w-full text-left min-w-[360px] lg:min-w-[900px]">
           <thead class="bg-navy-100 text-navy-600 text-xs uppercase tracking-wider">
             <tr>
@@ -368,7 +368,7 @@
     <span class="min-w-[400px] min-w-[360px] lg:min-w-[900px] md:grid-cols-2 md:grid-cols-3 md:col-span-2"></span>
     <!-- Phase polish safelist -->
     <span class="sm:grid-cols-4 border-l-red-500 border-l-amber-500 border-l-orange-500 border-l-sky-400 border-l-emerald-500 border-l-navy-300"></span>
-    <span class="shadow-[0_1px_3px_rgba(10,25,41,0.04)] border-navy-200/70 scroll-shadow touch-scroll"></span>
+    <span class="shadow-card border-navy-200/70 scroll-shadow touch-scroll"></span>
     <span class="bg-red-500/20 text-red-300 border-red-500/25 bg-amber-500/20 text-amber-300 border-amber-500/25 bg-orange-500/20 text-orange-300 border-orange-500/25"></span>
   </div>
 

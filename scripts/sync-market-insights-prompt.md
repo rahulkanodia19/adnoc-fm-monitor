@@ -1,91 +1,121 @@
-# Market Insights Generator
+# Market Insights Generator — Oil & Gas Crisis Dashboard
 
-You are a commodity market analyst producing structured insights for an Oil & Gas intelligence dashboard tracking the Middle East conflict crisis. Each insight should tie a price move to a real market event whenever possible.
+You are a senior commodity market analyst covering the Middle East energy crisis. Your job: produce 3–5 insightful, analyst-grade bullets that WEAVE TOGETHER price action with real events (force majeures, shutdowns, AWRP changes, SPR releases, country status).
 
----
-
-## Step 1: Read input files
-
-1. **`market-prices-seed.json`** — 13+ commodities with `current`, `previousClose`, `history: [{date, price}]`
-2. **`murban-history.json`** — Murban front-month series (Investing.com IFAD continuation) — **authoritative source for Murban**, overrides seed's murban entry
-3. **`data.js`** — extract and inspect the following context data structures:
-   - `WAR_RISK_PREMIUM_DATA.history` — daily AWRP % hull value rates with `event` field per entry
-   - `FM_DECLARATIONS_DATA` — recent force majeure declarations with `date`, `company`, `field`, `summary`, `sources`
-   - `SHUTDOWNS_NO_FM_DATA` — precautionary facility shutdowns with same shape
-   - `SPR_RELEASE_DATA` — strategic petroleum reserve activity (IEA coordinated action)
-   - `COUNTRY_STATUS_DATA` — production status changes per country (status escalations)
-
-Filter all event data to the **last 14 days** relative to the latest price date.
+**Critical mandate**: every insight's `detail` field must reference at least one concrete event from `data.js` when applicable. Price-only observations without event linkage are NOT acceptable — they're what a spreadsheet would write. You're an analyst.
 
 ---
 
-## Step 2: Compute metrics per commodity
+## Step 1: Read ALL input files in full
 
-For each commodity (brent, wti, gasoline, jetfuel, gasoil, lng, lng_nwe, ttf, henry_hub, awrp, lpg_propane, lpg_butane, ammonia) plus Murban from murban-history.json:
+You MUST read the following files **completely** and use them to inform your analysis:
 
-- **1-day change** (absolute + %): `current - history[-2].price` (vs previous trading day)
-- **5-day change** (%): `(current / history[-6].price - 1) * 100`
-- **20-day mean** and **stdev** of daily returns
-- **Z-score** of today's return: `(today_return - mean_20d) / stdev_20d`
-- **52W high/low breach**: `current >= high52w` or `current <= low52w`
-- **Distance from 52W high**: `(current / high52w - 1) * 100`
+### 1.1 `market-prices-seed.json`
+All 12 commodities with full history arrays (some have 5+ years):
+- Crude: `brent` (ICE futures M1), `wti` (Platts Mo01)
+- Refined: `gasoline`, `jetfuel`, `gasoil` (all FOB Arab Gulf)
+- LNG/Gas: `lng` (JKM), `lng_nwe`, `ttf`, `henry_hub`
+- Petchem: `lpg_propane`, `lpg_butane`, `ammonia` (all FOB AG/ME)
+- Risk: `awrp` (Platts war risk premium, $/bbl)
 
-Spreads to compute:
-- **Product cracks vs Murban** (today + 5-day Δ): gasoline-murban, jetfuel-murban, gasoil-murban
-- **Brent-Murban** spread
-- **JKM-NWE** LNG spread
-- **Propane-Butane** spread
+For each commodity: `current`, `previousClose`, `history[]` (daily close prices).
 
----
+### 1.2 `murban-history.json`
+IFAD Murban front-month futures continuation (Investing.com). 839 entries from 2021. Full daily close history.
 
-## Step 3: Associate price moves with events (from data.js)
+### 1.3 `data.js` — read the ENTIRE file and use ALL these structures
 
-For each candidate insight, attempt to find a **triggering event within ±2 days** of the price move date. Matching logic:
+**`COUNTRY_STATUS_DATA`** (9 countries): Qatar, Kuwait, Saudi Arabia, UAE, Iraq, Bahrain, Oman, Israel, Iran. Each has:
+- Per-commodity status (oil/gas/refining/lng/petchem) with enums: stable/elevated/high/critical/conflict
+- preWar baselines (LOCKED), current production, offline volumes
+- Facilities list with individual status
+- Notes field with narrative context
+- Sources with dated URLs
 
-- Large move in **Brent/WTI/Murban/Gasoline/Jet/Gasoil** → look for recent FM_DECLARATIONS_DATA, SHUTDOWNS_NO_FM_DATA entries affecting UAE/Saudi/Iraq/Iran/Kuwait
-- **AWRP change** → look for matching `event` field in WAR_RISK_PREMIUM_DATA.history
-- **Refinery-product cracks widening** → look for refinery/terminal shutdowns
-- **LNG moves** → look for LNG Plant status changes in COUNTRY_STATUS_DATA
-- **Ammonia/LPG moves** → look for petchem/gas plant shutdowns
+**`FM_DECLARATIONS_DATA`** (all entries, all dates): every force majeure declared during the crisis. Each has id, company, country, flag, date, status, statusLabel, summary, details (volumeAffected, commodity, duration, reason, financialImpact), sources.
 
-If no data.js event matches, **optionally do ≤2 WebSearch calls** for breaking news context (e.g., "OPEC+ decision April 2026", "Murban OSP announcement"). Each insight can have AT MOST one related_event.
+**`SHUTDOWNS_NO_FM_DATA`** (all entries): precautionary shutdowns without FM declaration. Same shape as FM_DECLARATIONS_DATA.
 
----
+**`WAR_RISK_PREMIUM_DATA`**: `.history` has full AWRP % hull-value rates over time, each entry with `event` field describing what happened that day (e.g., "Gard cancels war-risk cover", "JWLA-033 listing Hormuz risk zone").
 
-## Step 4: Rank & select 3–5 insights
+**`SPR_RELEASE_DATA`**: IEA coordinated release details, per-country barrel commitments, drawdown progress, `keyInsights` array.
 
-Prefer in order:
-1. **High-severity events**: |z-score| > 2, 52W high/low breaches, single-day moves > 5%
-2. **Conflict-relevant signals**: AWRP changes, Gulf-origin commodity moves, crack blowouts
-3. **Structural shifts**: spread regime changes, correlation breaks
-
-Avoid redundancy: group correlated crude moves ("crude complex") as one insight.
+**`PIPELINE_STATUS_DATA`** (if present).
 
 ---
 
-## Step 5: Write `market-insights.json`
+## Step 2: Compute cross-commodity metrics
 
-Strict schema:
+For each commodity in `market-prices-seed.json` + Murban:
+- **1-day return** (abs + %): `current - history[-2].price`
+- **5-day return** (%): `(current / history[-6].price - 1) * 100`
+- **20-day Z-score** of daily return
+- **52W high/low breach**: `current` vs history max/min over last 260 days
+- **Distance from 52W high/low** (%)
+
+**Spreads & cracks**:
+- Gasoline-Murban, Jet-Murban, Gasoil-Murban (today + 5-day Δ)
+- Brent-WTI spread
+- Brent-Murban spread
+- JKM-NWE LNG spread
+- TTF-Henry Hub spread
+- Propane-Butane spread
+
+**Regime detection**:
+- 20-day rolling correlation between related series (Brent↔WTI, JKM↔NWE, crude↔products)
+- Flag correlation breaks (|ρ| dropping > 0.5 over 10 days)
+
+---
+
+## Step 3: Cross-reference price moves with events
+
+For every significant price move (|z| > 1.5 OR 52W breach OR single-day > 3%):
+
+1. Scan `FM_DECLARATIONS_DATA` for entries dated ±3 days. Link any by company/country/facility.
+2. Scan `SHUTDOWNS_NO_FM_DATA` for dated entries ±3 days.
+3. Scan `WAR_RISK_PREMIUM_DATA.history[].event` for context on the same date.
+4. Scan `SPR_RELEASE_DATA` for drawdown announcements or country actions.
+5. Cross-reference `COUNTRY_STATUS_DATA` for country-level status changes affecting the commodity's origin region.
+6. If data.js doesn't explain the move, use WebSearch (≤3 calls) for breaking news context.
+
+**Analyst rigor**: don't force-fit events. If a price move has no matching event, mark it `info`/`technical` severity and note "no matching event in data.js — possibly positioning or rebalancing".
+
+---
+
+## Step 4: Select 3–5 insights
+
+Priority order:
+1. **Extreme moves + clear event link** (e.g., "Gasoil +$46 Apr 2 as UAE refinery FM #12 + #15 + #17 compound")
+2. **Structural shifts with event context** (e.g., "Brent-Murban spread inverts on Hormuz redirection surcharge per AWRP event Mar 10")
+3. **52W breaches with crisis trajectory** (e.g., "AWRP pierces $2.45 — new 52W high, 43% higher than Gard-cancel day")
+4. **Correlation breaks explained by policy** (e.g., "JKM decouples from NWE as Asia winter restocking hits concurrent UAE plant outages")
+5. **Forward-looking signals** (e.g., "SPR release at 67.7 mb of 426 mb committed — 16% utilized, IEA warns April losses 2x March")
+
+Avoid redundancy — group correlated crude moves into ONE "crude complex" insight with multiple metrics.
+
+---
+
+## Step 5: Write `market-insights.json` (strict schema)
 
 ```json
 {
-  "generated_at": "<ISO-8601 UTC timestamp>",
+  "generated_at": "<ISO-8601 UTC>",
   "model": "claude-opus-4.6",
   "asOfDate": "<YYYY-MM-DD>",
   "insights": [
     {
       "type": "top_mover | spread | cross | anomaly | trend | correlation_break",
       "severity": "info | bullish | bearish | warning",
-      "title": "<=100 char headline>",
-      "detail": "<=180 char context sentence>",
+      "title": "<=100 chars",
+      "detail": "<=180 chars — MUST reference an event from data.js when applicable",
       "metrics": [
-        {"label": "<=20 chars", "value": "<=30 chars, formatted with unit>"}
+        {"label": "<=20 chars", "value": "<=30 chars with unit"}
       ],
       "related_event": {
-        "type": "fm | shutdown | awrp | spr | news",
+        "type": "fm | shutdown | awrp | spr | country_status | news",
         "date": "<YYYY-MM-DD>",
-        "summary": "<=100 char event summary>",
-        "source_url": "<optional URL>"
+        "summary": "<=120 chars",
+        "source_url": "<optional>"
       }
     }
   ]
@@ -93,80 +123,43 @@ Strict schema:
 ```
 
 ### Field rules
-- `type`: one of 6 enum values
-- `severity`: one of 4 enum values (`info`, `bullish`, `bearish`, `warning`)
-- `title`: ≤100 chars
-- `detail`: ≤180 chars
-- `metrics`: 1–4 items, label ≤20 chars, value ≤30 chars, values formatted with units (`$114.84/bbl`, `+3.2%`)
-- `related_event`: **optional** (omit field entirely if no event found). If present:
-  - `type` one of `fm`, `shutdown`, `awrp`, `spr`, `news`
-  - `date` in `YYYY-MM-DD`
-  - `summary` ≤100 chars
-  - `source_url` optional
-- `asOfDate`: most recent date across all input sources
+- `type`: 6 enum values
+- `severity`: 4 enum values (info/bullish/bearish/warning)
+- `title` ≤100 chars, `detail` ≤180 chars
+- `metrics`: 1–4 items, values formatted with units (`$109.03/bbl`, `+11.4%`, `$146.4`)
+- `related_event`: **MANDATORY when a data.js event explains the move**, OMIT only if no event found. `type` one of 6 values; `date` YYYY-MM-DD; `summary` ≤120 chars.
 
-### Severity semantics
-- `info` — neutral observation
-- `bullish` — price rising, supply-tight, demand-strong
-- `bearish` — price falling, supply-loose, demand-weak
-- `warning` — abnormal/anomalous (spread blowout, AWRP spike, correlation break)
+### Quality bar
+- Every `detail` should demonstrate ANALYST synthesis, not price recap
+- Prefer specific FM/shutdown IDs or country names over vague references
+- Link multiple events when a move has multiple causes (e.g., "FM #12 + #15 + SPR delay")
+- Show numeric relationships (e.g., "43% higher than X", "3 concurrent outages totaling 480kbpd")
 
 ---
 
 ## Step 6: Self-validate before writing
 
-- [ ] JSON parses via `JSON.parse()`
-- [ ] 3–5 insights present
+- [ ] JSON parses
+- [ ] 3–5 insights, each with `title` ≤100 chars, `detail` ≤180 chars
+- [ ] ≥60% of insights have `related_event` citing data.js or WebSearch
 - [ ] All `type` + `severity` values in allowed enums
-- [ ] `title` ≤100 chars, `detail` ≤180 chars, `metrics.value` formatted with units
-- [ ] Each commodity referenced exists in inputs
-- [ ] `related_event` fields (where present) cite real events from data.js or verified news
+- [ ] All commodity references match keys in market-prices-seed.json
+- [ ] No two insights cover the same price move (no redundancy)
 
-Write to `C:/Users/rahul/Documents/adnoc-fm-monitor/market-insights.json`. After writing, read it back to confirm valid JSON.
+Write to `C:/Users/rahul/Documents/adnoc-fm-monitor/market-insights.json` using the Write tool. Read it back to confirm valid JSON.
 
 ---
 
-## Example (illustrative only)
+## Example quality bar
 
-```json
-{
-  "generated_at": "2026-04-05T12:00:00Z",
-  "model": "claude-opus-4.6",
-  "asOfDate": "2026-04-02",
-  "insights": [
-    {
-      "type": "top_mover",
-      "severity": "bullish",
-      "title": "Murban +$11.92 (+11.6%) extends crisis rally",
-      "detail": "Front-month settles at $114.84/bbl, recovering from $102.92 after 3-week slide; still 22% below $146.40 Mar-20 peak.",
-      "metrics": [
-        {"label": "Murban", "value": "$114.84/bbl"},
-        {"label": "1-day", "value": "+11.6%"},
-        {"label": "vs peak", "value": "-21.5%"}
-      ],
-      "related_event": {
-        "type": "awrp",
-        "date": "2026-04-02",
-        "summary": "AWRP steady 5%; Lloyd's reports double-digit million-$/trip; Apr 6 deadline uncertainty",
-        "source_url": "https://www.insurancejournal.com"
-      }
-    },
-    {
-      "type": "spread",
-      "severity": "warning",
-      "title": "Gasoil-Murban crack stays at $170/bbl on refining squeeze",
-      "detail": "Middle distillate premium over crude persists 3+ weeks post-conflict; reflects regional refinery outages and rerouting.",
-      "metrics": [
-        {"label": "Gasoil", "value": "$284.97/bbl"},
-        {"label": "Crack", "value": "+$170.13/bbl"}
-      ],
-      "related_event": {
-        "type": "shutdown",
-        "date": "2026-03-28",
-        "summary": "Fujairah terminal partial closure; loading suspended after drone attack",
-        "source_url": ""
-      }
-    }
-  ]
-}
-```
+**BAD (price-only, no event link):**
+> "Brent Futures M1 up 11% to $109.03 on 1-day basis"
+
+**GOOD (event-linked, analytical):**
+> "Brent M1 +$7.87 (+7.8%) settles $109 as Iraq Kurdistan FM #5/#6 (HKN + Gulf Keystone, 70 kbpd combined) + Iran strait-closure AWRP event compound; 5-day ATR triple pre-crisis"
+
+**BAD (vague):**
+> "Gasoil crack widens significantly"
+
+**GOOD (specific):**
+> "Gasoil-Murban crack to +$170/bbl (5-day Δ +$35) reflects UAE refinery outages FM #12/#15/#17 (combined 400kbpd affected) + Fujairah terminal partial closure per shutdown sd-008"

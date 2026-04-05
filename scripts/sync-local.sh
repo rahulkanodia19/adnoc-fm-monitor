@@ -82,7 +82,7 @@ Also use WebSearch for publicly available data as usual.
 Combine browser-sourced data with web search results for the most comprehensive update.
 When citing data obtained via browser from premium sources, note the source clearly.
 LOCALEOF
-cat "$TMPFILE" | claude -p - \
+cat "$TMPFILE" | NODE_OPTIONS="--max-old-space-size=4096" claude -p - \
   --allowedTools "Edit,Write,Read,WebSearch,WebFetch,Glob,Grep,Bash(git diff*),Bash(git status*),mcp__chrome-devtools*" \
   --max-turns 50
 rm -f "$TMPFILE"

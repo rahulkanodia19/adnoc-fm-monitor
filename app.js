@@ -153,8 +153,8 @@ function updateStaticBadge(elementId, pipelineKey, fallbackDate) {
 // ---------- Sync Progress Banner ----------
 
 const PIPELINE_LABELS = {
-  news_fm: 'News/FM', soh: 'SOH', prices: 'Prices',
-  flows: 'Flows', spr: 'SPR', insights: 'Insights'
+  news: 'News', fm: 'FM', soh: 'SOH', prices: 'Prices',
+  flows: 'Flows', adnoc: 'ADNOC', spr: 'SPR', awrp: 'AWRP', insights: 'Insights'
 };
 
 function renderProgressBanner(progress) {
@@ -300,7 +300,7 @@ function formatNum(n) {
 
 function renderEmptyProductionCard(title, unit, message) {
   return `
-    <div class="bg-white rounded-xl border border-navy-200/70 shadow-[0_1px_3px_rgba(10,25,41,0.04)] overflow-hidden">
+    <div class="bg-white rounded-xl border border-navy-200/70 shadow-card overflow-hidden">
       <div class="px-4 py-3 border-b border-navy-200 bg-navy-50 border-l-4 border-l-amber-400">
         <h3 class="text-sm font-bold text-navy-900">${title}</h3>
         <span class="text-xs text-navy-600">${unit}</span>
@@ -348,7 +348,7 @@ function renderProductionTable(title, unit, rows, type) {
   const totalChangeStr = isCapacity ? formatNum(totalC) : (totalC <= 0 ? formatNum(Math.round(totalC * 10) / 10) : '+' + formatNum(totalC));
 
   return `
-    <div class="bg-white rounded-xl border border-navy-200/70 shadow-[0_1px_3px_rgba(10,25,41,0.04)] overflow-hidden">
+    <div class="bg-white rounded-xl border border-navy-200/70 shadow-card overflow-hidden">
       <div class="px-4 py-3 border-b border-navy-200 bg-navy-50 border-l-4 border-l-amber-400">
         <h3 class="text-sm font-bold text-navy-900">${title}</h3>
         <span class="text-xs text-navy-600">${unit}</span>
@@ -426,7 +426,7 @@ function renderKeyPortsTable() {
   });
 
   return `
-    <div class="bg-white rounded-xl border border-navy-200 overflow-hidden max-w-4xl">
+    <div class="bg-white rounded-xl border border-navy-200/70 overflow-hidden max-w-4xl">
       <div class="px-4 py-2.5 border-b border-navy-200 bg-navy-50">
         <h3 class="text-sm font-bold text-navy-900">Key Ports & Terminal Status</h3>
         <span class="text-xs text-navy-600">Export terminals and port infrastructure (synced daily)</span>
@@ -501,12 +501,12 @@ function renderPipelineTable() {
     const unitLabel = p.type === 'gas' ? 'bcf/d' : 'mb/d';
     rowsHtml += `<tr class="${rowBg}">
       <td class="px-2 py-1.5 sm:px-3 text-sm font-medium text-navy-900">${p.name}</td>
-      <td class="px-2 py-1.5 sm:px-3 text-sm text-navy-700">${p.fromCountry || ''} \u2192 ${p.toCountry || ''}</td>
+      <td class="px-2 py-1.5 sm:px-3 text-sm text-navy-700"><span class="flex flex-col sm:flex-row sm:items-center gap-0 sm:gap-1 leading-tight"><span>${p.fromCountry || ''}</span><span class="text-navy-400">\u2192</span><span>${p.toCountry || ''}</span></span></td>
       <td class="px-2 py-1.5 sm:px-3 text-center">
         <span class="text-[10px] font-semibold uppercase px-2 py-0.5 rounded border ${typeBg[p.type] || typeBg.oil}">${typeLabel}</span>
       </td>
-      <td class="px-2 py-1.5 sm:px-3 text-sm text-navy-700 text-right">${p.capacity}</td>
-      <td class="px-2 py-1.5 sm:px-3 text-sm text-navy-700 text-right font-medium">${p.currentFlow || '\u2014'}</td>
+      <td class="px-2 py-1.5 sm:px-3 text-sm text-navy-700 text-right tabular-nums">${p.capacity}</td>
+      <td class="px-2 py-1.5 sm:px-3 text-sm text-navy-700 text-right tabular-nums font-medium">${p.currentFlow || '\u2014'}</td>
       <td class="px-2 py-1.5 sm:px-3 text-right">
         <span class="text-[10px] font-semibold uppercase px-2 py-0.5 rounded border ${statusBg[p.status] || 'bg-navy-100 text-navy-600 border-navy-300'}">${statusLabel[p.status] || p.status}</span>
       </td>
@@ -515,7 +515,7 @@ function renderPipelineTable() {
   });
 
   return `
-    <div class="bg-white rounded-xl border border-navy-200 overflow-hidden mt-5">
+    <div class="bg-white rounded-xl border border-navy-200/70 overflow-hidden mt-5">
       <div class="px-4 py-2.5 border-b border-navy-200 bg-navy-50">
         <h3 class="text-sm font-bold text-navy-900">Pipeline Infrastructure</h3>
         <span class="text-xs text-navy-600">Cross-country and strategic bypass pipelines across the region</span>
@@ -569,7 +569,7 @@ function renderPipelineTable() {
 function renderGccOverviewMap() {
   const pillCls = 'gcc-filter-pill text-[10px] sm:text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-lg border border-navy-300 bg-white text-navy-600 hover:bg-navy-100 whitespace-nowrap transition-all min-h-[36px]';
   return `
-    <div class="bg-white rounded-xl border border-navy-200 overflow-hidden">
+    <div class="bg-white rounded-xl border border-navy-200/70 overflow-hidden">
       <div class="px-4 py-3 border-b border-navy-200 bg-navy-50 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
         <div>
           <h3 class="text-sm font-bold text-navy-900">GCC Energy Infrastructure Map</h3>
@@ -898,7 +898,7 @@ function renderExecSummary() {
         <h2 class="text-lg font-bold text-navy-900">Regional Production Impact Assessment</h2>
         <p class="text-sm text-navy-600">Gulf Escalation: 28 Feb \u2013 ${new Date(LAST_UPDATED).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</p>
       </div>
-      ${renderPipelineBadge('news_fm', LAST_UPDATED)}
+      ${renderPipelineBadge('news', LAST_UPDATED)}
     </div>
 
     <div class="mb-5">
@@ -1111,20 +1111,20 @@ function renderCountryMatrix() {
       `;
     }).join('');
 
-    // Mobile: compact list of 2 most recent events (shown below md breakpoint)
-    const mobileEvents = country.events.slice(0, 2);
-    const mobileEventsHtml = mobileEvents.map(evt => {
+    // Mobile: full list of events shown below md breakpoint (matches desktop Key Events column)
+    const mobileEventsHtml = country.events.map(evt => {
       const evtNewBadge = evt.isNew ? renderNewBadge() : '';
-      return `<li class="flex items-start gap-1.5">
+      const evtBgClass = evt.isNew ? 'bg-sky-50 rounded px-1.5 py-0.5 -mx-1.5' : '';
+      const assetPills = renderAssetImpactPills(evt.assetImpact);
+      return `<li class="flex items-start gap-1.5 ${evtBgClass}">
           <span class="w-1 h-1 rounded-full bg-navy-400 mt-1.5 flex-shrink-0"></span>
-          <span>
+          <span class="min-w-0">
             <span class="text-navy-500 text-[11px]">${formatDateShort(evt.date)}</span>
             <span class="text-navy-800 text-xs ml-1">${evt.title}</span>
-            ${evtNewBadge}
+            ${evtNewBadge}${assetPills}
           </span>
         </li>`;
     }).join('');
-    const moreEventsCount = country.events.length - 2;
 
     return `
     <tr class="data-row cursor-pointer ${newRowClass}" onclick="toggleExpand('${country.id}')">
@@ -1162,9 +1162,8 @@ function renderCountryMatrix() {
     </tr>
     ${country.events.length ? `<tr class="md:hidden ${newRowClass} border-t-0 cursor-pointer" onclick="toggleExpand('${country.id}')">
       <td colspan="7" class="px-3 pb-2.5 pt-0 sm:px-5">
-        <div class="text-[10px] font-semibold text-navy-500 uppercase tracking-wider mb-1">Key Events</div>
-        <ul class="space-y-0.5">${mobileEventsHtml}</ul>
-        ${moreEventsCount > 0 ? `<div class="text-[10px] text-navy-400 mt-1 italic">+${moreEventsCount} more — tap to expand</div>` : ''}
+        <div class="text-[10px] font-semibold text-navy-500 uppercase tracking-wider mb-1.5">Key Events</div>
+        <ul class="space-y-1">${mobileEventsHtml}</ul>
       </td>
     </tr>` : ''}
     <tr id="detail-${country.id}" class="hidden">
@@ -1174,7 +1173,7 @@ function renderCountryMatrix() {
   }).join('');
 
   // Populate badge above the table
-  updateStaticBadge('country-matrix-header', 'news_fm', LAST_UPDATED);
+  updateStaticBadge('country-matrix-header', 'news', LAST_UPDATED);
 }
 
 // ---------- FM Declarations Rendering ----------
@@ -1271,13 +1270,22 @@ function renderFMDeclarations() {
       <td class="px-3 py-2.5 sm:px-5 sm:py-3.5">${renderStatusBadge(item.status, item.statusLabel)}</td>
       <td class="px-3 py-2.5 sm:px-5 sm:py-3.5 text-sm max-w-sm hidden md:table-cell">
         ${item.details && item.details.volumeAffected ? `<p class="text-amber-600 font-semibold text-xs mb-0.5">${item.details.volumeAffected}</p>` : ''}
-        <span class="text-navy-600 line-clamp-2">${item.summary}</span>
+        <span class="text-navy-600 line-clamp-2" title="${(item.summary || '').replace(/"/g, '&quot;')}">${item.summary}</span>
       </td>
       <td class="px-3 py-2.5 sm:px-5 sm:py-3.5 hidden sm:table-cell">${renderSourcesBadge(item.sources)}</td>
       <td class="px-3 py-2.5 sm:px-5 sm:py-3.5">
         <svg id="chevron-${item.id}" class="w-5 h-5 text-navy-400 chevron-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
         </svg>
+      </td>
+    </tr>
+    <tr class="md:hidden ${newRowClass || leftBorder} border-t-0 cursor-pointer" onclick="toggleExpand('${item.id}')">
+      <td colspan="7" class="px-3 pb-2.5 pt-0 sm:px-5">
+        <div class="text-[10px] font-semibold text-navy-500 uppercase tracking-wider mb-1.5">Details</div>
+        <div class="sm:hidden text-[11px] text-navy-500 mb-1">${item.country}</div>
+        ${item.details && item.details.volumeAffected ? `<p class="text-amber-600 font-semibold text-[11px] mb-0.5">${item.details.volumeAffected}</p>` : ''}
+        <p class="text-navy-600 text-xs leading-snug line-clamp-3" title="${(item.summary || '').replace(/"/g, '&quot;')}">${item.summary}</p>
+        <div class="sm:hidden mt-1.5">${renderSourcesBadge(item.sources)}</div>
       </td>
     </tr>
     <tr id="detail-${item.id}" class="hidden">
@@ -1287,7 +1295,7 @@ function renderFMDeclarations() {
   }).join('');
 
   // Populate badge above the table
-  updateStaticBadge('fm-declarations-header', 'news_fm', LAST_UPDATED);
+  updateStaticBadge('fm-declarations-header', 'fm', LAST_UPDATED);
 }
 
 // ---------- Shutdowns Rendering ----------
@@ -1330,13 +1338,22 @@ function renderShutdowns() {
       <td class="px-3 py-2.5 sm:px-5 sm:py-3.5">${renderStatusBadge(item.status, item.statusLabel)}</td>
       <td class="px-3 py-2.5 sm:px-5 sm:py-3.5 text-sm max-w-sm hidden md:table-cell">
         ${item.details && item.details.volumeAffected ? `<p class="text-amber-600 font-semibold text-xs mb-0.5">${item.details.volumeAffected}</p>` : ''}
-        <span class="text-navy-600 line-clamp-2">${item.summary}</span>
+        <span class="text-navy-600 line-clamp-2" title="${(item.summary || '').replace(/"/g, '&quot;')}">${item.summary}</span>
       </td>
       <td class="px-3 py-2.5 sm:px-5 sm:py-3.5 hidden sm:table-cell">${renderSourcesBadge(item.sources)}</td>
       <td class="px-3 py-2.5 sm:px-5 sm:py-3.5">
         <svg id="chevron-${item.id}" class="w-5 h-5 text-navy-400 chevron-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
         </svg>
+      </td>
+    </tr>
+    <tr class="md:hidden ${newRowClass || leftBorder} border-t-0 cursor-pointer" onclick="toggleExpand('${item.id}')">
+      <td colspan="7" class="px-3 pb-2.5 pt-0 sm:px-5">
+        <div class="text-[10px] font-semibold text-navy-500 uppercase tracking-wider mb-1.5">Details</div>
+        <div class="sm:hidden text-[11px] text-navy-500 mb-1">${item.country}</div>
+        ${item.details && item.details.volumeAffected ? `<p class="text-amber-600 font-semibold text-[11px] mb-0.5">${item.details.volumeAffected}</p>` : ''}
+        <p class="text-navy-600 text-xs leading-snug line-clamp-3" title="${(item.summary || '').replace(/"/g, '&quot;')}">${item.summary}</p>
+        <div class="sm:hidden mt-1.5">${renderSourcesBadge(item.sources)}</div>
       </td>
     </tr>
     <tr id="detail-${item.id}" class="hidden">
@@ -1346,7 +1363,7 @@ function renderShutdowns() {
   }).join('');
 
   // Populate badge above the table
-  updateStaticBadge('shutdowns-header', 'news_fm', LAST_UPDATED);
+  updateStaticBadge('shutdowns-header', 'fm', LAST_UPDATED);
 }
 
 // ---------- Market News / SPR ----------
@@ -1475,7 +1492,7 @@ function renderMarketNews() {
       </div>` : ''}
 
       <!-- Regional Breakdown -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
         ${Object.entries(regions).map(([region, data]) => {
           const pct = data.committed > 0 ? ((data.released / data.committed) * 100).toFixed(1) : '0.0';
           return `
@@ -1495,24 +1512,24 @@ function renderMarketNews() {
       </div>
 
       <!-- Chart: Top 10 Countries -->
-      <div class="bg-white rounded-xl border border-navy-200 shadow-sm p-5 mb-6">
+      <div class="bg-white rounded-xl border border-navy-200/70 shadow-sm p-5 mb-6">
         <h3 class="text-lg font-bold text-navy-800 mb-1">Top 10 Countries — Committed vs Released</h3>
         <p class="text-sm text-navy-400 mb-4">Million barrels (mb)</p>
-        <div style="height: 400px;">
+        <div class="chart-container">
           <canvas id="spr-chart"></canvas>
         </div>
       </div>
 
       <!-- Full Country Table -->
-      <div class="bg-white rounded-xl border border-navy-200 shadow-sm overflow-hidden mb-6">
-        <div class="h-1 bg-gradient-to-r from-sky-400 via-amber-400 to-sky-400"></div>
+      <div class="bg-white rounded-xl border border-navy-200/70 shadow-sm mb-6">
+        <div class="h-1 bg-gradient-to-r from-sky-400 via-amber-400 to-sky-400 rounded-t-xl"></div>
         <div class="px-5 py-4 border-b border-navy-200">
           <h3 class="text-lg font-bold text-navy-800">All IEA Member Contributions</h3>
-          <p class="text-sm text-navy-400 mt-0.5">30 countries | Data as of ${new Date(d.asOf).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</p>
+          <p class="text-sm text-navy-500 mt-0.5">30 countries | Data as of ${new Date(d.asOf).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</p>
         </div>
-        <div class="overflow-x-auto">
+        <div>
           <table class="w-full text-left">
-            <thead class="bg-navy-50 text-navy-600 text-xs uppercase tracking-wider">
+            <thead class="sticky top-16 z-10 bg-navy-50 text-navy-500 text-xs uppercase tracking-wider">
               <tr>
                 <th class="px-4 py-3 font-semibold w-10">#</th>
                 <th class="px-4 py-3 font-semibold">Country</th>
@@ -1553,6 +1570,15 @@ function renderMarketNews() {
                   </td>
                   <td class="px-4 py-3 text-sm text-navy-600 hidden md:table-cell">${startLabel}</td>
                   <td class="px-4 py-3 text-xs text-navy-500 hidden lg:table-cell">${c.region}</td>
+                </tr>
+                <tr class="md:hidden ${i % 2 === 1 ? 'bg-navy-50/30' : ''} border-t-0">
+                  <td colspan="7" class="px-4 pb-3 pt-0 text-[11px] text-navy-500">
+                    <div class="flex flex-wrap gap-x-3 gap-y-0.5">
+                      <span class="sm:hidden"><span class="text-navy-500 uppercase tracking-wider text-[9px] mr-1">Refined</span>${c.products > 0 ? c.products.toFixed(1) + ' mb' : '\u2014'}</span>
+                      <span><span class="text-navy-500 uppercase tracking-wider text-[9px] mr-1">Start</span>${startLabel}</span>
+                      <span class="lg:hidden"><span class="text-navy-500 uppercase tracking-wider text-[9px] mr-1">Region</span>${c.region}</span>
+                    </div>
+                  </td>
                 </tr>`;
               }).join('')}
               <tr class="bg-navy-100/70 border-t-2 border-navy-300 font-bold">
@@ -1710,7 +1736,7 @@ function updateStats(activeTab) {
 
   switch (activeTab) {
     case 'exec-summary': {
-      let oilOffline = 0, gasOffline = 0, refAffected = 0, petchemAffected = 0, impactedCount = 0;
+      let oilOffline = 0, gasOffline = 0, refAffected = 0, petchemAffected = 0, lngAffected = 0, impactedCount = 0;
       COUNTRY_STATUS_DATA.forEach(c => {
         if (!c.production) return;
         const p = c.production;
@@ -1718,11 +1744,13 @@ function updateStats(activeTab) {
         const gasLoss = p.gas ? p.gas.preWar - p.gas.current : 0;
         const refLoss = p.refining ? p.refining.affected : 0;
         const petLoss = p.petrochemicals ? p.petrochemicals.affected : 0;
+        const lngLoss = p.lng ? p.lng.preWar - p.lng.current : 0;
         oilOffline += oilLoss;
         gasOffline += gasLoss;
         refAffected += refLoss;
         petchemAffected += petLoss;
-        if (oilLoss > 0 || gasLoss > 0 || refLoss > 0 || petLoss > 0) impactedCount++;
+        lngAffected += lngLoss;
+        if (oilLoss > 0 || gasLoss > 0 || refLoss > 0 || petLoss > 0 || lngLoss > 0) impactedCount++;
       });
       // Get commodity-specific highlights from recently updated countries
       const recentCountries = COUNTRY_STATUS_DATA.filter(c => c.events && c.events.some(e => e.isNew));
@@ -1734,8 +1762,9 @@ function updateStats(activeTab) {
         { label: 'Oil Offline (kb/d)', value: formatNum(Math.round(oilOffline)), color: 'text-red-600', change: 0, subtitle: oilHL.substring(0, 90) },
         { label: 'Gas Offline (Bcf/d)', value: formatNum(Math.round(gasOffline * 10) / 10), color: 'text-amber-600', change: 0, subtitle: gasHL.substring(0, 90) },
         { label: 'Downstream Affected', value: `<div class="space-y-0.5 text-left">
-          <div class="flex items-baseline gap-1.5"><span class="text-lg sm:text-xl tabular-nums">${formatNum(Math.round(refAffected))}</span><span class="text-[10px] font-normal text-navy-400">kb/d</span><span class="text-[10px] font-normal text-navy-500 ml-auto uppercase tracking-wider">Refining</span></div>
-          <div class="flex items-baseline gap-1.5"><span class="text-lg sm:text-xl tabular-nums">${formatNum(Math.round(petchemAffected))}</span><span class="text-[10px] font-normal text-navy-400">kt/y</span><span class="text-[10px] font-normal text-navy-500 ml-auto uppercase tracking-wider">Petchem</span></div>
+          <div class="flex items-baseline gap-1.5"><span class="text-base sm:text-lg tabular-nums">${formatNum(Math.round(refAffected))}</span><span class="text-[10px] font-normal text-navy-400">kb/d</span><span class="text-[10px] font-normal text-navy-500 ml-auto uppercase tracking-wider">Refining</span></div>
+          <div class="flex items-baseline gap-1.5"><span class="text-base sm:text-lg tabular-nums">${formatNum(Math.round(petchemAffected))}</span><span class="text-[10px] font-normal text-navy-400">kt/y</span><span class="text-[10px] font-normal text-navy-500 ml-auto uppercase tracking-wider">Petchem</span></div>
+          <div class="flex items-baseline gap-1.5"><span class="text-base sm:text-lg tabular-nums">${formatNum(Math.round(lngAffected * 10) / 10)}</span><span class="text-[10px] font-normal text-navy-400">Mtpa</span><span class="text-[10px] font-normal text-navy-500 ml-auto uppercase tracking-wider">LNG</span></div>
         </div>`, color: 'text-orange-600', change: 0, subtitle: refHL.substring(0, 90) },
         { label: 'Countries Impacted', value: impactedCount, color: 'text-blue-600', change: recentCountries.length, subtitle: countryNames },
       ];
@@ -1799,7 +1828,7 @@ function updateStats(activeTab) {
       ? `<div class="text-xs mt-1.5 text-emerald-600">${s.change} with new events</div>`
       : (s.subtitle ? '' : '<div class="text-xs mt-1.5 text-navy-400">Steady</div>');
     return `
-      <div class="stat-card bg-white rounded-xl p-3 sm:p-4 border border-navy-200/70 border-l-4 ${borderClass} shadow-[0_1px_3px_rgba(10,25,41,0.04)]">
+      <div class="stat-card bg-white rounded-xl p-3 sm:p-4 border border-navy-200/70 border-l-4 ${borderClass} shadow-card">
         <div class="mb-1.5">${icon}</div>
         <div class="text-xl sm:text-2xl md:text-3xl font-extrabold tabular-nums ${s.color}">${s.value}</div>
         <div class="text-xs sm:text-sm text-navy-500 mt-1">${s.label}</div>
