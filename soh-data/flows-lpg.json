@@ -1,21 +1,6 @@
 {
   "series": [
     {
-      "date": "2024-04-04",
-      "datasets": [
-        {
-          "datasetName": "flows",
-          "values": {
-            "volume": 157789,
-            "volume_gas": 173567.90000000002,
-            "mass": 87888.473,
-            "energy": 4030246.5501184175
-          }
-        }
-      ],
-      "periodEndDate": "2024-04-04T23:59:59.999Z"
-    },
-    {
       "date": "2024-04-05",
       "datasets": [
         {
@@ -353,7 +338,7 @@
           "values": {
             "volume": 161248,
             "volume_gas": 177372.80000000002,
-            "mass": 89815.13600000001,
+            "mass": 89815.136,
             "energy": 4118596.326191905
           }
         }
@@ -1672,7 +1657,7 @@
           "datasetName": "flows",
           "values": {
             "volume": 287860,
-            "volume_gas": 316646,
+            "volume_gas": 316646.00000000006,
             "mass": 160338.02,
             "energy": 7352519.95967455
           }
@@ -1973,7 +1958,7 @@
           "values": {
             "volume": 321026,
             "volume_gas": 353128.60000000003,
-            "mass": 178811.48200000002,
+            "mass": 178811.482,
             "energy": 8199645.913202536
           }
         }
@@ -3277,7 +3262,7 @@
           "datasetName": "flows",
           "values": {
             "volume": 326137,
-            "volume_gas": 358750.70000000007,
+            "volume_gas": 358750.7,
             "mass": 181658.309,
             "energy": 8330191.0723559335
           }
@@ -3757,7 +3742,7 @@
           "datasetName": "flows",
           "values": {
             "volume": 180485,
-            "volume_gas": 198533.50000000003,
+            "volume_gas": 198533.5,
             "mass": 100530.145,
             "energy": 4609947.769477736
           }
@@ -4134,7 +4119,7 @@
             "volume": 140986,
             "volume_gas": 155084.6,
             "mass": 78529.202,
-            "energy": 3601064.333476955
+            "energy": 3601064.3334769546
           }
         }
       ],
@@ -4403,7 +4388,7 @@
           "values": {
             "volume": 161488,
             "volume_gas": 177636.80000000002,
-            "mass": 89948.816,
+            "mass": 89948.81599999999,
             "energy": 4124726.406058236
           }
         }
@@ -5213,7 +5198,7 @@
           "values": {
             "volume": 118947,
             "volume_gas": 130841.70000000001,
-            "mass": 66253.47899999999,
+            "mass": 66253.479,
             "energy": 3038144.207751715
           }
         }
@@ -5272,7 +5257,7 @@
           "datasetName": "flows",
           "values": {
             "volume": 178326,
-            "volume_gas": 196158.60000000003,
+            "volume_gas": 196158.6,
             "mass": 99327.582,
             "energy": 4554802.592680205
           }
@@ -5407,7 +5392,7 @@
           "datasetName": "flows",
           "values": {
             "volume": 148206,
-            "volume_gas": 163026.6,
+            "volume_gas": 163026.60000000003,
             "mass": 82550.742,
             "energy": 3785477.56945573
           }
@@ -6517,7 +6502,7 @@
           "datasetName": "flows",
           "values": {
             "volume": 223126,
-            "volume_gas": 245438.60000000003,
+            "volume_gas": 245438.6,
             "mass": 124281.182,
             "energy": 5699084.167728562
           }
@@ -6847,7 +6832,7 @@
           "datasetName": "flows",
           "values": {
             "volume": 216776,
-            "volume_gas": 238453.60000000003,
+            "volume_gas": 238453.6,
             "mass": 120744.232,
             "energy": 5536892.471265234
           }
@@ -7416,10 +7401,10 @@
         {
           "datasetName": "flows",
           "values": {
-            "volume": 98562,
-            "volume_gas": 108418.20000000001,
-            "mass": 54899.034,
-            "energy": 2517470.54910527
+            "volume": 98563,
+            "volume_gas": 108419.3,
+            "mass": 54899.591,
+            "energy": 2517496.0911047133
           }
         }
       ],
@@ -7716,10 +7701,10 @@
         {
           "datasetName": "flows",
           "values": {
-            "volume": 106306,
-            "volume_gas": 116936.6,
-            "mass": 59212.441999999995,
-            "energy": 2715267.7927922
+            "volume": 106305,
+            "volume_gas": 116935.5,
+            "mass": 59211.884999999995,
+            "energy": 2715242.250792757
           }
         }
       ],
@@ -8513,7 +8498,7 @@
           "values": {
             "volume": 88306,
             "volume_gas": 97136.6,
-            "mass": 49186.441999999995,
+            "mass": 49186.442,
             "energy": 2255511.8028174145
           }
         }
@@ -8752,9 +8737,9 @@
           "datasetName": "flows",
           "values": {
             "volume": 147490,
-            "volume_gas": 162239.00000000003,
+            "volume_gas": 162239,
             "mass": 82151.93,
-            "energy": 3767189.4978545103
+            "energy": 3767189.497854511
           }
         }
       ],
@@ -8798,7 +8783,7 @@
           "values": {
             "volume": 122785,
             "volume_gas": 135063.5,
-            "mass": 68391.245,
+            "mass": 68391.24500000001,
             "energy": 3136174.4016141165
           }
         }
@@ -8964,7 +8949,7 @@
             "volume": 265804,
             "volume_gas": 292384.4,
             "mass": 148052.828,
-            "energy": 6789165.61995878
+            "energy": 6789165.619958779
           }
         }
       ],
@@ -10251,10 +10236,10 @@
         {
           "datasetName": "flows",
           "values": {
-            "volume": 93791,
-            "volume_gas": 103170.1,
-            "mass": 52241.587,
-            "energy": 2395609.6697625085
+            "volume": 93790,
+            "volume_gas": 103169,
+            "mass": 52241.03,
+            "energy": 2395584.1277630655
           }
         }
       ],
@@ -10449,7 +10434,7 @@
             "volume": 117815,
             "volume_gas": 129596.5,
             "mass": 65622.955,
-            "energy": 3009230.6643821895
+            "energy": 3009230.66438219
           }
         }
       ],
@@ -10521,10 +10506,10 @@
         {
           "datasetName": "flows",
           "values": {
-            "volume": 39497,
-            "volume_gas": 43446.700000000004,
-            "mass": 21999.829,
-            "energy": 1008832.3520018958
+            "volume": 39496,
+            "volume_gas": 43445.600000000006,
+            "mass": 21999.272,
+            "energy": 1008806.8100024527
           }
         }
       ],
@@ -10791,10 +10776,10 @@
         {
           "datasetName": "flows",
           "values": {
-            "volume": 37887,
-            "volume_gas": 41675.700000000004,
-            "mass": 21103.059,
-            "energy": 967709.7328985954
+            "volume": 37888,
+            "volume_gas": 41676.8,
+            "mass": 21103.616,
+            "energy": 967735.2748980385
           }
         }
       ],
@@ -10964,6 +10949,21 @@
         }
       ],
       "periodEndDate": "2026-04-04T23:59:59.999Z"
+    },
+    {
+      "date": "2026-04-05",
+      "datasets": [
+        {
+          "datasetName": "flows",
+          "values": {
+            "volume": 0,
+            "volume_gas": 0,
+            "mass": 0,
+            "energy": 0
+          }
+        }
+      ],
+      "periodEndDate": "2026-04-05T23:59:59.999Z"
     }
   ],
   "metadata": null

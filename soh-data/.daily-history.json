@@ -97,14 +97,14 @@
   },
   {
     "date": "2026-04-05",
-    "insideTotal": 692,
-    "insideBallast": 298,
-    "insideLaden": 393,
-    "outsideTotal": 352,
-    "outsideBallast": 216,
-    "outsideLaden": 136,
+    "insideTotal": 691,
+    "insideBallast": 294,
+    "insideLaden": 396,
+    "outsideTotal": 345,
+    "outsideBallast": 211,
+    "outsideLaden": 134,
     "adnocCount": 11,
-    "totalVessels": 1044,
-    "transitCount": 10
+    "totalVessels": 1036,
+    "transitCount": 11
   }
 ]

@@ -11,5 +11,18 @@
     "speed": 15.8,
     "departureDate": "2026-04-03",
     "commodity": "container"
+  },
+  {
+    "name": "BLUE STAR 3",
+    "imo": "9133147",
+    "vesselTypeClass": "Container Ship",
+    "state": "ballast",
+    "flagName": "",
+    "product": null,
+    "destination": "KARACHI",
+    "deadWeight": 4259,
+    "speed": 5.3,
+    "departureDate": "2026-04-05",
+    "commodity": "container"
   }
 ]

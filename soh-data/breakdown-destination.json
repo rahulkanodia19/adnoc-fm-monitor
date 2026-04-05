@@ -2,63 +2,69 @@
   "data": [
     {
       "label": "Unknown",
-      "total": 540,
-      "ballast": 288,
-      "laden": 251
+      "total": 548,
+      "ballast": 293,
+      "laden": 254
     },
     {
       "label": "Fujairah",
-      "total": 60,
-      "ballast": 39,
-      "laden": 21
+      "total": 61,
+      "ballast": 42,
+      "laden": 19
     },
     {
       "label": "Sohar",
-      "total": 29,
-      "ballast": 15,
-      "laden": 14
+      "total": 28,
+      "ballast": 12,
+      "laden": 16
     },
     {
       "label": "China",
-      "total": 24,
-      "ballast": 10,
-      "laden": 14
+      "total": 23,
+      "ballast": 7,
+      "laden": 16
     },
     {
-      "label": "Singapore",
-      "total": 15,
-      "ballast": 3,
-      "laden": 12
+      "label": "Sharjah",
+      "total": 14,
+      "ballast": 10,
+      "laden": 4
     },
     {
       "label": "Muscat",
-      "total": 13,
+      "total": 12,
       "ballast": 9,
+      "laden": 3
+    },
+    {
+      "label": "Singapore",
+      "total": 12,
+      "ballast": 3,
+      "laden": 9
+    },
+    {
+      "label": "Khor Al Zubair Port",
+      "total": 12,
+      "ballast": 8,
+      "laden": 4
+    },
+    {
+      "label": "Jebel Ali",
+      "total": 11,
+      "ballast": 7,
       "laden": 4
     },
     {
       "label": "Dubai Area",
-      "total": 12,
+      "total": 11,
       "ballast": 4,
-      "laden": 8
-    },
-    {
-      "label": "Sharjah",
-      "total": 12,
-      "ballast": 8,
-      "laden": 4
+      "laden": 7
     },
     {
       "label": "Oman",
-      "total": 12,
+      "total": 10,
       "ballast": 4,
-      "laden": 8
-    },
-    {
-      "label": "Khor Al Zubair Port",
-      "total": 11,
-      "ballast": 8,
-      "laden": 3
+      "laden": 6
     },
     {
       "label": "Ruwais",
@@ -73,16 +79,10 @@
       "laden": 8
     },
     {
-      "label": "Jebel Ali",
-      "total": 7,
-      "ballast": 4,
-      "laden": 3
-    },
-    {
       "label": "Karachi",
       "total": 7,
-      "ballast": 1,
-      "laden": 6
+      "ballast": 2,
+      "laden": 5
     },
     {
       "label": "United Arab Emirates",
@@ -91,7 +91,7 @@
       "laden": 1
     },
     {
-      "label": "Aeauh",
+      "label": "Aekhl",
       "total": 6,
       "ballast": 4,
       "laden": 2
@@ -103,28 +103,16 @@
       "laden": 5
     },
     {
-      "label": "Umm Qasr South",
+      "label": "Aeklf",
       "total": 5,
       "ballast": 0,
       "laden": 5
     },
     {
-      "label": "Mina' Saqr",
-      "total": 5,
-      "ballast": 4,
-      "laden": 1
-    },
-    {
-      "label": "Santos",
-      "total": 5,
-      "ballast": 5,
-      "laden": 0
-    },
-    {
-      "label": "Aejea",
-      "total": 5,
-      "ballast": 2,
-      "laden": 3
+      "label": "Ras Tanura",
+      "total": 4,
+      "ballast": 0,
+      "laden": 4
     },
     {
       "label": "Japan",
@@ -145,28 +133,40 @@
       "laden": 2
     },
     {
-      "label": "Omsoh",
+      "label": "Mina' Saqr",
       "total": 4,
-      "ballast": 4,
-      "laden": 0
+      "ballast": 3,
+      "laden": 1
     },
     {
-      "label": "Aeklf",
-      "total": 4,
-      "ballast": 0,
-      "laden": 4
-    },
-    {
-      "label": "Aekhl",
+      "label": "Aejea",
       "total": 4,
       "ballast": 2,
       "laden": 2
     },
     {
-      "label": "Ras Tanura",
+      "label": "Ae Dxb",
+      "total": 4,
+      "ballast": 2,
+      "laden": 2
+    },
+    {
+      "label": "Aeauh",
+      "total": 4,
+      "ballast": 4,
+      "laden": 0
+    },
+    {
+      "label": "Iquqr",
+      "total": 4,
+      "ballast": 2,
+      "laden": 2
+    },
+    {
+      "label": "Hamriya",
       "total": 3,
-      "ballast": 0,
-      "laden": 3
+      "ballast": 2,
+      "laden": 1
     },
     {
       "label": "Yeosu",
@@ -175,19 +175,13 @@
       "laden": 3
     },
     {
-      "label": "Sikka",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
-      "label": "Ras Laffan",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
       "label": "Kandla",
+      "total": 3,
+      "ballast": 0,
+      "laden": 3
+    },
+    {
+      "label": "Umm Qasr South",
       "total": 3,
       "ballast": 0,
       "laden": 3
@@ -199,10 +193,10 @@
       "laden": 1
     },
     {
-      "label": "Dahej",
+      "label": "Suez Canal",
       "total": 3,
-      "ballast": 1,
-      "laden": 2
+      "ballast": 2,
+      "laden": 1
     },
     {
       "label": "Bandar Imam Khomeini",
@@ -211,34 +205,40 @@
       "laden": 3
     },
     {
-      "label": "Iran",
-      "total": 3,
-      "ballast": 2,
-      "laden": 1
-    },
-    {
       "label": "Djibouti Port",
       "total": 3,
       "ballast": 0,
       "laden": 3
     },
     {
+      "label": "Santos",
+      "total": 3,
+      "ballast": 3,
+      "laden": 0
+    },
+    {
       "label": "Bahrain",
       "total": 3,
-      "ballast": 2,
-      "laden": 1
+      "ballast": 1,
+      "laden": 2
     },
     {
-      "label": "Iquqr",
+      "label": "Aefjr",
+      "total": 3,
+      "ballast": 0,
+      "laden": 3
+    },
+    {
+      "label": "Omsoh",
       "total": 3,
       "ballast": 2,
       "laden": 1
     },
     {
-      "label": "Hamriya",
-      "total": 2,
+      "label": "Bhkbs",
+      "total": 3,
       "ballast": 1,
-      "laden": 1
+      "laden": 2
     },
     {
       "label": "Mideast Gulf",
@@ -257,6 +257,12 @@
       "total": 2,
       "ballast": 0,
       "laden": 2
+    },
+    {
+      "label": "Ras Laffan",
+      "total": 2,
+      "ballast": 1,
+      "laden": 1
     },
     {
       "label": "Corinth",
@@ -283,16 +289,16 @@
       "laden": 2
     },
     {
-      "label": "Khor Fakkan Anchorage",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
       "label": "Kharg Island",
       "total": 2,
       "ballast": 2,
       "laden": 0
+    },
+    {
+      "label": "Panama",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
     },
     {
       "label": "Bandar Abbas",
@@ -307,25 +313,37 @@
       "laden": 1
     },
     {
+      "label": "Iran",
+      "total": 2,
+      "ballast": 1,
+      "laden": 1
+    },
+    {
       "label": "India",
       "total": 2,
       "ballast": 0,
       "laden": 2
     },
     {
-      "label": "Chiba",
+      "label": "Jubail Industrial Port",
       "total": 2,
-      "ballast": 0,
-      "laden": 2
+      "ballast": 2,
+      "laden": 0
     },
     {
-      "label": "Huizhou",
+      "label": "Das Island",
       "total": 2,
-      "ballast": 0,
-      "laden": 2
+      "ballast": 1,
+      "laden": 1
     },
     {
       "label": "Jakarta",
+      "total": 2,
+      "ballast": 0,
+      "laden": 2
+    },
+    {
+      "label": "Inmun",
       "total": 2,
       "ballast": 0,
       "laden": 2
@@ -337,13 +355,13 @@
       "laden": 2
     },
     {
-      "label": "Qahmd",
+      "label": "Ae Shj Opl",
       "total": 2,
-      "ballast": 1,
-      "laden": 1
+      "ballast": 2,
+      "laden": 0
     },
     {
-      "label": "Ae Dxb",
+      "label": "Sadmm",
       "total": 2,
       "ballast": 0,
       "laden": 2
@@ -355,28 +373,10 @@
       "laden": 2
     },
     {
-      "label": "Ae Jea",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
-    },
-    {
-      "label": "For Order",
-      "total": 2,
-      "ballast": 2,
-      "laden": 0
-    },
-    {
-      "label": "Umm Qasr",
+      "label": "B.abbas",
       "total": 2,
       "ballast": 0,
       "laden": 2
-    },
-    {
-      "label": "Bnd",
-      "total": 2,
-      "ballast": 1,
-      "laden": 1
     },
     {
       "label": "Ras Laffan Anchorage",
@@ -439,12 +439,6 @@
       "laden": 1
     },
     {
-      "label": "Dubai Light.",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
       "label": "Geelong",
       "total": 1,
       "ballast": 0,
@@ -461,12 +455,6 @@
       "total": 1,
       "ballast": 0,
       "laden": 1
-    },
-    {
-      "label": "Qalhat",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
     },
     {
       "label": "South Korea",
@@ -487,16 +475,16 @@
       "laden": 1
     },
     {
-      "label": "Al-jubail Anchorage",
+      "label": "Saqr",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "Saqr",
+      "label": "Khor Fakkan Anchorage",
       "total": 1,
-      "ballast": 1,
-      "laden": 0
+      "ballast": 0,
+      "laden": 1
     },
     {
       "label": "Dubai Industrial Port",
@@ -541,12 +529,6 @@
       "laden": 1
     },
     {
-      "label": "Quanzhou",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
       "label": "Port Qasim",
       "total": 1,
       "ballast": 0,
@@ -559,31 +541,13 @@
       "laden": 0
     },
     {
-      "label": "Pelepas Light.",
+      "label": "Mombasa",
       "total": 1,
       "ballast": 0,
       "laden": 1
-    },
-    {
-      "label": "Mombasa",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Suez Canal",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
     },
     {
       "label": "Nagoya",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Cochin",
       "total": 1,
       "ballast": 0,
       "laden": 1
@@ -595,13 +559,13 @@
       "laden": 1
     },
     {
-      "label": "Jubail Industrial Port",
+      "label": "Ain Sukhna",
       "total": 1,
-      "ballast": 1,
-      "laden": 0
+      "ballast": 0,
+      "laden": 1
     },
     {
-      "label": "Ain Sukhna",
+      "label": "Chiba",
       "total": 1,
       "ballast": 0,
       "laden": 1
@@ -619,28 +583,28 @@
       "laden": 1
     },
     {
+      "label": "Pengerang",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
       "label": "Rayong",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "Salalah",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Das Island",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
       "label": "Maputo",
       "total": 1,
       "ballast": 1,
       "laden": 0
+    },
+    {
+      "label": "Male",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
     },
     {
       "label": "Ulsan",
@@ -679,6 +643,12 @@
       "laden": 1
     },
     {
+      "label": "Shahid Beheshti Port",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
       "label": "Montevideo",
       "total": 1,
       "ballast": 0,
@@ -686,6 +656,12 @@
     },
     {
       "label": "Cape Town",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Dahej",
       "total": 1,
       "ballast": 1,
       "laden": 0
@@ -703,7 +679,7 @@
       "laden": 1
     },
     {
-      "label": "Beira",
+      "label": "Huizhou",
       "total": 1,
       "ballast": 0,
       "laden": 1
@@ -733,16 +709,16 @@
       "laden": 1
     },
     {
-      "label": "Omopq Anchorage",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Sohar_arm Guard O_b",
+      "label": "Sikka",
       "total": 1,
       "ballast": 1,
       "laden": 0
+    },
+    {
+      "label": "Jeddah_arm Guard O_b",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
     },
     {
       "label": "Order",
@@ -757,10 +733,10 @@
       "laden": 0
     },
     {
-      "label": "Khorfakkan",
+      "label": "Sohar_oman",
       "total": 1,
-      "ballast": 0,
-      "laden": 1
+      "ballast": 1,
+      "laden": 0
     },
     {
       "label": "Aerws",
@@ -769,22 +745,16 @@
       "laden": 0
     },
     {
-      "label": "Kwswk",
+      "label": "China Owner",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "Chinese Crew Aekhl",
+      "label": "Hamriyah B Anchorage",
       "total": 1,
       "ballast": 1,
       "laden": 0
-    },
-    {
-      "label": "Aefjr",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
     },
     {
       "label": "Sharjah Anch",
@@ -799,28 +769,16 @@
       "laden": 1
     },
     {
-      "label": "Inmun",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Khalifa",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Aefjr Anch",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
       "label": "Kp",
       "total": 1,
       "ballast": 0,
       "laden": 1
+    },
+    {
+      "label": "Jea",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
     },
     {
       "label": "Rws",
@@ -841,13 +799,7 @@
       "laden": 0
     },
     {
-      "label": "Omsoh_aefjr",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Aefjr Chinaship_crew",
+      "label": "Qahmd",
       "total": 1,
       "ballast": 0,
       "laden": 1
@@ -871,7 +823,13 @@
       "laden": 0
     },
     {
-      "label": "Sa Dmn_china Owner",
+      "label": "Omsoh_aefjr",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Abu Dhabi Opl Anch",
       "total": 1,
       "ballast": 0,
       "laden": 1
@@ -883,34 +841,22 @@
       "laden": 0
     },
     {
-      "label": "Ae Klf",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Opl",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
       "label": "Hamad",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "Ae Shj Opl",
+      "label": "Ae Klf",
       "total": 1,
-      "ballast": 1,
-      "laden": 0
+      "ballast": 0,
+      "laden": 1
     },
     {
-      "label": "China Owner",
+      "label": "Aeshj",
       "total": 1,
-      "ballast": 1,
-      "laden": 0
+      "ballast": 0,
+      "laden": 1
     },
     {
       "label": "Aedxb",
@@ -927,8 +873,8 @@
     {
       "label": "Lkcmb",
       "total": 1,
-      "ballast": 0,
-      "laden": 1
+      "ballast": 1,
+      "laden": 0
     },
     {
       "label": "Ae Jea _ In Mun",
@@ -937,19 +883,19 @@
       "laden": 1
     },
     {
-      "label": "Aekhl_sgsin",
+      "label": "Hamriayh",
       "total": 1,
       "ballast": 0,
       "laden": 1
     },
     {
-      "label": "Dmc_aeajm",
+      "label": "Chinese Crew",
       "total": 1,
-      "ballast": 1,
-      "laden": 0
+      "ballast": 0,
+      "laden": 1
     },
     {
-      "label": "Ajman Anch.",
+      "label": "Dmc_ad",
       "total": 1,
       "ballast": 1,
       "laden": 0
@@ -961,61 +907,13 @@
       "laden": 1
     },
     {
-      "label": "Ae Ajm",
+      "label": "Ae Jea",
       "total": 1,
-      "ballast": 1,
-      "laden": 0
+      "ballast": 0,
+      "laden": 1
     },
     {
       "label": "Lamu",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Inixy",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Chinese Crews",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Ae Jea Opl",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "For Orders",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Uaq",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Abu Dhabi Opl Anch",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Innsa Indian Crew",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "China Crew",
       "total": 1,
       "ballast": 0,
       "laden": 1
@@ -1027,13 +925,67 @@
       "laden": 1
     },
     {
-      "label": "Chinese Owner_crew",
+      "label": "Inixy",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "Bhkbs",
+      "label": "Ae Jea Opl",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Chinese Crews",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Sa Dmn_china Owner",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Chinese_crew",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Sa Jed",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Shanghai",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "China Owner And Crew",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Innsa Indian Crew",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Aekhl_sgsin",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Chinese Owner_crew",
       "total": 1,
       "ballast": 1,
       "laden": 0
@@ -1045,52 +997,10 @@
       "laden": 0
     },
     {
-      "label": "B.abbas",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "B_lengeh",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
       "label": "Ae Khalifa",
       "total": 1,
       "ballast": 1,
       "laden": 0
-    },
-    {
-      "label": "Abf",
-      "total": 1,
-      "ballast": 1,
-      "laden": 0
-    },
-    {
-      "label": "Irbuz",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Sadmm",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Owner France",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
-      "label": "Khasab",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
     },
     {
       "label": "Mumbai",
@@ -1117,6 +1027,12 @@
       "laden": 0
     },
     {
+      "label": "Umm Qasr",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
       "label": "Sadmn Opl",
       "total": 1,
       "ballast": 1,
@@ -1129,7 +1045,7 @@
       "laden": 1
     },
     {
-      "label": "Jubail",
+      "label": "Bnd",
       "total": 1,
       "ballast": 1,
       "laden": 0
@@ -1165,10 +1081,10 @@
       "laden": 1
     },
     {
-      "label": "Bushehr",
+      "label": "Waiting For Order",
       "total": 1,
-      "ballast": 1,
-      "laden": 0
+      "ballast": 0,
+      "laden": 1
     },
     {
       "label": "Sajub",
@@ -1177,19 +1093,25 @@
       "laden": 0
     },
     {
-      "label": "Waiting For Order",
-      "total": 1,
-      "ballast": 0,
-      "laden": 1
-    },
-    {
       "label": "Iq Uqs _ Open Sea",
       "total": 1,
       "ballast": 1,
       "laden": 0
     },
     {
-      "label": "Sadmn Drftng",
+      "label": "Sadmm_opensea",
+      "total": 1,
+      "ballast": 1,
+      "laden": 0
+    },
+    {
+      "label": "Irbuz",
+      "total": 1,
+      "ballast": 0,
+      "laden": 1
+    },
+    {
+      "label": "Bushehr",
       "total": 1,
       "ballast": 1,
       "laden": 0
@@ -1201,18 +1123,18 @@
       "laden": 1
     },
     {
-      "label": "Umm_qasr",
+      "label": "Abf",
       "total": 1,
-      "ballast": 1,
-      "laden": 0
+      "ballast": 0,
+      "laden": 1
     },
     {
-      "label": "Ummqasr",
+      "label": "Umm Qasr Iraq",
       "total": 1,
       "ballast": 0,
       "laden": 1
     }
   ],
-  "total": 1044,
-  "syncTimestamp": "2026-04-05T07:42:40.478Z"
+  "total": 1036,
+  "syncTimestamp": "2026-04-05T09:20:15.558Z"
 }

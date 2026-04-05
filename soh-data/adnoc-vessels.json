@@ -154,7 +154,7 @@
       "lat": 25.520769,
       "lng": 54.970078,
       "product": "Butane",
-      "destination": "Karachi",
+      "destination": "Jebel Ali",
       "departed": null,
       "isInside": true,
       "marineTrafficUrl": "https://www.marinetraffic.com/en/ais/details/ships/imo:9923085",
@@ -209,10 +209,10 @@
       "flagName": "Liberia",
       "deadWeight": 75618,
       "capacity": 83309,
-      "speed": 0.2,
-      "course": 36,
-      "lat": 25.008564,
-      "lng": 54.461044,
+      "speed": 0,
+      "course": 59,
+      "lat": 25.009266,
+      "lng": 54.462017,
       "product": "Clean petroleum products",
       "destination": null,
       "departed": "2026-03-07 06:06",
@@ -222,5 +222,5 @@
     }
   ],
   "count": 11,
-  "syncTimestamp": "2026-04-05T07:42:40.478Z"
+  "syncTimestamp": "2026-04-05T09:20:15.558Z"
 }

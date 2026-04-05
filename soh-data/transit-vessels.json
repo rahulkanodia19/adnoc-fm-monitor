@@ -26,54 +26,107 @@
       "isTransiting": true
     },
     {
-      "name": "Almajd I",
-      "imo": "9232163",
-      "mmsi": "341372002",
-      "vesselTypeClass": "Supramax",
+      "name": "Divit",
+      "imo": "9194139",
+      "mmsi": "620800007",
+      "vesselTypeClass": "Aframax/LR2",
       "state": "loaded",
-      "flagName": "Cyprus",
-      "deadWeight": 53806,
+      "flagName": "Antigua and Barbuda",
+      "deadWeight": 99123,
       "commodityTypes": [
-        "dry"
+        "liquids"
       ],
-      "capacity": 52649,
-      "speed": 8.7,
-      "course": 273,
-      "lat": 26.003178,
-      "lng": 55.936707,
-      "destination": "Mina Al-Ahmadi",
-      "destinationEta": "2026-04-07T06:00:00",
+      "capacity": 107264,
+      "speed": 9.5,
+      "course": 47,
+      "lat": 26.58935,
+      "lng": 55.888512,
       "aisDestination": null,
-      "product": "Cement",
+      "product": "Iran",
+      "controller": "Lundqvist",
       "lastPortCall": {
-        "start": "2026-04-03T18:58:59",
-        "end": "2026-04-04T11:16:50"
+        "start": "2026-04-02T00:00:00",
+        "end": "2026-04-03T00:00:00"
       },
       "transitDirection": "entering",
       "isTransiting": true
     },
     {
-      "name": "Ocean Pretty",
-      "imo": "9257084",
-      "mmsi": "314001120",
-      "vesselTypeClass": "Supramax",
+      "name": "Nova Crest",
+      "imo": "9292046",
+      "mmsi": "613277613",
+      "vesselTypeClass": "MR",
       "state": "ballast",
-      "flagName": "Liberia",
-      "deadWeight": 51187,
+      "flagName": "Barbados",
+      "deadWeight": 46697,
+      "commodityTypes": [
+        "liquids"
+      ],
+      "capacity": 52220,
+      "speed": 9.8,
+      "course": 328,
+      "lat": 26.681141,
+      "lng": 56.806461,
+      "aisDestination": null,
+      "product": "Clean petroleum products",
+      "controller": "Sovcomflot",
+      "lastPortCall": {
+        "start": "2026-01-31T02:52:03",
+        "end": "2026-01-31T02:52:03"
+      },
+      "transitDirection": "entering",
+      "isTransiting": true
+    },
+    {
+      "name": "Christinab",
+      "imo": "9331921",
+      "mmsi": "538005899",
+      "vesselTypeClass": "Supramax",
+      "state": "loaded",
+      "flagName": "Marshall Islands",
+      "deadWeight": 56071,
       "commodityTypes": [
         "dry"
       ],
-      "capacity": 50100,
-      "speed": 27.4,
-      "course": 133,
-      "lat": 25.606651,
-      "lng": 56.417187,
+      "capacity": 54865,
+      "speed": 6.6,
+      "course": 206,
+      "lat": 26.045401,
+      "lng": 55.802399,
+      "destination": "Mina' Saqr",
+      "destinationEta": "2026-04-05T15:00:06.346523",
       "aisDestination": null,
-      "product": "Steel",
-      "controller": "Kaalbye Shipping",
+      "product": "Limestone",
+      "controller": "Technomar Shipping",
       "lastPortCall": {
-        "start": "2026-03-28T16:35:00",
-        "end": "2026-03-28T16:35:00"
+        "start": "2026-03-02T09:19:16",
+        "end": "2026-03-03T03:19:33"
+      },
+      "transitDirection": "unknown",
+      "isTransiting": true
+    },
+    {
+      "name": "Desh Suraksha",
+      "imo": "9467768",
+      "mmsi": "419795000",
+      "vesselTypeClass": "Aframax/LR2",
+      "state": "loaded",
+      "flagName": "India",
+      "deadWeight": 115611,
+      "commodityTypes": [
+        "liquids"
+      ],
+      "capacity": 125213,
+      "speed": 5.8,
+      "course": 107,
+      "lat": 25.992191,
+      "lng": 55.937546,
+      "aisDestination": null,
+      "product": "High Sulfur Fuel Oil",
+      "controller": "BGN",
+      "lastPortCall": {
+        "start": "2026-03-12T20:11:28",
+        "end": "2026-03-14T17:33:37"
       },
       "transitDirection": "exiting",
       "isTransiting": true
@@ -173,7 +226,7 @@
       "lat": 25.594561,
       "lng": 56.455978,
       "destination": "Fujairah",
-      "destinationEta": "2026-04-04T21:00:06.515916",
+      "destinationEta": "2026-04-05T21:00:06.877902",
       "aisDestination": null,
       "product": "Limestone",
       "lastPortCall": {
@@ -181,30 +234,6 @@
         "end": "2026-03-28T01:59:13"
       },
       "transitDirection": "entering",
-      "isTransiting": true
-    },
-    {
-      "name": "CMA CGM KRIBI",
-      "imo": "9694543",
-      "mmsi": "215922000",
-      "vesselTypeClass": "Container Ship",
-      "state": "loaded",
-      "flagName": "",
-      "deadWeight": 67467,
-      "commodityTypes": [
-        "container"
-      ],
-      "capacity": null,
-      "speed": 15.8,
-      "course": 181,
-      "lat": 26.5101367,
-      "lng": 56.72674,
-      "destination": "OWNER FRANCE",
-      "product": null,
-      "controller": null,
-      "lastPortCall": null,
-      "dataSource": "mint",
-      "transitDirection": "exiting",
       "isTransiting": true
     },
     {
@@ -256,12 +285,12 @@
       "isTransiting": true
     }
   ],
-  "exitingCount": 3,
-  "enteringCount": 7,
-  "totalTransiting": 10,
+  "exitingCount": 2,
+  "enteringCount": 8,
+  "totalTransiting": 11,
   "uaeExiting": 0,
   "uaeEntering": 0,
   "adnocExiting": 0,
   "adnocEntering": 0,
-  "syncTimestamp": "2026-04-05T07:42:40.478Z"
+  "syncTimestamp": "2026-04-05T09:20:15.558Z"
 }

@@ -2,38 +2,38 @@
   "data": [
     {
       "label": "Container Ship",
-      "total": 137,
-      "ballast": 63,
-      "laden": 74
+      "total": 140,
+      "ballast": 59,
+      "laden": 81
     },
     {
       "label": "MR",
-      "total": 122,
+      "total": 120,
       "ballast": 67,
-      "laden": 55
+      "laden": 53
     },
     {
       "label": "Handysize",
-      "total": 111,
-      "ballast": 66,
-      "laden": 45
+      "total": 112,
+      "ballast": 69,
+      "laden": 43
     },
     {
       "label": "VLCC",
-      "total": 111,
-      "ballast": 35,
-      "laden": 76
+      "total": 109,
+      "ballast": 37,
+      "laden": 72
     },
     {
       "label": "Supramax",
-      "total": 73,
-      "ballast": 34,
-      "laden": 39
+      "total": 71,
+      "ballast": 33,
+      "laden": 38
     },
     {
       "label": "Intermediate Tankers",
-      "total": 59,
-      "ballast": 18,
+      "total": 57,
+      "ballast": 16,
       "laden": 41
     },
     {
@@ -44,33 +44,33 @@
     },
     {
       "label": "Panamax",
-      "total": 49,
-      "ballast": 31,
-      "laden": 18
+      "total": 47,
+      "ballast": 27,
+      "laden": 20
     },
     {
       "label": "Panamax/LR1",
       "total": 46,
-      "ballast": 19,
-      "laden": 27
+      "ballast": 20,
+      "laden": 26
     },
     {
       "label": "Kamsarmax",
-      "total": 42,
-      "ballast": 30,
+      "total": 41,
+      "ballast": 29,
       "laden": 12
     },
     {
       "label": "Handy/MR1",
-      "total": 40,
-      "ballast": 18,
+      "total": 39,
+      "ballast": 17,
       "laden": 22
     },
     {
       "label": "SGC",
       "total": 32,
-      "ballast": 27,
-      "laden": 5
+      "ballast": 26,
+      "laden": 6
     },
     {
       "label": "Suezmax/LR3",
@@ -81,14 +81,14 @@
     {
       "label": "VLGC",
       "total": 28,
-      "ballast": 18,
-      "laden": 10
+      "ballast": 19,
+      "laden": 9
     },
     {
       "label": "Ultramax",
       "total": 28,
-      "ballast": 8,
-      "laden": 19
+      "ballast": 9,
+      "laden": 18
     },
     {
       "label": "Handymax",
@@ -99,8 +99,8 @@
     {
       "label": "MGC",
       "total": 13,
-      "ballast": 6,
-      "laden": 7
+      "ballast": 5,
+      "laden": 8
     },
     {
       "label": "Lower Conventional",
@@ -123,14 +123,14 @@
     {
       "label": "Upper Conventional",
       "total": 6,
-      "ballast": 2,
-      "laden": 4
+      "ballast": 1,
+      "laden": 5
     },
     {
       "label": "Capesize",
       "total": 5,
-      "ballast": 4,
-      "laden": 1
+      "ballast": 3,
+      "laden": 2
     },
     {
       "label": "Baby Capes",
@@ -151,6 +151,6 @@
       "laden": 1
     }
   ],
-  "total": 1044,
-  "syncTimestamp": "2026-04-05T07:42:40.478Z"
+  "total": 1036,
+  "syncTimestamp": "2026-04-05T09:20:15.558Z"
 }
