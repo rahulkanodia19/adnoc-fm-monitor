@@ -25,6 +25,17 @@ echo "[sync-news] =========================================="
 
 cd "$PROJECT_DIR"
 
+# Ctrl+C rollback: restore data files to HEAD and do not commit/push.
+# Fires before the commit block (lines ~76-88). Does not run under MASTER_SYNC=1
+# (master-sync.sh owns the commit; its own cleanup trap handles interrupts there).
+cleanup_on_interrupt() {
+  echo ""
+  echo "[sync-news] INTERRUPTED — rolling back uncommitted data files and skipping commit/push."
+  git -C "$PROJECT_DIR" checkout HEAD -- data.js data-previous.json sync-log.json energy-news-data.json 2>/dev/null || true
+  exit 130
+}
+trap cleanup_on_interrupt INT TERM
+
 # Check if Chrome is available for premium sources
 TOOLS="Edit,Write,Read,WebSearch,WebFetch,Glob,Grep,Bash(git diff*),Bash(git status*)"
 if curl -s "http://127.0.0.1:$DEBUG_PORT/json/version" > /dev/null 2>&1; then
@@ -45,6 +56,23 @@ if curl -s "http://127.0.0.1:$DEBUG_PORT/json/version" > /dev/null 2>&1; then
   done
 else
   echo "[sync-news] WARNING: Chrome not running. Using web search only (no premium sources)."
+fi
+
+# Interactive pre-flight health check for premium sources.
+# HARD GATE — aborts sync if user cannot get Kpler/Rystad/S&P Connect/Platts Core healthy.
+# Under MASTER_SYNC=1 the master orchestrator runs its own gate; skip duplication here.
+if [ -z "$MASTER_SYNC" ] && curl -s "http://127.0.0.1:$DEBUG_PORT/json/version" > /dev/null 2>&1; then
+  if [ -e /dev/tty ]; then
+    node "$SCRIPT_DIR/check-premium-sources.js" < /dev/tty || {
+      echo "[sync-news] ABORT: premium-source health check failed or user aborted."
+      exit 1
+    }
+  else
+    node "$SCRIPT_DIR/check-premium-sources.js" || {
+      echo "[sync-news] ABORT: premium-source health check failed (non-interactive run)."
+      exit 1
+    }
+  fi
 fi
 
 # Pre-fetch premium source content via CDP (bypasses MCP timeout issues)

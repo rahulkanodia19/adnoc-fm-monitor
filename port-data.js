@@ -283,6 +283,8 @@ const INFRA_COORDS = {
   "Borouge Petrochemical Complex": { lat: 24.10, lng: 52.72 },
   "Jebel Ali Power & Desalination Complex": { lat: 25.06, lng: 55.10 },
   "Taweelah Power & Desalination Complex": { lat: 24.77, lng: 54.68 },
+  // UAE — Nuclear
+  "Barakah Nuclear Power Plant": { lat: 23.97, lng: 52.19 },
   // Iraq — Fields
   "Rumaila (North + South)":  { lat: 30.60, lng: 47.35 },
   "Rumaila Field":            { lat: 30.60, lng: 47.35 },
@@ -341,6 +343,8 @@ const INFRA_COORDS = {
   "Abadan Refinery":          { lat: 30.35, lng: 48.30 },
   "Tehran Refinery":          { lat: 35.59, lng: 51.42 },
   "Bandar Abbas Refinery":    { lat: 27.20, lng: 56.25 },
+  // Iran — Nuclear
+  "Bushehr Nuclear Power Plant": { lat: 28.83, lng: 50.89 },
   "Persian Gulf Star Refinery": { lat: 27.15, lng: 52.60 },
   "Isfahan Refinery":         { lat: 32.60, lng: 51.68 },
   "Arak/Shazand Refinery":   { lat: 34.05, lng: 49.70 },

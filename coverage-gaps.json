@@ -1,0 +1,105 @@
+{
+  "auditTimestamp": "2026-04-05T15:30:00.000Z",
+  "dataJsLastUpdated": "2026-04-05T07:00:00.000Z",
+  "gaps": [
+    {
+      "gap": "Golden Pass LNG Train 1 first LNG production (QatarEnergy 70% / ExxonMobil 30%) — milestone not captured as event",
+      "severity": "medium",
+      "fix": {
+        "country": "qatar",
+        "action": "add_event",
+        "data": {
+          "date": "2026-03-31",
+          "title": "Golden Pass LNG Train 1 produces first LNG in Texas — QatarEnergy/ExxonMobil JV",
+          "description": "Golden Pass LNG Train 1 in Sabine Pass, Texas, produced LNG for the first time on Mar 31. The QatarEnergy (70%) / ExxonMobil (30%) joint venture has 18 Mtpa total capacity across 3 trains. Train 1 (~6 Mtpa) is ramping feed gas at 434 MMcf/d. LNG tanker HL Sea Eagle chartered by ExxonMobil expected to arrive ~Apr 20 to load the first export cargo. Golden Pass provides partial offset to Qatar's 77 Mtpa shutdown, though at ~8% of lost capacity. First export cargo expected 2Q26.",
+          "assetImpact": ["North Field East Expansion"]
+        }
+      },
+      "source": {
+        "url": "https://www.bloomberg.com/news/articles/2026-03-30/qatar-exxon-lng-plant-marks-first-production-from-texas-facility",
+        "title": "Texas LNG Plant Delivers First Production as Global Gas Supplies Tighten — Bloomberg",
+        "publishedAt": "2026-03-30"
+      },
+      "notes": "Already mentioned briefly in Qatar production.notes.lng but deserves a standalone event entry given significance as the only new LNG capacity partially offsetting Qatar's 77 Mtpa loss. Note: Golden Pass is a US-based asset, not in Qatar's infrastructure[] array — suggest adding or noting as 'overseas JV asset'."
+    },
+    {
+      "gap": "OPEC crude output collapsed 7.3 mb/d in March to 21.57 mb/d — lowest since June 2020 (Reuters survey Apr 1)",
+      "severity": "medium",
+      "fix": {
+        "country": "iraq",
+        "action": "update_notes",
+        "data": {
+          "date": "2026-04-01",
+          "title": "OPEC March output collapses 7.3 mb/d to 21.57 mb/d — lowest since June 2020; Iraq steepest decline",
+          "description": "Reuters survey (Apr 1) shows total OPEC crude production fell to 21.57 mb/d in March, down 7.3 mb/d from February — the lowest since the June 2020 COVID lockdowns. The decline is war-driven, not policy-driven. Iraq saw the steepest single-country drop: output averaged 1.4 mb/d in March, down from 4.15 mb/d in February (-66%). Saudi, UAE, and Kuwait also recorded sharp declines due to Hormuz closure and storage constraints. OPEC+ 8 meeting Apr 5 to decide May output levels.",
+          "assetImpact": ["Basra Oil Terminal", "Rumaila Field"]
+        }
+      },
+      "source": {
+        "url": "https://www.thestar.com.my/business/business-news/2026/04/01/opec-oil-output-plunges-in-march-as-war-forces-export-cuts-reuters-survey-finds",
+        "title": "OPEC oil output plunges in March as war forces export cuts, Reuters survey finds — The Star",
+        "publishedAt": "2026-04-01"
+      },
+      "notes": "Significant macro context that quantifies the cumulative production impact across the region. Also reported by Globe and Mail, Trade Arabia, MarineLink, and Eagle Intel Mari. Could be added as events for Iraq (steepest decline) and/or as a note update for Saudi Arabia."
+    },
+    {
+      "gap": "Italy PM Meloni: 15% of Italy's oil comes from the Gulf — EU supply dependency disclosure (Apr 4)",
+      "severity": "low",
+      "fix": {
+        "country": "qatar",
+        "action": "update_notes",
+        "data": {
+          "date": "2026-04-04",
+          "title": "Italy PM Meloni reveals 15% of Italy's oil supplied from the Gulf — underscoring EU supply chain vulnerability",
+          "description": "Italian PM Giorgia Meloni stated that approximately 15% of Italy's oil needs are supplied from the Gulf region. This disclosure highlights European vulnerability to the Hormuz disruption. Italy is a major QatarEnergy LNG customer (Edison FM declared through mid-June) and a significant Aramco crude buyer. The statement came as Brent traded above $109.",
+          "assetImpact": []
+        }
+      },
+      "source": {
+        "url": "https://www.voiceofemirates.com/en/news/2026/04/04/meloni-15-of-italys-oil-comes-from-the-gulf/",
+        "title": "Meloni: 15% of Italy's Oil Comes from the Gulf — Voice of Emirates",
+        "publishedAt": "2026-04-04"
+      },
+      "notes": "Context/background — low priority. Useful for understanding downstream demand impact and European energy security discourse."
+    }
+  ],
+  "summary": {
+    "gapsFound": 3,
+    "queriesRun": 16,
+    "sourcesChecked": [
+      "Bloomberg",
+      "Reuters",
+      "Al Jazeera",
+      "CNBC",
+      "S&P Global",
+      "NPR",
+      "CBS News",
+      "The National",
+      "Gulf News",
+      "Arab News",
+      "Fortune",
+      "Washington Post",
+      "Axios",
+      "OilPrice.com",
+      "Anadolu Agency",
+      "Times of Israel",
+      "gCaptain",
+      "UANI",
+      "IEA",
+      "DOE",
+      "OPEC",
+      "Argus Media",
+      "Windward Maritime Intelligence",
+      "RFE/RL",
+      "France 24",
+      "Wikipedia (2026 Iran war)",
+      "PGJ Online",
+      "LNG Industry",
+      "Natural Gas Intelligence",
+      "Voice of Emirates",
+      "Eagle Intel Maritime"
+    ],
+    "timeWindow": "last 48 hours (2026-04-03 to 2026-04-05)",
+    "coverageAssessment": "data.js is comprehensively up to date for all 9 tracked countries through Apr 5 07:00 UTC. All major infrastructure attacks, FM declarations, Hormuz transit developments, military events, OPEC+ decisions, and diplomatic moves from the last 48 hours are captured. The 3 gaps identified are context/milestone items (Golden Pass LNG production, OPEC output collapse data, Italy supply dependency) rather than missed breaking events. SPR data is current to Apr 3 (2 days stale). War Risk Premium data also at Apr 3."
+  }
+}

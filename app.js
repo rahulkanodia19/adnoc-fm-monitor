@@ -82,6 +82,13 @@ function renderNewBadge() {
   return `<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-sky-100 text-sky-700 border border-sky-200 ml-1.5">NEW</span>`;
 }
 
+function renderAssetImpactPills(assetImpact) {
+  if (!Array.isArray(assetImpact) || assetImpact.length === 0) return '';
+  return assetImpact.map(name => `<span class="inline-flex items-center gap-0.5 ml-1 px-1.5 py-0.5 rounded-full bg-amber-100 text-amber-800 text-[10px] font-medium border border-amber-200" title="Impacts asset: ${name}">
+    <svg class="w-2.5 h-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z"/></svg>${name}
+  </span>`).join('');
+}
+
 function formatDate(dateStr) {
   const d = new Date(dateStr);
   return d.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
@@ -289,6 +296,20 @@ function formatNum(n) {
   if (n >= 1000) return n.toLocaleString('en-US', { maximumFractionDigits: 0 });
   if (Number.isInteger(n)) return n.toString();
   return n.toFixed(1);
+}
+
+function renderEmptyProductionCard(title, unit, message) {
+  return `
+    <div class="bg-white rounded-xl border border-navy-200/70 shadow-[0_1px_3px_rgba(10,25,41,0.04)] overflow-hidden">
+      <div class="px-4 py-3 border-b border-navy-200 bg-navy-50 border-l-4 border-l-amber-400">
+        <h3 class="text-sm font-bold text-navy-900">${title}</h3>
+        <span class="text-xs text-navy-600">${unit}</span>
+      </div>
+      <div class="p-5 text-sm text-navy-500 italic leading-relaxed">
+        ${message}
+      </div>
+    </div>
+  `;
 }
 
 function renderProductionTable(title, unit, rows, type) {
@@ -552,13 +573,13 @@ function renderGccOverviewMap() {
       <div class="px-4 py-3 border-b border-navy-200 bg-navy-50 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
         <div>
           <h3 class="text-sm font-bold text-navy-900">GCC Energy Infrastructure Map</h3>
-          <span class="text-xs text-navy-600">Oil/gas fields, terminals, refineries, LNG plants, industrial installations, and key pipelines</span>
+          <span class="text-[10px] text-navy-500">Oil/gas fields · terminals · downstream · industrial · pipelines</span>
         </div>
-        <div id="gcc-map-filters" class="flex gap-1.5 overflow-x-auto flex-nowrap pb-1 sm:pb-0">
+        <div id="gcc-map-filters" class="flex gap-1.5 flex-wrap">
           <button data-map-filter="all" class="gcc-filter-pill active text-[10px] sm:text-xs font-semibold uppercase tracking-wider px-3 py-1.5 rounded-lg border border-navy-300 bg-navy-800 text-white whitespace-nowrap transition-all min-h-[36px]">All</button>
           <button data-map-filter="production" class="${pillCls}">Oil/Gas Fields</button>
           <button data-map-filter="terminals" class="${pillCls}">Terminals</button>
-          <button data-map-filter="refining" class="${pillCls}">Refineries & LNG</button>
+          <button data-map-filter="downstream" class="${pillCls}">Downstream</button>
           <button data-map-filter="industrial" class="${pillCls}">Industrial</button>
           <button data-map-filter="pipelines" class="${pillCls}">Pipelines</button>
         </div>
@@ -569,7 +590,7 @@ function renderGccOverviewMap() {
 }
 
 let gccMapInstance = null;
-let gccMapLayers = { production: null, terminals: null, refining: null, industrial: null, pipelines: null };
+let gccMapLayers = { production: null, terminals: null, downstream: null, industrial: null, pipelines: null };
 
 function initGccOverviewMap() {
   const container = document.getElementById('gcc-overview-map');
@@ -586,8 +607,8 @@ function initGccOverviewMap() {
   const popupStatusColor = { shutdown: '#f87171', partial: '#fbbf24', operational: '#34d399' };
   const fieldTypes = ['Oil Field', 'Gas Field', 'Offshore Oil', 'Oil/Gas Field'];
   const terminalTypes = ['Terminal', 'Port', 'Import'];
-  const refLngTypes = ['Refinery', 'LNG Train', 'LNG Plant', 'LNG/LPG', 'LNG Expansion'];
-  const industrialTypes = ['Aluminium', 'Smelter', 'Petrochemical', 'GTL', 'Power Plant', 'Fuel Storage', 'Fuel Depot', 'Gas Processing', 'Sour Gas', 'Fertilizer', 'Desalination'];
+  const downstreamTypes = ['Refinery', 'LNG Train', 'LNG Plant', 'LNG/LPG', 'LNG Expansion', 'Petrochemical', 'GTL', 'Gas Processing', 'Sour Gas'];
+  const industrialTypes = ['Aluminium', 'Smelter', 'Power Plant', 'Power/Desalination', 'Fuel Storage', 'Fuel Depot', 'Fertilizer', 'Desalination', 'Nuclear'];
 
   function isType(infType, keywords) { return keywords.some(kw => infType.includes(kw)); }
 
@@ -643,12 +664,13 @@ function initGccOverviewMap() {
   });
   gccMapLayers.terminals.addTo(gccMapInstance);
 
-  // --- Refineries & LNG Layer (diamond markers) ---
-  gccMapLayers.refining = L.layerGroup();
+  // --- Downstream Facilities Layer (diamond markers) ---
+  // Refineries, LNG trains/plants/expansion, petrochemicals, GTL, gas processing, sour gas
+  gccMapLayers.downstream = L.layerGroup();
   COUNTRY_STATUS_DATA.forEach(c => {
     if (!c.infrastructure) return;
     c.infrastructure.forEach(inf => {
-      if (!isType(inf.type, refLngTypes)) return;
+      if (!isType(inf.type, downstreamTypes)) return;
       const coords = INFRA_COORDS[inf.name];
       if (!coords) return;
       const color = statusColor[inf.status] || '#6b7280';
@@ -666,10 +688,10 @@ function initGccOverviewMap() {
           <div style="font-size:11px;display:flex;justify-content:space-between"><span style="color:#627d98">Status</span><span style="font-weight:600;color:${popupStatusColor[inf.status] || '#0a1929'}">${inf.status}</span></div>
           ${inf.notes ? `<div style="font-size:10px;color:#486581;margin-top:4px;border-top:1px solid #d9e2ec;padding-top:3px">${inf.notes}</div>` : ''}
         </div>
-      `, { maxWidth: 240 }).addTo(gccMapLayers.refining);
+      `, { maxWidth: 240 }).addTo(gccMapLayers.downstream);
     });
   });
-  gccMapLayers.refining.addTo(gccMapInstance);
+  gccMapLayers.downstream.addTo(gccMapInstance);
 
   // --- Industrial Installations Layer (triangle markers) ---
   gccMapLayers.industrial = L.layerGroup();
@@ -792,7 +814,7 @@ function initGccOverviewMap() {
       };
       show(gccMapLayers.production, filter === 'all' || filter === 'production');
       show(gccMapLayers.terminals, filter === 'all' || filter === 'terminals');
-      show(gccMapLayers.refining, filter === 'all' || filter === 'refining');
+      show(gccMapLayers.downstream, filter === 'all' || filter === 'downstream');
       show(gccMapLayers.industrial, filter === 'all' || filter === 'industrial');
       show(gccMapLayers.pipelines, filter === 'all' || filter === 'pipelines');
     });
@@ -838,7 +860,7 @@ function renderExecSummary() {
   if (!container) return;
 
   // Build production data arrays (notes come from data.js production.notes)
-  const oilData = [], gasData = [], refiningData = [], lngData = [];
+  const oilData = [], gasData = [], refiningData = [], lngData = [], petroData = [];
 
   COUNTRY_STATUS_DATA.forEach(c => {
     if (!c.production) return;
@@ -856,12 +878,16 @@ function renderExecSummary() {
     if (p.lng && p.lng.preWar > 0) {
       lngData.push({ country: c.country, flag: c.flag, preWar: p.lng.preWar, current: p.lng.current, notes: n.lng || '' });
     }
+    if (p.petrochemicals && p.petrochemicals.capacity > 0) {
+      petroData.push({ country: c.country, flag: c.flag, capacity: p.petrochemicals.capacity, affected: p.petrochemicals.affected, available: p.petrochemicals.available, notes: n.petrochemicals || '' });
+    }
   });
 
   oilData.sort((a, b) => b.preWar - a.preWar);
   gasData.sort((a, b) => b.preWar - a.preWar);
   refiningData.sort((a, b) => b.capacity - a.capacity);
   lngData.sort((a, b) => b.preWar - a.preWar);
+  petroData.sort((a, b) => b.capacity - a.capacity);
 
   // Reset map instance if re-rendering
   if (gccMapInstance) { gccMapInstance.remove(); gccMapInstance = null; gccMapLayers = { production: null, terminals: null, refining: null, industrial: null, pipelines: null }; }
@@ -870,7 +896,7 @@ function renderExecSummary() {
     <div class="flex items-start justify-between gap-4 mb-5">
       <div>
         <h2 class="text-lg font-bold text-navy-900">Regional Production Impact Assessment</h2>
-        <p class="text-sm text-navy-600">Gulf Escalation: 28 Feb \u2013 ${new Date(LAST_UPDATED).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })} | Sources: IEA, OPEC, Bloomberg, Reuters, Argus</p>
+        <p class="text-sm text-navy-600">Gulf Escalation: 28 Feb \u2013 ${new Date(LAST_UPDATED).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</p>
       </div>
       ${renderPipelineBadge('news_fm', LAST_UPDATED)}
     </div>
@@ -887,6 +913,10 @@ function renderExecSummary() {
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-5">
       ${renderProductionTable('Gas Production', 'Bcf/d', gasData, 'production')}
       ${renderProductionTable('LNG Production', 'Mtpa', lngData, 'production')}
+    </div>
+
+    <div class="mb-5">
+      ${petroData.length > 0 ? renderProductionTable('Petrochemicals', 'kt/y ethylene eq.', petroData, 'capacity') : renderEmptyProductionCard('Petrochemicals', 'kt/y ethylene eq.', 'Baseline pending — awaiting sync verification from premium sources (Rystad, S&P Platts Chemicals, Kpler).')}
     </div>
 
     ${renderKeyPortsTable()}
@@ -906,15 +936,16 @@ function renderCountryDetailPanel(country) {
   const timelineHtml = country.events.map(evt => {
     const newBadge = evt.isNew ? renderNewBadge() : '';
     const bgClass = evt.isNew ? 'bg-sky-50 rounded-lg p-2 -m-1' : '';
+    const assetPills = renderAssetImpactPills(evt.assetImpact);
     return `
     <div class="timeline-line flex gap-3 pb-5">
       <div class="timeline-dot mt-1"></div>
       <div class="flex-1 ${bgClass}">
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
           <span class="text-xs text-amber-600 font-semibold">${formatDate(evt.date)}</span>
           ${newBadge}
         </div>
-        <div class="text-sm text-navy-900 font-semibold mt-0.5">${evt.title}</div>
+        <div class="text-sm text-navy-900 font-semibold mt-0.5">${evt.title}${assetPills}</div>
         <div class="text-sm text-navy-600 mt-1 leading-relaxed">${evt.description}</div>
       </div>
     </div>
@@ -1067,13 +1098,14 @@ function renderCountryMatrix() {
     const eventsList = country.events.map(evt => {
       const evtNewBadge = evt.isNew ? renderNewBadge() : '';
       const evtBgClass = evt.isNew ? 'bg-sky-50 rounded px-1.5 py-0.5 -mx-1.5' : '';
+      const assetPills = renderAssetImpactPills(evt.assetImpact);
       return `
         <li class="flex items-start gap-1.5 ${evtBgClass}">
           <span class="w-1.5 h-1.5 rounded-full bg-navy-400 mt-1.5 flex-shrink-0"></span>
           <span>
             <span class="text-navy-500 text-xs">${formatDateShort(evt.date)}</span>
             <span class="text-navy-800 text-sm ml-1">${evt.title}</span>
-            ${evtNewBadge}
+            ${evtNewBadge}${assetPills}
           </span>
         </li>
       `;
@@ -1103,7 +1135,7 @@ function renderCountryMatrix() {
         </div>
       </td>
       <td class="px-3 py-2.5 sm:px-5 sm:py-3.5">${renderStatusBadge(country.status, country.statusLabel)}</td>
-      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5 max-w-lg hidden md:table-cell">
+      <td class="px-3 py-2.5 sm:px-5 sm:py-3.5 max-w-3xl xl:max-w-4xl hidden md:table-cell">
         <ul class="space-y-1">
           ${eventsList}
         </ul>
@@ -1609,40 +1641,60 @@ function renderMarketNews() {
 
 // ---------- Tab Switching ----------
 
-function initTabs() {
+function activateTab(tabId) {
   const tabs = document.querySelectorAll('[data-tab]');
   const panels = document.querySelectorAll('[data-panel]');
 
-  tabs.forEach(tab => {
+  tabs.forEach(t => {
+    t.classList.remove('active', 'border-amber-500', 'text-navy-900');
+    t.classList.add('border-transparent', 'text-navy-500');
+  });
+
+  const targetBtn = document.querySelector(`[data-tab="${tabId}"]`);
+  if (targetBtn) {
+    targetBtn.classList.add('active', 'border-amber-500', 'text-navy-900');
+    targetBtn.classList.remove('border-transparent', 'text-navy-500');
+  }
+
+  panels.forEach(p => {
+    const isTarget = p.dataset.panel === tabId;
+    p.classList.toggle('hidden', !isTarget);
+    if (isTarget) {
+      p.classList.remove('flow-fade-in');
+      void p.offsetWidth;
+      p.classList.add('flow-fade-in');
+    }
+  });
+
+  if (window.location.hash.slice(1) !== tabId) {
+    history.replaceState(null, '', '#' + tabId);
+  }
+
+  try { sessionStorage.setItem('adnoc-active-tab', tabId); } catch(e) {}
+
+  if (tabId === 'exec-summary' && typeof gccMapInstance !== 'undefined' && gccMapInstance) {
+    setTimeout(() => gccMapInstance.invalidateSize(), 100);
+  }
+
+  updateStats(tabId);
+
+  const preloadStyle = document.getElementById('tab-preload-style');
+  if (preloadStyle) preloadStyle.remove();
+}
+
+function initTabs() {
+  document.querySelectorAll('[data-tab]').forEach(tab => {
     tab.addEventListener('click', () => {
       expandedRowId = null;
-
-      tabs.forEach(t => {
-        t.classList.remove('active', 'border-amber-500', 'text-navy-900');
-        t.classList.add('border-transparent', 'text-navy-500');
-      });
-      tab.classList.add('active', 'border-amber-500', 'text-navy-900');
-      tab.classList.remove('border-transparent', 'text-navy-500');
-
       const target = tab.dataset.tab;
-      panels.forEach(p => {
-        const isTarget = p.dataset.panel === target;
-        p.classList.toggle('hidden', !isTarget);
-        // Apply fade-in animation on tab switch
-        if (isTarget) {
-          p.classList.remove('flow-fade-in');
-          void p.offsetWidth; // trigger reflow
-          p.classList.add('flow-fade-in');
-        }
-      });
-
-      // Invalidate Leaflet map size when Production Overview tab becomes visible
-      if (target === 'exec-summary' && gccMapInstance) {
-        setTimeout(() => gccMapInstance.invalidateSize(), 100);
-      }
-
-      updateStats(target);
+      history.pushState({ tab: target }, '', '#' + target);
+      activateTab(target);
     });
+  });
+
+  window.addEventListener('popstate', (e) => {
+    const tabId = (e.state && e.state.tab) ? e.state.tab : (window.location.hash.slice(1) || 'exec-summary');
+    activateTab(tabId);
   });
 }
 
@@ -1658,17 +1710,19 @@ function updateStats(activeTab) {
 
   switch (activeTab) {
     case 'exec-summary': {
-      let oilOffline = 0, gasOffline = 0, refAffected = 0, impactedCount = 0;
+      let oilOffline = 0, gasOffline = 0, refAffected = 0, petchemAffected = 0, impactedCount = 0;
       COUNTRY_STATUS_DATA.forEach(c => {
         if (!c.production) return;
         const p = c.production;
         const oilLoss = p.oil ? p.oil.preWar - p.oil.current : 0;
         const gasLoss = p.gas ? p.gas.preWar - p.gas.current : 0;
         const refLoss = p.refining ? p.refining.affected : 0;
+        const petLoss = p.petrochemicals ? p.petrochemicals.affected : 0;
         oilOffline += oilLoss;
         gasOffline += gasLoss;
         refAffected += refLoss;
-        if (oilLoss > 0 || gasLoss > 0 || refLoss > 0) impactedCount++;
+        petchemAffected += petLoss;
+        if (oilLoss > 0 || gasLoss > 0 || refLoss > 0 || petLoss > 0) impactedCount++;
       });
       // Get commodity-specific highlights from recently updated countries
       const recentCountries = COUNTRY_STATUS_DATA.filter(c => c.events && c.events.some(e => e.isNew));
@@ -1679,7 +1733,10 @@ function updateStats(activeTab) {
       stats = [
         { label: 'Oil Offline (kb/d)', value: formatNum(Math.round(oilOffline)), color: 'text-red-600', change: 0, subtitle: oilHL.substring(0, 90) },
         { label: 'Gas Offline (Bcf/d)', value: formatNum(Math.round(gasOffline * 10) / 10), color: 'text-amber-600', change: 0, subtitle: gasHL.substring(0, 90) },
-        { label: 'Refining Affected (kb/d)', value: formatNum(Math.round(refAffected)), color: 'text-orange-600', change: 0, subtitle: refHL.substring(0, 90) },
+        { label: 'Downstream Affected', value: `<div class="space-y-0.5 text-left">
+          <div class="flex items-baseline gap-1.5"><span class="text-lg sm:text-xl tabular-nums">${formatNum(Math.round(refAffected))}</span><span class="text-[10px] font-normal text-navy-400">kb/d</span><span class="text-[10px] font-normal text-navy-500 ml-auto uppercase tracking-wider">Refining</span></div>
+          <div class="flex items-baseline gap-1.5"><span class="text-lg sm:text-xl tabular-nums">${formatNum(Math.round(petchemAffected))}</span><span class="text-[10px] font-normal text-navy-400">kt/y</span><span class="text-[10px] font-normal text-navy-500 ml-auto uppercase tracking-wider">Petchem</span></div>
+        </div>`, color: 'text-orange-600', change: 0, subtitle: refHL.substring(0, 90) },
         { label: 'Countries Impacted', value: impactedCount, color: 'text-blue-600', change: recentCountries.length, subtitle: countryNames },
       ];
       break;
@@ -1858,6 +1915,22 @@ function verifyData() {
 // ---------- Initialization ----------
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Determine which tab to restore (hash > sessionStorage > preload > default)
+  let restoredTab = 'exec-summary';
+  try {
+    const hashTab = window.location.hash.slice(1);
+    let savedTab = null;
+    try { savedTab = sessionStorage.getItem('adnoc-active-tab'); } catch(e) {}
+
+    if (hashTab && document.querySelector(`[data-tab="${hashTab}"]`)) {
+      restoredTab = hashTab;
+    } else if (window.__preloadTab && document.querySelector(`[data-tab="${window.__preloadTab}"]`)) {
+      restoredTab = window.__preloadTab;
+    } else if (savedTab && document.querySelector(`[data-tab="${savedTab}"]`)) {
+      restoredTab = savedTab;
+    }
+  } catch(e) {}
+
   // Load sync-status.json for per-tab freshness badges
   fetch('sync-status.json')
     .then(r => r.ok ? r.json() : null)
@@ -1889,12 +1962,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  renderExecSummary();
-  renderCountryMatrix();
-  renderFMDeclarations();
-  renderShutdowns();
-  renderMarketNews();
+  try { renderExecSummary(); } catch(e) { console.error('renderExecSummary:', e); }
+  try { renderCountryMatrix(); } catch(e) { console.error('renderCountryMatrix:', e); }
+  try { renderFMDeclarations(); } catch(e) { console.error('renderFMDeclarations:', e); }
+  try { renderShutdowns(); } catch(e) { console.error('renderShutdowns:', e); }
+  try { renderMarketNews(); } catch(e) { console.error('renderMarketNews:', e); }
 
   initTabs();
-  updateStats('exec-summary');
+  activateTab(restoredTab);
+  history.replaceState({ tab: restoredTab }, '', '#' + restoredTab);
 });

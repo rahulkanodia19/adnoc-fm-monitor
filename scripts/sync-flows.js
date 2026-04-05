@@ -69,15 +69,30 @@ for (const [country, prefix] of Object.entries(EXPORT_COUNTRIES_MAP)) {
   }
 }
 
-// Pipeline flows to add on top of seaborne data
-const PIPELINES = [
-  { dataset: 'china_crude',  country: 'Russian Federation', volume: 600, start: '2024-01-01', label: 'ESPO' },
-  { dataset: 'china_crude',  country: 'Kazakhstan',         volume: 220, start: '2024-01-01', label: 'Kazakhstan-China' },
-  { dataset: 'china_crude',  country: 'Myanmar',            volume: 200, start: '2024-01-01', label: 'Myanmar-China' },
-  { dataset: 'iraq_crude',   country: 'Turkey',             volume: 250, start: '2026-03-17', label: 'Kirkuk-Ceyhan' },
-  { dataset: 'russia_crude', country: 'China',              volume: 600, start: '2024-01-01', label: 'ESPO export' },
-  { dataset: 'saudi_arabia_crude', country: 'Egypt',        volume: 1500, start: '2026-03-11', label: 'Yanbu-SUMED' },
-];
+// Pipeline flows to add on top of seaborne data (loaded from data.js PIPELINE_STATUS_DATA)
+// Only pipelines with status !== 'offline' are applied. Volume added = currentThroughput.
+function loadPipelines() {
+  const dataJsPath = path.join(PROJECT_DIR, 'data.js');
+  const code = fs.readFileSync(dataJsPath, 'utf-8');
+  const wrapped = `(function() { ${code}; return { PIPELINE_STATUS_DATA }; })()`;
+  let PIPELINE_STATUS_DATA;
+  try { ({ PIPELINE_STATUS_DATA } = eval(wrapped)); }
+  catch (e) { console.error('ERROR: failed to parse data.js:', e.message); process.exit(1); }
+  if (!Array.isArray(PIPELINE_STATUS_DATA)) {
+    console.error('ERROR: PIPELINE_STATUS_DATA not found or not an array in data.js');
+    process.exit(1);
+  }
+  return PIPELINE_STATUS_DATA
+    .filter(p => p.status !== 'offline')
+    .map(p => ({
+      dataset: p.dataset,
+      country: p.supplierCountry,
+      volume: p.currentThroughput,
+      start: p.start,
+      label: p.label,
+    }));
+}
+const PIPELINES = loadPipelines();
 
 // ---------- Token ----------
 
@@ -551,50 +566,60 @@ async function main() {
   // Write enriched flow-summary.json for the insights agent
   console.log('\n--- Writing Flow Summary ---');
   const GULF_COUNTRIES = ['Saudi Arabia', 'United Arab Emirates', 'Iraq', 'Qatar', 'Kuwait', 'Bahrain', 'Iran', 'Oman'];
-  const PIPELINE_NOTES = {
-    'china_crude': 'Includes ESPO Russia→China (~600 kbd), Kazakhstan-China (~220 kbd), Myanmar-China (~200 kbd) — ~1,020 kbd Hormuz-independent',
-    'iraq_crude': 'Includes Kirkuk-Ceyhan pipeline (~250 kbd) to Turkey since Mar 17 2026',
-    'russia_crude': 'Includes ESPO pipeline (~600 kbd) to China',
-    'saudi_arabia_crude': 'Includes Yanbu-SUMED pipeline (~1,500 kbd) to Egypt/Mediterranean since Mar 11 2026',
-  };
+  // Build PIPELINE_NOTES dynamically from loaded PIPELINES config
+  const PIPELINE_NOTES = {};
+  for (const p of PIPELINES) {
+    const note = `${p.label} (~${p.volume} kbd) via ${p.country} since ${p.start}`;
+    PIPELINE_NOTES[p.dataset] = PIPELINE_NOTES[p.dataset]
+      ? PIPELINE_NOTES[p.dataset] + '; ' + note
+      : 'Includes ' + note;
+  }
+
+  // Enrich a single period record (weekly or monthly) with daily averages,
+  // Gulf total/share, and top-5 countries. Shared across all buckets.
+  function periodToRecord(rec) {
+    const allCountries = {};
+    for (const [k, v] of Object.entries(rec)) {
+      if (!['p', 's', 'e', 'd', '_t'].includes(k)) allCountries[k] = Math.round(v * 10) / 10;
+    }
+    let gulfTotal = 0;
+    for (const gc of GULF_COUNTRIES) { gulfTotal += allCountries[gc] || 0; }
+    const gulfShare = rec._t > 0 ? Math.round(gulfTotal / rec._t * 1000) / 10 : 0;
+    const sorted = Object.entries(allCountries).sort((a, b) => b[1] - a[1]);
+    const days = rec.d || 1;
+    const dailyAvg = Math.round(rec._t / days * 10) / 10;
+    const allCountriesDaily = {};
+    for (const [name, val] of Object.entries(allCountries)) {
+      allCountriesDaily[name] = Math.round(val / days * 10) / 10;
+    }
+    return {
+      period: rec.p, start: rec.s, end: rec.e, total: Math.round(rec._t), days,
+      dailyAvg, allCountries, allCountriesDaily,
+      gulfTotal: Math.round(gulfTotal),
+      gulfDailyAvg: Math.round(gulfTotal / days * 10) / 10,
+      gulfShare,
+      top5: sorted.slice(0, 5).map(([name]) => name),
+    };
+  }
 
   function buildSummary(data, direction, defs) {
     const result = {};
     for (const def of defs) {
       const dataset = data[def.key];
       if (!dataset) continue;
-      const weekly = dataset.weekly?.slice(-4) || [];
-      const weeks = weekly.map(w => {
-        const allCountries = {};
-        for (const [k, v] of Object.entries(w)) {
-          if (!['p', 's', 'e', 'd', '_t'].includes(k)) allCountries[k] = Math.round(v * 10) / 10;
-        }
-        let gulfTotal = 0;
-        for (const gc of GULF_COUNTRIES) { gulfTotal += allCountries[gc] || 0; }
-        const gulfShare = w._t > 0 ? Math.round(gulfTotal / w._t * 1000) / 10 : 0;
-        const sorted = Object.entries(allCountries).sort((a, b) => b[1] - a[1]);
-        // Compute daily averages (what the frontend chart shows)
-        const days = w.d || 1;
-        const dailyAvg = Math.round(w._t / days * 10) / 10;
-        const allCountriesDaily = {};
-        for (const [name, val] of Object.entries(allCountries)) {
-          allCountriesDaily[name] = Math.round(val / days * 10) / 10;
-        }
-        const gulfDailyAvg = Math.round(gulfTotal / days * 10) / 10;
-
-        return {
-          period: w.p, start: w.s, end: w.e, total: Math.round(w._t), days,
-          dailyAvg, allCountries, allCountriesDaily,
-          gulfTotal: Math.round(gulfTotal), gulfDailyAvg, gulfShare,
-          top5: sorted.slice(0, 5).map(([name]) => name),
-        };
-      });
+      const recentWeekly = (dataset.weekly || []).slice(-4);       // ~1 month
+      const quarterlyWeekly = (dataset.weekly || []).slice(-13);   // ~3 months
+      const yearlyMonthly = (dataset.monthly || []).slice(-12);    // ~12 months
       result[def.key] = {
         direction, country: def.country, commodity: def.commodity,
         unit: UNIT_CONV[def.commodity]?.divisor === 158.987 ? 'kbd' : 'ktons',
         hasPipeline: !!PIPELINE_NOTES[def.key],
         pipelineNote: PIPELINE_NOTES[def.key] || '',
-        weeks,
+        periods: {
+          recent:    { granularity: 'weekly',  records: recentWeekly.map(periodToRecord) },
+          quarterly: { granularity: 'weekly',  records: quarterlyWeekly.map(periodToRecord) },
+          yearly:    { granularity: 'monthly', records: yearlyMonthly.map(periodToRecord) },
+        },
       };
     }
     return result;

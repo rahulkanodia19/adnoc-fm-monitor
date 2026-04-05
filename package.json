@@ -20,6 +20,8 @@
     "fetch:prices": "node scripts/fetch-platts-prices.js",
     "sync:adnoc": "node scripts/sync-adnoc-fleet.js",
     "verify": "node scripts/verify-sync.js",
+    "check:premium": "node scripts/check-premium-sources.js",
+    "audit:coverage": "bash scripts/audit-news-coverage.sh",
     "merge:containers": "node scripts/merge-containers.js"
   },
   "keywords": [],

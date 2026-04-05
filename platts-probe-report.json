@@ -1,0 +1,184 @@
+{
+  "probedAt": "2026-04-05T08:42:54.015Z",
+  "summary": {
+    "subscribed": 3,
+    "unsubscribed": 15,
+    "invalid": 0
+  },
+  "results": [
+    {
+      "symbol": "PMUAY00",
+      "commodity": "LPG Propane",
+      "region": "FOB Arab Gulf",
+      "guessDesc": "Saudi CP Propane",
+      "status": "unsubscribed",
+      "totalItems": 0,
+      "note": "Symbol not in response Items"
+    },
+    {
+      "symbol": "PMUAZ00",
+      "commodity": "LPG Propane",
+      "region": "FOB Arab Gulf",
+      "guessDesc": "Propane FOB AG alt",
+      "status": "unsubscribed",
+      "totalItems": 0,
+      "note": "Symbol not in response Items"
+    },
+    {
+      "symbol": "PMAAD00",
+      "commodity": "Butane",
+      "region": "FOB Arab Gulf",
+      "guessDesc": "Propane FOB AG alt2",
+      "status": "subscribed",
+      "price": 96.75,
+      "assessmentDate": "2026-04-02",
+      "currency": "¢",
+      "uom": "GAL",
+      "frequency": "Daily (weekdays)",
+      "description": "Butane Conway Pipeline"
+    },
+    {
+      "symbol": "PMUBA00",
+      "commodity": "LPG Butane",
+      "region": "FOB Arab Gulf",
+      "guessDesc": "Saudi CP Butane",
+      "status": "unsubscribed",
+      "totalItems": 0,
+      "note": "Symbol not in response Items"
+    },
+    {
+      "symbol": "PMUBB00",
+      "commodity": "LPG Butane",
+      "region": "FOB Arab Gulf",
+      "guessDesc": "Butane FOB AG alt",
+      "status": "unsubscribed",
+      "totalItems": 0,
+      "note": "Symbol not in response Items"
+    },
+    {
+      "symbol": "PMABF00",
+      "commodity": "Propane",
+      "region": "FOB Arab Gulf",
+      "guessDesc": "Butane FOB AG alt2",
+      "status": "subscribed",
+      "price": 210,
+      "assessmentDate": "2026-04-02",
+      "currency": "$",
+      "uom": "MT",
+      "frequency": "Daily (weekdays)",
+      "description": "Propane FOB AG 20-40 days cargo vs Propane Saudi CP M1"
+    },
+    {
+      "symbol": "AAKMW00",
+      "commodity": "LPG Propane",
+      "region": "CFR NE Asia",
+      "guessDesc": "Propane CFR NEA",
+      "status": "unsubscribed",
+      "totalItems": 0,
+      "note": "Symbol not in response Items"
+    },
+    {
+      "symbol": "AAKMX00",
+      "commodity": "LPG Butane",
+      "region": "CFR NE Asia",
+      "guessDesc": "Butane CFR NEA",
+      "status": "unsubscribed",
+      "totalItems": 0,
+      "note": "Symbol not in response Items"
+    },
+    {
+      "symbol": "FUGAC00",
+      "commodity": "Urea Granular",
+      "region": "FOB Middle East",
+      "guessDesc": "Urea Granular FOB ME",
+      "status": "unsubscribed",
+      "totalItems": 0,
+      "note": "Symbol not in response Items"
+    },
+    {
+      "symbol": "FUGAD00",
+      "commodity": "Urea Granular",
+      "region": "FOB Middle East",
+      "guessDesc": "Urea Granular alt",
+      "status": "unsubscribed",
+      "totalItems": 0,
+      "note": "Symbol not in response Items"
+    },
+    {
+      "symbol": "PUAAZ00",
+      "commodity": "Fuel oil",
+      "region": "FOB Middle East",
+      "guessDesc": "Urea alt3",
+      "status": "subscribed",
+      "price": 627.5,
+      "assessmentDate": "2026-04-02",
+      "currency": "$",
+      "uom": "MT",
+      "frequency": "Daily (weekdays)",
+      "description": "FO 3.5%S FOB Med Cargo"
+    },
+    {
+      "symbol": "FUPAA00",
+      "commodity": "Urea Prilled",
+      "region": "FOB Middle East",
+      "guessDesc": "Urea Prilled FOB ME",
+      "status": "unsubscribed",
+      "totalItems": 0,
+      "note": "Symbol not in response Items"
+    },
+    {
+      "symbol": "FUPAB00",
+      "commodity": "Urea Prilled",
+      "region": "FOB Middle East",
+      "guessDesc": "Urea Prilled alt",
+      "status": "unsubscribed",
+      "totalItems": 0,
+      "note": "Symbol not in response Items"
+    },
+    {
+      "symbol": "PSUAA00",
+      "commodity": "Sulphur Granular",
+      "region": "FOB Middle East",
+      "guessDesc": "Sulphur Granular FOB ME",
+      "status": "unsubscribed",
+      "totalItems": 0,
+      "note": "Symbol not in response Items"
+    },
+    {
+      "symbol": "FESMS00",
+      "commodity": "Sulphur Granular",
+      "region": "FOB Middle East",
+      "guessDesc": "Sulphur alt",
+      "status": "unsubscribed",
+      "totalItems": 0,
+      "note": "Symbol not in response Items"
+    },
+    {
+      "symbol": "AAPNS00",
+      "commodity": "Sulphur",
+      "region": "FOB Middle East",
+      "guessDesc": "Sulphur alt2",
+      "status": "unsubscribed",
+      "totalItems": 0,
+      "note": "Symbol not in response Items"
+    },
+    {
+      "symbol": "PSUAC00",
+      "commodity": "Sulphur Lump",
+      "region": "FOB Middle East",
+      "guessDesc": "Sulphur Lump",
+      "status": "unsubscribed",
+      "totalItems": 0,
+      "note": "Symbol not in response Items"
+    },
+    {
+      "symbol": "FESMB00",
+      "commodity": "Sulphur Bulk",
+      "region": "FOB Middle East",
+      "guessDesc": "Sulphur Bulk alt",
+      "status": "unsubscribed",
+      "totalItems": 0,
+      "note": "Symbol not in response Items"
+    }
+  ]
+}

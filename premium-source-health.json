@@ -1,0 +1,43 @@
+{
+  "checkedAt": "2026-04-05T08:36:29.224Z",
+  "interactive": false,
+  "aborted": false,
+  "results": [
+    {
+      "name": "Kpler Insight",
+      "url": "https://terminal.kpler.com/insight",
+      "status": "ok",
+      "landedAt": "https://terminal.kpler.com/insight",
+      "contentLength": 24438,
+      "loginAttempts": 1,
+      "message": "OK (24438 chars)"
+    },
+    {
+      "name": "Rystad ME",
+      "url": "https://portal.rystadenergy.com/dashboards/detail/1047/0",
+      "status": "ok",
+      "landedAt": "https://portal.rystadenergy.com/dashboards/detail/1047/0",
+      "contentLength": 347,
+      "loginAttempts": 1,
+      "message": "OK (347 chars + iframe)"
+    },
+    {
+      "name": "S&P Connect",
+      "url": "https://connect.spglobal.com/home",
+      "status": "ok",
+      "landedAt": "https://connect.spglobal.com/home",
+      "contentLength": 2735,
+      "loginAttempts": 1,
+      "message": "OK (2735 chars)"
+    },
+    {
+      "name": "Platts Core",
+      "url": "https://core.spglobal.com/#platts/landingpage",
+      "status": "ok",
+      "landedAt": "https://core.spglobal.com/#platts/landingpage",
+      "contentLength": 981,
+      "loginAttempts": 1,
+      "message": "OK (981 chars)"
+    }
+  ]
+}

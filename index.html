@@ -40,6 +40,26 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/xlsx-js-style@1.2.0/dist/xlsx.bundle.js"></script>
+  <script>
+    // Tab preload: prevent flash of default tab while data scripts (~15MB) load
+    (function() {
+      var VALID_TABS = ['exec-summary','country-matrix','import-flows','export-flows',
+        'market-prices','soh-tracker','adnoc-vessels','market-news','fm-declarations','shutdowns'];
+      var hash = window.location.hash.slice(1);
+      var saved = null;
+      try { saved = sessionStorage.getItem('adnoc-active-tab'); } catch(e) {}
+      var target = (VALID_TABS.indexOf(hash) !== -1) ? hash :
+                   (saved && VALID_TABS.indexOf(saved) !== -1) ? saved : null;
+      if (target && target !== 'exec-summary') {
+        var style = document.createElement('style');
+        style.id = 'tab-preload-style';
+        style.textContent = '[data-panel="exec-summary"]{display:none!important}' +
+                            '[data-panel="' + target + '"]{display:block!important}';
+        document.head.appendChild(style);
+        window.__preloadTab = target;
+      }
+    })();
+  </script>
 </head>
 <body class="bg-navy-50 text-navy-800 font-sans min-h-screen">
 

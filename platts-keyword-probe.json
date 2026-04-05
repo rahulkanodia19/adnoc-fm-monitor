@@ -1,0 +1,1158 @@
+{
+  "Urea Middle East": {
+    "total": 0,
+    "priced": 0,
+    "hits": []
+  },
+  "Urea Arab Gulf": {
+    "total": 0,
+    "priced": 0,
+    "hits": []
+  },
+  "Urea FOB": {
+    "total": 0,
+    "priced": 0,
+    "hits": []
+  },
+  "Sulphur Middle East": {
+    "total": 25,
+    "priced": 25,
+    "hits": [
+      {
+        "symbol": "AAVBG00",
+        "desc": "ULSD 10ppmS CIF NWE Cargo",
+        "price": 1607.75,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAWYZ00",
+        "desc": "ULSD 10ppmS CIF Med Cargo",
+        "price": 1617.25,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAWYY00",
+        "desc": "ULSD 10ppmS FOB Med Cargo",
+        "price": 1571.5,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAJUS00",
+        "desc": "ULSD 10ppmS FOB ARA Barge",
+        "price": 1573.75,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAVBH00",
+        "desc": "ULSD 10ppmS CIF NWE Basis UK Cargo",
+        "price": 1617,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAWZC00",
+        "desc": "ULSD 10ppmS CIF NWE Basis Le Havre Cargo",
+        "price": 1613.5,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AATHA00",
+        "desc": "ULSD FOB Chicago Pipe",
+        "price": 400.86,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AATHB00",
+        "desc": "ULSD Group 3 Pipeline",
+        "price": 377.86,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AATGY00",
+        "desc": "ULSD USGC Prompt Pipeline",
+        "price": 440.96,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAXRV00",
+        "desc": "ULSD USGC Export",
+        "price": 415.95,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "ABXGO00",
+        "desc": "ULSD 10ppm FOB Med Cargo Eur cents/liter",
+        "price": 115.403,
+        "uom": "LTR",
+        "currency": "ERC",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "ABXGP00",
+        "desc": "ULSD 10ppm CIF Med Cargo Eur cents/liter",
+        "price": 118.763,
+        "uom": "LTR",
+        "currency": "ERC",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "ABWHM00",
+        "desc": "ULSD 10ppmS FOB Med Cargo Eur/mt",
+        "price": 1365.216,
+        "uom": "MT",
+        "currency": "€",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAHS001",
+        "desc": "NYMEX NY ULSD Settle Mo01",
+        "price": 436.11,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "NYHOM01",
+        "desc": "NYMEX NY ULSD at Houston MOC Mo01",
+        "price": 435.82,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "NMHO001",
+        "desc": "NYMEX NY ULSD Settlement Mo01",
+        "price": 4.3611,
+        "uom": "GAL",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "XNHOA01",
+        "desc": "NYMEX NY ULSD at Singapore MOC Mo01",
+        "price": 440.64,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAHS002",
+        "desc": "NYMEX NY ULSD Settle Mo02",
+        "price": 397.61,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "NYHOM02",
+        "desc": "NYMEX NY ULSD at Houston MOC Mo02",
+        "price": 397.22,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "NMHO002",
+        "desc": "NYMEX NY ULSD Settlement Mo02",
+        "price": 3.9761,
+        "uom": "GAL",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "XNHOA02",
+        "desc": "NYMEX NY ULSD at Singapore MOC Mo02",
+        "price": 402.64,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAHS003",
+        "desc": "NYMEX NY ULSD Settle Mo03",
+        "price": 357.27,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "NYHOM03",
+        "desc": "NYMEX NY ULSD at Houston MOC Mo03",
+        "price": 356.91,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AATFI00",
+        "desc": "ULSD DAP Eastern Mexico pesos/liter",
+        "price": 20.21,
+        "uom": "LTR",
+        "currency": "Mex$",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "NMHO003",
+        "desc": "NYMEX NY ULSD Settlement Mo03",
+        "price": 3.5727,
+        "uom": "GAL",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      }
+    ]
+  },
+  "Sulphur Arab Gulf": {
+    "total": 0,
+    "priced": 0,
+    "hits": []
+  },
+  "Sulphur FOB": {
+    "total": 25,
+    "priced": 25,
+    "hits": [
+      {
+        "symbol": "AAWYY00",
+        "desc": "ULSD 10ppmS FOB Med Cargo",
+        "price": 1571.5,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAJUS00",
+        "desc": "ULSD 10ppmS FOB ARA Barge",
+        "price": 1573.75,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AATGY00",
+        "desc": "ULSD USGC Prompt Pipeline",
+        "price": 440.96,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAXRV00",
+        "desc": "ULSD USGC Export",
+        "price": 415.95,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AATHA00",
+        "desc": "ULSD FOB Chicago Pipe",
+        "price": 400.86,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "ABXGO00",
+        "desc": "ULSD 10ppm FOB Med Cargo Eur cents/liter",
+        "price": 115.403,
+        "uom": "LTR",
+        "currency": "ERC",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "ABWHM00",
+        "desc": "ULSD 10ppmS FOB Med Cargo Eur/mt",
+        "price": 1365.216,
+        "uom": "MT",
+        "currency": "€",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAHS001",
+        "desc": "NYMEX NY ULSD Settle Mo01",
+        "price": 436.11,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "NYHOM01",
+        "desc": "NYMEX NY ULSD at Houston MOC Mo01",
+        "price": 435.82,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "XNHOA01",
+        "desc": "NYMEX NY ULSD at Singapore MOC Mo01",
+        "price": 440.64,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAHS002",
+        "desc": "NYMEX NY ULSD Settle Mo02",
+        "price": 397.61,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "NYHOM02",
+        "desc": "NYMEX NY ULSD at Houston MOC Mo02",
+        "price": 397.22,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "XNHOA02",
+        "desc": "NYMEX NY ULSD at Singapore MOC Mo02",
+        "price": 402.64,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAHS003",
+        "desc": "NYMEX NY ULSD Settle Mo03",
+        "price": 357.27,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "NYHOM03",
+        "desc": "NYMEX NY ULSD at Houston MOC Mo03",
+        "price": 356.91,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "XNHOA03",
+        "desc": "NYMEX NY ULSD at Singapore MOC Mo03",
+        "price": 364.28,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "ABWHO00",
+        "desc": "ULSD 10ppmS FOB NWE Basis Le Havre Cargo Eur/mt",
+        "price": 1371.949,
+        "uom": "MT",
+        "currency": "€",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "ABXGS00",
+        "desc": "ULSD 10ppm FOB NWE basis Le Havre Cargo Eur cents/liter",
+        "price": 115.972,
+        "uom": "LTR",
+        "currency": "ERC",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAQCI00",
+        "desc": "ULSD 10ppmS FOB ARA Barge Eur/mt",
+        "price": 1367.171,
+        "uom": "MT",
+        "currency": "€",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAVBF00",
+        "desc": "ULSD 10ppmS FOB NWE Cargo",
+        "price": 1579.75,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "ABWHP00",
+        "desc": "ULSD 10ppmS FOB NWE Cargo Eur/mt",
+        "price": 1372.383,
+        "uom": "MT",
+        "currency": "€",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAWZD00",
+        "desc": "ULSD 10ppmS FOB NWE Basis Le Havre Cargo",
+        "price": 1579.25,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "ABXGU00",
+        "desc": "ULSD 10ppm FOB ARA Barge Eur cents/liter",
+        "price": 115.568,
+        "uom": "LTR",
+        "currency": "ERC",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "ABXGQ00",
+        "desc": "ULSD 10ppm FOB NWE Cargo Eur cents/liter",
+        "price": 116.009,
+        "uom": "LTR",
+        "currency": "ERC",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "ABXGV00",
+        "desc": "ULSD 10ppm FOB NWE Cargo GB pence/liter",
+        "price": 101.242,
+        "uom": "LTR",
+        "currency": "GBC",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      }
+    ]
+  },
+  "Sulfur FOB": {
+    "total": 25,
+    "priced": 25,
+    "hits": [
+      {
+        "symbol": "AUGMA00",
+        "desc": "Marine Fuel 0.5% FOB USGC Barge $/bbl",
+        "price": 128.35,
+        "uom": "BBL",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Fuel oil",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "PUMFD00",
+        "desc": "Marine Fuel 0.5% FOB Rdam Barge $/mt",
+        "price": 681.5,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Fuel oil",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AMFSA00",
+        "desc": "Marine Fuel 0.5% FOB Spore Cargo $/mt",
+        "price": 856.25,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Fuel oil",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "PPXDK00",
+        "desc": "FO 380 CST 3.5%S FOB Spore Cargo",
+        "price": 732.18,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Fuel oil",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAGJA00",
+        "desc": "Gasoline 92 RON Unl FOB Arab Gulf Jebel Ali Cargo",
+        "price": 136.33,
+        "uom": "BBL",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Gasoline",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "TS01034",
+        "desc": "TSI Premium Hard Coking Coal Australia Export FOB East Coast Port",
+        "price": 236.8,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Hard coking coal",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AFUJQ00",
+        "desc": "FO 380 CST FOB Fujairah Cargo",
+        "price": 700.04,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Fuel oil",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AMFFA00",
+        "desc": "Marine Fuel 0.5% FOB Fujairah Cargo $/mt",
+        "price": 839.94,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Fuel oil",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAWYY00",
+        "desc": "ULSD 10ppmS FOB Med Cargo",
+        "price": 1571.5,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "PUBDM00",
+        "desc": "FO RMG 380 USGC Waterbone",
+        "price": 89.53,
+        "uom": "BBL",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Fuel oil",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAIDC00",
+        "desc": "FO 380 CST 3.5% FOB Arab Gulf Cargo",
+        "price": 667.13,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Fuel oil",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "MFFMM00",
+        "desc": "Marine Fuel 0.5% FOB Med Cargo $/mt",
+        "price": 665.25,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Fuel oil",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAOVC00",
+        "desc": "Gasoil .001%S (10ppm) FOB Spore Cargo",
+        "price": 292.82,
+        "uom": "BBL",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Gasoil",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AUGMB00",
+        "desc": "Marine Fuel 0.5% FOB USGC Barge $/mt (NextGen MOC)",
+        "price": 815,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Fuel oil",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "HCCAU00",
+        "desc": "Low Vol HCC FOB Australia",
+        "price": 190.7,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Hard coking coal",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "PLVHA00",
+        "desc": "Prem Low Vol HCC FOB Aus",
+        "price": 236.8,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Hard coking coal",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "MCCHA00",
+        "desc": "Met Coke 62/60 CSR FOB China $/MT",
+        "price": 224,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Metallurgical coke",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAJUS00",
+        "desc": "ULSD 10ppmS FOB ARA Barge",
+        "price": 1573.75,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AATGY00",
+        "desc": "ULSD USGC Prompt Pipeline",
+        "price": 440.96,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAXRV00",
+        "desc": "ULSD USGC Export",
+        "price": 415.95,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AATHA00",
+        "desc": "ULSD FOB Chicago Pipe",
+        "price": 400.86,
+        "uom": "GAL",
+        "currency": "¢",
+        "date": "2026-04-02",
+        "commodity": "Ultra low sulfur diesel fuel",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AFURM01",
+        "desc": "FO 380 CST 3.5% FOB Arab Gulf Cargo Financial Mo01",
+        "price": 596.25,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Fuel oil",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAPKC00",
+        "desc": "FO 380 CST 3.5%S FOB Spore Cargo Financial Mo01 (NextGen MOC)",
+        "price": 671.2,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Fuel oil",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "FOFS001",
+        "desc": "Marine Fuel 0.5% FOB Spore Cargo Financial Mo01 (NextGen MOC)",
+        "price": 757,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Fuel oil",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "POAFC00",
+        "desc": "Gasoil FOB Spore Cargo Financial Mo01 (NextGen MOC)",
+        "price": 167.73,
+        "uom": "BBL",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Gasoil",
+        "frequency": "Daily (weekdays)"
+      }
+    ]
+  },
+  "LPG FOB Arab Gulf": {
+    "total": 16,
+    "priced": 16,
+    "hits": [
+      {
+        "symbol": "PMUDM00",
+        "desc": "Propane FOB AG 20-40 days cargo",
+        "price": 894.5,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Propane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "PMUDR00",
+        "desc": "Butane FOB AG 20-40 days cargo",
+        "price": 923.5,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Butane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAHHG00",
+        "desc": "Propane FOB Saudi Arabia CP Financial Mo01",
+        "price": 684.5,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Propane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAHHJ00",
+        "desc": "Propane FOB Saudi Arabia CP Financial Qr01",
+        "price": 607,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Propane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAHHH00",
+        "desc": "Propane FOB Saudi Arabia CP Financial Mo02",
+        "price": 650,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Propane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAHHI00",
+        "desc": "Propane FOB Saudi Arabia CP Financial Mo03",
+        "price": 626,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Propane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "PTAAM10",
+        "desc": "Propane FOB Saudi Arabia CP",
+        "price": 750,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Propane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "PTAAF10",
+        "desc": "Butane FOB Saudi Arabia CP",
+        "price": 800,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Butane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "PMUDQ00",
+        "desc": "Butane FOB AG 20-40 days cargo Month to Date",
+        "price": 919,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Butane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "PMUDO00",
+        "desc": "Propane FOB AG 20-40 days cargo Month to Date",
+        "price": 890,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Propane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "PMABF00",
+        "desc": "Propane FOB AG 20-40 days cargo vs Propane Saudi CP M1",
+        "price": 210,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Propane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "PMABG00",
+        "desc": "Butane FOB AG 20-40 days cargo vs Butane Saudi CP M1",
+        "price": 210,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Butane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "PMUDN03",
+        "desc": "Propane FOB AG 20-40 days cargo MAvg",
+        "price": 686.591,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-03-01",
+        "commodity": "Propane",
+        "frequency": "Monthly"
+      },
+      {
+        "symbol": "PMUDS03",
+        "desc": "Butane FOB AG 20-40 days cargo MAvg",
+        "price": 684.591,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-03-01",
+        "commodity": "Butane",
+        "frequency": "Monthly"
+      },
+      {
+        "symbol": "PMUEJ03",
+        "desc": "Propane FOB AG 20-40 days cargo vs Propane Saudi CP M1 MAvg",
+        "price": 76.864,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-03-01",
+        "commodity": "Propane",
+        "frequency": "Monthly"
+      },
+      {
+        "symbol": "PMUEK03",
+        "desc": "Butane FOB AG 20-40 days cargo vs Butane Saudi CP M1 MAvg",
+        "price": 76.864,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-03-01",
+        "commodity": "Butane",
+        "frequency": "Monthly"
+      }
+    ]
+  },
+  "Propane Arab Gulf": {
+    "total": 13,
+    "priced": 13,
+    "hits": [
+      {
+        "symbol": "PMUDM00",
+        "desc": "Propane FOB AG 20-40 days cargo",
+        "price": 894.5,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Propane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAHHG00",
+        "desc": "Propane FOB Saudi Arabia CP Financial Mo01",
+        "price": 684.5,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Propane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAHHJ00",
+        "desc": "Propane FOB Saudi Arabia CP Financial Qr01",
+        "price": 607,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Propane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAHHH00",
+        "desc": "Propane FOB Saudi Arabia CP Financial Mo02",
+        "price": 650,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Propane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "AAHHI00",
+        "desc": "Propane FOB Saudi Arabia CP Financial Mo03",
+        "price": 626,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Propane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "PTAAM10",
+        "desc": "Propane FOB Saudi Arabia CP",
+        "price": 750,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Propane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "PMUDO00",
+        "desc": "Propane FOB AG 20-40 days cargo Month to Date",
+        "price": 890,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Propane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "PMABF00",
+        "desc": "Propane FOB AG 20-40 days cargo vs Propane Saudi CP M1",
+        "price": 210,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Propane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "MAHHG00",
+        "desc": "Propane Saudi CP Swap Mo01",
+        "price": 684.5,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Propane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "MAHHH00",
+        "desc": "Propane Saudi CP Swap Mo02",
+        "price": 650,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Propane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "MAHHI00",
+        "desc": "Propane Saudi CP Swap Mo03",
+        "price": 626,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Propane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "PMUDN03",
+        "desc": "Propane FOB AG 20-40 days cargo MAvg",
+        "price": 686.591,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-03-01",
+        "commodity": "Propane",
+        "frequency": "Monthly"
+      },
+      {
+        "symbol": "PMUEJ03",
+        "desc": "Propane FOB AG 20-40 days cargo vs Propane Saudi CP M1 MAvg",
+        "price": 76.864,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-03-01",
+        "commodity": "Propane",
+        "frequency": "Monthly"
+      }
+    ]
+  },
+  "Butane Arab Gulf": {
+    "total": 6,
+    "priced": 6,
+    "hits": [
+      {
+        "symbol": "PMUDR00",
+        "desc": "Butane FOB AG 20-40 days cargo",
+        "price": 923.5,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Butane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "PTAAF10",
+        "desc": "Butane FOB Saudi Arabia CP",
+        "price": 800,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Butane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "PMUDQ00",
+        "desc": "Butane FOB AG 20-40 days cargo Month to Date",
+        "price": 919,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Butane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "PMABG00",
+        "desc": "Butane FOB AG 20-40 days cargo vs Butane Saudi CP M1",
+        "price": 210,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-04-02",
+        "commodity": "Butane",
+        "frequency": "Daily (weekdays)"
+      },
+      {
+        "symbol": "PMUDS03",
+        "desc": "Butane FOB AG 20-40 days cargo MAvg",
+        "price": 684.591,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-03-01",
+        "commodity": "Butane",
+        "frequency": "Monthly"
+      },
+      {
+        "symbol": "PMUEK03",
+        "desc": "Butane FOB AG 20-40 days cargo vs Butane Saudi CP M1 MAvg",
+        "price": 76.864,
+        "uom": "MT",
+        "currency": "$",
+        "date": "2026-03-01",
+        "commodity": "Butane",
+        "frequency": "Monthly"
+      }
+    ]
+  }
+}

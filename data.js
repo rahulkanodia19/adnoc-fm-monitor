@@ -27,11 +27,13 @@ const COUNTRY_STATUS_DATA = [
       gas: { preWar: 18.5, current: 0.5, unit: "Bcf/d" },
       refining: { capacity: 443, affected: 443, available: 0, unit: "kb/d" },
       lng: { preWar: 77.0, current: 0.0, unit: "Mtpa" },
+      petrochemicals: { capacity: 2140, affected: 2140, available: 0, unit: "kt/y" },
       notes: {
         oil: "All offshore fields shut since early Mar; Ras Laffan complex offline",
         gas: "North Field shut; all processing halted; no restart until conflict ends",
         refining: "Laffan 1+2 offline with Ras Laffan; 443 kb/d at zero",
         lng: "All 77 Mtpa halted; FM extended to Edison (10 cargoes Apr-mid Jun); 12.8 Mtpa damaged 3-5 yrs; zero LNG tankers through Hormuz in March (Kpler); JKM Asian LNG spot >$25/MMBtu; Golden Pass LNG (Texas, QatarEnergy 70%/ExxonMobil 30%) ramping feed gas 434 MMcf/d — first export cargo expected April (partially offsets)",
+        petrochemicals: "Baseline: 2,140 kt/y ethylene-eq (QAPCO 840 + RLOC 1,300, per Industries Qatar / QAPCO disclosures); ALL 2,140 kt/y offline since Mar 3 — QatarEnergy downstream suspension (polymers/methanol/urea halted across Mesaieed & Ras Laffan)",
         ports: "Ras Laffan LNG port offline; Mesaieed at minimal ops; Hormuz closure blocks all seaborne exports; Sohar LNG (Oman-flagged) first LNG carrier to attempt Hormuz transit since war began (Apr 2, unladen)"
       }
     },
@@ -160,10 +162,12 @@ const COUNTRY_STATUS_DATA = [
       oil: { preWar: 2600, current: 2000, unit: "kb/d" },
       gas: { preWar: 1.7, current: 1.3, unit: "Bcf/d" },
       refining: { capacity: 1400, affected: 900, available: 500, unit: "kb/d" },
+      petrochemicals: { capacity: 1650, affected: 400, available: 1250, unit: "kt/y" },
       notes: {
         oil: "KPC FM on crude; ~500 kb/d cut; storage filling; tankers blocked at Hormuz",
         gas: "Associated gas drops with crude output cuts; domestic supply prioritized for power",
         refining: "Al-Ahmadi (466k) struck & shut; Abdullah (454k) also struck with unit fire; Al-Zour at reduced rates; 3-4 months repair",
+        petrochemicals: "Baseline: 1,650 kt/y ethylene (EQUATE Olefins I 800 + Olefins II 850 at Shuaiba, per EQUATE/TKOC disclosures); ~400 kt/y effectively offline from feedstock constraints tied to crude FM",
         ports: "Mina Al-Ahmadi shut after FM on crude exports; Al-Zour LNG import at partial ops for domestic gas"
       }
     },
@@ -278,10 +282,12 @@ const COUNTRY_STATUS_DATA = [
       oil: { preWar: 10400, current: 8000, unit: "kb/d" },
       gas: { preWar: 11.3, current: 9.0, unit: "Bcf/d" },
       refining: { capacity: 3291, affected: 0, available: 3291, unit: "kb/d" },
+      petrochemicals: { capacity: 18500, affected: 2000, available: 16500, unit: "kt/y" },
       notes: {
         oil: "4 offshore mega-fields shut (~2.5M bpd); March exports avg 3.3-4.4 mb/d (down 38-50% from 7.1 Feb); April Arab Light OSP raised to +$2.50/bbl above Oman/Dubai avg (premium surge); East-West Pipeline at max 7M bpd; Yanbu at 4.4M bpd with 40+ VLCCs queued; April term supply = Arab Light from Yanbu only",
         gas: "Master Gas System reduced; offshore associated gas offline; onshore maintenance deferred; Jafurah Phase 1 unaffected",
         refining: "Ras Tanura reopened Mar 13; all onshore refineries operational; throughput constrained by crude routing to Yanbu",
+        petrochemicals: "Baseline: ~18,500 kt/y ethylene-eq across SABIC Jubail/Yanbu crackers + Petro Rabigh + Sadara + YANSAB + Sharq (per Aljazira Capital Sep 2023 KSA Petrochemical Sector Report); ~2,000 kt/y reduced from offshore feedstock constraints, exports constrained by Hormuz",
         ports: "Yanbu at ~4.4M bpd crude + 700-900k products; port bottleneck (~4.5M bpd capacity); Houthi Bab al-Mandeb closure threat endangers Red Sea route; Ras Tanura at partial ops"
       }
     },
@@ -364,7 +370,10 @@ const COUNTRY_STATUS_DATA = [
       { name: "Abqaiq Processing", type: "Gas Processing", capacity: "~7 mb/d crude stabilization", status: "operational", notes: "World's largest oil processing facility; feeding East-West Pipeline to Yanbu; onshore, not struck" },
       { name: "SABIC Jubail Petrochemical Complex", type: "Petrochemical Complex", capacity: "World's largest petrochemical cluster", status: "partial", notes: "Feedstock curtailed from offshore field shut-ins; ethylene crackers at reduced rates; exports constrained by Hormuz" },
       { name: "Ma'aden Aluminium Complex", type: "Aluminium Smelter", capacity: "~740,000 tpa + 1.8 Mtpa alumina refinery", status: "partial", notes: "Smelter operational (grid-powered); Gulf coast exports constrained by Hormuz closure" },
-      { name: "Ras Al-Khair IWPP", type: "Power/Desalination Plant", capacity: "2,400 MW + 1.03M m³/day (world's largest hybrid desal)", status: "operational", notes: "Gulf coast Eastern Province; serves Ras Al Khair industrial city and regional water supply" }
+      { name: "Ras Al-Khair IWPP", type: "Power/Desalination Plant", capacity: "2,400 MW + 1.03M m³/day (world's largest hybrid desal)", status: "operational", notes: "Gulf coast Eastern Province; serves Ras Al Khair industrial city and regional water supply" },
+      { name: "Oracle Jeddah Cloud Region", type: "Data Centre", capacity: "multi-AZ cloud region", status: "operational", notes: "Jeddah; Oracle Cloud Infrastructure commercial region; status pending sync verification" },
+      { name: "Google Dammam Cloud Region", type: "Data Centre", capacity: "multi-AZ cloud region", status: "operational", notes: "Dammam; Google Cloud Platform Saudi region; status pending sync verification" },
+      { name: "STC Data Centres", type: "Data Centre", capacity: "multi-site national footprint", status: "operational", notes: "Saudi Telecom group sites; status pending sync verification" }
     ],
     sources: [
       { id: 1, title: "Ras Tanura shutdown - Bloomberg", url: "https://www.bloomberg.com", date: "2026-03-02" },
@@ -402,11 +411,13 @@ const COUNTRY_STATUS_DATA = [
       gas: { preWar: 6.5, current: 4.0, unit: "Bcf/d" },
       refining: { capacity: 1222, affected: 417, available: 805, unit: "kb/d" },
       lng: { preWar: 6.0, current: 0.0, unit: "Mtpa" },
+      petrochemicals: { capacity: 4500, affected: 1800, available: 2700, unit: "kt/y" },
       notes: {
         oil: "Offshore offline; ADCOP at 1.62M bpd (record); Fujairah loadings avg 1.9M bpd Mar 20-24 (up 57% YoY); maintenance deferred; >50% crude shut-in",
         gas: "Habshan SHUT AGAIN Apr 3 — debris from intercepted missile caused fire (2nd shutdown since war began, Bloomberg); Shah still shut (~1 Bcf/d); ~2.5 Bcf/d gas offline; offshore associated gas reduced",
         refining: "Ruwais-2 shut (417 kb/d); 805 kb/d available; Jebel Ali operational",
         lng: "Das Island LNG at minimal capacity; Hormuz blocked; transaction-by-transaction basis",
+        petrochemicals: "Baseline: 4,500 kt/y ethylene at Borouge Ruwais (ADNOC/Borealis JV, per OGJ/Borouge disclosures); Borouge partial (~40% reduced, ~1,800 kt/y offline) from Ruwais-2 refinery feedstock disruption",
         ports: "Fujairah loadings at 1.9M bpd via ADCOP; ADCOP at 1.62M bpd (71% utilization, can surge to 1.8M bpd); S&P Platts Inside/Outside Strait pricing live Apr 1; DXB fuel terminal shut; Musaffah at partial ops"
       }
     },
@@ -555,7 +566,10 @@ const COUNTRY_STATUS_DATA = [
       { name: "EGA Jebel Ali Smelter", type: "Aluminium Smelter", capacity: "~1.0 Mtpa", status: "operational", notes: "Not directly struck; sister plant Al Taweelah hit Mar 29. Near Jebel Ali Port (partial ops). Combined EGA ~3.5 Mtpa" },
       { name: "Borouge Petrochemical Complex", type: "Petrochemical Complex", capacity: "~4.5 Mtpa polyolefins", status: "partial", notes: "Feedstock disrupted by Ruwais Refinery-2 shutdown (Mar 10 drone strike); output reduced ~40%; ADNOC subsidiary" },
       { name: "Jebel Ali Power & Desalination Complex", type: "Power/Desalination Plant", capacity: "8,695 MW + 2.2M m³/day water", status: "operational", notes: "World's largest gas-fired plant; 40% of Dubai power; explicitly noted as operational in crisis data" },
-      { name: "Taweelah Power & Desalination Complex", type: "Power/Desalination Plant", capacity: "3,725 MW + 160+ MIGD water", status: "partial", notes: "EGA's captive power plant at Al Taweelah destroyed in Mar 29 strike (Bloomberg Apr 1); main TAQA Taweelah IWPP operational but grid under strain; Abu Dhabi grid anchor" }
+      { name: "Taweelah Power & Desalination Complex", type: "Power/Desalination Plant", capacity: "3,725 MW + 160+ MIGD water", status: "partial", notes: "EGA's captive power plant at Al Taweelah destroyed in Mar 29 strike (Bloomberg Apr 1); main TAQA Taweelah IWPP operational but grid under strain; Abu Dhabi grid anchor" },
+      { name: "Barakah Nuclear Power Plant", type: "Nuclear Plant", capacity: "5,600 MW (4×1,400 MW)", status: "operational", notes: "Al Dhafra Region, operated by Nawah Energy Co / ENEC; ~25% of UAE electricity generation; no reported strikes — status pending sync verification" },
+      { name: "Khazna Data Centres", type: "Data Centre", capacity: "hyperscale (MW capacity pending verification)", status: "operational", notes: "G42 group; Abu Dhabi flagship hyperscale footprint; status pending sync verification" },
+      { name: "Equinix DX1/DX2 Dubai", type: "Data Centre", capacity: "interconnection hub (MW pending)", status: "operational", notes: "Dubai interconnection hub; critical regional peering point; status pending sync verification" }
     ],
     sources: [
       { id: 1, title: "UAE precautionary status - Euronews", url: "https://www.euronews.com", date: "2026-03-01" },
@@ -605,10 +619,12 @@ const COUNTRY_STATUS_DATA = [
       oil: { preWar: 4300, current: 1000, unit: "kb/d" },
       gas: { preWar: 3.0, current: 0.8, unit: "Bcf/d" },
       refining: { capacity: 1300, affected: 400, available: 900, unit: "kb/d" },
+      petrochemicals: { capacity: 150, affected: 40, available: 110, unit: "kt/y" },
       notes: {
         oil: "Basra output ~800k bpd (from 3.3M); storage at max; BP Rumaila cut to 350k; Kirkuk-Ceyhan pipeline at 250k bpd (aiming 300k) — Iraq's only non-Hormuz export route",
         gas: "Associated gas collapses with ~76% crude cuts; Khor Mor (Kurdistan) halted; Iraq lost ~3,100 MW from halted Iran gas pipeline",
         refining: "Lanaz struck; Baiji/Basra at reduced throughput; Daura/Karbala operational for domestic",
+        petrochemicals: "Baseline: ~150 kt/y limited Basra petchem (state-run, small scale); ~40 kt/y offline from feedstock disruption",
         ports: "Basra Oil Terminal shut; Khor Al-Amaya shut; Kirkuk-Ceyhan to Turkey at 250k bpd; SOMO Syria route operational — first fuel oil convoy arrived Baniyas terminal Apr 1 (50k bpd crude + 650k mt/month fuel oil via overland trucking, Apr-Jun); total exports ~300k bpd vs pre-war 3.3M bpd (93% collapse); tanker shortage critical"
       }
     },
@@ -721,10 +737,12 @@ const COUNTRY_STATUS_DATA = [
       oil: { preWar: 196, current: 50, unit: "kb/d" },
       gas: { preWar: 1.6, current: 1.5, unit: "Bcf/d" },
       refining: { capacity: 405, affected: 405, available: 0, unit: "kb/d" },
+      petrochemicals: { capacity: 1200, affected: 150, available: 1050, unit: "kt/y" },
       notes: {
         oil: "Abu Safa shut; Sitra FM declared",
         gas: "Bahrain Field gas stable; Abu Safa associated gas offline",
         refining: "Sitra FM; fully offline",
+        petrochemicals: "Baseline: ~1,200 kt/y GPIC (ammonia/methanol/urea, no ethylene — per GPIC disclosures: 1,200 MT/day ammonia + 1,200 MT/day methanol + 1,700 MT/day urea); ~150 kt/y reduced from gas supply disruption",
         ports: "Sitra Marine Terminal shut after missile strikes; LNG import at partial for domestic gas"
       }
     },
@@ -771,7 +789,9 @@ const COUNTRY_STATUS_DATA = [
       { name: "Alba Aluminium Smelter", type: "Smelter", capacity: "~1.56 Mtpa", status: "partial", notes: "Operating at ~30% capacity after Mar 29 IRGC strike (Bloomberg Apr 1); under FM for aluminium shipments since Mar 4" },
       { name: "Sitra Marine Terminal", type: "Export Terminal", capacity: "~200,000 bpd", status: "shutdown", notes: "Shut after Iranian missile strikes on 5 & 9 Mar; BAPCO FM" },
       { name: "Abu Safa–Bahrain Pipeline", type: "Pipeline", capacity: "~0.23 mb/d", status: "shutdown", notes: "Shut: Abu Safa field shut in + Sitra refinery struck/FM declared Mar 9" },
-      { name: "Al Dur IWPP", type: "Power/Desalination Plant", capacity: "2,734 MW + 268k m³/day", status: "operational", notes: "Bahrain 100% desalination-dependent; not targeted; critical civilian water supply" }
+      { name: "Al Dur IWPP", type: "Power/Desalination Plant", capacity: "2,734 MW + 268k m³/day", status: "operational", notes: "Bahrain 100% desalination-dependent; not targeted; critical civilian water supply" },
+      { name: "AWS Middle East (Bahrain) Region", type: "Data Centre", capacity: "3 availability zones", status: "partial", notes: "Struck Apr 1 via Batelco host facility per country events log; impact on AZ availability pending sync verification" },
+      { name: "Batelco Data Centre", type: "Data Centre", capacity: "primary Bahrain DC (MW pending)", status: "partial", notes: "Hit Apr 1 per events log; hosts AWS Middle East region; first IRGC strike on US tech infrastructure in-theater" }
     ],
     sources: [
       { id: 1, title: "Alba FM - Bloomberg", url: "https://www.bloomberg.com", date: "2026-03-04" },
@@ -805,11 +825,13 @@ const COUNTRY_STATUS_DATA = [
       gas: { preWar: 4.2, current: 4.0, unit: "Bcf/d" },
       refining: { capacity: 222, affected: 0, available: 222, unit: "kb/d" },
       lng: { preWar: 10.4, current: 10.4, unit: "Mtpa" },
+      petrochemicals: { capacity: 1200, affected: 0, available: 1200, unit: "kt/y" },
       notes: {
         oil: "Outside Hormuz; crude production intact at ~950 kb/d; Oman benchmark surged to $152-153/bbl for May delivery; commanding premium with non-Hormuz position",
         gas: "Outside Hormuz; gas processing unaffected; Khazzan (BP) at full output",
         refining: "Outside Hormuz; Sohar and Duqm refineries operational",
         lng: "Outside Hormuz; Oman LNG 10.4 Mtpa operational; commanding significant Asian spot premiums with Qatar offline",
+        petrochemicals: "Baseline: ~1,200 kt/y (OQ Sohar LPIC 880 kt/y PE + Salalah Methanol + aromatics, per OQ disclosures); OPERATIONAL — outside Hormuz, unaffected",
         ports: "Mina Al-Fahal operational; Salalah 'stop-and-start' — carriers rerouting India services to Karachi (Hapag-Lloyd Niledutch Lion); Duqm receiving diverted cargoes"
       }
     },
@@ -891,10 +913,12 @@ const COUNTRY_STATUS_DATA = [
       oil: { preWar: 0, current: 0, unit: "kb/d" },
       gas: { preWar: 3.0, current: 2.0, unit: "Bcf/d" },
       refining: { capacity: 197, affected: 60, available: 137, unit: "kb/d" },
+      petrochemicals: { capacity: 350, affected: 100, available: 250, unit: "kt/y" },
       notes: {
         oil: "No oil production; Leviathan restart does not affect crude",
         gas: "Leviathan confirmed producing (Bloomberg Apr 3, ~1.2 Bcf/d ramping up after 33-day shutdown); Karish still shut (~0.6 Bcf/d); Tamar supplying domestic (~1.0 Bcf/d); gas exports to Egypt/Jordan remain halted pending pipeline security assessment — Newmed says export capacity can resume; Israeli gas = 15-20% of Egypt consumption",
         refining: "Haifa damaged but mostly online",
+        petrochemicals: "Baseline: ~350 kt/y Bazan Haifa petchem (ethylene + downstream, small scale per Bazan disclosures); ~100 kt/y offline from Haifa refinery damage affecting feedstock",
         ports: "No major oil/LNG export terminals; Leviathan restart may enable gas export resumption if pipeline security confirmed"
       }
     },
@@ -972,11 +996,13 @@ const COUNTRY_STATUS_DATA = [
       oil: { preWar: 3176, current: 2700, unit: "kb/d" },
       gas: { preWar: 25.8, current: 22.5, unit: "Bcf/d" },
       refining: { capacity: 2600, affected: 410, available: 2190, unit: "kb/d" },
+      petrochemicals: { capacity: 11500, affected: 5500, available: 6000, unit: "kt/y" },
       notes: {
         oil: "Southern fields ~30% shut-in; Kharg still loading avg 1.84 mb/d in March (Kpler); March exports from west-of-Hormuz ports down 76%; Isfahan industrial targets struck; B1 bridge destroyed Apr 3 (death toll → 13); IDF killed ballistic missile chief Atimi in Kermanshah Apr 3; Day 38: F-15E down, 1 WSO missing; Pentagon claims 90% capability degraded; 365 US injuries total",
         gas: "Asaluyeh processing hit; ~100 MMcm/d offline (~12% of South Pars); Fajr Jam fire; nuclear talks suspended indefinitely",
         refining: "Tehran Refinery (250 kb/d) destroyed; Bandar Abbas curtailed; Siraf condensate operational; Isfahan steel/pharma struck Apr 1; B1 bridge collapse disrupts Tehran-Karaj logistics; Apr 4: Mahshahr Petrochemical Zone struck — 5 killed, 170 injured (Anadolu); Fajr 1&2, Rejal, Amir Kabir, Abou Ali, Bandar Imam all hit; all personnel evacuated; first direct strike on Iran's main petchem cluster",
         lng: "No LNG export capacity; South Pars disruption affects domestic supply",
+        petrochemicals: "Baseline: 11,500 kt/y ethylene (Mahshahr 21 plants + Assaluyeh 13 plants + Bandar Imam, per NPC/MEED disclosures; Iran MoP 11.5 Mt/y ethylene target); ~5,500 kt/y offline after Mahshahr Petrochemical Zone struck Apr 4 (Bandar Imam, Fajr 1&2, Rejal, Amir Kabir, Abou Ali all hit; 5 killed, 170 injured per Anadolu)",
         ports: "Kharg loading avg 1.84 mb/d; Jask bypass at ~300k bpd; 225 Kpler crossings since Mar 1 (94% decline); 2,190 ships trapped west of Hormuz (50 VLCCs, 12 VLGCs — Kpler/AP Apr 2); toll legalized; Philippines gets toll-free passage; IRGC toll at $2M/vessel in yuan; Iran-Oman transit protocol in final drafting; first non-Iranian VLCCs (Dhalkut + Habrut) exited Apr 2 (Argus); CMA CGM Kribi (French-owned, Maltese-flagged) first Western European transit since war began via IRGC corridor Apr 3 (Euronews)"
       }
     },
@@ -1147,7 +1173,8 @@ const COUNTRY_STATUS_DATA = [
       { name: "Iran–Iraq Gas Pipeline", type: "Gas Pipeline", capacity: "~1.7 bcf/d", status: "shutdown", notes: "Halted after South Pars strike Mar 18; gas diverted for domestic use (~18 bcm/yr contracted)" },
       { name: "Tabriz–Ankara Gas Pipeline", type: "Gas Pipeline", capacity: "~1.4 bcf/d", status: "shutdown", notes: "Halted after South Pars strike Mar 18 (Bloomberg Mar 24). ~14 bcm/yr capacity; contract expires Jul 2026" },
       { name: "Bandar Imam Petrochemical Complex", type: "Petrochemical Complex", capacity: "~7 Mtpa (70% of Iran petrochem)", status: "struck", notes: "STRUCK Apr 4 — US-Israeli strikes hit Mahshahr Petrochemical Zone incl. Bandar Imam, Fajr 1&2, Rejal, Amir Kabir, Abou Ali; 5 killed, 170 injured (Anadolu); all personnel evacuated; first direct strike on Iran's main petchem cluster" },
-      { name: "Isfahan Thermal Power Plant", type: "Power Plant", capacity: "2,500 MW (Iran's largest thermal)", status: "operational", notes: "On US/Israeli target list; Trump paused power plant strikes until Apr 6; not yet struck" }
+      { name: "Isfahan Thermal Power Plant", type: "Power Plant", capacity: "2,500 MW (Iran's largest thermal)", status: "operational", notes: "On US/Israeli target list; Trump paused power plant strikes until Apr 6; not yet struck" },
+      { name: "Bushehr Nuclear Power Plant", type: "Nuclear Plant", capacity: "1,000 MW (VVER-1000)", status: "partial", notes: "Bushehr Province Gulf coast; struck 4 times since war began per NucNet/IAEA Apr 4 (1 security guard killed in 4th strike); operator NPPD; Russia-supplied fuel" }
     ],
     sources: [
       { id: 1, title: "Israeli strikes hit South Pars - CBS News", url: "https://www.cbsnews.com", date: "2026-03-18" },
@@ -2690,7 +2717,7 @@ const SPR_RELEASE_DATA = {
 // Source: Backfilled from news articles + daily HormuzTracker.com scrape
 // ============================================================
 const WAR_RISK_PREMIUM_DATA = {
-  lastUpdated: "2026-04-03",
+  lastUpdated: "2026-04-05",
   metric: "Additional War Risk Premium (AWRP) — Strait of Hormuz",
   unit: "% of hull value (7-day policy)",
   preConflictBaseline: 0.20,
@@ -2698,7 +2725,7 @@ const WAR_RISK_PREMIUM_DATA = {
     rate: 5.0,
     min: 1.0,
     max: 10.0,
-    source: "Insurance Journal / CBS News / McGill & Partners / HormuzTracker"
+    source: "Insurance Journal / DFC / Lloyd's List / HormuzTracker"
   },
   history: [
     { date: "2026-01-01", rate: 0.15, event: "Stable pre-crisis baseline", source: "S&P Global / Lloyd's List" },
@@ -2730,6 +2757,105 @@ const WAR_RISK_PREMIUM_DATA = {
     { date: "2026-03-31", rate: 5.00, event: "Stable at crisis levels", source: "House of Saud" },
     { date: "2026-04-01", rate: 5.00, event: "Stable at 5%; S&P Platts Inside/Outside Strait bifurcation launches; Lloyd's: double-digit millions per trip", source: "Lloyd's List / Insurance Journal" },
     { date: "2026-04-02", rate: 5.00, event: "Stable at 5%; de-escalation signals from Trump speech but Apr 6 deadline uncertainty; 0.8-1.5% base, 2.5% transit, 5% US/UK/Israeli nexus", source: "Insurance Journal / P&C 360" },
-    { date: "2026-04-03", rate: 5.00, event: "Stable at 5%; marine war risk hardening at April renewals despite property-cat softening; McGill & Partners quotes 3.5-10% range; Iran allows Philippine-flagged vessels (modest de-escalation); Apr 6 deadline uncertainty; tiered: 0.8-1.5% base, 2.5% transit, 5% nexus", source: "Insurance Journal / CBS News / McGill & Partners / HormuzTracker" }
+    { date: "2026-04-03", rate: 5.00, event: "Stable at 5%; marine war risk hardening at April renewals despite property-cat softening; McGill & Partners quotes 3.5-10% range; Iran allows Philippine-flagged vessels (modest de-escalation); Apr 6 deadline uncertainty; tiered: 0.8-1.5% base, 2.5% transit, 5% nexus", source: "Insurance Journal / CBS News / McGill & Partners / HormuzTracker" },
+    { date: "2026-04-05", rate: 5.00, event: "Stable at 5%; US DFC doubles Hormuz reinsurance to $40B (Chubb lead + AIG/Berkshire/Travelers/Liberty/Starr/CNA); marine war risk repricing at several multiples of pre-conflict at April renewals; no rate relief yet from $40B facility; tiered: 0.8-1.5% base, 2.5% transit, 5% nexus", source: "DFC / Insurance Journal / Lloyd's List / Bloomberg" }
   ]
 };
+
+// ============================================================
+// PIPELINE STATUS — Cross-border crude pipelines added on top of Kpler seaborne data
+// Used by scripts/sync-flows.js to augment daily flow records, and by
+// import-flows.js / export-flows.js to render pipeline callouts + badges.
+// ============================================================
+const PIPELINE_STATUS_DATA = [
+  {
+    id: "espo-china-import",
+    label: "ESPO (Russia→China)",
+    dataset: "china_crude",
+    direction: "import",
+    supplierCountry: "Russian Federation",
+    capacity: 600,
+    currentThroughput: 600,
+    status: "operational",
+    start: "2024-01-01",
+    sources: [
+      { url: "https://www.iea.org/reports/oil-market-report-march-2026", name: "IEA OMR" }
+    ],
+    note: "Skovorodino-Mohe spur, ~600 kbd nominal. Hormuz-independent."
+  },
+  {
+    id: "kazakhstan-china",
+    label: "Kazakhstan-China",
+    dataset: "china_crude",
+    direction: "import",
+    supplierCountry: "Kazakhstan",
+    capacity: 400,
+    currentThroughput: 220,
+    status: "operational",
+    start: "2024-01-01",
+    sources: [
+      { url: "https://www.eia.gov/international/analysis/country/KAZ", name: "EIA Kazakhstan" }
+    ],
+    note: "Atasu-Alashankou pipeline. ~220 kbd current throughput (400 kbd capacity). Hormuz-independent."
+  },
+  {
+    id: "myanmar-china",
+    label: "Myanmar-China",
+    dataset: "china_crude",
+    direction: "import",
+    supplierCountry: "Myanmar",
+    capacity: 400,
+    currentThroughput: 200,
+    status: "operational",
+    start: "2024-01-01",
+    sources: [
+      { url: "https://www.reuters.com/business/energy/myanmar-china-pipeline", name: "Reuters" }
+    ],
+    note: "Kyaukpyu-Kunming pipeline. ~200 kbd current throughput (400 kbd capacity). Hormuz-independent."
+  },
+  {
+    id: "kirkuk-ceyhan",
+    label: "Kirkuk-Ceyhan (Iraq→Turkey)",
+    dataset: "iraq_crude",
+    direction: "export",
+    supplierCountry: "Turkey",
+    capacity: 1600,
+    currentThroughput: 250,
+    status: "operational",
+    start: "2026-03-17",
+    sources: [
+      { url: "https://www.reuters.com/business/energy/iraq-turkey-pipeline-restart-2026", name: "Reuters" }
+    ],
+    note: "Restarted Mar 17 2026 after years offline. Running at ~250 kbd (16% of 1,600 kbd capacity). Only surviving Iraq export route after Basra shutdown."
+  },
+  {
+    id: "espo-russia-export",
+    label: "ESPO export (Russia→China)",
+    dataset: "russia_crude",
+    direction: "export",
+    supplierCountry: "China",
+    capacity: 600,
+    currentThroughput: 600,
+    status: "operational",
+    start: "2024-01-01",
+    sources: [
+      { url: "https://www.iea.org/reports/oil-market-report-march-2026", name: "IEA OMR" }
+    ],
+    note: "Skovorodino-Mohe spur to China. Mirror of china_crude ESPO import entry."
+  },
+  {
+    id: "saudi-westward-bypass",
+    label: "Saudi East-West + SUMED bypass",
+    dataset: "saudi_arabia_crude",
+    direction: "export",
+    supplierCountry: "Egypt",
+    capacity: 5000,
+    currentThroughput: 1500,
+    status: "operational",
+    start: "2026-03-11",
+    sources: [
+      { url: "https://www.spglobal.com/commodityinsights/en/platts/articles/saudi-east-west-yanbu-sumed", name: "S&P Platts" }
+    ],
+    note: "Saudi East-West pipeline to Yanbu (Red Sea) + tanker to Egypt Ain Sukhna + SUMED pipeline to Sidi Kerir (Mediterranean). Composite Hormuz-bypass route activated Mar 11 2026."
+  }
+];

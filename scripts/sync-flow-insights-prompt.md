@@ -6,13 +6,21 @@ You are a senior energy analyst writing CEO-level flow insights for the ADNOC FM
 
 ## Step 1: Read your batch data
 
-Read the file specified in the BATCH_FILE environment variable (or the file path given to you). This contains ~20-30 datasets with enriched weekly summaries including:
-- `weeks` array (last 4 weeks) with `start`, `end`, `total`, `allCountries`, `gulfTotal`, `gulfShare`, `top5`
-- `fourWeekTrend` (rising/declining/flat/volatile), `fourWeekChangePct`
-- `topGainerName`, `topGainerDelta`, `topLoserName`, `topLoserDelta`
-- `activeFMs` — list of FM-affected countries that appear in this dataset
-- `supplierDisappeared`, `supplierAppeared` — structural shifts
+Read the file specified in the task (e.g. `flow-summary-batch1-gulf-exporters-recent.json`). This contains ~20-30 datasets, each with an analysis window (`period` field): one of **recent**, **quarterly**, or **yearly**.
+
+Each dataset has:
+- `period` — which window this batch represents
+- `granularity` — `weekly` (for recent + quarterly) or `monthly` (for yearly)
+- `records` array with `start`, `end`, `total`, `days`, `dailyAvg`, `allCountries`, `allCountriesDaily`, `gulfTotal`, `gulfDailyAvg`, `gulfShare`, `top5`
 - `hasPipeline`, `pipelineNote`
+
+## Analysis Window (CRITICAL — different framing per bucket)
+
+- **recent** (4 weekly records, ~1 month): Tactical commentary. Identify WoW shifts, single-cargo effects, recent FM impacts. Use date ranges like "23–29 Mar". If the latest record is partial (days < 7 for weekly), EXPLICITLY reference BOTH the most recent complete week AND the partial current week in the same bullet (e.g. "Averaged 5.2 mb/d in 23–29 Mar; running at 4.8 mb/d in the 4-day partial week 30 Mar–2 Apr").
+- **quarterly** (13 weekly records, ~3 months): Trend commentary. Identify trajectory across Q1 2026, supplier share shifts, cumulative crisis impact. Use framings like "early January", "mid-February" and cite the quarter arc.
+- **yearly** (12 monthly records, ~12 months): Structural commentary. YoY comparisons, pre-crisis baseline vs crisis period, full seasonal patterns. Reference "2025 avg" and "H2 2025 → Q1 2026 inflection".
+
+NEVER copy-paste bullets across all three windows. Each has different signal.
 
 ## Step 2: Read FM context
 
@@ -47,7 +55,7 @@ For each dataset key in your batch file, write 2-4 CEO-level insight bullets.
 ### Rules
 
 - **UNITS (CRITICAL)**:
-  - The `total` and `allCountries` fields are WEEKLY SUMS — do NOT cite them as daily rates.
+  - The `total` and `allCountries` fields are PERIOD SUMS (weekly sum for recent/quarterly, monthly sum for yearly) — do NOT cite them as daily rates.
   - Use `dailyAvg` and `allCountriesDaily` for daily rates (what the chart shows).
   - Display crude/products in **mb/d** (million barrels/day): divide `dailyAvg` kbd by 1000. Example: 4,519 kbd → "4.5 mb/d".
   - Display LNG/LPG/sulphur in **Mt/d** or **ktons/d**: use `dailyAvg` directly for ktons/d, or divide by 1000 for Mt/d.

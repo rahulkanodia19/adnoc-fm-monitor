@@ -10,16 +10,19 @@
   // ---------- Constants ----------
 
   const COMMODITIES = {
-    wti:      { label: 'WTI Crude',       category: 'crude',   unit: '$/bbl',   color: '#0ea5e9' },
-    brent:    { label: 'Dated Brent',     category: 'crude',   unit: '$/bbl',   color: '#f59e0b' },
-    murban:   { label: 'Murban Crude',    category: 'crude',   unit: '$/bbl',   color: '#10b981' },
-    gasoline: { label: 'Gasoline 95 RON', category: 'product', unit: '$/bbl',   color: '#ef4444' },
-    jetfuel:  { label: 'Jet Kero',        category: 'product', unit: '$/bbl',   color: '#ec4899' },
-    gasoil:   { label: 'Gasoil 10 ppm',   category: 'product', unit: '$/bbl',   color: '#8b5cf6' },
-    lng:      { label: 'LNG JKM Spot',    category: 'lng',     unit: '$/MMBtu', color: '#06b6d4' },
-    lng_nwe:  { label: 'LNG NWE DES',     category: 'lng',     unit: '$/MMBtu', color: '#3b82f6' },
-    ttf:      { label: 'Dutch TTF',        category: 'lng',     unit: '$/MMBtu', color: '#f97316' },
-    henry_hub:{ label: 'Henry Hub',        category: 'lng',     unit: '$/MMBtu', color: '#22c55e' },
+    wti:         { label: 'WTI Crude',         category: 'crude',   unit: '$/bbl',   color: '#0ea5e9' },
+    brent:       { label: 'Dated Brent',       category: 'crude',   unit: '$/bbl',   color: '#f59e0b' },
+    murban:      { label: 'Murban (Front-Month)', category: 'crude', unit: '$/bbl',   color: '#10b981' },
+    gasoline:    { label: 'Gasoline 95 RON',   category: 'product', unit: '$/bbl',   color: '#ef4444' },
+    jetfuel:     { label: 'Jet Kero',          category: 'product', unit: '$/bbl',   color: '#ec4899' },
+    gasoil:      { label: 'Gasoil 10 ppm',     category: 'product', unit: '$/bbl',   color: '#8b5cf6' },
+    lng:         { label: 'LNG JKM Spot',      category: 'lng',     unit: '$/MMBtu', color: '#06b6d4' },
+    lng_nwe:     { label: 'LNG NWE DES',       category: 'lng',     unit: '$/MMBtu', color: '#3b82f6' },
+    ttf:         { label: 'Dutch TTF',         category: 'lng',     unit: '$/MMBtu', color: '#f97316' },
+    henry_hub:   { label: 'Henry Hub',         category: 'lng',     unit: '$/MMBtu', color: '#22c55e' },
+    lpg_propane: { label: 'LPG Propane FOB AG',category: 'petchem', unit: '$/mt',    color: '#14b8a6' },
+    lpg_butane:  { label: 'LPG Butane FOB AG', category: 'petchem', unit: '$/mt',    color: '#0891b2' },
+    ammonia:     { label: 'Ammonia FOB ME',    category: 'petchem', unit: '$/mt',    color: '#a855f7' },
   };
 
   const SHARED_LEGEND = {
@@ -60,16 +63,36 @@
   // ---------- Helpers ----------
 
   function getVisibleCommodities() {
-    // LNG has its own dedicated chart — exclude it from the main chart
+    // LNG + petchem have their own dedicated charts — exclude them from the main chart
     return Object.entries(COMMODITIES)
-      .filter(([, cfg]) => cfg.category !== 'lng' && (state.category === 'all' || cfg.category === state.category))
+      .filter(([, cfg]) => cfg.category !== 'lng' && cfg.category !== 'petchem' && (state.category === 'all' || cfg.category === state.category))
       .map(([key]) => key);
   }
 
   function getPrimaryCommodity() {
     if (state.category === 'crude') return 'murban';
     if (state.category === 'product') return 'gasoline';
+    if (state.category === 'petchem') return 'lpg_propane';
     return 'brent';
+  }
+
+  function hasCategoryData(cat) {
+    if (!state.data?.prices) return false;
+    return Object.entries(COMMODITIES).some(([k, c]) =>
+      c.category === cat && state.data.prices[k]?.history?.length > 0);
+  }
+
+  function fmtCommodityValue(val, key) {
+    if (val == null || !Number.isFinite(val)) return '—';
+    const cfg = COMMODITIES[key];
+    if (!cfg) return '$' + val.toFixed(1);
+    const precisionByUnit = { '$/bbl': 1, '$/MMBtu': 3, '$/mt': 0, '%': 2 };
+    const p = precisionByUnit[cfg.unit] ?? 1;
+    if (cfg.unit === '$/mt') return '$' + val.toFixed(p);
+    if (cfg.unit === '$/bbl') return '$' + val.toFixed(p);
+    if (cfg.unit === '$/MMBtu') return '$' + val.toFixed(p);
+    if (cfg.unit === '%') return val.toFixed(p) + '%';
+    return '$' + val.toFixed(p);
   }
 
   function filterHistoryByRange(history) {
@@ -87,6 +110,45 @@
       return d.toLocaleDateString('en-GB', { month: 'short', year: '2-digit' });
     }
     return d.toLocaleDateString('en-GB', { day: '2-digit', month: 'short' });
+  }
+
+  function formatAbsDate(dateStr) {
+    const d = new Date(dateStr);
+    if (isNaN(d.getTime())) return dateStr;
+    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+  }
+
+  // Range-aware helpers
+  const RANGE_DAYS = { '1w': 7, '1m': 30, '3m': 90, '6m': 180, '1y': 365 };
+  const RANGE_LABELS = { '1w': '1W', '1m': '1M', '3m': '3M', '6m': '6M', '1y': '1Y' };
+
+  function computeRangeChange(history, range) {
+    if (!Array.isArray(history) || history.length < 2) return null;
+    const sorted = history.slice().sort((a, b) => a.date.localeCompare(b.date));
+    const last = sorted[sorted.length - 1];
+    const days = RANGE_DAYS[range] || 90;
+    // Find entry closest to (last date - days)
+    const targetTs = new Date(last.date).getTime() - days * 86400000;
+    // Walk back to find a price on or before targetTs
+    let refEntry = sorted[0];
+    for (let i = sorted.length - 1; i >= 0; i--) {
+      if (new Date(sorted[i].date).getTime() <= targetTs) { refEntry = sorted[i]; break; }
+    }
+    const change = last.price - refEntry.price;
+    const changePct = refEntry.price !== 0 ? (change / refEntry.price) * 100 : 0;
+    return { change, changePct, refPrice: refEntry.price, refDate: refEntry.date, currentPrice: last.price };
+  }
+
+  function getRangeHighLow(history, range) {
+    if (!Array.isArray(history) || history.length === 0) return null;
+    const filtered = filterHistoryByRange(history);
+    if (filtered.length === 0) return null;
+    const prices = filtered.map(h => h.price);
+    const high = Math.max(...prices);
+    const low = Math.min(...prices);
+    const highEntry = filtered.find(h => h.price === high);
+    const lowEntry = filtered.find(h => h.price === low);
+    return { high, low, highDate: highEntry?.date, lowDate: lowEntry?.date };
   }
 
   function fmtPrice(val) {
@@ -145,6 +207,108 @@
     }
   }
 
+  // ---------- IFAD Murban merge (replaces Platts-sourced murban with ICE IFAD data) ----------
+
+  async function mergeMurbanIfadHistory() {
+    if (!state.data || !state.data.prices) return;
+    try {
+      const resp = await fetch('/murban-history.json?v=' + Date.now());
+      if (!resp.ok) return;
+      const j = await resp.json();
+      if (!Array.isArray(j.history) || j.history.length === 0) return;
+
+      const sorted = j.history.slice().sort((a, b) => a.date.localeCompare(b.date));
+      const last = sorted[sorted.length - 1];
+      const prev = sorted.length > 1 ? sorted[sorted.length - 2] : last;
+
+      // 52-week window (last 260 trading days)
+      const window260 = sorted.slice(-260);
+      const prices260 = window260.map(h => h.price);
+      const high52w = prices260.length ? Math.max(...prices260) : last.price;
+      const low52w = prices260.length ? Math.min(...prices260) : last.price;
+
+      state.data.prices.murban = {
+        current: last.price,
+        previousClose: prev.price,
+        high52w,
+        low52w,
+        history: sorted,
+        _source: 'ifad-ice',
+        _contract: j.contract || null,
+      };
+    } catch (e) {
+      // silent fail — keep existing state.data.prices.murban (may be stale Platts data)
+      console.warn('[market-prices] mergeMurbanIfadHistory failed:', e?.message);
+    }
+  }
+
+  // ---------- Market Insights (LLM-generated) ----------
+
+  async function fetchMarketInsights() {
+    try {
+      const resp = await fetch('/market-insights.json?v=' + Date.now());
+      if (!resp.ok) { state.insights = null; return; }
+      state.insights = await resp.json();
+    } catch (e) {
+      state.insights = null;
+    }
+  }
+
+  // ---------- Key Insights Card ----------
+
+  function renderInsightsCard() {
+    const data = state.insights;
+    if (!data || !Array.isArray(data.insights) || data.insights.length === 0) return '';
+
+    const severityMap = {
+      info:    { border: 'border-l-sky-400',     dot: 'bg-sky-500' },
+      bullish: { border: 'border-l-emerald-400', dot: 'bg-emerald-500' },
+      bearish: { border: 'border-l-red-400',     dot: 'bg-red-500' },
+      warning: { border: 'border-l-amber-400',   dot: 'bg-amber-500' },
+    };
+
+    const bullets = data.insights.slice(0, 5).map(ins => {
+      const sev = severityMap[ins.severity] || severityMap.info;
+      const metricsHtml = Array.isArray(ins.metrics) && ins.metrics.length > 0
+        ? `<div class="flex flex-wrap gap-x-3 gap-y-0.5 mt-1 text-[10px] text-navy-400">
+             ${ins.metrics.map(m => `<span><span class="text-navy-600 font-medium">${m.label}</span> <span class="tabular-nums text-navy-800">${m.value}</span></span>`).join('')}
+           </div>`
+        : '';
+      // related_event sub-line (optional)
+      let relatedHtml = '';
+      if (ins.related_event && ins.related_event.summary) {
+        const rd = ins.related_event.date ? formatAbsDate(ins.related_event.date) : '';
+        const rSummary = ins.related_event.summary;
+        const rLink = ins.related_event.source_url
+          ? `<a href="${ins.related_event.source_url}" target="_blank" rel="noopener" class="text-navy-500 hover:text-amber-600 underline decoration-dotted">${rSummary}</a>`
+          : rSummary;
+        relatedHtml = `<div class="text-[10px] text-navy-500 mt-1 italic"><span class="mr-1">🔗</span>Related: ${rLink}${rd ? ` <span class="text-navy-400">(${rd})</span>` : ''}</div>`;
+      }
+      return `
+        <li class="flex gap-2.5 ${sev.border} border-l-2 pl-2.5 py-0.5">
+          <div class="flex-1">
+            <div class="text-[13px] font-semibold text-navy-800 leading-snug">${ins.title || ''}</div>
+            ${ins.detail ? `<div class="text-xs text-navy-500 leading-snug mt-0.5">${ins.detail}</div>` : ''}
+            ${metricsHtml}
+            ${relatedHtml}
+          </div>
+        </li>`;
+    }).join('');
+
+    const asOf = data.asOfDate ? formatAbsDate(data.asOfDate) : (data.generated_at ? formatAbsDate(data.generated_at) : '');
+
+    return `
+      <div class="bg-white rounded-xl border border-navy-200 shadow-sm p-3 sm:p-4 mb-4">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="w-1.5 h-5 rounded-full bg-amber-500"></span>
+          <h3 class="text-sm font-bold text-navy-800">Key Insights</h3>
+          ${asOf ? `<span class="text-[10px] text-navy-400 ml-auto">As of ${asOf}</span>` : ''}
+        </div>
+        <ul class="space-y-2">${bullets}</ul>
+      </div>
+    `;
+  }
+
   // ---------- KPI Computation ----------
 
   function computeKPIs() {
@@ -155,18 +319,27 @@
 
     const current = priceData.current;
     const prevClose = priceData.previousClose || current;
-    const change = current - prevClose;
-    const changePct = prevClose !== 0 ? (change / prevClose) * 100 : 0;
+    // Daily change (always day-over-day, shown in Daily Change card)
+    const dailyChange = current - prevClose;
+    const dailyChangePct = prevClose !== 0 ? (dailyChange / prevClose) * 100 : 0;
+    // Range-aware high/low
+    const hl = getRangeHighLow(priceData.history || [], state.timeRange);
+    const sparse = (priceData.history || []).length < 10;
 
     return {
       primaryKey,
       label: COMMODITIES[primaryKey].label,
       unit: COMMODITIES[primaryKey].unit,
       current,
-      change,
-      changePct,
-      high52w: priceData.high52w,
-      low52w: priceData.low52w,
+      prevClose,
+      change: dailyChange,
+      changePct: dailyChangePct,
+      rangeHigh: hl?.high,
+      rangeLow: hl?.low,
+      rangeHighDate: hl?.highDate,
+      rangeLowDate: hl?.lowDate,
+      sparse,
+      firstDate: (priceData.history || [])[0]?.date,
     };
   }
 
@@ -210,14 +383,34 @@
     layoutRendered = false;
   }
 
+  function renderDataAsOf() {
+    const lastUpdated = state.data?.lastUpdated;
+    if (!lastUpdated) return '';
+    const dateStr = typeof formatDateTimeGST === 'function'
+      ? formatDateTimeGST(lastUpdated)
+      : (function(x){const d=new Date(x);d.setMinutes(0,0,0);return d.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',timeZone:'Asia/Dubai'})+' GST'})(lastUpdated);
+    if (typeof renderPipelineBadge === 'function') {
+      return renderPipelineBadge('prices', lastUpdated);
+    }
+    return `
+      <div class="flex items-center gap-1.5 text-xs text-navy-500 bg-white px-3 py-2 rounded-lg border border-navy-200 shadow-sm whitespace-nowrap">
+        <svg class="w-3.5 h-3.5 text-navy-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        Data as of <span class="font-semibold text-navy-700">${dateStr}</span>
+      </div>
+    `;
+  }
+
   function renderSourceBanner() {
     if (!state.data) return '';
     const src = state.data._source;
     if (!src || src === 'live') return '';
+    const lastUpd = state.data.lastUpdated ? formatAbsDate(state.data.lastUpdated) : 'latest';
     const msgs = {
-      seed: 'Showing seed data. Configure OILPRICEAPI_KEY for live prices.',
-      'seed-fallback': 'API unavailable. Showing cached seed data.',
-      stale: 'Showing cached data. Live API temporarily unavailable.',
+      seed: `Showing seed data (as of ${lastUpd}).`,
+      'seed-fallback': `API unavailable — showing cached data (as of ${lastUpd}).`,
+      stale: `Showing latest available data (as of ${lastUpd}).`,
     };
     return `
       <div class="bg-amber-50 border border-amber-200 rounded-lg p-3 mb-4 text-sm text-amber-800 flex items-center gap-2">
@@ -243,23 +436,12 @@
   }
 
   function renderControls() {
-    const lastUpdated = state.data?.lastUpdated;
-    const dateStr = lastUpdated ? (typeof formatDateTimeGST === 'function' ? formatDateTimeGST(lastUpdated) : (function(x){const d=new Date(x);d.setMinutes(0,0,0);return d.toLocaleDateString('en-GB',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',timeZone:'Asia/Dubai'})+' GST'})(lastUpdated)) : '';
-
     return `
       <div class="flex flex-col gap-3 mb-6">
-        <div class="flex flex-wrap items-center justify-between gap-2">
-          <div class="flex flex-wrap items-center gap-2">
-            ${renderToggle('Category', 'category', [
-              ['crude', 'Crude'], ['product', 'Products'], ['all', 'All']
-            ])}
-          </div>
-          ${typeof renderPipelineBadge === 'function' ? renderPipelineBadge('prices', lastUpdated) : (dateStr ? `<div class="flex items-center gap-1.5 text-xs text-navy-500 bg-white px-3 py-2 rounded-lg border border-navy-200 shadow-sm">
-            <svg class="w-3.5 h-3.5 text-navy-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            Data as of <span class="font-semibold text-navy-700">${dateStr}</span>
-          </div>` : '')}
+        <div class="flex flex-wrap items-center gap-2">
+          ${renderToggle('Category', 'category', [
+            ['crude', 'Crude'], ['product', 'Products'], ['petchem', 'Petchem'], ['all', 'All']
+          ])}
         </div>
         <div class="flex flex-wrap items-center gap-2">
           ${renderToggle('Range', 'timeRange', [
@@ -276,6 +458,12 @@
     const changeColor = up ? 'text-emerald-700' : 'text-red-700';
     const changeBg = up ? 'bg-emerald-50' : 'bg-red-50';
     const arrow = up ? '&#9650;' : '&#9660;';
+    const rangeLbl = RANGE_LABELS[state.timeRange] || '3M';
+    const sparseNote = kpis.sparse ? `<div class="text-[9px] text-navy-400 mt-0.5">accumulating since ${kpis.firstDate ? formatAbsDate(kpis.firstDate) : '—'}</div>` : '';
+    const highStr = kpis.sparse ? '—' : fmtPrice(kpis.rangeHigh);
+    const lowStr = kpis.sparse ? '—' : fmtPrice(kpis.rangeLow);
+    const highDateSub = (!kpis.sparse && kpis.rangeHighDate) ? formatAbsDate(kpis.rangeHighDate) : kpis.unit;
+    const lowDateSub = (!kpis.sparse && kpis.rangeLowDate) ? formatAbsDate(kpis.rangeLowDate) : kpis.unit;
 
     return `
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-6">
@@ -298,26 +486,29 @@
           </div>
           <div class="text-2xl sm:text-3xl font-extrabold ${changeColor}">${fmtChange(kpis.change)}</div>
           <div class="mt-1"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium ${changeBg} ${changeColor}">${arrow} ${fmtPct(kpis.changePct)}</span></div>
+          <div class="text-[10px] text-navy-400 mt-1">from $${kpis.prevClose.toFixed(2)} prev</div>
         </div>
         <div class="stat-card bg-white rounded-xl p-3 sm:p-4 border border-navy-200 border-l-4 border-l-emerald-400">
           <div class="flex items-center gap-1.5 mb-1.5">
             <svg class="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
             </svg>
-            <span class="text-[10px] sm:text-xs font-semibold text-navy-500 uppercase tracking-wider">52W High</span>
+            <span class="text-[10px] sm:text-xs font-semibold text-navy-500 uppercase tracking-wider">High (${rangeLbl})</span>
           </div>
-          <div class="text-2xl sm:text-3xl font-extrabold text-navy-900">${fmtPrice(kpis.high52w)}</div>
-          <div class="text-[10px] sm:text-xs text-navy-400 mt-0.5">${kpis.unit}</div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-navy-900">${highStr}</div>
+          <div class="text-[10px] sm:text-xs text-navy-400 mt-0.5">${highDateSub}</div>
+          ${sparseNote}
         </div>
         <div class="stat-card bg-white rounded-xl p-3 sm:p-4 border border-navy-200 border-l-4 border-l-red-400">
           <div class="flex items-center gap-1.5 mb-1.5">
             <svg class="w-4 h-4 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
             </svg>
-            <span class="text-[10px] sm:text-xs font-semibold text-navy-500 uppercase tracking-wider">52W Low</span>
+            <span class="text-[10px] sm:text-xs font-semibold text-navy-500 uppercase tracking-wider">Low (${rangeLbl})</span>
           </div>
-          <div class="text-2xl sm:text-3xl font-extrabold text-navy-900">${fmtPrice(kpis.low52w)}</div>
-          <div class="text-[10px] sm:text-xs text-navy-400 mt-0.5">${kpis.unit}</div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-navy-900">${lowStr}</div>
+          <div class="text-[10px] sm:text-xs text-navy-400 mt-0.5">${lowDateSub}</div>
+          ${sparseNote}
         </div>
       </div>
     `;
@@ -338,13 +529,13 @@
       <div class="bg-white rounded-xl p-4 sm:p-5 border border-navy-200/70 border-l-4 border-l-emerald-500 shadow-[0_1px_3px_rgba(10,25,41,0.04)] mb-4">
         <div class="flex items-center justify-between">
           <div>
-            <div class="text-xs font-semibold text-emerald-600 uppercase tracking-wider mb-1">ADNOC Benchmark — Murban Crude</div>
+            <div class="text-xs font-semibold text-emerald-600 uppercase tracking-wider mb-1">ADNOC Benchmark — Murban (Front-Month)</div>
             <div class="flex items-baseline gap-3">
               <span class="text-3xl sm:text-4xl font-extrabold tabular-nums text-navy-900">${fmtPrice(current)}</span>
               <span class="text-lg font-bold tabular-nums ${cc}">${fmtChange(change)}</span>
               <span class="text-sm font-medium tabular-nums ${cc}">(${fmtPct(changePct)})</span>
             </div>
-            <div class="text-xs text-navy-400 mt-1">$/bbl</div>
+            <div class="text-[11px] text-navy-400 mt-1">$/bbl · IFAD Front-Month Continuation · Investing.com</div>
           </div>
         </div>
       </div>
@@ -354,26 +545,44 @@
   function renderLayout() {
     return `
       <div class="flow-fade-in">
-        <div class="mb-5">
-          <h2 class="text-lg font-bold text-navy-900 flex items-center gap-2">
-            <svg class="w-5 h-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
-            </svg>
-            Market Prices
-          </h2>
-          <p class="text-sm text-navy-500 mt-0.5">Key crude grades, refined products & LNG spot prices | Source: S&P Global Platts</p>
+        <div class="mb-5 flex items-start justify-between gap-3 flex-wrap">
+          <div>
+            <h2 class="text-lg font-bold text-navy-900 flex items-center gap-2">
+              <svg class="w-5 h-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
+              </svg>
+              Market Prices
+            </h2>
+            <p class="text-sm text-navy-500 mt-0.5">Crude · Products · LNG · Petchem | Sources: S&P Platts + Investing.com</p>
+          </div>
+          <div id="mp-data-as-of"></div>
         </div>
 
         <div id="mp-source-banner"></div>
+        <div id="mp-insights"></div>
         <div id="mp-controls"></div>
         <div id="mp-murban-spotlight"></div>
         <div id="mp-kpis"></div>
 
-        <div class="mb-6">
+        <div id="mp-main-price-section" class="mb-6">
           <div class="bg-white rounded-xl border border-navy-200 shadow-sm p-3 sm:p-5">
             <h3 class="text-sm sm:text-base font-bold text-navy-800 mb-3">Price History</h3>
             <div class="chart-container">
               <canvas id="mp-chart-price"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div id="mp-spreads-section" class="mb-6 hidden">
+          <div class="bg-white rounded-xl border border-navy-200 shadow-sm p-3 sm:p-5">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-1.5 h-5 rounded-full bg-pink-500"></span>
+              <h3 class="text-sm sm:text-base font-bold text-navy-800">Product Cracks vs Murban</h3>
+              <span class="text-[10px] text-navy-400 ml-auto">$/bbl spread</span>
+            </div>
+            <div id="mp-spreads-kpis"></div>
+            <div class="chart-container">
+              <canvas id="mp-chart-spreads"></canvas>
             </div>
           </div>
         </div>
@@ -388,6 +597,20 @@
             <div id="mp-lng-kpis"></div>
             <div class="chart-container">
               <canvas id="mp-chart-lng"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div id="mp-petchem-section" class="mb-6 hidden">
+          <div class="bg-white rounded-xl border border-navy-200 shadow-sm p-3 sm:p-5">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="w-1.5 h-5 rounded-full bg-teal-500"></span>
+              <h3 class="text-sm sm:text-base font-bold text-navy-800">Petrochemicals</h3>
+              <span class="text-[10px] text-navy-400 ml-auto">$/mt</span>
+            </div>
+            <div id="mp-petchem-kpis"></div>
+            <div class="chart-container">
+              <canvas id="mp-chart-petchem"></canvas>
             </div>
           </div>
         </div>
@@ -414,13 +637,13 @@
           <div class="overflow-x-auto">
             <table class="w-full text-left min-w-[500px]">
               <thead class="bg-navy-50 text-navy-600 text-xs uppercase tracking-wider">
-                <tr>
+                <tr id="mp-price-table-head">
                   <th class="px-3 py-2.5 sm:px-5 sm:py-3 font-semibold">Commodity</th>
                   <th class="px-2.5 py-2.5 sm:px-4 sm:py-3 font-semibold text-right">Price</th>
-                  <th class="px-2.5 py-2.5 sm:px-4 sm:py-3 font-semibold text-right">Change</th>
-                  <th class="px-2.5 py-2.5 sm:px-4 sm:py-3 font-semibold text-right">% Change</th>
-                  <th class="px-2.5 py-2.5 sm:px-4 sm:py-3 font-semibold text-right hidden sm:table-cell">52W High</th>
-                  <th class="px-2.5 py-2.5 sm:px-4 sm:py-3 font-semibold text-right hidden sm:table-cell">52W Low</th>
+                  <th class="px-2.5 py-2.5 sm:px-4 sm:py-3 font-semibold text-right" data-col="change">Δ (1D)</th>
+                  <th class="px-2.5 py-2.5 sm:px-4 sm:py-3 font-semibold text-right" data-col="pct">Δ% (1D)</th>
+                  <th class="px-2.5 py-2.5 sm:px-4 sm:py-3 font-semibold text-right hidden sm:table-cell" data-col="high">High (1D)</th>
+                  <th class="px-2.5 py-2.5 sm:px-4 sm:py-3 font-semibold text-right hidden sm:table-cell" data-col="low">Low (1D)</th>
                 </tr>
               </thead>
               <tbody id="mp-price-table-body" class="divide-y divide-navy-100">
@@ -524,8 +747,14 @@
       });
     }
 
+    // --- Fuel spreads vs Murban ---
+    drawFuelSpreadsChart(prices);
+
     // --- Separate LNG chart ---
     drawLngChart(prices);
+
+    // --- Petrochemicals chart ---
+    drawCategoryChart('mp-chart-petchem', 'petchem');
 
     // --- War Risk Premium dual-axis chart ---
     drawAwrpChart(prices);
@@ -620,6 +849,275 @@
     });
   }
 
+  // ---------- Fuel Spreads vs Murban ----------
+
+  const SPREAD_PRODUCTS = ['gasoline', 'jetfuel', 'gasoil'];
+
+  function computeFuelSpreads(prices) {
+    const murbanHist = prices?.murban?.history;
+    if (!Array.isArray(murbanHist) || murbanHist.length === 0) return null;
+    const murbanMap = new Map(murbanHist.map(h => [h.date, h.price]));
+    const series = {};
+    for (const key of SPREAD_PRODUCTS) {
+      const p = prices[key];
+      if (!p || !Array.isArray(p.history)) continue;
+      const pairs = [];
+      for (const h of p.history) {
+        const m = murbanMap.get(h.date);
+        if (m != null) pairs.push({ date: h.date, spread: h.price - m });
+      }
+      if (pairs.length > 0) series[key] = pairs;
+    }
+    return Object.keys(series).length > 0 ? series : null;
+  }
+
+  function drawFuelSpreadsChart(prices) {
+    const canvas = document.getElementById('mp-chart-spreads');
+    if (!canvas) return;
+    const allSeries = computeFuelSpreads(prices);
+    if (!allSeries) return;
+
+    // Filter each series by time range, then build shared date axis
+    const filteredByKey = {};
+    const allDates = new Set();
+    for (const key of SPREAD_PRODUCTS) {
+      if (!allSeries[key]) continue;
+      const hist = filterHistoryByRange(allSeries[key].map(p => ({ date: p.date, price: p.spread })));
+      if (hist.length === 0) continue;
+      filteredByKey[key] = new Map(hist.map(h => [h.date, h.price]));
+      for (const h of hist) allDates.add(h.date);
+    }
+    const sortedDates = [...allDates].sort();
+    if (sortedDates.length === 0) return;
+
+    const labels = sortedDates.map(d => formatDate(d));
+    const skipFactor = labels.length > 60 ? Math.ceil(labels.length / 30) : 1;
+
+    const datasets = [];
+    for (const key of SPREAD_PRODUCTS) {
+      if (!filteredByKey[key]) continue;
+      const cfg = COMMODITIES[key];
+      datasets.push({
+        label: cfg.label + ' − Murban',
+        data: sortedDates.map(d => filteredByKey[key].get(d) ?? null),
+        borderColor: cfg.color,
+        backgroundColor: cfg.color + '15',
+        borderWidth: 2,
+        pointRadius: 0,
+        pointHoverRadius: 4,
+        pointHoverBorderColor: '#fff',
+        pointHoverBorderWidth: 2,
+        tension: 0.2,
+        fill: false,
+        spanGaps: true,
+      });
+    }
+    if (datasets.length === 0) return;
+
+    charts.spreads = new Chart(canvas.getContext('2d'), {
+      type: 'line',
+      data: { labels, datasets },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        animation: { duration: 600, easing: 'easeOutQuart' },
+        plugins: {
+          legend: SHARED_LEGEND,
+          tooltip: {
+            backgroundColor: '#0a1929', titleColor: '#f0f4f8', bodyColor: '#d9e2ec',
+            borderColor: '#334e68', borderWidth: 1, cornerRadius: 8,
+            titleFont: { size: 12, weight: '600' }, bodyFont: { size: 11 },
+            padding: 10, mode: 'index', intersect: false,
+            callbacks: {
+              label: ctx => ctx.dataset.label + ': ' + (ctx.parsed.y >= 0 ? '+' : '') + '$' + ctx.parsed.y.toFixed(1)
+            }
+          },
+          datalabels: { display: false },
+        },
+        scales: {
+          x: {
+            grid: { color: 'rgba(16,42,67,0.06)' },
+            ticks: {
+              color: '#627d98', font: { size: 10 }, maxRotation: 45,
+              callback: function (val, idx) { return idx % skipFactor === 0 ? this.getLabelForValue(val) : ''; }
+            },
+          },
+          y: {
+            position: 'left',
+            grid: { color: 'rgba(16,42,67,0.06)' },
+            ticks: { color: '#627d98', font: { size: 10 }, callback: v => (v >= 0 ? '+' : '') + '$' + v.toFixed(0) },
+            title: { display: true, text: '$/bbl spread', color: '#627d98', font: { size: 10 } },
+          },
+        },
+        interaction: { intersect: false, mode: 'index' },
+      },
+    });
+  }
+
+  function renderSpreadKpis() {
+    const el = document.getElementById('mp-spreads-kpis');
+    if (!el) return;
+    const prices = state.data?.prices;
+    if (!prices) { el.innerHTML = ''; return; }
+    const allSeries = computeFuelSpreads(prices);
+    if (!allSeries) { el.innerHTML = ''; return; }
+
+    const cards = SPREAD_PRODUCTS.map(key => {
+      const series = allSeries[key];
+      if (!series || series.length === 0) return '';
+      const cfg = COMMODITIES[key];
+      const last = series[series.length - 1];
+      const prev = series.length > 1 ? series[series.length - 2] : last;
+      const delta = last.spread - prev.spread;
+      const dCol = delta >= 0 ? 'text-emerald-600' : 'text-red-600';
+      const curStr = (last.spread >= 0 ? '+$' : '-$') + Math.abs(last.spread).toFixed(1);
+      const dStr = (delta >= 0 ? '+$' : '-$') + Math.abs(delta).toFixed(2);
+      return `
+        <div class="bg-navy-50/50 rounded-lg p-2.5 border border-navy-100">
+          <div class="flex items-center gap-1.5 mb-1">
+            <span class="w-1.5 h-3 rounded-full" style="background:${cfg.color}"></span>
+            <span class="text-[10px] text-navy-500 font-medium uppercase">${cfg.label} − Murban</span>
+          </div>
+          <div class="font-bold text-navy-900 text-base tabular-nums">${curStr}</div>
+          <div class="${dCol} text-xs font-medium tabular-nums">${dStr} today</div>
+        </div>`;
+    }).join('');
+
+    el.innerHTML = `<div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-3">${cards}</div>`;
+  }
+
+  // ---------- Generic Category Chart (petchem, etc.) ----------
+
+  function drawCategoryChart(canvasId, categoryKey) {
+    const canvas = document.getElementById(canvasId);
+    if (!canvas) return;
+    const prices = state.data?.prices;
+    if (!prices) return;
+
+    const keys = Object.entries(COMMODITIES)
+      .filter(([, cfg]) => cfg.category === categoryKey)
+      .map(([k]) => k);
+
+    // Collect filtered history per commodity
+    const histMap = {};
+    const allDates = new Set();
+    for (const key of keys) {
+      const d = prices[key];
+      if (!d || !Array.isArray(d.history)) continue;
+      const hist = filterHistoryByRange(d.history);
+      if (hist.length === 0) continue;
+      histMap[key] = new Map(hist.map(h => [h.date, h.price]));
+      for (const h of hist) allDates.add(h.date);
+    }
+    const sortedDates = [...allDates].sort();
+    if (sortedDates.length === 0) return;
+
+    const labels = sortedDates.map(d => formatDate(d));
+    const skipFactor = labels.length > 60 ? Math.ceil(labels.length / 30) : 1;
+
+    const datasets = [];
+    for (const key of keys) {
+      if (!histMap[key]) continue;
+      const cfg = COMMODITIES[key];
+      const dataPoints = histMap[key].size;
+      datasets.push({
+        label: cfg.label,
+        data: sortedDates.map(d => histMap[key].get(d) ?? null),
+        borderColor: cfg.color,
+        backgroundColor: cfg.color + '15',
+        borderWidth: 2,
+        pointRadius: dataPoints < 5 ? 4 : 0,
+        pointHoverRadius: 4,
+        pointHoverBorderColor: '#fff',
+        pointHoverBorderWidth: 2,
+        tension: 0.2,
+        fill: false,
+        spanGaps: true,
+      });
+    }
+    if (datasets.length === 0) return;
+
+    // Use unit from first commodity
+    const firstKey = keys.find(k => histMap[k]);
+    const unit = COMMODITIES[firstKey]?.unit || '$/mt';
+
+    charts[categoryKey] = new Chart(canvas.getContext('2d'), {
+      type: 'line',
+      data: { labels, datasets },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        animation: { duration: 600, easing: 'easeOutQuart' },
+        plugins: {
+          legend: SHARED_LEGEND,
+          tooltip: {
+            backgroundColor: '#0a1929', titleColor: '#f0f4f8', bodyColor: '#d9e2ec',
+            borderColor: '#334e68', borderWidth: 1, cornerRadius: 8,
+            titleFont: { size: 12, weight: '600' }, bodyFont: { size: 11 },
+            padding: 10, mode: 'index', intersect: false,
+            callbacks: {
+              label: ctx => {
+                const key = keys.find(k => COMMODITIES[k].label === ctx.dataset.label);
+                return ctx.dataset.label + ': ' + fmtCommodityValue(ctx.parsed.y, key) + '/' + (unit.split('/')[1] || '');
+              }
+            }
+          },
+          datalabels: { display: false },
+        },
+        scales: {
+          x: {
+            grid: { color: 'rgba(16,42,67,0.06)' },
+            ticks: {
+              color: '#627d98', font: { size: 10 }, maxRotation: 45,
+              callback: function (val, idx) { return idx % skipFactor === 0 ? this.getLabelForValue(val) : ''; }
+            },
+          },
+          y: {
+            position: 'left',
+            grid: { color: 'rgba(16,42,67,0.06)' },
+            ticks: { color: '#627d98', font: { size: 10 }, callback: v => '$' + v.toFixed(0) },
+            title: { display: true, text: unit, color: '#627d98', font: { size: 10 } },
+          },
+        },
+        interaction: { intersect: false, mode: 'index' },
+      },
+    });
+  }
+
+  function renderCategoryKpis(containerId, categoryKey) {
+    const el = document.getElementById(containerId);
+    if (!el) return;
+    const prices = state.data?.prices;
+    if (!prices) { el.innerHTML = ''; return; }
+
+    const keys = Object.entries(COMMODITIES)
+      .filter(([, cfg]) => cfg.category === categoryKey)
+      .map(([k]) => k);
+
+    const cards = keys.map(key => {
+      const p = prices[key];
+      if (!p || p.current == null) return '';
+      const cfg = COMMODITIES[key];
+      const current = p.current;
+      const prev = p.previousClose || current;
+      const change = current - prev;
+      const changePct = prev !== 0 ? (change / prev) * 100 : 0;
+      const up = change >= 0;
+      const cc = up ? 'text-emerald-600' : 'text-red-600';
+      const arrow = up ? '&#9650;' : '&#9660;';
+      const sign = change >= 0 ? '+' : '';
+      return `
+        <div class="bg-navy-50/50 rounded-lg p-2.5 border border-navy-100">
+          <div class="flex items-center gap-1.5 mb-1">
+            <span class="w-1.5 h-3 rounded-full" style="background:${cfg.color}"></span>
+            <span class="text-[10px] text-navy-500 font-medium uppercase">${cfg.label}</span>
+          </div>
+          <div class="font-bold text-navy-900 text-base tabular-nums">${fmtCommodityValue(current, key)}</div>
+          <div class="${cc} text-xs font-medium tabular-nums">${sign}${change.toFixed(1)} (${arrow} ${fmtPct(changePct)})</div>
+        </div>`;
+    }).join('');
+
+    el.innerHTML = `<div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-3">${cards}</div>`;
+  }
+
   // ---------- AWRP Dual-Axis Chart ----------
 
   function drawAwrpChart(prices) {
@@ -653,9 +1151,9 @@
         data: sortedDates.map(d => plattsMap.get(d) ?? null),
         borderColor: '#ef4444',
         backgroundColor: '#ef444420',
-        borderWidth: 2.5,
-        pointRadius: plattsMap.size < 20 ? 3 : 0,
-        pointHoverRadius: 5,
+        borderWidth: 2,
+        pointRadius: 0,
+        pointHoverRadius: 4,
         pointHoverBorderColor: '#fff',
         pointHoverBorderWidth: 2,
         tension: 0.2,
@@ -672,10 +1170,9 @@
         data: sortedDates.map(d => hullMap.get(d) ?? null),
         borderColor: '#8b5cf6',
         backgroundColor: '#8b5cf620',
-        borderWidth: 2.5,
-        pointRadius: 4,
-        pointBackgroundColor: '#8b5cf6',
-        pointHoverRadius: 6,
+        borderWidth: 2,
+        pointRadius: 0,
+        pointHoverRadius: 4,
         pointHoverBorderColor: '#fff',
         pointHoverBorderWidth: 2,
         tension: 0.2,
@@ -687,6 +1184,10 @@
 
     if (datasets.length === 0) return;
 
+    // Compute dynamic axis maxes
+    const plattsMax = plattsMap.size > 0 ? Math.max(...plattsMap.values()) : 5;
+    const hullMax = hullMap.size > 0 ? Math.max(...hullMap.values()) : 10;
+
     charts.awrp = new Chart(canvas.getContext('2d'), {
       type: 'line',
       data: { labels, datasets },
@@ -694,7 +1195,14 @@
         responsive: true, maintainAspectRatio: false,
         animation: { duration: 600, easing: 'easeOutQuart' },
         plugins: {
-          legend: SHARED_LEGEND,
+          legend: {
+            position: 'bottom',
+            labels: {
+              boxWidth: 10, boxHeight: 10, font: { size: 9 }, padding: 8,
+              usePointStyle: true, pointStyle: 'rectRounded',
+              generateLabels: SHARED_LEGEND.labels.generateLabels,
+            }
+          },
           tooltip: {
             backgroundColor: '#0a1929', titleColor: '#f0f4f8', bodyColor: '#d9e2ec',
             borderColor: '#334e68', borderWidth: 1, cornerRadius: 8,
@@ -723,14 +1231,18 @@
           y: {
             position: 'left',
             grid: { color: 'rgba(16,42,67,0.06)' },
-            ticks: { color: '#ef4444', font: { size: 10 }, callback: v => '$' + v.toFixed(2) },
-            title: { display: true, text: '$/bbl (Platts AWRP)', color: '#ef4444', font: { size: 10, weight: '600' } },
+            suggestedMin: 0,
+            suggestedMax: Math.max(5, plattsMax * 1.1),
+            ticks: { color: '#ef4444', font: { size: 9 }, callback: v => '$' + v.toFixed(2) },
+            title: { display: true, text: '$/bbl', color: '#ef4444', font: { size: 9, weight: '600' } },
           },
           y2: {
             position: 'right',
             grid: { drawOnChartArea: false },
-            ticks: { color: '#8b5cf6', font: { size: 10 }, callback: v => v.toFixed(1) + '%' },
-            title: { display: true, text: '% of hull value', color: '#8b5cf6', font: { size: 10, weight: '600' } },
+            suggestedMin: 0,
+            suggestedMax: Math.max(10, hullMax * 1.1),
+            ticks: { color: '#8b5cf6', font: { size: 9 }, callback: v => v.toFixed(1) + '%' },
+            title: { display: true, text: '% hull', color: '#8b5cf6', font: { size: 9, weight: '600' } },
           },
         },
         interaction: { intersect: false, mode: 'index' },
@@ -753,42 +1265,53 @@
     const hullBaseline = hullData?.preConflictBaseline || 0.2;
     const hullMultiple = hullRate && hullBaseline ? Math.round(hullRate / hullBaseline) : 0;
 
+    // Dynamic baseline/peak from history
+    const history = Array.isArray(hullData?.history) ? hullData.history : [];
+    let baselineEntry = null;
+    let peakEntry = null;
+    if (history.length > 0) {
+      // Baseline: entry matching preConflictBaseline rate, else first entry
+      baselineEntry = history.find(h => Math.abs(h.rate - hullBaseline) < 0.001) || history[0];
+      // Peak: entry with max rate
+      peakEntry = history.reduce((m, h) => (h.rate > (m?.rate ?? -Infinity) ? h : m), null);
+    }
+    const baselineDate = baselineEntry ? formatAbsDate(baselineEntry.date) : '—';
+    const peakDate = peakEntry ? formatAbsDate(peakEntry.date) : '—';
+    const baselineRateStr = baselineEntry ? baselineEntry.rate.toFixed(2) + '%' : '—';
+    const peakRateStr = peakEntry ? peakEntry.rate.toFixed(1) + '%' : '—';
+
+    const plattsChangeColor = plattsChange >= 0 ? 'text-red-600' : 'text-emerald-600';
+    const plattsChangeStr = (plattsChange >= 0 ? '+' : '') + plattsChange.toFixed(2);
+
     el.innerHTML = `
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-3">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-2">
         ${plattsPrice != null ? `
-        <div class="bg-red-50/50 rounded-lg p-2.5 border border-red-100">
-          <div class="flex items-center gap-1.5 mb-1">
-            <span class="w-1.5 h-3 rounded-full bg-red-500"></span>
-            <span class="text-[10px] text-navy-500 font-medium uppercase">AWRP (Platts)</span>
+        <div class="bg-white rounded-lg p-3 border border-navy-200 border-l-4 border-l-red-400">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] text-navy-500 font-semibold uppercase tracking-wider">AWRP (Platts)</span>
+            <span class="text-[10px] text-navy-400">$/bbl</span>
           </div>
-          <div class="font-bold text-navy-900 text-base">$${plattsPrice.toFixed(2)}/bbl</div>
-          <div class="${plattsChange >= 0 ? 'text-red-600' : 'text-emerald-600'} text-xs font-medium">${plattsChange >= 0 ? '+' : ''}${plattsChange.toFixed(2)} today</div>
+          <div class="flex items-baseline gap-2 mt-1">
+            <span class="text-2xl font-extrabold tabular-nums text-navy-900">$${plattsPrice.toFixed(2)}</span>
+            <span class="text-xs font-medium tabular-nums ${plattsChangeColor}">${plattsChangeStr} today</span>
+          </div>
         </div>` : ''}
         ${hullRate != null ? `
-        <div class="bg-violet-50/50 rounded-lg p-2.5 border border-violet-100">
-          <div class="flex items-center gap-1.5 mb-1">
-            <span class="w-1.5 h-3 rounded-full bg-violet-500"></span>
-            <span class="text-[10px] text-navy-500 font-medium uppercase">Hull Value Premium</span>
+        <div class="bg-white rounded-lg p-3 border border-navy-200 border-l-4 border-l-violet-400">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] text-navy-500 font-semibold uppercase tracking-wider">Hull Value Premium</span>
+            <span class="text-[10px] text-navy-400">% hull, 7-day</span>
           </div>
-          <div class="font-bold text-navy-900 text-base">${hullRate.toFixed(1)}%</div>
-          <div class="text-red-600 text-xs font-medium">${hullMultiple}x pre-conflict</div>
+          <div class="flex items-baseline gap-2 mt-1">
+            <span class="text-2xl font-extrabold tabular-nums text-navy-900">${hullRate.toFixed(1)}%</span>
+            <span class="text-xs font-medium tabular-nums text-red-600">${hullMultiple}x baseline</span>
+          </div>
         </div>` : ''}
-        <div class="bg-navy-50/50 rounded-lg p-2.5 border border-navy-100">
-          <div class="flex items-center gap-1.5 mb-1">
-            <span class="w-1.5 h-3 rounded-full bg-navy-400"></span>
-            <span class="text-[10px] text-navy-500 font-medium uppercase">Pre-Conflict</span>
-          </div>
-          <div class="font-bold text-navy-900 text-base">0.20%</div>
-          <div class="text-navy-400 text-xs font-medium">Baseline (Feb 27)</div>
-        </div>
-        <div class="bg-amber-50/50 rounded-lg p-2.5 border border-amber-100">
-          <div class="flex items-center gap-1.5 mb-1">
-            <span class="w-1.5 h-3 rounded-full bg-amber-500"></span>
-            <span class="text-[10px] text-navy-500 font-medium uppercase">Peak</span>
-          </div>
-          <div class="font-bold text-navy-900 text-base">10.0%</div>
-          <div class="text-red-600 text-xs font-medium">50x baseline (Mar 11)</div>
-        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] text-navy-500 mb-3 px-1">
+        <span>Baseline <span class="font-semibold text-navy-700 tabular-nums">${baselineRateStr}</span> on ${baselineDate}</span>
+        <span class="text-navy-300">|</span>
+        <span>Peak <span class="font-semibold text-red-700 tabular-nums">${peakRateStr}</span> on ${peakDate}</span>
       </div>
     `;
   }
@@ -799,16 +1322,51 @@
     const tbody = document.getElementById('mp-price-table-body');
     if (!tbody || !state.data?.prices) return;
 
+    const rangeLbl = RANGE_LABELS[state.timeRange] || '3M';
+
+    // Update thead column labels
+    const head = document.getElementById('mp-price-table-head');
+    if (head) {
+      const chg = head.querySelector('[data-col="change"]');
+      const pct = head.querySelector('[data-col="pct"]');
+      const hi = head.querySelector('[data-col="high"]');
+      const lo = head.querySelector('[data-col="low"]');
+      if (chg) chg.textContent = `Δ (${rangeLbl})`;
+      if (pct) pct.textContent = `Δ% (${rangeLbl})`;
+      if (hi) hi.textContent = `High (${rangeLbl})`;
+      if (lo) lo.textContent = `Low (${rangeLbl})`;
+    }
+
     const rows = Object.entries(COMMODITIES).map(([key, cfg], i) => {
       const p = state.data.prices[key];
-      if (!p) return '';
+      if (!p || p.current == null) {
+        return `
+          <tr class="hover:bg-sky-50/50 transition-colors ${i % 2 === 1 ? 'bg-navy-50/30' : ''}">
+            <td class="px-3 py-2.5 sm:px-5 sm:py-3">
+              <div class="flex items-center gap-2.5">
+                <span class="w-1 h-6 rounded-full flex-shrink-0" style="background:${cfg.color}"></span>
+                <div>
+                  <span class="text-sm font-medium text-navy-800">${cfg.label}</span>
+                  <span class="text-[10px] text-navy-400 ml-1.5">${cfg.unit}</span>
+                </div>
+              </div>
+            </td>
+            <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-navy-400" colspan="5">—</td>
+          </tr>`;
+      }
       const current = p.current;
-      const prev = p.previousClose || current;
-      const change = current - prev;
-      const changePct = prev !== 0 ? (change / prev) * 100 : 0;
+      // Range-aware Δ from history
+      const rangeChange = computeRangeChange(p.history || [], state.timeRange);
+      const change = rangeChange?.change ?? (current - (p.previousClose || current));
+      const changePct = rangeChange?.changePct ?? 0;
       const up = change >= 0;
       const changeColor = up ? 'text-emerald-600' : 'text-red-600';
       const evenClass = i % 2 === 1 ? 'bg-navy-50/30' : '';
+      // Range-aware H/L
+      const hl = getRangeHighLow(p.history || [], state.timeRange);
+      const sparse = (p.history || []).length < 10;
+      const highStr = sparse ? '<span class="text-navy-400">—</span>' : fmtCommodityValue(hl?.high, key);
+      const lowStr = sparse ? '<span class="text-navy-400">—</span>' : fmtCommodityValue(hl?.low, key);
 
       return `
         <tr class="hover:bg-sky-50/50 transition-colors ${evenClass}">
@@ -821,11 +1379,11 @@
               </div>
             </div>
           </td>
-          <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums font-semibold text-navy-900">${fmtPrice(current)}</td>
+          <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums font-semibold text-navy-900">${fmtCommodityValue(current, key)}</td>
           <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums font-medium ${changeColor}">${fmtChange(change)}</td>
           <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums font-medium ${changeColor}">${fmtPct(changePct)}</td>
-          <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-navy-700 hidden sm:table-cell">${fmtPrice(p.high52w)}</td>
-          <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-navy-700 hidden sm:table-cell">${fmtPrice(p.low52w)}</td>
+          <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-navy-700 hidden sm:table-cell">${highStr}</td>
+          <td class="px-2.5 py-2.5 sm:px-4 sm:py-3 text-right text-sm tabular-nums text-navy-700 hidden sm:table-cell">${lowStr}</td>
         </tr>
       `;
     }).join('');
@@ -849,8 +1407,14 @@
       layoutRendered = true;
     }
 
+    const dataAsOfEl = document.getElementById('mp-data-as-of');
+    if (dataAsOfEl) dataAsOfEl.innerHTML = renderDataAsOf();
+
     const bannerEl = document.getElementById('mp-source-banner');
     if (bannerEl) bannerEl.innerHTML = renderSourceBanner();
+
+    const insightsEl = document.getElementById('mp-insights');
+    if (insightsEl) insightsEl.innerHTML = renderInsightsCard();
 
     const controlsEl = document.getElementById('mp-controls');
     if (controlsEl) controlsEl.innerHTML = renderControls();
@@ -892,10 +1456,33 @@
       `;
     }
 
+    renderSpreadKpis();
+    renderCategoryKpis('mp-petchem-kpis', 'petchem');
     renderAwrpKpis();
     drawCharts();
     renderPriceTable();
     bindControlEvents();
+
+    // Toggle spreads section visibility (products/all only + has data)
+    const spreadsSection = document.getElementById('mp-spreads-section');
+    if (spreadsSection) {
+      const visibleCat = state.category === 'product' || state.category === 'all';
+      const hasData = state.data?.prices && !!computeFuelSpreads(state.data.prices);
+      spreadsSection.classList.toggle('hidden', !(visibleCat && hasData));
+    }
+
+    // Toggle petchem section visibility (petchem/all only + has data)
+    const petchemSection = document.getElementById('mp-petchem-section');
+    if (petchemSection) {
+      const visibleCat = state.category === 'petchem' || state.category === 'all';
+      petchemSection.classList.toggle('hidden', !(visibleCat && hasCategoryData('petchem')));
+    }
+
+    // Hide main Price History chart on petchem category (dedicated section below handles it)
+    const mainPriceSection = document.getElementById('mp-main-price-section');
+    if (mainPriceSection) {
+      mainPriceSection.classList.toggle('hidden', state.category === 'petchem');
+    }
   }
 
   function bindControlEvents() {
@@ -923,6 +1510,8 @@
 
   async function fetchAndRender(force) {
     await fetchPriceData(force);
+    await mergeMurbanIfadHistory();
+    await fetchMarketInsights();
     render();
   }
 

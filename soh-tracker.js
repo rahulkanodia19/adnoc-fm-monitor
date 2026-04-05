@@ -312,9 +312,9 @@
 
   function renderKPIs(summary, transitCurrent, dailyHistory) {
     const d = summary.deltas || {};
-    // KPI cards use the last CLOSED day (second-to-last entry; latest is today's partial)
+    // KPI cards use the last entry (latest completed day)
     const histLen = Array.isArray(dailyHistory) ? dailyHistory.length : 0;
-    const latest = histLen >= 2 ? dailyHistory[histLen - 2] : (histLen === 1 ? dailyHistory[0] : null);
+    const latest = histLen >= 1 ? dailyHistory[histLen - 1] : null;
     const tc = latest ? {
       exitedCount: latest.exited || 0,
       enteredCount: latest.entered || 0,

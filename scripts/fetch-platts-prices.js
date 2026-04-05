@@ -37,17 +37,21 @@ const SEARCH_URL = 'https://api.platts.com/platts-platform/search/v2/symbol/sear
 const HISTORY_URL = 'https://api.platts.com/platts-platform/search/v2/symbol/history';
 
 const SYMBOLS = {
-  PCAAS00: { key: 'brent',    label: 'Dated Brent',                bate: 'Close' },
-  PCACG00: { key: 'wti',      label: 'WTI Cushing Mo01',           bate: 'Close' },
-  AAKNL00: { key: 'murban',   label: 'Murban FOB Abu Dhabi',       bate: 'Close' },
-  AFUJB00: { key: 'gasoline', label: 'Gasoline 95 RON Arab Gulf',  bate: 'Close' },
-  PJAAA00: { key: 'jetfuel',  label: 'Jet Kero FOB Arab Gulf',     bate: 'Close' },
-  AAIDT00: { key: 'gasoil',   label: 'Gasoil 10 ppm FOB Arab Gulf',bate: 'Close' },
-  AAOVQ00: { key: 'lng',      label: 'LNG Japan/Korea DES Spot',   bate: 'Middle Price Index' },
-  AASXU00: { key: 'lng_nwe',  label: 'LNG NWE DES',               bate: 'Close' },
-  DTMSC01: { key: 'ttf',      label: 'Dutch TTF Mo01',             bate: 'Close' },
-  AASYN00: { key: 'henry_hub',label: 'Henry Hub $/MMBtu',           bate: 'Close' },
-  AWARA00: { key: 'awrp',     label: 'Crude Oil AWRP (War Risk)',   bate: 'Close' },
+  PCAAS00: { key: 'brent',       label: 'Dated Brent',                bate: 'Close' },
+  PCACG00: { key: 'wti',         label: 'WTI Cushing Mo01',           bate: 'Close' },
+  // Murban removed — now sourced from IFAD (ICE) via scrape-murban-ice.js → murban-history.json
+  AFUJB00: { key: 'gasoline',    label: 'Gasoline 95 RON Arab Gulf',  bate: 'Close' },
+  PJAAA00: { key: 'jetfuel',     label: 'Jet Kero FOB Arab Gulf',     bate: 'Close' },
+  AAIDT00: { key: 'gasoil',      label: 'Gasoil 10 ppm FOB Arab Gulf',bate: 'Close' },
+  AAOVQ00: { key: 'lng',         label: 'LNG Japan/Korea DES Spot',   bate: 'Middle Price Index' },
+  AASXU00: { key: 'lng_nwe',     label: 'LNG NWE DES',                bate: 'Close' },
+  DTMSC01: { key: 'ttf',         label: 'Dutch TTF Mo01',             bate: 'Close' },
+  AASYN00: { key: 'henry_hub',   label: 'Henry Hub $/MMBtu',          bate: 'Close' },
+  AWARA00: { key: 'awrp',        label: 'Crude Oil AWRP (War Risk)',  bate: 'Close' },
+  // Phase 1 additions (Platts-confirmed 2026-04-05):
+  PMUDM00: { key: 'lpg_propane', label: 'LPG Propane FOB AG 20-40 days',  bate: 'Close' },
+  PMUDR00: { key: 'lpg_butane',  label: 'LPG Butane FOB AG 20-40 days',   bate: 'Close' },
+  AMMOI00: { key: 'ammonia',     label: 'Ammonia FOB Middle East',    bate: 'Close' },
 };
 
 const PROJECT_DIR = path.join(__dirname, '..');

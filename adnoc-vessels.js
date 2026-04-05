@@ -5,6 +5,7 @@
 
   const DATA_FILE = 'soh-data/adnoc-fleet-data.json';
   const CHARTERED_FILE = 'soh-data/adnoc-chartered-data.json';
+  const UAE_INBOUND_FILE = 'soh-data/adnoc-uae-inbound-data.json';
 
   const state = {
     loaded: false,
@@ -21,6 +22,13 @@
     cSortAsc: true,
     cFilter: '',
     cPortFilter: 'all',
+    // UAE Inbound table state
+    uaeInboundData: null,
+    uSortCol: 'area',
+    uSortAsc: true,
+    uFilter: '',
+    uAreaFilter: 'all',
+    uDestPortFilter: 'all',
   };
 
   // ---------- Data Loading ----------
@@ -391,11 +399,13 @@
       </div>
       ${data.unmatched > 0 ? `<p class="text-[10px] text-navy-400 mt-2">${data.unmatched} vessel(s) not found in Kpler zone response — may be outside Gulf region.</p>` : ''}
     </div>
-    ${renderCharteredTable()}`;
+    ${renderCharteredTable()}
+    ${renderUaeInboundTable()}`;
 
     // Bind event listeners
     bindEvents(sorted);
     bindCharteredEvents();
+    bindUaeInboundEvents();
   }
 
   // ---------- Chartered / FOB Table ----------
@@ -667,6 +677,244 @@
     }
   }
 
+  // ---------- UAE Inbound Table ----------
+
+  function renderUaeInboundTable() {
+    const ud = state.uaeInboundData;
+    if (!ud || !ud.vessels || ud.vessels.length === 0) return '';
+
+    const allU = ud.vessels;
+    let filtered = allU;
+    if (state.uFilter) {
+      const q = state.uFilter.toLowerCase();
+      filtered = filtered.filter(v =>
+        (v.name || '').toLowerCase().includes(q) ||
+        (v.imo || '').toLowerCase().includes(q) ||
+        (v.vesselType || '').toLowerCase().includes(q) ||
+        (v.destinationPort || '').toLowerCase().includes(q) ||
+        (v.company || '').toLowerCase().includes(q) ||
+        (v.departurePort || '').toLowerCase().includes(q)
+      );
+    }
+    if (state.uAreaFilter !== 'all') {
+      filtered = filtered.filter(v => v.area === state.uAreaFilter);
+    }
+    if (state.uDestPortFilter !== 'all') {
+      filtered = filtered.filter(v => v.destinationPort === state.uDestPortFilter);
+    }
+
+    // Sort
+    const col = state.uSortCol;
+    const asc = state.uSortAsc ? 1 : -1;
+    filtered.sort((a, b) => {
+      let va = a[col], vb = b[col];
+      if (va == null) va = '';
+      if (vb == null) vb = '';
+      if (typeof va === 'number' && typeof vb === 'number') return (va - vb) * asc;
+      return String(va).localeCompare(String(vb)) * asc;
+    });
+
+    const summary = ud.summary || {};
+    const byArea = summary.byArea || {};
+    const byDestPort = summary.byDestPort || {};
+
+    const uSortIcon = (c) => {
+      if (state.uSortCol !== c) return '<span class="text-navy-400 ml-0.5">&#8597;</span>';
+      return state.uSortAsc ? '<span class="text-amber-400 ml-0.5">&#9650;</span>' : '<span class="text-amber-400 ml-0.5">&#9660;</span>';
+    };
+
+    const thCls = 'px-2 py-2 cursor-pointer hover:bg-navy-800 select-none whitespace-nowrap';
+
+    const uCols = [
+      { key: 'name', label: 'Vessel Name' },
+      { key: 'imo', label: 'IMO' },
+      { key: 'area', label: 'Area' },
+      { key: 'vesselType', label: 'Type' },
+      { key: 'cargoType', label: 'Cargo' },
+      { key: 'state', label: 'State' },
+      { key: 'currentStatus', label: 'Status' },
+      { key: 'destinationPort', label: 'Dest. Port' },
+      { key: 'company', label: 'Controller' },
+      { key: 'departurePort', label: 'From Port' },
+      { key: 'eta', label: 'ETA' },
+      { key: 'flagName', label: 'Flag' },
+    ];
+
+    const uHead = uCols.map(c =>
+      `<th class="${thCls}" data-usort="${c.key}">${c.label} ${uSortIcon(c.key)}</th>`
+    ).join('');
+
+    const uRows = filtered.map(v => {
+      const cells = uCols.map(c => {
+        let val;
+        switch (c.key) {
+          case 'name':
+            val = `<a href="${v.marineTrafficUrl}" target="_blank" rel="noreferrer" class="text-sky-700 hover:underline font-mono">${esc(v.name).toUpperCase()} &#8599;</a>`;
+            break;
+          case 'currentStatus':
+            val = statusBadge(v.currentStatus);
+            break;
+          case 'area':
+            val = areaBadge(v.area);
+            break;
+          case 'state':
+            val = v.state === 'loaded'
+              ? '<span class="inline-block px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-100 text-emerald-800">Loaded</span>'
+              : '<span class="inline-block px-2 py-0.5 rounded-full text-[10px] font-semibold bg-slate-100 text-slate-600">Ballast</span>';
+            break;
+          case 'cargoType':
+            val = v.cargoType
+              ? (v.state === 'ballast' ? `${esc(v.cargoType)} <span class="text-[9px] text-navy-400">(prev)</span>` : esc(v.cargoType))
+              : '-';
+            break;
+          case 'eta':
+            val = fmtDate(v[c.key]);
+            break;
+          default:
+            val = esc(v[c.key]);
+        }
+        return `<td class="px-2 py-2">${val}</td>`;
+      }).join('');
+      return `<tr class="border-t border-navy-200 hover:bg-navy-50 text-xs">${cells}</tr>`;
+    }).join('');
+
+    // Area chip filters
+    const areaOptions = ['all', ...Object.keys(byArea).sort()];
+    const areaChips = areaOptions.map(a => {
+      const label = a === 'all' ? `All (${allU.length})` : `${a} (${byArea[a] || 0})`;
+      const active = state.uAreaFilter === a;
+      return `<button data-uarea="${a}" class="px-2.5 py-1 text-[10px] font-semibold rounded-full border transition-colors ${active ? 'bg-[#0055A5] text-white border-[#0055A5]' : 'bg-white text-navy-600 border-navy-300 hover:border-navy-400'}">${label}</button>`;
+    }).join('');
+
+    // Dest port chip filters
+    const destPortOptions = ['all', ...Object.keys(byDestPort).sort()];
+    const destPortChips = destPortOptions.map(p => {
+      const label = p === 'all' ? `All (${allU.length})` : `${p} (${byDestPort[p] || 0})`;
+      const active = state.uDestPortFilter === p;
+      return `<button data-udestport="${p}" class="px-2.5 py-1 text-[10px] font-semibold rounded-full border transition-colors ${active ? 'bg-[#0055A5] text-white border-[#0055A5]' : 'bg-white text-navy-600 border-navy-300 hover:border-navy-400'}">${label}</button>`;
+    }).join('');
+
+    return `
+    <div class="mt-8 mb-4">
+      <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+        <h3 class="text-xl font-extrabold text-[#0055A5] flex items-center gap-2">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z"/></svg>
+          Non-ADNOC Vessels Inbound to UAE (Outside Strait)
+        </h3>
+        <span class="text-[10px] text-navy-400">${filtered.length} of ${allU.length} vessels</span>
+      </div>
+
+      <p class="text-[10px] text-navy-500 italic mb-3">Non-ADNOC L&amp;S vessels outside the Strait of Hormuz with destination set to UAE ports</p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+        <div class="bg-white border border-navy-200 rounded-lg p-3">
+          <div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Total UAE-Bound</div>
+          <div class="text-2xl font-extrabold text-navy-900">${summary.total || 0}</div>
+        </div>
+        <div class="bg-white border border-navy-200 rounded-lg p-3">
+          <div class="text-[10px] font-semibold uppercase tracking-wider text-emerald-600">Under Way</div>
+          <div class="text-2xl font-extrabold text-navy-900">${summary.underWay || 0}</div>
+        </div>
+        <div class="bg-white border border-navy-200 rounded-lg p-3">
+          <div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Loaded</div>
+          <div class="text-2xl font-extrabold text-navy-900">${summary.loaded || 0}</div>
+        </div>
+        <div class="bg-white border border-navy-200 rounded-lg p-3">
+          <div class="text-[10px] font-semibold uppercase tracking-wider text-navy-500">Dest. Ports</div>
+          <div class="text-2xl font-extrabold text-navy-900">${Object.keys(byDestPort).length}</div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-2 mb-3">
+        <input type="text" id="adnoc-uae-inbound-search" placeholder="Search vessel, IMO, port..."
+          class="px-3 py-1.5 text-xs border border-navy-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-400 w-48"
+          value="${state.uFilter.replace(/"/g, '&quot;')}">
+        <div class="flex items-center gap-1 flex-wrap" id="adnoc-uae-inbound-area-chips">
+          ${areaChips}
+        </div>
+        <span class="text-navy-300">|</span>
+        <div class="flex items-center gap-1 flex-wrap" id="adnoc-uae-inbound-destport-chips">
+          ${destPortChips}
+        </div>
+        <button id="adnoc-uae-inbound-export" class="px-3 py-1.5 text-xs font-semibold bg-[#0055A5] text-white rounded-lg hover:bg-[#004080] transition-colors ml-auto">
+          Export Excel
+        </button>
+      </div>
+
+      <div class="overflow-x-auto rounded-xl border border-navy-200 shadow-sm bg-white">
+        <table class="w-full text-left" id="adnoc-uae-inbound-table">
+          <thead class="bg-[#0a1929] text-white text-[10px] font-mono uppercase tracking-wider">
+            <tr>${uHead}</tr>
+          </thead>
+          <tbody>${uRows || '<tr><td colspan="12" class="px-4 py-8 text-center text-navy-400">No non-ADNOC vessels inbound to UAE</td></tr>'}</tbody>
+        </table>
+      </div>
+    </div>`;
+  }
+
+  function bindUaeInboundEvents() {
+    const search = document.getElementById('adnoc-uae-inbound-search');
+    if (search) {
+      search.addEventListener('input', (e) => {
+        state.uFilter = e.target.value;
+        render();
+        const el = document.getElementById('adnoc-uae-inbound-search');
+        if (el) { el.focus(); el.selectionStart = el.selectionEnd = el.value.length; }
+      });
+    }
+    const areaChips = document.getElementById('adnoc-uae-inbound-area-chips');
+    if (areaChips) {
+      areaChips.addEventListener('click', (e) => {
+        const btn = e.target.closest('button');
+        if (!btn || !btn.dataset.uarea) return;
+        state.uAreaFilter = btn.dataset.uarea;
+        render();
+      });
+    }
+    const destPortChips = document.getElementById('adnoc-uae-inbound-destport-chips');
+    if (destPortChips) {
+      destPortChips.addEventListener('click', (e) => {
+        const btn = e.target.closest('button');
+        if (!btn || !btn.dataset.udestport) return;
+        state.uDestPortFilter = btn.dataset.udestport;
+        render();
+      });
+    }
+    const table = document.getElementById('adnoc-uae-inbound-table');
+    if (table) {
+      table.querySelector('thead').addEventListener('click', (e) => {
+        const th = e.target.closest('th');
+        if (!th || !th.dataset.usort) return;
+        const col = th.dataset.usort;
+        if (state.uSortCol === col) state.uSortAsc = !state.uSortAsc;
+        else { state.uSortCol = col; state.uSortAsc = true; }
+        render();
+      });
+    }
+    const exportBtn = document.getElementById('adnoc-uae-inbound-export');
+    if (exportBtn) {
+      exportBtn.addEventListener('click', () => {
+        if (typeof XLSX === 'undefined') { alert('XLSX not loaded'); return; }
+        const ud = state.uaeInboundData;
+        if (!ud) return;
+        const rows = ud.vessels.map(v => ({
+          'Vessel Name': v.name || '-', 'IMO': v.imo || '-', 'MMSI': v.mmsi || '-',
+          'Area': v.area || '-', 'Type': v.vesselType || '-', 'Cargo': v.cargoType || '-',
+          'State': v.state || '-', 'Status': v.currentStatus || '-', 'Bound': v.bound || '-',
+          'Dest. Port': v.destinationPort || '-', 'Dest. Country': v.destinationCountry || '-',
+          'Controller': v.company || '-', 'Flag': v.flagName || '-',
+          'From Port': v.departurePort || '-', 'ETA': v.eta || '-', 'ETD': v.voyageETD || '-',
+          'DWT': v.deadWeight || '-', 'Speed': v.speed || '-',
+          'Lat': v.lat || '-', 'Lng': v.lng || '-',
+        }));
+        const ws = XLSX.utils.json_to_sheet(rows);
+        const wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, 'UAE Inbound');
+        XLSX.writeFile(wb, `ADNOC_UAE_Inbound_${new Date().toISOString().split('T')[0]}.xlsx`);
+      });
+    }
+  }
+
   // ---------- Initialization ----------
 
   function initTab() {
@@ -687,10 +935,12 @@
     Promise.all([
       loadData(),
       fetch(CHARTERED_FILE).then(r => r.ok ? r.json() : null).catch(() => null),
+      fetch(UAE_INBOUND_FILE).then(r => r.ok ? r.json() : null).catch(() => null),
     ])
-      .then(([data, charteredData]) => {
+      .then(([data, charteredData, uaeInboundData]) => {
         state.data = data;
         state.charteredData = charteredData;
+        state.uaeInboundData = uaeInboundData;
         state.loaded = true;
         render();
       })

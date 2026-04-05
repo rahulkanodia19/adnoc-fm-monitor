@@ -96,6 +96,22 @@ if [ "$VESSEL_COUNT" -lt 500 ]; then
 fi
 echo "[sync-soh] Validated: $VESSEL_COUNT vessels fetched."
 
+# 3.4 Refresh MINT token from Chrome (unless master-sync preflight already did)
+if [ -z "$MASTER_SYNC" ]; then
+  echo "[sync-soh] Refreshing MINT token from Chrome..."
+  set +e
+  node scripts/extract-mint-token.js > /dev/null 2>&1
+  RC=$?
+  set -e
+  case "$RC" in
+    0) echo "[sync-soh] MINT token ✓ extracted from Chrome" ;;
+    1) echo "[sync-soh] ⚠ Chrome not reachable — using cached MINT token if any" ;;
+    2) echo "[sync-soh] ⚠ MINT login required — log into marketintelligencenetwork.com in Chrome" ;;
+    3) echo "[sync-soh] ⚠ MINT extraction timeout — using cached MINT token if any" ;;
+    *) echo "[sync-soh] ⚠ MINT extraction failed (rc=$RC) — using cached MINT token if any" ;;
+  esac
+fi
+
 # 3.5 Fetch container ships from S&P MINT (replaces als-monitor dependency)
 echo "[sync-soh] Fetching container data from S&P MINT..."
 node scripts/fetch-mint-containers.js || echo "[sync-soh] MINT container fetch failed (non-fatal, using cached data)"

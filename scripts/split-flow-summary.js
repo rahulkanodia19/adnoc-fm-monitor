@@ -38,40 +38,57 @@ function matchesBatch(key, dataset, countries, direction) {
   return isDirection && countries.some(c => prefix === c || prefix.startsWith(c));
 }
 
-const batches = {
-  'flow-summary-batch1-gulf-exporters.json': {},
-  'flow-summary-batch2-other-exporters.json': {},
-  'flow-summary-batch3-asia-importers.json': {},
-  'flow-summary-batch4-other-importers.json': {},
-};
+// Three analysis windows per batch — frontend maps view/timeRange to one.
+const PERIODS = ['recent', 'quarterly', 'yearly'];
+const BATCH_NAMES = ['gulf-exporters', 'other-exporters', 'asia-importers', 'other-importers'];
+function batchFilename(batchNum, period) {
+  return `flow-summary-batch${batchNum}-${BATCH_NAMES[batchNum-1]}-${period}.json`;
+}
+
+const batches = {};
+for (let b = 1; b <= 4; b++) {
+  for (const period of PERIODS) {
+    batches[batchFilename(b, period)] = {};
+  }
+}
 
 const zeros = {};
 
+// Figure out which batch (1-4) a dataset belongs to
+function pickBatchNum(key, dataset) {
+  if (matchesBatch(key, dataset, GULF_EXPORTERS, 'export')) return 1;
+  if (matchesBatch(key, dataset, OTHER_EXPORTERS, 'export')) return 2;
+  if (matchesBatch(key, dataset, ASIA_IMPORTERS, 'import')) return 3;
+  if (matchesBatch(key, dataset, OTHER_IMPORTERS, 'import')) return 4;
+  return dataset.direction === 'export' ? 2 : 4;
+}
+
 for (const [key, dataset] of Object.entries(data)) {
-  // Check if all weeks have near-zero volumes
-  const weeks = dataset.weeks || [];
-  const allNearZero = weeks.length > 0 && weeks.every(w => Math.abs(w.total || 0) < 100);
+  // Near-zero check uses recent (4-week) records
+  const recentRecords = dataset.periods?.recent?.records || [];
+  const allNearZero = recentRecords.length > 0 && recentRecords.every(r => Math.abs(r.total || 0) < 100);
 
   if (allNearZero) {
-    zeros[key] = [`Negligible ${dataset.commodity} ${dataset.direction}s — typically < 100 ${dataset.unit || 'units'}/week for ${dataset.country}.`];
+    const msg = `Negligible ${dataset.commodity} ${dataset.direction}s — typically < 100 ${dataset.unit || 'units'}/week for ${dataset.country}.`;
+    // Same insight across all 3 buckets (no LLM call needed)
+    zeros[key] = { recent: [msg], quarterly: [msg], yearly: [msg] };
     continue;
   }
 
-  if (matchesBatch(key, dataset, GULF_EXPORTERS, 'export')) {
-    batches['flow-summary-batch1-gulf-exporters.json'][key] = dataset;
-  } else if (matchesBatch(key, dataset, OTHER_EXPORTERS, 'export')) {
-    batches['flow-summary-batch2-other-exporters.json'][key] = dataset;
-  } else if (matchesBatch(key, dataset, ASIA_IMPORTERS, 'import')) {
-    batches['flow-summary-batch3-asia-importers.json'][key] = dataset;
-  } else if (matchesBatch(key, dataset, OTHER_IMPORTERS, 'import')) {
-    batches['flow-summary-batch4-other-importers.json'][key] = dataset;
-  } else {
-    // Unmatched — add to the closest batch based on direction
-    if (dataset.direction === 'export') {
-      batches['flow-summary-batch2-other-exporters.json'][key] = dataset;
-    } else {
-      batches['flow-summary-batch4-other-importers.json'][key] = dataset;
-    }
+  const batchNum = pickBatchNum(key, dataset);
+  for (const period of PERIODS) {
+    // Per-period dataset: flatten {direction, country, ..., period, records[]}
+    batches[batchFilename(batchNum, period)][key] = {
+      direction: dataset.direction,
+      country: dataset.country,
+      commodity: dataset.commodity,
+      unit: dataset.unit,
+      hasPipeline: dataset.hasPipeline,
+      pipelineNote: dataset.pipelineNote,
+      period,
+      granularity: dataset.periods[period].granularity,
+      records: dataset.periods[period].records,
+    };
   }
 }
 

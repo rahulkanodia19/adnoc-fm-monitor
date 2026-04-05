@@ -22,7 +22,7 @@ Real-time Oil & Gas intelligence dashboard tracking the Gulf/Hormuz military esc
 | Shutdowns (No FM) | `data.js` (SHUTDOWNS_NO_FM_DATA) | Same | Same |
 | Import Flows | `import-data.js` (IMPORT_FLOW_DATA) | Kpler API (JWT) | `sync-flows.js` |
 | Export Flows | `export-data.js` (EXPORT_FLOW_DATA) | Kpler API (JWT) | `sync-flows.js` |
-| Market Prices | `market-prices-seed.json` + `data.js` (WAR_RISK_PREMIUM_DATA) | S&P Platts API (Okta) + Claude web search | `sync-prices.sh` |
+| Market Prices | `market-prices-seed.json` + `murban-history.json` + `market-insights.json` + `data.js` (WAR_RISK_PREMIUM_DATA) | S&P Platts API (Okta) + Investing.com (IFAD front-month) + Claude LLM | `sync-prices.sh` |
 | SOH Tracker | `soh-data/*.json` (21 files) | Kpler API (JWT) + S&P MINT | `sync-soh.js` |
 | SPR Status | `data.js` (SPR_RELEASE_DATA) | Claude web search | `sync-spr.sh` |
 | Flow Insights | `flow-insights.json` | Claude LLM (4 batches) | `sync-flow-insights.sh` |
@@ -120,8 +120,10 @@ Run automatically before commit. Checks:
 | `scripts/validate-data.js` | Schema validation (pre-commit) |
 | `scripts/sync-soh.js` | Kpler vessel + flow API fetch (token-based) |
 | `scripts/sync-flows.js` | Kpler import/export flow API fetch |
-| `scripts/sync-prices.sh` | Market Prices sync orchestrator (Platts + AWRP) |
-| `scripts/fetch-platts-prices.js` | S&P Platts price fetch |
+| `scripts/sync-prices.sh` | Market Prices sync orchestrator (Murban + Platts + AWRP + Insights) |
+| `scripts/scrape-murban-investing.js` | Murban front-month fetch from Investing.com (IFAD continuation, via curl) |
+| `scripts/fetch-platts-prices.js` | S&P Platts price fetch (13 symbols: crude, products, LNG/gas, LPG, Ammonia, AWRP) |
+| `scripts/sync-market-insights-prompt.md` | Claude prompt for LLM-generated market insights (with data.js event context) |
 | `scripts/process-soh.js` | Post-process vessels (classify inside/outside Gulf) |
 | `scripts/split-flow-summary.js` | Split flow data into 4 batches for insights |
 

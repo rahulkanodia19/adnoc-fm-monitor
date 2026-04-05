@@ -1,0 +1,52 @@
+{
+  "generated_at": "2026-04-05T12:00:00Z",
+  "model": "claude-opus-4.6",
+  "asOfDate": "2026-04-02",
+  "insights": [
+    {
+      "type": "top_mover",
+      "severity": "bullish",
+      "title": "Crude complex surges 10%+; Brent and WTI hit 52-week highs",
+      "detail": "Brent settled $141.37/bbl (+10.1%), WTI $111.54 (+11.4%), Murban $114.84 (+10.8%). All three benchmarks moved in lockstep on Hormuz escalation.",
+      "metrics": [
+        {"label": "Brent", "value": "$141.37/bbl (+10.1%)"},
+        {"label": "WTI", "value": "$111.54/bbl (+11.4%)"},
+        {"label": "Murban", "value": "$114.84/bbl (+10.8%)"},
+        {"label": "Brent 5-day", "value": "+29.0%"}
+      ]
+    },
+    {
+      "type": "spread",
+      "severity": "warning",
+      "title": "Gasoil-Murban crack explodes to $170/bbl on refinery squeeze",
+      "detail": "Gasoil surged 19.5% to new 52W high of $284.97; crack over Murban widened $65 in 5 days from $105 to $170, signaling acute diesel scarcity.",
+      "metrics": [
+        {"label": "Gasoil", "value": "$284.97/bbl (+19.5%)"},
+        {"label": "Gasoil-Murban", "value": "+$170.1/bbl"},
+        {"label": "5-day crack chg", "value": "+$65.3"}
+      ]
+    },
+    {
+      "type": "cross",
+      "severity": "warning",
+      "title": "AWRP hits 52W high at $2.45/bbl ahead of Apr 6 deadline",
+      "detail": "Platts war risk premium up 44% in 5 days to new high; hull-rate steady at 5% with 2.5% transit surcharge. Apr 6 deadline adds uncertainty.",
+      "metrics": [
+        {"label": "AWRP $/bbl", "value": "$2.45 (+11.4%)"},
+        {"label": "Hull %", "value": "5.0%"},
+        {"label": "5-day", "value": "+44.1%"}
+      ]
+    },
+    {
+      "type": "spread",
+      "severity": "warning",
+      "title": "Brent-Murban spread blows out to $26.5/bbl on transit risk",
+      "detail": "Gulf-origin Murban within 0.2% of 52W high but Brent pulled far ahead to new record; widening spread reflects rerouting premium and Hormuz avoidance.",
+      "metrics": [
+        {"label": "Brent-Murban", "value": "+$26.53/bbl"},
+        {"label": "Murban vs 52W high", "value": "-0.2%"},
+        {"label": "Brent 52W", "value": "NEW HIGH"}
+      ]
+    }
+  ]
+}

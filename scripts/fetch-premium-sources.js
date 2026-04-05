@@ -7,9 +7,10 @@
  * for Kpler/MINT token extraction.
  *
  * Platforms:
- *   1. terminal.kpler.com/intelligence — Kpler intelligence articles
+ *   1. terminal.kpler.com/insight — Kpler Insight articles
  *   2. portal.rystadenergy.com/dashboards/detail/1047/0 — Rystad ME Conflict dashboard (screenshot)
  *   3. connect.spglobal.com/home — S&P Connect news feed
+ *   4. core.spglobal.com — S&P Platts Core insights (Crude Oil, Refined Products, LNG, Chemicals, Shipping)
  *
  * Output: soh-data/.premium-sources.json + soh-data/.rystad-dashboard.png
  *
@@ -90,7 +91,13 @@ async function fetchKpler(pages) {
   console.log('[premium] Kpler: connecting...');
   const ws = await connectPage(page);
 
-  // Kpler SPA doesn't render via CDP navigation — take screenshot of current page
+  // Navigate to Kpler Insight (content surface with news + analysis)
+  if (!page.url.includes('/insight')) {
+    console.log('[premium] Kpler: navigating to /insight...');
+    await navigate(ws, 'https://terminal.kpler.com/insight');
+  }
+
+  // Kpler SPA — extract text after SPA render settles
   const content = await evaluate(ws, 'document.body?.innerText?.substring(0, 8000) || "empty"');
   const ssData = await screenshot(ws);
   let screenshotFile = null;
@@ -102,11 +109,11 @@ async function fetchKpler(pages) {
   ws.close();
   console.log('[premium] Kpler:', (content || '').length, 'chars + screenshot');
   return {
-    status: 'accessed (current page only — intelligence SPA not extractable via CDP)',
-    url: page.url,
+    status: 'accessed',
+    url: 'terminal.kpler.com/insight',
     content: content || '',
     screenshot: screenshotFile,
-    note: 'Kpler intelligence page does not render via CDP. Content limited to current page. Full intelligence access requires Chrome MCP or manual browsing.',
+    note: 'Kpler Insight SPA may render partially via CDP; screenshot captures the current viewport.',
   };
 }
 
@@ -248,6 +255,131 @@ async function fetchSPGlobal(pages) {
   return { status: 'accessed', url: 'connect.spglobal.com/home', content: fullContent, articlesExtracted: articles.length };
 }
 
+async function fetchPlattsCore(pages) {
+  const page = pages.find(p => p.url.includes('core.spglobal.com'));
+  if (!page) return { status: 'no tab', content: '' };
+
+  // Auth check — detect Okta SSO redirect from tab URL
+  const AUTH_INDICATORS = ['signin.spglobal.com', '/authorize', '/login', 'okta.com', 'auth/realms'];
+  if (AUTH_INDICATORS.some(ind => (page.url || '').toLowerCase().includes(ind))) {
+    console.warn('[premium] Platts Core: LOGIN REQUIRED — tab URL is auth page (' + page.url + ')');
+    return {
+      status: 'login required',
+      url: page.url,
+      content: '',
+      note: 'Platts Core tab is on SSO login page. Log into core.spglobal.com in Chrome before next sync.',
+    };
+  }
+
+  console.log('[premium] Platts Core: connecting...');
+  const ws = await connectPage(page);
+
+  // Second auth check — catches async redirects the tab list might miss
+  const currentUrl = await evaluate(ws, 'window.location.href', 78);
+  if (AUTH_INDICATORS.some(ind => (currentUrl || '').toLowerCase().includes(ind))) {
+    console.warn('[premium] Platts Core: LOGIN REQUIRED — page redirected to auth (' + currentUrl + ')');
+    ws.close();
+    return {
+      status: 'login required',
+      url: currentUrl,
+      content: '',
+      note: 'Platts Core redirected to SSO login. Log into core.spglobal.com in Chrome before next sync.',
+    };
+  }
+
+  // Sector pages to scrape — all 5 key Platts sectors
+  const SECTORS = [
+    { name: 'Crude Oil',        url: 'https://core.spglobal.com/#platts/allInsights?keySector=Crude%20Oil' },
+    { name: 'Refined Products', url: 'https://core.spglobal.com/#platts/allInsights?keySector=Refined%20Products' },
+    { name: 'LNG',              url: 'https://core.spglobal.com/#platts/allInsights?keySector=LNG%20Service' },
+    { name: 'Chemicals',        url: 'https://core.spglobal.com/#platts/allInsights?keySector=Chemicals' },
+    { name: 'Shipping',         url: 'https://core.spglobal.com/#platts/allInsights?keySector=Shipping' },
+  ];
+
+  const KEYWORDS = ['gulf', 'iran', 'hormuz', 'lng', 'crude', 'war', 'conflict', 'persian', 'energy', 'oil', 'opec',
+    'middle east', 'qatar', 'kuwait', 'saudi', 'uae', 'iraq', 'bahrain', 'oman', 'israel', 'strait',
+    'tanker', 'freight', 'shipping', 'force majeure', 'shutdown', 'disruption', 'escalation'];
+
+  const allHeadlines = [];
+
+  for (const sector of SECTORS) {
+    console.log('[premium] Platts Core: loading ' + sector.name + ' insights...');
+
+    // Navigate to sector page (hash-based SPA — trigger via location.hash)
+    await evaluate(ws, `window.location.href = '${sector.url}'`, 80);
+    await new Promise(r => setTimeout(r, 6000)); // Wait for SPA to render
+
+    // Extract article headlines/summaries from the insights list
+    const articlesRaw = await evaluate(ws, `
+      JSON.stringify(
+        Array.from(document.querySelectorAll('article, [class*="insight"], [class*="article"], [class*="card"], [class*="result"]'))
+          .map(el => ({
+            title: (el.querySelector('h2, h3, h4, [class*="title"], [class*="headline"]') || {}).textContent?.trim() || '',
+            summary: (el.querySelector('p, [class*="summary"], [class*="description"], [class*="snippet"]') || {}).textContent?.trim() || '',
+            date: (el.querySelector('time, [class*="date"], [class*="time"]') || {}).textContent?.trim() || '',
+          }))
+          .filter(a => a.title.length > 5)
+          .slice(0, 15)
+      )
+    `, 81);
+
+    let articles = [];
+    try { articles = JSON.parse(articlesRaw || '[]'); } catch {}
+
+    // Fallback: if structured extraction fails, grab raw text
+    if (articles.length === 0) {
+      const rawText = await evaluate(ws, 'document.body?.innerText?.substring(0, 10000) || "empty"', 82);
+      allHeadlines.push({ sector: sector.name, rawContent: rawText || '', articles: [] });
+      console.log('[premium] Platts Core: ' + sector.name + ' — fallback text (' + (rawText || '').length + ' chars)');
+    } else {
+      allHeadlines.push({ sector: sector.name, articles, rawContent: '' });
+      console.log('[premium] Platts Core: ' + sector.name + ' — ' + articles.length + ' articles found');
+    }
+  }
+
+  // Build combined content
+  const totalArticles = allHeadlines.reduce((sum, s) => sum + s.articles.length, 0);
+  let content = '';
+  for (const sector of allHeadlines) {
+    content += '=== PLATTS CORE: ' + sector.sector.toUpperCase() + ' ===\n';
+    if (sector.articles.length > 0) {
+      for (const a of sector.articles) {
+        content += '• ' + a.title + (a.date ? ' (' + a.date + ')' : '') + '\n';
+        if (a.summary) content += '  ' + a.summary + '\n';
+      }
+    } else if (sector.rawContent) {
+      content += sector.rawContent.substring(0, 3000) + '\n';
+    }
+    content += '\n';
+  }
+
+  // Filter for Gulf-relevant headlines
+  const relevant = allHeadlines.flatMap(s => s.articles)
+    .filter(a => KEYWORDS.some(kw => (a.title + ' ' + a.summary).toLowerCase().includes(kw)));
+
+  ws.close();
+
+  // Content validation — check if we got real data or just an empty SPA shell
+  const totalRawChars = allHeadlines.reduce((sum, s) => sum + (s.rawContent || '').length, 0);
+  const hasContent = totalArticles > 0 || totalRawChars > 200;
+  const status = hasContent ? 'accessed' : 'no content';
+
+  if (!hasContent) {
+    console.warn('[premium] Platts Core: NO CONTENT — page loaded but no articles or meaningful text extracted');
+  }
+  console.log('[premium] Platts Core:', status, '- total', totalArticles, 'articles,', relevant.length, 'Gulf-relevant');
+
+  return {
+    status,
+    url: 'core.spglobal.com',
+    sectors: SECTORS.map(s => s.name),
+    content,
+    totalArticles,
+    gulfRelevant: relevant.length,
+    headlines: allHeadlines,
+  };
+}
+
 async function main() {
   console.log('[premium] Fetching premium source content via Chrome CDP...\n');
 
@@ -263,6 +395,7 @@ async function main() {
       kpler: { status: 'chrome unavailable', content: '' },
       rystad: { status: 'chrome unavailable', content: '' },
       spglobal: { status: 'chrome unavailable', content: '' },
+      plattsCore: { status: 'chrome unavailable', content: '' },
     }, null, 2));
     return;
   }
@@ -279,6 +412,9 @@ async function main() {
   try { results.spglobal = await fetchSPGlobal(pages); }
   catch (e) { results.spglobal = { status: 'error: ' + e.message, content: '' }; console.error('[premium] S&P error:', e.message); }
 
+  try { results.plattsCore = await fetchPlattsCore(pages); }
+  catch (e) { results.plattsCore = { status: 'error: ' + e.message, content: '' }; console.error('[premium] Platts Core error:', e.message); }
+
   results.timestamp = new Date().toISOString();
 
   fs.writeFileSync(path.join(OUT_DIR, '.premium-sources.json'), JSON.stringify(results, null, 2));
@@ -287,6 +423,8 @@ async function main() {
   console.log('  Kpler:', results.kpler.status, '-', (results.kpler.content || '').length, 'chars');
   console.log('  Rystad:', results.rystad.status, '-', results.rystad.screenshot ? 'screenshot saved' : 'no screenshot');
   console.log('  S&P Connect:', results.spglobal.status, '-', (results.spglobal.content || '').length, 'chars');
+  console.log('  Platts Core:', results.plattsCore.status, '-', (results.plattsCore.content || '').length, 'chars',
+    '(' + (results.plattsCore.totalArticles || 0) + ' articles,', (results.plattsCore.gulfRelevant || 0), 'Gulf-relevant)');
   console.log('\n[premium] Output: soh-data/.premium-sources.json');
 }
 

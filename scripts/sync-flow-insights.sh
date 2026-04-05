@@ -1,19 +1,24 @@
 #!/bin/bash
 # ==============================================================
-# sync-flow-insights.sh — LLM-generated flow insights (batched)
+# sync-flow-insights.sh — LLM-generated flow insights (12 batches)
 #
-# Runs 4 Claude agent batches, each analyzing ~25 datasets with
-# web search + FM context. Merges results into flow-insights.json.
+# Runs 3 periods × 4 batch-groups = 12 Claude agent runs.
+# Each analyzes ~25 datasets with web search + FM context.
+# Merges results into nested flow-insights.json (bucket keys:
+# recent, quarterly, yearly).
 #
 # Usage: npm run sync:flow-insights
+# Optional: PERIODS="recent"  # restrict to single period for testing
 # ==============================================================
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_DIR="$(dirname "$SCRIPT_DIR")"
 
+PERIODS="${PERIODS:-recent quarterly yearly}"
+
 echo "[insights] =========================================="
-echo "[insights] Flow Insights Generation (4 batches)"
+echo "[insights] Flow Insights Generation (periods: $PERIODS)"
 echo "[insights] =========================================="
 
 cd "$PROJECT_DIR"
@@ -25,7 +30,7 @@ if [ -f flow-summary.json ]; then
 else
   echo "[insights] WARNING: flow-summary.json not found. Run sync:flows first."
   echo "[insights] Checking for existing batch files..."
-  if [ ! -f flow-summary-batch1-gulf-exporters.json ]; then
+  if [ ! -f flow-summary-batch1-gulf-exporters-recent.json ]; then
     echo "[insights] ERROR: No batch files found. Cannot generate insights."
     exit 1
   fi
@@ -34,65 +39,85 @@ fi
 PROMPT=$(cat scripts/sync-flow-insights-prompt.md)
 TOOLS="Read,Glob,Grep,Write,WebSearch,WebFetch"
 
-# Batch 1: Gulf exporters
-echo "[insights] Batch 1/4: Gulf exporters..."
-claude -p "$PROMPT
+declare -A BATCH_NAMES=(
+  [1]="gulf-exporters"
+  [2]="other-exporters"
+  [3]="asia-importers"
+  [4]="other-importers"
+)
+declare -A BATCH_FOCUS=(
+  [1]="Gulf/Hormuz disruption, Middle East oil/LNG supply"
+  [2]="Russia sanctions/ESPO, US Gulf Coast exports, Australia LNG"
+  [3]="Asia crude/LNG demand, Russia pivot, Gulf supply disruption impact"
+  [4]="European energy diversification, Taiwan supply security"
+)
 
-YOUR BATCH: Read \`flow-summary-batch1-gulf-exporters.json\` for your datasets (Saudi Arabia, UAE, Iraq, Qatar, Kuwait, Bahrain, Iran, Oman exports).
-Web searches: Focus on Gulf/Hormuz disruption, Middle East oil/LNG supply.
-Write output to \`flow-insights-batch-1.json\`." \
-  --allowedTools "$TOOLS" --max-turns 30
+# Run 4 batches in parallel per period, barrier between periods.
+for PERIOD in $PERIODS; do
+  echo "[insights] ========== PERIOD: $PERIOD =========="
+  for BATCH in 1 2 3 4; do
+    NAME="${BATCH_NAMES[$BATCH]}"
+    FOCUS="${BATCH_FOCUS[$BATCH]}"
+    INFILE="flow-summary-batch${BATCH}-${NAME}-${PERIOD}.json"
+    OUTFILE="flow-insights-batch-${BATCH}-${PERIOD}.json"
+    if [ ! -f "$INFILE" ]; then
+      echo "[insights]   skip batch $BATCH/$PERIOD — $INFILE missing"
+      continue
+    fi
+    echo "[insights]   batch $BATCH/$PERIOD: $NAME → $OUTFILE"
+    claude -p "$PROMPT
 
-# Batch 2: Other exporters
-echo "[insights] Batch 2/4: Other exporters..."
-claude -p "$PROMPT
+YOUR BATCH: Read \`$INFILE\` for your datasets.
+ANALYSIS WINDOW: $PERIOD (recent = last 4 weeks; quarterly = last 13 weeks; yearly = last 12 months).
+Web searches: Focus on $FOCUS.
+Write output to \`$OUTFILE\`." \
+      --allowedTools "$TOOLS" --max-turns 30 &
+  done
+  # Wait for all 4 parallel batches in this period to finish before next period
+  wait
+  echo "[insights]   period $PERIOD complete."
+done
 
-YOUR BATCH: Read \`flow-summary-batch2-other-exporters.json\` for your datasets (Russia, US, Australia, EU-27 exports).
-Web searches: Focus on Russia sanctions/ESPO, US Gulf Coast exports, Australia LNG.
-Write output to \`flow-insights-batch-2.json\`." \
-  --allowedTools "$TOOLS" --max-turns 30
-
-# Batch 3: Asia importers
-echo "[insights] Batch 3/4: Asia importers..."
-claude -p "$PROMPT
-
-YOUR BATCH: Read \`flow-summary-batch3-asia-importers.json\` for your datasets (China, India, Japan, South Korea imports).
-Web searches: Focus on Asia crude/LNG demand, Russia pivot, Gulf supply disruption impact.
-Write output to \`flow-insights-batch-3.json\`." \
-  --allowedTools "$TOOLS" --max-turns 30
-
-# Batch 4: Other importers
-echo "[insights] Batch 4/4: Other importers..."
-claude -p "$PROMPT
-
-YOUR BATCH: Read \`flow-summary-batch4-other-importers.json\` for your datasets (Thailand, Vietnam, EU-27, US, Taiwan imports).
-Web searches: Focus on European energy diversification, Taiwan supply security.
-Write output to \`flow-insights-batch-4.json\`." \
-  --allowedTools "$TOOLS" --max-turns 30
-
-# Merge all batches + zero-volume insights
+# Merge all period × batch outputs into nested flow-insights.json
 echo "[insights] Merging batches..."
 node -e "
 const fs = require('fs');
 const merged = { lastUpdated: new Date().toISOString() };
+const PERIODS = '${PERIODS}'.split(/\s+/).filter(Boolean);
 
-// Load batch files
-for (let i = 1; i <= 4; i++) {
-  const file = 'flow-insights-batch-' + i + '.json';
-  try {
-    const data = JSON.parse(fs.readFileSync(file, 'utf8'));
-    Object.assign(merged, data);
-    console.log('  Batch ' + i + ':', Object.keys(data).length, 'datasets');
-  } catch (e) {
-    console.error('  Batch ' + i + ': MISSING or invalid (' + e.message + ')');
+// Preserve existing buckets (allows partial-period regeneration)
+let existing = {};
+try { existing = JSON.parse(fs.readFileSync('flow-insights.json','utf8')); } catch {}
+for (const [key, val] of Object.entries(existing)) {
+  if (key === 'lastUpdated') continue;
+  // Migrate legacy flat arrays to {recent: [...]}
+  if (Array.isArray(val)) merged[key] = { recent: val };
+  else merged[key] = { ...val };
+}
+
+for (const period of PERIODS) {
+  for (let b = 1; b <= 4; b++) {
+    const file = 'flow-insights-batch-' + b + '-' + period + '.json';
+    try {
+      const data = JSON.parse(fs.readFileSync(file, 'utf8'));
+      for (const [key, bullets] of Object.entries(data)) {
+        if (!merged[key]) merged[key] = {};
+        merged[key][period] = bullets;
+      }
+      console.log('  batch ' + b + '/' + period + ':', Object.keys(data).length, 'datasets');
+    } catch (e) {
+      console.error('  batch ' + b + '/' + period + ': MISSING or invalid (' + e.message + ')');
+    }
   }
 }
 
-// Add zero-volume insights
+// Add zero-volume insights (already nested from split-flow-summary.js)
 try {
   const zeros = JSON.parse(fs.readFileSync('flow-insights-zeros.json', 'utf8'));
-  Object.assign(merged, zeros);
-  console.log('  Zeros:', Object.keys(zeros).length, 'datasets');
+  for (const [key, buckets] of Object.entries(zeros)) {
+    merged[key] = { ...(merged[key] || {}), ...buckets };
+  }
+  console.log('  zeros:', Object.keys(zeros).length, 'datasets');
 } catch {}
 
 fs.writeFileSync('flow-insights.json', JSON.stringify(merged, null, 2));

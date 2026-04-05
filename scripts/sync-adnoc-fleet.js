@@ -488,6 +488,37 @@ async function main() {
 
   if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
 
+  // Refresh Kpler JWT from Chrome (unless master-sync preflight already did)
+  if (!process.env.MASTER_SYNC) {
+    console.log('[adnoc-fleet] Refreshing Kpler token from Chrome...');
+    const { spawnSync } = require('child_process');
+    const rk = spawnSync('node', [path.join(__dirname, 'extract-kpler-token.js')], { stdio: 'ignore' });
+    switch (rk.status) {
+      case 0:
+        console.log('[adnoc-fleet] Kpler token ✓ extracted from Chrome');
+        TOKEN = fs.readFileSync(path.join(OUT_DIR, '.token.txt'), 'utf-8').trim();
+        break;
+      case 1: console.log('[adnoc-fleet] ⚠ Chrome not reachable — using cached Kpler token if any'); break;
+      case 2: console.log('[adnoc-fleet] ⚠ Kpler login required — log into terminal.kpler.com in Chrome'); break;
+      case 3: console.log('[adnoc-fleet] ⚠ Kpler token not found in Chrome localStorage — using cached token'); break;
+      default: console.log(`[adnoc-fleet] ⚠ Kpler extraction failed (rc=${rk.status}) — using cached token`);
+    }
+  }
+
+  // Refresh MINT token from Chrome (unless master-sync preflight already did)
+  if (!process.env.MASTER_SYNC) {
+    console.log('[adnoc-fleet] Refreshing MINT token from Chrome...');
+    const { spawnSync } = require('child_process');
+    const r = spawnSync('node', [path.join(__dirname, 'extract-mint-token.js')], { stdio: 'ignore' });
+    switch (r.status) {
+      case 0: console.log('[adnoc-fleet] MINT token ✓ extracted from Chrome'); break;
+      case 1: console.log('[adnoc-fleet] ⚠ Chrome not reachable — using cached MINT token if any'); break;
+      case 2: console.log('[adnoc-fleet] ⚠ MINT login required — log into marketintelligencenetwork.com in Chrome'); break;
+      case 3: console.log('[adnoc-fleet] ⚠ MINT extraction timeout — using cached MINT token if any'); break;
+      default: console.log(`[adnoc-fleet] ⚠ MINT extraction failed (rc=${r.status}) — using cached MINT token if any`);
+    }
+  }
+
   // Fetch ALL vessels from Kpler (no bounding box filter)
   console.log('[adnoc-fleet] Fetching vessels from Kpler...');
   let allVessels;
@@ -800,6 +831,112 @@ async function main() {
   console.log(`  By port:`, charteredByPort);
   console.log(`  Loaded: ${charteredLoaded}, Ballast: ${charteredBallast}`);
   console.log(`[adnoc-fleet] Output: soh-data/adnoc-chartered-data.json`);
+
+  // --- Non-ADNOC vessels inbound to UAE (global) ---
+  console.log('\n[adnoc-fleet] Finding non-ADNOC vessels inbound to UAE (global)...');
+  let globalVessels;
+  try {
+    globalVessels = await kplerGet('/api/vessels?size=50000');
+    console.log(`[adnoc-fleet] Global query returned ${globalVessels.length} vessels`);
+  } catch (e) {
+    console.log(`[adnoc-fleet] Global vessel query failed (non-fatal): ${e.message}`);
+    globalVessels = [];
+  }
+
+  const EXCLUDED_UAE_TYPES = ['Small Tankers', 'Short Sea Tankers', 'Mini Bulker'];
+  const uaeInbound = [];
+  for (const v of globalVessels) {
+    if (!v.lastPosition?.geo) continue;
+    if (v.imo && imoSet.has(v.imo)) continue; // skip ADNOC L&S vessels
+    const lat = v.lastPosition.geo.lat;
+    const lng = v.lastPosition.geo.lon;
+    const area = classifyArea(lat, lng);
+    if (area === 'Strait of Hormuz') continue; // outside strait only
+    const config = { imo: v.imo, ownership: 'Non-ADNOC' };
+    const vessel = processVessel(v, config);
+    if (EXCLUDED_UAE_TYPES.includes(vessel.vesselType)) continue;
+    if (vessel.destinationCountry !== 'UAE') continue;
+    uaeInbound.push(vessel);
+  }
+
+  uaeInbound.sort((a, b) => (a.area || '').localeCompare(b.area || '') || (a.name || '').localeCompare(b.name || ''));
+
+  const uaeByArea = {};
+  const uaeByDestPort = {};
+  uaeInbound.forEach(v => {
+    uaeByArea[v.area] = (uaeByArea[v.area] || 0) + 1;
+    if (v.destinationPort) uaeByDestPort[v.destinationPort] = (uaeByDestPort[v.destinationPort] || 0) + 1;
+  });
+  const uaeLoaded = uaeInbound.filter(v => v.state === 'loaded').length;
+  const uaeBallast = uaeInbound.filter(v => v.state === 'ballast').length;
+  const uaeUnderWay = uaeInbound.filter(v => v.currentStatus === 'Under Way').length;
+
+  const uaeInboundOutput = {
+    vessels: uaeInbound,
+    count: uaeInbound.length,
+    summary: {
+      total: uaeInbound.length,
+      loaded: uaeLoaded,
+      ballast: uaeBallast,
+      underWay: uaeUnderWay,
+      byArea: uaeByArea,
+      byDestPort: uaeByDestPort,
+    },
+    syncTimestamp: new Date().toISOString(),
+  };
+
+  const uaeInboundPath = path.join(OUT_DIR, 'adnoc-uae-inbound-data.json');
+  if (fs.existsSync(uaeInboundPath)) {
+    fs.copyFileSync(uaeInboundPath, path.join(OUT_DIR, 'adnoc-uae-inbound-data.prev.json'));
+  }
+  fs.writeFileSync(uaeInboundPath, JSON.stringify(uaeInboundOutput, null, 2));
+
+  console.log(`[adnoc-fleet] UAE Inbound: ${uaeInbound.length} non-ADNOC vessels heading to UAE`);
+  console.log(`  By area:`, uaeByArea);
+  console.log(`  By dest port:`, uaeByDestPort);
+  console.log(`  Under Way: ${uaeUnderWay}, Loaded: ${uaeLoaded}, Ballast: ${uaeBallast}`);
+  console.log(`[adnoc-fleet] Output: soh-data/adnoc-uae-inbound-data.json`);
+
+  // Commit and push adnoc fleet data (only when run standalone)
+  if (!process.env.MASTER_SYNC) {
+    const { execSync } = require('child_process');
+    const repoRoot = path.join(__dirname, '..');
+    console.log('\n[adnoc-fleet] Checking for changes...');
+
+    let hasChanges = false;
+    try {
+      execSync('git diff --quiet -- soh-data/adnoc-*.json', { cwd: repoRoot, stdio: 'ignore' });
+    } catch {
+      hasChanges = true;
+    }
+
+    if (!hasChanges) {
+      console.log('[adnoc-fleet] No changes detected.');
+      return;
+    }
+
+    console.log('[adnoc-fleet] Changes detected, committing and pushing...');
+    const ts = new Date().toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
+    try {
+      execSync('git add soh-data/adnoc-*.json', { cwd: repoRoot, stdio: 'inherit' });
+      execSync(`git commit -m "chore: ADNOC fleet data sync (${ts})"`, { cwd: repoRoot, stdio: 'inherit' });
+    } catch (e) {
+      console.log(`[adnoc-fleet] ⚠ Git commit failed: ${e.message}`);
+      return;
+    }
+    try {
+      execSync('git push origin master', { cwd: repoRoot, stdio: 'inherit' });
+      console.log('[adnoc-fleet] Pushed to origin/master');
+    } catch {
+      console.log('[adnoc-fleet] ⚠ Push to origin/master failed');
+    }
+    try {
+      execSync('git push origin master:main', { cwd: repoRoot, stdio: 'inherit' });
+      console.log('[adnoc-fleet] Pushed to origin/main');
+    } catch {
+      console.log('[adnoc-fleet] ⚠ Push to origin/main failed');
+    }
+  }
 }
 
 main().catch(err => {

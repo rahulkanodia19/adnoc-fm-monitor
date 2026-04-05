@@ -14,17 +14,31 @@ const fs = require('fs');
 const dataPath = path.resolve(__dirname, '..', 'data.js');
 let passes = 0;
 let fails = 0;
+let warns = 0;
 const errors = [];
+const warnings = [];
 
 function pass(msg) { passes++; }
 function fail(msg) { fails++; errors.push(msg); }
+function warn(msg) { warns++; warnings.push(msg); }
+
+// Expected global-disruption ranges for the current Gulf crisis state.
+// Cross-checks Σ offline across 9 countries against reasonable bounds — WARN, not FAIL.
+// Tune as crisis evolves (baselines seeded from Apr 2026 snapshot).
+const EXPECTED_TOTALS = {
+  oilOffline:       { min: 5000, max: 12000, unit: 'kb/d' },
+  gasOffline:       { min: 20,   max: 45,    unit: 'Bcf/d' },
+  refiningOffline:  { min: 2000, max: 4500,  unit: 'kb/d' },
+  lngOffline:       { min: 60,   max: 90,    unit: 'Mtpa' },
+  petchemOffline:   { min: 8000,  max: 18000, unit: 'kt/y' },
+};
 
 // ---------- 1. JS Syntax Check ----------
 try {
   // data.js uses const declarations — we need to eval it in a sandbox
   const code = fs.readFileSync(dataPath, 'utf8');
   // Wrap in a function to avoid polluting scope, and extract the consts
-  const wrapped = `(function() { ${code}; return { LAST_UPDATED, COUNTRY_STATUS_DATA, FM_DECLARATIONS_DATA, SHUTDOWNS_NO_FM_DATA, WAR_RISK_PREMIUM_DATA }; })()`;
+  const wrapped = `(function() { ${code}; return { LAST_UPDATED, COUNTRY_STATUS_DATA, FM_DECLARATIONS_DATA, SHUTDOWNS_NO_FM_DATA, WAR_RISK_PREMIUM_DATA, PIPELINE_STATUS_DATA }; })()`;
   var data = eval(wrapped);
   pass('JS syntax valid');
 } catch (e) {
@@ -35,7 +49,7 @@ try {
   process.exit(1);
 }
 
-const { LAST_UPDATED, COUNTRY_STATUS_DATA, FM_DECLARATIONS_DATA, SHUTDOWNS_NO_FM_DATA, WAR_RISK_PREMIUM_DATA } = data;
+const { LAST_UPDATED, COUNTRY_STATUS_DATA, FM_DECLARATIONS_DATA, SHUTDOWNS_NO_FM_DATA, WAR_RISK_PREMIUM_DATA, PIPELINE_STATUS_DATA } = data;
 
 // ---------- 2. LAST_UPDATED valid ----------
 const lastUpdatedDate = new Date(LAST_UPDATED);
@@ -127,6 +141,15 @@ COUNTRY_STATUS_DATA.forEach(c => {
     else fail(`${name}: refining math WRONG: ${p.refining.capacity} - ${p.refining.affected} = ${expected}, but available = ${p.refining.available}`);
   }
 
+  // Petrochemicals math (only validated once capacity > 0; baseline seeding pending)
+  if (p.petrochemicals && p.petrochemicals.capacity > 0) {
+    const expected = p.petrochemicals.capacity - p.petrochemicals.affected;
+    const diff = Math.abs(expected - p.petrochemicals.available);
+    const tolerance = p.petrochemicals.capacity * 0.05 + 1;
+    if (diff <= tolerance) pass(`${name}: petrochemicals math OK`);
+    else fail(`${name}: petrochemicals math WRONG: ${p.petrochemicals.capacity} - ${p.petrochemicals.affected} = ${expected}, but available = ${p.petrochemicals.available}`);
+  }
+
   // current <= preWar for oil and gas
   if (p.oil && p.oil.current > p.oil.preWar) {
     fail(`${name}: oil current (${p.oil.current}) > preWar (${p.oil.preWar})`);
@@ -134,6 +157,19 @@ COUNTRY_STATUS_DATA.forEach(c => {
   if (p.gas && p.gas.current > p.gas.preWar) {
     fail(`${name}: gas current (${p.gas.current}) > preWar (${p.gas.preWar})`);
   }
+
+  // assetImpact name-match: every name in event.assetImpact must exist in country.infrastructure[].name
+  const infraNames = new Set((c.infrastructure || []).map(i => i.name));
+  (c.events || []).forEach((evt, idx) => {
+    if (!Array.isArray(evt.assetImpact) || evt.assetImpact.length === 0) return;
+    evt.assetImpact.forEach(assetName => {
+      if (infraNames.has(assetName)) {
+        pass(`${name}: event[${idx}] assetImpact "${assetName}" matches infrastructure`);
+      } else {
+        fail(`${name}: event[${idx}] ("${(evt.title || '').substring(0, 50)}") assetImpact "${assetName}" does NOT match any infrastructure[].name — check spelling or add the asset`);
+      }
+    });
+  });
 });
 
 // ---------- 5. Pre-war baselines locked ----------
@@ -296,15 +332,173 @@ if (WAR_RISK_PREMIUM_DATA) {
   fail('WAR_RISK_PREMIUM_DATA not found in data.js');
 }
 
+// ---------- 9. Global disruption totals cross-check ----------
+function sumOffline(getter) {
+  return COUNTRY_STATUS_DATA.reduce((acc, c) => {
+    const val = getter(c);
+    return acc + (typeof val === 'number' && !isNaN(val) ? val : 0);
+  }, 0);
+}
+
+const totals = {
+  oilOffline:       sumOffline(c => c.production?.oil       ? c.production.oil.preWar - c.production.oil.current : 0),
+  gasOffline:       sumOffline(c => c.production?.gas       ? c.production.gas.preWar - c.production.gas.current : 0),
+  refiningOffline:  sumOffline(c => c.production?.refining?.affected || 0),
+  lngOffline:       sumOffline(c => c.production?.lng       ? c.production.lng.preWar - c.production.lng.current : 0),
+  petchemOffline:   sumOffline(c => c.production?.petrochemicals?.affected || 0),
+};
+
+console.log('\n===== GLOBAL DISRUPTION TOTALS =====');
+console.log('Commodity        |      Sum | Expected range   | Status');
+console.log('-----------------+----------+------------------+--------');
+Object.entries(EXPECTED_TOTALS).forEach(([key, range]) => {
+  const sum = totals[key];
+  const sumStr = (Math.round(sum * 10) / 10).toString().padStart(8);
+  const rangeStr = `${range.min}-${range.max} ${range.unit}`.padEnd(17);
+  const inRange = sum >= range.min && sum <= range.max;
+  const tag = inRange ? 'OK' : 'WARN';
+  if (inRange) pass(`Totals: ${key} in expected range`);
+  else warn(`Totals: ${key} = ${sum} ${range.unit} outside expected ${range.min}-${range.max}`);
+  console.log(`${key.padEnd(16)} | ${sumStr} | ${rangeStr} | ${tag}`);
+});
+
+// ---------- 10. FM vs severity consistency check ----------
+const activeFMCount = (FM_DECLARATIONS_DATA || []).filter(f => f.status === 'active').length;
+const criticalCountries = COUNTRY_STATUS_DATA.filter(c => c.oilGasImpact?.severity === 'critical').length;
+if (activeFMCount >= criticalCountries) {
+  pass(`FM/Severity: ${activeFMCount} active FMs ≥ ${criticalCountries} critical-severity countries`);
+} else {
+  warn(`FM/Severity: only ${activeFMCount} active FMs but ${criticalCountries} countries at critical severity — investigate`);
+}
+
+// ---------- 11. PIPELINE_STATUS_DATA validation ----------
+const EXPECTED_DATASETS = new Set([
+  'china_crude', 'iraq_crude', 'russia_crude', 'saudi_arabia_crude',
+  'iran_crude', 'uae_crude', 'kuwait_crude', 'qatar_crude', 'bahrain_crude', 'oman_crude',
+]);
+const VALID_PIPE_STATUS = new Set(['operational', 'reduced', 'offline']);
+if (!Array.isArray(PIPELINE_STATUS_DATA)) {
+  fail('PIPELINE_STATUS_DATA: missing or not an array');
+} else {
+  const seenIds = new Set();
+  PIPELINE_STATUS_DATA.forEach((p, i) => {
+    const ctx = `PIPELINE_STATUS_DATA[${i}] (${p.id || 'no-id'})`;
+    if (!p.id) fail(`${ctx}: missing id`);
+    else if (seenIds.has(p.id)) fail(`${ctx}: duplicate id "${p.id}"`);
+    else seenIds.add(p.id);
+    if (!p.label) fail(`${ctx}: missing label`);
+    if (!p.dataset) fail(`${ctx}: missing dataset`);
+    else if (!EXPECTED_DATASETS.has(p.dataset)) warn(`${ctx}: dataset "${p.dataset}" not in expected list`);
+    if (p.direction !== 'import' && p.direction !== 'export') fail(`${ctx}: direction must be import|export`);
+    if (!p.supplierCountry) fail(`${ctx}: missing supplierCountry`);
+    if (typeof p.capacity !== 'number' || p.capacity <= 0) fail(`${ctx}: capacity must be positive number`);
+    if (typeof p.currentThroughput !== 'number' || p.currentThroughput < 0) fail(`${ctx}: currentThroughput must be >= 0`);
+    if (p.currentThroughput > p.capacity) fail(`${ctx}: currentThroughput (${p.currentThroughput}) exceeds capacity (${p.capacity})`);
+    if (!VALID_PIPE_STATUS.has(p.status)) fail(`${ctx}: status must be one of ${[...VALID_PIPE_STATUS].join('|')}`);
+    if (!p.start || isNaN(new Date(p.start).getTime())) fail(`${ctx}: invalid start date "${p.start}"`);
+    if (!Array.isArray(p.sources) || p.sources.length === 0) fail(`${ctx}: sources must be non-empty array`);
+    else p.sources.forEach((s, j) => {
+      if (!s.url || !/^https?:\/\//.test(s.url)) fail(`${ctx}.sources[${j}]: invalid url`);
+      if (!s.name) fail(`${ctx}.sources[${j}]: missing name`);
+    });
+  });
+  if (fails === 0 || PIPELINE_STATUS_DATA.length > 0) pass(`PIPELINE_STATUS_DATA: ${PIPELINE_STATUS_DATA.length} entries`);
+}
+
+// ---------- Market Prices Seed Validation ----------
+const seedPath = path.resolve(__dirname, '..', 'market-prices-seed.json');
+if (fs.existsSync(seedPath)) {
+  try {
+    const seed = JSON.parse(fs.readFileSync(seedPath, 'utf8'));
+    if (!seed.prices || typeof seed.prices !== 'object') {
+      fail('market-prices-seed: missing `prices` object');
+    } else {
+      const keys = Object.keys(seed.prices);
+      pass(`market-prices-seed: ${keys.length} commodities present`);
+      for (const [key, p] of Object.entries(seed.prices)) {
+        const ctx = `market-prices-seed.prices.${key}`;
+        if (typeof p.current !== 'number' || !Number.isFinite(p.current)) {
+          fail(`${ctx}: current not a finite number`);
+        }
+        if (!Array.isArray(p.history) || p.history.length < 1) {
+          fail(`${ctx}: history must be non-empty array`);
+          continue;
+        }
+        // Check sorted ascending by date + no NaN prices
+        for (let i = 0; i < p.history.length; i++) {
+          const h = p.history[i];
+          if (!h.date || !/^\d{4}-\d{2}-\d{2}$/.test(h.date)) {
+            fail(`${ctx}: history[${i}] invalid date "${h.date}"`); break;
+          }
+          if (typeof h.price !== 'number' || !Number.isFinite(h.price)) {
+            fail(`${ctx}: history[${i}] price not a finite number`); break;
+          }
+          if (i > 0 && h.date < p.history[i-1].date) {
+            fail(`${ctx}: history not sorted at index ${i}`); break;
+          }
+        }
+      }
+    }
+  } catch (e) {
+    fail(`market-prices-seed.json: ${e.message}`);
+  }
+}
+
+// ---------- Murban History Validation ----------
+const murbanPath = path.resolve(__dirname, '..', 'murban-history.json');
+if (fs.existsSync(murbanPath)) {
+  try {
+    const murban = JSON.parse(fs.readFileSync(murbanPath, 'utf8'));
+    if (!Array.isArray(murban.history) || murban.history.length < 100) {
+      fail(`murban-history: expected >= 100 entries (got ${murban.history?.length || 0})`);
+    } else {
+      pass(`murban-history: ${murban.history.length} entries from ${murban.source || 'unknown'}`);
+    }
+  } catch (e) {
+    fail(`murban-history.json: ${e.message}`);
+  }
+}
+
+// ---------- Market Insights Validation ----------
+const insightsPath = path.resolve(__dirname, '..', 'market-insights.json');
+if (fs.existsSync(insightsPath)) {
+  try {
+    const ins = JSON.parse(fs.readFileSync(insightsPath, 'utf8'));
+    if (!Array.isArray(ins.insights)) {
+      fail('market-insights: missing `insights` array');
+    } else if (ins.insights.length < 3 || ins.insights.length > 5) {
+      fail(`market-insights: expected 3-5 insights (got ${ins.insights.length})`);
+    } else {
+      const VALID_TYPE = new Set(['top_mover','spread','cross','anomaly','trend','correlation_break']);
+      const VALID_SEV = new Set(['info','bullish','bearish','warning']);
+      ins.insights.forEach((entry, i) => {
+        const ctx = `market-insights.insights[${i}]`;
+        if (!VALID_TYPE.has(entry.type)) fail(`${ctx}: invalid type "${entry.type}"`);
+        if (!VALID_SEV.has(entry.severity)) fail(`${ctx}: invalid severity "${entry.severity}"`);
+        if (!entry.title || entry.title.length > 100) fail(`${ctx}: title missing or > 100 chars`);
+        if (entry.detail && entry.detail.length > 180) fail(`${ctx}: detail > 180 chars`);
+      });
+      pass(`market-insights: ${ins.insights.length} valid insights`);
+    }
+  } catch (e) {
+    fail(`market-insights.json: ${e.message}`);
+  }
+}
+
 // ---------- Summary ----------
 console.log('\n===== DATA VALIDATION =====');
-console.log(`Total: ${passes + fails} checks | PASS: ${passes} | FAIL: ${fails}\n`);
+console.log(`Total: ${passes + fails} checks | PASS: ${passes} | FAIL: ${fails} | WARN: ${warns}\n`);
+
+if (warns > 0) {
+  warnings.forEach(w => console.warn(`  [WARN] ${w}`));
+  console.log('');
+}
 
 if (fails > 0) {
   errors.forEach(e => console.error(`  [FAIL] ${e}`));
   console.error(`\n  ${fails} CHECK(S) FAILED — do NOT commit data.js\n`);
   process.exit(1);
 } else {
-  console.log('  ALL CHECKS PASSED\n');
+  console.log('  ALL CHECKS PASSED' + (warns > 0 ? ` (${warns} warnings)` : '') + '\n');
   process.exit(0);
 }

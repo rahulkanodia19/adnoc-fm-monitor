@@ -203,6 +203,8 @@ backup_data() {
   mkdir -p .sync-backup/soh-data
   cp data.js .sync-backup/ 2>/dev/null || true
   cp market-prices-seed.json .sync-backup/ 2>/dev/null || true
+  cp murban-history.json .sync-backup/ 2>/dev/null || true
+  cp market-insights.json .sync-backup/ 2>/dev/null || true
   cp import-data.js .sync-backup/ 2>/dev/null || true
   cp export-data.js .sync-backup/ 2>/dev/null || true
   cp flow-insights.json .sync-backup/ 2>/dev/null || true
@@ -222,8 +224,10 @@ restore_pipeline() {
       log "  Restoring data.js from backup"
       cp .sync-backup/data.js data.js 2>/dev/null || true ;;
     prices)
-      log "  Restoring market-prices-seed.json from backup"
-      cp .sync-backup/market-prices-seed.json market-prices-seed.json 2>/dev/null || true ;;
+      log "  Restoring market-prices-seed.json + murban-history.json + market-insights.json from backup"
+      cp .sync-backup/market-prices-seed.json market-prices-seed.json 2>/dev/null || true
+      cp .sync-backup/murban-history.json murban-history.json 2>/dev/null || true
+      cp .sync-backup/market-insights.json market-insights.json 2>/dev/null || true ;;
     soh)
       log "  Restoring soh-data/ from backup"
       cp .sync-backup/soh-data/*.json soh-data/ 2>/dev/null || true ;;
@@ -399,16 +403,41 @@ else
   fi
 fi
 
-# --- S&P MINT token check ---
+# --- S&P MINT token check + auto-extraction ---
+MINT_NEEDS_REFRESH=true
 if [ -f "$PROJECT_DIR/soh-data/.mint-token.json" ]; then
-  MINT_EXP=$(node -e "try{const t=JSON.parse(require('fs').readFileSync('soh-data/.mint-token.json'));const exp=new Date(t.expires||0);console.log(exp>new Date()?'valid':'expired')}catch(e){console.log('missing')}" 2>/dev/null)
-  if [ "$MINT_EXP" = "valid" ]; then
-    log "  MINT token ....... ✓ valid"
-  else
-    log "  MINT token ....... ⚠ expired (will attempt re-auth during SOH sync)"
-  fi
+  MINT_STATUS=$(node -e "try{const t=JSON.parse(require('fs').readFileSync('soh-data/.mint-token.json'));const hrs=((t.expiresAt-Date.now())/3600000).toFixed(1);console.log(Date.now()<t.expiresAt?'valid:'+hrs:'expired')}catch(e){console.log('missing')}" 2>/dev/null)
+  case "$MINT_STATUS" in
+    valid:*) log "  MINT token ....... ✓ valid (${MINT_STATUS#valid:}h remaining)"; MINT_NEEDS_REFRESH=false ;;
+    expired) log "  MINT token ....... ⚠ expired — extracting from Chrome..." ;;
+    *)       log "  MINT token ....... ○ missing — extracting from Chrome..." ;;
+  esac
 else
-  log "  MINT token ....... ○ not found (containers will use cache)"
+  log "  MINT token ....... ○ missing — extracting from Chrome..."
+fi
+
+if [ "$MINT_NEEDS_REFRESH" = true ] && [ "$CHROME_OK" = true ]; then
+  for mint_attempt in 1 2 3; do
+    node "$SCRIPT_DIR/extract-mint-token.js" > /dev/null 2>&1
+    RC=$?
+    if [ "$RC" = "0" ]; then
+      log "  MINT token ....... ✓ refreshed (attempt $mint_attempt)"
+      break
+    fi
+    if [ "$RC" = "2" ]; then
+      notify "MINT Login Required" "Log into marketintelligencenetwork.com in Chrome"
+      log "  MINT token ....... ⚠ login required — containers will use cache"
+      break
+    fi
+    if [ $mint_attempt -lt 3 ]; then
+      log "  MINT token ....... ⚠ attempt $mint_attempt failed (rc=$RC), retry in 5s..."
+      sleep 5
+    else
+      log "  MINT token ....... ⚠ extraction failed after 3 attempts (rc=$RC) — containers will use cache"
+    fi
+  done
+elif [ "$MINT_NEEDS_REFRESH" = true ]; then
+  log "  MINT token ....... ⚠ no Chrome — containers will use cache"
 fi
 
 # --- Platts token check ---
@@ -443,9 +472,29 @@ const http=require('http'),WebSocket=require('ws');
       log "    $name .... ✓ tab opened (may need login)"
     fi
   }
-  check_premium_tab "Kpler" "terminal.kpler.com" "https://terminal.kpler.com"
-  check_premium_tab "Rystad" "portal.rystadenergy.com" "https://portal.rystadenergy.com/home"
-  check_premium_tab "S&P Connect" "connect.spglobal.com" "https://connect.spglobal.com"
+  check_premium_tab "Kpler" "terminal.kpler.com" "https://terminal.kpler.com/insight"
+  check_premium_tab "Rystad" "portal.rystadenergy.com" "https://portal.rystadenergy.com/dashboards/detail/1047/0"
+  check_premium_tab "S&P Connect" "connect.spglobal.com" "https://connect.spglobal.com/home"
+  check_premium_tab "Platts Core" "core.spglobal.com" "https://core.spglobal.com/#platts/landingpage"
+  check_premium_tab "S&P MINT" "marketintelligencenetwork.com" "https://www.marketintelligencenetwork.com/mint-app/"
+
+  # --- Interactive premium source health gate ---
+  log "  Premium health ... ⏳ running interactive pre-flight gate"
+  write_progress "preflight" "Premium Source Check" "Verifying Kpler/Rystad/S&P logins — follow prompts in terminal"
+  if [ -e /dev/tty ]; then
+    if ! node "$SCRIPT_DIR/check-premium-sources.js" < /dev/tty; then
+      log "  Premium health ... ✗ ABORT — premium sources unhealthy or user aborted"
+      notify "Premium Sources Unhealthy" "User aborted premium source pre-flight. Sync halted."
+      exit 1
+    fi
+  else
+    if ! node "$SCRIPT_DIR/check-premium-sources.js"; then
+      log "  Premium health ... ✗ ABORT — premium sources unhealthy (non-interactive run)"
+      notify "Premium Sources Unhealthy" "Premium source pre-flight failed in non-interactive run."
+      exit 1
+    fi
+  fi
+  log "  Premium health ... ✓ pre-flight gate passed"
 fi
 
 # --- Pre-sync backup ---
@@ -491,11 +540,11 @@ else
   SOH_PID=""
 fi
 
-# [3/6] Platts Prices
+# [3/6] Platts Prices (+ Murban front-month from Investing.com)
 LABEL_PRICES="[3/6] Platts Prices ........"
 log "  $LABEL_PRICES ⏳ running"
 (
-  run_pipeline "prices" "$LABEL_PRICES" 3 node "$SCRIPT_DIR/fetch-platts-prices.js"
+  run_pipeline "prices" "$LABEL_PRICES" 3 bash -c "node \"$SCRIPT_DIR/scrape-murban-investing.js\" && node \"$SCRIPT_DIR/fetch-platts-prices.js\""
   exit $?
 ) &
 PRICES_PID=$!
@@ -708,7 +757,7 @@ node "$SCRIPT_DIR/verify-sync.js" > /dev/null 2>&1
 log "  Freshness verification ..... ✓ sync-status.json written"
 
 # Commit all changes
-ALL_FILES="data.js data-previous.json sync-log.json energy-news-data.json market-prices-seed.json import-data.js export-data.js flow-insights.json flow-summary.json sync-status.json"
+ALL_FILES="data.js data-previous.json sync-log.json energy-news-data.json market-prices-seed.json murban-history.json market-insights.json import-data.js export-data.js flow-insights.json flow-summary.json sync-status.json"
 SOH_FILES="soh-data/summary.json soh-data/vessel-matrix.json soh-data/adnoc-vessels.json soh-data/map-positions.json soh-data/vessels.json soh-data/transit-vessels.json soh-data/crisis-transits.json soh-data/breakdown-product.json soh-data/breakdown-vessel-type.json soh-data/breakdown-destination.json"
 
 CHANGED=false

@@ -529,11 +529,14 @@ function main() {
     };
   }
 
-  // Find latest snapshot from a PREVIOUS day for comparison
-  const prevDayFiles = fs.readdirSync(snapshotDir)
-    .filter(f => f.endsWith('.json') && f < `${today}T`)
+  // Find comparison base: prefer today's earliest snapshot (midnight boundary),
+  // fall back to yesterday's latest (first sync of the day only)
+  const allSnapFiles = fs.readdirSync(snapshotDir)
+    .filter(f => f.endsWith('.json') && f !== snapshotFile)
     .sort();
-  const prevSnapshotFile = prevDayFiles.length > 0 ? prevDayFiles[prevDayFiles.length - 1] : null;
+  const todayEarliest = allSnapFiles.find(f => f.substring(0, 10) === today);
+  const prevDayLatest = allSnapFiles.filter(f => f.substring(0, 10) < today).pop() || null;
+  const prevSnapshotFile = todayEarliest || prevDayLatest;
 
   if (prevSnapshotFile) {
     const prevSnapshotDate = prevSnapshotFile.substring(0, 10); // YYYY-MM-DD
@@ -610,7 +613,7 @@ function main() {
       else transitHistory.push(histEntry);
       transitHistory = transitHistory.slice(-180);
       fs.writeFileSync(transitHistoryPath, JSON.stringify(transitHistory, null, 2));
-      console.log(`Transit history: ${exitedVessels.length} exited, ${enteredVessels.length} entered, oman +${omanEntered.length}/-${omanLeft.length} (${prevSnapshotDate} → ${today}, gap ${gapDays}d)`);
+      console.log(`Transit history: ${exitedVessels.length} exited, ${enteredVessels.length} entered, oman +${omanEntered.length}/-${omanLeft.length} (${today}, base ${prevSnapshotDate}, gap ${gapDays}d)`);
     }
   } else {
     console.log('Transit detection: no midnight snapshot yet — first run');

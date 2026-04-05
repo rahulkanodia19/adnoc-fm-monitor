@@ -368,12 +368,20 @@ The conflict is expanding targets beyond oil & gas to include data centers, powe
 29. `"aluminium smelter" attack Gulf 2026 April`
 30. `"submarine cable" OR "internet" disruption Gulf 2026 April`
 
+### Petrochemicals & New Critical Assets (baselines + status)
+31. `"Borouge" OR "SABIC" OR "Petro Rabigh" OR "EQUATE" OR "Q-Chem" cracker capacity 2026`
+32. `"Mahshahr" OR "Bandar Imam" OR "Bushehr Petrochemical" Iran petchem strike April 2026`
+33. `"Barakah Nuclear" OR "ENEC" OR "Nawah Energy" 2026 April status`
+34. `"Khazna" OR "G42" OR "Equinix Dubai" OR "Etisalat Smart Hub" data center 2026`
+35. `"AWS Bahrain" OR "Batelco" data center strike April 2026`
+36. `"Oracle Jeddah" OR "Google Dammam" OR "STC data center" 2026`
+
 ### Output requirement
-After running all 30 queries, output:
+After running all 36 queries, output:
 ```
 Infrastructure Monitoring Results:
   Queries with new findings: [list query numbers and what was found]
-  Queries with no new results: [count]/30
+  Queries with no new results: [count]/36
   New events to add to data.js: [list each with country, asset name, event description, source URL]
 ```
 
@@ -385,8 +393,11 @@ Update the `data.js` file with any new findings. Preserve the exact same schema 
 
 - `LAST_UPDATED` — set to the ACTUAL current ISO timestamp (e.g., `new Date().toISOString()`). This must reflect the real time the sync completed. Do NOT manually set a future time, round to the next hour, or use any time other than the current moment.
 - `COUNTRY_STATUS_DATA` — array of 9 countries (Qatar, Kuwait, Saudi Arabia, UAE, Iraq, Bahrain, Oman, Israel, Iran). Each has: id, country, flag, status (stable|elevated|high|critical|conflict), statusLabel, isNew, summary, metrics, production, events, oilGasImpact, infrastructure, sources
-- Each country's `production` object must include a `notes` sub-object with keys: oil, gas, refining, lng, ports (only where applicable). These are short operational status notes shown in the Production Overview tables. Update them to reflect the current situation for each commodity.
+- Each country's `production` object must include a `notes` sub-object with keys: oil, gas, refining, lng, petrochemicals, ports (only where applicable). These are short operational status notes shown in the Production Overview tables. Update them to reflect the current situation for each commodity.
+- Each country's `production` object must also include a `petrochemicals` block:
+  - `petrochemicals: { capacity: <kt/y>, affected: <kt/y>, available: <kt/y>, unit: "kt/y" }` — ethylene-equivalent nameplate capacity across all crackers/downstream. Seeded as a pre-war baseline (do NOT modify `capacity`). Update `affected` (offline kt/y) and `available` (capacity − affected) from news. Math: `capacity - affected = available` (±5% tolerance).
 - Each infrastructure item (especially terminals/ports) should include a `notes` field with a short terminal-specific status note (e.g., "Loading suspended after drone strikes Mar 14-17"). Schema: `{ name, type, capacity, status, notes }`
+- **assetImpact[] on events**: when an event describes damage/shutdown at a specific named facility, add an `assetImpact` array to the event with the matching infrastructure names. Format: `{ date, title, description, isNew, assetImpact: ["Habshan Gas Complex", "Habshan-5 LNG Train"] }`. Every string MUST exactly match a `name` in that country's `infrastructure[]`. If the facility isn't in infrastructure[], ADD it there first, then reference it. Validator will reject typos.
 - `FM_DECLARATIONS_DATA` — array of force majeure declarations. Each has: id, company, country, flag, date, status (active|partially_lifted|lifted), statusLabel, isNew, summary, details, sources
 - `SHUTDOWNS_NO_FM_DATA` — array of non-FM shutdowns. Each has: id, company, country, flag, date, status, statusLabel, isNew, summary, details, sources
 
@@ -403,12 +414,23 @@ Update the `data.js` file with any new findings. Preserve the exact same schema 
 ### Rules
 - Pre-war baseline values (`preWar` fields in production objects) must NEVER change — these are fixed reference points
 - Production notes (`production.notes`) MUST be updated to reflect current operational status each sync
-- production.notes.oil, .gas, .refining, .lng, .ports MUST each describe commodity-specific impacts — do NOT copy the same text across commodities:
+- production.notes.oil, .gas, .refining, .lng, .petrochemicals, .ports MUST each describe commodity-specific impacts — do NOT copy the same text across commodities:
   - Oil notes: crude oil field shutdowns, export disruptions, storage constraints
   - Gas notes: gas field/processing disruptions, associated gas impacts, pipeline status
   - Refining notes: refinery-specific damage, throughput, capacity status
   - LNG notes: liquefaction plant status, LNG export disruptions
+  - Petrochemicals notes: cracker/downstream status (ethylene, propylene, methanol, polymers); feedstock curtailment; FM status of chemical exports
   - Ports notes: export terminal status, loading operations, pipeline bypass routes, port disruptions
+
+### Notes Quality Checklist (apply to every note before writing)
+
+For each of the 6 note fields per country (oil, gas, refining, lng, petrochemicals, ports):
+
+1. **Commodity-specific**: re-read the note. Does it only describe the commodity named in the key? If oil note mentions LNG, fix it.
+2. **Inline source citations**: every quantitative claim (kb/d, Bcf/d, kt/y, etc.) must cite a source ID like `[src:12]` where 12 is an ID in that country's `sources[]` array.
+3. **Numeric precision with units**: oil/refining in `kb/d`, gas in `Bcf/d`, petchem in `kt/y`, LNG in `Mtpa`. Always include the unit.
+4. **Recency**: the note must reference an event/source dated within the last 14 days, OR be prefixed with "Baseline:" if describing pre-crisis structural state.
+5. **No cross-contamination**: after writing, re-scan all 6 notes for the country. Flag any text that overlaps commodities across unrelated fields.
 - If no new FM declarations are found in the last 7 days, note this in sync-log.json with a reason
 - Mark items as `isNew: true` if they occurred in the last 48 hours, otherwise `isNew: false`
 - Keep all existing entries, update their status if changed
@@ -474,8 +496,10 @@ Each country's `infrastructure[]` array MUST always include at least these criti
 - [ ] No schema changes to variable names or structure
 - [ ] All preWar values match the locked baselines table above exactly
 - [ ] All status values use valid enum values from the list above
-- [ ] Each country has production.notes with oil, gas, refining, ports keys (and lng where applicable)
+- [ ] Each country has production.notes with oil, gas, refining, petrochemicals, ports keys (and lng where applicable)
 - [ ] Refining math: capacity - affected = available (within rounding)
+- [ ] Petrochemicals math (where capacity > 0): capacity - affected = available
+- [ ] assetImpact[] entries on events match country.infrastructure[].name exactly (no typos)
 
 ## Step 4b: Data loss verification (CRITICAL)
 
@@ -497,9 +521,10 @@ After writing data.js, verify:
 2. All 9 countries are present in COUNTRY_STATUS_DATA
 3. All preWar values match the locked baselines table above
 4. Every FM/shutdown entry has id, company, date, status, details.volumeAffected, details.commodity, sources
-5. Every country has production.notes with at least oil, gas, refining, ports keys
-6. Refining math: capacity - affected = available (within rounding)
+5. Every country has production.notes with at least oil, gas, refining, petrochemicals, ports keys
+6. Refining/petrochemicals math: capacity - affected = available (within rounding)
 7. All status values are valid enum values
+8. Every event.assetImpact[] string matches an existing infrastructure[].name in the same country
 
 If any check fails, fix the issue before proceeding to Step 5.
 
