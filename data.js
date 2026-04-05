@@ -1,12 +1,12 @@
 // ============================================================
 // data.js -- ADNOC Force Majeure & Geopolitical Monitor
 // Pre-populated monitoring data from verified intelligence
-// Last updated: 2026-04-03T19:30:00.000Z
-// Period: 28 February - 3 April 2026
+// Last updated: 2026-04-05T07:29:43.605Z
+// Period: 28 February - 5 April 2026
 // Context: Strait of Hormuz / Gulf military escalation
 // ============================================================
 
-const LAST_UPDATED = "2026-04-04T11:00:00.000Z";
+const LAST_UPDATED = "2026-04-05T07:00:00.000Z";
 
 // ---------- TABLE 1: Country Status Matrix ----------
 const COUNTRY_STATUS_DATA = [
@@ -16,7 +16,7 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1F6}\u{1F1E6}",
     status: "critical",
     statusLabel: "FM Declared",
-    summary: "AQUA 1 tanker struck Apr 1. All 77 Mtpa LNG halted since Mar 2. 12.8 Mtpa damaged 3-5 yrs. FM extended through mid-June. S&P Global: 'Longer market impacts from war' (Apr 2 report). ~2,000 vessels trapped in Gulf (IMO). UN Hormuz vote delayed to next week (was Apr 5) — resolution stripped of Chapter VII enforcement. Brent $112.42 (Apr 3). OPEC+ Apr 5. Apr 6 power plant deadline. Day 38: F-15E shot down over Iran — 1 pilot rescued, 1 WSO missing; 365 US injuries total.",
+    summary: "AQUA 1 tanker struck Apr 1. All 77 Mtpa LNG halted since Mar 2. 12.8 Mtpa damaged 3-5 yrs. FM extended through mid-June. S&P Global: 'Longer market impacts from war' (Apr 2 report). ~2,000 vessels trapped in Gulf (IMO). UN Hormuz vote delayed to next week — resolution stripped of Chapter VII enforcement. Brent ~$109 (Apr 3). OPEC+ Apr 5: confirmed 206 kb/d symbolic increase. Apr 6 power plant deadline TOMORROW — Trump 48-hr ultimatum. Day 39: F-15E WSO RESCUED by US commandos; Iran rejects ultimatum; KPC HQ struck; Bahrain Bapco tank hit. MOL LPG carrier Green Sanvi transited Hormuz for India (Apr 4 — S&P Platts). MOL Sohar LNG also transited Hormuz (Apr 3).",
     metrics: {
       headline: "S&P: 'Longer market impacts from war'; ~2,000 vessels trapped in Gulf; ~20% global LNG offline; Day 38: F-15E down over Iran",
       productionOffline: "77 Mtpa LNG + all downstream",
@@ -150,11 +150,11 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1F0}\u{1F1FC}",
     status: "critical",
     statusLabel: "FM / Struck",
-    summary: "Iran publishes bridge target list incl. Sheikh Jaber Sea Bridge (Kuwait). IRGC drones struck Kuwait airport fuel tanks Apr 1 (58 hrs to extinguish). Power/desal plant struck Mar 30 (1 Indian worker killed). Kuwait intercepted 97 BMs + 283 drones cumulatively. VLCC Al Salmi struck Mar 31. KPC FM on crude. Al-Ahmadi struck. UN Hormuz vote delayed to next week (was Apr 5) — stripped of Chapter VII. Brent $112.42 (Apr 3). OPEC+ Apr 5. Apr 6 power plant deadline. Apr 3: Al-Ahmadi refinery struck AGAIN (3rd time, fires in multiple units) + power/desal plant struck AGAIN (2nd time) — 7th+ major Iranian attack on Kuwait.",
+    summary: "Iran publishes bridge target list incl. Sheikh Jaber Sea Bridge (Kuwait). IRGC drones struck Kuwait airport fuel tanks Apr 1 (58 hrs to extinguish). Power/desal plant struck Mar 30 (1 Indian worker killed). Kuwait intercepted 97 BMs + 283 drones cumulatively. VLCC Al Salmi struck Mar 31. KPC FM on crude. Al-Ahmadi struck. UN Hormuz vote delayed to next week (was Apr 5) — stripped of Chapter VII. Brent $112.42 (Apr 3). OPEC+ Apr 5: confirmed 206 kb/d symbolic increase. Apr 6 power plant deadline imminent. Apr 3: Al-Ahmadi refinery struck AGAIN (3rd time, fires in multiple units) + power/desal plant struck AGAIN (2nd time) — 7th+ major Iranian attack on Kuwait. Apr 5: KPC Shuwaikh HQ struck by drones — building ablaze, evacuated (Bloomberg); 2 power/desalination plants struck — 'significant material damage', 2 gen units shut (Times Kuwait). Total 9+ major Iranian attacks on Kuwait.",
     metrics: {
-      headline: "Apr 3: Al-Ahmadi refinery struck 3rd time + desalination plant struck 2nd time; Iran targets Sheikh Jaber bridge; 7+ major attacks",
-      productionOffline: "Al-Ahmadi refinery (3x struck) + power/desal plant (2x) + airport fuel tanks + tanker attacked",
-      keyFigure: "2.6 mb/d baseline disrupted; 7+ major attacks since conflict began; bridge targeting escalation; Brent ~$109"
+      headline: "Apr 5: KPC Shuwaikh HQ set ablaze + 2 power/desal plants struck; 9+ major attacks; OPEC+ confirms 206 kb/d; Apr 6 deadline tomorrow",
+      productionOffline: "Al-Ahmadi refinery (3x struck) + KPC HQ ablaze + power/desal plants (3x struck) + airport fuel tanks + tanker attacked",
+      keyFigure: "2.6 mb/d baseline disrupted; 9+ major attacks since conflict began; bridge targeting escalation; Brent ~$109; Apr 6 deadline imminent"
     },
     production: {
       oil: { preWar: 2600, current: 2000, unit: "kb/d" },
@@ -169,10 +169,16 @@ const COUNTRY_STATUS_DATA = [
     },
     events: [
       {
+        date: "2026-04-05",
+        title: "KPC Shuwaikh HQ struck by drones — building ablaze, evacuated; 2 power/desalination plants also hit",
+        description: "Iranian drones struck the Shuwaikh oil sector complex housing Kuwait Petroleum Corporation (KPC) headquarters and the Ministry of Oil in early hours Apr 5, setting the building ablaze. The complex was fully evacuated; no injuries reported. Separately, Iranian drones struck two power and water desalination plants, causing 'significant material damage' — 2 power generation units shut down as emergency plans activated. No casualties. This brings total major Iranian attacks on Kuwait infrastructure to 9+ since conflict began (Al-Ahmadi x3, Mina Abdullah x1, Subiya x1, airport fuel tanks x1, power/desal plants x3, KPC HQ x1). — Bloomberg, The National, Times Kuwait, ANI, Arab Times",
+        isNew: true
+      },
+      {
         date: "2026-04-03",
         title: "Mina Al-Ahmadi refinery struck 3rd time by drones — fires in multiple units; power/desalination plant also struck hours later",
         description: "Iranian drones struck Kuwait's Mina Al-Ahmadi refinery (~466k bpd) in early morning Apr 3, sparking fires in several operational units. No injuries reported. KPC confirmed attack and began containment. Hours later, a Kuwait power and desalination plant was also hit by Iranian missiles. This brings total major Iranian attacks on Kuwait infrastructure to 7+ since conflict began (Al-Ahmadi x3, Mina Abdullah x1, Subiya x1, airport fuel tanks x1, power/desal plants x2). — The National, Al Jazeera, Anadolu Agency, Khaleej Times, Middle East Eye",
-        isNew: true
+        isNew: false
       },
       {
         date: "2026-04-01",
@@ -210,8 +216,8 @@ const COUNTRY_STATUS_DATA = [
     ],
     oilGasImpact: {
       severity: "critical",
-      summary: "7+ major attacks: Al-Ahmadi struck 3rd time Apr 3 + desal plant struck Apr 3; airport fuel tanks Apr 1; power/desal Mar 30 (1 killed); VLCC Al Salmi Mar 31; refineries Mar 19-20",
-      details: "Apr 3: Mina Al-Ahmadi struck by drones 3rd time (fires in multiple units, contained, no injuries) + power/desalination plant struck 2nd time — 7th+ major attack on Kuwait. IRGC drones struck Kuwait airport fuel tanks Apr 1 (58-hr fire, radar damaged). Power/desalination plant struck Mar 30, killing 1 Indian worker. VLCC Al Salmi (2M bbl crude) struck at Dubai port Mar 31. Kuwait intercepted 97 BMs + 283 drones cumulatively. KPC FM on all crude exports. Al-Ahmadi (466k bpd) offline after repeated drone strikes. Mina Abdullah (454k bpd) also struck Mar 19. Al-Zour at reduced rates. ~900 kb/d refining affected; ~500 kb/d available. Kafco fuel storage struck. Subiya power plant fire. Export via Hormuz severely disrupted."
+      summary: "9+ major attacks: KPC Shuwaikh HQ ablaze Apr 5 + 2 desal plants struck Apr 5; Al-Ahmadi struck 3rd time Apr 3 + desal plant struck Apr 3; airport fuel tanks Apr 1; power/desal Mar 30 (1 killed); VLCC Al Salmi Mar 31; refineries Mar 19-20",
+      details: "Apr 5: KPC Shuwaikh HQ (housing KPC and Ministry of Oil) set ablaze by drones — building evacuated, no injuries (Bloomberg). Two more power/desalination plants struck same day — 'significant material damage', 2 power gen units shut (Times Kuwait). Total 9+ major Iranian attacks. Apr 3: Mina Al-Ahmadi struck by drones 3rd time (fires in multiple units, contained, no injuries) + power/desalination plant struck 2nd time. IRGC drones struck Kuwait airport fuel tanks Apr 1 (58-hr fire, radar damaged). Power/desalination plant struck Mar 30, killing 1 Indian worker. VLCC Al Salmi (2M bbl crude) struck at Dubai port Mar 31. Kuwait intercepted 97 BMs + 283 drones cumulatively. KPC FM on all crude exports. Al-Ahmadi (466k bpd) offline after repeated drone strikes. Mina Abdullah (454k bpd) also struck Mar 19. Al-Zour at reduced rates. ~900 kb/d refining affected; ~500 kb/d available. Kafco fuel storage struck. Subiya power plant fire. Export via Hormuz severely disrupted. OPEC+ Apr 5: confirmed 206 kb/d symbolic increase. Apr 6 power plant deadline imminent."
     },
     infrastructure: [
       { name: "Greater Burgan (Burgan/Magwa/Ahmadi)", type: "Oil Field", capacity: "~1.7 mb/d", status: "partial" },
@@ -228,7 +234,8 @@ const COUNTRY_STATUS_DATA = [
       { name: "Subiya Power Plant", type: "Power Plant", capacity: "2,400 MW", status: "shutdown" },
       { name: "EQUATE Petrochemical Complex", type: "Petrochemical Complex", capacity: "Major PE/EG producer", status: "partial", notes: "Near struck refineries; running on stored feedstock; Shuaiba industrial area" },
       { name: "Az-Zour South Power & Desalination", type: "Power/Desalination Plant", capacity: "2,400 MW + 423 MIGD water", status: "operational", notes: "Kuwait's largest complex; distinct from Subiya (hit 9 Mar); Kuwait 100% desal-dependent" },
-      { name: "Kuwait International Airport Fuel Tanks", type: "Aviation Fuel Storage", capacity: "KAFCO aviation fuel facility", status: "struck", notes: "IRGC drones hit fuel tanks Apr 1; 58-hr fire; radar damaged; no casualties; aviation ops disrupted" }
+      { name: "Kuwait International Airport Fuel Tanks", type: "Aviation Fuel Storage", capacity: "KAFCO aviation fuel facility", status: "struck", notes: "IRGC drones hit fuel tanks Apr 1; 58-hr fire; radar damaged; no casualties; aviation ops disrupted" },
+      { name: "KPC Shuwaikh Complex", type: "Oil Sector HQ", capacity: "KPC headquarters + Ministry of Oil", status: "struck", notes: "Drones set building ablaze Apr 5; fully evacuated; no injuries; housing KPC and Ministry of Oil (Bloomberg)" }
     ],
     sources: [
       { id: 1, title: "KPC FM on crude - Express Tribune", url: "https://tribune.com.pk", date: "2026-03-07" },
@@ -248,7 +255,11 @@ const COUNTRY_STATUS_DATA = [
       { id: 15, title: "Kuwaiti power and desalination plant hit in Iranian strike — The National", url: "https://www.thenationalnews.com/business/2026/03/30/kuwait-power-and-desalination-plant-hit-in-iranian-strike-as-ministry-reassures-on-operations/", date: "2026-03-30" },
       { id: 16, title: "Kuwait races to contain damage after drone strikes oil refinery — The National", url: "https://www.thenationalnews.com/news/mena/2026/04/03/kuwait-races-to-contain-damage-after-drone-strikes-oil-refinery/", date: "2026-04-03" },
       { id: 17, title: "Kuwait desalination plant, oil refinery hit by missile and drone strikes — Al Jazeera", url: "https://www.aljazeera.com/news/2026/4/3/kuwait-desalination-plant-oil-refinery-hit-by-missile-and-drone-strikes", date: "2026-04-03" },
-      { id: 18, title: "Drone strike sparks fire at Kuwait's Mina Al-Ahmadi refinery — Anadolu Agency", url: "https://www.aa.com.tr/en/middle-east/drone-strike-sparks-fire-at-kuwait-s-mina-al-ahmadi-refinery/3890099", date: "2026-04-03" }
+      { id: 18, title: "Drone strike sparks fire at Kuwait's Mina Al-Ahmadi refinery — Anadolu Agency", url: "https://www.aa.com.tr/en/middle-east/drone-strike-sparks-fire-at-kuwait-s-mina-al-ahmadi-refinery/3890099", date: "2026-04-03" },
+      { id: 19, title: "Kuwait Petroleum Says Headquarters Set Ablaze by Drone Strike — Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-04-04/kuwait-petroleum-says-headquarters-set-ablaze-by-by-drone-strike", date: "2026-04-05" },
+      { id: 20, title: "Kuwait Petroleum HQ, power plants and Bahrain oil storage tank hit by drone attacks — The National", url: "https://www.thenationalnews.com/business/energy/2026/04/05/kuwait-petroleum-headquarters-and-power-plants-hit-by-drone-attacks/", date: "2026-04-05" },
+      { id: 21, title: "Fire at Shuwaikh oil sector complex due to drone assault, no injuries — Times Kuwait", url: "https://timeskuwait.com/fire-at-shuwaikh-oil-sector-complex-due-to-drone-assault-no-injuries/", date: "2026-04-05" },
+      { id: 22, title: "Two power and water distillation plants hit by hostile drones in Kuwait — Times Kuwait", url: "https://timeskuwait.com/two-power-and-water-distillation-plants-hit-by-hostile-drones-in-kuwait/", date: "2026-04-05" }
     ]
   },
   {
@@ -257,7 +268,7 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1F8}\u{1F1E6}",
     status: "critical",
     statusLabel: "Shutdown",
-    summary: "Iran targets King Fahd Causeway in bridge hit list. Saudi intercepted 14 drones on Apr 3 (Arab News). Aramco slashing Asia crude supply 2nd month. 4 offshore fields shut (~2.5M bpd). E-W Pipeline at max 7M bpd; Yanbu 4.4M bpd. Houthi Bab al-Mandeb threat. UN Hormuz vote delayed to next week (was Apr 5) — resolution stripped of Chapter VII enforcement. Brent $112.42 (Apr 3). OPEC+ Apr 5 — most consequential meeting. Apr 6 power plant deadline. Day 38: F-15E shot down over Iran, B1 bridge death toll revised to 13.",
+    summary: "Iran targets King Fahd Causeway in bridge hit list. Saudi intercepted 14 drones on Apr 3 (Arab News). Aramco slashing Asia crude supply 2nd month. 4 offshore fields shut (~2.5M bpd). E-W Pipeline at max 7M bpd; Yanbu 4.4M bpd. Houthi Bab al-Mandeb threat. UN Hormuz vote delayed to next week — resolution stripped of Chapter VII enforcement. Brent ~$109 (Apr 3). OPEC+ Apr 5: confirmed 206 kb/d symbolic increase. Apr 6 power plant deadline TOMORROW — Trump 48-hr ultimatum to Iran: 'all Hell will reign down'. Day 39: F-15E WSO rescued by US commandos/CIA; Trump: 'we got him'. Iran rejects ultimatum.",
     metrics: {
       headline: "14 drones intercepted Apr 3; Iran targets King Fahd Causeway; ~2.5-3.0 mb/d offline; WH: Hormuz not core objective",
       productionOffline: "4 offshore fields + storage constraints",
@@ -380,7 +391,7 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1E6}\u{1F1EA}",
     status: "critical",
     statusLabel: "Escalated",
-    summary: "Iran targets 3 Abu Dhabi bridges (Sheikh Zayed, Al Maqta, Khalifa) in hit list. UAE intercepted 438+ BMs + 2,012+ drones + 19+ CMs (12 killed, 190+ injured); Apr 3 alone: 18 BMs + 4 CMs + 47 drones intercepted. ADCOP at 1.62M bpd (can surge to 1.8M). S&P Platts bifurcation live Apr 1. VLCC Al Salmi struck Mar 31. >50% crude offline. ~2,000 vessels trapped in Gulf (IMO). UN Hormuz vote delayed to next week (was Apr 5) — stripped of Chapter VII. Brent $112.42 (Apr 3). Apr 6 power plant deadline. HABSHAN GAS SHUT AGAIN Apr 3 — debris from intercepted missile caused fire; 1 Egyptian killed, 4 injured (Egypt/Pakistan); 2nd shutdown since war began (Bloomberg, Asharq Al-Awsat).",
+    summary: "Iran targets 3 Abu Dhabi bridges (Sheikh Zayed, Al Maqta, Khalifa) in hit list. UAE intercepted 438+ BMs + 2,012+ drones + 19+ CMs (12 killed, 190+ injured); Apr 3 alone: 18 BMs + 4 CMs + 47 drones intercepted. ADCOP at 1.62M bpd (can surge to 1.8M). S&P Platts bifurcation live Apr 1. VLCC Al Salmi struck Mar 31. >50% crude offline. ~2,000 vessels trapped in Gulf (IMO). UN Hormuz vote delayed to next week — stripped of Chapter VII. Brent ~$109 (Apr 3). OPEC+ Apr 5: confirmed 206 kb/d symbolic increase. Apr 6 power plant deadline TOMORROW — Trump 48-hr ultimatum. HABSHAN GAS SHUT AGAIN Apr 3 — debris from intercepted missile caused fire; 1 Egyptian killed, 4 injured (Egypt/Pakistan); 2nd shutdown since war began (Bloomberg, Asharq Al-Awsat). Day 39: F-15E WSO rescued; Iran rejects ultimatum; KPC HQ struck; Bahrain Bapco tank hit.",
     metrics: {
       headline: "HABSHAN GAS SHUT AGAIN Apr 3 (2nd time); Iran targets 3 Abu Dhabi bridges; ADCOP at 1.62M bpd; Brent ~$109",
       productionOffline: "Habshan 6.1 Bcf/d shut Apr 3 + Shah 1 Bcf/d + 417 kb/d refining; ADCOP at 1.62M bpd",
@@ -410,7 +421,7 @@ const COUNTRY_STATUS_DATA = [
         date: "2026-04-02",
         title: "Sheikh Khaled chairs ADNOC resilience meeting; EGA Al Taweelah fully halted — power plant destroyed",
         description: "Sheikh Khaled bin Mohamed, Crown Prince of Abu Dhabi, chaired ADNOC executive committee meeting on operational resilience and business continuity — signaling escalating concern at highest UAE leadership level. EGA Al Taweelah smelter (~2.5 Mtpa, one of world's largest) confirmed fully halted after Mar 29 strike destroyed its power plant. Potlines underwent uncontrolled shutdown with metal solidifying in smelting circuits — restart timeline measured in months. Wood Mackenzie warns conflict could wipe out 3-3.5 Mtpa of global aluminium output in 2026. Alba (Bahrain) at ~30% capacity. LME aluminium remains near 4-year highs. — The National, Bloomberg, Wood Mackenzie",
-        isNew: true
+        isNew: false
       },
       {
         date: "2026-04-01",
@@ -524,7 +535,7 @@ const COUNTRY_STATUS_DATA = [
       { name: "Hail Field", type: "Offshore Oil", capacity: "~30,000 bpd", status: "partial" },
       { name: "Murban Field", type: "Onshore Oil", capacity: "~500,000 bpd", status: "operational" },
       { name: "Bu Hasa Field", type: "Onshore Oil", capacity: "~650,000 bpd", status: "operational" },
-      { name: "Bab Field", type: "Onshore Oil/Gas", capacity: "~300,000 bpd", status: "operational" },
+      { name: "Bab Field", type: "Onshore Oil/Gas", capacity: "~300,000 bpd", status: "shutdown", notes: "Precautionary shutdown Apr 3 alongside Habshan gas complex after intercepted missile debris (Xinhua, NewVision)" },
       { name: "Asab Field", type: "Onshore Oil/Gas", capacity: "~60,000 bpd", status: "operational" },
       { name: "Habshan ASR Gas Complex", type: "Gas Processing", capacity: "~1.0 Bcf/d", status: "shutdown", notes: "Shut Apr 3 along with main Habshan complex — 2nd wartime shutdown" },
       { name: "Ruwais Refinery Complex", type: "Refinery", capacity: "922,000 bpd total", status: "partial" },
@@ -584,7 +595,7 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1EE}\u{1F1F6}",
     status: "critical",
     statusLabel: "FM / Production Halt",
-    summary: "FM on all foreign-operated oilfields. Basra ~800k bpd as storage fills. SOMO agreed 50k bpd crude + 650k mt/month fuel oil via Syria overland to Mediterranean (Apr-Jun). Kirkuk-Ceyhan at 250k bpd. BP/Castrol Irbil struck Apr 1. UN Hormuz vote delayed to next week (was Apr 5). OPEC+ Apr 5. Brent volatile $99-$110.",
+    summary: "FM on all foreign-operated oilfields. Basra ~800k bpd as storage fills. SOMO agreed 50k bpd crude + 650k mt/month fuel oil via Syria overland to Mediterranean (Apr-Jun). Kirkuk-Ceyhan at 250k bpd (18M bbl in March). BP/Castrol Irbil struck Apr 1. Iran declared Iraqi ships EXEMPT from Hormuz restrictions (Apr 4 — Fortune) — could partially restore Basra exports. UN Hormuz vote delayed to next week. OPEC+ Apr 5: confirmed 206 kb/d increase. Apr 6 power plant deadline imminent. Day 39: F-15E WSO rescued.",
     metrics: {
       headline: "Basra output 76% down, storage critical",
       productionOffline: "Basra ~800k from 3.3M bpd",
@@ -602,6 +613,12 @@ const COUNTRY_STATUS_DATA = [
       }
     },
     events: [
+      {
+        date: "2026-04-04",
+        title: "Iranian drone sparks fire at foreign oil company storage facility in Basra",
+        description: "An Iranian drone strike sparked a fire at a foreign oil company's storage facility in Basra, Iraq's southern oil hub, on Apr 4. The fire was contained by emergency teams. No casualties reported. Basra oil production has collapsed from 3.1 mb/d to ~900k bpd (70%+ drop) since the conflict began, with exports from Basra completely halted. Iran declared Iraqi ships exempt from Hormuz restrictions the same day (Fortune). — The Week India",
+        isNew: true
+      },
       {
         date: "2026-04-01",
         title: "BP/Castrol fuel warehouse in Irbil attacked by 3 drones — massive fire, no casualties",
@@ -683,7 +700,9 @@ const COUNTRY_STATUS_DATA = [
       { id: 9, title: "Iraq oil output further plunges - BOE Report", url: "https://boereport.com/2026/03/25/iraq-oil-output-further-plunges-as-storage-fills-hormuz-exports-blocked-by-conflict/", date: "2026-03-25" },
       { id: 10, title: "Iraq cuts Basra oil output by 70% - Anadolu Agency", url: "https://www.aa.com.tr/en/energy/oil/iraq-cuts-basra-oil-output-by-70-amid-regional-escalation/55719", date: "2026-03-25" },
       { id: 11, title: "BP/Castrol Irbil fuel warehouse attacked by drones - Yeni Safak", url: "https://en.yenisafak.com/world/large-fire-erupts-in-erbil-after-drone-attack-near-us-base-3715990", date: "2026-04-01" },
-      { id: 12, title: "Iraq begins fuel oil exports through Syria amid Hormuz disruption - The National", url: "https://www.thenationalnews.com/business/energy/2026/04/02/iraq-begins-fuel-oil-exports-through-syria-amid-hormuz-disruption/", date: "2026-04-02" }
+      { id: 12, title: "Iraq begins fuel oil exports through Syria amid Hormuz disruption - The National", url: "https://www.thenationalnews.com/business/energy/2026/04/02/iraq-begins-fuel-oil-exports-through-syria-amid-hormuz-disruption/", date: "2026-04-02" },
+      { id: 13, title: "Iranian drone attack sparks fire in Iraq's oil storage facility in Basra — The Week India", url: "https://www.theweek.in/news/middle-east/2026/04/04/iranian-drone-attack-sparks-fire-in-iraqs-oil-storage-facility-in-basra-amid-crisis.html", date: "2026-04-04" },
+      { id: 14, title: "Iran declared Iraqi ships exempt from Hormuz restrictions — Fortune", url: "https://fortune.com/2026/04/04/iran-war-crude-oil-tankers-iraqi-ships-strait-of-hormuz/", date: "2026-04-04" }
     ]
   },
   {
@@ -692,7 +711,7 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1E7}\u{1F1ED}",
     status: "critical",
     statusLabel: "FM / Struck",
-    summary: "Iran targets King Fahd Causeway (Saudi-Bahrain link) in bridge hit list. Bahrain intercepted cumulative 188 BMs + 445 drones since Feb 28 (Alwast News Apr 3). Batelco/AWS struck Apr 1. Alba smelter struck Mar 29. BAPCO Sitra (405 kb/d) offline. Bapco FM on all ops. Abu Safa shut. 5th attack. Bahrain-drafted UN Hormuz resolution vote Saturday Apr 5 — stripped of Chapter VII enforcement; China/Russia vetoes expected.",
+    summary: "Iran targets King Fahd Causeway (Saudi-Bahrain link) in bridge hit list. Bahrain intercepted cumulative 188 BMs + 445 drones since Feb 28 (Alwast News Apr 3). Batelco/AWS struck Apr 1. Alba smelter struck Mar 29. BAPCO Sitra (405 kb/d) offline. Bapco FM on all ops. Abu Safa shut. Apr 5: Bapco fuel storage tank hit by drone — fire extinguished, no injuries (BNA). 6th direct Iranian attack on Bahrain infrastructure. UN Hormuz vote delayed to next week — stripped of Chapter VII; Russia/China vetoes likely. Trump 48-hr ultimatum: Apr 6 power plant deadline imminent.",
     metrics: {
       headline: "405 kb/d refining offline",
       productionOffline: "Sitra refinery + Abu Safa field",
@@ -710,6 +729,12 @@ const COUNTRY_STATUS_DATA = [
       }
     },
     events: [
+      {
+        date: "2026-04-05",
+        title: "Bapco fuel storage tank hit by drone — fire extinguished, 6th attack on Bahrain",
+        description: "An Iranian drone struck a Bapco Energies fuel storage tank, sparking a fire. Emergency response teams acted immediately, working with Civil Defence to contain and extinguish the blaze. No injuries reported. Damages are being assessed. Bahrain state news agency BNA confirmed the situation is under control. This is the 6th direct Iranian attack on Bahrain infrastructure since the conflict began (Sitra refinery x2, Alba smelter x2, Batelco/AWS x1, Bapco storage tank x1). — The National, GDN Online, BNA",
+        isNew: true
+      },
       {
         date: "2026-04-01",
         title: "Batelco data center (hosting AWS) struck — first attack on US tech infrastructure after IRGC threat",
@@ -735,8 +760,8 @@ const COUNTRY_STATUS_DATA = [
     ],
     oilGasImpact: {
       severity: "critical",
-      summary: "Iran targets King Fahd Causeway in bridge hit list; cumulative 188 BMs + 445 drones intercepted; Batelco/AWS struck Apr 1; 405 kb/d refining offline; UN Hormuz vote Sat Apr 5",
-      details: "Iran published bridge target list including King Fahd Causeway (Saudi-Bahrain link) after B1 destruction — raises risk to critical Saudi pipeline/road connection. Bahrain Defense Force reports cumulative 188 ballistic missiles + 445 drones intercepted since Feb 28 (Alwast News Apr 3); 16 drones intercepted in past 24 hours on Apr 3. Batelco/AWS struck Apr 1 — 5th attack on Bahrain. BAPCO Sitra (405 kb/d) struck 4 & 9 Mar. Bapco Energies FM on all ops. Abu Safa shut. Bahrain-drafted UN Hormuz resolution vote Saturday Apr 5 — stripped of Chapter VII enforcement authority after opposition from China/Russia/France; 'all defensive means necessary' for at least 6 months; vetoes likely; UK-led 40+ nation coalition demands reopening."
+      summary: "6 direct attacks: Bapco fuel storage tank struck Apr 5; Iran targets King Fahd Causeway in bridge hit list; cumulative 188 BMs + 445 drones intercepted; 405 kb/d refining offline; UN Hormuz vote delayed to next week",
+      details: "Apr 5: Bapco fuel storage tank hit by drone — fire extinguished, no injuries (BNA). 6th direct Iranian attack on Bahrain. Iran published bridge target list including King Fahd Causeway (Saudi-Bahrain link) after B1 destruction — raises risk to critical Saudi pipeline/road connection. Bahrain Defense Force reports cumulative 188 ballistic missiles + 445 drones intercepted since Feb 28 (Alwast News Apr 3); 16 drones intercepted in past 24 hours on Apr 3. Batelco/AWS struck Apr 1 — 5th attack. BAPCO Sitra (405 kb/d) struck 4 & 9 Mar. Bapco Energies FM on all ops. Abu Safa shut. UN Hormuz resolution vote delayed to next week — stripped of Chapter VII enforcement authority after opposition from China/Russia/France; vetoes likely. Trump 48-hr ultimatum to Iran: Apr 6 power plant deadline imminent."
     },
     infrastructure: [
       { name: "Bahrain Field (Awali)", type: "Oil Field", capacity: "~45,000 bpd", status: "operational" },
@@ -758,7 +783,9 @@ const COUNTRY_STATUS_DATA = [
       { id: 7, title: "UN to vote on Hormuz resolution as China opposes authorization of force — Al-Monitor", url: "https://www.al-monitor.com/originals/2026/04/un-vote-hormuz-resolution-china-opposes-authorization-force", date: "2026-04-03" },
       { id: 8, title: "UN Security Council delays vote on authorizing force to protect Hormuz — France 24", url: "https://www.france24.com/en/live-news/20260403-un-security-council-to-vote-on-authorizing-force-to-protect-hormuz", date: "2026-04-03" },
       { id: 9, title: "Bahrain Defense Force reports 188 missiles + 445 drones intercepted since Feb 28 — Alwast News", url: "https://en.alwast.net/arab/urgent-bahrain-defense-force-reports/", date: "2026-04-03" },
-      { id: 10, title: "Hormuz resolution loses Chapter VII as vote delayed — House of Saud", url: "https://houseofsaud.com/unsc-hormuz-vote-collapse/", date: "2026-04-03" }
+      { id: 10, title: "Hormuz resolution loses Chapter VII as vote delayed — House of Saud", url: "https://houseofsaud.com/unsc-hormuz-vote-collapse/", date: "2026-04-03" },
+      { id: 11, title: "Bapco fuel storage tank hit by drone, fire extinguished — The National", url: "https://www.thenationalnews.com/business/energy/2026/04/05/kuwait-petroleum-headquarters-and-power-plants-hit-by-drone-attacks/", date: "2026-04-05" },
+      { id: 12, title: "Bapco Energies releases statement on Iranian drone attack — GDN Online", url: "https://www.gdnonline.com/Details/1380501", date: "2026-04-05" }
     ]
   },
   {
@@ -767,7 +794,7 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1F4}\u{1F1F2}",
     status: "high",
     statusLabel: "Collateral",
-    summary: "3 Omani-flagged vessels (2 VLCCs + LNG carrier) transit Hormuz via alternative coastal route Apr 2. Iran-Oman transit protocol being drafted to 'monitor and coordinate' passage. Oman crude surged to $152-153/bbl. Salalah Port struck twice (Mar 11 + Mar 29), resuming. Production intact. Oman LNG commanding premium with Qatar offline. UN Hormuz vote delayed to next week (was Apr 5).",
+    summary: "3 Omani-flagged vessels (2 VLCCs + LNG carrier) transit Hormuz via alternative coastal route Apr 2. Iran-Oman transit protocol being drafted to 'monitor and coordinate' passage. Oman crude surged to $152-153/bbl. Salalah Port struck twice (Mar 11 + Mar 29), resuming. Production intact (~1 mb/d). Oman LNG commanding premium with Qatar offline. MOL-owned Sohar LNG transited Hormuz Apr 3 (S&P Platts CAS). Zero Hormuz export exposure — GDP projected +0.8% from higher prices. OPEC+ Apr 5: confirmed 206 kb/d increase. Apr 6 power plant deadline imminent.",
     metrics: {
       headline: "Export infrastructure damaged",
       productionOffline: "Production intact (~650k bpd)",
@@ -854,7 +881,7 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1EE}\u{1F1F1}",
     status: "conflict",
     statusLabel: "Conflict / FM",
-    summary: "Iran targets Arik Bridge (Route 87, Galilee-Golan) in bridge hit list. Chevron FM on Leviathan partially lifted. Karish shut. Tamar domestic only. Iran's 'most significant strike' on Tel Aviv Apr 1 — 14 injured incl. children. Israel struck 400+ Iran targets incl. B1 bridge Apr 3. Pentagon: 90% of Iran capability degraded. DM Katz vows Lebanon occupation. Trump: war to end in 2-3 weeks. LEVIATHAN PRODUCING: Bloomberg Apr 3 confirms Leviathan resumed after 33-day shutdown; Newmed Energy says supply for domestic + exports resuming; ~1.2 Bcf/d ramping up.",
+    summary: "Iran targets Arik Bridge (Route 87, Galilee-Golan) in bridge hit list. Chevron FM on Leviathan partially lifted. Karish shut. Tamar domestic only. Iran's 'most significant strike' on Tel Aviv Apr 1 — 14 injured incl. children. Israel struck 400+ Iran targets incl. B1 bridge Apr 3. Pentagon: 90% of Iran capability degraded. DM Katz vows Lebanon occupation. LEVIATHAN PRODUCING: Bloomberg Apr 3 confirms Leviathan resumed after 33-day shutdown; ~1.2 Bcf/d ramping up. Day 39 (Apr 5): F-15E WSO rescued by US commandos; Trump 48-hr ultimatum to Iran — Apr 6 power plant deadline TOMORROW. OPEC+ Apr 5: confirmed 206 kb/d increase.",
     metrics: {
       headline: "Leviathan CONFIRMED PRODUCING (Bloomberg Apr 3, ~1.2 Bcf/d ramping); Karish still shut; Iran massive strike on Tel Aviv Apr 1",
       productionOffline: "Leviathan producing + Karish shut; Tamar domestic only",
@@ -935,11 +962,11 @@ const COUNTRY_STATUS_DATA = [
     flag: "\u{1F1EE}\u{1F1F7}",
     status: "critical",
     statusLabel: "Struck / Disrupted",
-    summary: "Day 38 (Apr 4): Mahshahr Petrochemical Zone struck — Fajr 1&2, Rejal, Amir Kabir, Bandar Imam plants hit; 5 injured, all evacuated (Tasnim). Bushehr nuclear plant 4th strike (1 killed); Rosatom evacuating 200+. F-15E WSO still missing; A-10 crashed Kuwait; 365 US injuries. Iran rejects 48-hr ceasefire — 'Hormuz will never return to pre-war status quo'. IRGC strikes US 82nd Airborne Bubiyan Island. B1 death toll → 13. Day 37: B1 bridge destroyed; IDF kills Atimi; Zarif calls for settlement. UN Hormuz vote delayed to next week. ~2,000 vessels trapped. Dated Brent physical $141.37 (highest since 2008). OPEC+ Apr 5. Apr 6 power plant deadline.",
+    summary: "Day 38 (Apr 4): Mahshahr Petrochemical Zone struck — Fajr 1&2, Rejal, Amir Kabir, Bandar Imam plants hit; 5 killed, 170 injured (Anadolu). Bushehr nuclear plant 4th strike (1 killed); Rosatom evacuating 200+. Iran rejects 48-hr ceasefire — 'Hormuz will never return to pre-war status quo'. IRGC strikes US 82nd Airborne Bubiyan Island. B1 death toll → 13. Day 37: B1 bridge destroyed; IDF kills Atimi; Zarif calls for settlement. UN Hormuz vote delayed to next week. ~2,000 vessels trapped. Dated Brent physical $141.37 (highest since 2008). OPEC+ Apr 5: confirmed 206 kb/d symbolic increase. Day 39 (Apr 5): F-15E WSO RESCUED by US commandos + CIA subterfuge — colonel evaded capture >1 day in Iranian mountains; Trump: 'we got him'. Trump 48-hr ultimatum: 'all Hell will reign down' if Hormuz not opened by Apr 6 8PM. Iran's Gen. Aliabadi: 'gates of hell will open' if infrastructure attacks continue. Iran FM Araghchi signals willingness for talks in Pakistan. KPC Shuwaikh HQ struck + 2 Kuwait desal plants + Bahrain Bapco storage tank struck.",
     metrics: {
-      headline: "Day 38: Mahshahr petchem zone struck; Bushehr 4th strike (1 killed); F-15E WSO missing; Iran rejects ceasefire; Dated Brent $141.37; Apr 6 deadline",
-      productionOffline: "South Pars phases + 14 oil fields reduced; 225 Kpler crossings since Mar 1; toll legalized; ~2,000 vessels trapped in Gulf",
-      keyFigure: "~15% crude, ~13% gas disrupted; Kharg loading 1.84 mb/d; >1,900 killed in Iran; world losing 4.5-5 mb/d; S&P: $120/bbl avg Apr"
+      headline: "Day 39: F-15E WSO RESCUED; Trump 48-hr ultimatum — Apr 6 deadline TOMORROW; Iran rejects; Mahshahr 5 killed/170 injured; OPEC+ confirms 206 kb/d",
+      productionOffline: "South Pars phases + 14 oil fields reduced + Mahshahr petchem zone shut; 225 Kpler crossings since Mar 1; toll legalized; ~2,000 vessels trapped in Gulf",
+      keyFigure: "~15% crude, ~13% gas disrupted; Kharg loading 1.84 mb/d; >1,900 killed in Iran; world losing 4.5-5 mb/d; Dated Brent $141.37; Apr 6 power plant deadline TOMORROW"
     },
     production: {
       oil: { preWar: 3176, current: 2700, unit: "kb/d" },
@@ -948,16 +975,22 @@ const COUNTRY_STATUS_DATA = [
       notes: {
         oil: "Southern fields ~30% shut-in; Kharg still loading avg 1.84 mb/d in March (Kpler); March exports from west-of-Hormuz ports down 76%; Isfahan industrial targets struck; B1 bridge destroyed Apr 3 (death toll → 13); IDF killed ballistic missile chief Atimi in Kermanshah Apr 3; Day 38: F-15E down, 1 WSO missing; Pentagon claims 90% capability degraded; 365 US injuries total",
         gas: "Asaluyeh processing hit; ~100 MMcm/d offline (~12% of South Pars); Fajr Jam fire; nuclear talks suspended indefinitely",
-        refining: "Tehran Refinery (250 kb/d) destroyed; Bandar Abbas curtailed; Siraf condensate operational; Isfahan steel/pharma struck Apr 1; B1 bridge collapse disrupts Tehran-Karaj logistics; Apr 4: Mahshahr Petrochemical Zone struck — Fajr 1&2, Rejal, Amir Kabir, Bandar Imam plants hit (first direct strike on Iran's main petchem cluster)",
+        refining: "Tehran Refinery (250 kb/d) destroyed; Bandar Abbas curtailed; Siraf condensate operational; Isfahan steel/pharma struck Apr 1; B1 bridge collapse disrupts Tehran-Karaj logistics; Apr 4: Mahshahr Petrochemical Zone struck — 5 killed, 170 injured (Anadolu); Fajr 1&2, Rejal, Amir Kabir, Abou Ali, Bandar Imam all hit; all personnel evacuated; first direct strike on Iran's main petchem cluster",
         lng: "No LNG export capacity; South Pars disruption affects domestic supply",
         ports: "Kharg loading avg 1.84 mb/d; Jask bypass at ~300k bpd; 225 Kpler crossings since Mar 1 (94% decline); 2,190 ships trapped west of Hormuz (50 VLCCs, 12 VLGCs — Kpler/AP Apr 2); toll legalized; Philippines gets toll-free passage; IRGC toll at $2M/vessel in yuan; Iran-Oman transit protocol in final drafting; first non-Iranian VLCCs (Dhalkut + Habrut) exited Apr 2 (Argus); CMA CGM Kribi (French-owned, Maltese-flagged) first Western European transit since war began via IRGC corridor Apr 3 (Euronews)"
       }
     },
     events: [
       {
+        date: "2026-04-05",
+        title: "Day 39: F-15E WSO RESCUED by US commandos + CIA; Trump 48-hr ultimatum to Iran; Iran rejects; KPC HQ struck; Bahrain Bapco tank hit",
+        description: "US commandos rescued the missing F-15E weapons system officer (a colonel) from Iranian mountains after >1 day of evasion. CIA launched deception campaign inside Iran claiming airman already found, enabling dozens of special forces + warplanes to extract him. Trump: 'we got him — sustained injuries, but he will be just fine.' Trump issued 48-hour ultimatum: 'all Hell will reign down' if Hormuz not opened by Apr 6 8PM — power plant strikes imminent if Iran doesn't comply. Iran rejects ultimatum; Maj. Gen. Aliabadi warns 'gates of hell will be opened.' Iran FM Araghchi signals willingness for Pakistan-mediated talks. IRGC drones struck KPC Shuwaikh HQ (building ablaze, evacuated — Bloomberg), 2 Kuwait power/desal plants, and Bahrain Bapco fuel storage tank. OPEC+ Apr 5 confirmed 206 kb/d symbolic increase. Brent ~$109. — NBC News, CBS News, WaPo, Axios, Bloomberg, The National, Times Kuwait",
+        isNew: true
+      },
+      {
         date: "2026-04-04",
-        title: "Day 38: US races to find missing F-15E crew member; A-10 damaged in SAR; B1 death toll rises to 13; 365 US injuries total",
-        description: "US forces racing to find missing weapons system officer from F-15E Strike Eagle (494th FS, RAF Lakenheath) shot down over Iran on Apr 3. One pilot rescued by helicopter — SAR helicopter hit by small arms fire, crew wounded but landed safely. A-10 Warthog also hit during SAR, flew to Kuwaiti airspace, pilot ejected, aircraft crashed in Kuwait. 2 Blackhawk helicopters also struck during SAR. Tehran promised reward for the American. Pentagon: 365 total US service members injured. B1 bridge death toll revised to 13 killed, 95+ wounded. US-Israeli strikes hit Mahshahr Petrochemical Zone Apr 4 — Fajr 1&2, Rejal, Amir Kabir, Abou Ali, Bandar Imam petrochemical plants struck; all personnel evacuated; 5 injured (Tasnim, Anadolu). Bushehr nuclear plant hit for 4th time — 1 security guard killed; IAEA condemns; Rosatom evacuating 200+ staff to Armenia (NucNet). IRGC strikes US 82nd Airborne on Bubiyan Island, Kuwait (National Herald India). Iran rejects US 48-hour ceasefire proposal; Iranian official: 'Hormuz will never return to pre-war status quo' — permanent inspection regime for all vessels (Xinhua, US News). Dated Brent physical hit $141.37/bbl Apr 2 — highest since 2008. UN Hormuz vote DELAYED to next week. Zarif Foreign Affairs essay proposes peace; UAE Gargash rejects. OPEC+ Apr 5. Apr 6 power plant deadline 2 days away. — CBS News, NBC News, WaPo, CNN, Tasnim, Anadolu, NucNet, Xinhua, Foreign Affairs, RFE/RL",
+        title: "Day 38: US races to find missing F-15E crew member; A-10 damaged in SAR; B1 death toll rises to 13; 365 US injuries total; Mahshahr petchem zone struck — 5 killed, 170 injured",
+        description: "US forces racing to find missing weapons system officer from F-15E Strike Eagle (494th FS, RAF Lakenheath) shot down over Iran on Apr 3. One pilot rescued by helicopter — SAR helicopter hit by small arms fire, crew wounded but landed safely. A-10 Warthog also hit during SAR, flew to Kuwaiti airspace, pilot ejected, aircraft crashed in Kuwait. 2 Blackhawk helicopters also struck during SAR. Tehran promised reward for the American. Pentagon: 365 total US service members injured. B1 bridge death toll revised to 13 killed, 95+ wounded. US-Israeli strikes hit Mahshahr Petrochemical Zone Apr 4 — Fajr 1&2, Rejal, Amir Kabir, Abou Ali, Bandar Imam petrochemical plants struck; all personnel evacuated; 5 killed, 170 injured (Anadolu). Bushehr nuclear plant hit for 4th time — 1 security guard killed; IAEA condemns; Rosatom evacuating 200+ staff to Armenia (NucNet). IRGC strikes US 82nd Airborne on Bubiyan Island, Kuwait (National Herald India). Iran rejects US 48-hour ceasefire proposal; Iranian official: 'Hormuz will never return to pre-war status quo' — permanent inspection regime for all vessels (Xinhua, US News). Dated Brent physical hit $141.37/bbl Apr 2 — highest since 2008. UN Hormuz vote DELAYED to next week. Zarif Foreign Affairs essay proposes peace; UAE Gargash rejects. OPEC+ Apr 5. Apr 6 power plant deadline 2 days away. — CBS News, NBC News, WaPo, CNN, Tasnim, Anadolu, NucNet, Xinhua, Foreign Affairs, RFE/RL",
         isNew: true
       },
       {
@@ -982,13 +1015,13 @@ const COUNTRY_STATUS_DATA = [
         date: "2026-04-02",
         title: "Day 35: Former FM Kharazi injured/wife killed; Hengam Island struck; UK 35-nation Hormuz summit; March exports down 76%",
         description: "Former FM Kamal Kharazi seriously injured and wife killed in airstrike on his Tehran home — Iranian officials say it was an attempt to derail diplomacy, as Kharazi was overseeing Pakistan-mediated engagement with US VP Vance. Hengam Island (strategic Hormuz island) struck by airstrikes — 7 injured. UK FM Cooper hosted virtual 35-nation summit on Hormuz reopening — joint statement condemning Iran's closure, military planners to evaluate post-conflict naval options; US excluded. March shipping data: oil loadings west of Hormuz declined 76% (5.28M bpd vs 22.2M bpd in February). Brent at $105.27. Ryanair CEO warns 25% of European jet fuel at risk from May if conflict continues. OPEC+ Apr 5 meeting next. Apr 6 deadline for Hormuz reopening looms. — Al Arabiya, Washington Post, Al Jazeera, Windward Maritime Intelligence, Irish Times",
-        isNew: true
+        isNew: false
       },
       {
         date: "2026-04-02",
         title: "Day 35: Trump primetime speech lays out 2-3 week exit; Iran 'most significant strike' on Tel Aviv; Brent drops to ~$105",
         description: "Trump delivered first primetime address on Iran war at 9 PM ET Apr 1 — said military objectives 'largely achieved', war to end in 2-3 weeks, threatened NATO exit over allies' failure to open Hormuz. Iran launched 'most significant strike since first days of war' at Tel Aviv/central Israel — 10 missile launches, 14 injured including children in Petah Tikva and Bnei Brak. Israel struck 400+ targets in Iran over 2 days (air defense, Defense Ministry compound). Israeli strikes killed 7 in Beirut. BP/Castrol fuel warehouse in Irbil attacked by 3 drones (massive fire, no casualties). Brent dropped to ~$105/bbl on de-escalation hopes (from $115 late March). Apr 6 deadline for Hormuz reopening looms. OPEC+ Apr 5 meeting critical. White House: 'Clear and Unchanging Objectives Drive Decisive Success.' — CBS News, NBC News, CNN, Al Jazeera, White House, Fortune",
-        isNew: true
+        isNew: false
       },
       {
         date: "2026-04-01",
@@ -1077,7 +1110,7 @@ const COUNTRY_STATUS_DATA = [
     ],
     oilGasImpact: {
       severity: "critical",
-      summary: "Day 38: Mahshahr petchem zone struck (Fajr 1&2, Bandar Imam, 5 injured); Bushehr 4th strike (1 killed); F-15E WSO missing; Iran rejects ceasefire; Dated Brent physical $141.37; Apr 6 deadline imminent",
+      summary: "Day 39: F-15E WSO RESCUED; Trump 48-hr ultimatum — Apr 6 deadline TOMORROW; Mahshahr petchem zone struck (5 killed, 170 injured); Bushehr 4th strike (1 killed); Iran rejects ceasefire; Dated Brent physical $141.37",
       details: "Day 38 (Apr 4): F-15E crew SAR — 1 pilot rescued, 1 WSO missing over Iran; A-10 damaged in SAR, pilot ejected + recovered; SAR helo hit by small arms fire. 365 total US injuries. B1 bridge death toll revised to 13 killed 95+ wounded. Day 37 (Apr 3): B1 bridge (Tehran-Karaj, tallest in ME) destroyed Apr 3. IDF killed Makram Atimi, commander of central Iranian ballistic missile unit in Kermanshah, along with several battalion commanders — degrading missile launch capability. Iran fired new missile salvos at Israel + Gulf states in retaliation; vowed 'crushing' attacks on regional infrastructure incl. power plants, bridges, desalination. Iran published bridge target list including Sheikh Jaber (Kuwait), King Fahd Causeway (Saudi-Bahrain), Sheikh Zayed/Khalifa/Al Maqta (Abu Dhabi), King Hussein/Abdoun (Jordan). UN Hormuz vote delayed to next week (was Apr 5) — Bahrain resolution STRIPPED of Chapter VII enforcement authority (only provision giving binding legal force + military authorization); China/Russia/France opposed; vetoes likely. Pezeshkian wrote letter to Americans urging questioning of government war motives. Zarif called for Iran to 'declare victory and make deal' — first significant internal voice for settlement. ~2,000 vessels trapped in Gulf (IMO). Pentagon claims 90% of Iran capability degraded. Brent settled $109.03 (Apr 2). Iran continues ~25 missiles + ~120 drones/day; >1,900 killed in Iran. Kpler: 218 crossings Mar 1-Apr 2 (94% decline). OPEC+ Apr 5 — likely to stick with 206 kb/d symbolic increase. Apr 6 power plant deadline. Kharg loading 1.84 mb/d. Rystad: $25B repair bill; total regional upstream disrupted 11,535 kboe/d."
     },
     infrastructure: [
@@ -1113,7 +1146,7 @@ const COUNTRY_STATUS_DATA = [
       { name: "Goreh-Jask Pipeline", type: "Pipeline", capacity: "0.3 mb/d (1 mb/d design)", status: "operational", notes: "Iran's only Hormuz bypass pipeline; connects southern fields to Gulf of Oman" },
       { name: "Iran–Iraq Gas Pipeline", type: "Gas Pipeline", capacity: "~1.7 bcf/d", status: "shutdown", notes: "Halted after South Pars strike Mar 18; gas diverted for domestic use (~18 bcm/yr contracted)" },
       { name: "Tabriz–Ankara Gas Pipeline", type: "Gas Pipeline", capacity: "~1.4 bcf/d", status: "shutdown", notes: "Halted after South Pars strike Mar 18 (Bloomberg Mar 24). ~14 bcm/yr capacity; contract expires Jul 2026" },
-      { name: "Bandar Imam Petrochemical Complex", type: "Petrochemical Complex", capacity: "~7 Mtpa (70% of Iran petrochem)", status: "struck", notes: "STRUCK Apr 4 — US-Israeli strikes hit Mahshahr Petrochemical Zone incl. Bandar Imam, Fajr 1&2, Rejal, Amir Kabir; 5 injured; all personnel evacuated (Tasnim, Anadolu); first direct strike on Iran's main petchem cluster" },
+      { name: "Bandar Imam Petrochemical Complex", type: "Petrochemical Complex", capacity: "~7 Mtpa (70% of Iran petrochem)", status: "struck", notes: "STRUCK Apr 4 — US-Israeli strikes hit Mahshahr Petrochemical Zone incl. Bandar Imam, Fajr 1&2, Rejal, Amir Kabir, Abou Ali; 5 killed, 170 injured (Anadolu); all personnel evacuated; first direct strike on Iran's main petchem cluster" },
       { name: "Isfahan Thermal Power Plant", type: "Power Plant", capacity: "2,500 MW (Iran's largest thermal)", status: "operational", notes: "On US/Israeli target list; Trump paused power plant strikes until Apr 6; not yet struck" }
     ],
     sources: [
@@ -1204,7 +1237,16 @@ const COUNTRY_STATUS_DATA = [
       { id: 85, title: "At least 5 injured in US-Israeli strikes on Iran's petrochemical hubs — Anadolu Agency", url: "https://www.aa.com.tr/en/middle-east/at-least-5-injured-in-us-israeli-strikes-on-irans-petrochemical-hubs/3891516", date: "2026-04-04" },
       { id: 86, title: "Bushehr nuclear plant 4th strike, 1 killed — NucNet/IAEA", url: "https://www.nucnet.org/news/projectile-has-hit-premises-of-bushehr-nuclear-power-station-in-iran-iaea-says-3-4-2026", date: "2026-04-04" },
       { id: 87, title: "Iran rejects US 48-hour ceasefire proposal — Xinhua", url: "https://english.news.cn/20260404/d1f4f546fa774ff6a00c67914e493beb/c.html", date: "2026-04-04" },
-      { id: 88, title: "Dated Brent physical surges above $140, highest since 2008 — Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-04-02/the-world-s-main-physical-oil-price-soars-to-highest-since-2008", date: "2026-04-02" }
+      { id: 88, title: "Dated Brent physical surges above $140, highest since 2008 — Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-04-02/the-world-s-main-physical-oil-price-soars-to-highest-since-2008", date: "2026-04-02" },
+      { id: 89, title: "Second airman in F-15E shot down over Iran rescued safely — NBC News", url: "https://www.nbcnews.com/world/iran/second-airman-f-15e-was-shot-iran-rescued-safely-us-officials-say-rcna266688", date: "2026-04-05" },
+      { id: 90, title: "Missing US crew member from downed fighter jet rescued in Iran — CBS News", url: "https://www.cbsnews.com/news/missing-u-s-crew-member-from-downed-fighter-jet-rescued-in-iran-sources-say/", date: "2026-04-05" },
+      { id: 91, title: "US rescues missing crew member in Iran after fighter jet shot down — WaPo", url: "https://www.washingtonpost.com/national-security/2026/04/04/us-pilot-rescue-iran-f15-crash/", date: "2026-04-05" },
+      { id: 92, title: "Trump gives Iran 48-hour deadline to reopen Strait of Hormuz — CBS News", url: "https://www.cbsnews.com/news/trump-reminds-iran-ultimatum-reopen-strait-of-hormuz/", date: "2026-04-04" },
+      { id: 93, title: "Trump threatens Iran with 'hell' if Hormuz not open in 48 hours — Axios", url: "https://www.axios.com/2026/04/04/trump-iran-hell-threat-deadline", date: "2026-04-04" },
+      { id: 94, title: "5 killed, 170 injured in US-Israeli attack on Mahshahr petrochemical facilities — Anadolu Agency", url: "https://www.aa.com.tr/en/middle-east/5-killed-170-injured-in-us-israeli-attack-on-several-petrochemical-facilities-in-southwestern-iran/3892160", date: "2026-04-04" },
+      { id: 95, title: "Trump threatens to rain 'hell' on Iran after strikes hit key petrochemical sites — The National", url: "https://www.thenationalnews.com/news/mena/2026/04/04/iran-says-us-israeli-strikes-hit-key-petrochemical-facilities/", date: "2026-04-04" },
+      { id: 96, title: "Iran rejects ceasefire, FM signals willingness for Pakistan-mediated talks — Seoul Economic Daily", url: "https://en.sedaily.com/finance/2026/04/04/iran-rejects-ceasefire-talks-trump-says-first-fighter-jet", date: "2026-04-04" },
+      { id: 97, title: "OPEC+ confirms 206 kb/d symbolic increase — CNBC", url: "https://www.cnbc.com/2026/03/01/opec-to-raise-oil-output-slightly-even-as-iran-war-disrupts-shipments.html", date: "2026-04-05" }
     ]
   }
 ];
@@ -1832,6 +1874,71 @@ const FM_DECLARATIONS_DATA = [
 
 // ---------- TABLE 3: Shutdowns Without FM ----------
 const SHUTDOWNS_NO_FM_DATA = [
+    {
+    id: "sd-035",
+    company: "Kuwait (KPC Shuwaikh HQ)",
+    country: "Kuwait",
+    flag: "🇰🇼",
+    date: "2026-04-05",
+    status: "struck",
+    statusLabel: "Struck",
+    isNew: true,
+    summary: "Iranian drones set KPC Shuwaikh oil sector complex ablaze — building housing KPC headquarters and Ministry of Oil evacuated; no injuries.",
+    details: {
+      volumeAffected: "KPC headquarters operations disrupted; administrative functions relocated",
+      commodity: "Administrative / Oil sector HQ",
+      duration: "Damage assessment ongoing",
+      reason: "Iranian drone strike on Kuwait's oil sector complex in Shuwaikh.",
+      financialImpact: "KPC administrative operations disrupted; no direct production impact but symbolic escalation."
+    },
+    sources: [
+      { id: 1, title: "Kuwait Petroleum Says Headquarters Set Ablaze by Drone Strike — Bloomberg", url: "https://www.bloomberg.com/news/articles/2026-04-04/kuwait-petroleum-says-headquarters-set-ablaze-by-by-drone-strike", date: "2026-04-05" },
+      { id: 2, title: "Kuwait Petroleum HQ, power plants hit — The National", url: "https://www.thenationalnews.com/business/energy/2026/04/05/kuwait-petroleum-headquarters-and-power-plants-hit-by-drone-attacks/", date: "2026-04-05" }
+    ]
+  },
+  {
+    id: "sd-034",
+    company: "Kuwait (Power/Desalination Plants — 3rd Strike)",
+    country: "Kuwait",
+    flag: "🇰🇼",
+    date: "2026-04-05",
+    status: "struck",
+    statusLabel: "Struck",
+    isNew: true,
+    summary: "Two Kuwait power and desalination plants struck by Iranian drones Apr 5 — 'significant material damage'; 2 power generation units shut; no casualties. 3rd attack on Kuwait power/desal infrastructure.",
+    details: {
+      volumeAffected: "2 power generation units shut; significant material damage",
+      commodity: "Power / Water",
+      duration: "Emergency plans activated; damage assessment ongoing",
+      reason: "Iranian drone strikes on Kuwait civilian infrastructure.",
+      financialImpact: "Kuwait 100% desalination-dependent; repeated targeting of water/power infrastructure raises humanitarian concerns."
+    },
+    sources: [
+      { id: 1, title: "Two power and water distillation plants hit by hostile drones in Kuwait — Times Kuwait", url: "https://timeskuwait.com/two-power-and-water-distillation-plants-hit-by-hostile-drones-in-kuwait/", date: "2026-04-05" }
+    ]
+  },
+  {
+    id: "sd-033",
+    company: "Bapco Energies (Fuel Storage Tank)",
+    country: "Bahrain",
+    flag: "🇧🇭",
+    date: "2026-04-05",
+    status: "struck",
+    statusLabel: "Struck",
+    isNew: true,
+    summary: "Iranian drone struck Bapco Energies fuel storage tank — fire extinguished, no injuries. 6th direct Iranian attack on Bahrain infrastructure.",
+    details: {
+      volumeAffected: "One fuel storage tank",
+      commodity: "Fuel Storage",
+      duration: "Fire extinguished; damages being assessed",
+      reason: "Iranian drone attack on Bahrain's oil infrastructure.",
+      financialImpact: "Bapco already under FM on all operations; incremental damage to storage capacity."
+    },
+    sources: [
+      { id: 1, title: "Bapco Energies releases statement on Iranian drone attack — GDN Online", url: "https://www.gdnonline.com/Details/1380501", date: "2026-04-05" },
+      { id: 2, title: "Kuwait Petroleum HQ, Bahrain oil storage tank hit — The National", url: "https://www.thenationalnews.com/business/energy/2026/04/05/kuwait-petroleum-headquarters-and-power-plants-hit-by-drone-attacks/", date: "2026-04-05" }
+    ]
+  },
   {
     id: "sd-032",
     company: "Kuwait (Mina Al-Ahmadi Refinery — 3rd Strike)",
